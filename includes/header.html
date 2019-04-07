@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php echo $page_title; ?></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="/FilmIndustry/eCommerce/css/custom.css">
+</head>
+<body>
+<header><!-- When the user clicks on the nav-link, it darkens. Scrollspy maybe? -->
+    <nav class="navbar navbar-expand-md navbar-custom justify-content-center"><!-- fixed-top class gives a sticky (sidenav)??? -->
+        <a class="navbar-brand mr-0" href="/FilmIndustry/eCommerce/index.php">Home<span class="sr-only">Home</span></a>
+        <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/films/index.php">Films</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/tv/index.php">TV</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/studios/index.php">Studios</a></li> <!-- Attribute the authors; for Universal pictures, the source is: https://en.wikipedia.org/wiki/Universal_Pictures -->
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/producers/index.php">Producers</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/writers/index.php">Writers</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/directors/index.php">Directors</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/dp/index.php">DP</a></li>
+                <li class="nav-item"><a class="nav-link" href="/FilmIndustry/eCommerce/actors/index.php">Actors</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">More...</a></li>
+            </ul>
+            <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+                <li class="nav-item"><a class="nav-link active" data-toggle="modal" data-target="#cart"><i class="fab fa-opencart"></i></a></li>
+            </ul>
+            <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cartLabel">Your Cart</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>What you bought goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main role="main" class="main">
+<!-- header.html -->
