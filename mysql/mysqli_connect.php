@@ -1,6 +1,6 @@
 <?php
 
-# mysqli_connect.php
+# File - mysqli_connect.php
 # Created on April 7, 2019.
 # Created by Elias Gutierrez.
 
