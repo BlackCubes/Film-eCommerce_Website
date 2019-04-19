@@ -11,7 +11,7 @@
 define('DB_USER', 'username'); # For now, it will be 'username', but later it would change once the database has been created.
 define('DB_PASSWORD', 'password'); # For now, it will be 'password', but it would change later.
 define('DB_HOST', 'localhost'); # This would be from my computer. On a hosted website, it would be the location of that provided host.
-define('DB_NAME', 'filmeCommerce'); # This would be the name of the database once it is established.
+define('DB_NAME', 'filmecommerce'); # This would be the name of the database once it is established.
 
 // Making the connection:
 $dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
