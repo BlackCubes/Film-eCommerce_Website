@@ -641,8 +641,7 @@ ALTER TABLE `ratings`
 -- Indexes for table `shippers`
 --
 ALTER TABLE `shippers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `ship_date` (`ship_date`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `shippingaddress`
