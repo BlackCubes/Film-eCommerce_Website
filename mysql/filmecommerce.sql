@@ -456,7 +456,8 @@ CREATE TABLE `wishlists` (
   `product_format` varchar(10) NOT NULL,
   `quantity` tinyint(3) UNSIGNED NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_modified` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `date_modified` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `user_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -711,7 +712,8 @@ ALTER TABLE `wishlists`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`),
   ADD KEY `product_department` (`product_department`),
-  ADD KEY `product_format` (`product_format`);
+  ADD KEY `product_format` (`product_format`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `writers`
@@ -987,7 +989,8 @@ ALTER TABLE `transactions`
 ALTER TABLE `wishlists`
   ADD CONSTRAINT `wishlists_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `wishlists_ibfk_2` FOREIGN KEY (`product_department`) REFERENCES `departments` (`department`),
-  ADD CONSTRAINT `wishlists_ibfk_3` FOREIGN KEY (`product_format`) REFERENCES `formats` (`format`);
+  ADD CONSTRAINT `wishlists_ibfk_3` FOREIGN KEY (`product_format`) REFERENCES `formats` (`format`),
+  ADD CONSTRAINT `wishlists_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
