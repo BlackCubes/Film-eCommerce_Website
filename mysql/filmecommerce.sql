@@ -51,7 +51,8 @@ CREATE TABLE `carts` (
   `product_format` varchar(10) NOT NULL,
   `quantity` tinyint(3) UNSIGNED NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_modified` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `date_modified` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `user_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -493,6 +494,7 @@ ALTER TABLE `carts`
   ADD KEY `product_id` (`product_id`),
   ADD KEY `product_department` (`product_department`),
   ADD KEY `product_format` (`product_format`);
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `departments`
@@ -870,7 +872,8 @@ ALTER TABLE `writers`
 ALTER TABLE `carts`
   ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`product_department`) REFERENCES `departments` (`department`),
-  ADD CONSTRAINT `carts_ibfk_3` FOREIGN KEY (`product_format`) REFERENCES `formats` (`format`);
+  ADD CONSTRAINT `carts_ibfk_3` FOREIGN KEY (`product_format`) REFERENCES `formats` (`format`)
+  ADD CONSTRAINT `carts_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `orderdetails`
