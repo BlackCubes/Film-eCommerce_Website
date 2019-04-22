@@ -493,7 +493,7 @@ ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`),
   ADD KEY `product_department` (`product_department`),
-  ADD KEY `product_format` (`product_format`);
+  ADD KEY `product_format` (`product_format`),
   ADD KEY `user_id` (`user_id`);
 
 --
