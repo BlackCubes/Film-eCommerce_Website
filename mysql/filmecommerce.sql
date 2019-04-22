@@ -134,7 +134,6 @@ CREATE TABLE `orderdetails` (
   `product_format` varchar(10) NOT NULL,
   `quantity` tinyint(3) UNSIGNED NOT NULL,
   `unit_price` decimal(5,2) UNSIGNED NOT NULL,
-  `ship_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -540,8 +539,7 @@ ALTER TABLE `orderdetails`
   ADD KEY `product_id` (`product_id`),
   ADD KEY `order_id` (`order_id`),
   ADD KEY `product_department` (`product_department`),
-  ADD KEY `product_format` (`product_format`),
-  ADD KEY `ship_date` (`ship_date`);
+  ADD KEY `product_format` (`product_format`);
 
 --
 -- Indexes for table `orders`
@@ -884,8 +882,7 @@ ALTER TABLE `orderdetails`
   ADD CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `orderdetails_ibfk_3` FOREIGN KEY (`product_department`) REFERENCES `departments` (`department`),
-  ADD CONSTRAINT `orderdetails_ibfk_4` FOREIGN KEY (`product_format`) REFERENCES `formats` (`format`),
-  ADD CONSTRAINT `orderdetails_ibfk_5` FOREIGN KEY (`ship_date`) REFERENCES `shippers` (`ship_date`);
+  ADD CONSTRAINT `orderdetails_ibfk_4` FOREIGN KEY (`product_format`) REFERENCES `formats` (`format`);
 
 --
 -- Constraints for table `orders`
