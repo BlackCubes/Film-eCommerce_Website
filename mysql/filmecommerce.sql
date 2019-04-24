@@ -293,7 +293,7 @@ CREATE TABLE `products_writers` (
 
 CREATE TABLE `ratings` (
   `id` tinyint(3) UNSIGNED NOT NULL,
-  `rated` varchar(5) NOT NULL
+  `rated` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
