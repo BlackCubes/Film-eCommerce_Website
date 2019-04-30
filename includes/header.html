@@ -62,8 +62,28 @@ session_start();
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarAccountMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
                     <div class="dropdown-menu" aria-labelledby="navbarAccountMenu">
-                        <div class="dropdown-item"><p>Welcome! </p><a href="#">Sign in.</a></div>
-                        <div class="dropdown-item"><p>New? </p><a href="#">Sign up.</a></div>
+                        <?php
+
+                        // Welcoming the user by first name, if logged in:
+                        echo '<p class="dropdown-item">Welcome';
+                        if (isset($_SESSION['first_name'])) {
+                            echo ", {$_SESSION['first_name']}";
+                        }
+                        echo '!</p>
+                        <div class="dropdown-divider"></div>';
+
+                        // Displaying the dropdown links based on the login status:
+                        if (isset($_SESSION['id'])) {
+                            echo '<a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Change Password</a>
+                            <a class="dropdown-item" href="#">Sign out</a>';
+                        } else { // Not logged in.
+                            echo '<a class="dropdown-item" href="#">Sign in.</a>
+                            <p class="dropdown-item">New?</p>
+                            <a class="dropdown-item" href="#">Sign up.</a>';
+                        }
+                        
+                        ?>
                     </div>
                 </li>
             </ul>
