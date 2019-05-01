@@ -66,6 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
     }
 
     if ($fn && $mn && $ln && $e && $p) { // If everything turned out OK.
+
+        // For this next code, it checks if the user's email address is available, or already in the system ('filmecommerce' database in the table of 'users'). The variable $q uses SQL statements that selects the user's 'id' from the table 'users' by filtering the column 'email' which equals to the variable $e from the user's input. This checks for uniqueness. If the email address does exist, then an error would occur. If it does not, then the new user would be registered in the system. In the upcoming codes, you will see how this is done:
+        $q = "SELECT id FROM users WHERE email='$e'";
+
+        // After the query has been stored in the variable $q, then it is stored on the second argument in mysqli_query. The function mysqli_query performs a query against the database which means it is used to execute SQL queries, and for Procedural Programming the function uses the first argument as a link identifier returned by mysqli_connect which was stated in the created file mysqli_connect.php (the $dbc is that link identifier). If this mysqli_query fails, it goes to the OR statement where the function trigger_error creates a user-level error message:
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
     }
 
 }
