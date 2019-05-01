@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!--
-    
+
     Making the login form as a POST method.
 
     For this HTML form, the user is shown that they need to accept cookies in order to access logged-in user pages.
@@ -105,3 +105,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div align="center"><input type="submit" name="submit" value="Login"></div>
     </fieldset>
 </form>
+
+<?php include('includes/footer.html'); // Include the footer file. ?>
