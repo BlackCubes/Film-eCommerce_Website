@@ -54,6 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         echo '<p class="error">Please enter a valid email address!</p>';
     }
 
+    // Checking for a password and matching against the confirmed password. This is done by first checking if the length of the password is greater than or equal to 10, and this is also done by using strlen function which gets the string length in integer value. If this passes, then it goes to the second if-statement. If it does not pass the first if-statement due to not inputting a password or proper length, an error occurs. The second if-statement checks if the confirmed password matches the first password where the confirmed password is 'password2' while 'password1' is the user's first input password value. If it does not pass the second if-statement due to not confirming both passwords, then an error occurs. Once the second if-statement is passed, the first input of the password (password1) is hashed in the function password_hash which creates a new password hash using a strong one-way hashing algorithm. This one-way hashing algorithm would be PASSWORD_DEFAULT which stores the result in a database column of 255 characters, and this is so since the column 'pass' in the table 'users' has a VARCHAR of 255 characters in the filmecommerce database:
+    if (strlen($trimmed['password1']) >= 10) {
+        if ($trimmed['password1'] == $trimmed['password2']) {
+            $p = password_hash($trimmed['password1'], PASSWORD_DEFAULT);
+        } else {
+            echo '<p class="error">Your password did not match the confirmed password!</p>';
+        }
+    } else {
+        echo '<p class="error">Please enter a valid password!</p>';
+    }
+
 }
 
 ?>
