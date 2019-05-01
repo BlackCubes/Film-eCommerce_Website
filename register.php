@@ -82,6 +82,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             // Adding the user to the database:
             $q = "INSERT INTO users (email, pass, first_name, middle_name, last_name, verify_code, registration_date) VALUES ('$e', '$p', '$fn', '$mn', '$ln', '$a', NOW())";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+            // For the third if-statement, the function mysqli_affected_rows() returns the number of affected rows from the previous query on line 84 (the variable $r). The argument it takes is required where it specifies the MySQL connection to use which in this case it is the variable $dbc created from the file mysqli_connect.php. For the returned value, an integer greater than 0 indicates the number of rows affected; 0 indicates that no records were affected; and -1 indicates that the query returned an error. If the function does not pass this if-statement by equaling to 1, then an error would occur which would be generated that the user would see on their browsers:
+            if (mysqli_affected_rows($dbc) == 1) {
+
+                // Sending the email to the registered user. This is done by first making the variable $body that contains the body string statement on line 90. Then, it is appended on line 91 where the user would be able to click on the activation link with BASE_URL created in the file config.inc.php, the file activate.php which would contain PHP code on removing the activation code, and with the query string. The query string contains a separator '?' from the URL path, and the query parameters are separated by the ampersand '&' which acts as a delimiter. The query parameters have key-value pairs where the key 'x' has a value of the user's email address where it is encoded from the function urlencode() so that it is safe to have in the URL, and the key 'y' has a value of the activation code stored in the variable $a. This link on line 91 would be used in the file activate.php as a GET method:
+                $body = "Thank you for registering at the Film eCommerce website! To activate your account, please click on this link:\n\n";
+                $body .= BASE_URL . 'activate.php?x=' . urlecode($e) . "&y=$a";
+
+                // The function mail() contains the registered user's email address as the first argument, a subject title for the second argument, the message from the variable $body as the third argument, and a header as the fourth argument which is a 'From' from the admin's email address (in this case, it is mine. It could be the other admin created for the 'filmecommerce' database by the name of frank as stated in the file mysqli_connect.php):
+                mail($trimmed['email'], 'Registration Confirmation', $body, 'From: gutierrezelias1991@gmail.com');
+
+                // Finishing the page:
+                echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
+                include('includes/footer.html'); // Including the HTML footer.
+                exit(); // This function terminates the current script with no message.
+
+            }
         }
     }
 
