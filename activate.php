@@ -48,4 +48,6 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
     exit();
 
 } // End of the main Conditional.
+
+include('includes/footer.html'); // Include the footer file.
 ?>
