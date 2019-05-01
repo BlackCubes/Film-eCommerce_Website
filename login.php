@@ -35,5 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $p = FALSE;
         echo '<p class="error">You forgot to enter your password!</p>';
     }
+
+    // This first if-statement inside the main Submit Conditional checks to see if both the email and password are TRUE, or if it is OK without any errors. If it does not pass this first conditional, then an error would show the user:
+    if ($e && $p) {
+
+        // Store the selected query in a variable $q, and store the result of the query statement in a variable $r and if this is not successful then trigger an error. On line 43, the column 'verify_code' in the table 'users' has to be NULL which means the user needs to activate their email after registering in order to set it to NULL:
+        $q = "SELECT id, first_name, pass FROM users WHERE email='$e' AND verify_code IS NULL";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+    }
 }
 ?>
