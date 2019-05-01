@@ -8,8 +8,8 @@
 // This file also establishes a connection to MySQL and selects the database.
 
 // Setting the database access information as constants:
-define('DB_USER', 'username'); # For now, it will be 'username', but later it would change once the database has been created.
-define('DB_PASSWORD', 'password'); # For now, it will be 'password', but it would change later.
+define('DB_USER', 'frank'); # User 'frank' has access to only filmecommerce database.
+define('DB_PASSWORD', 'Ecommerce.101'); # User frank's password to connect to the database.
 define('DB_HOST', 'localhost'); # This would be from my computer. On a hosted website, it would be the location of that provided host.
 define('DB_NAME', 'filmecommerce'); # This would be the name of the database once it is established.
 
