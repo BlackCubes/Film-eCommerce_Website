@@ -51,6 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Freeing the resulted memory from the database. This is for security purposes since it is no longer needed. For Procedural Programming, the inner argument is used:
             mysqli_free_result($r);
+
+            // For this third if-statement, the conditional checks the user's input password matches the stored password in the database. Since the stored password was hashed based on the function password_hash() on line 60 in the file register.php when the user was registering, the function password_verify() knows the random salt that was chosen by password_hash(). In technicality, it combines the algorithm parameteres, random salt, and hash output into an output string that can be parsed to recover them individually. If this conditional does not pass, then an error message is shown to the attempted login user:
+            if (password_verify($p, $pass)) {
+
+                
+            }
         }
     }
 }
