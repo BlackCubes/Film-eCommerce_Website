@@ -27,5 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $e = FALSE;
         echo '<p class="error">You forgot to enter your email address!</p>';
     }
+
+    // Validating the user's password. The logic is the same explanation as in line 23, but the difference is that the use of the function trim() on line 33 which removes any white spaces or other characters from the beginning and end of a string:
+    if (!empty($_POST['pass'])) {
+        $p = trim($_POST['pass']);
+    } else {
+        $p = FALSE;
+        echo '<p class="error">You forgot to enter your password!</p>';
+    }
 }
 ?>
