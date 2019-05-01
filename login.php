@@ -49,13 +49,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // This code matches the database values into local variables $user_id, $first_name, and $pass. This is done by first using the function list() which assigns the local variables as if they were an array. The function mysqli_fetch_array() fetches a result row (for Procedural Programming) as a numeric array where the result row is the variable $r, and the numeric array is the value MYSQLI_NUM (using MYSQLI_NUM gives you numbered indices). It then returns an array that corresponds the fetched row and moves the internal data pointer ahead. Combing the two gives the result: $user_id[0] = id, $first_name[1] = first_name, and $pass[2] = pass:
             list($user_id, $first_name, $pass) = mysqli_fetch_array($r, MYSQLI_NUM);
 
-            // Freeing the resulted memory from the database. This is for security purposes since it is no longer needed. For Procedural Programming, the inner argument is used:
+            // Freeing the resulted memory of the query. This is for security purposes since it is no longer needed. For Procedural Programming, the inner argument is used:
             mysqli_free_result($r);
 
             // For this third if-statement, the conditional checks the user's input password matches the stored password in the database. Since the stored password was hashed based on the function password_hash() on line 60 in the file register.php when the user was registering, the function password_verify() knows the random salt that was chosen by password_hash(). In technicality, it combines the algorithm parameteres, random salt, and hash output into an output string that can be parsed to recover them individually. If this conditional does not pass, then an error message is shown to the attempted login user:
             if (password_verify($p, $pass)) {
 
-                
+                // Once the user has succeeded on the three conditionals, then the user is officially logged in by storing their info in sessions. Once this is done is where the database connection is closed since it is no longer needed:
+                $_SESSION['id'] = $user_id;
+                $_SESSION['first_name'] = $first_name;
+                mysqli_close($dbc);
+
+                // Redirecting the user to the homepage after logging in:
+                $url = BASE_URL . 'index.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
             }
         }
     }
