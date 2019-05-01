@@ -22,6 +22,30 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
     require(MYSQL);
     $q = "UPDATE users SET verify_code=NULL WHERE (email='" . mysqli_real_escape_string($dbc, $_GET['x']) . "' AND verify_code='" . mysqli_real_escape_string($dbc, $_GET['y']) . "') LIMIT 1";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-}
 
+    // If the number of affected rows in the database is equal to 1, then a message is shown to the user of successfully activating their account. If the rows in the database does not equal to 1, then the user would be shown with a message that an error has occured:
+    if (mysqli_affected_rows($dbc) == 1) {
+        echo "<h3>Your account is now active! You may log in.</h3>";
+    } else {
+        echo '<p class="error">Sorry, but your account could not be activated. Please re-check the link given to you in your email address, or contact the system administrator.</p>';
+    }
+
+    // Close the database connection if the user successfully/un-successfully activating their account:
+    mysqli_close($dbc);
+
+} else { // Redirect if not a registered user.
+
+    // This line of code is to be used to redirect the individual to the home page by defining the URL. BASE_URL was defined from config.inc.php:
+    $url = BASE_URL . 'index.php';
+
+    // Deleting the buffer and sending all data to output by using the function ob_end_clean():
+    ob_end_clean();
+
+    // Send a raw HTTP header to a client where the header string is to be sent by the defined variable $url:
+    header($url);
+
+    // Terminate the script by using the function exit():
+    exit();
+
+} // End of the main Conditional.
 ?>
