@@ -47,6 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         echo '<p class="error">Please enter your last name!</p>';
     }
 
+    // Checking for an email address by passing it to filter_var function which filters a variable with the specified filter. In this case, the variable is the user's input of their email, and the specified filter is the FILTER_VALIDATE_EMAIL which is a filter that validates an email address. If the user does not provide an email address or its not a valid one, then an error occurs:
+    if (filter_var($trimmed['email'], FILTER_VALIDATE_EMAIL)) {
+        $e = mysqli_real_escape_string($dbc, $trimmed['email']);
+    } else {
+        echo '<p class="error">Please enter a valid email address!</p>';
+    }
+
 }
 
 ?>
