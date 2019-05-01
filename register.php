@@ -15,4 +15,17 @@ $page_title = 'Register';
 // Include the header:
 include('includes/header.html');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user submits the form.
+
+    // Getting the database connection:
+    require(MYSQL);
+
+    // Trimming the incoming data from potential malicious users by using an array_map which assigns every element from $_POST to the function trim(). This is assigned to the array $trimmed:
+    $trimmed = array_map('array', $_POST);
+
+    // Assume any invalid variables that were not used after submitting the form (later, if TRUE then this would not be a problem):
+    $fn = $ln = $e = $p = FALSE;
+
+}
+
 ?>
