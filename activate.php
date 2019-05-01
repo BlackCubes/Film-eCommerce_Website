@@ -42,7 +42,7 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
     ob_end_clean();
 
     // Send a raw HTTP header to a client where the header string is to be sent by the defined variable $url:
-    header($url);
+    header("Location: $url");
 
     // Terminate the script by using the function exit():
     exit();
