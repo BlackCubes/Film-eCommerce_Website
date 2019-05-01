@@ -72,6 +72,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
 
         // After the query has been stored in the variable $q, then it is stored on the second argument in mysqli_query. The function mysqli_query performs a query against the database which means it is used to execute SQL queries, and for Procedural Programming the function uses the first argument as a link identifier returned by mysqli_connect which was stated in the created file mysqli_connect.php (the $dbc is that link identifier). If this mysqli_query fails, it goes to the OR statement where the function trigger_error creates a user-level error message:
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+        // For this second if-statement, the variable $r is passed to the function mysqli_num_rows where it returns the number of rows in a result set. If it equals to 0, then the email address is unused where the user can then be registered. If it equals to 1, then there is a used email address in the database where it leads to an error:
+        if (mysqli_num_rows($r) == 0) {
+
+            // Creating a unique activation code. The activation code is the variable $a which would be stored in the column 'verify_code' from the table 'users' in the 'filmecommerce' database. The function uniqid() generates a unique identifier where the first argument rand() is a function that generates a random integer to help make it a more random value, and the second argument is set to TRUE telling the function uniqid() to allow more_entropy which would increase the result to be unique by expanding 13 characters to 23 characters. This is then passed to the function md5() which creates a returned hash of a string as a 32-hexadecimal number:
+            $a = md5(uniqid(rand(), true));
+
+            // Adding the user to the database:
+            $q = "INSERT INTO users (email, pass, first_name, middle_name, last_name, verify_code, registration_date) VALUES ('$e', '$p', '$fn', '$mn', '$ln', '$a', NOW())";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        }
     }
 
 }
