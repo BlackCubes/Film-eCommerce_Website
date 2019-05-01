@@ -33,6 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         echo '<p class="error">Please enter your first name!</p>';
     }
 
+    // Checkig for a middle name by using regular expressions based on assumptions on what a last name would contain. This is the same as before, but there are two differences: One is that the length inside the delimiters is from 1 to 40 since a user might enter a single letter as a middle name. The other difference is if the user does not provide a middle name, then there would be no error. Instead, it would store the empty string by escaping any special characters if a malicious user would do something clever (if possible):
+    if (preg_match('/^[A-Z \'.-]{1,40}$/i', $trimmed['middle_name'])) {
+        $mn = mysqli_real_escape_string($dbc, $trimmed['middle_name']);
+    } else {
+        $mn = mysqli_real_escape_string($dbc, $trimmed['middle_name']);
+    }
+
 }
 
 ?>
