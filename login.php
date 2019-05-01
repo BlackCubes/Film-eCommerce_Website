@@ -15,4 +15,9 @@ $page_title = 'Login';
 // Include the header file:
 include('includes/header.html');
 
+// The main Submit Conditional using the POST method:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require(MYSQL); // DB connection. Variable defined in config.inc.php.
+}
 ?>
