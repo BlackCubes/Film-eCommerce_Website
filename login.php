@@ -81,5 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else { // If everything was not OK.
         echo '<p class="error">Please try again</p>';
     }
-}
+
+    mysqli_close($dbc); // Closing the database connection.
+
+} // End of Submit Conditional.
 ?>
