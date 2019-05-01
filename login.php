@@ -19,5 +19,13 @@ include('includes/header.html');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL); // DB connection. Variable defined in config.inc.php.
+
+    // Validating the user's email. If the user's input for the email field in the HTML code section is not empty, then it is stored in a variable $e where it has a function mysqli_real_escape_string() by removing any special characters for security purposes. If it fails the if-conditional, then the variable $e is set to a boolean value of FALSE and creating an error message:
+    if (!empty($_POST['email'])) {
+        $e = mysqli_real_escape_string($dbc, $_POST['email']);
+    } else {
+        $e = FALSE;
+        echo '<p class="error">You forgot to enter your email address!</p>';
+    }
 }
 ?>
