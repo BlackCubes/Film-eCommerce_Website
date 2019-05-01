@@ -130,4 +130,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
     <div align="center"><input type="submit" name="submit" value="Register"></div>
 </form>
 
-<?php include('includes/footer.html') // Include the footer. ?>
+<?php include('includes/footer.html'); // Include the footer. ?>
