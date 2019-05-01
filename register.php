@@ -98,8 +98,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
                 include('includes/footer.html'); // Including the HTML footer.
                 exit(); // This function terminates the current script with no message.
 
+            } else { // If the user could not be registered in the system.
+                echo '<p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';
             }
+
+        } else { // If an email address already exists in the system.
+            echo '<p class="error">That email address has already been registered. If you have forgotten your password, please change it by clicking on Forgot Password when signing in.</p>';
         }
+
+    } else { // If one of the variables failed when registering.
+        echo '<p class="error">Please try again.</p>';
     }
 
 }
