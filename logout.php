@@ -43,4 +43,9 @@ if (!isset($_SESSION['first_name'])) {
 
 }
 
+// After the user has logged out, a successful message is shown:
+echo '<h3>You are now logged out.</h3>';
+
+// Include the footer file:
+include('includes/footer.html');
 ?>
