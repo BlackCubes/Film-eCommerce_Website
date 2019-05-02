@@ -76,7 +76,7 @@ session_start();
                         if (isset($_SESSION['id'])) {
                             echo '<a class="dropdown-item" href="#">Profile</a>
                             <a class="dropdown-item" href="#">Change Password</a>
-                            <a class="dropdown-item" href="#">Sign out</a>';
+                            <a class="dropdown-item" href="logout.php">Sign out</a>';
                         } else { // Not logged in.
                             echo '<a class="dropdown-item" href="login.php">Sign in.</a>
                             <p class="dropdown-item">New?</p>
