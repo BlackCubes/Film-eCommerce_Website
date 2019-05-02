@@ -15,7 +15,7 @@ $page_title = 'Logout';
 // Including the header file:
 include('includes/header.html');
 
-// For the main Submit Conditional, it checks if the first name of the logged in user is not set which is stored in session. If there is no logged in user, then the if-conditional is passed which would redirect the individual to the home page. If the user is logged in, then the if-conditional fails which would go to the else-conditional by actually logging out the logged in user:
+// For the main Submit Conditional (when the user clicks on the logged out link), it checks if the first name of the logged in user is not set which is stored in session. If there is no logged in user, then the if-conditional is passed which would redirect the individual to the home page. If the user is logged in, then the if-conditional fails which would go to the else-conditional by actually logging out the logged in user:
 if (!isset($_SESSION['first_name'])) {
 
     // Redirecting the individual if not logged in to the home page. The variable BASE_URL was defined in config.inc.php:
