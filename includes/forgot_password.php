@@ -42,7 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '<p class="error">The submitted email address does not match those on file!</p>';
             
         }
-    }
+
+    } else { // The POST was empty.
+
+        echo '<p class="error">You forgot to enter your email address!</p>';
+
+    } // End of empty($_POST[email]).
 }
 
 ?>
