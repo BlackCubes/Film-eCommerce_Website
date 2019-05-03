@@ -66,6 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sending an email to the user with the temporary password:
             $body = "Your password to log into the Film eCommerce site has been temporarily changed to '$p'. Please log in using this password and this email address. Then you may change your password to something more familiar.";
             mail($_POST['email'], 'Your temporary password.', $body, 'From: gutierrezelias1991@gmail.com');
+
+            // Print a message to the user, close the database connection by using the function mysqli_close(), include the footer file, and terminate the current script with no message by using the function exit():
+            echo '<h3>Your password has been changed. You will receive the new, temporary password at the email address with which you registered. Once you have logged in with this password, you may change it by clicking on the Change Password link.</h3>';
+            mysqli_close($dbc);
+            include('includes/footer.html');
+            exit();
         }
     }
 }
