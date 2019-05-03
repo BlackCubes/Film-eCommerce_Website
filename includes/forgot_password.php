@@ -55,6 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Creating a new, random password for the registered user. This is done by using the function uniqid() which generates a unique identifier where the first argument rand() is a function that generates a random integer to help make it a more random value, and the second argument is set to TRUE which would allow more_entropy increasing the result to be unique by expanding 13 characters to 23 characters. This is then passed to the function md5() which creates a returned hash of a string as a 32-hexadecimal number. All of this is stored in the function substr() which returns part of a string from the range 3 to 15 giving a ten-character string. It is then stored in variable $p which is also run through a function password_hash() which hashes the password, and this is stored in the variable $ph. The user would be sent the temporary password $p to their email to be used while the hashed password $ph would be used in the database. Although $ph is hashed, it would be run through the function password_verify() on line 56 in login.php when the user logs in:
         $p = substr(md5(uniqid(rand(), true)), 3, 15);
         $ph = password_hash($p);
+
+        // Updating the database with the new password:
+        $q = "UPDATE users SET pass='$ph' where id=$uid LIMIT 1";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        
     }
 }
 
