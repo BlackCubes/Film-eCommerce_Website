@@ -35,4 +35,14 @@ if (!isset($_SESSION['user_id'])) {
 
 }
 
+// This is the main Submit Conditional once the user submitted the HTML form input, and uses the POST metthod:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Including the database connection which was defined in config.inc.php:
+    require(MYSQL);
+
+    // Setting the boolean value for the password variable to be FALSE. This would be used later where the value for $p would store the user's new password. If the user's stored new password is the old password, then the affected rows in the database would return 0 where the user would see a message telling them to enter a new password that is not the old one:
+    $p = FALSE;
+}
+
 ?>
