@@ -54,6 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo '<p class="error">Please enter a valid password!</p>';
     }
+
+    // This fourth if-statement checks to see if the password variable passed the validation test (IF TRUE). If not, then it fails passing a error message for the user to see:
+    if ($p) {
+
+        // Once the password passes the validation test and making the fourth if-conditional TRUE, then the registered user's password is updated with the new one where the user's id is the stored on in session. Once this is done, the result of the query statement is stored in the variable $r, and if that fails then an error is triggered:
+        $q = "UPDATE users SET pass='$p' WHERE id={$_SESSION['user_id']} LIMIT 1";
+        $r = mysqli_query($dbc. $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+    }
 }
 
 ?>
