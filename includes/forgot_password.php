@@ -86,3 +86,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 } // End of the main Submit Conditional.
 ?>
+
+<!-- Making the form as a POST method: -->
+<h1>Reset Your Password</h1>
+<p>Enter your email address below and your password will be reset.</p>
+<form action="forgot_password.php" method="post">
+    <fieldset>
+        <p><strong>Email:</strong> <input type="email" name="email" size="20" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"></p>
+    </fieldset>
+    <div align="center"><input type="submit" name="submit" value="Reset My Password"></div>
+</form>
+
+<?php include('includes/footer.html'); // Include the footer file. ?>
