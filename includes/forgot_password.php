@@ -72,8 +72,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mysqli_close($dbc);
             include('includes/footer.html');
             exit();
-        }
-    }
-}
 
+        } else { // Did not run OK.
+            echo '<p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
+        }
+
+    } else { // The validation test failed:
+        echo '<p class="error">Please try again.</p>';
+    }
+
+    // Close the database connection if else-statement passes:
+    mysqli_close($dbc);
+
+} // End of the main Submit Conditional.
 ?>
