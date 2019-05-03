@@ -59,7 +59,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Updating the database with the new password:
         $q = "UPDATE users SET pass='$ph' where id=$uid LIMIT 1";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-        
+
+        // For the fourth if-statement, it checks if the database has been successfully updated with the new temporary password. This is done by using the function mysqli_affected_rows() which returns the number of affected rows from the previous query. The argument it takes is required where it specifies the MYSQL connection to use which is the variable $dbc defined in the file config.inc.php. For the returned value, an integer greater than 0 indicates the number of rows affected; 0 indicates no rows affected, and -1 indicates that the query returned an error. If the function does not give a value of 1, then it goes to the else-statement telling the user that an error occured:
+        if (mysqli_affected_rows($dbc) == 1) {
+
+            
+        }
     }
 }
 
