@@ -43,6 +43,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Setting the boolean value for the password variable to be FALSE. This would be used later where the value for $p would store the user's new password. If the user's stored new password is the old password, then the affected rows in the database would return 0 where the user would see a message telling them to enter a new password that is not the old one:
     $p = FALSE;
+
+    // This second if-statement validates the new password by first checking if the length of the new password is greater than or equal to 10, and this is done by using the strlen() function. If it does not meet the conditional, then an error would occur telling the user to enter a valid password. Once it passes the conditional, it goes to another if-statement (third one in the entire file) where the conditional checks if the user properly confirmed their new password by re-typing it in. If it does not pass that conditional, then the user would see an error message telling them that they did not properly confirmed the two password inputs. Once it does meet the requirements for the third if-statement is where the new password is stored in the variable $p, and where the password is hashed with the function password_hash() with PASSWORD_DEFAULT acts as a one-way hashing algorithm giving the result of 255 characters:
+    if (strlen($_POST['password1']) >= 10) {
+        if ($_POST['password1'] == $_POST['password2']) {
+            $p = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+        } else {
+            echo '<p class="error">Your password did not match the confirmed password!</p>';
+        }
+    } else {
+        echo '<p class="error">Please enter a valid password!</p>';
+    }
 }
 
 ?>
