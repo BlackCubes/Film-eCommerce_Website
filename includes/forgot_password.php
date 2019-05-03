@@ -23,6 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // The variable $uid (which is the user's id) is set to FALSE assuming that the particular individual has not logged in yet. This variable will be used later:
     $uid = FALSE;
+
+    // For the first if-statement in the main Submit Conditional, it checks if the user properly entered their email address. If not, then an error would occur telling them that the user has forgotten to enter an email address:
+    if (!empty($_POST['email'])) {
+
+        // The following query takes the user's submitted email address to look for the user's id in the system, and it removes any special characters by the function mysqli_real_escape_string(). After storing the query in the variable $q, the result of the query statement is stored in the variable $r where an error is triggered if something did not go right. A little bit later in the code, this will be used in the second if-statement to check if the user exist in the system:
+        $q = 'SELECT id FROM users WHERE email="' . mysqli_real_escape_string($dbc, $_POST['email']) . '"';
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+    }
 }
 
 ?>
