@@ -123,7 +123,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         <p><strong>First Name:</strong> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>"></p>
         <p><strong>Middle Name:</strong> <input type="text" name="middle_name" size="20" maxlength="40" value="<?php if (isset($trimmed['middle_name'])) echo $trimmed['middle_name']; ?>"></p>
         <p><strong>Last Name:</strong> <input type="text" name="last_name" size="20" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>"></p>
-        <p><strong>Username:</strong> <input type="text" name="username" size="20" maxlength="30" value="<?php if (isset($trimmed['username'])) echo $trimmed['username']; ?>"></p>
         <p><strong>Email Address:</strong> <input type="email" name="email" size="30" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>"></p>
         <p><strong>Password:</strong> <input type="password" name="password1" size="20" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>"><small>At least 10 characters long.</small></p>
         <p><strong>Confirm Password:</strong> <input type="password" name="password2" size="20" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>"></p>
