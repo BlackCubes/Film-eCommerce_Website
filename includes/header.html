@@ -75,7 +75,7 @@ session_start();
                         // Displaying the dropdown links based on the login status:
                         if (isset($_SESSION['id'])) {
                             echo '<a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="#">Change Password</a>
+                            <a class="dropdown-item" href="change_password.php">Change Password</a>
                             <a class="dropdown-item" href="logout.php">Sign out</a>';
                         } else { // Not logged in.
                             echo '<a class="dropdown-item" href="login.php">Sign in.</a>
