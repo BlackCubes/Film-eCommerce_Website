@@ -433,7 +433,6 @@ CREATE TABLE `users` (
   `first_name` varchar(20) NOT NULL,
   `middle_name` varchar(40) DEFAULT NULL,
   `last_name` varchar(40) NOT NULL,
-  `username` varchar(30) NOT NULL,
   `email` varchar(80) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `phone_num` varchar(15) NOT NULL,
@@ -698,7 +697,6 @@ ALTER TABLE `transactions`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
   ADD UNIQUE KEY `email` (`email`),
   ADD UNIQUE KEY `pass` (`pass`);
 
