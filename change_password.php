@@ -76,9 +76,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Kill the script:
             exit();
-            
-        }
-    }
-}
 
+        } else { // Did not run OK.
+
+            echo '<p class="error">Your password was not changed. Make sure your new password is different than the current password. If you think an error occured, contact the system administrator.</p>';
+
+        }
+
+    } else { // Failed the validation test.
+
+        echo '<p class="error">Please try again.</p>';
+
+    }
+
+    // Close the database connection if it does not pass any conditionals (for safety):
+    mysqli_close($dbc);
+
+} // End of the main Submit Conditional
 ?>
