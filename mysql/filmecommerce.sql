@@ -435,7 +435,7 @@ CREATE TABLE `users` (
   `last_name` varchar(40) NOT NULL,
   `email` varchar(80) NOT NULL,
   `pass` varchar(255) NOT NULL,
-  `phone_num` varchar(15) NOT NULL,
+  `phone_num` varchar(15) DEFAULT NULL,
   `profile_pic` varchar(50) DEFAULT NULL,
   `verify_code` char(32) DEFAULT NULL,
   `registration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
