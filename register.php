@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         echo '<p class="error">Please enter a valid phone number!</p>';
     }
 
-    if ($fn && $mn && $ln && $e && $p) { // If everything turned out OK.
+    if ($fn && $mn && $ln && $e && $p && $pn) { // If everything turned out OK.
 
         // For this next code, it checks if the user's email address is available, or already in the system ('filmecommerce' database in the table of 'users'). The variable $q uses SQL statements that selects the user's 'id' from the table 'users' by filtering the column 'email' which equals to the variable $e from the user's input. This checks for uniqueness. If the email address does exist, then an error would occur. If it does not, then the new user would be registered in the system. In the upcoming codes, you will see how this is done:
         $q = "SELECT id FROM users WHERE email='$e'";
