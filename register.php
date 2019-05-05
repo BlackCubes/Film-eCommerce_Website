@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             $a = md5(uniqid(rand(), true));
 
             // Adding the user to the database:
-            $q = "INSERT INTO users (email, pass, first_name, middle_name, last_name, verify_code, registration_date) VALUES ('$e', '$p', '$fn', '$mn', '$ln', '$a', NOW())";
+            $q = "INSERT INTO users (email, pass, first_name, middle_name, last_name, phone_num, verify_code, registration_date) VALUES ('$e', '$p', '$fn', '$mn', '$ln', '$pn', '$a', NOW())";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             // For the third if-statement, the function mysqli_affected_rows() returns the number of affected rows from the previous query on line 84 (the variable $r). The argument it takes is required where it specifies the MySQL connection to use which in this case it is the variable $dbc created from the file mysqli_connect.php. For the returned value, an integer greater than 0 indicates the number of rows affected; 0 indicates that no records were affected; and -1 indicates that the query returned an error. If the function does not pass this if-statement by equaling to 1, then an error would occur which would be generated that the user would see on their browsers:
