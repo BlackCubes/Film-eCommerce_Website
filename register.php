@@ -33,11 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         echo '<p class="error">Please enter your first name!</p>';
     }
 
-    // Checkig for a middle name by using regular expressions based on assumptions on what a last name would contain. This is the same as before, but there are two differences: One is that the length inside the delimiters is from 1 to 40 since a user might enter a single letter as a middle name, and 40 is the max length that was set from VARCHAR in the database. The other difference is if the user does not provide a middle name, then there would be no error. Instead, it would store the empty string by escaping any special characters if a malicious user would do something clever (if possible):
+    // Checkig for a middle name by using regular expressions based on assumptions on what a last name would contain. This is the same as before, but there are two differences: One is that the length inside the delimiters is from 1 to 40 since a user might enter a single letter as a middle name, and 40 is the max length that was set from VARCHAR in the database. The other difference is if the user does not provide a middle name, then there would be no error based on the conditional in elseif. Instead, it would store the empty string by escaping any special characters if a malicious user would do something clever (if possible). Lastly, if it does not pass the if-conditional nor the elseif-conditional is where the user would see an error prompting them to enter a valid middle name:
     if (preg_match('/^[A-Z \'.-]{1,40}$/i', $trimmed['middle_name'])) {
         $mn = mysqli_real_escape_string($dbc, $trimmed['middle_name']);
-    } else {
+    } elseif (empty($trimmed['middle_name'])) {
         $mn = mysqli_real_escape_string($dbc, $trimmed['middle_name']);
+    } else {
+        echo '<p class="error">Please enter a valid middle name!</p>';
     }
 
     // Checking for a last name. This is the same as before, but this time with a length of 2 to 40 where 40 is the max length that was set from VARCHAR in the database. If the user does not provide a last name, an error would occur:
