@@ -489,8 +489,7 @@ CREATE TABLE `writers` (
 -- Indexes for table `actors`
 --
 ALTER TABLE `actors`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gender` (`gender`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `carts`
