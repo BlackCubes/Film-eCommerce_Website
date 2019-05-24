@@ -4,8 +4,11 @@
 # Created February 16, 2019
 # Created by Elias Gutierrez
 
+require('includes/config.inc.php';)
+
 $page_title = 'Actors';
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
+
+include('includes/header.html')
 
 ?>
 
@@ -113,4 +116,5 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         <div class="col-2"></div>
     </div>
 </div>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html') ?>
+
+<?php include('includes/footer.html'); ?>
