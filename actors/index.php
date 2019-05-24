@@ -5,6 +5,16 @@
 # PHP with SQL created May 25, 2019.
 # Created by Elias Gutierrez.
 
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+    
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
+
 require('includes/config.inc.php';)
 
 $page_title = 'Actors';
