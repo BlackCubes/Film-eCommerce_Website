@@ -9,13 +9,13 @@
 // ************ DOCUMENTATION ************ //
 
 /*
-    
+
 */
 
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require('includes/config.inc.php';)
+require('includes/config.inc.php');
 
 $page_title = 'Actors';
 
