@@ -1,8 +1,9 @@
 <?php
 
-# Actors Page v.1
-# Created February 16, 2019
-# Created by Elias Gutierrez
+# index.php (Actors' page).
+# Created February 16, 2019.
+# PHP with SQL created May 25, 2019.
+# Created by Elias Gutierrez.
 
 require('includes/config.inc.php';)
 
