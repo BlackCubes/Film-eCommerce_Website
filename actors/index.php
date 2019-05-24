@@ -4,7 +4,7 @@
 # Created February 16, 2019
 # Created by Elias Gutierrez
 
-$page_title = 'Actors/Actresses';
+$page_title = 'Actors';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
 
 ?>
