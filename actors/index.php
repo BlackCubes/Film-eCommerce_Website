@@ -21,6 +21,8 @@ $page_title = 'Actors';
 
 include('includes/header.html');
 
+$display = 15;
+
 ?>
 
 <div class="container-fluid">
