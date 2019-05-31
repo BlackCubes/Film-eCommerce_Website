@@ -19,7 +19,7 @@ require('includes/config.inc.php');
 
 $page_title = 'Actors';
 
-include('includes/header.html')
+include('includes/header.html');
 
 ?>
 
