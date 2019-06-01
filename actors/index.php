@@ -45,9 +45,6 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
-$q = "SELECT first_name, middle_name, last_name, img FROM actors ORDER BY last_name LIMIT $start, $display";
-$r = mysqli_query($dbc, $q);
-
 $sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'none';
 
 switch ($sort) {
@@ -61,6 +58,9 @@ switch ($sort) {
         $sort = 'none';
         break;
 }
+
+$q = "SELECT first_name, middle_name, last_name, img FROM actors ORDER BY last_name LIMIT $start, $display";
+$r = mysqli_query($dbc, $q);
 
 echo '<div class="container-fluid">
 <nav class="breadcrumb t-uppercase" role="navigation" aria-label="breadcrumbs">
