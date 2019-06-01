@@ -15,7 +15,7 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require(BASE_URL . 'includes/config.inc.php');
+require('/FilmIndustry/eCommerce/includes/config.inc.php');
 
 $page_title = 'Actors';
 
