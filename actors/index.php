@@ -21,6 +21,8 @@ $page_title = 'Actors';
 
 include(BASE_URL . 'includes/header.html');
 
+require(MYSQL);
+
 $display = 15;
 
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
