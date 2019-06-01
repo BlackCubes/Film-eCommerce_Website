@@ -59,7 +59,7 @@ switch ($sort) {
         break;
 }
 
-$q = "SELECT first_name, middle_name, last_name, img FROM actors ORDER BY last_name LIMIT $start, $display";
+$q = "SELECT first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
 echo '<div class="container-fluid">
