@@ -53,6 +53,7 @@ switch ($sort) {
         break;
     case 'm':
         $where = "WHERE gender='M'";
+        break;
     default:
         $where = '';
         $sort = 'all';
