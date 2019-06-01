@@ -97,19 +97,19 @@ if ($pages > 1) {
     $current_page = ($start/$display) + 1;
 
     if ($current_page != 1) {
-        echo '<a href="index.php?s=' . ($start - $display) . '&p=' . $pages . '">Previous</a>';
+        echo '<a href="index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
     }
 
     for ($i = 1; $i <= $pages; $i++) {
         if ($i != $current_page) {
-            echo '<a href="index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a>';
+            echo '<a href="index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
         } else {
             echo $i . ' ';
         }
     }
 
     if ($current_page != $pages) {
-        echo '<a href="index.php?s=' . ($start + $display) . '&p=' . $pages . '">Next</a>';
+        echo '<a href="index.php?s=' . ($start + $display) . '&p=' . $pages . '&sort=' . $sort . '">Next</a>';
     }
 
     echo '</p>';
