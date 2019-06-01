@@ -89,7 +89,7 @@ if ($pages > 1) {
     }
 
     if ($current_page != $pages) {
-        echo '<a href="index.php?s=' . ($start + $display) . '&p=' . $pages= . '">Next</a>';
+        echo '<a href="index.php?s=' . ($start + $display) . '&p=' . $pages . '">Next</a>';
     }
 
     echo '</p>';
