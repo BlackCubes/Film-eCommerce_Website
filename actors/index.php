@@ -59,7 +59,7 @@ switch ($sort) {
     default:
         $where = '';
         $sort = 'none';
-        break
+        break;
 }
 
 echo '<div class="container-fluid">
