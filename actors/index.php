@@ -45,7 +45,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
-$q = "SELECT first_name, middle_name, last_name, img FROM actors LIMIT $start, $display";
+$q = "SELECT first_name, middle_name, last_name, img FROM actors ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
 echo '<div class="container-fluid">
