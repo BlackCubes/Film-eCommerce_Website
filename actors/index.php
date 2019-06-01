@@ -45,7 +45,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
-$sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'none';
+$sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'all';
 
 switch ($sort) {
     case 'f':
@@ -55,7 +55,7 @@ switch ($sort) {
         $where = "WHERE gender='M'";
     default:
         $where = '';
-        $sort = 'none';
+        $sort = 'all';
         break;
 }
 
