@@ -15,11 +15,11 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require('../includes/config.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 $page_title = 'Actors';
 
-include('../includes/header.html');
+include(BASE_URL.'includes/header.html');
 
 require(MYSQL);
 
@@ -97,5 +97,5 @@ if ($pages > 1) {
     echo '</p>';
 }
 
-include('../includes/footer.html');
+include(BASE_URL.'/includes/footer.html');
 ?>
