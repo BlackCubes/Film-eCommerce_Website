@@ -15,7 +15,7 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require('/FilmIndustry/eCommerce/includes/config.inc.php');
+require('http://localhost/FilmIndustry/eCommerce/includes/config.inc.php');
 
 $page_title = 'Actors';
 
