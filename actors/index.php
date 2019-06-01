@@ -15,11 +15,11 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require('includes/config.inc.php');
+require('../includes/config.inc.php');
 
 $page_title = 'Actors';
 
-include('./includes/header.html');
+include('../includes/header.html');
 
 require(MYSQL);
 
@@ -97,5 +97,5 @@ if ($pages > 1) {
     echo '</p>';
 }
 
-include('./includes/footer.html')
+include('../includes/footer.html');
 ?>
