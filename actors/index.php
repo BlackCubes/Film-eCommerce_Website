@@ -15,11 +15,11 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require('includes/config.inc.php');
+require(BASE_URL . 'includes/config.inc.php');
 
 $page_title = 'Actors';
 
-include('includes/header.html');
+include(BASE_URL . 'includes/header.html');
 
 $display = 15;
 
@@ -95,6 +95,7 @@ if ($pages > 1) {
     echo '</p>';
 }
 
+include(BASE_URL . 'includes/footer.html')
 ?>
 
 <div class="container-fluid">
