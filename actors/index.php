@@ -97,5 +97,5 @@ if ($pages > 1) {
     echo '</p>';
 }
 
-include($_SERVER['DOCUMENT_ROOT'].'FilmIndustry/eCommerce/includes/footer.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
