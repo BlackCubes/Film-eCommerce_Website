@@ -261,6 +261,20 @@ CREATE TABLE `producers` (
   `img` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `producers`
+--
+
+INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `about`, `img`) VALUES
+(1, 'Aaron', '', 'Sorkin', 'M', '', 'producers/aaron-sorkin_Cover.jpg'),
+(2, 'Adam', '', 'McKay', 'M', '', 'producers/adam-mckay_Cover.jpg'),
+(3, 'Adele', '', 'Romanski', 'F', '', 'producers/adele-romanski_Cover.jpg'),
+(4, 'Alex', '', 'Gansa', 'M', '', 'producers/alex-gansa_Cover.jpg'),
+(5, 'Alfonso', '', 'Cuarón', 'M', '', 'producers/alfonso-cuaron_Cover.jpg'),
+(6, 'Allie', '', 'Goss', 'F', '', 'producers/allie-goss_Cover.jpg'),
+(7, 'Amanda', '', 'Posey', 'F', '', 'producers/amanda-posey_Cover.jpg'),
+(8, 'Amy', '', 'Pascal', 'F', '', 'producers/amy-pascal_Cover.jpg');
+
 -- --------------------------------------------------------
 
 --
