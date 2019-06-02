@@ -60,6 +60,26 @@ switch ($sort) {
         break;
 }
 
+if (isset($_GET['p']) && is_numeric($_GET['p'])) {
+    $pages = $_GET['p'];
+} else {
+    $q = "SELECT COUNT(id) FROM actors";
+    $r = mysqli_query($dbc, $q);
+    $row = mysqli_fetch_array($r, MYSQLI_NUM);
+    $records = $row[0];
+    if ($records > $display) {
+        $pages = ceil($records/$display);
+    } else {
+        $pages = 1;
+    }
+}
+
+if (isset($_GET['s']) && is_numeric($_GET['s'])) {
+    $start = $_GET['s'];
+} else {
+    $start = 0;
+}
+
 $q = "SELECT first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
