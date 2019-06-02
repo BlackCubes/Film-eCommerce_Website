@@ -273,7 +273,15 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (5, 'Alfonso', '', 'Cuarón', 'M', '', 'producers/alfonso-cuaron_Cover.jpg'),
 (6, 'Allie', '', 'Goss', 'F', '', 'producers/allie-goss_Cover.jpg'),
 (7, 'Amanda', '', 'Posey', 'F', '', 'producers/amanda-posey_Cover.jpg'),
-(8, 'Amy', '', 'Pascal', 'F', '', 'producers/amy-pascal_Cover.jpg');
+(8, 'Amy', '', 'Pascal', 'F', '', 'producers/amy-pascal_Cover.jpg'),
+(9, 'Amy', '', 'Sherman-Palladino', 'F', '', 'producers/amy-shermanpalladino_Cover.jpg'),
+(10, 'Angie', '', 'Fielder', 'F', '', 'producers/angie-fielder_Cover.jpg'),
+(11, 'Bill', '', 'Gerber', 'M', '', 'producers/bill-gerber_Cover.jpg'),
+(12, 'Bradley', '', 'Cooper', 'M', '', 'producers/bradley-cooper_Cover.jpg'),
+(13, 'Brian', 'Hayes', 'Currie', 'M', '', 'producers/brian-currie_Cover.jpg'),
+(14, 'Bruce', '', 'Miller', 'M', '', 'producers/bruce-miller_Cover.jpg'),
+(15, 'Carla', '', 'Hacken', 'F', '', 'producers/carla-hacken_Cover.jpg'),
+(16, 'Carolyn', '', 'Strauss', 'F', '', 'producers/carolyn-strauss_Cover.jpg');
 
 -- --------------------------------------------------------
 
