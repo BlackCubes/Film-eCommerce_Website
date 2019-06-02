@@ -644,8 +644,7 @@ ALTER TABLE `orders`
 -- Indexes for table `producers`
 --
 ALTER TABLE `producers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gender` (`gender`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `productdetails`
