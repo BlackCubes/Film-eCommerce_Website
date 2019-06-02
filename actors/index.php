@@ -43,7 +43,7 @@ switch ($sort) {
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
-    $q = "SELECT COUNT(id) FROM actors";
+    $q = "SELECT COUNT(id) FROM actors $where";
     $r = mysqli_query($dbc, $q);
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
