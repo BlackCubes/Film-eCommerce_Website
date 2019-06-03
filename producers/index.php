@@ -78,7 +78,7 @@ echo '<div class="container-fluid">
         <div class="row grid grid--view-items"></div>
     </div>
 </div>
-</div>'
+</div>';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
