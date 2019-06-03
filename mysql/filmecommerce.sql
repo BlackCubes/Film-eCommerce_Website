@@ -313,7 +313,15 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (45, 'Julie', '', 'Yorn', 'F', '', 'producers/julie-yorn_Cover.jpg'),
 (46, 'Kevin', '', 'Feige', 'M', '', 'producers/kevin-feige_Cover.png'),
 (47, 'Kevin', 'J.', 'Messick', 'M', '', 'producers/kevin-messick_Cover.jpg'),
-(48, 'Kimberly', '', 'Steward', 'F', '', 'producers/kimberly-steward_cover.jpeg');
+(48, 'Kimberly', '', 'Steward', 'F', '', 'producers/kimberly-steward_cover.jpeg'),
+(49, 'Kristie', 'Macosko', 'Krieger', 'F', '', 'producers/kristie-macosko-krieger_Cover.jpg'),
+(50, 'Larry', '', 'David', 'M', '', 'producers/larry-david_Cover.jpg'),
+(51, 'Lesli', 'Linka', 'Glatter', 'F', '', 'producers/lesli-linka-glatter_Cover.jpg'),
+(52, 'Lisa', '', 'Bruce', 'F', '', 'producers/lisa-bruce_Cover.jpg'),
+(53, 'Lorne', '', 'Michaels', 'M', '', 'producers/lorne-michaels_Cover.jpg'),
+(54, 'Lynette', 'Howell', 'Taylor', 'F', '', 'producers/lynette-howell-taylor_Cover.jpg'),
+(55, 'Maria', '', 'Jacquemetton', 'F', '', 'producers/maria-jacquemetton_Cover.jpg'),
+(56, 'Mark', '', 'Johnson', 'M', '', 'producers/mark-johnson_Cover.png');
 
 -- --------------------------------------------------------
 
