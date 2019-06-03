@@ -45,7 +45,7 @@ if (isset($_GET['p']) && is_numeric($_GET['p'])) {
 } else {
     $q = "SELECT COUNT(id) FROM writers $where";
     $r = mysqli_query($dbc, $q);
-    $row = mysqli_fetch_array($r, MYSLI_NUM);
+    $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
     if ($records > $display) {
         $pages = ceil($records/$display);
