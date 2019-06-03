@@ -1,8 +1,19 @@
 <?php
 
-# Writers Page v.1
-# Created February 17, 2019
-# Created by Elias Gutierrez
+# index.php (Writers page).
+# Created February 17, 2019.
+# PHP with SQL created June 3, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
 
 $page_title = 'Writers';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
