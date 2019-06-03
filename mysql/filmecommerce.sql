@@ -649,6 +649,20 @@ CREATE TABLE `writers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `writers`
+--
+
+INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `about`, `img`) VALUES
+(1, 'Aaron', '', 'Sorkin', 'M', '', 'writers/aaron-sorkin_Cover.jpg'),
+(2, 'Abi', '', 'Morgan', 'F', '', 'writers/abi-morgan_Cover.jpg'),
+(3, 'Adam', '', 'McKay', 'M', '', 'writers/adam-mckay_Cover.jpg'),
+(4, 'Alan', '', 'Yang', 'M', '', 'writers/alan-yang_Cover.jpg'),
+(5, 'Alejandro', 'González', 'Iñárritu', 'M', '', 'writers/alejandro-gonzalez-inarritu_Cover.jpg'),
+(6, 'Alexander', '', 'Dinelaris Jr.', 'M', '', 'writers/alexander-dinelaris-jr_Cover.jpg'),
+(7, 'Alexander', '', 'Payne', 'M', '', 'writers/alexander-payne_Cover.jpg'),
+(8, 'Alex', '', 'Gansa', 'M', '', 'writers/alex-gansa_Cover.jpg');
+
+--
 -- Indexes for dumped tables
 --
 
