@@ -1,8 +1,19 @@
 <?php
 
-# Producers Page v.1
-# Created February 15, 2019
-# Created by Elias Gutierrez
+# index.php (Producers page).
+# Created February 15, 2019.
+# PHP with SQL created June 2, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
 
 $page_title = 'Producers';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
