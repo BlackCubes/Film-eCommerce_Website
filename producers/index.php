@@ -63,6 +63,23 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 $q = "SELECT first_name, middle_name, last_name, img FROM producers $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
+echo '<div class="container-fluid">
+<nav class="breadcrumb t-uppercase" role="navigation" aria-label="breadcrumbs">
+    <li><a href="' . BASE_URL . 'index.php">Home</a></li>
+    <li><a href="' . BASE_URL . 'producers/index.php">Producers</a></li>
+</nav>
+<div class="row">
+    <div class="col-2">
+        <p><b>Gender</b></p>
+        <p><a href="index.php?sort=f">Female</a></p>
+        <p><a href="index.php?sort=m">Male</a></p>
+    </div>
+    <div class="col-8 inline" id="producersCollection">
+        <div class="row grid grid--view-items"></div>
+    </div>
+</div>
+</div>'
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
