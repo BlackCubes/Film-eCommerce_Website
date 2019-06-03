@@ -54,6 +54,12 @@ if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     }
 }
 
+if (isset($_GET['s']) && is_numeric($_GET['s'])) {
+    $start = $_GET['s'];
+} else {
+    $start = 0;
+}
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
