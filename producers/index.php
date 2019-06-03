@@ -75,10 +75,11 @@ echo '<div class="container-fluid">
         <p><a href="index.php?sort=m">Male</a></p>
     </div>
     <div class="col-8 inline" id="producersCollection">
-        <div class="row grid grid--view-items"></div>
-    </div>
-</div>
-</div>';
+        <div class="row grid grid--view-items">'
+
+echo '</div></div>
+<div class="col-2"></div>
+</div></div>';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
