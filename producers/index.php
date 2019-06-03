@@ -110,7 +110,7 @@ if ($pages > 1) {
     }
 
     if ($current_page != $pages) {
-        echo '<a href="index.php?s=' ($start + $display) . '&p=' . $pages . '&sort=' . $sort . '">Next</a>';
+        echo '<a href="index.php?s=' . ($start + $display) . '&p=' . $pages . '&sort=' . $sort . '">Next</a>';
     }
 
     echo '</p>';
