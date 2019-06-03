@@ -321,7 +321,23 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (53, 'Lorne', '', 'Michaels', 'M', '', 'producers/lorne-michaels_Cover.jpg'),
 (54, 'Lynette', 'Howell', 'Taylor', 'F', '', 'producers/lynette-howell-taylor_Cover.jpg'),
 (55, 'Maria', '', 'Jacquemetton', 'F', '', 'producers/maria-jacquemetton_Cover.jpg'),
-(56, 'Mark', '', 'Johnson', 'M', '', 'producers/mark-johnson_Cover.png');
+(56, 'Mark', '', 'Johnson', 'M', '', 'producers/mark-johnson_Cover.png'),
+(57, 'Marta', '', 'Kauffman', 'F', '', 'producers/marta-kauffman_Cover.jpg'),
+(58, 'Mary', '', 'Parent', 'F', '', 'producers/mary-parent_Cover.png'),
+(59, 'Matthew', '', 'Weiner', 'M', '', 'producers/matthew-weiner_Cover.jpg'),
+(60, 'Megan', '', 'Ellison', 'F', '', 'producers/megan-ellison_Cover.png'),
+(61, 'Meredith', '', 'Stiehm', 'F', '', 'producers/meredith-stiehm_Cover.jpg'),
+(62, 'Michelle', '', 'MacLaren', 'F', '', 'producers/michelle-maclaren_Cover.jpg'),
+(63, 'Mindy', '', 'Kaling', 'F', '', 'producers/mindy-kaling_Cover.jpg'),
+(64, 'Moira', '', 'Walley-Beckett', 'F', '', 'producers/moira-walleybeckett_Cover.jpg'),
+(65, 'Nick', '', 'Vallelonga', 'M', '', 'producers/nick-vallelonga_Cover.jpg'),
+(66, 'Patty', '', 'Lin', 'F', '', 'producers/patty-lin_Cover.jpg'),
+(67, 'Peter', '', 'Farrelly', 'M', '', 'producers/peter-farrelly_Cover.jpg'),
+(68, 'Sam', '', 'Catlin', 'M', '', 'producers/sam-catlin_Cover.jpg'),
+(69, 'Sean', '', 'McKittrick', 'M', '', 'producers/sean-mckittrick_Cover.jpg'),
+(70, 'Steven', '', 'Levitan', 'M', '', 'producers/stevenlevitan_Cover.jpeg'),
+(71, 'Tina', '', 'Fey', 'F', '', 'producers/tina-fey_Cover.jpg'),
+(72, 'Vali', '', 'Chandrasekaran', 'M', '', 'producers/vali-chandrasekaran_Cover.png');
 
 -- --------------------------------------------------------
 
