@@ -886,8 +886,7 @@ ALTER TABLE `wishlists`
 -- Indexes for table `writers`
 --
 ALTER TABLE `writers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gender` (`gender`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
