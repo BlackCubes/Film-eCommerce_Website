@@ -21,6 +21,10 @@ $page_title = 'Writers';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+require(MYSQL);
+
+$display = 15;
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
