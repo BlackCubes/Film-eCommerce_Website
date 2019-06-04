@@ -23,6 +23,23 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 
 require(MYSQL);
 
+$display = 15;
+
+$sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'all';
+
+switch ($sort) {
+    case 'f':
+        $where = "WHERE gender='F'";
+        break;
+    case 'm':
+        $where = "WHERE gender='M'";
+        break;
+    default:
+        $where = '';
+        $sort = 'all';
+        break;
+}
+
 ?>
 
 <div class="container-fluid">
