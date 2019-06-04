@@ -40,6 +40,20 @@ switch ($sort) {
         break;
 }
 
+if (isset($_GET['p']) && is_numeric($_GET['p'])) {
+    $pages = $_GET['p'];
+} else {
+    $q = "SELECT COUNT(id) FROM directors $where";
+    $r = mysqli_query($dbc, $q);
+    $row = mysqli_fetch_array($r, MYSQLI_NUM);
+    $records = $row[0];
+    if ($records > $display) {
+        $pages = ceil($records/$display);
+    } else {
+        $pages = 1;
+    }
+}
+
 ?>
 
 <div class="container-fluid">
