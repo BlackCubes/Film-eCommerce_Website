@@ -660,7 +660,15 @@ INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`,
 (5, 'Alejandro', 'González', 'Iñárritu', 'M', '', 'writers/alejandro-gonzalez-inarritu_Cover.jpg'),
 (6, 'Alexander', '', 'Dinelaris Jr.', 'M', '', 'writers/alexander-dinelaris-jr_Cover.jpg'),
 (7, 'Alexander', '', 'Payne', 'M', '', 'writers/alexander-payne_Cover.jpg'),
-(8, 'Alex', '', 'Gansa', 'M', '', 'writers/alex-gansa_Cover.jpg');
+(8, 'Alex', '', 'Gansa', 'M', '', 'writers/alex-gansa_Cover.jpg'),
+(9, 'Amy', '', 'Sherman-Palladino', 'F', '', 'writers/amy-shermanpalladino_Cover.jpg'),
+(10, 'Armando', '', 'Bó', 'M', '', 'writers/armando-bo_Cover.jpg'),
+(11, 'Armando', '', 'Iannucci', 'M', '', 'writers/armando-iannucci_Cover.jpg'),
+(12, 'Aziz', '', 'Ansari', 'M', '', 'writers/aziz-ansari_Cover.jpg'),
+(13, 'Barry', '', 'Jenkins', 'M', '', 'writers/barry-jenkins_Cover.jpg'),
+(14, 'Bruce', '', 'Miller', 'M', '', 'writers/bruce-miller_Cover.jpg'),
+(15, 'Charles', '', 'Randolph', 'M', '', 'writers/charles-randolph_Cover.jpg'),
+(16, 'Chris', '', 'Terrio', 'M', '', 'writers/chris-terrio_Cover.jpg');
 
 --
 -- Indexes for dumped tables
