@@ -66,7 +66,7 @@ $r = mysqli_query($dbc, $q);
 echo '<div class="container-fluid">
 <nav class="breadcrumb t-uppercase" role="navigation" aria-label="breadcrumbs">
     <li><a href="' . BASE_URL . 'index.php">Home</a></li>
-    <li><a href="' BASE_URL . 'dp/index.php">' . $page_title . '</a></li>
+    <li><a href="' . BASE_URL . 'dp/index.php">' . $page_title . '</a></li>
 </nav>
 <div class="row">
     <div class="col-2">
