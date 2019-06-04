@@ -15,9 +15,13 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-$page_title = 'Director of Photography';
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
+$page_title = 'Cinematographers';
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
 <div class="container-fluid">
