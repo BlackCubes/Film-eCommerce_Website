@@ -92,6 +92,7 @@ echo '</div></div>
 mysqli_free_result($r);
 mysqli_close($dbc);
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
 <div class="container-fluid">
