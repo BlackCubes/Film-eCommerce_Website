@@ -1,8 +1,19 @@
 <?php
 
-# Directors Page v.2 - For nav tab
-# Created February 10, 2019
-# Created by Elias Gutierrez
+# index.php (Directors page).
+# Created February 10, 2019.
+# PHP with SQL created June 4, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
 
 $page_title = 'Directors';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
