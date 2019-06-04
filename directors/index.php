@@ -89,6 +89,8 @@ while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 echo '</div></div>
 <div class="col-2"></div>
 </div></div>';
+mysqli_free_result($r);
+mysqli_close($dbc);
 
 ?>
 
