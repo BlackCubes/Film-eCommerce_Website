@@ -1,8 +1,19 @@
 <?php
 
-# DP (Director of Photography) Page v.1
-# Created February 13, 2019
-# Created by Elias Gutierrez
+# index.php (Cinematographers page).
+# Created February 13, 2019.
+# PHP with SQL created June 4, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
 
 $page_title = 'Director of Photography';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
