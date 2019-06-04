@@ -15,8 +15,13 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+
 $page_title = 'Directors';
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+
+require(MYSQL);
 
 ?>
 
