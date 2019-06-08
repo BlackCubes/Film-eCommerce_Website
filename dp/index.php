@@ -43,7 +43,7 @@ switch ($sort) {
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
-    $q = "SELECT COUNT(id) FROM dp $where";
+    $q = "SELECT COUNT(id) FROM dps $where";
     $r = mysqli_query($dbc, $q);
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
@@ -60,7 +60,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
-$q = "SELECT first_name, middle_name, last_name, img FROM dp $where ORDER BY last_name LIMIT $start, $display";
+$q = "SELECT first_name, middle_name, last_name, img FROM dps $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
 echo '<div class="container-fluid">
