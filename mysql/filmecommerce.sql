@@ -259,7 +259,17 @@ INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `ab
 (61, 'Robert', '', 'Richardson', 'M', '', 'dp/robertrichardson_Cover.jpg'),
 (62, 'Robert', '', 'Surtees', 'M', '', 'dp/robertsurtees_Cover.jpg'),
 (63, 'Robert', '', 'Yeoman', 'M', '', 'dp/robertyeoman_Cover.jpg'),
-(64, 'Rodrigo', '', 'Prieto', 'M', '', 'dp/rodrigoprieto_Cover.jpg');
+(64, 'Rodrigo', '', 'Prieto', 'M', '', 'dp/rodrigoprieto_Cover.jpg'),
+(65, 'Roger', '', 'Deakins', 'M', '', 'dp/rogerdeakins_Cover.jpg'),
+(66, 'Ronnie', '', 'Taylor', 'M', '', 'dp/ronnietaylor_Cover.jpg'),
+(67, 'Russell', '', 'Boyd', 'M', '', 'dp/russellboyd_Cover.jpeg'),
+(68, 'Russell', '', 'Carpenter', 'M', '', 'dp/russellcarpenter_Cover.jpg'),
+(69, 'Russell', '', 'Metty', 'M', '', 'dp/russellmetty_Cover.jpg'),
+(70, 'Sven', '', 'Nykvist', 'M', '', 'dp/svennykvist_Cover.jpg'),
+(71, 'Vilmos', '', 'Zsigmond', 'M', '', 'dp/vilmoszsigmond_Cover.jpg'),
+(72, 'Vittorio', '', 'Storaro', 'M', '', 'dp/vittoriostoraro_Cover.jpg'),
+(73, 'Wally', '', 'Pfister', 'M', '', 'dp/wallypfister_Cover.jpg'),
+(74, 'Walter', '', 'Lassally', 'M', '', 'dp/walterlassally_Cover.jpg');
 
 -- --------------------------------------------------------
 
