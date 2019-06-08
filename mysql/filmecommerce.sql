@@ -219,7 +219,15 @@ INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `ab
 (21, 'Edward', '', 'Lachman', 'M', '', 'dp/edwardlachman_Cover.jpg'),
 (22, 'Ellen', '', 'Kuras', 'F', '', 'dp/ellenkuras_Cover.jpg'),
 (23, 'Emmanuel', '', 'Lubezki', 'M', '', 'dp/emmanuellubezki_Cover.jpg'),
-(24, 'Ernest', '', 'Laszlo', 'M', '', 'dp/ernestlaszlo_Cover.jpg');
+(24, 'Ernest', '', 'Laszlo', 'M', '', 'dp/ernestlaszlo_Cover.jpg'),
+(25, 'Freddie', '', 'Francis', 'M', '', 'dp/freddiefrancis_Cover.jpg'),
+(26, 'Freddie', '', 'Young', 'M', '', 'dp/freddieyoung_Cover.jpg'),
+(27, 'Fred', 'J.', 'Koenekamp', 'M', '', 'dp/fredjkoenekamp_Cover.jpg'),
+(28, 'Geoffrey', '', 'Unsworth', 'M', '', 'dp/geoffreyunsworth_Cover.jpg'),
+(29, 'Greig', '', 'Fraser', 'M', '', 'dp/greigfraser_Cover.jpg'),
+(30, 'Guillermo', '', 'Navarro', 'M', '', 'dp/guillermonavarro_Cover.jpg'),
+(31, 'Harry', '', 'Stradling Jr.', 'M', '', 'dp/harrystradlingjr_Cover.jpg'),
+(32, 'Haskell', '', 'Wexler', 'M', '', 'dp/haskellwexler_Cover.jpg');
 
 -- --------------------------------------------------------
 
