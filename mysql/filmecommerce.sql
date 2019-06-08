@@ -700,7 +700,15 @@ INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`,
 (45, 'Kater', '', 'Gordon', 'F', '', 'writers/kater-gordon_Cover.jpg'),
 (46, 'Kelly', '', 'Marcel', 'F', '', 'writers/kelly-marcel_Cover.jpg'),
 (47, 'Kenneth', '', 'Lonergan', 'M', '', 'writers/kenneth-lonergan_Cover.jpg'),
-(48, 'Kirsten', '', 'Smith', 'F', '', 'writers/kirsten-smith_Cover.jpeg');
+(48, 'Kirsten', '', 'Smith', 'F', '', 'writers/kirsten-smith_Cover.jpeg'),
+(49, 'Larry', '', 'Wilmore', 'M', '', 'writers/larry-wilmore_Cover.jpg'),
+(50, 'Lena', '', 'Waithe', 'F', '', 'writers/lena-waithe_Cover.jpeg'),
+(51, 'Leslie', '', 'Dixon', 'F', '', 'writers/leslie-dixon_Cover.png'),
+(52, 'Lucinda', '', 'Coxon', 'F', '', 'writers/lucinda-coxon_Cover.jpg'),
+(53, 'Mark', '', 'Boal', 'M', '', 'writers/mark-boal_Cover.jpg'),
+(54, 'Matthew', '', 'Weiner', 'M', '', 'writers/matthew-weiner_Cover.jpg'),
+(55, 'Matt', '', 'Hubbard', 'M', '', 'writers/matt-hubbard_Cover.jpg'),
+(56, 'Melissa', '', 'Mathison', 'F', '', 'writers/melissa-mathison_Cover.jpg');
 
 --
 -- Indexes for dumped tables
