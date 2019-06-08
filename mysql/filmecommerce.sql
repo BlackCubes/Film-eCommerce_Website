@@ -211,7 +211,15 @@ INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `ab
 (13, 'Chris', '', 'Menges', 'M', '', 'dp/chrismenges_Cover.jpg'),
 (14, 'Claudio', '', 'Miranda', 'M', '', 'dp/claudiomiranda_Cover.jpg'),
 (15, 'Conrad', '', 'Hall', 'M', '', 'dp/conradhall_Cover.jpg'),
-(16, 'Dan', '', 'Laustsen', 'M', '', 'dp/danlaustsen_Cover.jpg');
+(16, 'Dan', '', 'Laustsen', 'M', '', 'dp/danlaustsen_Cover.jpg'),
+(17, 'David', '', 'Watkin', 'M', '', 'dp/davidwatkin_Cover.jpg'),
+(18, 'Dean', '', 'Semler', 'M', '', 'dp/deansemler_Cover.jpg'),
+(19, 'Dion', '', 'Beebe', 'M', '', 'dp/dionbeebe_Cover.jpg'),
+(20, 'Edward', '', 'Cronjager', 'M', '', 'dp/edwardcronjager_Cover.jpg'),
+(21, 'Edward', '', 'Lachman', 'M', '', 'dp/edwardlachman_Cover.jpg'),
+(22, 'Ellen', '', 'Kuras', 'F', '', 'dp/ellenkuras_Cover.jpg'),
+(23, 'Emmanuel', '', 'Lubezki', 'M', '', 'dp/emmanuellubezki_Cover.jpg'),
+(24, 'Ernest', '', 'Laszlo', 'M', '', 'dp/ernestlaszlo_Cover.jpg');
 
 -- --------------------------------------------------------
 
