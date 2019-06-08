@@ -767,8 +767,7 @@ ALTER TABLE `directors`
 -- Indexes for table `dps`
 --
 ALTER TABLE `dps`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gender` (`gender`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `formats`
