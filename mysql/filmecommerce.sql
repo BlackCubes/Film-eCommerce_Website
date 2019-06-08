@@ -251,7 +251,15 @@ INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `ab
 (53, 'Oswald', '', 'Morris', 'M', '', 'dp/oswaldmorris_Cover.jpg'),
 (54, 'Peter', '', 'Pau', 'M', '', 'dp/peterpau_Cover.jpg'),
 (55, 'Philippe', '', 'Rousselot', 'M', '', 'dp/philipperousselot_Cover.jpg'),
-(56, 'Polly', '', 'Morgan', 'F', '', 'dp/pollymorgan_Cover.jpg');
+(56, 'Polly', '', 'Morgan', 'F', '', 'dp/pollymorgan_Cover.jpg'),
+(57, 'Rachel', '', 'Morrison', 'F', '', 'dp/rachelmorrison_Cover.jpg'),
+(58, 'Reed', '', 'Morano', 'F', '', 'dp/reedmorano_Cover.jpg'),
+(59, 'Robbie', '', 'Ryan', 'M', '', 'dp/robbieryan_Cover.jpg'),
+(60, 'Robert', '', 'Elswit', 'M', '', 'dp/robertelswit_Cover.jpg'),
+(61, 'Robert', '', 'Richardson', 'M', '', 'dp/robertrichardson_Cover.jpg'),
+(62, 'Robert', '', 'Surtees', 'M', '', 'dp/robertsurtees_Cover.jpg'),
+(63, 'Robert', '', 'Yeoman', 'M', '', 'dp/robertyeoman_Cover.jpg'),
+(64, 'Rodrigo', '', 'Prieto', 'M', '', 'dp/rodrigoprieto_Cover.jpg');
 
 -- --------------------------------------------------------
 
