@@ -103,7 +103,7 @@ if ($pages > 1) {
 
     for ($i = 1; $i <= $pages; $i++) {
         if ($i != $current_page) {
-            echo '<a href="index.php?s=' (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
+            echo '<a href="index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
         } else {
             echo $i . ' ';
         }
