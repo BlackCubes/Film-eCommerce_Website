@@ -684,7 +684,15 @@ INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`,
 (29, 'Graham', '', 'Moore', 'M', '', 'writers/graham-moore_Cover.jpg'),
 (30, 'Greg', '', 'Daniels', 'M', '', 'writers/greg-daniels_Cover.jpg'),
 (31, 'Henry', '', 'Bromell', 'M', '', 'writers/henry-bromell_Cover.jpg'),
-(32, 'Howard', '', 'Gordon', 'M', '', 'writers/howard-gordon_Cover.jpg');
+(32, 'Howard', '', 'Gordon', 'M', '', 'writers/howard-gordon_Cover.jpg'),
+(33, 'James', '', 'Ivory', 'M', '', 'writers/james-ivory_Cover.jpg'),
+(34, 'Jane', '', 'Goldman', 'F', '', 'writers/jane-goldman_Cover.jpg'),
+(35, 'Jason', '', 'Katims', 'M', '', 'writers/jason-katims_Cover.jpeg'),
+(36, 'Jeffrey', '', 'Richman', 'M', '', 'writers/jeffrey-richman_Cover.jpg'),
+(37, 'Jim', '', 'Rash', 'M', '', 'writers/jim-rash_Cover.jpg'),
+(38, 'Joel', '', 'Fields', 'M', '', 'writers/joel-fields_Cover.jpg'),
+(39, 'Joe', '', 'Weisberg', 'M', '', 'writers/joe-weisberg_Cover.jpg'),
+(40, 'John', '', 'Ridley', 'M', '', 'writers/john-ridley_Cover.jpg');
 
 --
 -- Indexes for dumped tables
