@@ -708,7 +708,15 @@ INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`,
 (53, 'Mark', '', 'Boal', 'M', '', 'writers/mark-boal_Cover.jpg'),
 (54, 'Matthew', '', 'Weiner', 'M', '', 'writers/matthew-weiner_Cover.jpg'),
 (55, 'Matt', '', 'Hubbard', 'M', '', 'writers/matt-hubbard_Cover.jpg'),
-(56, 'Melissa', '', 'Mathison', 'F', '', 'writers/melissa-mathison_Cover.jpg');
+(56, 'Melissa', '', 'Mathison', 'F', '', 'writers/melissa-mathison_Cover.jpg'),
+(57, 'Melissa', '', 'Rosenberg', 'F', '', 'writers/melissa-rosenberg_Cover.jpeg'),
+(58, 'Mitchell', '', 'Hurwitz', 'M', '', 'writers/mitchell-hurwitz_Cover.jpg'),
+(59, 'Moira', '', 'Walley-Beckett', 'F', '', 'writers/moira-walleybeckett_Cover.jpg'),
+(60, 'Nat', '', 'Faxon', 'M', '', 'writers/nat-faxon_Cover.jpg'),
+(61, 'Nicolás', '', 'Giacobone', 'M', '', 'writers/nicolas-giacobone_Cover.jpg'),
+(62, 'Nicole', '', 'Perlman', 'F', '', 'writers/nicole-perlman_Cover.jpg'),
+(63, 'Quentin', '', 'Tarantino', 'M', '', 'writers/quentin-tarantino_Cover.jpg'),
+(64, 'Shauna', '', 'Cross', 'F', '', 'writers/shauna-cross_Cover.jpg');
 
 --
 -- Indexes for dumped tables
