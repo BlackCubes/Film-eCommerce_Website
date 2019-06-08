@@ -191,6 +191,20 @@ CREATE TABLE `dps` (
   `img` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `dps`
+--
+
+INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `about`, `img`) VALUES
+(1, 'Agnès', '', 'Godard', 'F', '', 'dp/agnesgodard_Cover.jpg'),
+(2, 'Alfonso', '', 'Cuarón', 'M', '', 'dp/alfonsocuaron_Cover.jpg'),
+(3, 'Andrew', '', 'Lesnie', 'M', '', 'dp/andrewlesnie_Cover.jpg'),
+(4, 'Anthony', 'Dod', 'Mantle', 'M', '', 'dp/anthonydodmantle_Cover.jpg'),
+(5, 'Asakazu', '', 'Nakai', 'M', '', 'dp/asakazunakai_Cover.jpg'),
+(6, 'Billy', '', 'Williams', 'M', '', 'dp/billywilliams_Cover.jpg'),
+(7, 'Birgit', '', 'Gudjónsdóttir', 'F', '', 'dp/birgitgudjonsdottir_Cover.jpg'),
+(8, 'Bradford', '', 'Young', 'M', '', 'dp/bradfordyoung_Cover.jpg');
+
 -- --------------------------------------------------------
 
 --
