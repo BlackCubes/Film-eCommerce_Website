@@ -227,7 +227,15 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (45, 'Lucrecia', '', 'Martel', 'F', '', 'directors/lucrecia-martel_Cover.jpg'),
 (46, 'Lynne', '', 'Ramsay', 'F', '', 'directors/lynne-ramsay_Cover.jpg'),
 (47, 'Marjane', '', 'Satrapi', 'F', '', 'directors/marjane-satrapi_Cover.jpg'),
-(48, 'Martin', '', 'Scorsese', 'M', '', 'directors/martin-scorsese_Cover.jpg');
+(48, 'Martin', '', 'Scorsese', 'M', '', 'directors/martin-scorsese_Cover.jpg'),
+(49, 'Mel', '', 'Gibson', 'M', '', 'directors/mel-gibson_Cover.jpg'),
+(50, 'Michel', '', 'Hazanavicius', 'M', '', 'directors/michel-hazanavicius_Cover.jpg'),
+(51, 'Milos', '', 'Forman', 'M', '', 'directors/milos-forman_Cover.jpeg'),
+(52, 'Oliver', '', 'Stone', 'M', '', 'directors/oliver-stone_Cover.jpg'),
+(53, 'Penny', '', 'Marshall', 'F', '', 'directors/penny-marshall_Cover.jpg'),
+(54, 'Peter', '', 'Jackson', 'M', '', 'directors/peter-jackson_Cover.jpg'),
+(55, 'Paul', 'Thomas', 'Anderson', 'M', '', 'directors/p-t-a_Cover.jpg'),
+(56, 'Quentin', '', 'Tarantino', 'M', '', 'directors/quentin-tarantino_Cover.jpg');
 
 -- --------------------------------------------------------
 
