@@ -840,8 +840,7 @@ ALTER TABLE `departments`
 -- Indexes for table `directors`
 --
 ALTER TABLE `directors`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `gender` (`gender`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `dps`
