@@ -175,6 +175,20 @@ CREATE TABLE `directors` (
   `img` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `directors`
+--
+
+INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `about`, `img`) VALUES
+(1, 'Agnès', '', 'Varda', 'F', '', 'directors/agnes-varda_Cover.jpg'),
+(2, 'Akira', '', 'Kurosawa', 'M', '', 'directors/akira-kurosawa_Cover.jpg'),
+(3, 'Alejandro', 'González', 'Iñárritu', 'M', '', 'directors/alejandro-gonzalez-inarritu_Cover.jpg'),
+(4, 'Alfonso', '', 'Cuarón', 'M', '', 'directors/alfonso-cuaron_Cover.jpg'),
+(5, 'Alfred', '', 'Hitchcock', 'M', '', 'directors/alfred-hitchcock_Cover.jpg'),
+(6, 'Amy', '', 'Heckerling', 'F', '', 'directors/amy-heckerling_Cover.jpg'),
+(7, 'Andrea', '', 'Arnold', 'F', '', 'directors/andrea-arnold_Cover.jpg'),
+(8, 'Ang', '', 'Lee', 'M', '', 'directors/ang-lee_Cover.jpg');
+
 -- --------------------------------------------------------
 
 --
