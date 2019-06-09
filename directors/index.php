@@ -98,7 +98,7 @@ if ($pages > 1) {
     $current_page = ($start/$display) + 1;
 
     if ($current_page != 1) {
-        echo '<a href="index.php?s=' ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
+        echo '<a href="index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
     }
 
     for ($i = 1; $i <= $pages; $i++) {
