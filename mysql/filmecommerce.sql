@@ -243,7 +243,18 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (61, 'Roman', '', 'Polanski', 'M', '', 'directors/roman-polanski_Cover.jpg'),
 (62, 'Ron', '', 'Howard', 'M', '', 'directors/ron-howard_Cover.jpg'),
 (63, 'Sam', '', 'Mendes', 'M', '', 'directors/sam-mendes_Cover.jpg'),
-(64, 'Spike', '', 'Jonze', 'M', '', 'directors/spike-jonze_Cover.jpg');
+(64, 'Spike', '', 'Jonze', 'M', '', 'directors/spike-jonze_Cover.jpg'),
+(65, 'Stanley', '', 'Kubrick', 'M', '', 'directors/stanley-kubrick_Cover.jpg'),
+(66, 'Steven', '', 'Soderbergh', 'M', '', 'directors/steven-soderbergh_Cover.jpg'),
+(67, 'Steven', '', 'Spielberg', 'M', '', 'directors/steven-spielberg_Cover.jpg'),
+(68, 'Susan', '', 'Seidelman', 'F', '', 'directors/susan-seidelman_Cover.jpg'),
+(69, 'Sydney', '', 'Pollack', 'M', '', 'directors/sydney-pollack_Cover.jpg'),
+(70, 'Tom', '', 'Hooper', 'M', '', 'directors/tom-hooper_Cover.jpg'),
+(71, 'Vera', '', 'Chytilová', 'F', '', 'directors/vera-chytilova_Cover.jpg'),
+(72, 'Warren', '', 'Beatty', 'M', '', 'directors/warren-beatty_Cover.jpg'),
+(73, 'Wes', '', 'Anderson', 'M', '', 'directors/wes-anderson_Cover.jpg'),
+(74, 'William', '', 'Friedkin', 'M', '', 'directors/william-friedkin_Cover.jpg'),
+(75, 'Woody', '', 'Allen', 'M', '', 'directors/woody-allen_Cover.jpeg');
 
 -- --------------------------------------------------------
 
