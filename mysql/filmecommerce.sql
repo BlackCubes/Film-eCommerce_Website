@@ -211,7 +211,15 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (29, 'Franklin', 'J.', 'Schaffner', 'M', '', 'directors/franklin-j-schaffner_Cover.jpg'),
 (30, 'George', 'Roy', 'Hill', 'M', '', 'directors/george-roy-hill_Cover.jpg'),
 (31, 'Greta', '', 'Gerwig', 'F', '', 'directors/greta-gerwig_Cover.jpg'),
-(32, 'Guillermo', 'del', 'Toro', 'M', '', 'directors/guillermo-del-toro_Cover.jpg');
+(32, 'Guillermo', 'del', 'Toro', 'M', '', 'directors/guillermo-del-toro_Cover.jpg'),
+(33, 'James', '', 'Cameron', 'M', '', 'directors/james-cameron_Cover.jpg'),
+(34, 'James', 'L.', 'Brooks', 'M', '', 'directors/james-l-brooks_Cover.jpeg'),
+(35, 'Jane', '', 'Campion', 'F', '', 'directors/jane-campion_Cover.jpg'),
+(36, 'John', 'G.', 'Avildsen', 'M', '', 'directors/john-g-avildsen_Cover.jpg'),
+(37, 'Jonathan', '', 'Demme', 'M', '', 'directors/jonathan-demme_Cover.jpg'),
+(38, 'Julie', '', 'Dash', 'F', '', 'directors/julie-dash_Cover.png'),
+(39, 'Kasi', '', 'Lemmons', 'F', '', 'directors/kasi_lemmons_Cover.jpg'),
+(40, 'Kathleen', '', 'Collins', 'F', '', 'directors/kathleen-collins_Cover.jpg');
 
 -- --------------------------------------------------------
 
