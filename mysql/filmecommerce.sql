@@ -235,7 +235,15 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (53, 'Penny', '', 'Marshall', 'F', '', 'directors/penny-marshall_Cover.jpg'),
 (54, 'Peter', '', 'Jackson', 'M', '', 'directors/peter-jackson_Cover.jpg'),
 (55, 'Paul', 'Thomas', 'Anderson', 'M', '', 'directors/p-t-a_Cover.jpg'),
-(56, 'Quentin', '', 'Tarantino', 'M', '', 'directors/quentin-tarantino_Cover.jpg');
+(56, 'Quentin', '', 'Tarantino', 'M', '', 'directors/quentin-tarantino_Cover.jpg'),
+(57, 'Richard', '', 'Attenborough', 'M', '', 'directors/richard-attenborough_Cover.jpg'),
+(58, 'Robert', '', 'Benton', 'M', '', 'directors/robert-benton_Cover.jpg'),
+(59, 'Robert', '', 'Redford', 'M', '', 'directors/robert-redford_Cover.jpg'),
+(60, 'Robert', '', 'Zemeckis', 'M', '', 'directors/robert-zemeckis_Cover.jpg'),
+(61, 'Roman', '', 'Polanski', 'M', '', 'directors/roman-polanski_Cover.jpg'),
+(62, 'Ron', '', 'Howard', 'M', '', 'directors/ron-howard_Cover.jpg'),
+(63, 'Sam', '', 'Mendes', 'M', '', 'directors/sam-mendes_Cover.jpg'),
+(64, 'Spike', '', 'Jonze', 'M', '', 'directors/spike-jonze_Cover.jpg');
 
 -- --------------------------------------------------------
 
