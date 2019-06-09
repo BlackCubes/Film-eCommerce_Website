@@ -198,7 +198,7 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (16, 'Chantal', '', 'Akerman', 'F', '', 'directors/chantal-akerman_Cover.jpg'),
 (17, 'Chloé', '', 'Zhao', 'F', '', 'directors/chloe-zhao_Cover.jpg'),
 (18, 'Christopher', '', 'Nolan', 'M', '', 'directors/chris-nolan_Cover.jpeg'),
-(19, 'Claire', '', 'Denis', 'F', '', 'directors/claire-denis_Cover.jpg'),
+(19, 'Claire', '', 'Denis', 'F', '', 'directors/claire-denis_Cover.png'),
 (20, 'Clint', '', 'Eastwood', 'M', '', 'directors/clint-eastwood_Cover.jpg'),
 (21, '', '', 'Coen brothers', 'M', '', 'directors/coen-brothers_Cover.jpg'),
 (22, 'Damien', '', 'Chazelle', 'M', '', 'directors/damian-chazelle_Cover.png'),
