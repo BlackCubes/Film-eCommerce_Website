@@ -187,7 +187,15 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (5, 'Alfred', '', 'Hitchcock', 'M', '', 'directors/alfred-hitchcock_Cover.jpg'),
 (6, 'Amy', '', 'Heckerling', 'F', '', 'directors/amy-heckerling_Cover.jpg'),
 (7, 'Andrea', '', 'Arnold', 'F', '', 'directors/andrea-arnold_Cover.jpg'),
-(8, 'Ang', '', 'Lee', 'M', '', 'directors/ang-lee_Cover.jpg');
+(8, 'Ang', '', 'Lee', 'M', '', 'directors/ang-lee_Cover.jpg'),
+(9, 'Anthony', '', 'Minghella', 'M', '', 'directors/anthony-minghella_Cover.jpg'),
+(10, 'Barbara', '', 'Kopple', 'F', '', 'directors/barbara-kopple_Cover.jpg'),
+(11, 'Barbara', '', 'Loden', 'F', '', 'directors/barbara-loden_Cover.jpg'),
+(12, 'Barbra', '', 'Streisand', 'F', '', 'directors/barbra-streisand_Cover.jpg'),
+(13, 'Barry', '', 'Levinson', 'M', '', 'directors/barry-levinson_Cover.jpg'),
+(14, 'Bernardo', '', 'Bertolucci', 'M', '', 'directors/bernardo-bertolucci_Cover.jpg'),
+(15, 'Bob', '', 'Fosse', 'M', '', 'directors/bob-fosse_Cover.jpg'),
+(16, 'Chantal', '', 'Akerman', 'F', '', 'directors/chantal-akerman_Cover.jpg');
 
 -- --------------------------------------------------------
 
