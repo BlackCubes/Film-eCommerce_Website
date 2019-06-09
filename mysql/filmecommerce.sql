@@ -203,7 +203,15 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (21, '', '', 'Coen brothers', 'M', '', 'directors/coen-brothers_Cover.jpg'),
 (22, 'Damien', '', 'Chazelle', 'M', '', 'directors/damian-chazelle_Cover.png'),
 (23, 'Danny', '', 'Boyle', 'M', '', 'directors/danny-boyle_Cover.jpg'),
-(24, 'David', '', 'Fincher', 'M', '', 'directors/david-fincher_Cover.jpg');
+(24, 'David', '', 'Fincher', 'M', '', 'directors/david-fincher_Cover.jpg'),
+(25, 'David', '', 'Lynch', 'M', '', 'directors/david-lynch_Cover.jpg'),
+(26, 'Debra', '', 'Granik', 'F', '', 'directors/debra-granik_Cover.jpg'),
+(27, 'Dorothy', '', 'Arzner', 'F', '', 'directors/dorothy-arzner_Cover.jpg'),
+(28, 'Francis', 'Ford', 'Coppola', 'M', '', 'directors/francis-coppola_Cover.jpg'),
+(29, 'Franklin', 'J.', 'Schaffner', 'M', '', 'directors/franklin-j-schaffner_Cover.jpg'),
+(30, 'George', 'Roy', 'Hill', 'M', '', 'directors/george-roy-hill_Cover.jpg'),
+(31, 'Greta', '', 'Gerwig', 'F', '', 'directors/greta-gerwig_Cover.jpg'),
+(32, 'Guillermo', 'del', 'Toro', 'M', '', 'directors/guillermo-del-toro_Cover.jpg');
 
 -- --------------------------------------------------------
 
