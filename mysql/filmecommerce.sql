@@ -363,6 +363,15 @@ CREATE TABLE `formats` (
   `format` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `formats`
+--
+
+INSERT INTO `formats` (`id`, `format`) VALUES
+(2, '4K UHD'),
+(1, 'Blu-ray'),
+(3, 'DVD');
+
 -- --------------------------------------------------------
 
 --
