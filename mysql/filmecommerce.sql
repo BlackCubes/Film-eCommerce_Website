@@ -159,6 +159,14 @@ CREATE TABLE `departments` (
   `department` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `departments`
+--
+
+INSERT INTO `departments` (`id`, `department`) VALUES
+(1, 'Movies'),
+(2, 'TV');
+
 -- --------------------------------------------------------
 
 --
