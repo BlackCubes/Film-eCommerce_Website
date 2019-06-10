@@ -681,6 +681,25 @@ CREATE TABLE `ratings` (
   `rated` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `ratings`
+--
+
+INSERT INTO `ratings` (`id`, `rated`) VALUES
+(1, 'G'),
+(5, 'NC-17'),
+(6, 'NR'),
+(2, 'PG'),
+(3, 'PG-13'),
+(4, 'R'),
+(12, 'TV-14'),
+(10, 'TV-G'),
+(13, 'TV-MA'),
+(11, 'TV-PG'),
+(8, 'TV-Y'),
+(9, 'TV-Y7'),
+(7, 'Unrated');
+
 -- --------------------------------------------------------
 
 --
