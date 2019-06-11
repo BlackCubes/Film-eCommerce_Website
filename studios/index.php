@@ -46,6 +46,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 $q = "SELECT studio_name, img FROM studios LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
 <div class="container-fluid">
