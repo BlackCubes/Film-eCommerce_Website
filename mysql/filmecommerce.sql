@@ -758,7 +758,7 @@ CREATE TABLE `studios` (
   `id` smallint(5) UNSIGNED NOT NULL,
   `studio_name` varchar(55) NOT NULL,
   `about` text NOT NULL,
-  `img` varchar(50) NOT NULL
+  `img` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
