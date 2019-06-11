@@ -761,6 +761,20 @@ CREATE TABLE `studios` (
   `img` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `studios`
+--
+
+INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
+(1, '20th Century Fox', '', 'studios/20th-century-fox_Cover.png'),
+(2, '20th Century Fox Animation', '', 'studios/20th-century-fox-animation_Cover.png'),
+(3, 'Adult Swim', '', 'studios/adult-swim_Cover.png'),
+(4, 'Affirm Films', '', 'studios/affirm-films_Cover.png'),
+(5, 'Amazon Studios', '', 'studios/amazon-studios_Cover.png'),
+(6, 'Amblin Partners', '', 'studios/amblin-partners_Cover.png'),
+(7, 'Bardel Entertainment', '', 'studios/bardel-entertainment_Cover.jpg'),
+(8, 'Big Idea Entertainment', '', 'studios/big-idea-entertainment_Cover.png');
+
 -- --------------------------------------------------------
 
 --
