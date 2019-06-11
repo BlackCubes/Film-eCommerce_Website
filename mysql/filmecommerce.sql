@@ -789,7 +789,15 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (21, 'Disneynature', '', 'studios/disneynature_Cover.png'),
 (22, 'DreamWorks Animation', '', 'studios/dreamworks-animation_Cover.png'),
 (23, 'ESPN Films', '', 'studios/espn-films_Cover.png'),
-(24, 'FilmDistrict', '', 'studios/filmdistrict_Cover.jpg');
+(24, 'FilmDistrict', '', 'studios/filmdistrict_Cover.jpg'),
+(25, 'Flagship Entertainment', '', 'studios/flagship-entertainment_Cover.jpg'),
+(26, 'Focus Features', '', 'studios/focus-features_Cover.png'),
+(27, 'Fox Searchlight Pictures', '', 'studios/fox-searchlight-pictures_Cover.png'),
+(28, 'Funimation', '', 'studios/funimation_Cover.png'),
+(29, 'Gaumont', '', 'studios/gaumont_Cover.png'),
+(30, 'Hanna-Barbera', '', 'studios/hannabarbera_Cover.png'),
+(31, 'HBO Films', '', 'studios/hbo-films_Cover.png'),
+(32, 'Hello Sunshine', '', 'studios/hello-sunshine_Cover.jpg');
 
 -- --------------------------------------------------------
 
