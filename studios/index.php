@@ -1,8 +1,19 @@
 <?php
 
-# Studios Page v.1
+# index.php (Studios page).
 # Created February 19, 2018
-# Created by Elias Gutierrez
+# PHP with MySQL created June 11, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
 
 $page_titile = 'Studios';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html')
