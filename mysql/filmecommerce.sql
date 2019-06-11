@@ -829,7 +829,15 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (61, 'Triumph Films', '', 'studios/triumph-films_Cover.png'),
 (62, 'United Artists', '', 'studios/united-artists_Cover.png'),
 (63, 'Universal Animation Studios', '', 'studios/universal-animation-studios_Cover.png'),
-(64, 'Universal Pictures', '', 'studios/universal-pictures_Cover.png');
+(64, 'Universal Pictures', '', 'studios/universal-pictures_Cover.png'),
+(65, 'Universal Pictures Home Entertainment', '', 'studios/universal-studios-home-entertainment_Cover.png'),
+(66, 'Walt Disney', '', 'studios/walt-disney_Cover.png'),
+(67, 'Walt Disney Animation Studios', '', 'studios/walt-disney-animation-studios_Cover.png'),
+(68, 'Walt Disney Studios Motion Pictures', '', 'studios/walt-disney-studios-motion-pictures_Cover.png'),
+(69, 'Warner Animation Group', '', 'studios/warner-animation-group_Cover.png'),
+(70, 'Warner Bros.', '', 'studios/warner-bros_Cover.png'),
+(71, 'Warner Bros. Animation', '', 'studios/warner-bros-animation_Cover.png'),
+(72, 'Working Title Films', '', 'studios/working-title-films_Cover.png');
 
 -- --------------------------------------------------------
 
