@@ -46,6 +46,20 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 $q = "SELECT studio_name, img FROM studios LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
+echo '<div class="container-fluid">
+<nav class="breadcrumb t-uppercase" role="navigation" aria-label="breadcrumbs">
+    <li><a href="' . BASE_URL . 'index.php">Home</a></li>
+    <li><a href="' . BASE_URL . 'studios/index.php">' . $page_titile . '</a></li>
+</nav>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 inline" id="studiosCollection">
+        <div class="row grid grid--view-items">';
+
+echo '</div></div>
+<div class="col-2"></div>
+</div></div>';
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
 
