@@ -43,6 +43,9 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
+$q = "SELECT studio_name, img FROM studios LIMIT $start, $display";
+$r = mysqli_query($dbc, $q);
+
 ?>
 
 <div class="container-fluid">
