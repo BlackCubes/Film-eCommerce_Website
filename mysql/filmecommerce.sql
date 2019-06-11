@@ -821,7 +821,15 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (53, 'Screen Gems', '', 'studios/screen-gems_Cover.png'),
 (54, 'Sony Pictures Animation', '', 'studios/sony-pictures-animation_Cover.png'),
 (55, 'Sony Pictures Classics', '', 'studios/sony-pictures-classics_Cover.png'),
-(56, 'Sony Pictures Imageworks', '', 'studios/sony-pictures-imageworks_Cover.png');
+(56, 'Sony Pictures Imageworks', '', 'studios/sony-pictures-imageworks_Cover.png'),
+(57, 'Sony Pictures Worldwide Acquisitions', '', 'studios/sony-pictures-worldwide-acquisitions_Cover.png'),
+(58, 'Stage 6 Films', '', 'studios/stage-6-films_Cover.png'),
+(59, 'STX Entertainment', '', 'studios/stx-entertainment_Cover.png'),
+(60, 'TriStar Pictures', '', 'studios/tristar-Pictures_Cover.png'),
+(61, 'Triumph Films', '', 'studios/triumph-films_Cover.png'),
+(62, 'United Artists', '', 'studios/united-artists_Cover.png'),
+(63, 'Universal Animation Studios', '', 'studios/universal-animation-studios_Cover.png'),
+(64, 'Universal Pictures', '', 'studios/universal-pictures_Cover.png');
 
 -- --------------------------------------------------------
 
