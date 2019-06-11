@@ -773,7 +773,15 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (5, 'Amazon Studios', '', 'studios/amazon-studios_Cover.png'),
 (6, 'Amblin Partners', '', 'studios/amblin-partners_Cover.png'),
 (7, 'Bardel Entertainment', '', 'studios/bardel-entertainment_Cover.jpg'),
-(8, 'Big Idea Entertainment', '', 'studios/big-idea-entertainment_Cover.png');
+(8, 'Big Idea Entertainment', '', 'studios/big-idea-entertainment_Cover.png'),
+(9, 'Blue Sky Studios', '', 'studios/blue-sky-studios_Cover.png'),
+(10, 'Carnival Films', '', 'studios/carnival-films_Cover.jpg'),
+(11, 'Cartoon Network Studios', '', 'studios/cartoon-network-studios_Cover.png'),
+(12, 'Castle Rock Entertainment', '', 'studios/castle-rock-entertainment_Cover.png'),
+(13, 'CBS Films', '', 'studios/cbs-films_Cover.png'),
+(14, 'Columbia Pictures', '', 'studios/columbia-pictures_Cover.png'),
+(15, 'Comedy Central', '', 'studios/comedy-central_Cover.png'),
+(16, 'Constantin Films', '', 'studios/constantin-film_Cover.png');
 
 -- --------------------------------------------------------
 
