@@ -813,7 +813,15 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (45, 'Nickelodeon Movies', '', 'studios/nickelodeon-movies_Cover.png'),
 (46, 'Nordisk Film', '', 'studios/nordisk-film_Cover.png'),
 (47, 'Paramount Pictures', '', 'studios/paramount-pictures_Cover.png'),
-(48, 'Paramount Vantage', '', 'studios/paramount-vantage_Cover.png');
+(48, 'Paramount Vantage', '', 'studios/paramount-vantage_Cover.png'),
+(49, 'Pixar', '', 'studios/pixar_Cover.png'),
+(50, 'Regency Enterprises', '', 'studios/regency-enterprises_Cover.png'),
+(51, 'RKO Pictures', '', 'studios/rko-pictures_Cover.png'),
+(52, 'Rooster Teeth', '', 'studios/rooster-teeth_Cover.png'),
+(53, 'Screen Gems', '', 'studios/screen-gems_Cover.png'),
+(54, 'Sony Pictures Animation', '', 'studios/sony-pictures-animation_Cover.png'),
+(55, 'Sony Pictures Classics', '', 'studios/sony-pictures-classics_Cover.png'),
+(56, 'Sony Pictures Imageworks', '', 'studios/sony-pictures-imageworks_Cover.png');
 
 -- --------------------------------------------------------
 
