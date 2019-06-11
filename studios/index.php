@@ -17,7 +17,7 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
-$page_titile = 'Studios';
+$page_title = 'Studios';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
