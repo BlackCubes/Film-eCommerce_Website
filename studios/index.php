@@ -21,6 +21,8 @@ $page_titile = 'Studios';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+require(MYSQL);
+
 $display = 15;
 
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
