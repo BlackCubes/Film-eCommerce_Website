@@ -803,7 +803,7 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (35, 'Lionsgate', '', 'studios/lionsgate_Cover.png'),
 (36, 'Lucasfilm', '', 'studios/lucasfilm_Cover.png'),
 (37, 'Lucasfilm Animation', '', 'studios/lucasfilm-animation_Cover.png'),
-(38, 'Marvel Animation', '', 'studios/marvel-animation_Cover.png'),
+(38, 'Marvel Animation', '', 'studios/marvel-animation_Cover.jpg'),
 (39, 'Marvel Studios', '', 'studios/marvel-studios_Cover.png'),
 (40, 'Metro-Goldwyn-Mayer', '', 'studios/metrogoldwynmayer_Cover.png'),
 (41, 'MTV Films', '', 'studios/mtv-films_Cover.png'),
