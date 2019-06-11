@@ -21,6 +21,8 @@ $page_titile = 'Studios';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+$display = 15;
+
 ?>
 
 <div class="container-fluid">
