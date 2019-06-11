@@ -781,7 +781,15 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (13, 'CBS Films', '', 'studios/cbs-films_Cover.png'),
 (14, 'Columbia Pictures', '', 'studios/columbia-pictures_Cover.png'),
 (15, 'Comedy Central', '', 'studios/comedy-central_Cover.png'),
-(16, 'Constantin Films', '', 'studios/constantin-film_Cover.png');
+(16, 'Constantin Films', '', 'studios/constantin-film_Cover.png'),
+(17, 'CORE Media Group', '', 'studios/core-media-group_Cover.png'),
+(18, 'Crunchyroll', '', 'studios/crunchyroll_Cover.png'),
+(19, 'DC Films', '', 'studios/dc-films_Cover.png'),
+(20, 'Destination Films', '', 'studios/destination-films_Cover.png'),
+(21, 'Disneynature', '', 'studios/disneynature_Cover.png'),
+(22, 'DreamWorks Animation', '', 'studios/dreamworks-animation_Cover.png'),
+(23, 'ESPN Films', '', 'studios/espn-films_Cover.png'),
+(24, 'FilmDistrict', '', 'studios/filmdistrict_Cover.jpg');
 
 -- --------------------------------------------------------
 
