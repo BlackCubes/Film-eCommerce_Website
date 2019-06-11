@@ -58,6 +58,15 @@ echo '<div class="container-fluid">
     <div class="col-8 inline" id="studiosCollection">
         <div class="row grid grid--view-items">';
 
+while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    echo '<div class="col grid_item">
+    <div class="grid-view-item">
+        <a class="grid-view-item_link" href="#"><img id="productImage-collection-template-1" src="' . BASE_URL .'img/' . $row['img'] . '" alt="#"></a>
+        <a href="#"><div class="h4 grid-view-item_title">' . $row['studio_name'] . '</div></a>
+    </div>
+</div>';
+}
+
 echo '</div></div>
 <div class="col-2"></div>
 </div></div>';
