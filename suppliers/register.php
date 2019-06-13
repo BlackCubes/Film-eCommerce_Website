@@ -118,6 +118,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid country!</p>';
     }
 
+    if ($ln && $cn && $pn && $e && $p && $a1 && $c && $z && $s && $ctry) {
+        
+    }
+
 }
 
 ?>
