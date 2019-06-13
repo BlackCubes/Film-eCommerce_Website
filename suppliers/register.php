@@ -48,6 +48,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Invalid URL!</p>';
     }
 
+    if (preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $trimmed['phone_num'])) {
+        $pn = mysqli_real_escape_string($dbc, $trimmed['phone_num']);
+    } elseif (empty($trimmed['phone_num'])) {
+        $pn = mysqli_real_escape_string($dbc, $trimmed['phone_num']);
+    } else {
+        echo '<p class="error">Please enter a valid phone number!</p>';
+    }
+
 }
 
 ?>
