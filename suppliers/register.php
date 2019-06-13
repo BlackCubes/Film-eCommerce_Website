@@ -16,3 +16,5 @@
         <p><strong>Country:</strong> <input type="text" name="country" size="15" maxlength="27" value="<?php if (isset($trimmed['country'])) echo $trimmed['country']; ?>"></p>
     </fieldset>
 </form>
+
+<?php include('includes/footer.html'); ?>
