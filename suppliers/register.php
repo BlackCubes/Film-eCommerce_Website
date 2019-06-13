@@ -112,6 +112,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter either a 2 character length or the full name!</p>';
     }
 
+    if (preg_match('/^[a-zA-Z]{2,27}$/', $trimmed['country'])) {
+        $ctry = $trimmed['country'];
+    } else {
+        echo '<p class="error">Please enter a valid country!</p>';
+    }
+
 }
 
 ?>
