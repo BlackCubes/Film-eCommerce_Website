@@ -131,6 +131,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $q1 = "INSERT INTO suppliers (legal_name, company_name, website_url, phone_num, email, pass, verify_code, registration_date) VALUES ('$ln', '$cn', '$wu', '$pn', '$e', '$p', '$a', NOW())";
             $q2 = "INSERT INTO supplieraddress (supplier_id, address_1, address_2, city, zip, state, country) VALUES (LAST_INSERT_ID(), '$a1', '$a2', '$c', '$z', '$s', '$ctry')";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+            if (mysqli_affected_rows($dbc) == 1) {
+
+                $body = "Thank you for registering as a supplier for the Film eCommerce website! To activate your account, please click on this link:\n\n";
+                $body .= BASE_URL . 'activate.php?x=' . urlencode($e) . "&y=$a";
+
+                mail($trimmed['email'], 'Registration Confirmation', $body, 'From: gutierrezelias1991@gmail.com');
+
+                echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
+                include('includes/footer.html');
+                exit();
+                
+            }
         }
     }
 
