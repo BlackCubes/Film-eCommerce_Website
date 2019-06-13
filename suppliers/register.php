@@ -123,6 +123,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $q = "SELECT id FROM suppliers WHERE email='$e'";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+        if (mysqli_num_rows($r) == 0) {
+            
+        }
     }
 
 }
