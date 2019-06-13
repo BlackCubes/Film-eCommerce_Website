@@ -86,6 +86,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid address!</p>';
     }
 
+    if (strlen($trimmed['city']) <= 50) {
+        if (preg_match('/^([a-zA-Z\u0080-\u024F]+(?:. |-| |\'))*[a-zA-Z\u0080-\u024F]*$/', $trimmed['city'])) {
+            $c = mysqli_real_escape_string($dbc, $trimmed['city']);
+        } else {
+            echo '<p class="error">Please enter a valid city!</p>';
+        }
+    } else {
+        echo '<p class="error">Please enter 50 characters or less!</p>';
+    }
+
     if (preg_match('/^(\d{5})(-\d{4})?\s?$/m', $trimmed['zip'])) {
         $z = mysqli_real_escape_string($dbc, $trimmed['zip']);
     } else {
