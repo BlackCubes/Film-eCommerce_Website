@@ -72,6 +72,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid password!</p>';
     }
 
+    if (preg_match('/^[-a-z0-9 ,#\'\/.]{3,46}$/', $trimmed['address1'])) {
+        $a1 = mysqli_real_escape_string($dbc, $trimmed['address1']);
+    } else {
+        echo '<p class="error">Please enter a valid address!</p>';
+    }
+
 }
 
 ?>
