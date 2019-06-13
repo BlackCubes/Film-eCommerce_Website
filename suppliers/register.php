@@ -33,6 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo '<p class="error">Please enter your legal name!</p>';
     }
+
+    if (preg_match('/^[A-Z \'.-]{2,55}$/i', $trimmed['company_name'])) {
+        $cn = mysqli_real_escape_string($dbc, $trimmed['company_name']);
+    } else {
+        echo '<p class="error">Please enter the name of your company!</p>';
+    }
+
 }
 
 ?>
