@@ -14,4 +14,7 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+$page_title = 'Suppliers Central Hub';
+include(__DIR__.'\includes\header.html');
+
 ?>
