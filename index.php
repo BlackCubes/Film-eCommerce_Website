@@ -209,6 +209,6 @@ include(__DIR__.'\includes\header.html');
 
 <?php
 
-include(__DIR__.'\includes\footer.html')
+include(__DIR__.'\includes\footer.html');
 
 ?>
