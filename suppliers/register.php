@@ -1,3 +1,21 @@
+<?php
+
+# register.php (Suppliers Registration).
+# Created June 12, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
+
+?>
+
 <h1>Supplier's Registration</h1>
 <form action="register.php" method="post">
     <fieldset>
