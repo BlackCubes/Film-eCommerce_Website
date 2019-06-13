@@ -14,6 +14,12 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
+$page_title = 'Suppliers Registration';
+
+include('includes/header.html');
+
 ?>
 
 <h1>Supplier's Registration</h1>
