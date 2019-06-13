@@ -102,6 +102,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid zip code!</p>';
     }
 
+    if (strlen($trimmed['state']) <= 50 && strlen($trimmed['state']) >= 2 && !empty($trimmed['state'])) {
+        if (preg_match('/^([a-zA-Z\u0080-\u024F]+(?:. |-| |\'))*[a-zA-Z\u0080-\u024F]*$/', $trimmed['state'])) {
+            $s = mysqli_real_escape_string($dbc, $trimmed['state']);
+        } else {
+            echo '<p class="error">Please enter a valid state!</p>';
+        }
+    } else {
+        echo '<p class="error">Please enter either a 2 character length or the full name!</p>';
+    }
+
 }
 
 ?>
