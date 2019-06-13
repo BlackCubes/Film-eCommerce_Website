@@ -6,7 +6,7 @@
 # Created by Elias Gutierrez
 
 $page_title = 'Welcome to this site!';
-include(__DIR__.'\includes\header.html')
+include(__DIR__.'\includes\header.html');
 
 ?>
 
