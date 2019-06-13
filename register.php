@@ -139,6 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         <p><strong>Confirm Password:</strong> <input type="password" name="password2" size="20" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>"></p>
         <p><strong>Phone Number</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Optional, but may be used to assist delivery)</small></p>
     </fieldset>
+    <p><small>Want to sell your films? Register <a href="suppliers/register.php">here</a>.</small></p>
     <div align="center"><input type="submit" name="submit" value="Register"></div>
 </form>
 
