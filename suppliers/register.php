@@ -155,8 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please try again.</p>';
     }
 
-}
+    mysqli_close($dbc);
 
+}
 ?>
 
 <h1>Supplier's Registration</h1>
