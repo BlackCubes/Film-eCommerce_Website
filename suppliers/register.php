@@ -23,6 +23,10 @@ include('includes/header.html');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
+
+    $trimmed = array_map('trim', $_POST);
+
+    $ln = $cn = $pn = $e = $p = $a1 = $c = $z = $s = $ctry = FALSE;
 }
 
 ?>
