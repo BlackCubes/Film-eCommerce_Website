@@ -126,6 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_num_rows($r) == 0) {
             
+            $a = md5(uniqid(rand(), true));
         }
     }
 
