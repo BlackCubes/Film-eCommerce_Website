@@ -40,6 +40,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter the name of your company!</p>';
     }
 
+    if (preg_match('/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i', $trimmed['website_url'])) {
+        $wu = mysqli_real_escape_string($dbc, $trimmed['website_url']);
+    } elseif (empty($trimmed['website_url'])) {
+        $wu = mysqli_real_escape_string($dbc, $trimmed['website_url']);
+    } else {
+        echo '<p class="error">Invalid URL!</p>';
+    }
+
 }
 
 ?>
