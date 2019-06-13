@@ -142,9 +142,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
                 include('includes/footer.html');
                 exit();
-                
+
+            } else {
+                echo '<p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';
             }
+
+        } else {
+            echo '<p class="error">That email address has already been registered. If you have forgotten your password, please change it by clicking on Forgot Password when signing in.</p>';
         }
+
+    } else {
+        echo '<p class="error">Please try again.</p>';
     }
 
 }
