@@ -119,7 +119,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($ln && $cn && $pn && $e && $p && $a1 && $c && $z && $s && $ctry) {
-        
+
+
+        $q = "SELECT id FROM suppliers WHERE email='$e'";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
     }
 
 }
