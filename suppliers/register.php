@@ -127,6 +127,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysqli_num_rows($r) == 0) {
             
             $a = md5(uniqid(rand(), true));
+
+            $q1 = "INSERT INTO suppliers (legal_name, company_name, website_url, phone_num, email, pass, verify_code, registration_date) VALUES ('$ln', '$cn', '$wu', '$pn', '$e', '$p', '$a', NOW())";
+            $q2 = "INSERT INTO supplieraddress (supplier_id, address_1, address_2, city, zip, state, country) VALUES (LAST_INSERT_ID(), '$a1', '$a2', '$c', '$z', '$s', '$ctry')";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         }
     }
 
