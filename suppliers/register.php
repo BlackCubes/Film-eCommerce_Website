@@ -27,6 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $trimmed = array_map('trim', $_POST);
 
     $ln = $cn = $pn = $e = $p = $a1 = $c = $z = $s = $ctry = FALSE;
+
+    if (preg_match('/^[A-Z \'.-]{2,150}$/i', $trimmed['legal_name'])) {
+        $ln = mysqli_real_escape_string($dbc, $trimmed['legal_name']);
+    } else {
+        echo '<p class="error">Please enter your legal name!</p>';
+    }
 }
 
 ?>
