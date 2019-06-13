@@ -20,6 +20,11 @@ $page_title = 'Suppliers Registration';
 
 include('includes/header.html');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require(MYSQL);
+}
+
 ?>
 
 <h1>Supplier's Registration</h1>
