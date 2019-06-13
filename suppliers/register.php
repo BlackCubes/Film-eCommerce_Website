@@ -14,6 +14,7 @@
         <p><strong>Zip:</strong> <input type="text" name="zip" placeholder="'12345' or '12345-6789'" size="10" maxlength="10" value="<?php if (isset($trimmed['zip'])) echo $trimmed['zip']; ?>"></p>
         <p><strong>State:</strong> <input type="text" name="state" size="20" maxlength="50" value="<?php if (isset($trimmed['state'])) echo $trimmed['state']; ?>"></p>
         <p><strong>Country:</strong> <input type="text" name="country" size="15" maxlength="27" value="<?php if (isset($trimmed['country'])) echo $trimmed['country']; ?>"></p>
+        <div align="center"><input type="submit" name="submit" value="Register"></div>
     </fieldset>
 </form>
 
