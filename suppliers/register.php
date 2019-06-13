@@ -56,6 +56,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid phone number!</p>';
     }
 
+    if (filter_var($trimmed['email'], FILTER_VALIDATE_EMAIL)) {
+        $e = mysqli_real_escape_string($dbc, $trimmed['email']);
+    } else {
+        echo '<p class="error">Please enter a valid email address!</p>';
+    }
+
 }
 
 ?>
