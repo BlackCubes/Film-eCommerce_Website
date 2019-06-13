@@ -86,6 +86,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid address!</p>';
     }
 
+    if (preg_match('/^(\d{5})(-\d{4})?\s?$/m', $trimmed['zip'])) {
+        $z = mysqli_real_escape_string($dbc, $trimmed['zip']);
+    } else {
+        echo '<p class="error">Please enter a valid zip code</p>';
+    }
+
 }
 
 ?>
