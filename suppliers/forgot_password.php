@@ -49,6 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($sid) {
 
+        $p = substr(md5(uniqid(rand(), true)), 3, 15);
+        $ph = password_hash($p);
+
     }
 
 }
