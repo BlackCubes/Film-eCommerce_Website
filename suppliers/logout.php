@@ -20,5 +20,9 @@ $page_title="Logout";
 
 include('includes/header.html');
 
+if (!isset($_SESSION['id'])) {
+    
+}
+
 include('includes/footer.html');
 ?>
