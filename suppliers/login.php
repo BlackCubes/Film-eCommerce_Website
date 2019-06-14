@@ -48,7 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             list($supplier_id, $pass) = mysqli_fetch_array($r, MYSQLI_NUM);
 
             mysqli_free_result($r);
-            
+
+            if (password_verify($p, $pass)) {
+                
+            }
         }
 
     }
