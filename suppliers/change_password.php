@@ -35,6 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $p = FALSE;
 
+    if (strlen($_POST['password1']) >= 10) {
+        if ($_POST['password1'] == $_POST['password2']) {
+            $p = password_hash($_POST['password1'], PASSWORD_DEFAULT);
+        } else {
+            echo '<p class="error">Your password did not match the confirmed password!</p>';
+        }
+    } else {
+        echo '<p class="error">Please enter a valid password!</p>';
+    }
+
 }
 ?>
 
