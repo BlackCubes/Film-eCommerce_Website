@@ -72,6 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
 
+    mysqli_close($dbc);
+
 }
 ?>
 
