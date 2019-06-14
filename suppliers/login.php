@@ -59,9 +59,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: $url");
                 exit();
 
+            } else {
+
+                echo '<p class="error">Either the email address and password do not match those on file, or you have not yet activated your account.</p>';
+
             }
+
+        } else {
+
+            echo '<p class="error">Either the email address and password entered do not match those on file, or you have not yet activated your account.</p>';
+
         }
 
+    } else {
+        echo '<p class="error">Please try again.</p>';
     }
 }
 
