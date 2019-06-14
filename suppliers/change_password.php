@@ -30,7 +30,11 @@ if (!isset($_SESSION['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
+
+    require(MYSQL);
+
+    $p = FALSE;
+
 }
 
 ?>
