@@ -20,4 +20,8 @@ $page_title = 'Forgot Password';
 
 include('includes/header.html');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+}
+
 ?>
