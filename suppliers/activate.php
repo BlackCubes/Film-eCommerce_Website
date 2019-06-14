@@ -43,4 +43,5 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
 
 }
 
+include('includes/footer.html');
 ?>
