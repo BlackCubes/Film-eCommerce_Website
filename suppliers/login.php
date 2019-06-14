@@ -23,6 +23,13 @@ include('includes/footer.html');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     require(MYSQL);
+
+    if (!empty($_POST['email'])) {
+        $e = mysqli_real_escape_string($dbc, $_POST['email']);
+    } else {
+        $e = FALSE;
+        echo '<p class="error">You forgot to enter your email address!</p>';
+    }
 }
 
 ?>
