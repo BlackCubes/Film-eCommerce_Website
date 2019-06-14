@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($trimmed['password1'] == $trimmed['password2']) {
             $p = password_hash($trimmed['password1'], PASSWORD_DEFAULT);
         } else {
-            echo '<p class="error">Your password did not match the confirmed password!</p>';;
+            echo '<p class="error">Your password did not match the confirmed password!</p>';
         }
     } else {
         echo '<p class="error">Please enter a valid password!</p>';
