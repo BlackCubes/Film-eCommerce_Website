@@ -37,5 +37,7 @@ if (!isset($_SESSION['id'])) {
 
 }
 
+echo '<h3>You are now logged out.</h3>';
+
 include('includes/footer.html');
 ?>
