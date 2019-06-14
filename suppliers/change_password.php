@@ -50,6 +50,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q = "UPDATE suppliers SET pass='$p' WHERE id={$_SESSION['id']} LIMIT 1";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+        if (mysqli_affected_rows($dbc) == 1) {
+
+            echo '<h3>Your password has been changed.</h3>';
+
+            mysqli_close($dbc);
+
+            include('includes/footer.html');
+
+            exit();
+
+        }
+
     }
 
 }
