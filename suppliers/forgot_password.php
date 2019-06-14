@@ -14,4 +14,10 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
+$page_title = 'Forgot Password';
+
+include('includes/header.html');
+
 ?>
