@@ -65,8 +65,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             include('includes/footer.html');
             exit();
 
+        } else {
+            echo '<p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
         }
 
+    } else {
+        echo '<p class="error">Please try again.</p>';
     }
 
 }
