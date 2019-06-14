@@ -60,7 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             exit();
 
+        } else {
+
+            echo '<p class="error">Your password was not changed. Make sure your new password is different than the current password. If you think an error occured, contact the system administrator.</p>';
+
         }
+
+    } else {
+
+        echo '<p class="error">Please try again.</p>';
 
     }
 
