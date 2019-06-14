@@ -53,7 +53,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
                 $_SESSION['id'] = $supplier_id;
                 mysqli_close($dbc);
-                
+
+                $url = BASE_URL . 'suppliers/index.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
+
             }
         }
 
