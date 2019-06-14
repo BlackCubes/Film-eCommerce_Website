@@ -72,13 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid password!</p>';
     }
 
-    if (preg_match('/^[-a-z0-9 ,#\'\/.]{3,46}$/', $trimmed['address1'])) {
+    if (preg_match('/^[A-Z0-9 ,#\'\/.]{3,46}$/i', $trimmed['address1'])) {
         $a1 = mysqli_real_escape_string($dbc, $trimmed['address1']);
     } else {
         echo '<p class="error">Please enter a valid first address!</p>';
     }
 
-    if (preg_match('/^[-a-z0-9 ,#\'\/.]{3,46}$/', $trimmed['address2'])) {
+    if (preg_match('/^[A-Z0-9 ,#\'\/.]{3,46}$/i', $trimmed['address2'])) {
         $a2 = mysqli_real_escape_string($dbc, $trimmed['address2']);
     } elseif (empty($trimmed['address2'])) {
         $a2 = mysqli_real_escape_string($dbc, $trimmed['address2']);
