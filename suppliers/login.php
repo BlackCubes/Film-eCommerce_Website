@@ -14,6 +14,12 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
+$page_title = 'Suppliers Login';
+
+include('includes/footer.html');
+
 ?>
 
 <!--
