@@ -27,6 +27,14 @@ if (!isset($_SESSION['id'])) {
     header("Location: $url");
     exit();
 
+} else {
+
+    $_SESSION = [];
+
+    session_destroy();
+
+    setcookie(session_name(), '', time()-3600);
+
 }
 
 include('includes/footer.html');
