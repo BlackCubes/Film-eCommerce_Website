@@ -56,7 +56,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
         if (mysqli_affected_rows($dbc) == 1) {
-            
+
+            $body = "Your password to log into the Suppliers section for the Film eCommerce site has been temporarily changed to '$p'. Please log in using this password and this email address. Then you may change your password to something more familiar.";
+            mail($_POST['email'], 'Your temporary password.', $body, 'From: gutierrezelias1991@gmail.com');
+
+            echo '<h3>Your password has been changed. You will receive the new temporary password at the email address with which you registered. Once you have logged in with this new password, you may change it by clicking on the Change Password link.</h3>';
+            mysqli_close($dbc);
+            include('includes/footer.html');
+            exit()
+
         }
 
     }
