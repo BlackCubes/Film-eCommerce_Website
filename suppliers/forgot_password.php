@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
 
-    if ($uid) {
-        
+    if ($sid) {
+
     }
 
 }
