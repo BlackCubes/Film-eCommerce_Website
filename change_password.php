@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Once the password passes the validation test and making the fourth if-conditional TRUE, then the registered user's password is updated with the new one where the user's id is the stored on in session. Once this is done, the result of the query statement is stored in the variable $r, and if that fails then an error is triggered:
         $q = "UPDATE users SET pass='$p' WHERE id={$_SESSION['id']} LIMIT 1";
-        $r = mysqli_query($dbc. $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
         // This fifth if-statement checks to see if the database has been changed. This is done by using the function mysqli_affected_rows() where it returns the number of affected rows from the previous query. For the returned value, an integer greater than 0 indicates the number of rows affected; 0 indicates that no rows were affected; and -1 indicates that the query returned an error. If this does not pass the conditional, then an error would show to the user for two reasons: One is if the user input the same previous password (the affected rows returns 0). The other is if some error occured in the query meaning the user should contact the administrator. If it does pass, then the user is shown a message telling them that the password change was successful:
         if (mysqli_affected_rows($dbc) == 1) {
