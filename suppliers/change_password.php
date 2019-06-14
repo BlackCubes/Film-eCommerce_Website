@@ -85,3 +85,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </fieldset>
     <div align="center"><input type="submit" name="submit" value="Change My Password"></div>
 </form>
+
+<?php include('includes/footer.html'); ?>
