@@ -45,6 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please enter a valid password!</p>';
     }
 
+    if ($p) {
+        
+    }
+
 }
 ?>
 
