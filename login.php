@@ -104,6 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <p><strong>Password:</strong> <input type="password" name="pass" size="20"></p>
         <div align="center"><input type="submit" name="submit" value="Login"></div>
     </fieldset>
+    <p><small>Sellers, please sign-in <a href="suppliers/login.php">here</a>.</small></p>
 </form>
 
 <?php include('includes/footer.html'); // Include the footer file. ?>
