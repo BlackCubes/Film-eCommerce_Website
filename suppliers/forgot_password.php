@@ -55,6 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q = "UPDATE suppliers SET pass='$ph' WHERE id=$sid LIMIT 1";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+        if (mysqli_affected_rows($dbc) == 1) {
+            
+        }
+
     }
 
 }
