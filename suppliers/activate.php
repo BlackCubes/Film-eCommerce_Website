@@ -34,6 +34,13 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
 
     mysqli_close($dbc);
 
+} else {
+
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+
 }
 
 ?>
