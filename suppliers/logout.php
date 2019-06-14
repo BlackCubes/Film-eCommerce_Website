@@ -16,6 +16,9 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
+$page_title="Logout";
+
+include('includes/header.html');
 
 include('includes/footer.html');
 ?>
