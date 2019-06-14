@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (mysqli_affected_rows($dbc) == 1) {
 
                 $body = "Thank you for registering as a supplier for the Film eCommerce website! To activate your account, please click on this link:\n\n";
-                $body .= BASE_URL . 'activate.php?x=' . urlencode($e) . "&y=$a";
+                $body .= BASE_URL . 'suppliers/activate.php?x=' . urlencode($e) . "&y=$a";
 
                 mail($trimmed['email'], 'Registration Confirmation', $body, 'From: gutierrezelias1991@gmail.com');
 
