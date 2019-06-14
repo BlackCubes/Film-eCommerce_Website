@@ -30,6 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $e = FALSE;
         echo '<p class="error">You forgot to enter your email address!</p>';
     }
+
+    if (!empty($_POST['pass'])) {
+        $p = trim($_POST['pass']);
+    } else {
+        $p = FALSE;
+        echo '<p class="error">You forgot to enter your password!</p>';
+    }
 }
 
 ?>
