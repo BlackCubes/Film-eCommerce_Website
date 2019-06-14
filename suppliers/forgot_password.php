@@ -73,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p class="error">Please try again.</p>';
     }
 
-}
+    mysqli_close($dbc);
 
+}
 ?>
