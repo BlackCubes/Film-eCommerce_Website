@@ -32,6 +32,8 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
         echo '<p class="error">Sorry, but your account could not be activated. Please re-check the link given to you in your email address, or contact the system administrator.</p>';
     }
 
+    mysqli_close($dbc);
+
 }
 
 ?>
