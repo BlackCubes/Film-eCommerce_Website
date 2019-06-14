@@ -20,4 +20,13 @@ $page_title = 'Change Password';
 
 include('includes/header.html');
 
+if (!isset($_SESSION['id'])) {
+
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+
+}
+
 ?>
