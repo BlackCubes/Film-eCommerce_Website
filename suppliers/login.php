@@ -20,6 +20,10 @@ $page_title = 'Suppliers Login';
 
 include('includes/footer.html');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+}
+
 ?>
 
 <!--
