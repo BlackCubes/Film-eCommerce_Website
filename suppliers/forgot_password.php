@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
 
-    $uid = FALSE;
+    $sid = FALSE;
 
 }
 
