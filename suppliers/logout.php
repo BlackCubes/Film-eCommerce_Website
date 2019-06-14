@@ -21,7 +21,12 @@ $page_title="Logout";
 include('includes/header.html');
 
 if (!isset($_SESSION['id'])) {
-    
+
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+
 }
 
 include('includes/footer.html');
