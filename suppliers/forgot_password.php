@@ -52,6 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $p = substr(md5(uniqid(rand(), true)), 3, 15);
         $ph = password_hash($p);
 
+        $q = "UPDATE suppliers SET pass='$ph' WHERE id=$sid LIMIT 1";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
     }
 
 }
