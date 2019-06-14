@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (preg_match('/^[-a-z0-9 ,#\'\/.]{3,46}$/', $trimmed['address1'])) {
         $a1 = mysqli_real_escape_string($dbc, $trimmed['address1']);
     } else {
-        echo '<p class="error">Please enter a valid address!</p>';
+        echo '<p class="error">Please enter a valid first address!</p>';
     }
 
     if (preg_match('/^[-a-z0-9 ,#\'\/.]{3,46}$/', $trimmed['address2'])) {
@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif (empty($trimmed['address2'])) {
         $a2 = mysqli_real_escape_string($dbc, $trimmed['address2']);
     } else {
-        echo '<p class="error">Please enter a valid address!</p>';
+        echo '<p class="error">Please enter a valid second address!</p>';
     }
 
     if (strlen($trimmed['city']) <= 50 && strlen($trimmed['city']) >= 3 && !empty($trimmed['city'])) {
