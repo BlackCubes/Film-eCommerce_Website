@@ -51,6 +51,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (password_verify($p, $pass)) {
                 
+                $_SESSION['id'] = $supplier_id;
+                mysqli_close($dbc);
+                
             }
         }
 
