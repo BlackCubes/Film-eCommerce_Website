@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <p>Enter your email address below and your password will be reset.</p>
 <form action="forgot_password.php" method="post">
     <fieldset>
-        <p><strong>Email:</strong> <input type="email" name="email" size="20" maxlength="80" value="<?php if (isset($_POST['email']) echo $_POST['email']; ?>"></p>
+        <p><strong>Email:</strong> <input type="email" name="email" size="20" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"></p>
     </fieldset>
     <div align="center"><input type="submit" name="submit" value="Reset My Password"></div>
 </form>
