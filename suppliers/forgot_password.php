@@ -32,8 +32,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
         if (mysqli_num_rows($r) == 1) {
-            
+
+            list($sid) = mysqli_fetch_array($r, MYSQLI_NUM);
+
+        } else {
+
+            echo '<p class="error">The submitted email address does not match those on file!</p>';
+
         }
+
+    } else {
+
+        echo '<p class="error">You forgot to enter your email address!</p>';
 
     }
 
