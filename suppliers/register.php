@@ -133,6 +133,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $q .= "INSERT INTO supplieraddress (supplier_id, address_1, address_2, city, zip, state, country) VALUES ($lid, '$a1', '$a2', '$c', '$z', '$s', '$ctry')";
             $r = mysqli_multi_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+            if ($r) {
+                do {
+                    if (($r = mysqli_store_result($dbc)) === FALSE && mysqli_error($dbc) != '') {
+                        echo "The mysqli_store_result is FALSE and the error is not empty. Query: $q\n<br>MySQL Error: " . mysqli_error($dbc);
+                    }
+                } while (mysqli_more_results($dbc) && mysqli_next_result($dbc));
+            } else {
+                echo "First query failed. Query: $q\n<br>MySQL Error: " . mysqli_error($dbc);
+            }
+
             if (mysqli_affected_rows($dbc) == 1) {
 
                 $body = "Thank you for registering as a supplier for the Film eCommerce website! To activate your account, please click on this link:\n\n";
