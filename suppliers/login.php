@@ -18,7 +18,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 $page_title = 'Suppliers Login';
 
-include('includes/footer.html');
+include('includes/header.html');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
