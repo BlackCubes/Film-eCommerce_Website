@@ -129,16 +129,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $a = md5(uniqid(rand(), true));
 
             $q = "INSERT INTO suppliers (legal_name, company_name, website_url, phone_num, email, pass, verify_code, registration_date) VALUES ('$ln', '$cn', '$wu', '$pn', '$e', '$p', '$a', NOW())";
-            $lid = mysqli_insert_id($dbc);
+            $lid = FALSE;
             $q .= "INSERT INTO supplieraddress (supplier_id, address_1, address_2, city, zip, state, country) VALUES ($lid, '$a1', '$a2', '$c', '$z', '$s', '$ctry')";
-            $r = mysqli_multi_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-            if ($r) {
+            if (mysqli_multi_query($dbc, $q)) {
                 do {
                     if (($r = mysqli_store_result($dbc)) === FALSE && mysqli_error($dbc) != '') {
                         echo "The mysqli_store_result is FALSE and the error is not empty. Query: $q\n<br>MySQL Error: " . mysqli_error($dbc);
                     }
-                } while (mysqli_more_results($dbc) && mysqli_next_result($dbc));
+                    if (mysqli_more_results($dbc)) {
+                        $lid = mysqli_insert_id($dbc);
+                    }
+                } while (mysqli_next_result($dbc));
             } else {
                 echo "First query failed. Query: $q\n<br>MySQL Error: " . mysqli_error($dbc);
             }
