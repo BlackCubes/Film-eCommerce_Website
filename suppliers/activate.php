@@ -27,7 +27,7 @@ if (isset($_GET['x'], $_GET['y']) && filter_var($_GET['x'], FILTER_VALIDATE_EMAI
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
     if (mysqli_affected_rows($dbc) == 1) {
-        echo "<h3>Your account is not active! You may log in.</h3>";
+        echo "<h3>Your account is now active! You may log in.</h3>";
     } else {
         echo '<p class="error">Sorry, but your account could not be activated. Please re-check the link given to you in your email address, or contact the system administrator.</p>';
     }
