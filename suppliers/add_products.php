@@ -36,43 +36,15 @@
 
                 require(MYSQL);
 
-                if (isset($_POST['department']) && $_POST['department'] == 'Movies') {
+                $q = "SELECT * FROM ratings ORDER BY id";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                    $q = "SELECT * FROM ratings WHERE rated NOT LIKE 'TV%' AND rated NOT IN ('Unrated') ORDER BY id";
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                    while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-                        echo '<option value="' . $row['rated'] . '">' . $row['rated'] . '</option>';
-                    }
-
-                    mysqli_free_result($r);
-                    mysqi_close($dbc);
-
-                } elseif (isset($_POST['department']) && $_POST['department'] == 'TV') {
-
-                    $q = "SELECT * FROM ratings WHERE rated NOT LIKE 'PG%' AND rated NOT LIKE 'N%' AND rated NOT IN ('G', 'R') ORDER BY id";
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                    while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-                        echo '<option value="' . $row['rated'] . '">' . $row['rated'] . '</option>';
-                    }
-
-                    mysqli_free_result($r);
-                    mysqi_close($dbc);
-
-                } else {
-
-                    $q = "SELECT * FROM ratings ORDER BY id";
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                    while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-                        echo '<option value="' . $row['rated'] . '">' . $row['rated'] . '</option>';
-                    }
-
-                    mysqli_free_result($r);
-                    mysqli_close($dbc);
-
+                while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+                    echo '<option value="' . $row['rated'] . '">' . $row['rated'] . '</option>';
                 }
+
+                mysqli_free_result($r);
+                mysqli_close($dbc);
 
                 mysqli_close($dbc);
                 ?>
