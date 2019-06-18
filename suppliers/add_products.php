@@ -4,31 +4,31 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
 
 ?>
 <h1>Add New Products</h1>
-<p><span class="alert alert-danger" role="alert">* required field</span></p>
+<p><span class="text-danger">* required field</span></p>
 <form action="register.php" method="post">
     <fieldset>
         <div class="productName">
             <label for="product-name">Product Name: </label>
             <input type="text" name="product_name" id="product-name" value="<?php if (isset($trimmed['product_name'])) echo $trimmed['product_name']; ?>">
-            <span class="alert alert-danger" role="alert">* <!--<#?php echo $nameError; ?>--></span>
+            <span class="text-danger">* <!--<#?php echo $nameError; ?>--></span>
         </div>
         <div class="productDepartment">
             <label for="product-department">Department: </label>
             <input type="radio" name="department" id="product-department" value="Movies" <?php if (isset($_POST['department']) && $_POST['department']=='Movies') echo 'checked'; ?>>Movies
             <input type="radio" name="department" id="product-department" value="TV" <?php if (isset($_POST['department']) && $_POST['department']=='TV') echo 'checked'; ?>>TV
-            <span class="alert alert-danger" role="alert">* <!--<#?php echo $departmentErr; ?>--></span>
+            <span class="text-danger">* <!--<#?php echo $departmentErr; ?>--></span>
         </div>
         <div class="productFormat">
             <label for="product-format">Format: </label>
             <input type="radio" name="format" id="product-format" value="Blu-ray" <?php if (isset($_POST['format']) && $_POST['format']=='Blu-ray') echo 'checked'; ?>>Blu-ray
             <input type="radio" name="format" id="product-format" value="4K UHD" <?php if (isset($_POST['format']) && $_POST['format']=='4K UHD') echo 'checked'; ?>>4K UHD
             <input type="radio" name="format" id="product-format" value="DVD" <?php if (isset($_POST['format']) && $_POST['format']=='DVD') echo 'checked'; ?>>DVD
-            <span class="alert alert-danger" role="alert">* <!--<#?php echo $formatErr; ?>--></span>
+            <span class="text-danger">* <!--<#?php echo $formatErr; ?>--></span>
         </div>
         <div class="productTheatreDate">
             <label for="product-theatre-date">Theatrical Release Date: </label>
             <input type="date" id="product-theatre-date" name="theatre_date" min="1878-06-15" max="<?php echo date('Y-m-d'); ?>" value="<?php if (isset($_POST['theatre_date'])) echo $_POST['theatre_date']; ?>">
-            <span class="alert alert-danger" role="alert">* <!--<#?php echo $theatre_dateErr; ?>--></span>
+            <span class="text-danger">* <!--<#?php echo $theatre_dateErr; ?>--></span>
         </div>
         <div class="productRating">
             <label for="product-rating">Rating: </label>
@@ -51,7 +51,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
                 mysqli_close($dbc);
                 ?>
             </select>
-            <span class="alert alert-danger" role="danger">* <!--<#?php echo $ratingErr; ?>--></span>
+            <span class="text-danger">* <!--<#?php echo $ratingErr; ?>--></span>
         </div>
         <p><strong>Genre:</strong> </p>
         <p><strong>Description:</strong> </p>
