@@ -1,3 +1,8 @@
+<?php
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
+
+?>
 <h1>Add New Products</h1>
 <p><span class="alert alert-danger" role="alert">* required field</span></p>
 <form action="register.php" method="post">
@@ -73,3 +78,4 @@
         <p><strong>SKU:</strong> </p>
     </fieldset>
 </form>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html'); ?>
