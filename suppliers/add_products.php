@@ -1,3 +1,8 @@
+<?php
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
+
+?>
 <h1>Add New Products</h1>
 <p><span class="alert alert-danger" role="alert">* required field</span></p>
 <form action="register.php" method="post">
@@ -22,6 +27,8 @@
         </div>
         <div class="productTheatreDate">
             <label for="product-theatre-date">Theatrical Release Date: </label>
+            <input type="date" id="product-theatre-date" name="theatre_date" min="1878-06-15" max="<?php echo date('Y-m-d'); ?>" value="<?php if (isset($_POST['theatre_date'])) echo $_POST['theatre_date']; ?>">
+            <span class="alert alert-danger" role="alert">* <?php echo $theatre_dateErr; ?></span>
         </div>
         <div class="productRating">
             <label for="product-rating">Rating: </label>
@@ -44,6 +51,7 @@
                 mysqli_close($dbc);
                 ?>
             </select>
+            <span class="alert alert-danger" role="danger">* <?php echo $ratingErr; ?></span>
         </div>
         <p><strong>Genre:</strong> </p>
         <p><strong>Description:</strong> </p>
@@ -70,3 +78,4 @@
         <p><strong>SKU:</strong> </p>
     </fieldset>
 </form>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html'); ?>
