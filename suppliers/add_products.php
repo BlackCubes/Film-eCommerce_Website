@@ -45,8 +45,6 @@
 
                 mysqli_free_result($r);
                 mysqli_close($dbc);
-
-                mysqli_close($dbc);
                 ?>
             </select>
         </div>
@@ -66,7 +64,7 @@
         <p><strong>Extra Description:</strong> </p>
         <h3>Product Specs</h3>
         <p><strong>Format Type:</strong> </p>
-        <p><strong>Viddeo Description:</strong> </p>
+        <p><strong>Video Description:</strong> </p>
         <p><strong>Audio Description:</strong> </p>
         <p><strong>Subtitles Description:</strong> </p>
         <h3>Price, Images, Units, SKU</h3>
