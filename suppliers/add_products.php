@@ -20,9 +20,6 @@
             <input type="radio" name="format" id="product-format" value="DVD" <?php if (isset($_POST['format']) && $_POST['format']=='DVD') echo 'checked'; ?>>DVD
             <span class="alert alert-danger" role="alert">* <?php echo $formatErr; ?></span>
         </div>
-        <div class="productYear">
-            <label for="product-year">Theatrical Release Year: </label>
-        </div>
         <div class="productTheatreDate">
             <label for="product-theatre-date">Theatrical Release Date: </label>
         </div>
