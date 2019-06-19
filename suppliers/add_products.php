@@ -64,18 +64,7 @@ require(MYSQL);
             while ($genre_row = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
                 echo '<input type="checkbox" id="product-genre" name="genre" value="' . $genre_row['genre'] . '" ';
 
-                function isChecked($chkname, $value) {
-                    if (!empty($_POST[$chkname])) {
-                        foreach($_POST[$chkname] as $chkval) {
-                            if ($chkval == $value) {
-                                return true;
-                            }
-                        }
-                    }
-                    return false;
-                }
-
-                $checked = isChecked('genre', $genre_row['genre']) ? 'checked' : '';
+                $checked = (isset($_POST['genre']) && $_POST['genre']==$genre_row['genre']) ? 'checked' : '';
 
                 echo $checked . '>' . $genre_row['genre'];
             }
