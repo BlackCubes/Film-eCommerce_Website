@@ -65,7 +65,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-                echo '<input type="checkbox" id="product-genre" name="genre" value="' . $row['genre'] . '" ' . if (isset($_POST['genre']) && $_POST['genre']=="$row['genre']") echo 'checked' . '>' . $row['genre'];
+                echo '<input type="checkbox" id="product-genre" name="genre" value="' . $row['genre'] . '" ';
+
+                if (isset($_POST['genre']) && $_POST['genre']=="$row['genre']") echo 'checked';
+
+                echo '>' . $row['genre'];
             }
 
             mysqli_free_result($r);
