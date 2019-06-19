@@ -80,9 +80,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
                     return false;
                 }
 
-                $checked = isChecked('genre', $row['genre']) ? echo 'checked' : echo '';
+                $checked = isChecked('genre', $row['genre']) ? 'checked' : '';
 
-                echo '>' . $row['genre'];
+                echo $checked . '>' . $row['genre'];
             }
 
             mysqli_free_result($r);
