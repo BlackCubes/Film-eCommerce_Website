@@ -127,7 +127,7 @@ require(MYSQL);
         </div>
         <div class="productSubtitlesDescription">
             <label for="product-subtitles-description">Subtitles Description: </label>
-            <textarea id="product-subtitles-description" name="subtitles_desc" cols="10" rows="10" maxlength="100" placeholder="English SDH, Français & Español"><?php if (isset($trimmed['subtitles_desc'])) echo $trimmed['subtitles_desc']; ?></textarea>
+            <textarea id="product-subtitles-description" name="subtitles_desc" cols="20" rows="5" maxlength="100" placeholder="English SDH, Français & Español"><?php if (isset($trimmed['subtitles_desc'])) echo $trimmed['subtitles_desc']; ?></textarea>
             <span class="text-danger">* <!--<#?php echo $sub_descErr; ?>--></span>
         </div>
         <p>Would you like to add more specifications for different formats?</p>
