@@ -42,7 +42,7 @@ require(MYSQL);
                 <option value="">--Please choose an option--</option>
                 <?php
 
-                $q_rating = "SELECT rating FROM ratings ORDER BY id";
+                $q_rating = "SELECT rated FROM ratings ORDER BY id";
                 $r_rating = mysqli_query($dbc, $q_rating) or trigger_error("Query: $q_rating\n<br>MySQL Error: " . mysqli_error($dbc));
 
                 while ($rating_row = mysqli_fetch_array($r_rating, MYSQLI_ASSOC)) {
