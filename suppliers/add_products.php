@@ -42,7 +42,7 @@ require(MYSQL);
                 <option value="">--Please choose an option--</option>
                 <?php
 
-                $q = "SELECT * FROM ratings ORDER BY id";
+                $q = "SELECT rating FROM ratings ORDER BY id";
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
                 while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
@@ -59,7 +59,7 @@ require(MYSQL);
             <label for="product-genre">Genre: </label>
             <?php
 
-            $q = "SELECT * FROM genres ORDER BY genre";
+            $q = "SELECT genre FROM genres ORDER BY genre";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
