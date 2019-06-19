@@ -1,8 +1,12 @@
 <?php
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
 $page_title = 'Add Products';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
+
+require(MYSQL);
 
 ?>
 <h1>Add New Products</h1>
@@ -38,10 +42,6 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
                 <option value="">--Please choose an option--</option>
                 <?php
 
-                require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
-
-                require(MYSQL);
-
                 $q = "SELECT * FROM ratings ORDER BY id";
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -58,10 +58,6 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
         <div class="productGenre">
             <label for="product-genre">Genre: </label>
             <?php
-
-            require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
-
-            require(MYSQL);
 
             $q = "SELECT * FROM genres ORDER BY genre";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
