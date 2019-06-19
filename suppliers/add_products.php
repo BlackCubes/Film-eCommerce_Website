@@ -132,9 +132,22 @@ require(MYSQL);
         </div>
         <p>Would you like to add more specifications for different formats?</p>
         <h3>Price, Images, Units, SKU</h3>
-        <p><strong>Price:</strong> </p>
-        <p><strong>How Many In Stock?</strong> </p>
-        <p><strong>SKU:</strong> </p>
+        <div class="productPrice">
+            <label for="product-price">How much are you selling it? </label>
+            <input type="number" id="product-price" name="price" value="<?php if (isset($trimmed['price'])) echo $trimmed['price']; ?>" step="0.01" min="0" max="9999" placeholder="21.93">
+            <span class="text-danger">* <!--<#?php echo $priceErr; ?>--></span>
+        </div>
+        <div class="productStock">
+            <label for="product-stock">How many do you have? </label>
+            <input type="number" id="product-stock" name="stock" value="<?php if (isset($trimmed['stock'])) echo $trimmed['stock']; ?>" min="0" max="99999999">
+            <span class="text-danger">* <!--<#?php echo $stockErr; ?>--></span>
+        </div>
+        <div class="productSKU">
+            <label for="product-sku">Stock Keeping Unit (inventory management): </label>
+            <input type="text" id="product-sku" name="sku" size="15" maxlength="15" value="<?php if (isset($trimmed['sku'])) echo $trimmed['sku']; ?>">
+            <span class="text-danger">* <?php echo $skuErr; ?></span>
+        </div>
     </fieldset>
+    <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html'); ?>
