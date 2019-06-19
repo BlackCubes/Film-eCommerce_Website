@@ -74,7 +74,7 @@ require(MYSQL);
         </div>
         <div class="productDescription">
             <label for="product-description">Description: </label>
-            <textarea name="description" id="product-description" cols="44" rows="15" maxlength="1100" placeholder="Comment description"><?php if (isset($trimmed['description'])) echo $trimmed['description']; ?></textarea>
+            <textarea name="description" id="product-description" cols="110" rows="10" maxlength="1100" placeholder="Comment description"><?php if (isset($trimmed['description'])) echo $trimmed['description']; ?></textarea>
             <span class="text-danger">* <!--<#?php echo $descripErr; ?>--></span>
         </div>
         <h3>Product Details</h3>
