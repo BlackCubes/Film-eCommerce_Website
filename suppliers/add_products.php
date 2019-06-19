@@ -81,7 +81,6 @@ require(MYSQL);
             }
 
             mysqli_free_result($r_genre);
-            mysqli_close($dbc);
             ?>
         </div>
         <p><strong>Description:</strong> </p>
