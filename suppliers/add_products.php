@@ -145,7 +145,7 @@ require(MYSQL);
         <div class="productSKU">
             <label for="product-sku">Stock Keeping Unit (inventory management): </label>
             <input type="text" id="product-sku" name="sku" size="15" maxlength="15" value="<?php if (isset($trimmed['sku'])) echo $trimmed['sku']; ?>">
-            <span class="text-danger">* <?php echo $skuErr; ?></span>
+            <span class="text-danger">* <!--<#?php echo $skuErr; ?>--></span>
         </div>
     </fieldset>
     <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
