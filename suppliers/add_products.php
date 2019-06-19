@@ -89,8 +89,16 @@ require(MYSQL);
             <input type="text" id="product-edition" name="edition" value="<?php if (isset($trimmed['edition'])) echo $trimmed['edition']; ?>" placeholder="Ex: Blu-ray + DVD + Digital">
             <span>(Optional)</span>
         </div>
-        <p><strong>How Many Discs:</strong> </p>
-        <p><strong>Runtime:</strong> </p>
+        <div class="productDiscs">
+            <label for="product-discs">How many discs? </label>
+            <input type="number" id="product-discs" name="disc" value="<?php if (isset($trimmed['disc'])) echo $trimmed['disc']; ?>" max="999">
+            <span>(Optional, but whole numbers only)</span>
+        </div>
+        <div class="productRuntime">
+            <label for="product-runtime">Runtime: </label>
+            <input type="number" id="product-runtime" name="runtime" value="<?php if (isset($trimmed['runtime'])) echo $trimmed['runtime']; ?>" max="99999">
+            <span class="text-danger">* <!--<#?php echo $runtimeErr; ?>--></span>
+        </div>
         <p><strong>Home Media Release Date:</strong> </p>
         <p><strong>Extra Description:</strong> </p>
         <h3>Product Specs</h3>
