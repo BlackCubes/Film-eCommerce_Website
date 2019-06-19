@@ -53,7 +53,25 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
             </select>
             <span class="text-danger">* <!--<#?php echo $ratingErr; ?>--></span>
         </div>
-        <p><strong>Genre:</strong> </p>
+        <div class="productGenre">
+            <label for="product-genre">Genre: </label>
+            <?php
+
+            require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
+            require(MYSQL);
+
+            $q = "SELECT * FROM genres ORDER BY genre";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+            while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+                echo '<input type="checkbox" id="product-genre" name="genre" value="' . $row['genre'] . '" ' . if (isset($_POST['genre']) && $_POST['genre']=="$row['genre']") echo 'checked' . '>' . $row['genre'];
+            }
+
+            mysqli_free_result($r);
+            mysqli_close($dbc);
+            ?>
+        </div>
         <p><strong>Description:</strong> </p>
         <h3>Product Details</h3>
         <p><strong>Directors:</strong> </p>
