@@ -1,5 +1,7 @@
 <?php
 
+$page_title = 'Add Products';
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
 
 ?>
