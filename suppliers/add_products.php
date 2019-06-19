@@ -72,7 +72,11 @@ require(MYSQL);
             mysqli_free_result($r_genre);
             ?>
         </div>
-        <p><strong>Description:</strong> </p>
+        <div class="productDescription">
+            <label for="product-description">Description: </label>
+            <textarea name="description" id="product-description" cols="44" rows="25" maxlength="1100" placeholder="Comment description"><!--<#?php if (isset($trimmed['description'])) echo $trimmed['description']; ?>--></textarea>
+            <span class="text-danger">* <!--<#?php echo $descripErr; ?>--></span>
+        </div>
         <h3>Product Details</h3>
         <p><strong>Directors:</strong> </p>
         <p><strong>Actors:</strong> </p>
@@ -80,7 +84,11 @@ require(MYSQL);
         <p><strong>Writers:</strong> </p>
         <p><strong>Cinematographers:</strong> </p>
         <p><strong>Film Company:</strong> </p>
-        <p><strong>Edition:</strong> </p>
+        <div class="productEdition">
+            <label for="product-edition">Edition: </label>
+            <input type="text" id="product-edition" name="edition" value="<?php if (isset($trimmed['edition'])) echo $trimmed['edition']; ?>" placeholder="Ex: Blu-ray + DVD + Digital">
+            <p>(Optional)</p>
+        </div>
         <p><strong>How Many Discs:</strong> </p>
         <p><strong>Runtime:</strong> </p>
         <p><strong>Home Media Release Date:</strong> </p>
