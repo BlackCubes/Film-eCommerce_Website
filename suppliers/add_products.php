@@ -45,12 +45,11 @@ require(MYSQL);
                 $q_rating = "SELECT rating FROM ratings ORDER BY id";
                 $r_rating = mysqli_query($dbc, $q_rating) or trigger_error("Query: $q_rating\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                while ($row = mysqli_fetch_array($r_rating, MYSQLI_ASSOC)) {
-                    echo '<option value="' . $row['rated'] . '">' . $row['rated'] . '</option>';
+                while ($rating_row = mysqli_fetch_array($r_rating, MYSQLI_ASSOC)) {
+                    echo '<option value="' . $rating_row['rated'] . '">' . $rating_row['rated'] . '</option>';
                 }
 
                 mysqli_free_result($r_rating);
-                mysqli_close($dbc);
                 ?>
             </select>
             <span class="text-danger">* <!--<#?php echo $ratingErr; ?>--></span>
@@ -62,8 +61,8 @@ require(MYSQL);
             $q_genre = "SELECT genre FROM genres ORDER BY genre";
             $r_genre = mysqli_query($dbc, $q_genre) or trigger_error("Query: $q_genre\n<br>MySQL Error: " . mysqli_error($dbc));
 
-            while ($row = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
-                echo '<input type="checkbox" id="product-genre" name="genre" value="' . $row['genre'] . '" ';
+            while ($genre_row = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
+                echo '<input type="checkbox" id="product-genre" name="genre" value="' . $genre_row['genre'] . '" ';
 
                 function isChecked($chkname, $value) {
                     if (!empty($_POST[$chkname])) {
@@ -76,9 +75,9 @@ require(MYSQL);
                     return false;
                 }
 
-                $checked = isChecked('genre', $row['genre']) ? 'checked' : '';
+                $checked = isChecked('genre', $genre_row['genre']) ? 'checked' : '';
 
-                echo $checked . '>' . $row['genre'];
+                echo $checked . '>' . $genre_row['genre'];
             }
 
             mysqli_free_result($r_genre);
