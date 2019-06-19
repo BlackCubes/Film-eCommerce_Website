@@ -99,8 +99,16 @@ require(MYSQL);
             <input type="number" id="product-runtime" name="runtime" value="<?php if (isset($trimmed['runtime'])) echo $trimmed['runtime']; ?>" max="99999">
             <span class="text-danger">* <!--<#?php echo $runtimeErr; ?>--></span>
         </div>
-        <p><strong>Home Media Release Date:</strong> </p>
-        <p><strong>Extra Description:</strong> </p>
+        <div class="productMediaDate">
+            <label for="product-media-date">When was is it, or will be, released on home media? </label>
+            <input type="date" id="product-media-date" name="media_date" min="1975-05-10" value="<?php if (isset($_POST['media_date'])) echo $_POST['media_date']; ?>">
+            <span>(Optional)</span>
+        </div>
+        <div class="productExtraDescription">
+            <label for="product-extra-description">Any extra descriptions?</label>
+            <textarea name="more_description" id="product-extra-description" cols="17" rows="15" maxlength="255" placeholder="Extra stuff..."><?php if (isset($trimmed['more_description'])) echo $trimmed['more_description']; ?></textarea>
+            <span>(Optional, but 255 characters max)</span>
+        </div>
         <h3>Product Specs</h3>
         <p><strong>Format Type:</strong> </p>
         <p><strong>Video Description:</strong> </p>
