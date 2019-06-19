@@ -74,7 +74,7 @@ require(MYSQL);
         </div>
         <div class="productDescription">
             <label for="product-description">Description: </label>
-            <textarea name="description" id="product-description" cols="44" rows="25" maxlength="1100" placeholder="Comment description"><!--<#?php if (isset($trimmed['description'])) echo $trimmed['description']; ?>--></textarea>
+            <textarea name="description" id="product-description" cols="25" rows="44" maxlength="1100" placeholder="Comment description"><!--<#?php if (isset($trimmed['description'])) echo $trimmed['description']; ?>--></textarea>
             <span class="text-danger">* <!--<#?php echo $descripErr; ?>--></span>
         </div>
         <h3>Product Details</h3>
@@ -87,7 +87,7 @@ require(MYSQL);
         <div class="productEdition">
             <label for="product-edition">Edition: </label>
             <input type="text" id="product-edition" name="edition" value="<?php if (isset($trimmed['edition'])) echo $trimmed['edition']; ?>" placeholder="Ex: Blu-ray + DVD + Digital">
-            <p>(Optional)</p>
+            <span>(Optional)</span>
         </div>
         <p><strong>How Many Discs:</strong> </p>
         <p><strong>Runtime:</strong> </p>
