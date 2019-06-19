@@ -106,7 +106,7 @@ require(MYSQL);
         </div>
         <div class="productExtraDescription">
             <label for="product-extra-description">Any extra descriptions?</label>
-            <textarea name="more_description" id="product-extra-description" cols="17" rows="15" maxlength="255" placeholder="Extra stuff..."><?php if (isset($trimmed['more_description'])) echo $trimmed['more_description']; ?></textarea>
+            <textarea name="more_description" id="product-extra-description" cols="51" rows="5" maxlength="255" placeholder="Extra stuff..."><?php if (isset($trimmed['more_description'])) echo $trimmed['more_description']; ?></textarea>
             <span>(Optional, but 255 characters max)</span>
         </div>
         <h3>Product Specs</h3>
