@@ -110,10 +110,27 @@ require(MYSQL);
             <span>(Optional, but 255 characters max)</span>
         </div>
         <h3>Product Specs</h3>
-        <p><strong>Format Type:</strong> </p>
-        <p><strong>Video Description:</strong> </p>
-        <p><strong>Audio Description:</strong> </p>
-        <p><strong>Subtitles Description:</strong> </p>
+        <div class="productFormatType">
+            <label for="product-format-type">Format Type Title: </label>
+            <input type="text" id="product-format-type" name="format_type" size="30" maxlength="30" value="<?php if (isset($trimmed['format_type'])) echo $trimmed['format_type']; ?>" placeholder="4K UHD MAIN FEATURE">
+            <span class="text-danger">* <!--<#?php echo $format_typeErr; ?>--></span>
+        </div>
+        <div class="productVideoDescription">
+            <label for="product-video-description">Video Description: </label>
+            <input type="text" id="product-video-description" name="video_desc" size="35" maxlength="35" value="<?php if (isset($trimmed['video_desc'])) echo $trimmed['video_desc']; ?>" placeholder="2160p Ultra High Definition">
+            <span class="text-danger">* <!--<#?php echo $video_descErr; ?>--></span>
+        </div>
+        <div class="productAudioDescription">
+            <label for="product-audio-description">Audio Description: </label>
+            <textarea id="product-audio-description" name="audio_desc" cols="30" rows="10" maxlength="255" placeholder="Dolby Atmos-TrueHD: English, English Descriptive Audio 5.1, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1"><?php if (isset($trimmed['audio_desc'])) echo $trimmed['audio_desc']; ?></textarea>
+            <span class="text-danger">* <!--<#?php echo $audio_descErr; ?>--></span>
+        </div>
+        <div class="productSubtitlesDescription">
+            <label for="product-subtitles-description">Subtitles Description: </label>
+            <textarea id="product-subtitles-description" name="subtitles_desc" cols="10" rows="10" maxlength="100" placeholder="English SDH, Français & Español"><?php if (isset($trimmed['subtitles_desc'])) echo $trimmed['subtitles_desc']; ?></textarea>
+            <span class="text-danger">* <!--<#?php echo $sub_descErr; ?>--></span>
+        </div>
+        <p>Would you like to add more specifications for different formats?</p>
         <h3>Price, Images, Units, SKU</h3>
         <p><strong>Price:</strong> </p>
         <p><strong>How Many In Stock?</strong> </p>
