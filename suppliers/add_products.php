@@ -110,7 +110,7 @@ require(MYSQL);
 
                 while ($actor_row = mysqli_fetch_array($r_actors, MYSQLI_ASSOC)) {
 
-                    $actor_name = $actor_row['first_name'] . '' . $actor_row['middle_name'] . '' . $actor_row['last_name'];
+                    $actor_name = $actor_row['first_name'] . ' ' . $actor_row['middle_name'] . ' ' . $actor_row['last_name'];
 
                     echo '<option value="' . $actor_name . '">';
 
