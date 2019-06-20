@@ -162,8 +162,46 @@ require(MYSQL);
                 ?>
             </datalist>
         </div>
-        <p><strong>Cinematographers:</strong> </p>
-        <p><strong>Film Company:</strong> </p>
+        <div class="productCinematographers">
+            <label for="product-cinematographers">Cinematographers? </label>
+            <input list="dps_list" id="product-cinematographers" name="dps">
+            <datalist id="dps_list">
+                <?php
+
+                $q_dps = "SELECT first_name, middle_name, last_name FROM dps ORDER BY last_name";
+                $r_dps = mysqli_query($dbc, $q_dps) or trigger_error("Query: $q_dps\n<br>MySQL Error: " . mysqli_error($dbc));
+
+                while ($dp_row = mysqli_fetch_array($r_dps, MYSQLI_ASSOC)) {
+
+                    $dp_name = $dp_row['first_name'] . ' ' . $dp_row['middle_name'] . ' ' . $dp_row['last_name'];
+
+                    echo '<option value="' . $dp_name . '">';
+
+                }
+
+                mysqli_free_result($r_dps);
+                ?>
+            </datalist>
+        </div>
+        <div class="productFilmCompany">
+            <label for="product-film-company">Any Film and/or Entertainment Companies? </label>
+            <input list="company_list" id="product-film-company" name="studios">
+            <datalist id="company_list">
+                <?php
+
+                $q_studios = "SELECT studio_name FROM studios ORDER BY studio_name";
+                $r_studios = mysqli_query($dbc, $q_studios) or trigger_error("Query: $q_studios\n<br>MySQL Error: " . mysqli_error($dbc));
+
+                while ($studio_row = mysqli_fetch_array($r_studios, MYSQLI_ASSOC)) {
+
+                    echo '<option value="' . $studio_row['studio_name'] . '">';
+
+                }
+
+                mysqli_free_result($r_studios);
+                ?>
+            </datalist>
+        </div>
         <div class="productEdition">
             <label for="product-edition">Edition: </label>
             <input type="text" id="product-edition" name="edition" value="<?php if (isset($trimmed['edition'])) echo $trimmed['edition']; ?>" placeholder="Ex: Blu-ray + DVD + Digital">
