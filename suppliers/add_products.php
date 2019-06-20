@@ -152,7 +152,7 @@ require(MYSQL);
 
                 while ($writer_row = mysqli_fetch_array($r_writers, MYSQLI_ASSOC)) {
 
-                    $writer_name = $writer_row['first_name'] . ' ' . $writer_name['middle_name'] . ' ' . $writer_name['last_name'];
+                    $writer_name = $writer_row['first_name'] . ' ' . $writer_row['middle_name'] . ' ' . $writer_row['last_name'];
 
                     echo '<option value="' . $writer_name . '">';
 
