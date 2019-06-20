@@ -119,6 +119,7 @@ require(MYSQL);
                 mysqli_free_result($r_actors);
                 ?>
             </datalist>
+            <span class="text-danger">* <!--<#?php echo $actorsErr; ?>--></span>
         </div>
         <div class="productProducers">
             <label for="product-producers">Producers? </label>
@@ -140,6 +141,7 @@ require(MYSQL);
                 mysqli_free_result($r_producers);
                 ?>
             </datalist>
+            <span class="text-danger">* <!--<#?php echo $producersErr; ?>--></span>
         </div>
         <div class="productWriters">
             <label for="product-writers">Writers? </label>
@@ -161,6 +163,7 @@ require(MYSQL);
                 mysqli_free_result($r_writers);
                 ?>
             </datalist>
+            <span class="text-danger">* <!--<#?php echo $writersErr; ?>--></span>
         </div>
         <div class="productCinematographers">
             <label for="product-cinematographers">Cinematographers? </label>
@@ -182,6 +185,7 @@ require(MYSQL);
                 mysqli_free_result($r_dps);
                 ?>
             </datalist>
+            <span class="text-danger">* <!--<#?php echo $dpsErr; ?>--></span>
         </div>
         <div class="productFilmCompany">
             <label for="product-film-company">Any Film and/or Entertainment Companies? </label>
@@ -201,6 +205,7 @@ require(MYSQL);
                 mysqli_free_result($r_studios);
                 ?>
             </datalist>
+            <span class="text-danger">* <!--<#?php echo $studiosErr; ?>--></span>
         </div>
         <div class="productEdition">
             <label for="product-edition">Edition: </label>
