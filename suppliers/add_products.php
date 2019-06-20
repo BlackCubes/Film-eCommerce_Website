@@ -91,7 +91,7 @@ require(MYSQL);
 
                     $full_name = $director_row['first_name'] . ' ' . $director_row['middle_name'] . ' ' . $director_row['last_name'];
 
-                    echo '<option value="' . $full_name . '">' . $full_name . '</option>';
+                    echo '<option value="' . $full_name . '">';
                 }
 
                 mysqli_free_result($r_directors);
