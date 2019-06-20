@@ -78,7 +78,26 @@ require(MYSQL);
             <span class="text-danger">* <!--<#?php echo $descripErr; ?>--></span>
         </div>
         <h3>Product Details</h3>
-        <p><strong>Directors:</strong> </p>
+        <div class="productDirectors">
+            <label for="product-directors">Who was the Director(s)? </label>
+            <input list="directors_list" id="product-directors" name="directors">
+            <datalist id="directors_list">
+                <?php
+
+                $q_directors = "SELECT first_name, middle_name, last_name FROM directors ORDER BY last_name";
+                $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL Error: " . mysqli_error($dbc));
+
+                while ($director_row = mysqli_fetch_array($r_directors, MYSQLI_ASSOC)) {
+
+                    $full_name = $director_row['first_name'] . ' ' . $director_row['middle_name'] . ' ' . $director_row['last_name'];
+
+                    echo '<option value="' . $full_name . '">' . $full_name . '</option>';
+                }
+
+                mysqli_free_result($r_directors);
+                ?>
+            </datalist>
+        </div>
         <p><strong>Actors:</strong> </p>
         <p><strong>Producers:</strong> </p>
         <p><strong>Writers:</strong> </p>
