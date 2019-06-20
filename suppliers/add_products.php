@@ -79,7 +79,7 @@ require(MYSQL);
         </div>
         <h3>Product Details</h3>
         <div class="productDirectors">
-            <label for="product-directors">Who was the Director(s)? </label>
+            <label for="product-directors">Who is the Director(s)? </label>
             <input list="directors_list" id="product-directors" name="directors">
             <datalist id="directors_list">
                 <?php
@@ -89,12 +89,34 @@ require(MYSQL);
 
                 while ($director_row = mysqli_fetch_array($r_directors, MYSQLI_ASSOC)) {
 
-                    $full_name = $director_row['first_name'] . ' ' . $director_row['middle_name'] . ' ' . $director_row['last_name'];
+                    $director_name = $director_row['first_name'] . ' ' . $director_row['middle_name'] . ' ' . $director_row['last_name'];
 
-                    echo '<option value="' . $full_name . '">';
+                    echo '<option value="' . $director_name . '">';
                 }
 
                 mysqli_free_result($r_directors);
+                ?>
+            </datalist>
+            <span class="text-danger">* <!--<#?php echo $directorErr; ?>--></span>
+        </div>
+        <div class="productActors">
+            <label for="product-actors">Actors? </label>
+            <input list="actors_list" id="product-actors" name="actors">
+            <datalist id="actors_list">
+                <?php
+
+                $q_actors = "SELECT first_name, middle_name, last_name FROM actors ORDER BY last_name";
+                $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error: " . mysqli_close($dbc));
+
+                while ($actor_row = mysqli_fetch_array($r_actors, MYSQLI_ASSOC)) {
+
+                    $actor_name = $actor_row['first_name'] . '' . $actor_row['middle_name'] . '' . $actor_row['last_name'];
+
+                    echo '<option value="' . $actor_name . '">';
+
+                }
+
+                mysqli_free_result($r_actors);
                 ?>
             </datalist>
         </div>
