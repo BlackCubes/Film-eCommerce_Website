@@ -106,7 +106,7 @@ require(MYSQL);
                 <?php
 
                 $q_actors = "SELECT first_name, middle_name, last_name FROM actors ORDER BY last_name";
-                $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error: " . mysqli_close($dbc));
+                $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error: " . mysqli_error($dbc));
 
                 while ($actor_row = mysqli_fetch_array($r_actors, MYSQLI_ASSOC)) {
 
@@ -120,9 +120,48 @@ require(MYSQL);
                 ?>
             </datalist>
         </div>
-        <p><strong>Actors:</strong> </p>
-        <p><strong>Producers:</strong> </p>
-        <p><strong>Writers:</strong> </p>
+        <div class="productProducers">
+            <label for="product-producers">Producers? </label>
+            <input list="producers_list" id="product-producers" name="producers">
+            <datalist id="producers_list">
+                <?php
+
+                $q_producers = "SELECT first_name, middle_name, last_name FROM producers ORDER BY last_name";
+                $r_producers = mysqli_query($dbc, $q_producers) or trigger_error("Query: $q_producers\n<br>MySQL Error: " . mysqli_error($dbc));
+
+                while ($producer_row = mysqli_fetch_array($r_producers, MYSQLI_ASSOC)) {
+
+                    $producer_name = $producer_row['first_name'] . ' ' . $producer_row['middle_name'] . ' ' . $producer_row['last_name'];
+
+                    echo '<option value="' . $producer_name . '">';
+
+                }
+
+                mysqli_free_result($r_producers);
+                ?>
+            </datalist>
+        </div>
+        <div class="productWriters">
+            <label for="product-writers">Writers? </label>
+            <input list="writers_list" id="product-writers" name="writers">
+            <datalist id="writers_list">
+                <?php
+
+                $q_writers = "SELECT first_name, middle_name, last_name FROM writers ORDER BY last_name";
+                $r_writers = mysqli_query($dbc, $q_writers) or trigger_error("Query: $q_writers\n<br>MySQL Error: " . mysqli_error($dbc));
+
+                while ($writer_row = mysqli_fetch_array($r_writers, MYSQLI_ASSOC)) {
+
+                    $writer_name = $writer_row['first_name'] . ' ' . $writer_name['middle_name'] . ' ' . $writer_name['last_name'];
+
+                    echo '<option value="' . $writer_name . '">';
+
+                }
+
+                mysqli_free_result($r_writers);
+                ?>
+            </datalist>
+        </div>
         <p><strong>Cinematographers:</strong> </p>
         <p><strong>Film Company:</strong> </p>
         <div class="productEdition">
