@@ -12,7 +12,7 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-$(document).ready(function() {
+/*$(document).ready(function() {
 
     var datalist = $('datalist');
     var options = $('datalist option');
