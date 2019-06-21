@@ -62,7 +62,7 @@ require(MYSQL);
             $r_genre = mysqli_query($dbc, $q_genre) or trigger_error("Query: $q_genre\n<br>MySQL Error: " . mysqli_error($dbc));
 
             while ($genre_row = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
-                echo '<input type="checkbox" id="product-genre" name="genre" value="' . $genre_row['genre'] . '" ';
+                echo '<input type="checkbox" id="product-genre" name="genre[]" value="' . $genre_row['genre'] . '" ';
 
                 $checked = (isset($_POST['genre']) && $_POST['genre']==$genre_row['genre']) ? 'checked' : '';
 
