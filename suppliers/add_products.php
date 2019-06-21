@@ -80,7 +80,7 @@ require(MYSQL);
         <h3>Product Details</h3>
         <div class="productDirectors">
             <label for="product-directors">Who is the Director(s)? </label>
-            <input list="directors_list" id="product-directors" name="directors">
+            <input list="directors_list" id="product-directors" size="50" name="directors">
             <datalist id="directors_list">
                 <?php
 
@@ -101,7 +101,7 @@ require(MYSQL);
         </div>
         <div class="productActors">
             <label for="product-actors">Actors? </label>
-            <input list="actors_list" id="product-actors" name="actors">
+            <input list="actors_list" id="product-actors" size="50" name="actors">
             <datalist id="actors_list">
                 <?php
 
@@ -123,7 +123,7 @@ require(MYSQL);
         </div>
         <div class="productProducers">
             <label for="product-producers">Producers? </label>
-            <input list="producers_list" id="product-producers" name="producers">
+            <input list="producers_list" id="product-producers" size="50" name="producers">
             <datalist id="producers_list">
                 <?php
 
@@ -145,7 +145,7 @@ require(MYSQL);
         </div>
         <div class="productWriters">
             <label for="product-writers">Writers? </label>
-            <input list="writers_list" id="product-writers" name="writers">
+            <input list="writers_list" id="product-writers" size="50" name="writers">
             <datalist id="writers_list">
                 <?php
 
@@ -167,7 +167,7 @@ require(MYSQL);
         </div>
         <div class="productCinematographers">
             <label for="product-cinematographers">Cinematographers? </label>
-            <input list="dps_list" id="product-cinematographers" name="dps">
+            <input list="dps_list" id="product-cinematographers" size="50" name="dps">
             <datalist id="dps_list">
                 <?php
 
@@ -189,7 +189,7 @@ require(MYSQL);
         </div>
         <div class="productFilmCompany">
             <label for="product-film-company">Any Film and/or Entertainment Companies? </label>
-            <input list="company_list" id="product-film-company" name="studios">
+            <input list="company_list" id="product-film-company" size="50" name="studios">
             <datalist id="company_list">
                 <?php
 
