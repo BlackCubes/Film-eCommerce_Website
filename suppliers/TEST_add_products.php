@@ -61,4 +61,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
         </div>
     </fieldset>
+    <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
 </form>
