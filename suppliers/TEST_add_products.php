@@ -9,9 +9,7 @@ require(MYSQL);
     $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_NUM);
     $dp_first_name = array();
     for ($i = 0; $i < 74; $i++) {
-        for ($j = 0; $j < 74; $j++) {
-            $dp_first_name = $directors_preg[$i][$j];
-        }
+        $dp_first_name = $directors_preg[$i][0];
     }
     print_r($dp_first_name);
 
