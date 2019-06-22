@@ -8,23 +8,25 @@ $trimmed = array_map('trim', $_POST);
 
 //NOTE: Also need to verify if they exist in DB!
 //NOTE: Might have to create another if to see if it matches the requirements before DB-if!
-if (preg_match('some verification', $trimmed['d_first_name']) && preg_match('some verification', $trimmed['d_last_name'])) {
+if (preg_match('some verification', $trimmed['directors_first_name']) && preg_match('some verification', $trimmed['directors_last_name'])) {
 
     $q_directors = "SELECT first_name, last_name FROM directors";
     $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
     $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
 
-    $d_fn = preg_split('/[\s,]+/', $trimmed['d_first_name']);
-    $d_ln = preg_split('/[\s,]+/', $trimmed['d_last_name']);
+    $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+    $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
     foreach ($directors_preg as $d_p) {
         if (preg_match('/\b($dp)\b/', $d_fn) && preg_match('/\b($dp)\b/', $d_ln)) {
 
-            foreach ($d_fn as &$value1 && $d_ln as &$value2) {
+            foreach ($d_fn as &$value1) {
                 $value1 = $value1 . '%';
-                $value2 = $value2 . '%';
             }
             unset($value1);
+            foreach ($d_ln as &$value2) {
+                $value2 = $value2 . '%';
+            }
             unset($value2);
 
             //NOTE: Might have to create query array!
@@ -34,13 +36,24 @@ if (preg_match('some verification', $trimmed['d_first_name']) && preg_match('som
                 $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
             }
 
-        } elseif (!preg_match('/\b($dp)\b/', $d_fn) && !preg_match('/\b($dp)\b/', $d_ln)) {
-        
+        } else {
+            echo '<p>Error!</p>';
         }
     }
 
 } else {
-    $
+    echo '<p>Did not match the preg verification, or did not input at least one individual!</p>';
 }
 
 ?>
+
+<form action="TEST_add_products.php" method="post">
+    <fieldset>
+        <div class="productDirectors">
+            <label for="product-directors">Who is the Director(s)?</label>
+            <input type="text" id="product-directors" name="directors_first_name" size="50" value="<?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
+            <!--<input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">-->
+            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
+        </div>
+    </fieldset>
+</form>
