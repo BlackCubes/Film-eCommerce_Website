@@ -13,9 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         foreach ($directors_preg as $key => $value) {
             $dp_first_name[$key] = $value['first_name'];
         }
-        print_r($dp_first_name);
 
-        #$d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+        $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
         #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
         #foreach ($dp_first_name as $dp_fn) {
@@ -47,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<!--<form action="TEST_add_products.php" method="post">
+<form action="TEST_add_products.php" method="post">
     <fieldset>
         <div class="productDirectors">
             <label for="product-directors">Who is the Director(s)?</label>
             <input type="text" id="product-directors" name="directors_first_name" size="50" value="<#?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
-            <input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">
-            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<#?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
+            <!--<input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">
+            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<#?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">-->
         </div>
     </fieldset>
     <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
-</form>-->
+</form>
