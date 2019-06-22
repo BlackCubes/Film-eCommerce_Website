@@ -8,10 +8,11 @@ require(MYSQL);
     $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
     $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
     $dp_first_name = array();
-    while ($rows = array_shift($dp_first_name)) {
-        $dp_first_name[array_shift($rows)] = $rows;
+    for ($i = 0; $i < 74; $i++) {
+        for ($j = 0; $j < 1; $j++) {
+            $dp_first_name = $directors_preg[$i][$j];
+        }
     }
-    print_r($directors_preg);
     print_r($dp_first_name);
 
     #$d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
