@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($directors_preg as $key => $value) {
         $dp_first_name[$key] = $value['first_name'];
     }
+    print_r($dp_first_name);
 
     $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
     print_r($d_fn);
