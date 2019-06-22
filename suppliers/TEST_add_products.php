@@ -15,14 +15,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q_directors = "SELECT first_name FROM directors";
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
         $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
-        $dp_first_name = $directors_preg['first_name'];
-    
+        $dp_first_name = array();
+        while ($rows = array_shift($dp_first_name)) {
+            $dp_first_name[array_shift($rows)] = $rows;
+        }
+        echo $dp_first_name;
+
         $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
         #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
     
-        foreach ($dp_first_name as $dp_fn) {
-            if ($matches1=preg_grep('/\b($dp_fn)\b/', $d_fn)) {
-                echo '<p>Success!</p>';
+        #foreach ($dp_first_name as $dp_fn) {
+            #if ($matches1=preg_grep('/\b($dp_fn)\b/', $d_fn)) {
+                #echo '<p>Success!</p>';
     
                 #foreach ($d_fn as &$value1) {
                 #    $value1 = $value1 . '%';
@@ -40,9 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 #}
                 #echo '<pre>Success!</pre>';
     
-            } else {
-                echo '<p>Error, or none!</p>';
-            }
+            #} else {
+                #echo '<p>Error, or none!</p>';
+            #}
         }
     
     } else {
