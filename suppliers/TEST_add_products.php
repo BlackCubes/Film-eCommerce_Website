@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     //NOTE: Also need to verify if they exist in DB!
     //NOTE: Might have to create another if to see if it matches the requirements before DB-if!
-    if (isset($trimmed['directors_first_name']) && isset($trimmed['directors_last_name'])) {
+    if (isset($trimmed['directors_first_name'])) {
     
         $q_directors = "SELECT first_name FROM directors";
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
