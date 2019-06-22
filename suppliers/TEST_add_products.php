@@ -4,12 +4,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 require(MYSQL);
 
-$trimmed = array_map('trim', $_POST);
-
-//NOTE: Also need to verify if they exist in DB!
-//NOTE: Might have to create another if to see if it matches the requirements before DB-if!
-if (isset($trimmed['directors_first_name'])) {
-
     $q_directors = "SELECT first_name FROM directors";
     $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
     $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
@@ -19,7 +13,7 @@ if (isset($trimmed['directors_first_name'])) {
     }
     echo $dp_first_name;
 
-    $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+    #$d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
     #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
     #foreach ($dp_first_name as $dp_fn) {
@@ -46,10 +40,6 @@ if (isset($trimmed['directors_first_name'])) {
             #echo '<p>Error, or none!</p>';
         #}
     #}
-
-} else {
-    echo '<p>Did not match the preg verification, or did not input at least one individual!</p>';
-}
 
 mysqli_close($dbc);
 ?>
