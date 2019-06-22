@@ -12,15 +12,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //NOTE: Might have to create another if to see if it matches the requirements before DB-if!
     if (isset($trimmed['directors_first_name']) && isset($trimmed['directors_last_name'])) {
     
-        $q_directors = "SELECT first_name, last_name FROM directors";
+        $q_directors = "SELECT first_name FROM directors";
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
         $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
+        $dp_first_name = $directors_preg['first_name'];
     
         $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
-        $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
+        #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
     
-        foreach ($directors_preg as $d_p) {
-            if ($matches1=preg_grep('/\b($d_p["first_name"])\b/', $d_fn) && $matches2=preg_grep('/\b($d_p["last_name"])\b/', $d_ln)) {
+        foreach ($dp_first_name as $dp_fn) {
+            if ($matches1=preg_grep('/\b($dp_fn)\b/', $d_fn)) {
                 echo '<p>Success!</p>';
     
                 #foreach ($d_fn as &$value1) {
@@ -59,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-directors">Who is the Director(s)?</label>
             <input type="text" id="product-directors" name="directors_first_name" size="50" value="<?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
             <!--<input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">-->
-            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
+            <!--<input type="text" id="product-directors" name="directors_last_name" size="50" value="<#?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">-->
         </div>
     </fieldset>
     <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
