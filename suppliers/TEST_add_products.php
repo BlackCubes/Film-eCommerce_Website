@@ -11,7 +11,7 @@ require(MYSQL);
     while ($rows = array_shift($dp_first_name)) {
         $dp_first_name[array_shift($rows)] = $rows;
     }
-    echo $dp_first_name;
+    print_r($dp_first_name);
 
     #$d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
     #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
