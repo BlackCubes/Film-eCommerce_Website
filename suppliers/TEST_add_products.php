@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+        print_r($d_fn);
         #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
         #foreach ($dp_first_name as $dp_fn) {
