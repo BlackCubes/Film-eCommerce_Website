@@ -2,49 +2,54 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
-require(MYSQL);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-$trimmed = array_map('trim', $_POST);
+    require(MYSQL);
 
-//NOTE: Also need to verify if they exist in DB!
-//NOTE: Might have to create another if to see if it matches the requirements before DB-if!
-if (preg_match('some verification', $trimmed['directors_first_name']) && preg_match('some verification', $trimmed['directors_last_name'])) {
-
-    $q_directors = "SELECT first_name, last_name FROM directors";
-    $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
-    $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
-
-    $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
-    $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
-
-    foreach ($directors_preg as $d_p) {
-        if (preg_match('/\b($dp)\b/', $d_fn) && preg_match('/\b($dp)\b/', $d_ln)) {
-
-            foreach ($d_fn as &$value1) {
-                $value1 = $value1 . '%';
+    $trimmed = array_map('trim', $_POST);
+    
+    //NOTE: Also need to verify if they exist in DB!
+    //NOTE: Might have to create another if to see if it matches the requirements before DB-if!
+    if (isset($trimmed['directors_first_name']) && isset($trimmed['directors_last_name'])) {
+    
+        $q_directors = "SELECT first_name, last_name FROM directors";
+        $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
+        $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
+    
+        $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+        $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
+    
+        foreach ($directors_preg as $d_p) {
+            if (preg_match('/\b($dp)\b/', $d_fn) && preg_match('/\b($dp)\b/', $d_ln)) {
+    
+                foreach ($d_fn as &$value1) {
+                    $value1 = $value1 . '%';
+                }
+                unset($value1);
+                foreach ($d_ln as &$value2) {
+                    $value2 = $value2 . '%';
+                }
+                unset($value2);
+    
+                //NOTE: Might have to create query array!
+                //NOTE: Fix the for loop?
+                for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
+                    $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
+                }
+                echo '<pre>Success!</pre>';
+    
+            } else {
+                echo '<p>Error, or none!</p>';
             }
-            unset($value1);
-            foreach ($d_ln as &$value2) {
-                $value2 = $value2 . '%';
-            }
-            unset($value2);
-
-            //NOTE: Might have to create query array!
-            //NOTE: Fix the for loop?
-            for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
-                $qd_id = 
-                $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
-            }
-
-        } else {
-            echo '<p>Error!</p>';
         }
+    
+    } else {
+        echo '<p>Did not match the preg verification, or did not input at least one individual!</p>';
     }
 
-} else {
-    echo '<p>Did not match the preg verification, or did not input at least one individual!</p>';
-}
+    mysqli_close($dbc);
 
+}
 ?>
 
 <form action="TEST_add_products.php" method="post">
