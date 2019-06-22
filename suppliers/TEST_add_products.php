@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             #} else {
                 #echo '<p>Error, or none!</p>';
             #}
-        }
+        #}
     
     } else {
         echo '<p>Did not match the preg verification, or did not input at least one individual!</p>';
