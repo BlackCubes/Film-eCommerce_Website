@@ -16,13 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
         $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
     
-        #$d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
-        #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
-        $d_fn = $trimmed['directors_first_name'];
-        $d_ln = $trimmed['directors_last_name'];
+        $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+        $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
     
         foreach ($directors_preg as $d_p) {
-            if (preg_match('/\b($d_p)\b/', $d_fn) && preg_match('/\b($d_p)\b/', $d_ln)) {
+            if ($matches1=preg_grep('/\b($d_p["first_name"])\b/', $d_fn) && $matches2=preg_grep('/\b($d_p["last_name"])\b/', $d_ln)) {
+                echo '<p>Success!</p>';
     
                 #foreach ($d_fn as &$value1) {
                 #    $value1 = $value1 . '%';
