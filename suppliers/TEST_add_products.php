@@ -6,10 +6,10 @@ require(MYSQL);
 
     $q_directors = "SELECT first_name FROM directors";
     $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
-    $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
+    $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_NUM);
     $dp_first_name = array();
     for ($i = 0; $i < 74; $i++) {
-        for ($j = 0; $j < 1; $j++) {
+        for ($j = 0; $j < 74; $j++) {
             $dp_first_name = $directors_preg[$i][$j];
         }
     }
