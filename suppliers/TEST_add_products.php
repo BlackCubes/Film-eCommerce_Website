@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     function validate($validNames, $matchIn) {
         foreach ($validNames as $validName) {
-            if (preg_grep('/\b($validName)\b/', $matchIn)) {
+            if (preg_grep("/^($validName)$/", $matchIn)) {
                 echo "<p>Success!</p>";
                 return;
             }
