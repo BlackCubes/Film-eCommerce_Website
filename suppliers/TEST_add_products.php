@@ -21,27 +21,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
     foreach ($dp_first_name as $dp_fn) {
-        if ($matches1=preg_grep('/\b($dp_fn)\b/', $d_fn)) {
-            echo '<p>Success!</p>';
+        foreach ($d_fn as $dfn) {
+            if (preg_grep('/\b($dp_fn)\b/', $dfn)) {
+                echo '<p>Success!</p>';
 
-            #foreach ($d_fn as &$value1) {
-            #    $value1 = $value1 . '%';
-            #}
-            #unset($value1);
-            #foreach ($d_ln as &$value2) {
-            #    $value2 = $value2 . '%';
-            #}
-            #unset($value2);
+                #foreach ($d_fn as &$value1) {
+                #    $value1 = $value1 . '%';
+                #}
+                #unset($value1);
+                #foreach ($d_ln as &$value2) {
+                #    $value2 = $value2 . '%';
+                #}
+                #unset($value2);
 
-            //NOTE: Might have to create query array!
-            //NOTE: Fix the for loop?
-            #for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
-            #    $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
-            #}
-            #echo '<pre>Success!</pre>';
+                //NOTE: Might have to create query array!
+                //NOTE: Fix the for loop?
+                #for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
+                #    $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
+                #}
+                #echo '<pre>Success!</pre>';
 
-        } else {
-            echo '<p>Error, or none!</p>';
+            } else {
+                echo '<p>Error, or none!</p>';
+            }
         }
     }
 
