@@ -20,10 +20,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     print_r($d_fn);
     #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
-    foreach ($dp_first_name as $dp_fn) {
-        foreach ($d_fn as $dfn) {
-            if (preg_grep('/\b($dp_fn)\b/', $dfn)) {
-                echo '<p>Success!</p>';
+    function validate($validNames, $matchIn) {
+        foreach ($validNames as $validName) {
+            if (preg_match($validName, $matchIn)) {
+                echo "<p>Success!</p>";
+                return;
+            }
+        }
+        echo "<p>Failed!</p>";
+        return;
+    }
+
+    #foreach ($dp_first_name as $dp_fn) {
+    #    foreach ($d_fn as $dfn) {
+    #        if (preg_grep('/\b($dp_fn)\b/', $dfn)) {
+    #            echo '<p>Success!</p>';
 
                 #foreach ($d_fn as &$value1) {
                 #    $value1 = $value1 . '%';
@@ -41,11 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 #}
                 #echo '<pre>Success!</pre>';
 
-            } else {
-                echo '<p>Error, or none!</p>';
-            }
-        }
-    }
+            #} else {
+            #    echo '<p>Error, or none!</p>';
+            #}
+        #}
+    #}
 
     mysqli_close($dbc);
 }
