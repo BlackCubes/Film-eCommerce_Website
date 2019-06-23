@@ -15,15 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($directors_preg as $key => $value) {
         $dp_first_name[$key] = $value['first_name'];
     }
-    print_r($dp_first_name);
 
     $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
     print_r($d_fn);
     #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
 
-    #foreach ($dp_first_name as $dp_fn) {
-        #if ($matches1=preg_grep('/\b($dp_fn)\b/', $d_fn)) {
-            #echo '<p>Success!</p>';
+    foreach ($dp_first_name as $dp_fn) {
+        if ($matches1=preg_grep('/\b($dp_fn)\b/', $d_fn)) {
+            echo '<p>Success!</p>';
 
             #foreach ($d_fn as &$value1) {
             #    $value1 = $value1 . '%';
@@ -41,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             #}
             #echo '<pre>Success!</pre>';
 
-        #} else {
-            #echo '<p>Error, or none!</p>';
-        #}
+        } else {
+            echo '<p>Error, or none!</p>';
+        }
     #}
 
     mysqli_close($dbc);
