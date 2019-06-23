@@ -22,35 +22,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     function validate($validNames, $matchIn) {
         foreach ($validNames as $validName) {
-            if (preg_grep("/^($validName)$/", $matchIn)) {
-                return TRUE;
+            if ($match1 = preg_grep("/^($validName)$/", $matchIn)) {
+                return $match1;
             }
         }
         return FALSE;
     }
 
-    if (validate($dp_first_name, $d_fn)) {
-        echo '<p>Success!</p>';
+    #if (validate($dp_first_name, $d_fn)) {
+        #echo '<p>Success!</p>';
 
-        #foreach ($d_fn as &$value1) {
-        #    $value1 = $value1 . '%';
-        #}
-        #unset($value1);
-        #foreach ($d_ln as &$value2) {
-        #    $value2 = $value2 . '%';
-        #}
-        #unset($value2);
+    #    foreach ($d_fn as &$value1) {
+            $value1 = $value1 . '%';
+    #    }
+    #    unset($value1);
+    #    foreach ($d_ln as &$value2) {
+    #        $value2 = $value2 . '%';
+    #    }
+    #    unset($value2);
 
         //NOTE: Might have to create query array!
         //NOTE: Fix the for loop?
-        #for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
-        #    $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
-        #}
-        #echo '<pre>Success!</pre>';
+    #    for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
+    #        $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
+    #    }
+    #    echo '<pre>Success!</pre>';
 
-    } else {
-        echo '<p>Failed!</p>';
-    }
+    #} else {
+    #    echo '<p>Failed!</p>';
+    #}
 
     mysqli_close($dbc);
 }
