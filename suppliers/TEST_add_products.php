@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
+    validate($dp_first_name, $d_fn);
+
     #foreach ($dp_first_name as $dp_fn) {
     #    foreach ($d_fn as $dfn) {
     #        if (preg_grep('/\b($dp_fn)\b/', $dfn)) {
