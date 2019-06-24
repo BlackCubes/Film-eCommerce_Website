@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function validate($validNames, $matchIn) {
         foreach ($validNames as $validName) {
             if (preg_grep("/^($validName)$/", $matchIn)) {
-                echo '<p>Names are in system!</p>'
+                echo '<p>Names are in system!</p>';
                 return;
             } elseif (!preg_grep("/^($validName)$/", $matchIn)) {
                 echo '<p>Names are not in system</p>';
