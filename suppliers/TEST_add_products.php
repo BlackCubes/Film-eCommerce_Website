@@ -8,17 +8,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
 
-    $q_directors = "SELECT first_name FROM directors";
+    $q_directors = "SELECT first_name, last_name FROM directors";
     $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
     $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
-    $dp_first_name = array();
+
+    $dpreg_fn = $dpreg_ln = array();
     foreach ($directors_preg as $key => $value) {
-        $dp_first_name[$key] = $value['first_name'];
+        $dpreg_fn[$key] = $value['first_name'];
+        $dpreg_ln[$key] = $value['last_name'];
     }
 
     $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
-    print_r($d_fn);
-    #$d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
+    echo '<pre>', print_r($d_fn), '</pre>';
+    $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
+    echo '<pre>', print_r($d_ln), '</pre>';
 
     function validate($validNames, $matchIn) {
         foreach ($validNames as $validName) {
@@ -29,19 +32,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return FALSE;
     }
 
-    if (validate($dp_first_name, $d_fn)) {
+    if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln)) {
         #echo '<p>Success!</p>'; 
 
-        $dp_string = implode("','", $d_fn);
-        $q = "SELECT id FROM directors WHERE first_name IN ('$dp_string')";
+        $dstring_fn = implode("','", $d_fn);
+        $dstring_ln = implode("','", $d_ln);
+
+        $q = "SELECT id FROM directors WHERE first_name IN ('$dstring_fn') AND last_name IN ('$dstring_ln')";
         $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-        $selected_d_id = array();
+        $selected_id = array();
         foreach ($row_id as $key=>$value) {
-            $selected_d_id[$key] = $value['id'];
+            $selected_id[$key] = $value['id'];
         }
-        print_r($selected_d_id);
+        echo '<pre>', print_r($selected_id), '</pre>';
 
         #foreach ($d_fn as &$value1) {
         #    $value1 = $value1 . '%';
@@ -72,8 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productDirectors">
             <label for="product-directors">Who is the Director(s)?</label>
             <input type="text" id="product-directors" name="directors_first_name" size="50" value="<?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
-            <!--<input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">
-            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<#?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">-->
+            <!--<input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">-->
+            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
         </div>
     </fieldset>
     <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
