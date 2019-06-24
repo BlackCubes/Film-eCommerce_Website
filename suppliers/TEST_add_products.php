@@ -23,26 +23,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     function validate($validNames, $matchIn) {
         foreach ($validNames as $validName) {
             if (preg_grep("/^($validName)$/", $matchIn)) {
-                echo '<p>Names are in system!</p>';
-                return;
-            } elseif (!preg_grep("/^($validName)$/", $matchIn)) {
-                echo '<p>Names are not in system</p>';
-                return;
+                return TRUE;
             }
         }
-        #return FALSE;
+        return FALSE;
     }
 
-    validate($dp_first_name, $d_fn);
-
-    #if (validate($dp_first_name, $d_fn)) {
+    if (validate($dp_first_name, $d_fn)) {
         #echo '<p>Success!</p>'; 
 
-        #$dp_string = implode("','", $d_fn);
-        #$q = "SELECT id FROM directors WHERE first_name IN ('$dp_string')";
-        #$r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-        #$row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
-        #print_r($row_id);
+        $dp_string = implode("','", $d_fn);
+        $q = "SELECT id FROM directors WHERE first_name IN ('$dp_string')";
+        $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
+        print_r($row_id);
 
         #foreach ($d_fn as &$value1) {
         #    $value1 = $value1 . '%';
