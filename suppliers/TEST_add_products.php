@@ -54,9 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         #}
         #echo '<pre>Success!</pre>';
 
-    #} else {
-    #    echo '<p>Failed!</p>';
-    #}
+    } else {
+        echo '<p>Failed!</p>';
+    }
 
     mysqli_close($dbc);
 }
