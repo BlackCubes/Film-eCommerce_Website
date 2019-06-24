@@ -36,7 +36,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q = "SELECT id FROM directors WHERE first_name IN ('$dp_string')";
         $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
-        print_r($row_id);
+
+        $selected_d_id = array();
+        foreach ($row_id as $key=>$value) {
+            $selected_d_id[$key] = $value['id'];
+        }
+        print_r($selected_d_id);
 
         #foreach ($d_fn as &$value1) {
         #    $value1 = $value1 . '%';
