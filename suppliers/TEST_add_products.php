@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         #return FALSE;
     }
 
+    validate($dp_first_name, $d_fn);
+
     #if (validate($dp_first_name, $d_fn)) {
         #echo '<p>Success!</p>'; 
 
