@@ -80,131 +80,37 @@ require(MYSQL);
         <h3>Product Details</h3>
         <div class="productDirectors">
             <label for="product-directors">Who is the Director(s)? </label>
-            <input list="directors_list" id="product-directors" size="50" name="directors">
-            <datalist id="directors_list">
-                <?php
-
-                $q_directors = "SELECT first_name, middle_name, last_name FROM directors ORDER BY last_name";
-                $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                while ($director_row = mysqli_fetch_array($r_directors, MYSQLI_ASSOC)) {
-
-                    $director_name = $director_row['first_name'] . ' ' . $director_row['middle_name'] . ' ' . $director_row['last_name'];
-
-                    echo '<option value="' . $director_name . '">';
-                }
-
-                mysqli_free_result($r_directors);
-                ?>
-            </datalist>
+            <input type="text" id="product-directors" name="directors_first_name" size="50" value="<?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
+            <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
             <span class="text-danger">* <!--<#?php echo $directorErr; ?>--></span>
         </div>
         <div class="productActors">
             <label for="product-actors">Actors? </label>
-            <input list="actors_list" id="product-actors" size="50" name="actors">
-            <datalist id="actors_list">
-                <?php
-
-                $q_actors = "SELECT first_name, middle_name, last_name FROM actors ORDER BY last_name";
-                $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                while ($actor_row = mysqli_fetch_array($r_actors, MYSQLI_ASSOC)) {
-
-                    $actor_name = $actor_row['first_name'] . ' ' . $actor_row['middle_name'] . ' ' . $actor_row['last_name'];
-
-                    echo '<option value="' . $actor_name . '">';
-
-                }
-
-                mysqli_free_result($r_actors);
-                ?>
-            </datalist>
+            <input type="text" id="product-actors" name="actors_first_name" size="50" value="<?php if (isset($trimmed['actors_first_name'])) echo $trimmed['actors_first_name']; ?>" placeholder="First Name">
+            <input type="text" id="product-actors" name="actors_last_name" size="50" value="<?php if (isset($trimmed['actors_last_name'])) echo $trimmed['actors_last_name']; ?>" placeholder="Last Name">
             <span class="text-danger">* <!--<#?php echo $actorsErr; ?>--></span>
         </div>
         <div class="productProducers">
             <label for="product-producers">Producers? </label>
-            <input list="producers_list" id="product-producers" size="50" name="producers">
-            <datalist id="producers_list">
-                <?php
-
-                $q_producers = "SELECT first_name, middle_name, last_name FROM producers ORDER BY last_name";
-                $r_producers = mysqli_query($dbc, $q_producers) or trigger_error("Query: $q_producers\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                while ($producer_row = mysqli_fetch_array($r_producers, MYSQLI_ASSOC)) {
-
-                    $producer_name = $producer_row['first_name'] . ' ' . $producer_row['middle_name'] . ' ' . $producer_row['last_name'];
-
-                    echo '<option value="' . $producer_name . '">';
-
-                }
-
-                mysqli_free_result($r_producers);
-                ?>
-            </datalist>
+            <input type="text" id="product-producers" name="producers_first_name" size="50" value="<?php if (isset($trimmed['producers_first_name'])) echo $trimmed['producers_first_name']; ?>" placeholder="First Name">
+            <input type="text" id="product-producers" name="producers_last_name" size="50" value="<?php if (isset($trimmed['producers_last_name'])) echo $trimmed['producers_last_name']; ?>" placeholder="Last Name">
             <span class="text-danger">* <!--<#?php echo $producersErr; ?>--></span>
         </div>
         <div class="productWriters">
             <label for="product-writers">Writers? </label>
-            <input list="writers_list" id="product-writers" size="50" name="writers">
-            <datalist id="writers_list">
-                <?php
-
-                $q_writers = "SELECT first_name, middle_name, last_name FROM writers ORDER BY last_name";
-                $r_writers = mysqli_query($dbc, $q_writers) or trigger_error("Query: $q_writers\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                while ($writer_row = mysqli_fetch_array($r_writers, MYSQLI_ASSOC)) {
-
-                    $writer_name = $writer_row['first_name'] . ' ' . $writer_row['middle_name'] . ' ' . $writer_row['last_name'];
-
-                    echo '<option value="' . $writer_name . '">';
-
-                }
-
-                mysqli_free_result($r_writers);
-                ?>
-            </datalist>
+            <input type="text" id="product-writers" name="writers_first_name" size="50" value="<?php if (isset($trimmed['writers_first_name'])) echo $trimmed['writers_first_name']; ?>" placeholder="First Name">
+            <input type="text" id="product-writers" name="writers_last_name" size="50" value="<?php if (isset($trimmed['writers_last_name'])) echo $trimmed['writers_last_name']; ?>" placeholder="Last Name">
             <span class="text-danger">* <!--<#?php echo $writersErr; ?>--></span>
         </div>
         <div class="productCinematographers">
             <label for="product-cinematographers">Cinematographers? </label>
-            <input list="dps_list" id="product-cinematographers" size="50" name="dps">
-            <datalist id="dps_list">
-                <?php
-
-                $q_dps = "SELECT first_name, middle_name, last_name FROM dps ORDER BY last_name";
-                $r_dps = mysqli_query($dbc, $q_dps) or trigger_error("Query: $q_dps\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                while ($dp_row = mysqli_fetch_array($r_dps, MYSQLI_ASSOC)) {
-
-                    $dp_name = $dp_row['first_name'] . ' ' . $dp_row['middle_name'] . ' ' . $dp_row['last_name'];
-
-                    echo '<option value="' . $dp_name . '">';
-
-                }
-
-                mysqli_free_result($r_dps);
-                ?>
-            </datalist>
+            <input type="text" id="product-cinematographers" name="dp_first_name" size="50" value="<?php if (isset($trimmed['dp_first_name'])) echo $trimmed['dp_first_name']; ?>" placeholder="First Name">
+            <input type="text" id="product-cinematographers" name="dp_last_name" size="50" value="<?php if (isset($trimmed['dp_last_name'])) echo $trimmed['dp_last_name']; ?>" placeholder="Last Name">
             <span class="text-danger">* <!--<#?php echo $dpsErr; ?>--></span>
         </div>
         <div class="productFilmCompany">
             <label for="product-film-company">Any Film and/or Entertainment Companies? </label>
-            <input list="company_list" id="product-film-company" size="50" name="studios">
-            <datalist id="company_list">
-                <?php
-
-                $q_studios = "SELECT studio_name FROM studios ORDER BY studio_name";
-                $r_studios = mysqli_query($dbc, $q_studios) or trigger_error("Query: $q_studios\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                while ($studio_row = mysqli_fetch_array($r_studios, MYSQLI_ASSOC)) {
-
-                    echo '<option value="' . $studio_row['studio_name'] . '">';
-
-                }
-
-                mysqli_free_result($r_studios);
-                ?>
-            </datalist>
+            <input type="text" id="product-film-company" name="studio_name" size="50" value="<?php if (isset($trimmed['studio_name'])) echo $trimmed['studio_name'] ?>" placeholder="Name">
             <span class="text-danger">* <!--<#?php echo $studiosErr; ?>--></span>
         </div>
         <div class="productEdition">
