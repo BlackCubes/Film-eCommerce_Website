@@ -35,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln)) {
-            #echo '<p>Success!</p>'; 
 
             $dstring_fn = implode("','", $d_fn);
             $dstring_ln = implode("','", $d_ln);
@@ -49,22 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $selected_id[$key] = $value['id'];
             }
             echo '<pre>', print_r($selected_id), '</pre>';
-
-            #foreach ($d_fn as &$value1) {
-            #    $value1 = $value1 . '%';
-            #}
-            #unset($value1);
-            #foreach ($d_ln as &$value2) {
-            #    $value2 = $value2 . '%';
-            #}
-            #unset($value2);
-
-            //NOTE: Might have to create query array!
-            //NOTE: Fix the for loop?
-            #for ($f = 0, $l = 0; $f < sizeof($d_fn), $l < sizeof($d_ln); $f++, $l++) {
-            #    $q_did = "SELECT id FROM directors WHERE first_name LIKE ' . $d_fn[i] . ' AND last_name LIKE ' . $d_ln[j] . '";
-            #}
-            #echo '<pre>Success!</pre>';
 
         } else {
             echo '<p>Please enter the correct name(s) of the corresponding director(s)!</p>';
@@ -82,7 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productDirectors">
             <label for="product-directors">Who is the Director(s)?</label>
             <input type="text" id="product-directors" name="directors_first_name" size="50" value="<?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
-            <!--<input type="text" id="product-directors" name="directors_middle_name" size="50" value="<#?php if (isset($trimmed['directors_middle_name'])) echo $trimmed['directors_middle_name']; ?>" placeholder="Middle Name">-->
             <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
         </div>
     </fieldset>
