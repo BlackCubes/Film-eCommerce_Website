@@ -55,12 +55,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            echo '<pre>', print_r($row_id), '</pre>';
-            $selected_id = array();
-            foreach ($row_id as $key=>$value) {
-                $selected_id[$key] = $value['id'];
+            if (empty($row_id)) {
+
+                echo '<p>An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!</p>';
+                
+            } else {
+
+                $dselected_id = array();
+                foreach ($row_id as $key=>$value) {
+                    $dselected_id[$key] = $value['id']
+                }
+                echo '<pre>', print_r($selected_id), '</pre>';
+
             }
-            echo '<pre>', print_r($selected_id), '</pre>';
 
         } else {
             echo '<p>Please enter the correct name(s) of the corresponding director(s)!</p>';
