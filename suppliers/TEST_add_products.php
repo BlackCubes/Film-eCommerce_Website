@@ -28,12 +28,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $d_ln = preg_split('/[\s,]+/', $descape_ln);
         echo '<pre>', print_r($d_ln), '</pre>';
 
-        foreach ($d_fn as $validName) $dvalid_fn = preg_grep("/^$validName$/", $dpreg_fn);
+        echo '<pre>', print_r($d_fn), '</pre>';
+        echo '<pre>', print_r($d_ln), '</pre>';
 
-        foreach ($d_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $dpreg_ln);
+        #foreach ($d_fn as $validName) $dvalid_fn = preg_grep("/^$validName$/", $dpreg_fn);
 
-        echo '<pre>', print_r($dvalid_fn), '</pre>';
-        echo '<pre>', print_r($dvalid_ln), '</pre>';
+        #foreach ($d_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $dpreg_ln);
+
+        $dmatch_fn = array_filter($d_fn, function($validName) use($dpreg_fn) {
+            return preg_grep("/^$validName$/", $dpreg_fn);
+        });
+        $dmatch_ln = array_filter($d_ln, function($validName) use($dpreg_ln) {
+            return preg_grep("/^$validName$/", $dpreg_ln);
+        });
+
+        echo '<pre>', print_r($dmatch_fn), '</pre>';
+        echo '<pre>', print_r($dmatch_ln), '</pre>';
 
         function arraycount($array1, $array2) {
             if (count($array1) == count($array2)) {
@@ -43,13 +53,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($dvalid_fn) && !empty($dvalid_ln) && arraycount($d_fn, $d_ln)) {
+        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($d_fn, $d_ln)) {
 
-            echo '<pre>', print_r($dvalid_fn), '</pre>';
-            echo '<pre>', print_r($dvalid_ln), '</pre>';
+           # echo '<pre>', print_r($dvalid_fn), '</pre>';
+            #echo '<pre>', print_r($dvalid_ln), '</pre>';
 
-            $dstring_fn = implode("','", $dvalid_fn);
-            $dstring_ln = implode("','", $dvalid_ln);
+            $dstring_fn = implode("','", $dmatch_fn);
+            $dstring_ln = implode("','", $dmatch_ln);
 
             $q = "SELECT id FROM directors WHERE first_name IN ('$dstring_fn') AND last_name IN ('$dstring_ln')";
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
