@@ -58,12 +58,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (empty($row_id)) {
 
                 echo '<p>An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!</p>';
-                
+
             } else {
 
                 $dselected_id = array();
                 foreach ($row_id as $key=>$value) {
-                    $dselected_id[$key] = $value['id']
+                    $dselected_id[$key] = $value['id'];
                 }
                 echo '<pre>', print_r($selected_id), '</pre>';
 
