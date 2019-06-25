@@ -39,8 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln)) {
 
+            echo '<pre>', print_r(validate($dpreg_fn, $d_fn)), '</pre>';
+            echo '<pre>', print_r(validate($dpreg_ln, $d_ln)), '</pre>';
+
             $dstring_fn = implode("','", $d_fn);
             $dstring_ln = implode("','", $d_ln);
+
+            echo '<pre>' . print_r($dstring_fn) . '</pre>';
+            echo '<pre>' . print_r($descape_ln) . '</pre>';
 
             $q = "SELECT id FROM directors WHERE first_name IN ('$dstring_fn') AND last_name IN ('$dstring_ln')";
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
