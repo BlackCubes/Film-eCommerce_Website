@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '<p>Please enter the correct name(s) of the corresponding directors!</p>';
         }
     } else {
-        echo '<p>Please enter a first and last name!</p>';
+        echo '<p>Please enter first and last name(s)!</p>';
     }
 
     mysqli_close($dbc);
