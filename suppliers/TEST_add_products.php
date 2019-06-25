@@ -28,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $d_ln = preg_split('/[\s,]+/', $descape_ln);
         echo '<pre>', print_r($d_ln), '</pre>';
 
-        foreach ($dpreg_fn as $validName) $dvalid_fn = preg_grep("/^$validName$/", $d_fn);
+        foreach ($d_fn as $validName) $dvalid_fn = preg_grep("/^$validName$/", $dpreg_fn);
 
-        foreach ($dpreg_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $d_ln);
+        foreach ($d_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $dpreg_ln);
 
         echo '<pre>', print_r($dvalid_fn), '</pre>';
         echo '<pre>', print_r($dvalid_ln), '</pre>';
