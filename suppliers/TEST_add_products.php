@@ -35,15 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<pre>', print_r($dvalid_fn), '</pre>';
         echo '<pre>', print_r($dvalid_ln), '</pre>';
 
-        #function validate($validNames, $matchIn) {
-        #    foreach ($validNames as $validName) {
-        #        if (preg_grep("/^($validName)$/", $matchIn)) {
-        #            return TRUE || FALSE;
-        #        }
-        #    }
-            #return FALSE;
-        #}
-
         function arraycount($array1, $array2) {
             if (count($array1) == count($array2)) {
                 return TRUE;
@@ -59,9 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $dstring_fn = implode("','", $dvalid_fn);
             $dstring_ln = implode("','", $dvalid_ln);
-
-            echo '<pre>' . print_r($dstring_fn) . '</pre>';
-            echo '<pre>' . print_r($descape_ln) . '</pre>';
 
             $q = "SELECT id FROM directors WHERE first_name IN ('$dstring_fn') AND last_name IN ('$dstring_ln')";
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
