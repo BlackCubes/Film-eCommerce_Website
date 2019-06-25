@@ -32,11 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             foreach ($validNames as $validName) {
                 if (preg_grep("/^($validName)$/", $matchIn)) {
                     return TRUE;
-                } elseif (preg_grep("/^($validName)$/", $matchIn)) {
-                    return FALSE;
                 }
             }
-            #return FALSE;
+            return FALSE;
         }
 
         if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln)) {
