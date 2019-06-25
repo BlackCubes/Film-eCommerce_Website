@@ -8,7 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
 
-    if (preg_match('/^$/', $trimmed['directors_first_name']) && preg_match('/^$/', $trimmed['directors_last_name'])) {
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name'])) && (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
+
         $q_directors = "SELECT first_name, last_name FROM directors";
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL error: " . mysqli_error($dbc));
         $directors_preg = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
