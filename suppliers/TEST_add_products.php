@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id) || arraycount($dmatch_fn, $dmatch_ln)) {
+            if (empty($row_id) || !arraycount($dmatch_fn, $dmatch_ln)) {
 
                 echo '<p>An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!</p>';
 
