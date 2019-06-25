@@ -20,9 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $dpreg_ln[$key] = $value['last_name'];
         }
 
-        $d_fn = preg_split('/[\s,]+/', $trimmed['directors_first_name']);
+        $descape_fn = mysqli_real_escape_string($dbc, $trimmed['directors_first_name']);
+        $descape_ln = mysqli_real_escape_string($dbc, $trimmed['directors_last_name']);
+
+        $d_fn = preg_split('/[\s,]+/', $descape_fn);
         echo '<pre>', print_r($d_fn), '</pre>';
-        $d_ln = preg_split('/[\s,]+/', $trimmed['directors_last_name']);
+        $d_ln = preg_split('/[\s,]+/', $descape_ln);
         echo '<pre>', print_r($d_ln), '</pre>';
 
         function validate($validNames, $matchIn) {
