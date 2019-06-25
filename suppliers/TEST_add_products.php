@@ -37,7 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             #return FALSE;
         }
 
-        if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln)) {
+        function arraycount($array1, $array2) {
+            if (count($array1) == count($array2)) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
+
+        if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln) && arraycount($d_fn, $d_ln)) {
 
             echo '<pre>', print_r(validate($dpreg_fn, $d_fn)), '</pre>';
             echo '<pre>', print_r(validate($dpreg_ln, $d_ln)), '</pre>';
