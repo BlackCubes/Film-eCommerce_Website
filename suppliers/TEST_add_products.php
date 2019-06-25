@@ -29,10 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<pre>', print_r($d_fn), '</pre>';
         echo '<pre>', print_r($d_ln), '</pre>';
 
-        #foreach ($d_fn as $validName) $dvalid_fn = preg_grep("/^$validName$/", $dpreg_fn);
-
-        #foreach ($d_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $dpreg_ln);
-
         $dmatch_fn = array_filter($d_fn, function($validName) use($dpreg_fn) {
             return preg_grep("/^$validName$/", $dpreg_fn);
         });
@@ -52,9 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($d_fn, $d_ln)) {
-
-           # echo '<pre>', print_r($dvalid_fn), '</pre>';
-            #echo '<pre>', print_r($dvalid_ln), '</pre>';
 
             $dstring_fn = implode("','", $dmatch_fn);
             $dstring_ln = implode("','", $dmatch_ln);
