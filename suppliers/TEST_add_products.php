@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             #echo '<pre>Success!</pre>';
 
         } else {
-            echo '<p>Please enter the correct name(s) of the corresponding directors!</p>';
+            echo '<p>Please enter the correct name(s) of the corresponding director(s)!</p>';
         }
     } else {
         echo '<p>Please enter first and last name(s)!</p>';
