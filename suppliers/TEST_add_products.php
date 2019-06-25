@@ -28,14 +28,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $d_ln = preg_split('/[\s,]+/', $descape_ln);
         echo '<pre>', print_r($d_ln), '</pre>';
 
-        function validate($validNames, $matchIn) {
-            foreach ($validNames as $validName) {
-                if (preg_grep("/^($validName)$/", $matchIn)) {
-                    return TRUE || FALSE;
-                }
-            }
+        foreach ($dpreg_fn as $validName) $dvalid_fn = preg_grep("/^$validName$/", $d_fn);
+
+        foreach ($dpreg_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $d_ln);
+
+        #function validate($validNames, $matchIn) {
+        #    foreach ($validNames as $validName) {
+        #        if (preg_grep("/^($validName)$/", $matchIn)) {
+        #            return TRUE || FALSE;
+        #        }
+        #    }
             #return FALSE;
-        }
+        #}
 
         function arraycount($array1, $array2) {
             if (count($array1) == count($array2)) {
@@ -45,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (validate($dpreg_fn, $d_fn) && validate($dpreg_ln, $d_ln) && arraycount($d_fn, $d_ln)) {
+        if (!empty($dvalid_fn) && !empty($dvalid_ln) && arraycount($d_fn, $d_ln)) {
 
-            echo '<pre>', print_r(validate($dpreg_fn, $d_fn)), '</pre>';
-            echo '<pre>', print_r(validate($dpreg_ln, $d_ln)), '</pre>';
+            echo '<pre>', print_r($dvalid_fn), '</pre>';
+            echo '<pre>', print_r($dvalid_ln), '</pre>';
 
-            $dstring_fn = implode("','", $d_fn);
-            $dstring_ln = implode("','", $d_ln);
+            $dstring_fn = implode("','", $dvalid_fn);
+            $dstring_ln = implode("','", $dvalid_ln);
 
             echo '<pre>' . print_r($dstring_fn) . '</pre>';
             echo '<pre>' . print_r($descape_ln) . '</pre>';
