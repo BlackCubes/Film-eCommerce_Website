@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
+            echo '<pre>', print_r($row_id), '</pre>';
             $selected_id = array();
             foreach ($row_id as $key=>$value) {
                 $selected_id[$key] = $value['id'];
