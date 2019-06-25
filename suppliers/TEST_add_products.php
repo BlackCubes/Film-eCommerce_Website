@@ -32,6 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         foreach ($dpreg_ln as $validName) $dvalid_ln = preg_grep("/^$validName$/", $d_ln);
 
+        echo '<pre>', print_r($dvalid_fn), '</pre>';
+        echo '<pre>', print_r($dvalid_ln), '</pre>';
+
         #function validate($validNames, $matchIn) {
         #    foreach ($validNames as $validName) {
         #        if (preg_grep("/^($validName)$/", $matchIn)) {
