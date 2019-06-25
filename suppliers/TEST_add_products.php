@@ -24,9 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $descape_ln = mysqli_real_escape_string($dbc, $trimmed['directors_last_name']);
 
         $d_fn = preg_split('/[\s,]+/', $descape_fn);
-        echo '<pre>', print_r($d_fn), '</pre>';
         $d_ln = preg_split('/[\s,]+/', $descape_ln);
-        echo '<pre>', print_r($d_ln), '</pre>';
 
         echo '<pre>', print_r($d_fn), '</pre>';
         echo '<pre>', print_r($d_ln), '</pre>';
@@ -65,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id)) {
+            if (empty($row_id) || arraycount($dmatch_fn, $dmatch_ln)) {
 
                 echo '<p>An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!</p>';
 
