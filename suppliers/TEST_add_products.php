@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 foreach ($row_id as $key=>$value) {
                     $dselected_id[$key] = $value['id'];
                 }
-                echo '<pre>', print_r($selected_id), '</pre>';
+                echo '<pre>', print_r($dselected_id), '</pre>';
 
             }
 
