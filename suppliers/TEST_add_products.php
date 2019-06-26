@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($d_fn, $d_ln) && arraycount($d_fn, $dmatch_fn) && arraycount($dln, $dmatch_ln)) {
+        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($d_fn, $d_ln) && arraycount($d_fn, $dmatch_fn) && arraycount($d_ln, $dmatch_ln)) {
 
             $dstring_fn = implode("','", $dmatch_fn);
             $dstring_ln = implode("','", $dmatch_ln);
