@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $directors_exist = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
 
         $dexist_fn = $dexist_ln = array();
-        forech ($directors_exist as $key => $value) {
+        foreach ($directors_exist as $key => $value) {
             $dexist_fn[$key] = $value['first_name'];
             $dexist_ln[$key] = $value['last_name'];
         }
