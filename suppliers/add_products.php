@@ -26,6 +26,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
 
+    if (isset($_POST['department'])) {
+        $department = $_POST['department'];
+    } else {
+        $departmentErr = 'Please select which department it is!';
+    }
+
+    if (isset($_POST['format'])) {
+        $format = $_POST['format'];
+    } else {
+        $formatErr = 'Please select which format it is!';
+    }
+
     if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
 
         $directorErr = '';
