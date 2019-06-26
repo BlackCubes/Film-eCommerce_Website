@@ -467,7 +467,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="productFilmCompany">
             <label for="product-film-company">Any Film and/or Entertainment Companies? </label>
-            <input type="text" id="product-film-company" name="studio_name" size="50" value="<?php if (isset($trimmed['studio_name'])) echo $trimmed['studio_name'] ?>" placeholder="Name">
+            <?php
+
+            $q_studio = "SELECT studio_name FROM studios ORDER BY studio_name";
+            $r_studio = mysqli_query($dbc, $q_studio) or trigger_error("Query: $q_studio\n<br>MySQL Error: " . mysqli_errir($dbc));
+            
+            while ($studio_row = mysqli_fetch_array($r_studio, MYSQLI_ASSOC)) {
+                echo '<input type="checkbox" id="product-film-company" name="studios[]" value="' . $studio_row['studio_name'] . '" '
+
+                $checked_studio = (isset($_POST['studios']) && $_POST['studios']==$studio_row['studio_name']) ? 'checked' : '';
+                
+                echo $checked_studio . '>' . $studio_row['studio_name'];
+            }
+
+            mysqli_free_result($r_studio);
+            ?>
             <span class="text-danger">* <!--<#?php echo $studiosErr; ?>--></span>
         </div>
         <div class="productEdition">
