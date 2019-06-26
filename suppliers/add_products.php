@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($descape_fn, $descape_ln)) {
+        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($dinput_fn, $dinput_ln)) {
 
             $dstring_fn = implode("','", $dmatch_fn);
             $dstring_ln = implode("','", $dmatch_ln);
