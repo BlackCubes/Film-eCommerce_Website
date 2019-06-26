@@ -473,7 +473,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_studio = mysqli_query($dbc, $q_studio) or trigger_error("Query: $q_studio\n<br>MySQL Error: " . mysqli_errir($dbc));
             
             while ($studio_row = mysqli_fetch_array($r_studio, MYSQLI_ASSOC)) {
-                echo '<input type="checkbox" id="product-film-company" name="studios[]" value="' . $studio_row['studio_name'] . '" '
+                echo '<input type="checkbox" id="product-film-company" name="studios[]" value="' . $studio_row['studio_name'] . '" ';
 
                 $checked_studio = (isset($_POST['studios']) && $_POST['studios']==$studio_row['studio_name']) ? 'checked' : '';
                 
