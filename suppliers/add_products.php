@@ -229,6 +229,73 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $producersErr = 'Please enter the producer(s) first and last name(s)!';
     }
 
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['writers_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['writers_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['writers_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['writers_last_name']))) {
+
+        $writersErr = '';
+
+        $q_writers = "SELECT first_name, last_name FROM writers";
+        $r_writers = mysqli_query($dbc, $q_writers) or trigger_error("Query: $q_writers\n<br>MySQL Error " . mysqli_error($dbc));
+        $writers_exist = mysqli_fetch_all($r_writers, MYSQLI_ASSOC);
+
+        $wexist_fn = $wexist_ln = array();
+        foreach ($writers_exist as $key => $value) {
+            $wexist_fn[$key] = $value['first_name'];
+            $wexist_ln[$key] = $value['last_name'];
+        }
+
+        $wescape_fn = mysqli_real_escape_string($dbc, $trimmed['writers_first_name']);
+        $wescape_ln = mysqli_real_escape_string($dbc, $trimmed['writers_last_name']);
+
+        $winput_fn = preg_split('/[\s,]+/', $wescape_fn);
+        $winput_ln = preg_split('/[\s,]+/', $wescape_ln);
+
+        $wmatch_fn = array_filter($winput_fn, function($validNames) use($wexist_fn) {
+            return preg_grep("/^$validNames$/", $wexist_fn);
+        });
+        $wmatch_ln = array_fitler($winput_ln, function($validNames) use($wescape_ln) {
+            return preg_grep("/^$validNames$/", $wexist_ln);
+        });
+
+        function arraycount($array1, $array2) {
+            if (count($array1) == count($array2)) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
+
+        if (!empty($wmatch_fn) && !empty($wmatch_ln) && arraycount($winput_fn, $winput_ln)) {
+
+            $writersErr = '';
+
+            $wstring_fn = implode("','", $wmatch_fn);
+            $wstring_ln = implode("','", $wmatch_ln);
+
+            $q = "SELECT id FROM writers WHERE first_name IN ('$wstring_fn') AND last_name IN ('$wstring_ln')";
+            $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
+
+            if (empty($row_id) || !arraycount($wmatch_fn, $wmatch_ln)) {
+
+                $writersErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
+
+            } else {
+
+                $wselected_id = array();
+                foreach($row_id as $key => $value) {
+                    $wselected_id[$key] = $value['id'];
+                }
+
+            }
+
+        } else {
+            $writersErr = 'Please enter the correct name(s) of the corresponding director(s)!';
+        }
+
+    } else {
+        $writersErr = 'Please enter the writer(s) first and last name(s)';
+    }
+
 }
 
 ?>
@@ -323,7 +390,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-writers">Writers? </label>
             <input type="text" id="product-writers" name="writers_first_name" size="50" value="<?php if (isset($trimmed['writers_first_name'])) echo $trimmed['writers_first_name']; ?>" placeholder="First Name">
             <input type="text" id="product-writers" name="writers_last_name" size="50" value="<?php if (isset($trimmed['writers_last_name'])) echo $trimmed['writers_last_name']; ?>" placeholder="Last Name">
-            <span class="text-danger">* <!--<#?php echo $writersErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['writers_first_name']) || isset($trimmed['writers_last_name']) || isset($trimmed['writers_first_name'], $trimmed['writers_last_name'])) echo $writersErr; ?></span>
         </div>
         <div class="productCinematographers">
             <label for="product-cinematographers">Cinematographers? </label>
