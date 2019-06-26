@@ -222,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
 
         } else {
-            $producersErr = 'Please enter the correct name(s) of the corresponding director(s)!';
+            $producersErr = 'Please enter the correct name(s) of the corresponding producer(s)!';
         }
 
     } else {
@@ -289,7 +289,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
 
         } else {
-            $writersErr = 'Please enter the correct name(s) of the corresponding director(s)!';
+            $writersErr = 'Please enter the correct name(s) of the corresponding writer(s)!';
         }
 
     } else {
@@ -319,7 +319,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpmatch_fn = array_filter($dpinput_fn, function($validNames) use($dpexist_fn) {
             return preg_grep("/^$validNames$/", $dpescape_fn);
         });
-        $dpmatch_ln array_filter($dpinput_ln, function($validNames) use($dpexist_ln) {
+        $dpmatch_ln = array_filter($dpinput_ln, function($validNames) use($dpexist_ln) {
             return preg_grep("/^$validNames$/", $dpexist_ln);
         });
 
