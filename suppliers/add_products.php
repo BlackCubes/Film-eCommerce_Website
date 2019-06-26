@@ -28,6 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
 
+        $directorErr = '';
+
         $q_directors = "SELECT fist_name, last_name FROM directors";
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL Error: " . mysqli_error($dbc));
         $directors_exist = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
@@ -61,6 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($dinput_fn, $dinput_ln)) {
 
+            $directorErr = '';
+
             $dstring_fn = implode("','", $dmatch_fn);
             $dstring_ln = implode("','", $dmatch_ln);
 
@@ -73,6 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $directorErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
 
             } else {
+
+                $directorErr = '';
 
                 $dselected_id = array();
                 foreach ($row_id as $key => $value) {
