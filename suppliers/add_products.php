@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($dinput_fn, $dinput_ln)) {
+        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($dinput_fn, $dinput_ln) && arraycount($dinput_fn, $dmatch_fn) && arraycount($dinput_ln, $dmatch_ln)) {
 
             $directorErr = '';
 
@@ -72,11 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id) || !arraycount($dmatch_fn, $dmatch_ln)) {
-
-                $directorErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
-
-            } else {
+            if (!empty($row_id) && arraycount($dmatch_fn, $dmatch_ln)) {
 
                 $directorErr = '';
 
@@ -84,6 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 foreach ($row_id as $key => $value) {
                     $dselected_id[$key] = $value['id'];
                 }
+
+            } else {
+
+                $directorErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
 
             }
 
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($amatch_fn) && !empty($amatch_ln) && arraycount($ainput_fn, $ainput_ln)) {
+        if (!empty($amatch_fn) && !empty($amatch_ln) && arraycount($ainput_fn, $ainput_ln) && arraycount($ainput_fn, $amatch_fn) && arraycount($ainput_ln, $amatch_ln)) {
 
             $astring_fn = implode("','", $amatch_fn);
             $astring_ln = implode("','", $amatch_ln);
@@ -139,16 +139,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id) || !arraycount($amatch_fn, $amatch_ln)) {
+            if (!empty($row_id) && arraycount($amatch_fn, $amatch_ln)) {
 
-                $actorsErr = 'An error occured. Please type in the correct name, or contact the website administrator. Sorry about that!';
-
-            } else {
+                $actorsErr = '';
 
                 $aselected_id = array();
                 foreach ($row_id as $key => $value) {
                     $aselected_id[$key] = $value['id'];
                 }
+
+            } else {
+
+                $actorsErr = 'An error occured. Please type in the correct name, or contact the website administrator. Sorry about that!';
 
             }
 
@@ -195,7 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($pmatch_fn) && !empty($pmatch_ln) && arraycount($pinput_fn, $pinput_ln)) {
+        if (!empty($pmatch_fn) && !empty($pmatch_ln) && arraycount($pinput_fn, $pinput_ln) && arraycount($pinput_fn, $pmatch_fn) && arraycount($pinput_ln, $pmatch_ln)) {
 
             $producersErr = '';
 
@@ -206,11 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id) || !arraycount($pmatch_fn, $pmatch_ln)) {
-
-                $producersErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
-
-            } else {
+            if (!empty($row_id) && arraycount($pmatch_fn, $pmatch_ln)) {
 
                 $producersErr = '';
 
@@ -218,6 +216,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 foreach ($row_id as $key => $value) {
                     $pselected_id[$key] = $value['id'];
                 }
+
+            } else {
+
+                $producersErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
 
             }
 
@@ -264,7 +266,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($wmatch_fn) && !empty($wmatch_ln) && arraycount($winput_fn, $winput_ln)) {
+        if (!empty($wmatch_fn) && !empty($wmatch_ln) && arraycount($winput_fn, $winput_ln) && arraycount($winput_fn, $wmatch_fn) && arraycount($winput_ln, $wmatch_ln)) {
 
             $writersErr = '';
 
@@ -275,16 +277,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id) || !arraycount($wmatch_fn, $wmatch_ln)) {
+            if (!empty($row_id) && arraycount($wmatch_fn, $wmatch_ln)) {
 
-                $writersErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
-
-            } else {
+                $writersErr = '';
 
                 $wselected_id = array();
                 foreach($row_id as $key => $value) {
                     $wselected_id[$key] = $value['id'];
                 }
+
+            } else {
+
+                $writersErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
 
             }
 
@@ -331,7 +335,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         }
 
-        if (!empty($dpmatch_fn) && !empty($dpmatch_ln) && arraycount($dpinput_fn, $dpinput_ln)) {
+        if (!empty($dpmatch_fn) && !empty($dpmatch_ln) && arraycount($dpinput_fn, $dpinput_ln) && arraycount($dpinput_fn, $dpmatch_fn) && arraycount($dpinput_ln, $dpmatch_ln)) {
 
             $dpsErr = '';
 
@@ -342,16 +346,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
 
-            if (empty($row_id) || !arraycount($dpmatch_fn, $dpmatch_ln)) {
+            if (!empty($row_id) && arraycount($dpmatch_fn, $dpmatch_ln)) {
 
-                $dpsErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
-
-            } else {
+                $dpsErr = '';
 
                 $dpselected_id = array();
                 foreach ($row_id as $key => $value) {
                     $dpselected_id[$key] = $value['id'];
                 }
+
+            } else {
+
+                $dpsErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
 
             }
 
