@@ -242,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-actors">Actors? </label>
             <input type="text" id="product-actors" name="actors_first_name" size="50" value="<?php if (isset($trimmed['actors_first_name'])) echo $trimmed['actors_first_name']; ?>" placeholder="First Name">
             <input type="text" id="product-actors" name="actors_last_name" size="50" value="<?php if (isset($trimmed['actors_last_name'])) echo $trimmed['actors_last_name']; ?>" placeholder="Last Name">
-            <span class="text-danger">* <?php echo $actorsErr; ?></span>
+            <span class="text-danger">* <?php if (isset($trimmed['actors_first_name']) || isset($trimmed['actors_last_name']) || (isset($trimmed['actors_first_name'], $trimmed['actors_last_name']))) echo $actorsErr; ?></span>
         </div>
         <div class="productProducers">
             <label for="product-producers">Producers? </label>
