@@ -91,6 +91,69 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $directorErr = 'Please enter first and last name(s)!';
     }
 
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['actors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['actors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['actors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['actors_last_name']))) {
+
+        $q_actors = "SELECT first_name, last_name FROM actors";
+        $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error " . mysqli_error($dbc));
+        $actors_exist = mysqli_fetch_all($r_actors, MYSQLI_ASSOC);
+
+        $aexist_fn = $aexist_ln = array();
+        foreach ($actors_exist as $key => $value) {
+            $aexist_fn[$key] = $value['first_name'];
+            $aexist_ln[$key] = $value['last_name'];
+        }
+
+        $aescape_fn = mysqli_real_escape_string($dbc, $trimmed['actors_first_name']);
+        $aescape_ln = mysqli_real_escape_string($dbc, $trimmed['actors_last_name']);
+
+        $ainput_fn = preg_split('/[\s,]+/', $aescape_fn);
+        $ainput_ln = preg_split('/[\s,]+/', $aescape_ln);
+
+        $amatch_fn = array_filter($ainput_fn, function($validNames) use($aexist_fn) {
+            return preg_grep("/^$validNames$/", $aexist_fn);
+        });
+        $amatch_ln = array_filter($ainput_ln, function($validNames) use($aexist_ln) {
+            return preg_grep("/^$validNames$/", $aexist_ln);
+        });
+
+        function arraycount($array1, $array2) {
+            if (count($array1) == count($array2)) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
+
+        if (!empty($amatch_fn) && !empty($amatch_ln) && arraycount($ainput_fn, $ainput_ln)) {
+
+            $astring_fn = implode("','", $amatch_fn);
+            $astring_ln = implode("','", $amatch_ln);
+
+            $q = "SELECT id FROM actors WHERE first_name IN ('$astring_fn') AND last_name IN ('$astring_ln')";
+            $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
+
+            if (empty($row_id) || !arraycount($amatch_fn, $amatch_ln)) {
+
+                $actorsErr = 'An error occured. Please type in the correct name, or contact the website administrator. Sorry about that!';
+
+            } else {
+
+                $aselected_id = array();
+                foreach ($row_id as $key => $value) {
+                    $aselected_id[$key] = $value['id'];
+                }
+
+            }
+
+        } else {
+            $actorsErr = 'Please enter the correct name(s) of the corresponding actor(s)!';
+        }
+
+    } else {
+        $actorsErr = 'Please enter the actor(s) first and last name(s)!';
+    }
+
 }
 
 ?>
@@ -167,13 +230,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-directors">Who is the Director(s)? </label>
             <input type="text" id="product-directors" name="directors_first_name" size="50" value="<?php if (isset($trimmed['directors_first_name'])) echo $trimmed['directors_first_name']; ?>" placeholder="First Name">
             <input type="text" id="product-directors" name="directors_last_name" size="50" value="<?php if (isset($trimmed['directors_last_name'])) echo $trimmed['directors_last_name']; ?>" placeholder="Last Name">
-            <span class="text-danger">* <!--<#?php echo $directorErr; ?>--></span>
+            <span class="text-danger">* <?php echo $directorErr; ?></span>
         </div>
         <div class="productActors">
             <label for="product-actors">Actors? </label>
             <input type="text" id="product-actors" name="actors_first_name" size="50" value="<?php if (isset($trimmed['actors_first_name'])) echo $trimmed['actors_first_name']; ?>" placeholder="First Name">
             <input type="text" id="product-actors" name="actors_last_name" size="50" value="<?php if (isset($trimmed['actors_last_name'])) echo $trimmed['actors_last_name']; ?>" placeholder="Last Name">
-            <span class="text-danger">* <!--<#?php echo $actorsErr; ?>--></span>
+            <span class="text-danger">* <?php echo $actorsErr; ?></span>
         </div>
         <div class="productProducers">
             <label for="product-producers">Producers? </label>
