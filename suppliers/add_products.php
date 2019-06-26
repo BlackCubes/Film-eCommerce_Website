@@ -296,6 +296,73 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $writersErr = 'Please enter the writer(s) first and last name(s)';
     }
 
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['dp_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['dp_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['dp_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['dp_last_name']))) {
+
+        $dpsErr = '';
+
+        $q_dps = "SELECT first_name, last_name FROM dps";
+        $r_dps = mysqli_query($dbc, $q_dps) or trigger_error("Query: $q_dps\n<br>MySQL Error " . mysqli_error($dbc));
+        $dps_exist = mysqli_fetch_all($r_dps, MYSQLI_ASSOC);
+
+        $dpexist_fn = $dpexist_ln = array();
+        foreach ($dps_exist as $key => $value) {
+            $dpexist_fn[$key] = $value['first_name'];
+            $dpexist_ln[$key] = $value['last_name'];
+        }
+
+        $dpescape_fn = mysqli_real_escape_string($dbc, $trimmed['dp_first_name']);
+        $dpescape_ln = mysqli_real_escape_string($dbc, $trimmed['dp_last_name']);
+
+        $dpinput_fn = preg_split('/[\s,]+/', $dpescape_fn);
+        $dpinput_ln = preg_split('/[\s,]+/', $dpescape_ln);
+
+        $dpmatch_fn = array_filter($dpinput_fn, function($validNames) use($dpexist_fn) {
+            return preg_grep("/^$validNames$/", $dpescape_fn);
+        });
+        $dpmatch_ln array_filter($dpinput_ln, function($validNames) use($dpexist_ln) {
+            return preg_grep("/^$validNames$/", $dpexist_ln);
+        });
+
+        function arraycount($array1, $array2) {
+            if (count($array1) == count($array2)) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
+
+        if (!empty($dpmatch_fn) && !empty($dpmatch_ln) && arraycount($dpinput_fn, $dpinput_ln)) {
+
+            $dpsErr = '';
+
+            $dpstring_fn = implode("','", $dpmatch_fn);
+            $dpstring_ln = implode("','", $dpmatch_ln);
+
+            $q = "SELECT id FROM dps WHERE first_name IN ('$dpstring_fn') AND last_name IN ('$dpstring_ln')";
+            $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
+
+            if (empty($row_id) || !arraycount($dpmatch_fn, $dpmatch_ln)) {
+
+                $dpsErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
+
+            } else {
+
+                $dpselected_id = array();
+                foreach ($row_id as $key => $value) {
+                    $dpselected_id[$key] = $value['id'];
+                }
+
+            }
+
+        } else {
+            $dpsErr = 'Please enter the correct name(s) of the corresponding cinematographer(s)!';
+        }
+
+    } else {
+        $dpsErr = 'Please enter the cinematographer(s) first and last name(s)';
+    }
+
 }
 
 ?>
@@ -396,7 +463,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-cinematographers">Cinematographers? </label>
             <input type="text" id="product-cinematographers" name="dp_first_name" size="50" value="<?php if (isset($trimmed['dp_first_name'])) echo $trimmed['dp_first_name']; ?>" placeholder="First Name">
             <input type="text" id="product-cinematographers" name="dp_last_name" size="50" value="<?php if (isset($trimmed['dp_last_name'])) echo $trimmed['dp_last_name']; ?>" placeholder="Last Name">
-            <span class="text-danger">* <!--<#?php echo $dpsErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['dp_first_name']) || isset($trimmed['dp_last_name']) || isset($trimmed['dp_first_name'], $trimmed['dp_last_name'])) echo $dpsErr; ?></span>
         </div>
         <div class="productFilmCompany">
             <label for="product-film-company">Any Film and/or Entertainment Companies? </label>
