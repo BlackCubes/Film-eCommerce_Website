@@ -160,6 +160,75 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $actorsErr = 'Please enter the actor(s) first and last name(s)!';
     }
 
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['producers_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['producers_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['producers_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['producers_last_name']))) {
+
+        $producersErr = '';
+
+        $q_producers = "SELECT first_name, last_name FROM producers";
+        $r_producers = mysqli_query($dbc, $q_producers) or trigger_error("Query: $q_producers\n<br>MySQL Error " . mysqli_error($dbc));
+        $producers_exist = mysqli_fetch_all($r_producers, MYSQLI_ASSOC);
+
+        $pexist_fn = $pexist_ln = array();
+        foreach ($producers_exist as $key => $value) {
+            $pexist_fn[$key] = $value['first_name'];
+            $pexist_ln[$key] = $value['last_name'];
+        }
+
+        $pescape_fn = mysqli_real_escape_string($dbc, $trimmed['producers_first_name']);
+        $pescape_ln = mysqli_real_escape_string($dbc, $trimmed['producers_last_name']);
+
+        $pinput_fn = preg_split('/[\s,]+/', $pescape_fn);
+        $pinput_ln = preg_split('/[\s,]+/', $pescape_ln);
+
+        $pmatch_fn = array_filter($pinput_fn, function($validNames) use($pexist_fn) {
+            return preg_grep("/^$validNames$/", $pexist_fn);
+        });
+        $pmatch_ln = array_filter($pinput_ln, function($validNames) use($pexist_ln) {
+            return preg_grep("/^$validNames$/", $pexist_ln);
+        });
+
+        function arraycount($array1, $array2) {
+            if (count($array1) == count($array2)) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
+
+        if (!empty($pmatch_fn) && !empty($pmatch_ln) && arraycount($pinput_fn, $pinput_ln)) {
+
+            $producersErr = '';
+
+            $pstring_fn = implode("','", $pmatch_fn);
+            $pstring_ln = implode("','", $pmatch_ln);
+
+            $q = "SELECT id FROM producers WHERE first_name IN ('$pstring_fn') AND last_name IN ('$pstring_ln')";
+            $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
+
+            if (empty($row_id) || !arraycount($pmatch_fn, $pmatch_ln)) {
+
+                $producersErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
+
+            } else {
+
+                $producersErr = '';
+
+                $pselected_id = array();
+                foreach ($row_id as $key => $value) {
+                    $pselected_id[$key] = $value['id'];
+                }
+
+            }
+
+        } else {
+            $producersErr = 'Please enter the correct name(s) of the corresponding director(s)!';
+        }
+
+    } else {
+        $producersErr = 'Please enter the producer(s) first and last name(s)!';
+    }
+
 }
 
 ?>
@@ -248,7 +317,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-producers">Producers? </label>
             <input type="text" id="product-producers" name="producers_first_name" size="50" value="<?php if (isset($trimmed['producers_first_name'])) echo $trimmed['producers_first_name']; ?>" placeholder="First Name">
             <input type="text" id="product-producers" name="producers_last_name" size="50" value="<?php if (isset($trimmed['producers_last_name'])) echo $trimmed['producers_last_name']; ?>" placeholder="Last Name">
-            <span class="text-danger">* <!--<#?php echo $producersErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['producers_first_name']) || isset($trimmed['producers_last_name']) || isset($trimmed['producers_first_name'], $trimmed['producers_last_name'])) echo $producersErr; ?></span>
         </div>
         <div class="productWriters">
             <label for="product-writers">Writers? </label>
