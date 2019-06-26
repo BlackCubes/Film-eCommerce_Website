@@ -22,6 +22,77 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
 
 require(MYSQL);
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $trimmed = array_map('trim', $_POST);
+
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
+
+        $q_directors = "SELECT fist_name, last_name FROM directors";
+        $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL Error: " . mysqli_error($dbc));
+        $directors_exist = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
+
+        $dexist_fn = $dexist_ln = array();
+        forech ($directors_exist as $key => $value) {
+            $dexist_fn[$key] = $value['first_name'];
+            $dexist_ln[$key] = $value['last_name'];
+        }
+
+        $descape_fn = mysqli_real_escape_string($dbc, $trimmed['directors_first_name']);
+        $descape_ln = mysqli_real_escape_string($dbc, $trimmed['directors_last_name']);
+
+        $dinput_fn = preg_split('/[\s,]+/', $descape_fn);
+        $dinput_ln = preg_split('/[\s,]+/', $descape_ln);
+
+        $dmatch_fn = array_filter($dinput_fn, function($validNames) use($dexist_fn) {
+            return preg_grep("/^$validNames$/", $dexist_fn);
+        });
+        $dmatch_ln = array_filter($dinput_ln, function($validNames) use($dexist_ln) {
+            return preg_grep("/^$validNames$/", $dexist_ln);
+        });
+
+        function arraycount($array1, $array2) {
+            if (count($array1) == count($array2)) {
+                return TRUE;
+            } else {
+                return FALSE;
+            }
+        }
+
+        if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($descape_fn, $descape_ln)) {
+
+            $dstring_fn = implode("','", $dmatch_fn);
+            $dstring_ln = implode("','", $dmatch_ln);
+
+            $q = "SELECT id FROM directors WHERE first_name IN ('$dstring_fn') AND last_name IN ('$dstring_ln')";
+            $r_id = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $row_id = mysqli_fetch_all($r_id, MYSQLI_ASSOC);
+
+            if (empty($row_id) || !arraycount($dmatch_fn, $dmatch_ln)) {
+
+                $directorErr = 'An error occured. Please type in the correct names, or contact the website administrator. Sorry about that!';
+
+            } else {
+
+                $dselected_id = array();
+                foreach ($row_id as $key => $value) {
+                    $dselected_id[$key] = $value['id'];
+                }
+
+            }
+
+        } else {
+
+            $directorErr = 'Please enter the correct name(s) of the corresponding director(s)!';
+
+        }
+
+    } else {
+        $directorErr = 'Please enter first and last name(s)!';
+    }
+
+}
+
 ?>
 <h1>Add New Products</h1>
 <p><span class="text-danger">* required field</span></p>
