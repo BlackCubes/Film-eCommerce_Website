@@ -34,12 +34,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (isset($_POST['department'])) {
+        $departmentErr = '';
         $department = $_POST['department'];
     } else {
         $departmentErr = 'Please select which department it is!';
     }
 
     if (isset($_POST['format'])) {
+        $formatErr = '';
         $format = $_POST['format'];
     } else {
         $formatErr = 'Please select which format it is!';
@@ -421,14 +423,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="product-department">Department: </label>
             <input type="radio" name="department" id="product-department" value="Movies" <?php if (isset($_POST['department']) && $_POST['department']=='Movies') echo 'checked'; ?>>Movies
             <input type="radio" name="department" id="product-department" value="TV" <?php if (isset($_POST['department']) && $_POST['department']=='TV') echo 'checked'; ?>>TV
-            <span class="text-danger">* <!--<#?php echo $departmentErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($_POST['department'])) echo $departmentErr; ?></span>
         </div>
         <div class="productFormat">
             <label for="product-format">Format: </label>
             <input type="radio" name="format" id="product-format" value="Blu-ray" <?php if (isset($_POST['format']) && $_POST['format']=='Blu-ray') echo 'checked'; ?>>Blu-ray
             <input type="radio" name="format" id="product-format" value="4K UHD" <?php if (isset($_POST['format']) && $_POST['format']=='4K UHD') echo 'checked'; ?>>4K UHD
             <input type="radio" name="format" id="product-format" value="DVD" <?php if (isset($_POST['format']) && $_POST['format']=='DVD') echo 'checked'; ?>>DVD
-            <span class="text-danger">* <!--<#?php echo $formatErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($_POST['format'])) echo $formatErr; ?></span>
         </div>
         <div class="productTheatreDate">
             <label for="product-theatre-date">Theatrical Release Date: </label>
