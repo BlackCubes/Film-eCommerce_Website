@@ -47,6 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $formatErr = 'Please select which format it is!';
     }
 
+    if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $trimmed['theatre_date'])) {
+        $theatre_dateErr = '';
+        $theatre_date = $trimmed['theatre_date'];
+    } else {
+        $theatre_dateErr = 'Please enter when the product had a theatrical release date!';
+    }
+
     if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
 
         $directorErr = '';
@@ -434,8 +441,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="productTheatreDate">
             <label for="product-theatre-date">Theatrical Release Date: </label>
-            <input type="date" id="product-theatre-date" name="theatre_date" min="1878-06-15" max="<?php echo date('Y-m-d'); ?>" value="<?php if (isset($_POST['theatre_date'])) echo $_POST['theatre_date']; ?>">
-            <span class="text-danger">* <!--<#?php echo $theatre_dateErr; ?>--></span>
+            <input type="date" id="product-theatre-date" name="theatre_date" min="1878-06-15" max="<?php echo date('Y-m-d'); ?>" value="<?php if (isset($trimmed['theatre_date'])) echo $trimmed['theatre_date']; ?>">
+            <span class="text-danger">* <?php if (isset($trimmed['theatre_date'])) echo $theatre_dateErr; ?></span>
         </div>
         <div class="productRating">
             <label for="product-rating">Rating: </label>
