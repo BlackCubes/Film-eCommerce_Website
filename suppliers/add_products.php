@@ -26,6 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
 
+    if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $trimmed['product_name'])) {
+        $productnameError = '';
+        $product_name = mysqli_real_escape_string($dbc, $trimmed['product_name']);
+    } else {
+        $productnameError = 'Please enter the name of the product';
+    }
+
     if (isset($_POST['department'])) {
         $department = $_POST['department'];
     } else {
@@ -407,8 +414,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <fieldset>
         <div class="productName">
             <label for="product-name">Product Name: </label>
-            <input type="text" name="product_name" id="product-name" value="<?php if (isset($trimmed['product_name'])) echo $trimmed['product_name']; ?>">
-            <span class="text-danger">* <!--<#?php echo $nameError; ?>--></span>
+            <input type="text" name="product_name" id="product-name" size="50" maxlength="100" value="<?php if (isset($trimmed['product_name'])) echo $trimmed['product_name']; ?>">
+            <span class="text-danger">* <?php if (isset($trimmed['product-name'])) echo $productnameError; ?></span>
         </div>
         <div class="productDepartment">
             <label for="product-department">Department: </label>
