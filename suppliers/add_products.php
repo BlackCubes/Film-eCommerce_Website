@@ -449,6 +449,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $media_dateErr = 'Please enter when the product had a home media release date!';
     }
 
+    if (!empty($trimmed['more_description']) && strlen($trimmed['more_description'])<256) {
+        $more_descripErr = '';
+        $more_descrip_strip = stripslashes($trimmed['more_description']);
+        $more_descrip = htmlspecialchars($more_descrip_strip);
+    } elseif (empty($trimmed['more_description'])) {
+        $more_descripErr = '';
+        $more_descrip = '';
+    } else {
+        $more_descripErr = 'Please enter the extra product information!';
+    }
+
 }
 
 ?>
@@ -597,7 +608,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productExtraDescription">
             <label for="product-extra-description">Any extra descriptions?</label>
             <textarea name="more_description" id="product-extra-description" cols="51" rows="5" maxlength="255" placeholder="Extra stuff..."><?php if (isset($trimmed['more_description'])) echo $trimmed['more_description']; ?></textarea>
-            <span>(Optional, but 255 characters max)</span>
+            <span>(Optional, but 255 characters max) <?php if (isset($trimmed['more_description'])) echo $more_descripErr; ?></span>
         </div>
         <h3>Product Specs</h3>
         <div class="productFormatType">
