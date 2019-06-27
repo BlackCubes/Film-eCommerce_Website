@@ -461,7 +461,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $r_rating = mysqli_query($dbc, $q_rating) or trigger_error("Query: $q_rating\n<br>MySQL Error: " . mysqli_error($dbc));
 
                 while ($rating_row = mysqli_fetch_array($r_rating, MYSQLI_ASSOC)) {
-                    echo '<option value="' . $rating_row['rated'] . '" '
+                    echo '<option value="' . $rating_row['rated'] . '" ';
 
                     $selected = (isset($_POST['rating']) && $_POST['rating']==$rating_row['rated']) ? 'selected' : '';
 
