@@ -54,6 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $theatre_dateErr = 'Please enter when the product had a theatrical release date!';
     }
 
+    if (isset($_POST['rating'])) {
+        $ratingErr = '';
+        $rating = $_POST['rating'];
+    } else {
+        $ratingErr = 'Please select one of the ratings!';
+    }
+
     if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
 
         $directorErr = '';
@@ -454,13 +461,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $r_rating = mysqli_query($dbc, $q_rating) or trigger_error("Query: $q_rating\n<br>MySQL Error: " . mysqli_error($dbc));
 
                 while ($rating_row = mysqli_fetch_array($r_rating, MYSQLI_ASSOC)) {
-                    echo '<option value="' . $rating_row['rated'] . '">' . $rating_row['rated'] . '</option>';
+                    echo '<option value="' . $rating_row['rated'] . '" '
+
+                    $selected = (isset($_POST['rating']) && $_POST['rating']==$rating_row['rated']) ? 'selected' : '';
+
+                    echo $selected . '>' . $rating_row['rated'] . '</option>';
                 }
 
                 mysqli_free_result($r_rating);
                 ?>
             </select>
-            <span class="text-danger">* <!--<#?php echo $ratingErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($_POST['rating'])) echo $ratingErr; ?></span>
         </div>
         <div class="productGenre">
             <label for="product-genre">Genre: </label>
