@@ -439,6 +439,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $runtimeErr = 'Please enter how long the product is!';
     }
 
+    if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $trimmed['media_date'])) {
+        $media_dateErr = '';
+        $media_date = $trimmed['media_date'];
+    } elseif (empty($trimmed['media_date'])) {
+        $media_dateErr = '';
+        $media_date = '';
+    } else {
+        $media_dateErr = 'Please enter when the product had a home media release date!';
+    }
+
 }
 
 ?>
@@ -581,8 +591,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="productMediaDate">
             <label for="product-media-date">When was is it, or will be, released on home media? </label>
-            <input type="date" id="product-media-date" name="media_date" min="1975-05-10" value="<?php if (isset($_POST['media_date'])) echo $_POST['media_date']; ?>">
-            <span>(Optional)</span>
+            <input type="date" id="product-media-date" name="media_date" min="1975-05-10" value="<?php if (isset($trimmed['media_date'])) echo $trimmed['media_date']; ?>">
+            <span>(Optional) <?php if (isset($trimmed['media_date'])) echo $media_dateErr; ?></span>
         </div>
         <div class="productExtraDescription">
             <label for="product-extra-description">Any extra descriptions?</label>
