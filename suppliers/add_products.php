@@ -61,6 +61,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $ratingErr = 'Please select one of the ratings!';
     }
 
+    if (!empty($trimmed['description'])) {
+        $descripErr = '';
+        $descrip_strip = stripslashes($trimmed['description']);
+        $description = htmlspecialchars($descrip_strip);
+    } else {
+        $descripErr = 'Please enter a description for the product!';
+    }
+
     if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
 
         $directorErr = '';
@@ -494,7 +502,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productDescription">
             <label for="product-description">Description: </label>
             <textarea name="description" id="product-description" cols="110" rows="10" maxlength="1100" placeholder="Comment description"><?php if (isset($trimmed['description'])) echo $trimmed['description']; ?></textarea>
-            <span class="text-danger">* <!--<#?php echo $descripErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['description'])) echo $descripErr; ?></span>
         </div>
         <h3>Product Details</h3>
         <div class="productDirectors">
