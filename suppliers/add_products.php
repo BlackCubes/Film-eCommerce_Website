@@ -381,11 +381,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpsErr = 'Please enter the cinematographer(s) first and last name(s)';
     }
 
+    if (preg_match('/^[0-9]{1,999}$/', $trimmed['disc']) && is_numeric($trimmed['disc'])) {
+        $discErr = '';
+        $disc = $trimmed['disc'];
+    } elseif (empty($trimmed['disc'])) {
+        $discErr = '';
+        $disc = '';
+    } else {
+        $discErr = 'Please enter how many discs the product contains!';
+    }
+
     if (preg_match('/^[0-9]{1,51420}$/', $trimmed['runtime']) && is_numeric($trimmed['runtime'])) {
         $runtimeErr = '';
         $runtime = $trimmed['runtime'];
     } else {
-        $runtimeErr = 'Please enter how long the movie is!';
+        $runtimeErr = 'Please enter how long the product is!';
     }
 
 }
@@ -517,7 +527,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productDiscs">
             <label for="product-discs">How many discs? </label>
             <input type="number" id="product-discs" name="disc" value="<?php if (isset($trimmed['disc'])) echo $trimmed['disc']; ?>" max="999">
-            <span>(Optional, but whole numbers only)</span>
+            <span>(Optional, but whole numbers only) <?php if (isset($trimmed['disc']) || empty($trimmed['disc'])) echo $discErr; ?></span>
         </div>
         <div class="productRuntime">
             <label for="product-runtime">Runtime (in minutes): </label>
