@@ -412,6 +412,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpsErr = 'Please enter the cinematographer(s) first and last name(s)';
     }
 
+    if (preg_match('/^[A-Z0-9 \'.:+-]{3-30}$/i', $trimmed['edition'])) {
+        $editionErr = '';
+        $edition = mysqli_real_escape_string($dbc, $trimmed['edition']);
+    } elseif (empty($trimmed['edition'])) {
+        $editionErr = '';
+        $edition = '';
+    } else {
+        $editionErr = 'Please enter what edition the product is!';
+    }
+
     if (preg_match('/^[0-9]{1,999}$/', $trimmed['disc']) && is_numeric($trimmed['disc'])) {
         $discErr = '';
         $disc = $trimmed['disc'];
@@ -557,7 +567,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productEdition">
             <label for="product-edition">Edition: </label>
             <input type="text" id="product-edition" name="edition" value="<?php if (isset($trimmed['edition'])) echo $trimmed['edition']; ?>" placeholder="Ex: Blu-ray + DVD + Digital">
-            <span>(Optional)</span>
+            <span>(Optional) <?php if (isset($trimmed['edition'])) echo $editionErr; ?></span>
         </div>
         <div class="productDiscs">
             <label for="product-discs">How many discs? </label>
