@@ -381,6 +381,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpsErr = 'Please enter the cinematographer(s) first and last name(s)';
     }
 
+    if (preg_match('/^[0-9]{1,51420}$/', $trimmed['runtime']) && is_numeric($trimmed['runtime'])) {
+        $runtimeErr = '';
+        $runtime = $trimmed['runtime'];
+    } else {
+        $runtimeErr = 'Please enter how long the movie is!';
+    }
+
 }
 
 ?>
@@ -513,9 +520,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <span>(Optional, but whole numbers only)</span>
         </div>
         <div class="productRuntime">
-            <label for="product-runtime">Runtime: </label>
+            <label for="product-runtime">Runtime (in minutes): </label>
             <input type="number" id="product-runtime" name="runtime" value="<?php if (isset($trimmed['runtime'])) echo $trimmed['runtime']; ?>" max="99999">
-            <span class="text-danger">* <!--<#?php echo $runtimeErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['runtime'])) echo $runtimeErr; ?></span>
         </div>
         <div class="productMediaDate">
             <label for="product-media-date">When was is it, or will be, released on home media? </label>
