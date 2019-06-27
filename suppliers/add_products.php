@@ -562,7 +562,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productDiscs">
             <label for="product-discs">How many discs? </label>
             <input type="number" id="product-discs" name="disc" value="<?php if (isset($trimmed['disc'])) echo $trimmed['disc']; ?>" max="999">
-            <span>(Optional, but whole numbers only) <?php if (isset($trimmed['disc']) || empty($trimmed['disc'])) echo $discErr; ?></span>
+            <span>(Optional, but whole numbers only) <?php if (isset($trimmed['disc'])) echo $discErr; ?></span>
         </div>
         <div class="productRuntime">
             <label for="product-runtime">Runtime (in minutes): </label>
