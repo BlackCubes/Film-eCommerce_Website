@@ -575,6 +575,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $skuErr = 'Please enter your product inventory management!';
     }
 
+    if ($product_name && $department && $format && $theatre_date && $rating && $genres_id && $description && $directors_id && $actors_id && $producers_id && $writers_id && $dps_id && $studios_id && $runtime && $format_type && $video_desc && $audio_desc && $sub_desc && $price && $stock && $sku) {
+
+    } else {
+        echo '<p class="text-danger">Please try again.</p>';
+    }
+
 }
 
 ?>
