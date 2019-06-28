@@ -471,7 +471,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $video_descErr = '';
         $video_desc = mysqli_real_escape_string($dbc, $trimmed['video_desc']);
     } else {
-        $video_descErr = 'Please enter the video description';
+        $video_descErr = 'Please enter the video description!';
+    }
+
+    if (!empty($trimmed['audio_desc']) && strlen($trimmed['audio_desc'])<256) {
+        $audio_descErr = '';
+        $audio_desc_strip = stripslashes($trimmed['audio_desc']);
+        $audio_desc = htmlspecialchars($audio_desc_strip);
+    } else {
+        $audio_descErr = 'Please enter the audio description!';
     }
 
 }
@@ -638,7 +646,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productAudioDescription">
             <label for="product-audio-description">Audio Description: </label>
             <textarea id="product-audio-description" name="audio_desc" cols="30" rows="10" maxlength="255" placeholder="Dolby Atmos-TrueHD: English, English Descriptive Audio 5.1, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1"><?php if (isset($trimmed['audio_desc'])) echo $trimmed['audio_desc']; ?></textarea>
-            <span class="text-danger">* <!--<#?php echo $audio_descErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['audio_desc'])) echo $audio_descErr; ?></span>
         </div>
         <div class="productSubtitlesDescription">
             <label for="product-subtitles-description">Subtitles Description: </label>
