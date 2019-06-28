@@ -586,9 +586,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $q = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
 
-            $q .= "INSERT INTO products (department_id, format_id, name, release_date, description, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$sku', '$price', '$stock', NOW())";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-            $r = mysqli_multi_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            if (mysqli_affected_rows($dbs) == 1) {
+
+                $q = "INSERT INTO products (department_id, format_id, name, release_date, description, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$sku', '$price', '$stock', NOW())";
+
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+
+            } else {
+                echo '<p class="text-danger">One or more of the values of ratings, edition, discs, home media release date, and/or extra descriptions could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
+            }
 
         } else {
             echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
