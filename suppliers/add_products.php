@@ -497,6 +497,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $priceErr = 'Please enter how much you wish to sell this product';
     }
 
+    if (preg_match('/^[0-9]{1,8}$/', $trimmed['stock']) && is_numeric($trimmed['stock'])) {
+        $stockErr = '';
+        $stock = $trimmed['stock'];
+    } else {
+        $stockErr = 'Please enter how many you have!';
+    }
+
 }
 
 ?>
@@ -678,7 +685,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productStock">
             <label for="product-stock">How many do you have? </label>
             <input type="number" id="product-stock" name="stock" value="<?php if (isset($trimmed['stock'])) echo $trimmed['stock']; ?>" min="0" max="99999999">
-            <span class="text-danger">* <!--<#?php echo $stockErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['stock'])) echo $stockErr; ?></span>
         </div>
         <div class="productSKU">
             <label for="product-sku">Stock Keeping Unit (inventory management): </label>
