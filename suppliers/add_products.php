@@ -623,6 +623,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     $r = mysqli_query("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
                                 }
 
+                            } else {
+                                echo '<p class="text-danger">An error occured. Could not save the actor(s). Please contact the website adminstrator. We apologize for any inconvenience.</p>';
                             }
 
                         } else {
