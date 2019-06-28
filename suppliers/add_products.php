@@ -460,6 +460,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $more_descripErr = 'Please enter the extra product information!';
     }
 
+    if (preg_match('/^[A-Z0-9 \'.:-]{1,30}$/', $trimmed['format_type'])) {
+        $format_typeErr = '';
+        $format_type = mysqli_real_escape_string($dbc, $trimmed['format_type']);
+    } else {
+        $format_typeErr = 'Please enter a title for the format type!';
+    }
+
 }
 
 ?>
@@ -614,7 +621,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productFormatType">
             <label for="product-format-type">Format Type Title: </label>
             <input type="text" id="product-format-type" name="format_type" size="30" maxlength="30" value="<?php if (isset($trimmed['format_type'])) echo $trimmed['format_type']; ?>" placeholder="4K UHD MAIN FEATURE">
-            <span class="text-danger">* <!--<#?php echo $format_typeErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['format_type'])) echo $format_typeErr; ?></span>
         </div>
         <div class="productVideoDescription">
             <label for="product-video-description">Video Description: </label>
