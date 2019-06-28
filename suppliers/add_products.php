@@ -652,7 +652,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 }
 
                                                 if (mysqli_affected_rows($dbc) == 1) {
-                                                    echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
+                                                    echo '<h3>Thank you for entering your product!</h3>';
                                                     include('includes/footer.html');
                                                     exit();
                                                 } else {
