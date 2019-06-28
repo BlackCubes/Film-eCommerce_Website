@@ -644,6 +644,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
                                             }
 
+                                            if (mysqli_affected_rows($dbc) == 1) {
+
+                                                for ($i = 0; $i < count($studios_id); $i++) {
+                                                    $q = "INSERT INTO products_studios (product_id, studio_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $studios_id[$i] . ")";
+                                                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                                                }
+
+                                            } else {
+                                                echo '<p class="text-danger">An error occured. Could not save the studio(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
+                                            }
+
                                         } else {
                                             echo '<p class="text-danger">An error occured. Could not save the cinematographer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
                                         }
