@@ -590,7 +590,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (mysqli_affected_rows($dbs) == 1) {
 
-                $isd = substr(uniqid(rand(), true), 12, 10)
+                $isd = substr(uniqid(rand(), true), 12, 10);
 
                 $q = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
 
