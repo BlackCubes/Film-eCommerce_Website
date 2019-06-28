@@ -637,6 +637,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
                                         }
 
+                                        if (mysqli_affected_rows($dbc) == 1) {
+
+                                            for ($i = 0; $i < count($dps_id); $i++) {
+                                                $q = "INSERT INTO products_dps (product_id, dp_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $dps_id[$i] . ")";
+                                                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                                            }
+
+                                        } else {
+                                            echo '<p class="text-danger">An error occured. Could not save the cinematographer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
+                                        }
+
                                     } else {
                                         echo '<p class="text-danger">An error occured. Could not save the writer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
                                     }
