@@ -702,12 +702,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productEdition">
             <label for="product-edition">Edition: </label>
             <input type="text" id="product-edition" name="edition" value="<?php if (isset($trimmed['edition'])) echo $trimmed['edition']; ?>" placeholder="Ex: Blu-ray + DVD + Digital">
-            <span>(Optional) <?php if (isset($trimmed['edition'])) echo $editionErr; ?></span>
+            <span>(Optional) <span class="text-danger"><?php if (isset($trimmed['edition'])) echo $editionErr; ?></span></span>
         </div>
         <div class="productDiscs">
             <label for="product-discs">How many discs? </label>
             <input type="number" id="product-discs" name="disc" value="<?php if (isset($trimmed['disc'])) echo $trimmed['disc']; ?>" max="999">
-            <span>(Optional, but whole numbers only) <?php if (isset($trimmed['disc'])) echo $discErr; ?></span>
+            <span>(Optional, but whole numbers only) <span class="text-danger"><?php if (isset($trimmed['disc'])) echo $discErr; ?></span></span>
         </div>
         <div class="productRuntime">
             <label for="product-runtime">Runtime (in minutes): </label>
@@ -717,12 +717,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productMediaDate">
             <label for="product-media-date">When was is it, or will be, released on home media? </label>
             <input type="date" id="product-media-date" name="media_date" min="1975-05-10" value="<?php if (isset($trimmed['media_date'])) echo $trimmed['media_date']; ?>">
-            <span>(Optional) <?php if (isset($trimmed['media_date'])) echo $media_dateErr; ?></span>
+            <span>(Optional) <span class="text-danger"><?php if (isset($trimmed['media_date'])) echo $media_dateErr; ?></span></span>
         </div>
         <div class="productExtraDescription">
             <label for="product-extra-description">Any extra descriptions?</label>
             <textarea name="more_description" id="product-extra-description" cols="51" rows="5" maxlength="255" placeholder="Extra stuff..."><?php if (isset($trimmed['more_description'])) echo $trimmed['more_description']; ?></textarea>
-            <span>(Optional, but 255 characters max) <?php if (isset($trimmed['more_description'])) echo $more_descripErr; ?></span>
+            <span>(Optional, but 255 characters max) <span class="text-danger"><?php if (isset($trimmed['more_description'])) echo $more_descripErr; ?></span></span>
         </div>
         <h3>Product Specs</h3>
         <div class="productFormatType">
