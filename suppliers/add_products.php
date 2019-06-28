@@ -577,6 +577,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($product_name && $department && $format && $theatre_date && $rating && $genres_id && $description && $directors_id && $actors_id && $producers_id && $writers_id && $dps_id && $studios_id && $runtime && $format_type && $video_desc && $audio_desc && $sub_desc && $price && $stock && $sku) {
 
+        $q = "INSERT INTO specs (spec_format_type, video_desc, audio_desc, subtitles_desc) VALUES ('$format_type', '$video_desc', '$audio_desc', '$sub_desc')";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+
     } else {
         echo '<p class="text-danger">Please try again.</p>';
     }
