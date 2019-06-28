@@ -482,6 +482,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $audio_descErr = 'Please enter the audio description!';
     }
 
+    if (!empty($trimmed['subtitles_desc']) && strlen($trimmed['subtitles_desc'])<101) {
+        $sub_descErr = '';
+        $sub_desc_strip = stripslashes($trimmed['subtitles_desc']);
+        $sub_desc = htmlspecialchars($sub_desc_strip);
+    } else {
+        $sub_descErr = 'Please enter the subtitles description!';
+    }
+
 }
 
 ?>
@@ -651,7 +659,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productSubtitlesDescription">
             <label for="product-subtitles-description">Subtitles Description: </label>
             <textarea id="product-subtitles-description" name="subtitles_desc" cols="20" rows="5" maxlength="100" placeholder="English SDH, Français & Español"><?php if (isset($trimmed['subtitles_desc'])) echo $trimmed['subtitles_desc']; ?></textarea>
-            <span class="text-danger">* <!--<#?php echo $sub_descErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['subtitles_desc'])) echo $sub_descErr; ?></span>
         </div>
         <p>Would you like to add more specifications for different formats?</p>
         <h3>Price, Images, Units, SKU</h3>
