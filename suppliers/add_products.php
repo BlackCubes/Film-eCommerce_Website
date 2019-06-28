@@ -610,7 +610,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         }
 
                         if (mysqli_affected_rows($dbc) == 1) {
-                            
+
+                            for ($i = 0; $i < count($directors_id); $i++) {
+                                $q = "INSERT INTO products_directors (product_id, director_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $directors_id[$i] . ")";
+                                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+                            }
+
+                        } else {
+                            echo '<p class="text-danger">An error occured. Could not save the genres. Please contact the website administrator. We apologize for any inconvenience.</p>';
                         }
 
                     } else {
