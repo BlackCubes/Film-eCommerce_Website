@@ -588,7 +588,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $q .= "INSERT INTO products (department_id, format_id, name, release_date, description, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$sku', '$price', '$stock', NOW())";
 
-            
+            $r = mysqli_multi_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         } else {
             echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
