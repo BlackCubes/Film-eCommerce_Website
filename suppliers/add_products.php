@@ -580,6 +580,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q = "INSERT INTO specs (spec_format_type, video_desc, audio_desc, subtitles_desc) VALUES ('$format_type', '$video_desc', '$audio_desc', '$sub_desc')";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
+        if (mysqli_affected_rows($dbc) == 1) {
+
+            echo '<p>Success!</p>';
+
+        } else {
+            echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
+        }
+
     } else {
         echo '<p class="text-danger">Please try again.</p>';
     }
