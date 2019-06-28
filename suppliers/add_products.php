@@ -26,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
 
+    $product_name = $department = $format = $theatre_date = $rating = $genres_id = $description = $directors_id = $actors_id = $producers_id = $writers_id = $dps_id = $studios_id = $runtime = $format_type = $video_desc = $audio_desc = $sub_desc = $price = $stock = $sku = FALSE;
+
     if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $trimmed['product_name'])) {
         $productnameError = '';
         $product_name = mysqli_real_escape_string($dbc, $trimmed['product_name']);
