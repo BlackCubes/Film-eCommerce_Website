@@ -504,6 +504,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stockErr = 'Please enter how many you have!';
     }
 
+    if (preg_match('/^[A-Z0-9]{15}$/', $trimmed['sku'])) {
+        $skuErr = '';
+        $sku = mysqli_real_escape_string($dbc, $trimmed['sku']);
+    } else {
+        $skuErr = 'Please enter your product inventory management!';
+    }
+
 }
 
 ?>
@@ -690,7 +697,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productSKU">
             <label for="product-sku">Stock Keeping Unit (inventory management): </label>
             <input type="text" id="product-sku" name="sku" size="15" maxlength="15" value="<?php if (isset($trimmed['sku'])) echo $trimmed['sku']; ?>">
-            <span class="text-danger">* <!--<#?php echo $skuErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['sku'])) echo $skuErr; ?></span>
         </div>
     </fieldset>
     <div class="productSubmit"><input type="submit" name="submit" value="Submit"></div>
