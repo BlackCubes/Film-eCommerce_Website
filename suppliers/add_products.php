@@ -490,6 +490,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sub_descErr = 'Please enter the subtitles description!';
     }
 
+    if (preg_match('/^[0-9]{3}[0-9]{1}.[0-9]{2}$/', $trimmed['price']) && is_numeric($trimmed['price'])) {
+        $priceErr = '';
+        $price = $trimmed['price'];
+    } else {
+        $priceErr = 'Please enter how much you wish to sell this product';
+    }
+
 }
 
 ?>
@@ -666,7 +673,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productPrice">
             <label for="product-price">How much are you selling it? </label>
             <input type="number" id="product-price" name="price" value="<?php if (isset($trimmed['price'])) echo $trimmed['price']; ?>" step="0.01" min="0" max="9999" placeholder="21.93">
-            <span class="text-danger">* <!--<#?php echo $priceErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['price'])) echo $priceErr; ?></span>
         </div>
         <div class="productStock">
             <label for="product-stock">How many do you have? </label>
