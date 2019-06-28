@@ -61,6 +61,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $ratingErr = 'Please select one of the ratings!';
     }
 
+    if (!empty($_POST['genre'])) {
+
+        $genreErr = '';
+
+        $genre_escape = mysqli_real_escape_string($dbc, $_POST['genre']);
+        $genre_strip = stripslashes($genre_escape);
+        $genre_special = htmlspecialchars($genre_strip);
+
+        $genre_string = implode("','", $genre_special);
+
+        $q_genres = "SELECT id FROM genres WHERE genre IN ('$genre_string')";
+        $r_genres = mysqli_query($dbc, $q_genres) or trigger_error("Query: $q_genres\n<br>MySQL Error: " . mysqli_close($dbc));
+        $row_gid = mysqli_fetch_all($r_genres, MYSQLI_ASSOC);
+
+        if (!empty($row_gid)) {
+
+            $genreErr = '';
+
+            $gselected_id = array();
+            foreach ($row_gid as $key => $value) {
+                $gselected_id[$key] = $value['id'];
+            }
+
+        } else {
+            $genreErr = 'An error occured. Please select at least one or more genres, or contact the website administrator for assistance. Sorry about that!';
+        }
+
+    } else {
+
+        $genreErr = 'Please select at least one or more genres!';
+
+    }
+
     if (!empty($trimmed['description'])) {
         $descripErr = '';
         $descrip_strip = stripslashes($trimmed['description']);
@@ -580,6 +613,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_free_result($r_genre);
             ?>
+            <span class="text-danger">* <?php if (isset($_POST['genre'])) echo $genreErr; ?></span>
         </div>
         <div class="productDescription">
             <label for="product-description">Description: </label>
