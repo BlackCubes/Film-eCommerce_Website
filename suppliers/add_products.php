@@ -651,6 +651,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
                                                 }
 
+                                                if (mysqli_affected_rows($dbc) == 1) {
+                                                    echo '<h3>Thank you for registering! A confirmation email has been sent to your address. Please click on the link in that email in order to activate your account.</h3>';
+                                                    include('includes/footer.html');
+                                                    exit();
+                                                } else {
+                                                    echo '<p class="text-danger">An error occured. Please contact the website administrator. We apologize for any inconvenience.</p>';
+                                                }
+
                                             } else {
                                                 echo '<p class="text-danger">An error occured. Could not save the studio(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
                                             }
