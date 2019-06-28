@@ -627,7 +627,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     for ($i = 0; $i < count($producers_id); $i++) {
                                         $q = "INSERT INTO products_producers (product_id, producer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $producers_id[$i] . ")";
-                                        $r = mysqli_query($dbc, $q) trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                                        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
                                     }
 
                                 } else {
