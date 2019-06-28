@@ -460,11 +460,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $more_descripErr = 'Please enter the extra product information!';
     }
 
-    if (preg_match('/^[A-Z0-9 \'.:-]{1,30}$/', $trimmed['format_type'])) {
+    if (preg_match('/^[A-Z0-9 \'.:-]{1,30}$/i', $trimmed['format_type'])) {
         $format_typeErr = '';
         $format_type = mysqli_real_escape_string($dbc, $trimmed['format_type']);
     } else {
         $format_typeErr = 'Please enter a title for the format type!';
+    }
+
+    if (preg_match('/^[A-Z0-9 .:]{4,35}$/i', $trimmed['video_desc'])) {
+        $video_descErr = '';
+        $video_desc = mysqli_real_escape_string($dbc, $trimmed['video_desc']);
+    } else {
+        $video_descErr = 'Please enter the video description';
     }
 
 }
@@ -626,7 +633,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productVideoDescription">
             <label for="product-video-description">Video Description: </label>
             <input type="text" id="product-video-description" name="video_desc" size="35" maxlength="35" value="<?php if (isset($trimmed['video_desc'])) echo $trimmed['video_desc']; ?>" placeholder="2160p Ultra High Definition">
-            <span class="text-danger">* <!--<#?php echo $video_descErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($trimmed['video_desc'])) echo $video_descErr; ?></span>
         </div>
         <div class="productAudioDescription">
             <label for="product-audio-description">Audio Description: </label>
