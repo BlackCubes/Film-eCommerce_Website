@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
 
-    $product_name = $department_id = $format = $theatre_date = $rating = $genres_id = $description = $directors_id = $actors_id = $producers_id = $writers_id = $dps_id = $studios_id = $runtime = $format_type = $video_desc = $audio_desc = $sub_desc = $price = $stock = $sku = FALSE;
+    $product_name = $department = $format = $theatre_date = $rating = $genres_id = $description = $directors_id = $actors_id = $producers_id = $writers_id = $dps_id = $studios_id = $runtime = $format_type = $video_desc = $audio_desc = $sub_desc = $price = $stock = $sku = FALSE;
 
     if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $trimmed['product_name'])) {
         $productnameError = '';
@@ -36,24 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (!empty($_POST['department'])) {
-
         $departmentErr = '';
-
-        $department_escape = mysqli_real_escape_string($dbc, $_POST['department']);
-        $department_strip = stripslashes($department_escape);
-        $department_special = htmlspecialchars($department_strip);
-
-        $q_department = "SELECT id FROM departments WHERE department='$department_special'";
-        $r_department = mysqli_query($dbc, $q_department) or trigger_error("Query: $q_department\n<br>MySQL Error: " . mysqli_error($dbc));
-        $department_id = mysqli_fetch_array($r_department, MYSQLI_ASSOC);
+        $department = $_POST['department'];
 
     } else {
         $departmentErr = 'Please select which department it is!';
     }
 
-    if (isset($_POST['format'])) {
+    if (!empty($_POST['format'])) {
         $formatErr = '';
         $format = $_POST['format'];
+
     } else {
         $formatErr = 'Please select which format it is!';
     }
