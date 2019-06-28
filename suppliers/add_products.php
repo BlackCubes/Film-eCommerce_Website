@@ -588,7 +588,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-            if (mysqli_affected_rows($dbs) == 1) {
+            if (mysqli_affected_rows($dbc) == 1) {
 
                 $isd = substr(uniqid(rand(), true), 12, 10);
 
@@ -602,11 +602,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
-                    if (mysqli_affected_rows($dbc)) {
+                    if (mysqli_affected_rows($dbc) == 1) {
 
                         for ($i = 0; $i < count($genres_id); $i++) {
                             $q = "INSERT INTO products_genres (product_id, genre_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $genres_id[$i] . ")";
                             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                        }
+
+                        if (mysqli_affected_rows($dbc) == 1) {
+                            
                         }
 
                     } else {
