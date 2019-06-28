@@ -602,8 +602,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
+                    if (mysqli_affected_rows($dbc)) {
+
+                        for ($i = 0; $i < count($genres_id); $i++) {
+                            $q = "INSERT INTO products_genres (product_id, genre_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $genres_id[$i] . ")";
+                            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                        }
+
+                    } else {
+                        echo '<p class="text-danger">An error occured. Could not save the product. Please contact the website administrator. We apologize for any inconvenience.</p>';
+                    }
+
                 } else {
-                    echo '<p class="text-danger">One or more of the values of department, format, product title, theatrical release date, description, SKU, price, and/or amount of units could be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience</p>';
+                    echo '<p class="text-danger">One or more of the values of department, format, product title, theatrical release date, description, SKU, price, and/or amount of units could be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
                 }
 
             } else {
