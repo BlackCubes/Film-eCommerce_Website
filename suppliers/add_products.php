@@ -22,6 +22,15 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
 
 require(MYSQL);
 
+if (!isset($_SESSION['id'])) {
+
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
