@@ -79,9 +79,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $genreErr = '';
 
-            $gselected_id = array();
+            $genres_id = array();
             foreach ($row_gid as $key => $value) {
-                $gselected_id[$key] = $value['id'];
+                $genres_id[$key] = $value['id'];
             }
 
         } else {
@@ -152,9 +152,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $directorErr = '';
 
-                $dselected_id = array();
+                $directors_id = array();
                 foreach ($row_id as $key => $value) {
-                    $dselected_id[$key] = $value['id'];
+                    $directors_id[$key] = $value['id'];
                 }
 
             } else {
@@ -219,9 +219,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $actorsErr = '';
 
-                $aselected_id = array();
+                $actors_id = array();
                 foreach ($row_id as $key => $value) {
-                    $aselected_id[$key] = $value['id'];
+                    $actors_id[$key] = $value['id'];
                 }
 
             } else {
@@ -288,9 +288,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $producersErr = '';
 
-                $pselected_id = array();
+                $producers_id = array();
                 foreach ($row_id as $key => $value) {
-                    $pselected_id[$key] = $value['id'];
+                    $producers_id[$key] = $value['id'];
                 }
 
             } else {
@@ -357,9 +357,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $writersErr = '';
 
-                $wselected_id = array();
+                $writers_id = array();
                 foreach($row_id as $key => $value) {
-                    $wselected_id[$key] = $value['id'];
+                    $writers_id[$key] = $value['id'];
                 }
 
             } else {
@@ -426,9 +426,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $dpsErr = '';
 
-                $dpselected_id = array();
+                $dps_id = array();
                 foreach ($row_id as $key => $value) {
-                    $dpselected_id[$key] = $value['id'];
+                    $dps_id[$key] = $value['id'];
                 }
 
             } else {
@@ -463,9 +463,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $studiosErr = '';
 
-            $selected_studio_id = array();
+            $studios_id = array();
             foreach ($row_studio_id as $key => $value) {
-                $selected_studio_id[$key] = $value['id'];
+                $studios_id[$key] = $value['id'];
             }
 
         }
