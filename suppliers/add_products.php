@@ -630,6 +630,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
                                     }
 
+                                    if (mysqli_affected_rows($dbc) == 1) {
+
+                                        for ($i = 0; $i < count($writers_id); $i++) {
+                                            $q = "INSERT INTO products_writers (product_id, writer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $writers_id[$i] . ")";
+                                            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                                        }
+
+                                    } else {
+                                        echo '<p class="text-danger">An error occured. Could not save the writer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
+                                    }
+
                                 } else {
                                     echo '<p class="text-danger">An error occured. Could not save the producer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
                                 }
