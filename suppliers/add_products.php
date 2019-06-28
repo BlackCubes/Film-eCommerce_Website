@@ -445,6 +445,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpsErr = 'Please enter the cinematographer(s) first and last name(s)';
     }
 
+    if (!empty($_POST['studios'])) {
+
+        $studiosErr = '';
+
+        $studio_escape = mysqli_real_escape_string($dbc, $_POST['studios']);
+        $studio_strip = stripslashes($studio_escape);
+        $studio_special = htmlspecialchars($studio_strip);
+
+        $studio_string = implode("','", $studio_special);
+
+        $q_studios = "SELECT id FROM studios WHERE studio_name IN ('$studio_string')";
+        $r_studios = mysqli_query($dbc, $q_studios) or trigger_error("Query: $q_studios\n<br>MySQL Error " . mysqli_error($dbc));
+        $row_studio_id = mysqli_fetch_all($r_studios, MYSQLI_ASSOC);
+
+        if (!empty($row_studio_id)) {
+
+            $studiosErr = '';
+
+            $selected_studio_id = array();
+            foreach ($row_studio_id as $key => $value) {
+                $selected_studio_id[$key] = $value['id'];
+            }
+
+        }
+
+    } else {
+        $studiosErr = 'Please select at least one or more entertainment companies!';
+    }
+
     if (preg_match('/^[A-Z0-9 \'.:+-]{3-30}$/i', $trimmed['edition'])) {
         $editionErr = '';
         $edition = mysqli_real_escape_string($dbc, $trimmed['edition']);
@@ -668,7 +697,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_free_result($r_studio);
             ?>
-            <span class="text-danger">* <!--<#?php echo $studiosErr; ?>--></span>
+            <span class="text-danger">* <?php if (isset($_POST['studios'])) echo $studiosErr; ?></span>
         </div>
         <div class="productEdition">
             <label for="product-edition">Edition: </label>
