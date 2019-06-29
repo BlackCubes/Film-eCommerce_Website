@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $directorErr = '';
 
-        $q_directors = "SELECT fist_name, last_name FROM directors";
+        $q_directors = "SELECT first_name, last_name FROM directors";
         $r_directors = mysqli_query($dbc, $q_directors) or trigger_error("Query: $q_directors\n<br>MySQL Error: " . mysqli_error($dbc));
         $directors_exist = mysqli_fetch_all($r_directors, MYSQLI_ASSOC);
 
