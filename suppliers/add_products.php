@@ -717,7 +717,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <h1>Add New Products</h1>
 <p><span class="text-danger">* required field</span></p>
-<form action="register.php" method="post">
+<form action="add_products.php" method="post">
     <fieldset>
         <div class="productName">
             <label for="product-name">Product Name: </label>
