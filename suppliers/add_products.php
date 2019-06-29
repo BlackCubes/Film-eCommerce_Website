@@ -37,6 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $product_name = $department = $format = $theatre_date = $rating = $genres_id = $description = $directors_id = $actors_id = $producers_id = $writers_id = $dps_id = $studios_id = $runtime = $format_type = $video_desc = $audio_desc = $sub_desc = $price = $stock = $sku = FALSE;
 
+    function arraycount($array1, $array2) {
+        if (count($array1) == count($array2)) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
     if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $trimmed['product_name'])) {
         $productnameError = '';
         $product_name = mysqli_real_escape_string($dbc, $trimmed['product_name']);
@@ -142,14 +150,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return preg_grep("/^$validNames$/", $dexist_ln);
         });
 
-        function arraycount($array1, $array2) {
-            if (count($array1) == count($array2)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
-        }
-
         if (!empty($dmatch_fn) && !empty($dmatch_ln) && arraycount($dinput_fn, $dinput_ln) && arraycount($dinput_fn, $dmatch_fn) && arraycount($dinput_ln, $dmatch_ln)) {
 
             $directorErr = '';
@@ -211,14 +211,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return preg_grep("/^$validNames$/", $aexist_ln);
         });
 
-        function arraycount($array1, $array2) {
-            if (count($array1) == count($array2)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
-        }
-
         if (!empty($amatch_fn) && !empty($amatch_ln) && arraycount($ainput_fn, $ainput_ln) && arraycount($ainput_fn, $amatch_fn) && arraycount($ainput_ln, $amatch_ln)) {
 
             $astring_fn = implode("','", $amatch_fn);
@@ -277,14 +269,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pmatch_ln = array_filter($pinput_ln, function($validNames) use($pexist_ln) {
             return preg_grep("/^$validNames$/", $pexist_ln);
         });
-
-        function arraycount($array1, $array2) {
-            if (count($array1) == count($array2)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
-        }
 
         if (!empty($pmatch_fn) && !empty($pmatch_ln) && arraycount($pinput_fn, $pinput_ln) && arraycount($pinput_fn, $pmatch_fn) && arraycount($pinput_ln, $pmatch_ln)) {
 
@@ -347,14 +331,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return preg_grep("/^$validNames$/", $wexist_ln);
         });
 
-        function arraycount($array1, $array2) {
-            if (count($array1) == count($array2)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
-        }
-
         if (!empty($wmatch_fn) && !empty($wmatch_ln) && arraycount($winput_fn, $winput_ln) && arraycount($winput_fn, $wmatch_fn) && arraycount($winput_ln, $wmatch_ln)) {
 
             $writersErr = '';
@@ -415,14 +391,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpmatch_ln = array_filter($dpinput_ln, function($validNames) use($dpexist_ln) {
             return preg_grep("/^$validNames$/", $dpexist_ln);
         });
-
-        function arraycount($array1, $array2) {
-            if (count($array1) == count($array2)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
-        }
 
         if (!empty($dpmatch_fn) && !empty($dpmatch_ln) && arraycount($dpinput_fn, $dpinput_ln) && arraycount($dpinput_fn, $dpmatch_fn) && arraycount($dpinput_ln, $dpmatch_ln)) {
 
