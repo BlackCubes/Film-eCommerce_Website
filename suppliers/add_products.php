@@ -662,7 +662,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                                 if (mysqli_affected_rows($dbc) == 1) {
                                                     echo '<h3>Thank you for entering your product!</h3>';
-                                                    include('includes/footer.html');
+                                                    include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html');
                                                     exit();
                                                 } else {
                                                     echo '<p class="text-danger">An error occured. Please contact the website administrator. We apologize for any inconvenience.</p>';
