@@ -31,6 +31,13 @@ if (!isset($_SESSION['id'])) {
 
 }
 
+function sanitize_input($input) {
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $trimmed = array_map('trim', $_POST);
@@ -82,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $ratingErr = 'Please select one of the ratings!';
     }
 
-    if (!empty($trimmed['genre'])) {
+    if (isset($trimmed['genre'])) {
 
         $genreErr = '';
 
