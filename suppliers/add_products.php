@@ -465,7 +465,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $studiosErr = 'Please select at least one or more entertainment companies!';
     }
 
-    if (preg_match('/^[A-Z0-9 \'.:+-]{3-30}$/i', $_POST['edition'])) {
+    if (preg_match('/^[A-Z0-9 \'.:+-]{3,30}$/i', $_POST['edition'])) {
         $editionErr = '';
         $edition = mysqli_real_escape_string($dbc, sanitize_input($_POST['edition']));
     } elseif (empty($_POST['edition'])) {
