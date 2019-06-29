@@ -542,14 +542,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (preg_match('/^[0-9]{0,3}[0-9]{1}.[0-9]{2}$/', $_POST['price']) && is_numeric($_POST['price'])) {
         $priceErr = '';
-        $price = mysqli_real_string($dbc, sanitize_input($_POST['price']));
+        $price = $_POST['price'];
     } else {
         $priceErr = 'Please enter how much you wish to sell this product';
     }
 
     if (preg_match('/^[0-9]{1,8}$/', $_POST['stock']) && is_numeric($_POST['stock'])) {
         $stockErr = '';
-        $stock = mysqli_real_escape_string($dbc, sanitize_input($_POST['stock']));
+        $stock = $_POST['stock'];
     } else {
         $stockErr = 'Please enter how many you have!';
     }
@@ -863,12 +863,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h3>Price, Images, Units, SKU</h3>
         <div class="productPrice">
             <label for="product-price">How much are you selling it? </label>
-            <input type="number" id="product-price" name="price" value="<?php if (isset($_POST['price'])) echo sanitize_input($_POST['price']); ?>" step="0.01" min="0" max="9999" placeholder="21.93">
+            <input type="number" id="product-price" name="price" value="<?php if (isset($_POST['price'])) echo $_POST['price']; ?>" step="0.01" min="0" max="9999" placeholder="21.93">
             <span class="text-danger">* <?php if (isset($_POST['price'])) echo $priceErr; ?></span>
         </div>
         <div class="productStock">
             <label for="product-stock">How many do you have? </label>
-            <input type="number" id="product-stock" name="stock" value="<?php if (isset($_POST['stock'])) echo sanitize_input($_POST['stock']); ?>" min="0" max="99999999">
+            <input type="number" id="product-stock" name="stock" value="<?php if (isset($_POST['stock'])) echo $_POST['stock']; ?>" min="0" max="99999999">
             <span class="text-danger">* <?php if (isset($_POST['stock'])) echo $stockErr; ?></span>
         </div>
         <div class="productSKU">
