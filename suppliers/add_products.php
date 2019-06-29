@@ -327,7 +327,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $wmatch_fn = array_filter($winput_fn, function($validNames) use($wexist_fn) {
             return preg_grep("/^$validNames$/", $wexist_fn);
         });
-        $wmatch_ln = array_fitler($winput_ln, function($validNames) use($wescape_ln) {
+        $wmatch_ln = array_filter($winput_ln, function($validNames) use($wescape_ln) {
             return preg_grep("/^$validNames$/", $wexist_ln);
         });
 
