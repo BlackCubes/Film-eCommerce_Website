@@ -591,7 +591,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 #$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
-                if (mysqli_affect_rows($dbc) == 1) {
+                if (mysqli_affected_rows($dbc) == 1) {
 
                     $q = "INSERT INTO suppliers_products (supplier_id, product_id) VALUES ({$_SESSION['id']}, (SELECT id FROM products WHERE isd='$isd'))";
                     
