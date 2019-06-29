@@ -40,7 +40,7 @@ function sanitize_input($input) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $trimmed = array_map('trim', $_POST);
+    #$trimmed = array_map('trim', $_POST);
 
     $product_name = $department = $format = $theatre_date = $rating = $genres_id = $description = $directors_id = $actors_id = $producers_id = $writers_id = $dps_id = $studios_id = $runtime = $format_type = $video_desc = $audio_desc = $sub_desc = $price = $stock = $sku = FALSE;
 
@@ -52,52 +52,54 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $trimmed['product_name'])) {
+    if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $_POST['product_name'])) {
         $productnameError = '';
-        $product_name = mysqli_real_escape_string($dbc, $trimmed['product_name']);
+        $product_name = mysqli_real_escape_string($dbc, sanitize_input($_POST['product_name']));
     } else {
         $productnameError = 'Please enter the name of the product';
     }
 
-    if (!empty($trimmed['department'])) {
+    if (isset($_POST['department'])) {
         $departmentErr = '';
-        $department = $trimmed['department'];
+        $department = mysqli_real_escape_string($dbc, sanitize_input($_POST['department']));
 
     } else {
         $departmentErr = 'Please select which department it is!';
     }
 
-    if (!empty($trimmed['format'])) {
+    if (isset($_POST['format'])) {
         $formatErr = '';
-        $format = $trimmed['format'];
+        $format = mysqli_real_escape_string($dbc, sanitize_input($_POST['format']));
 
     } else {
         $formatErr = 'Please select which format it is!';
     }
 
-    if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $trimmed['theatre_date'])) {
+    if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $_POST['theatre_date'])) {
         $theatre_dateErr = '';
-        $theatre_date = $trimmed['theatre_date'];
+        $theatre_date = mysqli_real_escape_string($dbc, sanitize_input($_POST['theatre_date']));
     } else {
         $theatre_dateErr = 'Please enter when the product had a theatrical release date!';
     }
 
-    if (isset($trimmed['rating'])) {
+    if (isset($_POST['rating'])) {
         $ratingErr = '';
-        $rating = $trimmed['rating'];
+        $rating = mysqli_real_escape_string($dbc, sanitize_input($_POST['rating']));
     } else {
         $ratingErr = 'Please select one of the ratings!';
     }
 
-    if (isset($trimmed['genre'])) {
+    if (isset($_POST['genre'])) {
 
         $genreErr = '';
 
-        $genre_escape = mysqli_real_escape_string($dbc, $trimmed['genre']);
-        $genre_strip = stripslashes($genre_escape);
-        $genre_special = htmlspecialchars($genre_strip);
+        $checkbox_genre = $_POST['genre'];
+        $genre_sanitize = array();
+        for ($i = 0; $i < count($checkbox_genre); $i++) {
+            $genre_sanitize = mysqli_real_escape_string($dbc, sanitize_input($genre_sanitize[$i]));
+        }
 
-        $genre_string = implode("','", $genre_special);
+        $genre_string = implode("','", $genre_sanitize);
 
         $q_genres = "SELECT id FROM genres WHERE genre IN ('$genre_string')";
         $r_genres = mysqli_query($dbc, $q_genres) or trigger_error("Query: $q_genres\n<br>MySQL Error: " . mysqli_close($dbc));
