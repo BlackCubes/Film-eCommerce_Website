@@ -613,7 +613,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             if (mysqli_affected_rows($dbc) == 1) {
 
-                                for ($i = 0; $i < count($actors_id[$i]); $i++) {
+                                for ($i = 0; $i < count($actors_id); $i++) {
                                     $q = "INSERT INTO products_actors (product_id, actor_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $actors_id[$i] . ")";
                                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
                                 }
