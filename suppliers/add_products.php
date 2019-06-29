@@ -94,12 +94,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $genreErr = '';
 
         $checkbox_genre = $_POST['genre'];
-        $genre_sanitize = array();
-        for ($i = 0; $i < count($checkbox_genre); $i++) {
-            $genre_sanitize = mysqli_real_escape_string($dbc, sanitize_input($genre_sanitize[$i]));
+        foreach ($checkbox_genre as &$value) {
+            $value = sanitize_input($value);
         }
+        unset($value);
 
-        $genre_string = implode("','", $genre_sanitize);
+        $genre_string = implode("','", $checkbox_genre);
 
         $q_genres = "SELECT id FROM genres WHERE genre IN ('$genre_string')";
         $r_genres = mysqli_query($dbc, $q_genres) or trigger_error("Query: $q_genres\n<br>MySQL Error: " . mysqli_close($dbc));
