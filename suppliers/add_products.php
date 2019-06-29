@@ -584,6 +584,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         #if (mysqli_affected_rows($dbc) == 1) {
 
+            $q1 = "INSERT INTO suppliers_products (supplier_id, product_id) VALUES ({$_SESSION['id']}, ({$product_id}))";
+                    
+            $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error " . mysqli_error($dbc));
+
         #    $q = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
 
         #    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
