@@ -386,7 +386,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpinput_ln = preg_split('/[\s,]+/', $dpescape_ln);
 
         $dpmatch_fn = array_filter($dpinput_fn, function($validNames) use($dpexist_fn) {
-            return preg_grep("/^$validNames$/", $dpescape_fn);
+            return preg_grep("/^$validNames$/", $dpexist_fn);
         });
         $dpmatch_ln = array_filter($dpinput_ln, function($validNames) use($dpexist_ln) {
             return preg_grep("/^$validNames$/", $dpexist_ln);
