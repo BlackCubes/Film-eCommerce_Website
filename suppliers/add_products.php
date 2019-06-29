@@ -533,7 +533,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sub_descErr = 'Please enter the subtitles description!';
     }
 
-    if (preg_match('/^[0-9]{3}[0-9]{1}.[0-9]{2}$/', $trimmed['price']) && is_numeric($trimmed['price'])) {
+    if (preg_match('/^[0-9]{0,3}[0-9]{1}.[0-9]{2}$/', $trimmed['price']) && is_numeric($trimmed['price'])) {
         $priceErr = '';
         $price = $trimmed['price'];
     } else {
