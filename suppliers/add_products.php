@@ -565,11 +565,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $isd = substr(uniqid(rand(), true), 12, 10);
 
-        $q1 = "INSERT INTO specs (spec_format_type, video_desc, audio_desc, subtitles_desc) VALUES ('$format_type', '$video_desc', '$audio_desc', '$sub_desc')";
+        $q1 = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
 
         $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error " . mysqli_error($dbc));
 
-        $q2 = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
+        $q2 = "INSERT INTO specs (spec_format_type, video_desc, audio_desc, subtitles_desc) VALUES ('$format_type', '$video_desc', '$audio_desc', '$sub_desc')";
 
         $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q2\n<br>MySQL Error " . mysqli_error($dbc));
 
