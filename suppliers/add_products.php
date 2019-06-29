@@ -573,7 +573,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $r2 = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
-        $q3 = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
+        $q3 = "INSERT INTO productdetails (id, rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM products WHERE isd='$isd'), (SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
 
         $r3 = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
