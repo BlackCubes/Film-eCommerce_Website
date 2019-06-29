@@ -124,15 +124,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
 
-    if (!empty($trimmed['description'])) {
+    if (!empty($_POST['description'])) {
         $descripErr = '';
-        $descrip_strip = stripslashes($trimmed['description']);
-        $description = htmlspecialchars($descrip_strip);
+        $description = mysqli_real_escape_string($dbc, sanitize_input($_POST['description']));
     } else {
         $descripErr = 'Please enter a description for the product!';
     }
 
-    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['directors_last_name']))) {
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['directors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['directors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['directors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['directors_last_name']))) {
 
         $directorErr = '';
 
@@ -146,8 +145,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $dexist_ln[$key] = $value['last_name'];
         }
 
-        $descape_fn = mysqli_real_escape_string($dbc, $trimmed['directors_first_name']);
-        $descape_ln = mysqli_real_escape_string($dbc, $trimmed['directors_last_name']);
+        $descape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['directors_first_name']));
+        $descape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['directors_last_name']));
 
         $dinput_fn = preg_split('/[\s,]+/', $descape_fn);
         $dinput_ln = preg_split('/[\s,]+/', $descape_ln);
@@ -195,7 +194,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $directorErr = 'Please enter first and last name(s)!';
     }
 
-    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['actors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['actors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['actors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['actors_last_name']))) {
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['actors_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['actors_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['actors_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['actors_last_name']))) {
 
         $q_actors = "SELECT first_name, last_name FROM actors";
         $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error " . mysqli_error($dbc));
@@ -207,8 +206,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $aexist_ln[$key] = $value['last_name'];
         }
 
-        $aescape_fn = mysqli_real_escape_string($dbc, $trimmed['actors_first_name']);
-        $aescape_ln = mysqli_real_escape_string($dbc, $trimmed['actors_last_name']);
+        $aescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['actors_first_name']));
+        $aescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['actors_last_name']));
 
         $ainput_fn = preg_split('/[\s,]+/', $aescape_fn);
         $ainput_ln = preg_split('/[\s,]+/', $aescape_ln);
@@ -252,7 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $actorsErr = 'Please enter the actor(s) first and last name(s)!';
     }
 
-    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['producers_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['producers_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['producers_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['producers_last_name']))) {
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['producers_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['producers_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['producers_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['producers_last_name']))) {
 
         $producersErr = '';
 
@@ -266,8 +265,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $pexist_ln[$key] = $value['last_name'];
         }
 
-        $pescape_fn = mysqli_real_escape_string($dbc, $trimmed['producers_first_name']);
-        $pescape_ln = mysqli_real_escape_string($dbc, $trimmed['producers_last_name']);
+        $pescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['producers_first_name']));
+        $pescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['producers_last_name']));
 
         $pinput_fn = preg_split('/[\s,]+/', $pescape_fn);
         $pinput_ln = preg_split('/[\s,]+/', $pescape_ln);
@@ -313,7 +312,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $producersErr = 'Please enter the producer(s) first and last name(s)!';
     }
 
-    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['writers_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['writers_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['writers_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['writers_last_name']))) {
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['writers_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['writers_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['writers_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['writers_last_name']))) {
 
         $writersErr = '';
 
@@ -327,8 +326,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $wexist_ln[$key] = $value['last_name'];
         }
 
-        $wescape_fn = mysqli_real_escape_string($dbc, $trimmed['writers_first_name']);
-        $wescape_ln = mysqli_real_escape_string($dbc, $trimmed['writers_last_name']);
+        $wescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['writers_first_name']));
+        $wescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['writers_last_name']));
 
         $winput_fn = preg_split('/[\s,]+/', $wescape_fn);
         $winput_ln = preg_split('/[\s,]+/', $wescape_ln);
@@ -374,7 +373,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $writersErr = 'Please enter the writer(s) first and last name(s)';
     }
 
-    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['dp_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $trimmed['dp_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['dp_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $trimmed['dp_last_name']))) {
+    if ((preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['dp_first_name']) && preg_match('/^[A-Z]{1}[a-z]+$/', $_POST['dp_last_name'])) || (preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['dp_first_name']) && preg_match('/^([A-Z]{1}[a-z]+[, ]{2})*[A-Z]{1}[a-z]+$/', $_POST['dp_last_name']))) {
 
         $dpsErr = '';
 
@@ -388,8 +387,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $dpexist_ln[$key] = $value['last_name'];
         }
 
-        $dpescape_fn = mysqli_real_escape_string($dbc, $trimmed['dp_first_name']);
-        $dpescape_ln = mysqli_real_escape_string($dbc, $trimmed['dp_last_name']);
+        $dpescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['dp_first_name']));
+        $dpescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['dp_last_name']));
 
         $dpinput_fn = preg_split('/[\s,]+/', $dpescape_fn);
         $dpinput_ln = preg_split('/[\s,]+/', $dpescape_ln);
@@ -435,15 +434,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpsErr = 'Please enter the cinematographer(s) first and last name(s)';
     }
 
-    if (!empty($trimmed['studios'])) {
+    if (isset($_POST['studios'])) {
 
         $studiosErr = '';
 
-        $studio_escape = mysqli_real_escape_string($dbc, $trimmed['studios']);
-        $studio_strip = stripslashes($studio_escape);
-        $studio_special = htmlspecialchars($studio_strip);
+        $checkbox_studio = $_POST['studios'];
+        $studio_sanitize = array();
+        for ($i = 0; $i < count($checkbox_studio); $i++) {
+            $studio_sanitize = mysqli_real_escape_string($dbc, sanitize_input($checkbox_studio[$i]));
+        }
 
-        $studio_string = implode("','", $studio_special);
+        $studio_string = implode("','", $studio_sanitize);
 
         $q_studios = "SELECT id FROM studios WHERE studio_name IN ('$studio_string')";
         $r_studios = mysqli_query($dbc, $q_studios) or trigger_error("Query: $q_studios\n<br>MySQL Error " . mysqli_error($dbc));
@@ -464,101 +465,98 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $studiosErr = 'Please select at least one or more entertainment companies!';
     }
 
-    if (preg_match('/^[A-Z0-9 \'.:+-]{3-30}$/i', $trimmed['edition'])) {
+    if (preg_match('/^[A-Z0-9 \'.:+-]{3-30}$/i', $_POST['edition'])) {
         $editionErr = '';
-        $edition = mysqli_real_escape_string($dbc, $trimmed['edition']);
-    } elseif (empty($trimmed['edition'])) {
+        $edition = mysqli_real_escape_string($dbc, sanitize_input($_POST['edition']));
+    } elseif (empty($_POST['edition'])) {
         $editionErr = '';
         $edition = '';
     } else {
         $editionErr = 'Please enter what edition the product is!';
     }
 
-    if (preg_match('/^[0-9]{1,999}$/', $trimmed['disc']) && is_numeric($trimmed['disc'])) {
+    if (preg_match('/^[0-9]{1,999}$/', $_POST['disc']) && is_numeric($_POST['disc'])) {
         $discErr = '';
-        $disc = $trimmed['disc'];
-    } elseif (empty($trimmed['disc'])) {
+        $disc = mysqli_real_escape_string($dbc, sanitize_input($_POST['disc']));
+    } elseif (empty($_POST['disc'])) {
         $discErr = '';
         $disc = '';
     } else {
         $discErr = 'Please enter how many discs the product contains!';
     }
 
-    if (preg_match('/^[0-9]{1,51420}$/', $trimmed['runtime']) && is_numeric($trimmed['runtime'])) {
+    if (preg_match('/^[0-9]{1,51420}$/', $_POST['runtime']) && is_numeric($_POST['runtime'])) {
         $runtimeErr = '';
-        $runtime = $trimmed['runtime'];
+        $runtime = mysqli_real_escape_string($dbc, sanitize_input($_POST['runtime']));
     } else {
         $runtimeErr = 'Please enter how long the product is!';
     }
 
-    if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $trimmed['media_date'])) {
+    if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $_POST['media_date'])) {
         $media_dateErr = '';
-        $media_date = $trimmed['media_date'];
-    } elseif (empty($trimmed['media_date'])) {
+        $media_date = mysqli_real_escape_string($dbc, sanitize_input($_POST['media_date']));
+    } elseif (empty($_POST['media_date'])) {
         $media_dateErr = '';
         $media_date = '';
     } else {
         $media_dateErr = 'Please enter when the product had a home media release date!';
     }
 
-    if (!empty($trimmed['more_description']) && strlen($trimmed['more_description'])<256) {
+    if (!empty($_POST['more_description']) && strlen($_POST['more_description'])<256) {
         $more_descripErr = '';
-        $more_descrip_strip = stripslashes($trimmed['more_description']);
-        $more_descrip = htmlspecialchars($more_descrip_strip);
-    } elseif (empty($trimmed['more_description'])) {
+        $more_descrip = mysqli_real_escape_string($dbc, sanitize_input($_POST['more_description']));
+    } elseif (empty($_POST['more_description'])) {
         $more_descripErr = '';
         $more_descrip = '';
     } else {
         $more_descripErr = 'Please enter the extra product information!';
     }
 
-    if (preg_match('/^[A-Z0-9 \'.:-]{1,30}$/i', $trimmed['format_type'])) {
+    if (preg_match('/^[A-Z0-9 \'.:-]{1,30}$/i', $_POST['format_type'])) {
         $format_typeErr = '';
-        $format_type = mysqli_real_escape_string($dbc, $trimmed['format_type']);
+        $format_type = mysqli_real_escape_string($dbc, sanitize_input($_POST['format_type']));
     } else {
         $format_typeErr = 'Please enter a title for the format type!';
     }
 
-    if (preg_match('/^[A-Z0-9 .:]{4,35}$/i', $trimmed['video_desc'])) {
+    if (preg_match('/^[A-Z0-9 .:]{4,35}$/i', $_POST['video_desc'])) {
         $video_descErr = '';
-        $video_desc = mysqli_real_escape_string($dbc, $trimmed['video_desc']);
+        $video_desc = mysqli_real_escape_string($dbc, sanitize_input($_POST['video_desc']));
     } else {
         $video_descErr = 'Please enter the video description!';
     }
 
-    if (!empty($trimmed['audio_desc']) && strlen($trimmed['audio_desc'])<256) {
+    if (!empty($_POST['audio_desc']) && strlen($_POST['audio_desc'])<256) {
         $audio_descErr = '';
-        $audio_desc_strip = stripslashes($trimmed['audio_desc']);
-        $audio_desc = htmlspecialchars($audio_desc_strip);
+        $audio_desc = mysqli_real_escape_string($dbc, sanitize_input($_POST['audio_desc']));
     } else {
         $audio_descErr = 'Please enter the audio description!';
     }
 
-    if (!empty($trimmed['subtitles_desc']) && strlen($trimmed['subtitles_desc'])<101) {
+    if (!empty($_POST['subtitles_desc']) && strlen($_POST['subtitles_desc'])<101) {
         $sub_descErr = '';
-        $sub_desc_strip = stripslashes($trimmed['subtitles_desc']);
-        $sub_desc = htmlspecialchars($sub_desc_strip);
+        $sub_desc = mysqli_real_escape_string($dbc, sanitize_input($_POST['subtitles_desc']));
     } else {
         $sub_descErr = 'Please enter the subtitles description!';
     }
 
-    if (preg_match('/^[0-9]{0,3}[0-9]{1}.[0-9]{2}$/', $trimmed['price']) && is_numeric($trimmed['price'])) {
+    if (preg_match('/^[0-9]{0,3}[0-9]{1}.[0-9]{2}$/', $_POST['price']) && is_numeric($_POST['price'])) {
         $priceErr = '';
-        $price = $trimmed['price'];
+        $price = mysqli_real_string($dbc, sanitize_input($_POST['price']));
     } else {
         $priceErr = 'Please enter how much you wish to sell this product';
     }
 
-    if (preg_match('/^[0-9]{1,8}$/', $trimmed['stock']) && is_numeric($trimmed['stock'])) {
+    if (preg_match('/^[0-9]{1,8}$/', $_POST['stock']) && is_numeric($_POST['stock'])) {
         $stockErr = '';
-        $stock = $trimmed['stock'];
+        $stock = mysqli_real_escape_string($dbc, sanitize_input($_POST['stock']));
     } else {
         $stockErr = 'Please enter how many you have!';
     }
 
-    if (preg_match('/^[A-Z0-9]{15}$/', $trimmed['sku'])) {
+    if (preg_match('/^[A-Z0-9]{15}$/', $_POST['sku'])) {
         $skuErr = '';
-        $sku = mysqli_real_escape_string($dbc, $trimmed['sku']);
+        $sku = mysqli_real_escape_string($dbc, sanitize_input($_POST['sku']));
     } else {
         $skuErr = 'Please enter your product inventory management!';
     }
