@@ -563,22 +563,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($product_name && $department && $format && $theatre_date && $rating && $genres_id && $description && $directors_id && $actors_id && $producers_id && $writers_id && $dps_id && $studios_id && $runtime && $format_type && $video_desc && $audio_desc && $sub_desc && $price && $stock && $sku) {
 
-        $q = "INSERT INTO specs (spec_format_type, video_desc, audio_desc, subtitles_desc) VALUES ('$format_type', '$video_desc', '$audio_desc', '$sub_desc')";
-        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        $isd = substr(uniqid(rand(), true), 12, 10);
 
-        if (mysqli_affected_rows($dbc) == 1) {
+        $q1 = "INSERT INTO specs (spec_format_type, video_desc, audio_desc, subtitles_desc) VALUES ('$format_type', '$video_desc', '$audio_desc', '$sub_desc')";
 
-            $q = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
+        $r1 = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
-            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $q2 = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
 
-            if (mysqli_affected_rows($dbc) == 1) {
+        $r2 = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
-                $isd = substr(uniqid(rand(), true), 12, 10);
+        $q3 = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
 
-                $q = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
+        $r3 = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        #if (mysqli_affected_rows($dbc) == 1) {
+
+        #    $q = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
+
+        #    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+            #if (mysqli_affected_rows($dbc) == 1) {
+
+                #$isd = substr(uniqid(rand(), true), 12, 10);
+
+                #$q = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
+
+                #$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
                 if (mysqli_affect_rows($dbc) == 1) {
 
@@ -675,13 +686,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo '<p class="text-danger">One or more of the values of department, format, product title, theatrical release date, description, SKU, price, and/or amount of units could be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
                 }
 
-            } else {
-                echo '<p class="text-danger">One or more of the values of ratings, edition, discs, home media release date, and/or extra descriptions could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
-            }
+            #} else {
+            #    echo '<p class="text-danger">One or more of the values of ratings, edition, discs, home media release date, and/or extra descriptions could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
+            #}
 
-        } else {
-            echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
-        }
+        #} else {
+        #    echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
+        #}
 
     } else {
         echo '<p class="text-danger">Please try again.</p>';
