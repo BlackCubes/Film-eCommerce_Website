@@ -565,7 +565,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $isd = substr(uniqid(rand(), true), 12, 10);
 
-        $q1 = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
+        $department_id = "SELECT id FROM departments WHERE department='$department'";
+        $format_id = "SELECT id FROM formats WHERE format='$format'";
+        $product_id = "SELECT id FROM products WHERE isd='$isd'";
+        $rating_id = "SELECT id FROM ratings WHERE rated='$rating'";
+
+        $q1 = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES (({$department_id}), ({$format_id}), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
 
         $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error " . mysqli_error($dbc));
 
@@ -573,7 +578,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q2\n<br>MySQL Error " . mysqli_error($dbc));
 
-        $q3 = "INSERT INTO productdetails (id, rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM products WHERE isd='$isd'), (SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
+        $q3 = "INSERT INTO productdetails (id, rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES (({$product_id}), ({$rating_id}), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
 
         $r3 = mysqli_query($dbc, $q3) or trigger_error("Query: $q3\n<br>MySQL Error: " . mysqli_error($dbc));
 
