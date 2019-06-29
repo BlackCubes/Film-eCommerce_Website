@@ -439,12 +439,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $studiosErr = '';
 
         $checkbox_studio = $_POST['studios'];
-        $studio_sanitize = array();
-        for ($i = 0; $i < count($checkbox_studio); $i++) {
-            $studio_sanitize = mysqli_real_escape_string($dbc, sanitize_input($checkbox_studio[$i]));
+        foreach ($checkbox_studio as &$value) {
+            $value = sanitize_input($value);
         }
+        unset($value);
 
-        $studio_string = implode("','", $studio_sanitize);
+        $studio_string = implode("','", $checkbox_studio);
 
         $q_studios = "SELECT id FROM studios WHERE studio_name IN ('$studio_string')";
         $r_studios = mysqli_query($dbc, $q_studios) or trigger_error("Query: $q_studios\n<br>MySQL Error " . mysqli_error($dbc));
