@@ -726,25 +726,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <span class="text-danger">* <?php if (isset($_POST['directors_first_name']) || isset($_POST['directors_last_name']) || (isset($_POST['directors_first_name'], $_POST['directors_last_name']))) echo $directorErr; ?></span>
         </div>
         <div class="productActors">
-            <label for="product-actors">Actors? </label>
+            <label for="product-actors">Actor(s)? </label>
             <input type="text" id="product-actors" name="actors_first_name" size="50" value="<?php if (isset($_POST['actors_first_name'])) echo sanitize_input($_POST['actors_first_name']); ?>" placeholder="First Name">
             <input type="text" id="product-actors" name="actors_last_name" size="50" value="<?php if (isset($_POST['actors_last_name'])) echo sanitize_input($_POST['actors_last_name']); ?>" placeholder="Last Name">
             <span class="text-danger">* <?php if (isset($_POST['actors_first_name']) || isset($_POST['actors_last_name']) || (isset($_POST['actors_first_name'], $_POST['actors_last_name']))) echo $actorsErr; ?></span>
         </div>
         <div class="productProducers">
-            <label for="product-producers">Producers? </label>
+            <label for="product-producers">Producer(s)? </label>
             <input type="text" id="product-producers" name="producers_first_name" size="50" value="<?php if (isset($_POST['producers_first_name'])) echo sanitize_input($_POST['producers_first_name']); ?>" placeholder="First Name">
             <input type="text" id="product-producers" name="producers_last_name" size="50" value="<?php if (isset($_POST['producers_last_name'])) echo sanitize_input($_POST['producers_last_name']); ?>" placeholder="Last Name">
             <span class="text-danger">* <?php if (isset($_POST['producers_first_name']) || isset($_POST['producers_last_name']) || isset($_POST['producers_first_name'], $_POST['producers_last_name'])) echo $producersErr; ?></span>
         </div>
         <div class="productWriters">
-            <label for="product-writers">Writers? </label>
+            <label for="product-writers">Writer(s)? </label>
             <input type="text" id="product-writers" name="writers_first_name" size="50" value="<?php if (isset($_POST['writers_first_name'])) echo sanitize_input($_POST['writers_first_name']); ?>" placeholder="First Name">
             <input type="text" id="product-writers" name="writers_last_name" size="50" value="<?php if (isset($_POST['writers_last_name'])) echo sanitize_input($_POST['writers_last_name']); ?>" placeholder="Last Name">
             <span class="text-danger">* <?php if (isset($_POST['writers_first_name']) || isset($_POST['writers_last_name']) || isset($_POST['writers_first_name'], $_POST['writers_last_name'])) echo $writersErr; ?></span>
         </div>
         <div class="productCinematographers">
-            <label for="product-cinematographers">Cinematographers? </label>
+            <label for="product-cinematographers">Cinematographer(s)? </label>
             <input type="text" id="product-cinematographers" name="dp_first_name" size="50" value="<?php if (isset($_POST['dp_first_name'])) echo sanitize_input($_POST['dp_first_name']); ?>" placeholder="First Name">
             <input type="text" id="product-cinematographers" name="dp_last_name" size="50" value="<?php if (isset($_POST['dp_last_name'])) echo sanitize_input($_POST['dp_last_name']); ?>" placeholder="Last Name">
             <span class="text-danger">* <?php if (isset($_POST['dp_first_name']) || isset($_POST['dp_last_name']) || isset($_POST['dp_first_name'], $_POST['dp_last_name'])) echo $dpsErr; ?></span>
