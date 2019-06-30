@@ -582,126 +582,61 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $r3 = mysqli_query($dbc, $q3) or trigger_error("Query: $q3\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        #if (mysqli_affected_rows($dbc) == 1) {
+        if (mysqli_affected_rows($dbc) == 1) {
 
             $q1 = "INSERT INTO suppliers_products (supplier_id, product_id) VALUES ({$_SESSION['id']}, ({$product_id}))";
                     
             $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error " . mysqli_error($dbc));
 
-        #    $q = "INSERT INTO productdetails (rated_id, spec_id, edition, discs, runtime, media_date, more_description) VALUES ((SELECT id FROM ratings WHERE rated='$rating'), " . mysqli_insert_id($dbc). ", '$edition', '$disc', '$runtime', '$media_date', '$more_descrip')";
+            for ($i = 0; $i < count($genres_id); $i++) {
+                $q = "INSERT INTO products_genres (product_id, genre_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $genres_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            }
 
-        #    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            for ($i = 0; $i < count($directors_id); $i++) {
+                $q = "INSERT INTO products_directors (product_id, director_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $directors_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            }
 
-            #if (mysqli_affected_rows($dbc) == 1) {
+            for ($i = 0; $i < count($actors_id); $i++) {
+                $q = "INSERT INTO products_actors (product_id, actor_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $actors_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            }
 
-                #$isd = substr(uniqid(rand(), true), 12, 10);
+            for ($i = 0; $i < count($producers_id); $i++) {
+                $q = "INSERT INTO products_producers (product_id, producer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $producers_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            }
 
-                #$q = "INSERT INTO products (department_id, format_id, name, release_date, description, isd, sku, unit_price, stock, date_created) VALUES ((SELECT id FROM departments WHERE department='$department'), (SELECT id FROM formats WHERE format='$format'), '$product_name', '$theatre_date', '$description', '$isd', '$sku', '$price', '$stock', NOW())";
+            for ($i = 0; $i < count($writers_id); $i++) {
+                $q = "INSERT INTO products_writers (product_id, writer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $writers_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            }
 
-                #$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            for ($i = 0; $i < count($dps_id); $i++) {
+                $q = "INSERT INTO products_dps (product_id, dp_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $dps_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            }
 
-                if (mysqli_affected_rows($dbc) == 1) {
+            for ($i = 0; $i < count($studios_id); $i++) {
+                $q = "INSERT INTO products_studios (product_id, studio_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $studios_id[$i] . ")";
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            }
 
-                    $q = "INSERT INTO suppliers_products (supplier_id, product_id) VALUES ({$_SESSION['id']}, (SELECT id FROM products WHERE isd='$isd'))";
-                    
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+            if (mysqli_affected_rows($dbc) == 1) {
 
-                    if (mysqli_affected_rows($dbc) == 1) {
+                echo '<h3>Thank you for entering your product!</h3>';
+                include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html');
 
-                        for ($i = 0; $i < count($genres_id); $i++) {
-                            $q = "INSERT INTO products_genres (product_id, genre_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $genres_id[$i] . ")";
-                            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
-                        }
+                exit();
 
-                        if (mysqli_affected_rows($dbc) == 1) {
+            } else {
+                echo '<p class="text-danger">An error occured. Please contact the website administrator. We apologize for any inconvenience.</p>';
+            }
 
-                            for ($i = 0; $i < count($directors_id); $i++) {
-                                $q = "INSERT INTO products_directors (product_id, director_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $directors_id[$i] . ")";
-                                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-                            }
-
-                            if (mysqli_affected_rows($dbc) == 1) {
-
-                                for ($i = 0; $i < count($actors_id); $i++) {
-                                    $q = "INSERT INTO products_actors (product_id, actor_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $actors_id[$i] . ")";
-                                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-                                }
-
-                                if (mysqli_affected_rows($dbc) == 1) {
-
-                                    for ($i = 0; $i < count($producers_id); $i++) {
-                                        $q = "INSERT INTO products_producers (product_id, producer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $producers_id[$i] . ")";
-                                        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
-                                    }
-
-                                    if (mysqli_affected_rows($dbc) == 1) {
-
-                                        for ($i = 0; $i < count($writers_id); $i++) {
-                                            $q = "INSERT INTO products_writers (product_id, writer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $writers_id[$i] . ")";
-                                            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
-                                        }
-
-                                        if (mysqli_affected_rows($dbc) == 1) {
-
-                                            for ($i = 0; $i < count($dps_id); $i++) {
-                                                $q = "INSERT INTO products_dps (product_id, dp_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $dps_id[$i] . ")";
-                                                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
-                                            }
-
-                                            if (mysqli_affected_rows($dbc) == 1) {
-
-                                                for ($i = 0; $i < count($studios_id); $i++) {
-                                                    $q = "INSERT INTO products_studios (product_id, studio_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $studios_id[$i] . ")";
-                                                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
-                                                }
-
-                                                if (mysqli_affected_rows($dbc) == 1) {
-                                                    echo '<h3>Thank you for entering your product!</h3>';
-                                                    include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html');
-                                                    exit();
-                                                } else {
-                                                    echo '<p class="text-danger">An error occured. Please contact the website administrator. We apologize for any inconvenience.</p>';
-                                                }
-
-                                            } else {
-                                                echo '<p class="text-danger">An error occured. Could not save the studio(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
-                                            }
-
-                                        } else {
-                                            echo '<p class="text-danger">An error occured. Could not save the cinematographer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
-                                        }
-
-                                    } else {
-                                        echo '<p class="text-danger">An error occured. Could not save the writer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
-                                    }
-
-                                } else {
-                                    echo '<p class="text-danger">An error occured. Could not save the producer(s). Please contact the website administrator. We apologize for any inconvenience.</p>';
-                                }
-
-                            } else {
-                                echo '<p class="text-danger">An error occured. Could not save the actor(s). Please contact the website adminstrator. We apologize for any inconvenience.</p>';
-                            }
-
-                        } else {
-                            echo '<p class="text-danger">An error occured. Could not save the genres. Please contact the website administrator. We apologize for any inconvenience.</p>';
-                        }
-
-                    } else {
-                        echo '<p class="text-danger">An error occured. Could not save the product. Please contact the website administrator. We apologize for any inconvenience.</p>';
-                    }
-
-                } else {
-                    echo '<p class="text-danger">One or more of the values of department, format, product title, theatrical release date, description, SKU, price, and/or amount of units could be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
-                }
-
-            #} else {
-            #    echo '<p class="text-danger">One or more of the values of ratings, edition, discs, home media release date, and/or extra descriptions could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
-            #}
-
-        #} else {
-        #    echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
-        #}
+        } else {
+            echo '<p class="text-danger">The Product Specs could not be saved. Either input correctly, or contact the website administrator. We apologize for any inconvenience.</p>';
+        }
 
     } else {
         echo '<p class="text-danger">Please try again.</p>';
