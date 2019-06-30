@@ -589,38 +589,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error " . mysqli_error($dbc));
 
             for ($i = 0; $i < count($genres_id); $i++) {
-                $q = "INSERT INTO products_genres (product_id, genre_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $genres_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                $q2 = "INSERT INTO products_genres (product_id, genre_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $genres_id[$i] . ")";
+                $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q2\n<br>MySQL Error " . mysqli_error($dbc));
             }
 
             for ($i = 0; $i < count($directors_id); $i++) {
-                $q = "INSERT INTO products_directors (product_id, director_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $directors_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+                $q3 = "INSERT INTO products_directors (product_id, director_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $directors_id[$i] . ")";
+                $r3 = mysqli_query($dbc, $q3) or trigger_error("Query: $q3\n<br>MySQL Error: " . mysqli_error($dbc));
             }
 
             for ($i = 0; $i < count($actors_id); $i++) {
-                $q = "INSERT INTO products_actors (product_id, actor_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $actors_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+                $q4 = "INSERT INTO products_actors (product_id, actor_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $actors_id[$i] . ")";
+                $r4 = mysqli_query($dbc, $q4) or trigger_error("Query: $q4\n<br>MySQL Error: " . mysqli_error($dbc));
             }
 
             for ($i = 0; $i < count($producers_id); $i++) {
-                $q = "INSERT INTO products_producers (product_id, producer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $producers_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                $q5 = "INSERT INTO products_producers (product_id, producer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $producers_id[$i] . ")";
+                $r5 = mysqli_query($dbc, $q5) or trigger_error("Query: $q5\n<br>MySQL Error " . mysqli_error($dbc));
             }
 
             for ($i = 0; $i < count($writers_id); $i++) {
-                $q = "INSERT INTO products_writers (product_id, writer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $writers_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                $q6 = "INSERT INTO products_writers (product_id, writer_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $writers_id[$i] . ")";
+                $r6 = mysqli_query($dbc, $q6) or trigger_error("Query: $q6\n<br>MySQL Error " . mysqli_error($dbc));
             }
 
             for ($i = 0; $i < count($dps_id); $i++) {
-                $q = "INSERT INTO products_dps (product_id, dp_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $dps_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                $q7 = "INSERT INTO products_dps (product_id, dp_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $dps_id[$i] . ")";
+                $r7 = mysqli_query($dbc, $q7) or trigger_error("Query: $q7\n<br>MySQL Error " . mysqli_error($dbc));
             }
 
             for ($i = 0; $i < count($studios_id); $i++) {
-                $q = "INSERT INTO products_studios (product_id, studio_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $studios_id[$i] . ")";
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+                $q8 = "INSERT INTO products_studios (product_id, studio_id) VALUES ((SELECT id FROM products WHERE isd='$isd'), " . $studios_id[$i] . ")";
+                $r8 = mysqli_query($dbc, $q8) or trigger_error("Query: $q8\n<br>MySQL Error " . mysqli_error($dbc));
             }
 
             if (mysqli_affected_rows($dbc) == 1) {
