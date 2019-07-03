@@ -31,6 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $allowed_ext = array('jpg', 'jpeg', 'png');
 
+    if (in_array($file_real_ext, $allowed_ext)) {
+
+    } else {
+        echo '<p class="text-danger">You cannot upload files of this type! Must be in either .jpg, .jpeg, or .png!</p>';
+    }
+
 }
 
 ?>
