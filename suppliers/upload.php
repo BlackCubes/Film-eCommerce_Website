@@ -16,4 +16,8 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/config.inc.php');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+}
+
 ?>
