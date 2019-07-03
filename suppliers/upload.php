@@ -33,7 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (in_array($file_real_ext, $allowed_ext)) {
         if ($file_error === 0) {
+            if ($file_size < 2000) {
 
+            } else {
+                echo '<p class="text-danger">Your file is too big!</p>'
+            }
         } else {
             echo '<p class="text-danger">There was an error uploading your file!</p>';
         }
