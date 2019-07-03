@@ -14,7 +14,7 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
-require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/config.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
