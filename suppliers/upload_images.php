@@ -18,7 +18,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/co
 
 $page_title = 'Upload Images';
 
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
 
 ?>
 
@@ -28,4 +28,4 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/header.html
     <input type="submit" name="submit" value="Upload Image">
 </form>
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/footer.html'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html'); ?>
