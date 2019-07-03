@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($file_size < 2000) {
 
             } else {
-                echo '<p class="text-danger">Your file is too big!</p>'
+                echo '<p class="text-danger">Your file is too big!</p>';
             }
         } else {
             echo '<p class="text-danger">There was an error uploading your file!</p>';
