@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (in_array($file_real_ext, $allowed_ext)) {
         if ($file_error === 0) {
-            if ($file_size < 2000) {
+            if ($file_size < 2000000) {
 
                 $file_new_name = uniqid('', TRUE) . '.' . $file_real_ext;
 
