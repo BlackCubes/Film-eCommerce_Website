@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $file_new_name = uniqid('', TRUE) . '.' . $file_real_ext;
 
-                $file_destination = $_SERVER['DOCUMENT_ROOT'] . 'FilmIndustry/uploads/' . $file_new_name;
+                $file_destination = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/' . $file_new_name;
 
                 move_uploaded_file($file_tmp_name, $file_destination);
 
