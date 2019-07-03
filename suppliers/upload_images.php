@@ -24,7 +24,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/header.html
 
 <h1>Upload Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-
+    <input type="file" name="upload_file">
+    <input type="submit" name="submit" value="Upload Image">
 </form>
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/footer.html'); ?>
