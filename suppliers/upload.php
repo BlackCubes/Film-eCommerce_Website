@@ -29,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $file_ext = explode('.', $file_name);
     $file_real_ext = strtolower(end($file_ext));
 
+    $allowed_ext = array('jpg', 'jpeg', 'png');
+
 }
 
 ?>
