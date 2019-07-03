@@ -14,6 +14,10 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/config.inc.php');
+
+$page_title = 'Upload Images';
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/header.html');
 
 ?>
