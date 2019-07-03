@@ -14,4 +14,8 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/header.html');
+
 ?>
+
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/footer.html'); ?>
