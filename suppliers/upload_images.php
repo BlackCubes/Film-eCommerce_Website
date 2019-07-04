@@ -16,7 +16,7 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
-$page_title = 'Upload Images';
+$page_title = 'Upload Product Images';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
 
@@ -24,7 +24,7 @@ require(MYSQL);
 
 ?>
 
-<h1>Upload Images</h1>
+<h1>Upload Your Product Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
     <input type="file" name="upload_file">
     <input type="submit" name="submit" value="Upload Image">
