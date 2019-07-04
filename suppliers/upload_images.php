@@ -22,7 +22,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
 
 require(MYSQL);
 
-if (!isset($_GET['id'])) {
+if (!isset($_SESSION['id'])) {
 
     $url = BASE_URL . 'index.php';
     ob_end_clean();
