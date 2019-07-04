@@ -40,13 +40,13 @@ $products = mysqli_fetch_array($r, MYSQLI_ASSOC);
 if (empty($products['image_1'])) {
     $image_1 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
 } else {
-    $image_1 = $products['image_1'];
+    $image_1 = '/FilmIndustry/uploads/' . $products['image_1'];
 }
 
 if (empty($products['image_2'])) {
     $image_2 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
 } else {
-    $image_2 = $products['image_2'];
+    $image_2 = '/FilmIndustry/uploads/' . $products['image_2'];
 }
 
 ?>
@@ -63,7 +63,8 @@ if (empty($products['image_2'])) {
                 <td><?php echo $products['name']; ?></td>
                 <td><?php echo $products['sku']; ?></td>
                 <td><?php echo $products['stock']; ?></td>
-                <td></td>
+                <td><img src="<?php echo $image_1; ?>" alt="First Image"></td>
+                <td><img src="<?php echo $image_2; ?>" alt="Second Image"></td>
             </tr>
         </tbody>
     </table>
