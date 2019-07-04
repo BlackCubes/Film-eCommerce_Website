@@ -67,8 +67,8 @@ if (empty($products['image_2'])) {
                 <td><?php echo $products['name']; ?></td>
                 <td><?php echo $products['sku']; ?></td>
                 <td><?php echo $products['stock']; ?></td>
-                <td><img src="<?php echo $image_1; ?>" alt="First Image"></td>
-                <td><img src="<?php echo $image_2; ?>" alt="Second Image"></td>
+                <td><img src="<?php echo $image_1; ?>" alt="First Image" width="280" height="280"></td>
+                <td><img src="<?php echo $image_2; ?>" alt="Second Image" width="280" height="280"></td>
             </tr>
         </tbody>
     </table>
