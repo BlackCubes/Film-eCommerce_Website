@@ -22,6 +22,15 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
 
 require(MYSQL);
 
+if (!isset($_GET['id'])) {
+
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+
+}
+
 ?>
 
 <h1>Upload Your Product Images</h1>
