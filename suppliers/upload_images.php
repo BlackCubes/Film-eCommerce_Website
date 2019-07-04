@@ -20,6 +20,8 @@ $page_title = 'Upload Images';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/header.html');
 
+require(MYSQL);
+
 ?>
 
 <h1>Upload Images</h1>
