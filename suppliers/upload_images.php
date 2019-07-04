@@ -55,7 +55,11 @@ if (empty($products['image_2'])) {
     <table>
         <thead>
             <tr>
-                <th>Your Current Products</th>
+                <th>Product Name</th>
+                <th>SKU</th>
+                <th>Stock</th>
+                <th>First Image</th>
+                <th>Second Image</th>
             </tr>
         </thead>
         <tbody>
