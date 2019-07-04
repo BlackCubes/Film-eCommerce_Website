@@ -52,7 +52,7 @@ if (empty($products['image_2'])) {
 ?>
 <h1>Upload Your Product Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    <table>
+    <table style="width:100%">
         <thead>
             <tr>
                 <th>Product Name</th>
