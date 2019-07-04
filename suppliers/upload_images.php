@@ -26,6 +26,18 @@ require(MYSQL);
 
 <h1>Upload Your Product Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
+    <table>
+        <thead>
+            <tr>
+                <th>Your Current Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
     <input type="file" name="upload_file">
     <input type="submit" name="submit" value="Upload Image">
 </form>
