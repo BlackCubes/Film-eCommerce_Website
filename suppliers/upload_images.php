@@ -37,6 +37,18 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
 
 $products = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
+if (empty($products['image_1'])) {
+    $image_1 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
+} else {
+    $image_1 = $products['image_1'];
+}
+
+if (empty($products['image_2'])) {
+    $image_2 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
+} else {
+    $image_2 = $products['image_2'];
+}
+
 ?>
 <h1>Upload Your Product Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -48,6 +60,9 @@ $products = mysqli_fetch_array($r, MYSQLI_ASSOC);
         </thead>
         <tbody>
             <tr>
+                <td><?php echo $products['name']; ?></td>
+                <td><?php echo $products['sku']; ?></td>
+                <td><?php echo $products['stock']; ?></td>
                 <td></td>
             </tr>
         </tbody>
