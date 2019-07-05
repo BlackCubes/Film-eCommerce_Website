@@ -63,18 +63,26 @@ if (empty($products['image_2'])) {
             </tr>
         </thead>
         <tbody>
-            <tr>
             <?php while ($products): ?>
+            <tr>
                 <td><?php echo $products['name']; ?></td>
                 <td><?php echo $products['sku']; ?></td>
                 <td><?php echo $products['stock']; ?></td>
                 <td><img src="<?php echo $image_1; ?>" alt="First Image" width="100" height="100"></td>
                 <td><img src="<?php echo $image_2; ?>" alt="Second Image" width="100" height="100"></td>
-            <?php endwhile; mysqli_free_result($r); mysqli_close($dbc); ?>
             </tr>
+            <?php endwhile; ?>
         </tbody>
     </table>
     <input type="file" name="upload_file">
     <input type="submit" name="submit" value="Upload Image">
 </form>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html'); ?>
+<?php
+
+mysqli_free_result($r);
+
+mysqli_close($dbc);
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/footer.html');
+
+?>
