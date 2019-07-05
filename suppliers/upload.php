@@ -19,7 +19,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $file_1 = $_FILES['file_1'];
-    $file_2 = $_FILES['file_2']
+    $file_2 = $_FILES['file_2'];
 
     $file_name_1 = $_FILES['file_1']['name'];
     $file_tmp_name_1 = $_FILES['file_1']['tmp_name'];
