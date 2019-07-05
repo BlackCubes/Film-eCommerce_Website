@@ -18,6 +18,15 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    if (!isset($_SESSION['id'])) {
+
+        $url = BASE_URL . 'index.php';
+        ob_end_clean();
+        header("Location: $url");
+        exit();
+
+    }
+
     $file_1 = $_FILES['file_1'];
     $file_2 = $_FILES['file_2'];
 
