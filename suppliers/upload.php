@@ -18,32 +18,45 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $file = $_FILES['upload_file'];
+    $file_1 = $_FILES['file_1'];
+    $file_2 = $_FILES['file_2']
 
-    $file_name = $_FILES['upload_file']['name'];
-    $file_tmp_name = $_FILES['upload_file']['tmp_name'];
-    $file_size = $_FILES['upload_file']['size'];
-    $file_error = $_FILES['upload_file']['error'];
-    $file_type = $_FILES['upload_file']['type'];
+    $file_name_1 = $_FILES['file_1']['name'];
+    $file_tmp_name_1 = $_FILES['file_1']['tmp_name'];
+    $file_size_1 = $_FILES['file_1']['size'];
+    $file_error_1 = $_FILES['file_1']['error'];
+    $file_type_1 = $_FILES['file_1']['type'];
 
-    $file_ext = explode('.', $file_name);
-    $file_real_ext = strtolower(end($file_ext));
+    $file_name_2 = $_FILES['file_2']['name'];
+    $file_tmp_name_2 = $_FILES['file_2']['tmp_name'];
+    $file_size_2 = $_FILES['file_2']['size'];
+    $file_error_2 = $_FILES['file_2']['error'];
+    $file_type_2 = $_FILES['file_2']['type'];
+
+    $file_ext_1 = explode('.', $file_name_1);
+    $file_real_ext_1 = strtolower(end($file_ext_1));
+
+    $file_ext_2 = explode('.', $file_name_2);
+    $file_real_ext_2 = strtolower(end($file_ext_2));
 
     $allowed_ext = array('jpg', 'jpeg', 'png');
 
-    if (in_array($file_real_ext, $allowed_ext)) {
-        if ($file_error === 0) {
-            if ($file_size < 2000000) {
+    if (in_array($file_real_ext_1, $allowed_ext) && in_array($file_real_ext_2, $allowed_ext)) {
+        if ($file_error_1 === 0 && $file_error_2 === 0) {
+            if ($file_size_1 < 2000000 && $file_size_2 < 2000000) {
 
                 require(MYSQL);
 
-                $file_new_name = uniqid('', TRUE) . '.' . $file_real_ext;
+                $file_new_name_1 = uniqid('', TRUE) . '.' . $file_real_ext_1;
+                $file_new_name_2 = uniqid('', TRUE) . '.' . $file_real_ext_2;
 
                 $q = "UPDATE products AS p SET image_1='{$file_new_name_1}' AND image_2='{$file_new_name_2}' JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']} AND p.id={$_POST['isd']}";
 
-                $file_destination = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/products/' . $file_new_name;
+                $file_destination_1 = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/products/' . $file_new_name_1;
+                $file_destination_2 = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/products/' . $file_new_name_2;
 
-                move_uploaded_file($file_tmp_name, $file_destination);
+                move_uploaded_file($file_tmp_name_1, $file_destination_1);
+                move_uploaded_file($file_tmp_name_2, $file_destination_2);
 
                 header("Location: upload_images.php");
 
