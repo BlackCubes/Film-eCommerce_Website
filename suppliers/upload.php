@@ -18,8 +18,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    require(MYSQL);
-
     $file = $_FILES['upload_file'];
 
     $file_name = $_FILES['upload_file']['name'];
@@ -36,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (in_array($file_real_ext, $allowed_ext)) {
         if ($file_error === 0) {
             if ($file_size < 2000000) {
+
+                require(MYSQL);
 
                 $file_new_name = uniqid('', TRUE) . '.' . $file_real_ext;
 
