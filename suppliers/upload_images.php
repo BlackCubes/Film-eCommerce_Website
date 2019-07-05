@@ -35,20 +35,6 @@ $q = "SELECT name, sku, stock, image_1, image_2 FROM products AS p JOIN supplier
 
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-$products = mysqli_fetch_array($r, MYSQLI_ASSOC);
-
-if (empty($products['image_1'])) {
-    $image_1 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
-} else {
-    $image_1 = '/FilmIndustry/uploads/' . $products['image_1'];
-}
-
-if (empty($products['image_2'])) {
-    $image_2 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
-} else {
-    $image_2 = '/FilmIndustry/uploads/' . $products['image_2'];
-}
-
 ?>
 <h1>Upload Your Product Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -63,15 +49,27 @@ if (empty($products['image_2'])) {
             </tr>
         </thead>
         <tbody>
-            <?php while ($products): ?>
-            <tr>
-                <td><?php echo $products['name']; ?></td>
-                <td><?php echo $products['sku']; ?></td>
-                <td><?php echo $products['stock']; ?></td>
-                <td><img src="<?php echo $image_1; ?>" alt="First Image" width="100" height="100"></td>
-                <td><img src="<?php echo $image_2; ?>" alt="Second Image" width="100" height="100"></td>
-            </tr>
-            <?php endwhile; ?>
+            <?php
+            
+            while ($products = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+                if (empty($products['image_1'])) {
+                    $image_1 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
+                } else {
+                    $image_1 = '/FilmIndustry/uploads/' . $products['image_1'];
+                }
+
+                if (empty($products['image_2'])) {
+                    $image_2 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
+                } else {
+                    $image_2 = '/FilmIndustry/uploads/' . $products['image_2'];
+                }
+
+                echo '<tr><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td>' . $products['stock'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"></td></tr>';
+
+            }
+
+            ?>
         </tbody>
     </table>
     <input type="file" name="upload_file">
