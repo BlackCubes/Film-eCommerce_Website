@@ -31,7 +31,7 @@ if (!isset($_SESSION['id'])) {
 
 }
 
-$q = "SELECT name, sku, image_1, image_2 FROM products AS p JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']}";
+$q = "SELECT id, name, sku, image_1, image_2 FROM products AS p JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']}";
 
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -64,7 +64,7 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
                     $image_2 = '/FilmIndustry/uploads/products/' . $products['image_2'];
                 }
 
-                echo '<tr><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"><p><input type="file" name="file_1"></p></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"><p><input type="file" name="file_2"></p></td></tr>';
+                echo '<tr><input type="hidden" name="id" value="' . $products['id'] . '"><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"><p><input type="file" name="file_1"></p></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"><p><input type="file" name="file_2"></p></td></tr>';
 
             }
 
