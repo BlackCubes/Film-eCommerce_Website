@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $file_new_name = uniqid('', TRUE) . '.' . $file_real_ext;
 
-                $q = "UPDATE products AS p SET image_1='{$file_new_name_1}' AND image_2='{$file_new_name_2}' JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']} AND p.id={$_POST['id']}";
+                $q = "UPDATE products AS p SET image_1='{$file_new_name_1}' AND image_2='{$file_new_name_2}' JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']} AND p.id={$_POST['isd']}";
 
                 $file_destination = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/products/' . $file_new_name;
 
