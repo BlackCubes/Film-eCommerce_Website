@@ -65,14 +65,13 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
                     $image_2 = '/FilmIndustry/uploads/' . $products['image_2'];
                 }
 
-                echo '<tr><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td>' . $products['stock'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"></td></tr>';
+                echo '<tr><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td>' . $products['stock'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"><input type="file" name="file_1"></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"><input type="file" name="file_2"></td></tr>';
 
             }
 
             ?>
         </tbody>
     </table>
-    <input type="file" name="upload_file">
     <input type="submit" name="submit" value="Upload Image">
 </form>
 <?php
