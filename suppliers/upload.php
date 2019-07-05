@@ -18,6 +18,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    require(MYSQL);
+
     $file = $_FILES['upload_file'];
 
     $file_name = $_FILES['upload_file']['name'];
