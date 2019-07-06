@@ -20,7 +20,7 @@ $page_title="Logout";
 
 include('includes/header.html');
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['supplier_id'])) {
 
     $url = BASE_URL . 'index.php';
     ob_end_clean();
