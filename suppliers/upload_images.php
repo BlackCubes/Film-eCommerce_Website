@@ -68,11 +68,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 if (move_uploaded_file($file_tmp_name_1, $file_destination_1) && move_uploaded_file($file_tmp_name_2, $file_destination_2)) {
 
-                    $q = "INSERT INTO products AS p (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id WHERE s.id={$_SESSION['id']} AND p.isd='{$_POST['isd']}'";
+                    $q = "INSERT INTO products AS p (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id WHERE s.id={$_SESSION['id']} AND p.id='{$_SESSION['product_id']}'";
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
                     if (mysqli_affected_rows($dbc) == 1) {
+
+                        unset($_SESSION['product_id']);
 
                         header("Location: upload_images.php");
 
