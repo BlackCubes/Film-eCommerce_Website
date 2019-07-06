@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (password_verify($p, $pass)) {
                 
-                $_SESSION['id'] = $supplier_id;
+                $_SESSION['supplier_id'] = $supplier_id;
                 mysqli_close($dbc);
 
                 $url = BASE_URL . 'suppliers/index.php';
