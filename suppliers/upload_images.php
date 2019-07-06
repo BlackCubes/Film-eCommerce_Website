@@ -31,10 +31,6 @@ if (!isset($_SESSION['id'])) {
 
 }
 
-$q = "SELECT isd, name, sku, image_1, image_2 FROM products AS p JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']}";
-
-$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-
 ?>
 <h1>Upload Your Product Images</h1>
 <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -49,6 +45,10 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
         </thead>
         <tbody>
             <?php
+
+            $q = "SELECT isd, name, sku, image_1, image_2 FROM products AS p JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']}";
+
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             
             while ($products = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
