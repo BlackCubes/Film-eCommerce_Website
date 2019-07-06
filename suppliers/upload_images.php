@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 if (move_uploaded_file($file_tmp_name_1, $file_destination_1) && move_uploaded_file($file_tmp_name_2, $file_destination_2)) {
 
-                    $q = "INSERT INTO products AS p (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']} AND p.id=(SELECT id FROM p WHERE isd={$_POST['isd']})";
+                    $q = "INSERT INTO products AS p (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id WHERE s.id={$_SESSION['id']} AND p.isd='{$_POST['isd']}'";
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
@@ -110,11 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <tbody>
             <?php
 
-            $q = "SELECT isd, name, sku, image_1, image_2 FROM products AS p JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']}";
+            $q = "SELECT id, name, sku, image_1, image_2 FROM products AS p JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']}";
 
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             
             while ($products = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+                $_SESSION['product_id'] = $products['id'];
 
                 if (empty($products['image_1'])) {
                     $image_1 = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
@@ -128,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $image_2 = '/FilmIndustry/uploads/products/' . $products['image_2'];
                 }
 
-                echo '<tr><input type="hidden" name="isd" value="' . $products['isd'] . '"><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"><p><input type="file" name="file_1"></p></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"><p><input type="file" name="file_2"></p></td></tr>';
+                echo '<tr><td>' . $products['name'] . '</td><td>' . $products['sku'] . '</td><td><img src="' . $image_1 . '" alt="First Image" width="100" height="100"><p><input type="file" name="file_1"></p></td><td><img src="' . $image_2 . '" alt="Second Image" width="100" height="100"><p><input type="file" name="file_2"></p></td></tr>';
 
             }
 
