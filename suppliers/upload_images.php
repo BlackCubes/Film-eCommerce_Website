@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 move_uploaded_file($file_tmp_name_1, $file_destination_1);
                 move_uploaded_file($file_tmp_name_2, $file_destination_2);
 
-                header("Location: upload_images.php?success");
+                header("Location: upload_images.php");
 
             } else {
                 echo '<p class="text-danger">Your file is too big!</p>';
