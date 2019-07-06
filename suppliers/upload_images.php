@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 if (move_uploaded_file($file_tmp_name_1, $file_destination_1) && move_uploaded_file($file_tmp_name_2, $file_destination_2)) {
 
-                    $q = "INSERT INTO products (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') WHERE id={$_SESSION['product_id']}";
+                    $q = "UPDATE products SET image_1='{$file_new_name_1}', image_2='{$file_new_name_2}' WHERE id={$_SESSION['product_id']}";
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
