@@ -22,7 +22,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/suppliers/includes/he
 
 require(MYSQL);
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['supplier_id'])) {
 
     $url = BASE_URL . 'index.php';
     ob_end_clean();
@@ -584,7 +584,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_affected_rows($dbc) == 1) {
 
-            $q1 = "INSERT INTO suppliers_products (supplier_id, product_id) VALUES ({$_SESSION['id']}, ({$product_id}))";
+            $q1 = "INSERT INTO suppliers_products (supplier_id, product_id) VALUES ({$_SESSION['supplier_id']}, ({$product_id}))";
                     
             $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error " . mysqli_error($dbc));
 
