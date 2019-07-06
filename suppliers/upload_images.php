@@ -72,12 +72,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
+                    if (mysqli_affected_rows($dbc) == 1) {
+
+                        header("Location: upload_images.php");
+
+                    } else {
+                        echo '<p class="text-danger">An error occured. Please contact the website administrator. We apologize for any inconvenience.</p>';
+                    }
+
                 } else {
                     echo '<p class="text-danger">Sorry, but there was an error uploading your file!</p>';
                 }
-
-                header("Location: upload_images.php");
-
             } else {
                 echo '<p class="text-danger">Your file is too big!</p>';
             }
