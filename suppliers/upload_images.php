@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $file_new_name_1 = uniqid('', TRUE) . '.' . $file_real_ext_1;
                 $file_new_name_2 = uniqid('', TRUE) . '.' . $file_real_ext_2;
 
-                $q = "UPDATE products AS p SET image_1='{$file_new_name_1}' AND image_2='{$file_new_name_2}' JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']} AND p.id={$_POST['isd']}";
+                $q = "INSERT INTO products AS p (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') JOIN suppliers_products AS sp ON p.id=sp.product_id JOIN suppliers AS s ON sp.supplier_id=s.id AND s.id={$_SESSION['id']} AND p.isd={$_POST['isd']}";
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
                 $file_destination_1 = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/products/' . $file_new_name_1;
