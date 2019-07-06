@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $q = "INSERT INTO products (image_1, image_2) VALUES ('{$file_new_name_1}', '{$file_new_name_2}') WHERE id={$_SESSION['product_id']}";
 
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
+                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
                     if (mysqli_affected_rows($dbc) == 1) {
 
