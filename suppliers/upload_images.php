@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <h1>Upload Your Product Images</h1>
 <form action="upload_images.php" method="post" enctype="multipart/form-data">
-    <table style="width:100%">
+    <table style="width:90%">
         <thead>
             <tr>
                 <th>Product Name</th>
