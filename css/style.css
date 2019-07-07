@@ -22,6 +22,7 @@
 
 .main-navbar ul li a:hover {
     background-color: darkmagenta;
+    border-right: 1px solid white;
 }
 
 /* MAIN CONTAINER */
