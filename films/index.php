@@ -23,5 +23,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 require(MYSQL);
 
 ?>
-
+<div class="container">
+    <div class="sidebar-a"></div>
+    <div class="main-product"></div>
+    <div class="sidebar-b"></div>
+</div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
