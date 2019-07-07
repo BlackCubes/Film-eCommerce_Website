@@ -1,0 +1,14 @@
+.sidebar-a, .sidebar-b {
+    grid-area: sidebar;
+}
+
+.main-product {
+    grid-area: main;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar main sidebar";
+}
