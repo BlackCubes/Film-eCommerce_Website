@@ -1,6 +1,6 @@
 /* MAIN NAVBAR */
 
-nav ul {
+.main-navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -8,11 +8,11 @@ nav ul {
     background-color: whitesmoke;
 }
 
-nav ul li {
+.main-navbar ul li {
     float: left;
 }
 
-nav ul li a {
+.main-navbar ul li a {
     display: block;
     color: black;
     text-align: center;
@@ -20,7 +20,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a:hover {
+.main-navbar ul li a:hover {
     background-color: magenta;
 }
 
