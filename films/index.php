@@ -32,7 +32,7 @@ require(MYSQL);
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<img src="/FilmIndustry/uploads/products/' . $product['image_1'] .'" alt="#"><p>' . $product['name'] . '</p>' . $product['format'] . $product['unit_price'];
+            echo '<img src="/FilmIndustry/uploads/products/' . $product['image_1'] .'" style="max-width:280px;max-height:280px"; alt="#"><p>' . $product['name'] . '</p>' . $product['format'] . $product['unit_price'];
         }
 
         ?>
