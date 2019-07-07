@@ -1,5 +1,12 @@
 /* MAIN NAVBAR */
 
+.main-navbar {
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .main-navbar ul {
     list-style-type: none;
     margin: 0;
