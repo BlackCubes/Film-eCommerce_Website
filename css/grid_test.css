@@ -1,6 +1,28 @@
 /* MAIN NAVBAR */
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
 
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: magenta;
+}
 
 /* MAIN CONTAINER */
 
