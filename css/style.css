@@ -1,9 +1,10 @@
 /* MAIN NAVBAR */
 
 header {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
     background-color: aliceblue;
 }
 
