@@ -8,6 +8,15 @@ header {
     background-color: aliceblue;
 }
 
+.topnav {
+    list-style: none;
+}
+
+.topnav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
 /* MAIN CONTAINER */
 
 .sidebar-a, .sidebar-b {
