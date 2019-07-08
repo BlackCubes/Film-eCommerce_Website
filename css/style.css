@@ -44,3 +44,10 @@ header {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto;
 }
+
+.container .sidebar-a p {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+}
