@@ -55,6 +55,27 @@ require(MYSQL);
             echo '<p>' . $director['first_name'] . ' ' . $director['middle_name'] . ' ' . $director['last_name'] . '</p>';
         }
 
+        $q = "SELECT first_name, middle_name, last_name FROM writers ORDER BY last_name";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Writers</b></p>';
+        while ($writer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $writer['first_name'] . ' ' . $writer['middle_name'] . ' ' . $writer['last_name'] . '</p>';
+        }
+
+        $q = "SELECT first_name, middle_name, last_name FROM producers ORDER BY last_name";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Producers</b></p>';
+        while ($producer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $producer['first_name'] . ' ' . $producer['middle_name'] . ' ' . $producer['last_name'] . '</p>';
+        }
+
+        $q = "SELECT first_name, middle_name, last_name FROM dps ORDER BY last_name";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Cinematographers</b></p>';
+        while ($dp = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $dp['first_name'] . ' ' . $dp['middle_name'] . ' ' . $dp['last_name'] . '</p>';
+        }
+
         ?>
     </div>
     <div class="main-product">
