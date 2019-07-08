@@ -1,13 +1,13 @@
 /* MAIN NAVBAR */
 
-.main-navbar {
+.topnav {
     min-width: 100%;
     position: fixed;
     top: 0;
     left: 0;
 }
 
-.main-navbar ul {
+.topnav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,15 +15,19 @@
     background-color: black;
 }
 
-.main-navbar ul li:first-child {
+.topnav ul li:first-child {
     float: left;
 }
 
-.main-navbar ul li {
-    float: left;
+.topnav-centered ul li {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.main-navbar ul li a {
+.topnav ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -31,7 +35,7 @@
     text-decoration: none;
 }
 
-.main-navbar ul li a:hover {
+.topnav ul li a:hover {
     background-color: darkmagenta;
     border-right: 1px solid white;
 }
