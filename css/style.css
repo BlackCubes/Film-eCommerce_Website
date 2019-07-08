@@ -15,11 +15,11 @@
     background-color: black;
 }
 
-.topnav ul li {
+.topnav ul li a {
     float: left;
 }
 
-.topnav-centered ul li {
+.topnav-centered li a {
     float: none;
     position: absolute;
     top: 50%;
@@ -27,7 +27,7 @@
     transform: translate(-50%, -50%);
 }
 
-.topnav-right {
+.topnav-right li a {
     float: right;
 }
 
