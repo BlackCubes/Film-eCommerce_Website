@@ -51,3 +51,7 @@ header {
     font-size: 12px;
     color: black;
 }
+
+.container .sidebar-a .results {
+    padding-top: 1px;
+}
