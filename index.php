@@ -14,17 +14,16 @@ include(__DIR__.'\includes\header.html');
 <!-- Maybe for the CSS, don't need the id's? Maybe could call it from the div or class instead? -->
 <!-- Later, delete the id's of leftSide, rightSide, televisionHeadline, and filmHeadline from CSS -->
 <!-- TV -->
-<section id="section0"> <!-- "What do you like more?" -->
+<!--<section id="section0">
     <div class="container-fluid">
-        <article>  <!-- Do we need to have article's? -->
+        <article>
             <h1 class="product-headline">Television</h1>
             <h6 class="product-subheadline">Time after time, creativity on storytelling has brought new forms of art.</h6>
         </article>
     </div>
 </section>
-<!-- Bluray -->
-<section id="section1">  <!-- Need to have an id of section? -->
-    <div class="container-fluid">  <!-- Need to have so many container fluids on one page? Can we not condense it? -->
+<section id="section1">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <article>
@@ -34,7 +33,7 @@ include(__DIR__.'\includes\header.html');
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-8">  <!-- a class of "section-content" afterwards? -->
+            <div class="col-8">
                 <figure class="product-image">
                     <div id="carouselBluray" class="carousel slide" data-ride="carousel" data-pause="false">
                         <ol class="carousel-indicators">
@@ -85,11 +84,10 @@ include(__DIR__.'\includes\header.html');
         </div>
     </div>
 </section>
-<!-- DVD -->
 <section id="section2">
     <div class="container-fluid">
         <div class="row">
-            <div class="col"><!-- Too many cols? Is it necessary? -->
+            <div class="col">
                 <h2 class="product-headline">DVD</h2>
                 <h6 class="product-subheadline">The format that began the digital revolution</h6>
             </div>
@@ -140,7 +138,6 @@ include(__DIR__.'\includes\header.html');
         </div>
     </div>
 </section>
-<!-- 4K UHD -->
 <section id="section3">
     <div class="container-fluid">
         <div class="row">
@@ -200,12 +197,12 @@ include(__DIR__.'\includes\header.html');
             <div class="col">
                 <article>
                     <p class="product-paragraph">Just imagine watching Game of Thrones in 4K UHD, bringing you closer to the books</p>
-                    <p class="product-link"><a href="#">Shop</a></p><!-- Shop in article??? -->
+                    <p class="product-link"><a href="#">Shop</a></p>
                 </article>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 <?php
 
