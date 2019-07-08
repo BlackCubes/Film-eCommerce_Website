@@ -1,48 +1,6 @@
 /* MAIN NAVBAR */
 
-.topnav {
-    min-width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 
-.topnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-}
-
-.topnav ul li a {
-    float: left;
-}
-
-.topnav-centered li a {
-    float: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.topnav-right li {
-    float: right;
-}
-
-.topnav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.topnav ul li a:hover {
-    background-color: darkmagenta;
-    border-right: 1px solid white;
-}
 
 /* MAIN CONTAINER */
 
