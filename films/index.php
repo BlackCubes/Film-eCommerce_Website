@@ -24,7 +24,19 @@ require(MYSQL);
 
 ?>
 <div class="container">
-    <div class="sidebar-a"></div>
+    <div class="sidebar-a">
+        <p><b>Genre</b></p>
+        <?php
+
+        $q = "SELECT genre FROM genres ORDER BY genre";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+
+        while ($genre = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $genre['genre'] . '</p>';
+        }
+
+        ?>
+    </div>
     <div class="main-product">
         <?php
 
