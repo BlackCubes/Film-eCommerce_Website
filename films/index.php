@@ -41,6 +41,20 @@ require(MYSQL);
             echo '<p>' . $genre['genre'] . '</p>';
         }
 
+        $q = "SELECT first_name, middle_name, last_name FROM actors ORDER BY last_name";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Actors</b></p>';
+        while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</p>';
+        }
+
+        $q = "SELECT first_name, middle_name, last_name FROM directors ORDER BY last_name";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Directors</b></p>';
+        while ($director = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $director['first_name'] . ' ' . $director['middle_name'] . ' ' . $director['last_name'] . '</p>';
+        }
+
         ?>
     </div>
     <div class="main-product">
