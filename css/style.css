@@ -49,7 +49,8 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "sidebar main sidebar";
+    grid-template-areas:
+        "sidebar main main sidebar";
 }
