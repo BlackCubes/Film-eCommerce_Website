@@ -39,18 +39,8 @@ header {
 
 /* MAIN CONTAINER */
 
-.sidebar-a, .sidebar-b {
-    grid-area: sidebar;
-}
-
-.main-product {
-    grid-area: main;
-}
-
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas:
-        "sidebar main main sidebar";
 }
