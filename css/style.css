@@ -17,6 +17,15 @@ header {
     padding: 0px 20px;
 }
 
+.topnav li a {
+    transition: all 0.3s ease 0s;
+    color: black;
+}
+
+.topnav li a:hover {
+    color: blueviolet;
+}
+
 /* MAIN CONTAINER */
 
 .sidebar-a, .sidebar-b {
