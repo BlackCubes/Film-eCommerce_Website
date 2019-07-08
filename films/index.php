@@ -25,17 +25,18 @@ require(MYSQL);
 ?>
 <div class="container">
     <div class="sidebar-a">
-        <p><b>Genre</b></p>
         <?php
 
         $q = "SELECT format FROM formats ORDER BY format";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Formats</b></p>';
         while ($format = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
             echo '<p>' . $format['format'] . '</p>';
         }
 
         $q = "SELECT genre FROM genres ORDER BY genre";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Genres</b></p>';
         while ($genre = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
             echo '<p>' . $genre['genre'] . '</p>';
         }
