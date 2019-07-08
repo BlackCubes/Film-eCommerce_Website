@@ -28,7 +28,7 @@ require(MYSQL);
         <p><b>Genre</b></p>
         <?php
 
-        $q = "SELECT formats FROM format ORDER BY format";
+        $q = "SELECT format FROM formats ORDER BY format";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         while ($format = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
             echo '<p>' . $format['format'] . '</p>';
