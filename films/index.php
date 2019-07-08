@@ -76,6 +76,13 @@ require(MYSQL);
             echo '<p>' . $dp['first_name'] . ' ' . $dp['middle_name'] . ' ' . $dp['last_name'] . '</p>';
         }
 
+        $q = "SELECT studio_name FROM studios ORDER BY studio_name";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+        echo '<p><b>Studios</b></p>';
+        while ($studio = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+            echo '<p>' . $studio['studio_name'] . '</p>';
+        }
+
         ?>
     </div>
     <div class="main-product">
