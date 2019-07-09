@@ -48,7 +48,7 @@ header {
     z-index: 1;
 }
 
-.topnav ul li a:hover ul li {
+.topnav ul li:hover ul {
     display: block;
 }
 
