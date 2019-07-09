@@ -27,7 +27,7 @@ header {
     text-decoration: none;
 }
 
-.topnav li {
+.topnav ul li {
     display: inline-block;
     position: relative;
     padding: 0px 20px;
