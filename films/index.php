@@ -96,11 +96,11 @@ require(MYSQL);
     <div class="main-product">
         <?php
 
-        $q = "SELECT p.name, f.format, p.unit_price, p.image_1 FROM products AS p JOIN formats AS f ON p.format_id=f.id ORDER BY p.name";
+        $q = "SELECT name, unit_price, image_1 FROM products ORDER BY name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<div class="container-product"><div class="product-image"><img src="/FilmIndustry/uploads/products/' . $product['image_1'] .'" style="max-width:280px;max-height:280px"; alt="#"></div><div class="product-name"><p>' . $product['name'] . '</p></div><div class="product-format">' . $product['format'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
+            echo '<div class="container-product"><div class="product-image"><img src="/FilmIndustry/uploads/products/' . $product['image_1'] .'" style="max-width:280px;max-height:280px"; alt="#"></div><div class="product-name"><p>' . $product['name'] . '</p></div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
         }
 
         ?>
