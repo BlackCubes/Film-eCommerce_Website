@@ -62,6 +62,10 @@ header {
     border-left: 1px solid blueviolet;
 }
 
+.main-product .container-product {
+    padding-left: 12px;
+}
+
 .container-product .product-image img {
     max-width: 240px;
     max-height: 240px;
