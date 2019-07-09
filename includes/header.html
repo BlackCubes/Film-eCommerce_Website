@@ -50,10 +50,23 @@ session_start();
             </li>
             <li><a href="#">Account</a>
                 <ul>
-                    <li>Welcome</li>
-                    <li><a href="/FilmIndustry/eCommerce/login.php">Sign In</a></li>
-                    <li>New? <a href="/FilmIndustry/eCommerce/register.php">Sign Up</a></li>
-                    <li>Forgot Password? <a href="/FilmIndustry/eCommerce/forgot_password.php">Click here</a></li>
+                    <?php
+
+                    echo '<li>Welcome';
+
+                    if (isset($_SESSION['first_name'])) {
+                        echo ", {$_SESSION['first_name']}";
+                    }
+
+                    echo '!</li>';
+
+                    if (isset($_SESSION['id'])) {
+                        echo '<li><a href="#">Profile</a></li><li><a href="/FilmIndustry/eCommerce/change_password.php">Change Password</a></li><li><a href="/FilmIndustry/eCommerce/logout.php">Sign out</a></li>';
+                    } else {
+                        echo '<li><a href="/FilmIndustry/eCommerce/login.php">Sign In</a></li><li>New? <a href="/FilmIndustry/eCommerce/register.php">Sign Up</a></li><li>Forgot Password? <a href="/FilmIndustry/eCommerce/forgot_password.php"></a></li>';
+                    }
+
+                    ?>
                 </ul>
             </li>
         </ul>
