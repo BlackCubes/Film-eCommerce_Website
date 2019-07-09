@@ -105,6 +105,5 @@ require(MYSQL);
 
         ?>
     </div>
-    <div class="sidebar-b"></div>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
