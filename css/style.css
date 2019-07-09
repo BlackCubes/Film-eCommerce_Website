@@ -61,9 +61,9 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.container-product .product-image {
-    max-width: 240;
-    max-height: 240;
+.container-product .product-image img {
+    max-width: 240px;
+    max-height: 240px;
 }
 
 .container-product .product-name {
