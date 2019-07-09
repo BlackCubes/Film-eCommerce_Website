@@ -41,7 +41,7 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: auto;
 }
 
@@ -60,7 +60,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-left: 1px solid blueviolet;
-    border-right: 1px solid blueviolet;
 }
 
 .container-product .product-image img {
