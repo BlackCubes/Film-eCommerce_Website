@@ -40,9 +40,15 @@ header {
     color: blueviolet;
 }
 
-.topnav ul li ul li {
-    float: left;
-    overflow: hidden;
+.topnav ul li ul {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.topnav ul li a:hover ul li {
+    display: block;
 }
 
 /* MAIN CONTAINER */
