@@ -42,7 +42,7 @@ header {
 }
 
 .topnav ul li ul {
-    display: none;
+    display: block;
     position: absolute;
     min-width: 160px;
     z-index: 1;
@@ -50,9 +50,9 @@ header {
     padding: 0;
 }
 
-.topnav ul li:hover ul {
+/*.topnav ul li:hover ul {
     display: block;
-}
+}*/
 
 /* MAIN CONTAINER */
 
