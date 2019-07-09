@@ -55,3 +55,8 @@ header {
 .container .sidebar-a .results {
     padding-top: 1px;
 }
+
+.container .main-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
