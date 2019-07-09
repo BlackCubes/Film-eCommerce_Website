@@ -29,6 +29,7 @@ header {
 
 .topnav li {
     display: inline-block;
+    position: relative;
     padding: 0px 20px;
 }
 
