@@ -40,6 +40,11 @@ header {
     color: blueviolet;
 }
 
+.topnav ul li ul li {
+    float: left;
+    overflow: hidden;
+}
+
 /* MAIN CONTAINER */
 
 .container {
