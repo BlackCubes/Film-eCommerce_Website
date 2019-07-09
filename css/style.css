@@ -62,7 +62,7 @@ header {
 .container .main-product {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-left: 1px solid blueviolet;
+    border-left: 1px solid rgba(138,43,226,0.17);
 }
 
 .main-product .container-product {
