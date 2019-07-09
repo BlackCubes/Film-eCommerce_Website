@@ -100,7 +100,7 @@ require(MYSQL);
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<div class="container-product"><div class="product-image"><img src="/FilmIndustry/uploads/products/' . $product['image_1'] .'" style="max-width:280px;max-height:280px"; alt="#"></div><div class="product-name"><p>' . $product['name'] . '</p></div><div class="product-format">' . $product['format'] . '</div><div class="product-price">' . $product['unit_price'] . '</div></div>';
+            echo '<div class="container-product"><div class="product-image"><img src="/FilmIndustry/uploads/products/' . $product['image_1'] .'" style="max-width:280px;max-height:280px"; alt="#"></div><div class="product-name"><p>' . $product['name'] . '</p></div><div class="product-format">' . $product['format'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
         }
 
         ?>
