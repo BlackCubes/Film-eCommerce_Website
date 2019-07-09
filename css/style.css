@@ -63,7 +63,14 @@ header {
 
 .container-product .product-name {
     font-family: 'Muli', sans-serif;
-    font-weight: 550;
+    font-weight: 560;
     font-size: 16px;
+    color: black;
+}
+
+.container-product .product-price {
+    font-family: 'Muli', sans-serif;
+    font-weight: 570;
+    font-size: 18px;
     color: black;
 }
