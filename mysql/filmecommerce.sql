@@ -637,6 +637,27 @@ CREATE TABLE `products_actors` (
   `actor_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_actors`
+--
+
+INSERT INTO `products_actors` (`product_id`, `actor_id`) VALUES
+(1, 29),
+(1, 76),
+(1, 77),
+(1, 78),
+(1, 79),
+(1, 80),
+(1, 81),
+(1, 82),
+(1, 83),
+(1, 84),
+(1, 85),
+(1, 86),
+(1, 87),
+(1, 88),
+(1, 89);
+
 -- --------------------------------------------------------
 
 --
