@@ -52,13 +52,13 @@ session_start();
                 <ul>
                     <?php
 
-                    echo '<li>Welcome';
+                    echo '<div class="topnav-welcome"><li>Welcome';
 
                     if (isset($_SESSION['first_name'])) {
                         echo ", {$_SESSION['first_name']}";
                     }
 
-                    echo '!</li>';
+                    echo '!</li></div>';
 
                     if (isset($_SESSION['id'])) {
                         echo '<li><a href="#">Profile</a></li><li><a href="/FilmIndustry/eCommerce/change_password.php">Change Password</a></li><li><a href="/FilmIndustry/eCommerce/logout.php">Sign out</a></li>';
