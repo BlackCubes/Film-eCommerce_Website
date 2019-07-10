@@ -56,6 +56,10 @@
     overflow: visible;
     padding: 10px;
     background-color: brown;
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
 }
 
 /*.topnav ul li:hover ul {
