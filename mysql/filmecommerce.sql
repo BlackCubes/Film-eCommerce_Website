@@ -903,6 +903,13 @@ CREATE TABLE `suppliers` (
   `registration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `suppliers`
+--
+
+INSERT INTO `suppliers` (`id`, `legal_name`, `company_name`, `website_url`, `phone_num`, `email`, `pass`, `verify_code`, `company_logo_img`, `registration_date`) VALUES
+(5, 'Elias Thomas Gutierrez', 'Warner Shippers', '', '559-595-3839', 'gutierrezelias1991@gmail.com', '$2y$10$hGXASSGk6MlNu7d1kH/26uheCl1SeAE02XMNktgbptMjEsQAxphDi', NULL, NULL, '2019-06-15 07:27:22');
+
 -- --------------------------------------------------------
 
 --
