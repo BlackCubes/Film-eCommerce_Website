@@ -47,7 +47,7 @@ header {
     min-width: 160px;
     z-index: 1;
     overflow: visible;
-    padding: 0;
+    padding: 10px;
 }
 
 /*.topnav ul li:hover ul {
