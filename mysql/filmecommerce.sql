@@ -589,6 +589,13 @@ CREATE TABLE `productdetails` (
   `more_description` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `productdetails`
+--
+
+INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `runtime`, `media_date`, `more_description`) VALUES
+(1, 3, 1, 'Standard Edition', 3, 140, '2017-12-19', 'Includes UltraViolet so you can enjoy the film on many different compatible devices. MUST ENTER REDEMPTION CODE BY 2018-12-31 TO REDEEM ULTRAVIOLET OFFER. DOES NOT INCLUDE iTUNES FILE.');
+
 -- --------------------------------------------------------
 
 --
