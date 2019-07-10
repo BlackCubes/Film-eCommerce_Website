@@ -70,7 +70,7 @@
 }
 
 .topnav .topnav-welcome {
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
 }
 
 .topnav ul li ul li a, .topnav .topnav-welcome {
