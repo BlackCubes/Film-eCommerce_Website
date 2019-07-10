@@ -1020,6 +1020,13 @@ CREATE TABLE `suppliers_products` (
   `product_id` mediumint(8) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `suppliers_products`
+--
+
+INSERT INTO `suppliers_products` (`supplier_id`, `product_id`) VALUES
+(5, 1);
+
 -- --------------------------------------------------------
 
 --
