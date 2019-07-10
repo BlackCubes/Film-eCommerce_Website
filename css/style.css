@@ -50,12 +50,12 @@
 }
 
 .topnav ul li ul {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 1;
     overflow: visible;
     padding: 10px;
-    background-color: brown;
+    background-color: white;
     left: 50% !important;
     right: auto !important;
     text-align: center !important;
@@ -63,9 +63,9 @@
     opacity: 0.8;
 }
 
-/*.topnav ul li:hover ul {
+.topnav ul li:hover ul {
     display: block;
-}*/
+}
 
 .topnav .topnav-welcome {
     border-bottom: 1px solid blueviolet;
