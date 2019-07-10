@@ -63,6 +63,9 @@
     opacity: 0.8;
     border-bottom: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
+    -webkit-box-shadow: 0px 14px 17px -12px rgba(138,43,226,0.7);
+    -moz-box-shadow: 0px 14px 17px -12px rgba(138,43,226,0.7);
+    box-shadow: 0px 14px 17px -12px rgba(138,43,226,0.7);
 }
 
 .topnav ul li:hover ul {
