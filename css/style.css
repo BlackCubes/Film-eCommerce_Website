@@ -60,6 +60,7 @@
     right: auto !important;
     text-align: center !important;
     transform: translate(-50%, 0) !important;
+    opacity: 0.8;
 }
 
 /*.topnav ul li:hover ul {
