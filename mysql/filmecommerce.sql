@@ -669,6 +669,13 @@ CREATE TABLE `products_directors` (
   `director_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_directors`
+--
+
+INSERT INTO `products_directors` (`product_id`, `director_id`) VALUES
+(1, 18);
+
 -- --------------------------------------------------------
 
 --
