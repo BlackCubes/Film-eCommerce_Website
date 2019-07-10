@@ -751,6 +751,16 @@ CREATE TABLE `products_studios` (
   `studio_id` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_studios`
+--
+
+INSERT INTO `products_studios` (`product_id`, `studio_id`) VALUES
+(1, 19),
+(1, 70),
+(1, 73),
+(1, 74);
+
 -- --------------------------------------------------------
 
 --
