@@ -877,6 +877,13 @@ CREATE TABLE `supplieraddress` (
   `country` varchar(27) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `supplieraddress`
+--
+
+INSERT INTO `supplieraddress` (`id`, `supplier_id`, `address_1`, `address_2`, `city`, `zip`, `state`, `country`) VALUES
+(1, 5, '1372 S. Reed Ave.', '', 'Reedley', '93654', 'California', 'United States');
+
 -- --------------------------------------------------------
 
 --
