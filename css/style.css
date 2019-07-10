@@ -54,7 +54,7 @@ header {
     display: block;
 }*/
 
-.topnav ul li ul li a {
+.topnav ul li ul li a, .topnav .topnav-welcome {
     padding: 8px 14px;
 }
 
