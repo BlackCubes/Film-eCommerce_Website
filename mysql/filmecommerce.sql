@@ -772,6 +772,15 @@ CREATE TABLE `products_writers` (
   `writer_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_writers`
+--
+
+INSERT INTO `products_writers` (`product_id`, `writer_id`) VALUES
+(1, 76),
+(1, 77),
+(1, 78);
+
 -- --------------------------------------------------------
 
 --
