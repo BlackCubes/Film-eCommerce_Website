@@ -619,6 +619,13 @@ CREATE TABLE `products` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `department_id`, `format_id`, `name`, `year`, `release_date`, `description`, `isd`, `sku`, `unit_price`, `stock`, `image_1`, `image_2`, `date_created`) VALUES
+(1, 1, 2, 'Batman Begins Ultra HD', '', '2005-06-17', 'Acclaimed director Christopher Nolan explores the origins of the legendary Dark Knight. After his parents\' murders, disillusioned heir Bruce Wayne (Christian Bale) travels the world seeking the means to fight injustice. With the help of his trusted butler Alfred (Michael Caine), Detective Jim Gordon (Gary Oldman) and his ally Lucius Fox (Morgan Freeman), Wayne returns to Gotham and unleashes his alter ego: Batman, a masked crusader who uses strength, intellect and high-tech weaponry to fight evil.', '26592a6474', 'BB05CN4KU1217WB', '24.99', 25, '5d265a019b21c0.59826717.jpg', '5d265a019b2216.25287495.jpg', '2019-07-10 21:31:22');
+
 -- --------------------------------------------------------
 
 --
