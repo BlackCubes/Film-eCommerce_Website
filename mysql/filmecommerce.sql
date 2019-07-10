@@ -859,6 +859,13 @@ CREATE TABLE `specs` (
   `subtitles_desc` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `specs`
+--
+
+INSERT INTO `specs` (`id`, `spec_format_type`, `video_desc`, `audio_desc`, `subtitles_desc`) VALUES
+(1, '4K UHD Main Feature', '2160p UHD 16x9 2.4:1', 'DTS-HD MA: English 5.1, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1', 'English SDH, Français, and Español');
+
 -- --------------------------------------------------------
 
 --
