@@ -705,6 +705,18 @@ CREATE TABLE `products_genres` (
   `genre_id` tinyint(3) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_genres`
+--
+
+INSERT INTO `products_genres` (`product_id`, `genre_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 6),
+(1, 20),
+(1, 23),
+(1, 25);
+
 -- --------------------------------------------------------
 
 --
