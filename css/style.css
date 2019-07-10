@@ -66,6 +66,10 @@
     display: block;
 }*/
 
+.topnav .topnav-welcome {
+    border-bottom: 1px solid blueviolet;
+}
+
 .topnav ul li ul li a, .topnav .topnav-welcome {
     padding: 8px 14px;
 }
