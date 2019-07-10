@@ -54,6 +54,10 @@ header {
     display: block;
 }*/
 
+.topnav ul li ul li a {
+    padding: 8px 14px;
+}
+
 .topnav ul li ul li a, .topnav ul li ul li {
     font-size: 14px;
 }
