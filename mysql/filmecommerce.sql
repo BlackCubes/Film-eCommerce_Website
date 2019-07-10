@@ -728,6 +728,18 @@ CREATE TABLE `products_producers` (
   `producer_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_producers`
+--
+
+INSERT INTO `products_producers` (`product_id`, `producer_id`) VALUES
+(1, 32),
+(1, 76),
+(1, 77),
+(1, 78),
+(1, 79),
+(1, 80);
+
 -- --------------------------------------------------------
 
 --
