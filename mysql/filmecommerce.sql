@@ -837,7 +837,9 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (69, 'Warner Animation Group', '', 'studios/warner-animation-group_Cover.png'),
 (70, 'Warner Bros.', '', 'studios/warner-bros_Cover.png'),
 (71, 'Warner Bros. Animation', '', 'studios/warner-bros-animation_Cover.png'),
-(72, 'Working Title Films', '', 'studios/working-title-films_Cover.png');
+(72, 'Working Title Films', '', 'studios/working-title-films_Cover.png'),
+(73, 'Syncopy', '', 'studios/syncopy_Cover.png'),
+(74, 'Legendary Entertainment', '', 'studios/legendary-entertainment_Cover.png');
 
 -- --------------------------------------------------------
 
