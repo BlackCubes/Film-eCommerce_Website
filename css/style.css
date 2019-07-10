@@ -44,7 +44,6 @@ header {
 .topnav ul li ul {
     display: block;
     position: absolute;
-    min-width: 160px;
     z-index: 1;
     overflow: visible;
     padding: 10px;
