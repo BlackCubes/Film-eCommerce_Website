@@ -687,6 +687,13 @@ CREATE TABLE `products_dps` (
   `dp_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `products_dps`
+--
+
+INSERT INTO `products_dps` (`product_id`, `dp_id`) VALUES
+(1, 73);
+
 -- --------------------------------------------------------
 
 --
