@@ -916,7 +916,8 @@ CREATE TABLE `specs` (
 --
 
 INSERT INTO `specs` (`id`, `spec_format_type`, `video_desc`, `audio_desc`, `subtitles_desc`) VALUES
-(1, '4K UHD Main Feature', '2160p UHD 16x9 2.4:1', 'DTS-HD MA: English 5.1, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1', 'English SDH, Français, and Español');
+(1, '4K UHD Main Feature', '2160p UHD 16x9 2.4:1', 'DTS-HD MA: English 5.1, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1', 'English SDH, Français, and Español'),
+(2, '4K ULTRA HD Main Feature', 'UHD HDR10 Widescreen 2.35:1', 'English DTS:X Immersive Audio, DTS Headphone:X; Español, Français DTS Digital Surround 5.1', 'English SDH, Français, and Español');
 
 -- --------------------------------------------------------
 
