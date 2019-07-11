@@ -171,7 +171,17 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (114, 'Rachel', '', 'Weisz', 'F', '', 'actors/rachel-weisz_Cover.jpg'),
 (115, 'Tony', '', 'Guida', 'M', '', 'actors/tony-guida_Cover.jpg'),
 (116, 'Sonnie', '', 'Brown', 'F', '', 'actors/sonnie-brown_Cover.jpg'),
-(117, 'Neil', 'Brooks', 'Cunningham', 'M', '', 'actors/neil-brooks-cunningham_Cover.jpg');
+(117, 'Neil', 'Brooks', 'Cunningham', 'M', '', 'actors/neil-brooks-cunningham_Cover.jpg'),
+(118, 'Karl', '', 'Urban', 'M', '', 'actors/karl-urban_Cover.jpg'),
+(119, 'Joan', '', 'Allen', 'F', '', 'actors/joan-allen_Cover.jpg'),
+(120, 'Marton', '', 'Csokas', 'M', '', 'actors/marton-csokas_Cover.jpg'),
+(121, 'Tom', '', 'Gallop', 'M', '', 'actors/tom-gallop_Cover.jpg'),
+(122, 'John', 'Bedford', 'Lloyd', 'M', '', 'actors/john-bedford-lloyd_Cover.jpg'),
+(123, 'Ethan', '', 'Sandler', 'M', '', 'actors/ethan-sandler_Cover.jpg'),
+(124, 'Michelle', '', 'Monaghan', 'F', '', 'actors/michelle-monaghan_Cover.jpg'),
+(125, 'Karel', '', 'Roden', 'M', '', 'actors/karel-roden_Cover.jpg'),
+(126, 'Tomas', '', 'Arana', 'M', '', 'actors/tomas-arana_Cover.jpg'),
+(127, 'Oksana', '', 'Akinshina', 'F', '', 'actors/oksana-akinshina_Cover.jpg');
 
 -- --------------------------------------------------------
 
