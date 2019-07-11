@@ -634,7 +634,8 @@ CREATE TABLE `productdetails` (
 
 INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `runtime`, `media_date`, `more_description`) VALUES
 (1, 3, 1, 'Standard Edition', 3, 140, '2017-12-19', 'Includes UltraViolet so you can enjoy the film on many different compatible devices. MUST ENTER REDEMPTION CODE BY 2018-12-31 TO REDEEM ULTRAVIOLET OFFER. DOES NOT INCLUDE iTUNES FILE.'),
-(2, 3, 2, '4K Ultra HD+Blu-ray+Digital', 2, 119, '2016-12-06', '');
+(2, 3, 2, '4K Ultra HD+Blu-ray+Digital', 2, 119, '2016-12-06', ''),
+(3, 3, 3, '4K Ultra HD+Blu-ray+Digital', 2, 135, '2016-12-06', '');
 
 -- --------------------------------------------------------
 
