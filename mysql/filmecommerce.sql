@@ -143,7 +143,20 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (86, 'Morgan', '', 'Freeman', 'M', '', 'actors/morgan-freeman_Cover.jpg'),
 (87, 'Larry', '', 'Holden', 'M', '', 'actors/larry-holden_Cover.jpg'),
 (88, 'Gerard', '', 'Murphy', 'M', '', 'actors/gerard-murphy_Cover.jpg'),
-(89, 'Colin', '', 'McFarlane', 'M', '', 'actors/colin-mcfarlane_Cover.jpg');
+(89, 'Colin', '', 'McFarlane', 'M', '', 'actors/colin-mcfarlane_Cover.jpg'),
+(90, 'Matt', '', 'Damon', 'M', '', 'actors/matt-damon_Cover.jpg'),
+(91, 'Franka', '', 'Potente', 'F', '', 'actors/franka-potente_Cover.jpg'),
+(92, 'Chris', '', 'Cooper', 'M', '', 'actors/chris-cooper_Cover.jpeg'),
+(93, 'Clive', '', 'Owen', 'M', '', 'actors/clive-owen_Cover.jpg'),
+(94, 'Brian', '', 'Cox', 'M', '', 'actors/brian-cox_Cover.jpg'),
+(95, 'Adewale', '', 'Akinnuoye-Agbaje', 'M', '', 'actors/adewale-akinnuoyeagbaje_Cover.jpg'),
+(96, 'Gabriel', '', 'Mann', 'M', '', 'actors/gabriel-mann_Cover.jpg'),
+(97, 'Walton', '', 'Goggins', 'M', '', 'actors/walton-goggins_Cover.jpg'),
+(98, 'Josh', '', 'Hamilton', 'M', '', 'actors/josh-hamilton_Cover.jpg'),
+(99, 'Julia', '', 'Stiles', 'F', '', 'actors/julia-stiles_Cover.jpg'),
+(100, 'Orso', 'Maria', 'Guerrini', 'M', '', 'actors/orso-maria-guerrini_Cover.jpg'),
+(101, 'Tim', '', 'Dutton', 'M', '', 'actors/tim-dutton_Cover.jpg'),
+(102, 'Denis', '', 'Braccini', 'M', '', 'actors/denis-braccini_Cover.jpg');
 
 -- --------------------------------------------------------
 
