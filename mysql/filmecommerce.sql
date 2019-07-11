@@ -766,7 +766,8 @@ CREATE TABLE `products_dps` (
 
 INSERT INTO `products_dps` (`product_id`, `dp_id`) VALUES
 (1, 73),
-(2, 75);
+(2, 75),
+(3, 60);
 
 -- --------------------------------------------------------
 
