@@ -828,7 +828,10 @@ CREATE TABLE `products_writers` (
 INSERT INTO `products_writers` (`product_id`, `writer_id`) VALUES
 (1, 76),
 (1, 77),
-(1, 78);
+(1, 78),
+(2, 79),
+(2, 80),
+(2, 81);
 
 -- --------------------------------------------------------
 
