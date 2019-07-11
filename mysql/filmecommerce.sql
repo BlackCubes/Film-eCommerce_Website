@@ -156,7 +156,22 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (99, 'Julia', '', 'Stiles', 'F', '', 'actors/julia-stiles_Cover.jpg'),
 (100, 'Orso', 'Maria', 'Guerrini', 'M', '', 'actors/orso-maria-guerrini_Cover.jpg'),
 (101, 'Tim', '', 'Dutton', 'M', '', 'actors/tim-dutton_Cover.jpg'),
-(102, 'Denis', '', 'Braccini', 'M', '', 'actors/denis-braccini_Cover.jpg');
+(102, 'Denis', '', 'Braccini', 'M', '', 'actors/denis-braccini_Cover.jpg'),
+(103, 'Jeremy', '', 'Renner', 'M', '', 'actors/jeremy-renner_Cover.jpeg'),
+(104, 'Scott', '', 'Glenn', 'M', '', 'actors/scott-glenn_Cover.jpg'),
+(105, 'Stacy', '', 'Keach', 'M', '', 'actors/stacy-keach_Cover.jpeg'),
+(106, 'Edward', '', 'Norton', 'M', '', 'actors/edward-norton_Cover.jpg'),
+(107, 'Donna', '', 'Murphy', 'F', '', 'actors/donna-murphy_Cover.jpg'),
+(108, 'Michael', '', 'Chernus', 'M', '', 'actors/michael-chernus_Cover.jpg'),
+(109, 'Corey', '', 'Stoll', 'M', '', 'actors/corey-stoll_Cover.jpg'),
+(110, 'Alice', '', 'Gainer', 'F', '', 'actors/alice-gainer_Cover.jpg'),
+(111, 'Prue', '', 'Lewarne', 'F', '', 'actors/prue-lewarne_Cover.jpg'),
+(112, 'Howard', '', 'Leader', 'M', '', 'actors/howard-leader_Cover.jpg'),
+(113, 'James', 'Joseph', 'O\'Neil', 'M', '', 'actors/james-joseph-oneil_Cover.jpg'),
+(114, 'Rachel', '', 'Weisz', 'F', '', 'actors/rachel-weisz_Cover.jpg'),
+(115, 'Tony', '', 'Guida', 'M', '', 'actors/tony-guida_Cover.jpg'),
+(116, 'Sonnie', '', 'Brown', 'F', '', 'actors/sonnie-brown_Cover.jpg'),
+(117, 'Neil', 'Brooks', 'Cunningham', 'M', '', 'actors/neil-brooks-cunningham_Cover.jpg');
 
 -- --------------------------------------------------------
 
