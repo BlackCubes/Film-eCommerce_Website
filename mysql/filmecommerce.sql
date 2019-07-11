@@ -1138,7 +1138,8 @@ CREATE TABLE `suppliers_products` (
 
 INSERT INTO `suppliers_products` (`supplier_id`, `product_id`) VALUES
 (5, 1),
-(5, 2);
+(5, 2),
+(5, 3);
 
 -- --------------------------------------------------------
 
