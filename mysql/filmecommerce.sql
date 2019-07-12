@@ -1188,7 +1188,9 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (75, 'The Kennedy/Marshall Company', '', 'studios/the-kennedymarshall-company_Cover.png'),
 (76, 'Stillking Films', '', 'studios/stillking-films_Cover.jpg'),
 (77, 'Relativity Media', '', 'studios/relativity-media_Cover.png'),
-(78, 'Captivate Entertainment', '', 'studios/captivate-entertainment_Cover.jpg');
+(78, 'Captivate Entertainment', '', 'studios/captivate-entertainment_Cover.jpg'),
+(79, 'KanZaman Films', '', 'studios/kanzaman-films_Cover.png'),
+(80, 'Studio Babelsberg', '', 'studios/studio-babelsberg_Cover.png');
 
 -- --------------------------------------------------------
 
