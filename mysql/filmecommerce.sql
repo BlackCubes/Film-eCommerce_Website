@@ -1421,7 +1421,9 @@ INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`,
 (80, 'William', 'Blake', 'Herron', 'M', '', 'writers/william-blake-herron_Cover.jpg'),
 (81, 'Robert', '', 'Ludlum', 'M', '', 'writers/robert-ludlum_Cover.jpg'),
 (82, 'Dan', '', 'Gilroy', 'M', '', 'writers/dan-gilroy_Cover.jpg'),
-(83, 'Jonathan', '', 'Nolan', 'M', '', 'writers/jonathan-nolan_Cover.jpg');
+(83, 'Jonathan', '', 'Nolan', 'M', '', 'writers/jonathan-nolan_Cover.jpg'),
+(84, 'Scott', 'Z.', 'Burns', 'M', '', 'writers/scott-z-burns_Cover.jpg'),
+(85, 'George', '', 'Nolfi', 'M', '', 'writers/george-nolfi_Cover.jpg');
 
 --
 -- Indexes for dumped tables
