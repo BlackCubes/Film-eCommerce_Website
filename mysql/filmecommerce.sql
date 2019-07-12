@@ -778,7 +778,8 @@ CREATE TABLE `products_directors` (
 INSERT INTO `products_directors` (`product_id`, `director_id`) VALUES
 (1, 18),
 (2, 76),
-(3, 77);
+(3, 77),
+(4, 78);
 
 -- --------------------------------------------------------
 
