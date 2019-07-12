@@ -105,7 +105,7 @@
 .container .main-product {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 300px);
+    grid-template-rows: repeat(7, 330px);
     grid-row-end: auto;
     border-left: 1px solid rgba(138,43,226,0.17);
 }
