@@ -664,7 +664,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (1, 3, 1, 'Standard Edition', 3, 140, '2017-12-19', 'Includes UltraViolet so you can enjoy the film on many different compatible devices. MUST ENTER REDEMPTION CODE BY 2018-12-31 TO REDEEM ULTRAVIOLET OFFER. DOES NOT INCLUDE iTUNES FILE.'),
 (2, 3, 2, '4K Ultra HD+Blu-ray+Digital', 2, 119, '2016-12-06', ''),
 (3, 3, 3, '4K Ultra HD+Blu-ray+Digital', 2, 135, '2016-12-06', ''),
-(4, 3, 4, '4K Ultra HD+Blu-ray+Digital', 2, 108, '2016-12-06', '');
+(4, 3, 4, '4K Ultra HD+Blu-ray+Digital', 2, 108, '2016-12-06', ''),
+(5, 3, 5, 'Standard Edition', 3, 152, '2017-12-19', '');
 
 -- --------------------------------------------------------
 
