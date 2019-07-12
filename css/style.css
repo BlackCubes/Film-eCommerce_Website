@@ -115,7 +115,7 @@
     max-height: 300px;
     padding-top: 12px;
     padding-left: 12px;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .container-product .product-image img {
