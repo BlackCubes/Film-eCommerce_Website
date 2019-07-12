@@ -201,7 +201,16 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (144, 'Joey', '', 'Ansah', 'M', '', 'actors/joey-ansah_Cover.jpg'),
 (145, 'Colin', '', 'Stinton', 'M', '', 'actors/colin-stinton_Cover.jpg'),
 (146, 'Dan', '', 'Fredenburgh', 'M', '', 'actors/dan-fredenburgh_Cover.jpg'),
-(147, 'Lucy', '', 'Liemann', 'F', '', 'actors/lucy-liemann_Cover.jpg');
+(147, 'Lucy', '', 'Liemann', 'F', '', 'actors/lucy-liemann_Cover.jpg'),
+(148, 'Tom', '', 'Hardy', 'M', '', 'actors/tom-hardy_Cover.jpg'),
+(149, 'Joseph', '', 'Gordon-Levitt', 'M', '', 'actors/joseph-gordonlevitt_Cover.jpg'),
+(150, 'Marion', '', 'Cotillard', 'F', '', 'actors/marion-cotillard_Cover.jpg'),
+(151, 'Matthew', '', 'Modine', 'M', '', 'actors/matthew-modine_Cover.jpg'),
+(152, 'Alon', '', 'Aboutboul', 'M', '', 'actors/alon-aboutboul_Cover.jpg'),
+(153, 'Burn', '', 'Gorman', 'M', '', 'actors/burn-gorman_Cover.jpg'),
+(154, 'Daniel', '', 'Sunjata', 'M', '', 'actors/daniel-sunjata_Cover.jpg'),
+(155, 'Aidan', '', 'Gillen', 'M', '', 'aidan-gillen_Cover.jpg'),
+(156, 'Sam', '', 'Kennard', 'M', '', 'actors/sam-kennard_Cover.jpeg');
 
 -- --------------------------------------------------------
 
