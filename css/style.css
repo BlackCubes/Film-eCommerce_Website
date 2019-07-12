@@ -104,8 +104,8 @@
 
 .container .main-product {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 300px);
     grid-row-end: auto;
     border-left: 1px solid rgba(138,43,226,0.17);
 }
