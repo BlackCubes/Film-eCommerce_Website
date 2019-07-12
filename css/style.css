@@ -113,8 +113,8 @@
 .main-product .container-product {
     min-height: 300px;
     max-height: 300px;
-    padding-top: 20px;
-    padding-left: 12px;
+    padding-top: 24px;
+    padding-left: 20px;
     overflow: hidden;
 }
 
