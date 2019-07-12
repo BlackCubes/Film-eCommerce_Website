@@ -104,13 +104,25 @@
 
 .container .main-product {
     display: grid;
+    grid-area: 
+        "p1 p2 p3"
+        "p4 p5 p6"
+        "p7 p8 p9"
+        "p10 p11 p12"
+        "p13 p14 p15"
+        "p16 p17 p18"
+        "p19 p20 p21";
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border-left: 1px solid rgba(138,43,226,0.17);
 }
 
 .main-product .container-product {
+    min-height: 300px;
+    max-height: 2100px;
     padding-top: 12px;
     padding-left: 12px;
+    overflow: visible;
 }
 
 .container-product .product-image img {
