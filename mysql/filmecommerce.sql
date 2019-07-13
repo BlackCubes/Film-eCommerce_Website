@@ -210,7 +210,21 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (153, 'Burn', '', 'Gorman', 'M', '', 'actors/burn-gorman_Cover.jpg'),
 (154, 'Daniel', '', 'Sunjata', 'M', '', 'actors/daniel-sunjata_Cover.jpg'),
 (155, 'Aidan', '', 'Gillen', 'M', '', 'aidan-gillen_Cover.jpg'),
-(156, 'Sam', '', 'Kennard', 'M', '', 'actors/sam-kennard_Cover.jpeg');
+(156, 'Sam', '', 'Kennard', 'M', '', 'actors/sam-kennard_Cover.jpeg'),
+(157, 'Ryan', '', 'Reynolds', 'M', '', 'actors/ryan-reynolds_Cover.jpg'),
+(158, 'Karan', '', 'Soni', 'M', '', 'actors/karan-soni_Cover.jpeg'),
+(159, 'Ed', '', 'Skrein', 'M', '', 'actors/ed-skrein_Cover.jpg'),
+(160, 'Michael', '', 'Benyaer', 'M', '', 'actors/michael-benyaer_Cover.jpg'),
+(161, 'Stefan', '', 'Kapicic', 'M', '', 'actors/stefan-kapicic_Cover.jpg'),
+(162, 'Brianna', '', 'Hildebrand', 'F', '', 'actors/brianna-hildebrand_Cover.jpg'),
+(163, 'Style', '', 'Dayne', 'M', '', 'actors/style-dayne_Cover.jpg'),
+(164, 'Kyle', '', 'Cassie', 'M', '', 'actors/kyle-cassie_Cover.jpg'),
+(165, 'Taylor', '', 'Hickson', 'F', '', 'actors/taylor-hickson_Cover.jpg'),
+(166, 'Naika', '', 'Toussaint', 'F', '', 'actors/naika-toussaint_Cover.jpg'),
+(167, 'Randal', '', 'Reeder', 'M', '', 'actors/randal-reeder_Cover.jpg'),
+(168, 'T.J.', '', 'Miller', 'M', '', 'actors/tj-miller_Cover.jpg'),
+(169, 'Isaac', 'C.', 'Singleton Jr.', 'M', '', 'actors/isaac-c-singleton-jr_Cover.jpg'),
+(170, 'Morena', '', 'Baccarin', 'F', '', 'actors/morena-baccarin_Cover.jpg');
 
 -- --------------------------------------------------------
 
