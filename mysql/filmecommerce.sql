@@ -674,7 +674,16 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (94, 'Philip', '', 'Lee', 'M', '', 'producers/philip-lee_Cover.jpg'),
 (95, 'Thomas', '', 'Tull', 'M', '', 'producers/thomas-tull_Cover.jpg'),
 (96, 'Zakaria', '', 'Alaoui', 'M', '', 'producers/zakaria-alaoui_Cover.png'),
-(97, 'John', '', 'Bernard', 'M', '', 'producers/john-bernard_Cover.jpeg');
+(97, 'John', '', 'Bernard', 'M', '', 'producers/john-bernard_Cover.jpeg'),
+(98, 'John', 'J.', 'Kelly', 'M', '', 'producers/john-j-kelly_Cover.jpg'),
+(99, 'Simon', '', 'Kinberg', 'M', '', 'producers/simon-kinberg_Cover.jpg'),
+(100, 'Jonathon', 'Komack', 'Martin', 'M', '', 'producers/jonathon-komack-martin_Cover.jpg'),
+(101, 'Rhett', '', 'Reese', 'M', '', 'producers/rhett-reese_Cover.jpg'),
+(102, 'Ryan', '', 'Reynolds', 'M', '', 'producers/ryan-reynolds_Cover.jpg'),
+(103, 'Lauren', 'Shuler', 'Donner', 'F', '', 'producers/lauren-shuler-donner_Cover.jpg'),
+(104, 'Aditya', '', 'Sood', 'M', '', 'producers/aditya-sood_Cover.jpg'),
+(105, 'Paul', '', 'Wernick', 'M', '', 'producers/paul-wernick_Cover.jpg'),
+(106, 'Stan', '', 'Lee', 'M', '', 'producers/stan-lee_Cover.jpg');
 
 -- --------------------------------------------------------
 
