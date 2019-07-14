@@ -194,7 +194,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $directorErr = 'Please enter first and last name(s)!';
     }
 
-    if ((preg_match('/^[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['actors_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['actors_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}[a-z\p{L}]+[, ]{2})*[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['actors_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['actors_last_name']))) {
+    if ((preg_match('/^[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['actors_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['actors_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['actors_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['actors_last_name']))) {
 
         $q_actors = "SELECT first_name, last_name FROM actors";
         $r_actors = mysqli_query($dbc, $q_actors) or trigger_error("Query: $q_actors\n<br>MySQL Error " . mysqli_error($dbc));
@@ -251,7 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $actorsErr = 'Please enter the actor(s) first and last name(s)!';
     }
 
-    if ((preg_match('/^[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['producers_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['producers_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}[a-z\p{L}]+[, ]{2})*[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['producers_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['producers_last_name']))) {
+    if ((preg_match('/^[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['producers_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['producers_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['producers_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['producers_last_name']))) {
 
         $producersErr = '';
 
@@ -312,7 +312,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $producersErr = 'Please enter the producer(s) first and last name(s)!';
     }
 
-    if ((preg_match('/^[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['writers_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['writers_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}[a-z\p{L}]+[, ]{2})*[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['writers_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['writers_last_name']))) {
+    if ((preg_match('/^[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['writers_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['writers_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['writers_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['writers_last_name']))) {
 
         $writersErr = '';
 
@@ -373,7 +373,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $writersErr = 'Please enter the writer(s) first and last name(s)';
     }
 
-    if ((preg_match('/^[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['dp_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['dp_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}[a-z\p{L}]+[, ]{2})*[A-Z\p{L}]{1}[a-z\p{L}]+$/u', $_POST['dp_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['dp_last_name']))) {
+    if ((preg_match('/^[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['dp_first_name']) && preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['dp_last_name'])) || (preg_match('/^([A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', $_POST['dp_first_name']) && preg_match('/^([A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?[, ]{2})*[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?$/u', $_POST['dp_last_name']))) {
 
         $dpsErr = '';
 
