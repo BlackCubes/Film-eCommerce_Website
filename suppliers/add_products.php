@@ -148,8 +148,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $descape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['directors_first_name']));
         $descape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['directors_last_name']));
 
-        $dinput_fn = preg_split('/[\s,]+/', $descape_fn);
-        $dinput_ln = preg_split('/[\s,]+/', $descape_ln);
+        $dinput_fn = preg_split('/[, ]{2}/', $descape_fn);
+        $dinput_ln = preg_split('/[, ]{2}/', $descape_ln);
 
         $dmatch_fn = array_filter($dinput_fn, function($validNames) use($dexist_fn) {
             return preg_grep("/^$validNames$/", $dexist_fn);
@@ -209,8 +209,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $aescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['actors_first_name']));
         $aescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['actors_last_name']));
 
-        $ainput_fn = preg_split('/[\s,]+/', $aescape_fn);
-        $ainput_ln = preg_split('/[\s,]+/', $aescape_ln);
+        $ainput_fn = preg_split('/[, ]{2}/', $aescape_fn);
+        $ainput_ln = preg_split('/[, ]{2}/', $aescape_ln);
 
         $amatch_fn = array_filter($ainput_fn, function($validNames) use($aexist_fn) {
             return preg_grep("/^$validNames$/", $aexist_fn);
@@ -268,8 +268,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['producers_first_name']));
         $pescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['producers_last_name']));
 
-        $pinput_fn = preg_split('/[\s,]+/', $pescape_fn);
-        $pinput_ln = preg_split('/[\s,]+/', $pescape_ln);
+        $pinput_fn = preg_split('/[, ]{2}/', $pescape_fn);
+        $pinput_ln = preg_split('/[, ]{2}/', $pescape_ln);
 
         $pmatch_fn = array_filter($pinput_fn, function($validNames) use($pexist_fn) {
             return preg_grep("/^$validNames$/", $pexist_fn);
@@ -329,8 +329,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $wescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['writers_first_name']));
         $wescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['writers_last_name']));
 
-        $winput_fn = preg_split('/[\s,]+/', $wescape_fn);
-        $winput_ln = preg_split('/[\s,]+/', $wescape_ln);
+        $winput_fn = preg_split('/[, ]{2}/', $wescape_fn);
+        $winput_ln = preg_split('/[, ]{2}/', $wescape_ln);
 
         $wmatch_fn = array_filter($winput_fn, function($validNames) use($wexist_fn) {
             return preg_grep("/^$validNames$/", $wexist_fn);
@@ -390,8 +390,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dpescape_fn = mysqli_real_escape_string($dbc, sanitize_input($_POST['dp_first_name']));
         $dpescape_ln = mysqli_real_escape_string($dbc, sanitize_input($_POST['dp_last_name']));
 
-        $dpinput_fn = preg_split('/[\s,]+/', $dpescape_fn);
-        $dpinput_ln = preg_split('/[\s,]+/', $dpescape_ln);
+        $dpinput_fn = preg_split('/[, ]{2}/', $dpescape_fn);
+        $dpinput_ln = preg_split('/[, ]{2}/', $dpescape_ln);
 
         $dpmatch_fn = array_filter($dpinput_fn, function($validNames) use($dpexist_fn) {
             return preg_grep("/^$validNames$/", $dpexist_fn);
