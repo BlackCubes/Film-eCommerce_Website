@@ -713,7 +713,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (4, 3, 4, '4K Ultra HD+Blu-ray+Digital', 2, 108, '2016-12-06', ''),
 (5, 3, 5, 'Standard Edition', 3, 152, '2017-12-19', ''),
 (6, 3, 6, '4K Ultra HD+Blu-ray+Digital', 2, 115, '2016-12-06', ''),
-(7, 3, 7, 'Standard Edition', 3, 165, '2017-12-19', '');
+(7, 3, 7, 'Standard Edition', 3, 165, '2017-12-19', ''),
+(8, 4, 8, '', 2, 108, '2016-05-10', '');
 
 -- --------------------------------------------------------
 
