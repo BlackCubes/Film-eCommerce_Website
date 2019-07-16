@@ -101,8 +101,8 @@ require(MYSQL);
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
-            if (!isset($product['image_1'])) {
-                $product_image = '/FilmIndustry/eCommerce/img/unavailable-image.img';
+            if (empty($product['image_1'])) {
+                $product_image = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
             } else {
                 $product_image = "/FilmIndustry/uploads/products/{$product['image_1']}";
             }
