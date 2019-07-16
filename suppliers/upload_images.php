@@ -113,6 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 } else {
                     echo '<p class="text-danger">Sorry, but there was an error uploading your file!</p>';
+                }
             } else {
                 echo '<p class="text-danger">Your file is too big!</p>';
             }
