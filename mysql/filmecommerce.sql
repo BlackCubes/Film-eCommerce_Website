@@ -224,7 +224,15 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (167, 'Randal', '', 'Reeder', 'M', '', 'actors/randal-reeder_Cover.jpg'),
 (168, 'T.J.', '', 'Miller', 'M', '', 'actors/tj-miller_Cover.jpg'),
 (169, 'Isaac', 'C.', 'Singleton Jr.', 'M', '', 'actors/isaac-c-singleton-jr_Cover.jpg'),
-(170, 'Morena', '', 'Baccarin', 'F', '', 'actors/morena-baccarin_Cover.jpg');
+(170, 'Morena', '', 'Baccarin', 'F', '', 'actors/morena-baccarin_Cover.jpg'),
+(171, 'Josh', '', 'Brolin', 'M', '', 'actors/josh-brolin_Cover.jpg'),
+(172, 'Julian', '', 'Dennison', 'M', '', 'actors/julian-dennison_Cover.jpg'),
+(173, 'Zazie', '', 'Beetz', 'F', '', 'actors/zazie-beetz_Cover.jpg'),
+(174, 'Leslie', '', 'Uggams', 'F', '', 'actors/leslie-uggams_Cover.jpg'),
+(175, 'Jack', '', 'Kesy', 'M', '', 'actors/jack-kesy_Cover.jpg'),
+(176, 'Eddie', '', 'Marsan', 'M', '', 'actors/eddie-marsan_Cover.jpg'),
+(177, 'Shioli', '', 'Kutsuna', 'F', '', 'actors/shioli-kutsuna_Cover.jpg'),
+(178, 'Nikolai', '', 'Witschl', 'M', '', 'actors/nikolai-witschl_Cover.jpg');
 
 -- --------------------------------------------------------
 
