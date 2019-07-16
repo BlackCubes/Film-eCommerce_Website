@@ -232,7 +232,18 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (175, 'Jack', '', 'Kesy', 'M', '', 'actors/jack-kesy_Cover.jpg'),
 (176, 'Eddie', '', 'Marsan', 'M', '', 'actors/eddie-marsan_Cover.jpg'),
 (177, 'Shioli', '', 'Kutsuna', 'F', '', 'actors/shioli-kutsuna_Cover.jpg'),
-(178, 'Nikolai', '', 'Witschl', 'M', '', 'actors/nikolai-witschl_Cover.jpg');
+(178, 'Nikolai', '', 'Witschl', 'M', '', 'actors/nikolai-witschl_Cover.jpg'),
+(179, 'Richard', '', 'Harris', 'M', '', 'actors/richard-harris_Cover.jpg'),
+(180, 'Robbie', '', 'Coltrane', 'M', '', 'actors/robbie-coltrane_Cover.jpg'),
+(181, 'Daniel', '', 'Radcliffe', 'M', '', 'actors/daniel-radcliffe_Cover.jpg'),
+(182, 'Fiona', '', 'Shaw', 'F', '', 'actors/fiona-shaw_Cover.jpg'),
+(183, 'Harry', '', 'Melling', 'M', '', 'actors/harry-melling_Cover.jpg'),
+(184, 'Richard', '', 'Griffiths', 'M', '', 'actors/richard-griffiths_Cover.jpg'),
+(185, 'Ian', '', 'Hart', 'M', '', 'actors/ian-hart_Cover.jpg'),
+(186, 'Warwick', '', 'Davis', 'M', '', 'actors/warwick-davis_Cover.jpg'),
+(187, 'Verne', '', 'Troyer', 'M', '', 'actors/verne-troyer_Cover.jpg'),
+(188, 'John', '', 'Hurt', 'M', '', 'actors/john-hurt_Cover.jpg'),
+(189, 'Richard', '', 'Bremmer', 'M', '', 'actors/richard-bremmer_Cover.jpg');
 
 -- --------------------------------------------------------
 
