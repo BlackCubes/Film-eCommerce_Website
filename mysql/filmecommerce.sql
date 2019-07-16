@@ -706,7 +706,15 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (104, 'Aditya', '', 'Sood', 'M', '', 'producers/aditya-sood_Cover.jpg'),
 (105, 'Paul', '', 'Wernick', 'M', '', 'producers/paul-wernick_Cover.jpg'),
 (106, 'Stan', '', 'Lee', 'M', '', 'producers/stan-lee_Cover.jpg'),
-(107, 'Kelly', '', 'McCormick', 'F', '', 'producers/kelly-mccormick_Cover.jpg');
+(107, 'Kelly', '', 'McCormick', 'F', '', 'producers/kelly-mccormick_Cover.jpg'),
+(108, 'Todd', '', 'Arnow', 'M', '', 'producers/todd-arnow_Cover.jpg'),
+(109, 'Michael', '', 'Barnathan', 'M', '', 'producers/michael-barnathan_Cover.jpg'),
+(110, 'Chris', '', 'Columbus', 'M', '', 'producers/chris-columbus_Cover.jpg'),
+(111, 'Paula', 'DuPré', 'Pesmen', 'F', '', 'producers/paula-dupre-pesmen_Cover.jpg'),
+(112, 'Duncan', '', 'Henderson', 'M', '', 'producers/duncan-henderson_Cover.jpg'),
+(113, 'David', '', 'Heyman', 'M', '', 'producers/david-heyman_Cover.jpg'),
+(114, 'Mark', '', 'Radcliffe', 'M', '', 'producers/mark-radcliffe_Cover.jpg'),
+(115, 'Tanya', '', 'Seghatchian', 'F', '', 'producers/tanya-seghatchian_Cover.jpg');
 
 -- --------------------------------------------------------
 
