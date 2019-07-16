@@ -468,7 +468,8 @@ INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `ab
 (73, 'Wally', '', 'Pfister', 'M', '', 'dp/wallypfister_Cover.jpg'),
 (74, 'Walter', '', 'Lassally', 'M', '', 'dp/walterlassally_Cover.jpg'),
 (75, 'Oliver', '', 'Wood', 'M', '', 'dp/oliver-wood_Cover.jpg'),
-(76, 'Ken', '', 'Seng', 'M', '', 'dp/ken-seng_Cover.jpg');
+(76, 'Ken', '', 'Seng', 'M', '', 'dp/ken-seng_Cover.jpg'),
+(77, 'Jonathan', '', 'Sela', 'M', '', 'dp/jonathan-sela_Cover.jpg');
 
 -- --------------------------------------------------------
 
