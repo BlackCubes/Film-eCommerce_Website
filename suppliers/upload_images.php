@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $allowed_ext = array('jpg', 'jpeg', 'png');
 
     if ((in_array($file_real_ext_1, $allowed_ext) && in_array($file_real_ext_2, $allowed_ext)) || (in_array($file_real_ext_1, $allowed_ext) && empty($file_real_ext_2)) ) {
-        if ($file_error_1 === 0 && $file_error_2 === 0) {
+        if (($file_error_1 === 0 && $file_error_2 === 0)) {
             if ($file_size_1 < 2000000 && $file_size_2 < 2000000) {
 
                 $file_new_name_1 = uniqid('', TRUE) . '.' . $file_real_ext_1;
@@ -85,6 +85,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 } else {
                     echo '<p class="text-danger">Sorry, but there was an error uploading your file!</p>';
                 }
+            } else {
+                echo '<p class="text-danger">Your file is too big!</p>';
+            }
+        } elseif ($file_error_1 === 0 && $file_error_2 === 4) {
+            if ($file_size_1 < 2000000) {
+
+                $file_new_name_1 = uniqid('', TRUE) . '.' . $file_real_ext_1;
+
+                $file_destination_1 = $_SERVER['DOCUMENT_ROOT'] . '/FilmIndustry/uploads/products/' . $file_new_name_1;
+
+                if (move_uploaded_file($file_tmp_name_1, $file_destination_1)) {
+
+                    $q = "UPDATE products SET image_1='{$file_new_name_1}' WHERE id={$_SESSION['product_id']}";
+
+                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+
+                    if (mysqli_affected_rows($dbc) == 1) {
+
+                        unset($_SESSION['product_id']);
+
+                        header("Location: upload_images.php");
+
+                    } else {
+                        echo '<p class="text-danger">An error occured. Please contact the website administrator. We apologize for any inconvenience.</p>';
+                    }
+
+                } else {
+                    echo '<p class="text-danger">Sorry, but there was an error uploading your file!</p>';
             } else {
                 echo '<p class="text-danger">Your file is too big!</p>';
             }
