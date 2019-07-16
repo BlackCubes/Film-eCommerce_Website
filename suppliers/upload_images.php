@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $allowed_ext = array('jpg', 'jpeg', 'png');
 
-    if (in_array($file_real_ext_1, $allowed_ext) && in_array($file_real_ext_2, $allowed_ext)) {
+    if ((in_array($file_real_ext_1, $allowed_ext) && in_array($file_real_ext_2, $allowed_ext)) || (in_array($file_real_ext_1, $allowed_ext) && empty($file_real_ext_2)) ) {
         if ($file_error_1 === 0 && $file_error_2 === 0) {
             if ($file_size_1 < 2000000 && $file_size_2 < 2000000) {
 
