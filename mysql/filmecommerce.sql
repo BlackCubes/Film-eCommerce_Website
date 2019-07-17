@@ -1134,6 +1134,7 @@ INSERT INTO `products_genres` (`product_id`, `genre_id`) VALUES
 (11, 9),
 (11, 10),
 (11, 17),
+(12, 2),
 (12, 9),
 (12, 10),
 (12, 17);
