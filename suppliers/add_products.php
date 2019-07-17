@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    if (preg_match('/^[A-Z0-9 \'.:-]{1,100}$/i', $_POST['product_name'])) {
+    if (preg_match('/^[A-Z0-9 \(\)\'.:-]{1,100}$/i', $_POST['product_name'])) {
         $productnameError = '';
         $product_name = mysqli_real_escape_string($dbc, sanitize_input($_POST['product_name']));
     } else {
