@@ -271,7 +271,13 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (214, 'Robert', '', 'Pattinson', 'M', '', 'actors/robert-pattinson_Cover.jpg'),
 (215, 'Jason', '', 'Isaacs', 'M', '', 'actors/jason-isaacs_Cover.jpg'),
 (216, 'Tom', '', 'Felton', 'M', '', 'actors/tom-felton_Cover.jpg'),
-(217, 'Stanislav', '', 'Yanevski', 'M', '', 'actors/stanislav-yanevski_Cover.jpg');
+(217, 'Stanislav', '', 'Yanevski', 'M', '', 'actors/stanislav-yanevski_Cover.jpg'),
+(218, 'Jason', '', 'Boyd', 'M', '', 'actors/jason-boyd_Cover.jpg'),
+(219, 'Kathryn', '', 'Hunter', 'F', '', 'actors/kathryn-hunter_Cover.jpg'),
+(220, 'Miles', '', 'Jupp', 'M', '', 'actors/miles-jupp_Cover.jpg'),
+(221, 'Jessica', '', 'Hynes', 'F', '', 'actors/jessica-hynes_Cover.jpg'),
+(222, 'Natalia', '', 'Tena', 'F', '', 'actors/natalia-tena_Cover.jpg'),
+(223, 'Brendan', '', 'Gleeson', 'M', '', 'actors/brendan-gleeson_Cover.jpg');
 
 -- --------------------------------------------------------
 
