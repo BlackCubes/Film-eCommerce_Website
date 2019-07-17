@@ -277,7 +277,8 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (220, 'Miles', '', 'Jupp', 'M', '', 'actors/miles-jupp_Cover.jpg'),
 (221, 'Jessica', '', 'Hynes', 'F', '', 'actors/jessica-hynes_Cover.jpg'),
 (222, 'Natalia', '', 'Tena', 'F', '', 'actors/natalia-tena_Cover.jpg'),
-(223, 'Brendan', '', 'Gleeson', 'M', '', 'actors/brendan-gleeson_Cover.jpg');
+(223, 'Brendan', '', 'Gleeson', 'M', '', 'actors/brendan-gleeson_Cover.jpg'),
+(224, 'Ralph', '', 'Fiennes', 'M', '', 'actors/ralph-fiennes_Cover.jpg');
 
 -- --------------------------------------------------------
 
