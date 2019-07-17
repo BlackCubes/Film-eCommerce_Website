@@ -263,7 +263,15 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (206, 'Jim', '', 'Tavaré', 'M', '', 'actors/jim-tavare_Cover.jpg'),
 (207, 'Robert', '', 'Hardy', 'M', '', 'actors/robert-hardy_Cover.jpg'),
 (208, 'Abby', '', 'Ford', 'F', '', 'actors/abby-ford_Cover.jpg'),
-(209, 'Jimmy', '', 'Gardner', 'M', '', 'actors/jimmy-gardner_Cover.jpg');
+(209, 'Jimmy', '', 'Gardner', 'M', '', 'actors/jimmy-gardner_Cover.jpg'),
+(210, 'Eric', '', 'Sykes', 'M', '', 'actors/eric-sykes_Cover.jpg'),
+(211, 'Timothy', '', 'Spall', 'M', '', 'actors/timothy-spall_Cover.jpg'),
+(212, 'David', '', 'Tennant', 'M', '', 'actors/david-tennant_Cover.jpg'),
+(213, 'Jeff', '', 'Rawle', 'M', '', 'actors/jeff-rawle_Cover.jpg'),
+(214, 'Robert', '', 'Pattinson', 'M', '', 'actors/robert-pattinson_Cover.jpg'),
+(215, 'Jason', '', 'Isaacs', 'M', '', 'actors/jason-isaacs_Cover.jpg'),
+(216, 'Tom', '', 'Felton', 'M', '', 'actors/tom-felton_Cover.jpg'),
+(217, 'Stanislav', '', 'Yanevski', 'M', '', 'actors/stanislav-yanevski_Cover.jpg');
 
 -- --------------------------------------------------------
 
