@@ -773,7 +773,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (8, 4, 8, '', 2, 108, '2016-05-10', ''),
 (9, 7, 9, '4K+ Blu-Ray + Digital', 4, 134, '2018-08-21', '4K BLU RAY DISC ONLY! DOES NOT INCLUDE CASE OR ARTWORK OR DIGITAL CODES. JUST THE BLU RAY DISC SHIPPED IN A PLASTIC SNAP CASE. FEEL FREE TO ASK ANY QUESTIONS AND THANK YOU FOR LOOKING!'),
 (10, 2, 10, '', 3, 152, '2017-11-07', 'Harry Potter and the Sorcerer\'s Stone (4K Ultra HD + Blu-ray + Digital)'),
-(11, 2, 11, '', 3, 161, '2017-11-07', 'Harry Potter and the Chamber of Secrets (4K Ultra HD + Blu-ray + Digital)');
+(11, 2, 11, '', 3, 161, '2017-11-07', 'Harry Potter and the Chamber of Secrets (4K Ultra HD + Blu-ray + Digital)'),
+(12, 2, 12, '', 3, 142, '2017-11-07', 'Harry Potter and the Prisoner of Azkaban (4K Ultra HD + Blu-ray + Digital)');
 
 -- --------------------------------------------------------
 
