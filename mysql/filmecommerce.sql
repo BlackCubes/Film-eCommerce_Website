@@ -726,7 +726,8 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (112, 'Duncan', '', 'Henderson', 'M', '', 'producers/duncan-henderson_Cover.jpg'),
 (113, 'David', '', 'Heyman', 'M', '', 'producers/david-heyman_Cover.jpg'),
 (114, 'Mark', '', 'Radcliffe', 'M', '', 'producers/mark-radcliffe_Cover.jpg'),
-(115, 'Tanya', '', 'Seghatchian', 'F', '', 'producers/tanya-seghatchian_Cover.jpg');
+(115, 'Tanya', '', 'Seghatchian', 'F', '', 'producers/tanya-seghatchian_Cover.jpg'),
+(116, 'David', '', 'Barron', 'M', '', 'producers/david-barron_Cover.jpg');
 
 -- --------------------------------------------------------
 
