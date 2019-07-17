@@ -243,7 +243,18 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (186, 'Warwick', '', 'Davis', 'M', '', 'actors/warwick-davis_Cover.jpg'),
 (187, 'Verne', '', 'Troyer', 'M', '', 'actors/verne-troyer_Cover.jpg'),
 (188, 'John', '', 'Hurt', 'M', '', 'actors/john-hurt_Cover.jpg'),
-(189, 'Richard', '', 'Bremmer', 'M', '', 'actors/richard-bremmer_Cover.jpg');
+(189, 'Richard', '', 'Bremmer', 'M', '', 'actors/richard-bremmer_Cover.jpg'),
+(190, 'Rupert', '', 'Grint', 'M', '', 'actors/rupert-grint_Cover.jpg'),
+(191, 'Emma', '', 'Watson', 'F', '', 'actors/emma-watson_Cover.jpg'),
+(192, 'Toby', '', 'Jones', 'M', '', 'actors/toby-jones_Cover.jpg'),
+(193, 'Jim', '', 'Norton', 'M', '', 'actors/jim-norton_Cover.jpg'),
+(194, 'Veronica', '', 'Clifford', 'F', '', 'actors/veronica-clifford_Cover.jpg'),
+(195, 'James', '', 'Phelps', 'M', '', 'actors/james-phelps_Cover.jpg'),
+(196, 'Oliver', '', 'Phelps', 'M', '', 'actors/oliver-phelps_Cover.jpg'),
+(197, 'Julie', '', 'Walters', 'F', '', 'actors/julie-walters_Cover.jpg'),
+(198, 'Bonnie', '', 'Wright', 'F', '', 'actors/bonnie-wright_Cover.jpg'),
+(199, 'Mark', '', 'Williams', 'M', '', 'actors/mark-williams_Cover.jpg'),
+(200, 'Chris', '', 'Rankin', 'M', '', 'actors/chris-rankin_Cover.jpg');
 
 -- --------------------------------------------------------
 
