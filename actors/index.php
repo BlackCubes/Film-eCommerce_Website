@@ -62,8 +62,10 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 
 echo '<div class="container">
 <div class="sidebar-a">
-    <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=f">Female</a></p>
-    <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=m">Male</a></p>
+    <div class="results">
+        <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=f">Female</a></p>
+        <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=m">Male</a></p>
+    </div>
 </div>';
 
 $q = "SELECT first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
