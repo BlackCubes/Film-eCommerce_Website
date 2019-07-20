@@ -159,10 +159,15 @@
     overflow: hidden;
 }
 
+.container-actor .actor-image {
+    line-height: 300px;
+}
+
 .container-actor .actor-image img {
-    display: block;
+    /*display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
+    vertical-align: middle;
     max-width: 320px;
     max-height: 240px;
 }
