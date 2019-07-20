@@ -132,6 +132,9 @@ require(MYSQL);
             echo '<div class="container-product"><div class="product-image"><img src="' . $product_image . '" alt="#"></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
         }
 
+        mysqli_free_result($r);
+        mysqli_close($dbc);
+
         if ($pages > 1) {
 
             echo '<div class="product-pagination">';
