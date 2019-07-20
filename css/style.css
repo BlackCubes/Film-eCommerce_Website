@@ -160,8 +160,11 @@
 }
 
 .container-actor .actor-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 300px;
-    margin: 50px;
+    margin: 20px;
 }
 
 .container-actor .actor-image img {
