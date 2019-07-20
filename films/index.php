@@ -96,6 +96,8 @@ require(MYSQL);
     <div class="main-product">
         <?php
 
+        $display = 21;
+
         $q = "SELECT name, unit_price, image_1 FROM products ORDER BY name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
