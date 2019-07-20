@@ -139,6 +139,12 @@
 
 /* ARTISTS */
 
+#artistActors.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto;
+}
+
 #artistActors.container .main-actors {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
