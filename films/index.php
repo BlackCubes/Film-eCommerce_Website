@@ -98,6 +98,26 @@ require(MYSQL);
 
         $display = 21;
 
+        if (isset($_GET['p']) && is_numeric($_GET['p'])) {
+            $pages = $_GET['p'];
+        } else {
+            $q = "SELECT COUNT(id) FROM products";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+            $records = $row[0];
+            if ($records > $display) {
+                $pages = ceil($records/$display);
+            } else {
+                $pages = 1;
+            }
+        }
+
+        if (isset($_GET['s']) && is_numeric($_GET['s'])) {
+            $start = $_GET['s'];
+        } else {
+            $start = 0;
+        }
+
         $q = "SELECT name, unit_price, image_1 FROM products ORDER BY name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
