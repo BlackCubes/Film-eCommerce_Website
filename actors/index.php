@@ -63,6 +63,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 echo '<div class="container">
 <div class="sidebar-a">
     <div class="results">
+        <p><b>Gender</b></p>
         <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=f">Female</a></p>
         <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=m">Male</a></p>
     </div>
