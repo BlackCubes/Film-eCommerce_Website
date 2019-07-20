@@ -72,10 +72,10 @@ echo '<div class="container" id="artistActors">
 $q = "SELECT first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
-echo'<div class="main-product">';
+echo'<div class="main-actors">';
 
 while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-    echo '<div class="container-product"><div class="product-image"><img src="/FilmIndustry/eCommerce/img/' . $actor['img'] . '" alt="#"></div><div class="product-name">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</div></div>';
+    echo '<div class="container-actor"><div class="actor-image"><img src="/FilmIndustry/eCommerce/img/' . $actor['img'] . '" alt="#"></div><div class="actor-name">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</div></div>';
 }
 
 mysqli_free_result($r);
