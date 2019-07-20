@@ -136,3 +136,33 @@
     font-size: 18px;
     color: black;
 }
+
+/* ARTISTS */
+
+#artistActors.container .main-actors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 338px);
+    grid-row-end: auto;
+    border-left: 1px solid rgba(138,43,226,0.17);
+}
+
+.main-actors .container-actor {
+    min-height: 300px;
+    max-height: 300px;
+    padding-top: 24px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.container-actor .actor-image img {
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.container-actor .actor-name {
+    font-family: 'Muli', sans-serif;
+    font-weight: 560;
+    font-size: 16px;
+    color: black;
+}
