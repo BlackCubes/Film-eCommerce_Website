@@ -102,7 +102,7 @@
     padding-top: 1px;
 }
 
-.container .main-product {
+.container .main-product, .container .main-actors {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(7, 338px);
@@ -110,7 +110,7 @@
     border-left: 1px solid rgba(138,43,226,0.17);
 }
 
-.main-product .container-product {
+.main-product .container-product, .main-actors .container-actors {
     min-height: 300px;
     max-height: 300px;
     padding-top: 24px;
@@ -118,12 +118,12 @@
     overflow: hidden;
 }
 
-.container-product .product-image img {
+.container-product .product-image img, .container-actors .actor-image img {
     max-width: 240px;
     max-height: 240px;
 }
 
-.container-product .product-name {
+.container-product .product-name, .container-actors .actor-name {
     font-family: 'Muli', sans-serif;
     font-weight: 560;
     font-size: 16px;
