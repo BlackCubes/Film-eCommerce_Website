@@ -156,8 +156,6 @@
 .main-actors .container-actor {
     min-height: 300px;
     max-height: 300px;
-    padding-top: 24px;
-    padding-left: 20px;
     overflow: hidden;
 }
 
