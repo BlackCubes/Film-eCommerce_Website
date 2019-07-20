@@ -161,6 +161,7 @@
 
 .container-actor .actor-image {
     line-height: 300px;
+    margin: 50px;
 }
 
 .container-actor .actor-image img {
