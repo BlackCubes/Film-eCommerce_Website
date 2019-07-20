@@ -118,7 +118,7 @@ require(MYSQL);
             $start = 0;
         }
 
-        $q = "SELECT name, unit_price, image_1 FROM products ORDER BY name";
+        $q = "SELECT name, unit_price, image_1 FROM products ORDER BY name LIMIT $start, $display";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
@@ -130,6 +130,15 @@ require(MYSQL);
             }
 
             echo '<div class="container-product"><div class="product-image"><img src="' . $product_image . '" alt="#"></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
+        }
+
+        if ($pages > 1) {
+
+            echo '<div class="product-pagination">';
+            $current_page = ($start/$display) + 1;
+
+            echo'</div>';
+
         }
 
         ?>
