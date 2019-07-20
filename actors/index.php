@@ -75,7 +75,7 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mys
 echo'<div class="main-actors">';
 
 while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-    echo '<div class="container-actors"><div class="actor-image"><img src="' . $actor['img'] . '" alt="#"></div><div class="actor-name">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</div></div>';
+    echo '<div class="container-actors"><div class="actor-image"><img src="/FilmIndustry/eCommerce/img/' . $actor['img'] . '" alt="#"></div><div class="actor-name">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</div></div>';
 }
 
 mysqli_free_result($r);
