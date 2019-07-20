@@ -103,7 +103,7 @@ require(MYSQL);
         } else {
             $q = "SELECT COUNT(id) FROM products";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-            $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+            $row = mysqli_fetch_array($r, MYSQLI_NUM);
             $records = $row[0];
             if ($records > $display) {
                 $pages = ceil($records/$display);
