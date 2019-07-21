@@ -112,13 +112,13 @@
     grid-template-columns: 1fr 6fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "s-a m-p m-p m-p m-p m-p m-p"
-        "s-a m-p m-p m-p m-p m-p m-p"
-        "s-a m-p m-p m-p m-p m-p m-p"
-        "s-a m-p m-p m-p m-p m-p m-p"
-        "s-a m-p m-p m-p m-p m-p m-p"
-        "s-a m-p m-p m-p m-p m-p m-p"
-        "s-a p p p p p p";
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a p p p";
 }
 
 .container .sidebar-a {
@@ -188,13 +188,13 @@
     grid-template-columns: 1fr 6fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "s-a m-a m-a m-a m-a m-a m-a"
-        "s-a m-a m-a m-a m-a m-a m-a"
-        "s-a m-a m-a m-a m-a m-a m-a"
-        "s-a m-a m-a m-a m-a m-a m-a"
-        "s-a m-a m-a m-a m-a m-a m-a"
-        "s-a m-a m-a m-a m-a m-a m-a"
-        "s-a p p p p p p";
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a p p p";
 }
 
 #templateArtists.container .main-artists {
