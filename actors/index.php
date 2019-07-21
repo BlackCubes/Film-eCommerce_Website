@@ -89,7 +89,7 @@ if ($pages > 1) {
     $current_page = ($start/$display) + 1;
 
     if ($current_page != 1) {
-        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
+        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '"><i class="fas fa-caret-left"></i></a>';
     }
 
     for ($i = 1; $i <= $pages; $i++) {
@@ -101,7 +101,7 @@ if ($pages > 1) {
     }
 
     if ($current_page != $pages) {
-        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'">Next</a>';
+        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'"><i class="fas fa-caret-right"></i></a>';
     }
 
     echo '</div>';
