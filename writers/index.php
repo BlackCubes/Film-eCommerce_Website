@@ -64,8 +64,8 @@ echo '<div class="container" id="templateArtists">
 <div class="sidebar-a">
     <div class="results">
         <p><b>Gender</b></p>
-        <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=f">Female</a></p>
-        <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=m">Male</a></p>
+        <p><a href="/FilmIndustry/eCommerce/writers/index.php?sort=f">Female</a></p>
+        <p><a href="/FilmIndustry/eCommerce/writers/index.php?sort=m">Male</a></p>
     </div>
 </div>';
 
@@ -87,19 +87,19 @@ if ($pages > 1) {
     $current_page = ($start/$display) + 1;
 
     if ($current_page != 1) {
-        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
+        echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
     }
 
     for ($i = 1; $i <= $pages; $i++) {
         if ($i != $current_page) {
-            echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
+            echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
         } else {
             echo $i . ' ';
         }
     }
 
     if ($current_page != $pages) {
-        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'">Next</a>';
+        echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'">Next</a>';
     }
 
     echo '</div>';
