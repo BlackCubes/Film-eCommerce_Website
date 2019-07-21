@@ -23,7 +23,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 
 require(MYSQL);
 
-$display = 15;
+$display = 21;
 
 $sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'all';
 
