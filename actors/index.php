@@ -78,6 +78,8 @@ while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
     echo '<div class="container-artist"><div class="artist-image"><img src="/FilmIndustry/eCommerce/img/' . $actor['img'] . '" alt="#"></div><div class="artist-name">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</div></div>';
 }
 
+echo '</div>';
+
 mysqli_free_result($r);
 mysqli_close($dbc);
 
@@ -106,7 +108,7 @@ if ($pages > 1) {
 
 }
 
-echo '</div></div>';
+echo '</div>';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
