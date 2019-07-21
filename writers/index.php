@@ -78,6 +78,8 @@ while ($writer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
     echo '<div class="container-artist"><div class="artist-image"><img src="/FilmIndustry/eCommerce/img/' . $writer['img'] . '" alt="#"></div><div class="artist-name">' . $writer['first_name'] . ' ' . $writer['middle_name'] . ' ' . $writer['last_name'] . '</div></div>';
 }
 
+echo '</div>';
+
 mysqli_free_result($r);
 mysqli_close($dbc);
 
@@ -87,26 +89,26 @@ if ($pages > 1) {
     $current_page = ($start/$display) + 1;
 
     if ($current_page != 1) {
-        echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
+        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=0&p=' . $pages . '&sort=' . $sort . '"><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></a><a href="/FilmIndustry/eCommerce/writers/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '"><i class="fas fa-caret-left"></i></a>';
     }
 
     for ($i = 1; $i <= $pages; $i++) {
         if ($i != $current_page) {
             echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
         } else {
-            echo $i . ' ';
+            echo '<a class="active">' . $i . '</a>';
         }
     }
 
     if ($current_page != $pages) {
-        echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'">Next</a>';
+        echo '<a href="/FilmIndustry/eCommerce/writers/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'"><i class="fas fa-caret-right"></i></a><a href="/FilmIndustry/eCommerce/actors/index.php?s=' . (($display * ($pages - 1))) . '&p=' . $pages . '&sort=' . $sort . '"><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></a>';
     }
 
     echo '</div>';
 
 }
 
-echo '</div></div>';
+echo '</div>';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
