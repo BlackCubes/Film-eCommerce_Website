@@ -83,6 +83,26 @@
     font-size: 14px;
 }
 
+/* PAGINATION */
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.pagination a.active {
+    background-color: blueviolet;
+}
+
+.pagination a:hover:not(.active) {background-color: blueviolet;}
+
 /* MAIN CONTAINER */
 
 .container {
