@@ -89,6 +89,8 @@
     display: inline-block;
     grid-area: p;
     text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .pagination a {
