@@ -49,7 +49,6 @@ if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $records = $row[0];
     if ($records > $display) {
         $pages = ceil($records/$display);
-        $total = $records;
     } else {
         $pages = 1;
     }
@@ -102,7 +101,7 @@ if ($pages > 1) {
     }
 
     if ($current_page != $pages) {
-        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'"><i class="fas fa-caret-right"></i></a><a href="/FilmIndustry/eCommerce/actors/index.php?s=' . $total . '&p=' . $pages . '&sort=' . $sort . '"><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></a>';
+        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'"><i class="fas fa-caret-right"></i></a><a href="/FilmIndustry/eCommerce/actors/index.php?s=' . (($display * ($pages - 1))) . '&p=' . $pages . '&sort=' . $sort . '"><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></a>';
     }
 
     echo '</div>';
