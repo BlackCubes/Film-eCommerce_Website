@@ -100,6 +100,11 @@
 
 .container .sidebar-a a {
     text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.container .sidebar-a a:hover {
+    color: blueviolet;
 }
 
 .container .sidebar-a .results {
