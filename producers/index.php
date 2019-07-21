@@ -23,7 +23,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 
 require(MYSQL);
 
-$display = 15;
+$display = 21;
 
 $sort = (isset($_GET['sort'])) ? $_GET['sort']: 'all';
 
@@ -44,7 +44,7 @@ if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
     $q = "SELECT COUNT(id) FROM producers $where";
-    $r = mysqli_query($dbc, $q);
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
     if ($records > $display) {
@@ -61,7 +61,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 }
 
 $q = "SELECT first_name, middle_name, last_name, img FROM producers $where ORDER BY last_name LIMIT $start, $display";
-$r = mysqli_query($dbc, $q);
+$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
 echo '<div class="container-fluid">
 <nav class="breadcrumb t-uppercase" role="navigation" aria-label="breadcrumbs">
