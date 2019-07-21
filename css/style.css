@@ -99,12 +99,14 @@
 }
 
 .pagination a.active {
-    background-color: black;
-    color: white;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
 }
 
 .pagination a:hover:not(.active) {
     border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
 }
 
