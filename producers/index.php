@@ -96,7 +96,7 @@ if ($pages > 1) {
         if ($i != $current_page) {
             echo '<a href="/FilmIndustry/eCommerce/producers/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
         } else {
-            echo '<div class="active">' . $i . '</div>';
+            echo '<a class="active">' . $i . '</a>';
         }
     }
 
