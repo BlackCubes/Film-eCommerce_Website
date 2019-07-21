@@ -90,7 +90,7 @@ if ($pages > 1) {
         echo '<a href="/FilmIndustry/eCommerce/directors/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
     }
 
-    for ($i = 0; $i <= $pages; $i++) {
+    for ($i = 1; $i <= $pages; $i++) {
         if ($i != $current_page) {
             echo '<a href="/FilmIndustry/eCommerce/directors/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&s=' . $sort . '">' . $i . '</a>';
         } else {
