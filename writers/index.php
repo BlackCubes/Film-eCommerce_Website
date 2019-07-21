@@ -60,61 +60,53 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
+echo '<div class="container" id="templateArtists">
+<div class="sidebar-a">
+    <div class="results">
+        <p><b>Gender</b></p>
+        <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=f">Female</a></p>
+        <p><a href="/FilmIndustry/eCommerce/actors/index.php?sort=m">Male</a></p>
+    </div>
+</div>';
+
 $q = "SELECT first_name, middle_name, last_name, img FROM writers $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
-echo '<div class="container-fluid">
-<nav class="breadcrumb t-uppercase" role="navigation" aria-label="breadcrumbs">
-    <li><a href="' . BASE_URL . 'index.php">Home</a></li>
-    <li><a href="' . BASE_URL . 'writers/index.php">' . $page_title . '</a></li>
-</nav>
-<div class="row">
-    <div class="col-2">
-        <p><b>Gender</b></p>
-        <p><a href="index.php?sort=f">Female</a></p>
-        <p><a href="index.php?sort=m">Male</a></p>
-    </div>
-    <div class="col-8 inline" id="writersCollection">
-        <div class="row grid grid--view-items">';
+echo'<div class="main-artists">';
 
-while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-    echo '<div class="col grid_item">
-        <div class="grid-view-item">
-            <a class="grid-view-item_link" href="#"><img id="productImage-collection-template-1" src="' . BASE_URL . 'img/' . $row['img'] . '" alt="#"></a>
-            <a href="#"><div class="h4 grid-view-item_title">' . $row['first_name'] . ' ' . $row['middle_name'] . ' ' . $row['last_name'] . '</div></a>
-        </div>
-    </div>';
+while ($writer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    echo '<div class="container-artist"><div class="artist-image"><img src="/FilmIndustry/eCommerce/img/' . $writer['img'] . '" alt="#"></div><div class="artist-name">' . $writer['first_name'] . ' ' . $writer['middle_name'] . ' ' . $writer['last_name'] . '</div></div>';
 }
 
-echo '</div></div>
-<div class="col-2"></div>
-</div></div>';
 mysqli_free_result($r);
 mysqli_close($dbc);
 
 if ($pages > 1) {
 
-    echo '<br><p>';
+    echo '<div class="pagination">';
     $current_page = ($start/$display) + 1;
 
     if ($current_page != 1) {
-        echo '<a href="index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
+        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start - $display) . '&p=' . $pages . '&sort=' . $sort . '">Previous</a>';
     }
 
     for ($i = 1; $i <= $pages; $i++) {
         if ($i != $current_page) {
-            echo '<a href="index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
+            echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '&sort=' . $sort . '">' . $i . '</a>';
         } else {
             echo $i . ' ';
         }
     }
 
     if ($current_page != $pages) {
-        echo '<a href="index.php?s=' . ($start + $display) . '&p=' . $pages . '&sort=' . $sort . '">Next</a>';
+        echo '<a href="/FilmIndustry/eCommerce/actors/index.php?s=' . ($start + $display) .'&p=' . $pages . '&sort=' . $sort .'">Next</a>';
     }
 
-    echo '</p>';
+    echo '</div>';
+
 }
+
+echo '</div></div>';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 ?>
