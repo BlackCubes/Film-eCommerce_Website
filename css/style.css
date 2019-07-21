@@ -98,6 +98,10 @@
     color: black;
 }
 
+.container .sidebar-a a {
+    text-decoration: none;
+}
+
 .container .sidebar-a .results {
     padding-top: 1px;
 }
