@@ -98,7 +98,8 @@
 }
 
 .pagination a.active {
-    background-color: blueviolet;
+    background-color: black;
+    color: white;
 }
 
 .pagination a:hover:not(.active) {background-color: blueviolet;}
