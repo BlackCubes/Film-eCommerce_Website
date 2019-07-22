@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 -->
 <p>Your browser must allow cookies in order to log in.</p>
 <form action="login.php" method="post">
-    <fieldset>
+    <fieldset class="sign-in-card">
         <div class="sign-in-title">
             <h2>Sign In</h2>
         </div>
