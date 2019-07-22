@@ -296,6 +296,16 @@ fieldset.sign-in-card {
     padding-bottom: 5px;
 }
 
+.sign-in-submit input {
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    /*padding: 10px 20px;*/
+    font-size: 17px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+}
+
 .sign-in-submit .sign-in-button {
     width: 482px;
     height: 45px;
