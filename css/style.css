@@ -269,3 +269,7 @@ fieldset.sign-in-card {
 .sign-in-card .registration-option {
     text-align: center;
 }
+
+.sign-in-card label, .sign-in-card input {
+    display: block;
+}
