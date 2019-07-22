@@ -248,3 +248,11 @@
     color: black;
     text-align: center;
 }
+
+/* SIGN IN */
+
+fieldset.sign-in-card {
+    display: block;
+    width: 500px;
+    height: 570px;
+}
