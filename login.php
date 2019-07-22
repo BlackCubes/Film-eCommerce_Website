@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="password" id="signInUserPass" name="pass" class="user-pass" maxlength="255">
         </div>
         <div class="sign-in-submit">
-            <input type="submit" name="submit" value="SIGN IN">
+            <input type="submit" name="submit" class="sign-in-button" value="SIGN IN">
         </div>
         <div class="sign-in-options">
             <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
