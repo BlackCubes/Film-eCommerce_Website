@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="registration-option">
             <h2>New?</h2>
-            <a href="/FilmIndustry/eCommerce/register.php">REGISTER</a>
+            <a href="/FilmIndustry/eCommerce/register.php" class="register-button" role="button">REGISTER</a>
         </div>
     </fieldset>
 </form>
