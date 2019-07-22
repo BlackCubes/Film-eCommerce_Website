@@ -291,7 +291,7 @@ fieldset.sign-in-card {
 
 .sign-in-email input, .sign-in-pass input {
     border: none;
-    background-color: rgba(235, 213, 255, 0.17);
+    background-color: rgba(148, 130, 165, 0.17);
 }
 
 .sign-in-submit {
