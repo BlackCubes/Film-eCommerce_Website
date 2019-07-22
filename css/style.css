@@ -306,6 +306,12 @@ fieldset.sign-in-card {
     cursor: pointer;
 }
 
+.sign-in-submit input:hover {
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+}
+
 .sign-in-submit .sign-in-button {
     width: 482px;
     height: 45px;
