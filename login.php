@@ -103,12 +103,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Sign In</h2>
         </div>
         <div class="sign-in-email">
-            <label>Email address</label>
-            <input type="email" name="email" maxlength="80">
+            <label for="signInUserEmail">Email address</label>
+            <input type="email" id="signInUserEmail" name="email" maxlength="80">
         </div>
         <div class="sign-in-pass">
-            <label>Password</label>
-            <input type="password" name="pass" maxlength="255">
+            <label for="signInUserPass">Password</label>
+            <input type="password" id="signInUserPass" name="pass" maxlength="255">
         </div>
         <div class="sign-in-submit">
             <input type="submit" name="submit" value="SIGN IN">
