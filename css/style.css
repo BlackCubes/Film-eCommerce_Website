@@ -313,7 +313,7 @@ fieldset.sign-in-card {
     border-bottom: 1px solid rgba(138,43,226,0.17);
     border-top: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease-in-out;
 }
 
 .sign-in-submit .sign-in-button {
