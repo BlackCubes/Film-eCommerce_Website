@@ -261,3 +261,11 @@ fieldset.sign-in-card {
     font-weight: 500;
     color: black;
 }
+
+.sign-in-card .sign-in-title,
+.sign-in-card .sign-in-submit,
+.sign-in-card .sign-in-options,
+.sign-in-card .seller-sign-in-option,
+.sign-in-card .registration-option {
+    text-align: center;
+}
