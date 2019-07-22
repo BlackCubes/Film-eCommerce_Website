@@ -278,7 +278,7 @@ fieldset.sign-in-card {
 .sign-in-email, .sign-in-pass {
     width: 100%;
     height: 62.2px;
-    margin: 15px 5px;;
+    margin: 15px 5px;
 }
 
 .sign-in-email .user-email, .sign-in-pass .user-pass {
