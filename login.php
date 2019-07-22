@@ -113,8 +113,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="sign-in-submit">
             <input type="submit" name="submit" value="SIGN IN">
         </div>
+        <div class="sign-in-options">
+            <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
+        </div>
+        <div class="seller-sign-in-option">
+            <p>Seller? Sign in <a href="/FilmIndustry/eCommerce/suppliers/login.php">here</a>.</p>
+        </div>
+        <div class="registration-option">
+            <h2>New?</h2>
+            <a href="/FilmIndustry/eCommerce/register.php">REGISTER</a>
+        </div>
     </fieldset>
-    <p><small>Seller? Sign in <a href="suppliers/login.php">here</a>.</small></p>
 </form>
 
 <?php include('includes/footer.html'); // Include the footer file. ?>
