@@ -335,3 +335,8 @@ fieldset.sign-in-card {
 .seller-sign-in-option p, .seller-sign-in-option a {
     font-size: 12px;
 }
+
+.sign-in-options a, .seller-sign-in-option a {
+    text-decoration: none;
+    color: blueviolet;
+}
