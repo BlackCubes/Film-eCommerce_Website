@@ -330,3 +330,8 @@ fieldset.sign-in-card {
     width: 482px;
     height: 45px;
 }
+
+.sign-in-options p, .sign-in-options a,
+.seller-sign-in-option p, .seller-sign-in-option a {
+    font-size: 12px;
+}
