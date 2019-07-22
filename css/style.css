@@ -297,8 +297,8 @@ fieldset.sign-in-card {
 }
 
 .sign-in-submit input {
-    background-color: black;
-    color: #ffffff;
+    background-color: white;
+    color: black;
     border: none;
     /*padding: 10px 20px;*/
     font-size: 16px;
