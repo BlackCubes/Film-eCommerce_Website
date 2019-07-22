@@ -340,3 +340,7 @@ fieldset.sign-in-card {
     text-decoration: none;
     color: blueviolet;
 }
+
+.sign-in-card .registration-option {
+    border-top: 1px solid rgba(138,43,226,0.17);
+}
