@@ -304,6 +304,7 @@ fieldset.sign-in-card {
     font-size: 16px;
     font-family: 'Muli', sans-serif;
     cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
 .sign-in-submit input:hover {
