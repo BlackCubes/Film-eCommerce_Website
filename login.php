@@ -96,15 +96,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     In the fieldset of inputting the email address and password, it is not made sticky. That is why there is no 'value' attribute.
 
 -->
-<h1>Login</h1>
 <p>Your browser must allow cookies in order to log in.</p>
 <form action="login.php" method="post">
     <fieldset>
-        <p><strong>Email Address:</strong> <input type="email" name="email" size="20" maxlength="80"></p>
-        <p><strong>Password:</strong> <input type="password" name="pass" size="20"></p>
-        <div align="center"><input type="submit" name="submit" value="Login"></div>
+        <h1>Sign In</h1>
+        <label>Email address</label>
+        <input type="email" name="email" maxlength="80">
+        <label>Password</label>
+        <input type="password" name="pass" maxlength="255">
+        <input type="submit" name="submit" value="SIGN IN">
     </fieldset>
-    <p><small>Sellers, please sign-in <a href="suppliers/login.php">here</a>.</small></p>
+    <p><small>Seller? Sign in <a href="suppliers/login.php">here</a>.</small></p>
 </form>
 
 <?php include('includes/footer.html'); // Include the footer file. ?>
