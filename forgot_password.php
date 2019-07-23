@@ -27,6 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // For the first if-statement in the main Submit Conditional, it checks if the user properly entered their email address. If not, then an error would occur telling them that the user has forgotten to enter an email address:
     if (!empty($_POST['email'])) {
 
+        $emailErr_1 = $emailErr_2 = '';
+
         // The following query takes the user's submitted email address to look for the user's id in the system, and it removes any special characters by the function mysqli_real_escape_string(). After storing the query in the variable $q, the result of the query statement is stored in the variable $r where an error is triggered if something did not go right. A little bit later in the code, this will be used in the second if-statement to check if the user exist in the system:
         $q = 'SELECT id FROM users WHERE email="' . mysqli_real_escape_string($dbc, $_POST['email']) . '"';
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
@@ -39,13 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else { // No database match.
 
-            echo '<p class="error">The submitted email address does not match those on file!</p>';
+            $emailErr_2 = 'The submitted email address does not match those on file!';
             
         }
 
     } else { // The POST was empty.
 
-        echo '<p class="error">You forgot to enter your email address!</p>';
+        $emailErr_1 = 'You forgot to enter your email address!';
 
     } // End of empty($_POST[email]).
 
