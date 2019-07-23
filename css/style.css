@@ -276,6 +276,10 @@ fieldset.sign-in-card {
     vertical-align: middle;
 }
 
+.sign-in-title h2, .registration-option h2 {
+    font-weight: 300;
+}
+
 .sign-in-email, .sign-in-pass {
     /*width: 100%;*/
     height: 62.2px;
