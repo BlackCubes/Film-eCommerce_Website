@@ -103,6 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="forgotUserEmailInput">Email address</label>
             <input type="email" id="forgotUserEmailInput" name="email" class="user-email--forgot" maxlength="80">
         </div>
+        <?php if (isset($_POST['email'])) echo '<div class="forgot-pass-error"><p>' . $emailErr_1 . '</p><p>' . $emailErr_2 . '</p></div>'; ?>
         <div class="forgot-email-submit">
             <input type="submit" name="submit" class="forgot-pass-button" value="SUBMIT">
         </div>
