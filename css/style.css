@@ -440,6 +440,11 @@ fieldset.sign-in-card {
     text-align: center;
 }
 
+.forgot-pass-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
 .forgot-pass-info p {
     font-size: 12px;
     font-weight: 300;
