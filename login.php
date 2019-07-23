@@ -130,7 +130,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="submit" name="submit" class="sign-in-button" value="SIGN IN">
         </div>
         <div class="system-error">
-            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_1 || $systemErr_2 || $systemErr_3; ?></p>
+            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_1; ?></p>
+            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_2; ?></p>
+            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_3; ?></p>
         </div>
         <div class="sign-in-options">
             <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
