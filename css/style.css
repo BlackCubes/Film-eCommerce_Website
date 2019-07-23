@@ -282,6 +282,10 @@ fieldset.sign-in-card {
     margin: 15px 15px;
 }
 
+.sign-in-email label, .sign-in-pass label {
+    font-size: 13px;
+}
+
 .sign-in-email .user-email, .sign-in-pass .user-pass {
     width: 458px;
     height: 40px;
