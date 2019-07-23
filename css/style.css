@@ -354,6 +354,8 @@ fieldset.sign-in-card {
     width: 470px;
     height: 43px;
     padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
     transition: all 0.3s ease-out;
 }
