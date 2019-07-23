@@ -485,3 +485,13 @@ fieldset.sign-in-card {
     padding-top: 20px;
     padding-bottom: 5px;
 }
+
+.forgot-email-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
