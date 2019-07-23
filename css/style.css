@@ -346,10 +346,13 @@ fieldset.sign-in-card {
 }
 
 .registration-option .register-button {
+    display: block;
     color: black;
     background-color: pink;
     font-size: 16px;
     font-family: 'Muli', sans-serif;
+    width: 482px;
+    height: 45px;
     padding: 5px;
     text-decoration: none;
     transition: all 0.3s ease-out;
