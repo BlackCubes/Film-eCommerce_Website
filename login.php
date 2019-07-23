@@ -68,18 +68,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             } else {
 
-                echo '<p class="error">Either the email address and password entered do not match those on file, or you have not yet activated your account.</p>';
+                $systemErr_3 = 'Either the email address and password entered do not match those on file, or you have not yet activated your account.';
 
             }
 
         } else { // No match was made in the system.
 
-            echo '<p class="error">Either the email address and password entered do not match those on file, or you have not yet activated your account.</p>';
+            $systemErr_2 = 'Either the email address and password entered do not match those on file, or you have not yet activated your account.';
 
         }
 
     } else { // If everything was not OK.
-        echo '<p class="error">Please try again</p>';
+        $systemErr_1 = 'Please try again';
     }
 
     mysqli_close($dbc); // Closing the database connection.
@@ -120,6 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="sign-in-submit">
             <input type="submit" name="submit" class="sign-in-button" value="SIGN IN">
+        </div>
+        <div class="system-error">
+            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_1 || $systemErr_2 || $systemErr_3; ?></p>
         </div>
         <div class="sign-in-options">
             <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
