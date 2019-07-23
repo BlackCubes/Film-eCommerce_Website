@@ -306,6 +306,11 @@ fieldset.sign-in-card {
     background-color: white;
 }
 
+.sign-in-cookies p {
+    font-size: 10px;
+    font-weight: 300;
+}
+
 .sign-in-submit {
     width: 100%;
     height: 62.2px;
