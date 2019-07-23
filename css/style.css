@@ -260,6 +260,8 @@ fieldset.sign-in-card {
     height: 620px;
     background-color: white;
     border: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sign-in-card div {
