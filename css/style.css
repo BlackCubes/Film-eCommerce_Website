@@ -450,6 +450,10 @@ fieldset.sign-in-card {
     font-weight: 300;
 }
 
+.forgot-pass-info {
+    padding-bottom: 10px;
+}
+
 .forgot-pass-info p {
     font-size: 12px;
     font-weight: 300;
