@@ -316,7 +316,7 @@ fieldset.sign-in-card {
     transition: all 0.3s ease-out;
 }
 
-.sign-in-submit input:hover {
+.sign-in-submit input:hover, .registration-option a:hover {
     color: rgb(94, 94, 94);
     font-weight: 300;
     font-size: 15px;
