@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $e = mysqli_real_escape_string($dbc, $_POST['email']);
     } else {
         $e = FALSE;
-        echo '<p class="error">You forgot to enter your email address!</p>';
+        $emailErr = 'You forgot to enter your email address!';
     }
 
     // Validating the user's password. The logic is the same explanation as in line 23, but the difference is that the use of the function trim() on line 33 which removes any white spaces or other characters from the beginning and end of a string:
@@ -104,6 +104,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="sign-in-email">
             <label for="signInUserEmail">Email address</label>
             <input type="email" id="signInUserEmail" name="email" class="user-email" maxlength="80">
+        </div>
+        <div class="email-error">
+            <p><?php if (isset($_POST['email'])) echo $emailErr; ?></p>
         </div>
         <div class="sign-in-pass">
             <label for="signInUserPass">Password</label>
