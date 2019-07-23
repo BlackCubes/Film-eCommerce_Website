@@ -448,10 +448,6 @@ fieldset.sign-in-card {
     font-weight: 300;
 }
 
-.forgot-pass-info {
-    padding-bottom: 10px;
-}
-
 .forgot-pass-info p {
     font-size: 12px;
     font-weight: 300;
@@ -477,4 +473,8 @@ fieldset.sign-in-card {
 .forgot-email-input input {
     border: none;
     background-color: rgba(148, 130, 165, 0.17);
+}
+
+.forgot-email-input input:focus {
+    background-color: white;
 }
