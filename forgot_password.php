@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else { // The POST was empty.
 
         $emailErr_1 = 'You forgot to enter your email address!';
+        $emailErr_2 = '';
 
     } // End of empty($_POST[email]).
 
