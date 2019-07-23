@@ -307,7 +307,9 @@ fieldset.sign-in-card {
 }
 
 .sign-in-card .sign-in-cookies,
-.sign-in-card .email-error, .sign-in-card .pass-error {
+.sign-in-card .email-error,
+.sign-in-card .pass-error,
+.sign-in-card .system-error {
     width: 470px;
     margin-right: auto;
     margin-left: auto;
@@ -318,7 +320,9 @@ fieldset.sign-in-card {
     font-weight: 300;
 }
 
-.sign-in-card .email-error p, .sign-in-card .pass-error p {
+.sign-in-card .system-error p,
+.sign-in-card .email-error p,
+.sign-in-card .pass-error p {
     font-size: 12px;
     font-weight: 300;
     color: red;
