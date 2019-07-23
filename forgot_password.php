@@ -110,6 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="forgot-email-submit">
             <input type="submit" name="submit" class="forgot-pass-button" value="SUBMIT">
         </div>
+        <?php if (isset($_POST['email'])) echo '<div class="system-error--forgot-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
     </fieldset>
 </form>
 
