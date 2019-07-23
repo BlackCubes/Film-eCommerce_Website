@@ -433,3 +433,9 @@ fieldset.sign-in-card {
     font-size: 14px;
     color: black;
 }
+
+.forgot-pass-card .forgot-pass-title,
+.forgot-pass-card .forgot-pass-info,
+.forgot-pass-card .forgot-email-submit {
+    text-align: center;
+}
