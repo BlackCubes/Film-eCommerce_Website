@@ -473,3 +473,8 @@ fieldset.sign-in-card {
     padding: 0 10px;
     margin: 5px 0;
 }
+
+.forgot-email-input input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
