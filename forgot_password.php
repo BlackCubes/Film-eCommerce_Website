@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!-- Making the form as a POST method: -->
-<form action="forgot_password.php" method="post">
+<form action="forgot_password.php" method="post" id="forgotPassCard">
     <fieldset class="forgot-pass-card">
         <div class="forgot-pass-title">
             <h2>Request Password Reset</h2>
