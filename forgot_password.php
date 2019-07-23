@@ -55,6 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // This third if-statement checks to see if the user's id passes the previous validation test (if TRUE), but if it were FALSE then it leads to an error else-statement. Once it is TRUE is when a new, random password is created and updates the database:
     if ($uid) {
 
+        $systemErr_1 = $systemErr_2 = '';
+
         // Creating a new, random password for the registered user. This is done by using the function uniqid() which generates a unique identifier where the first argument rand() is a function that generates a random integer to help make it a more random value, and the second argument is set to TRUE which would allow more_entropy increasing the result to be unique by expanding 13 characters to 23 characters. This is then passed to the function md5() which creates a returned hash of a string as a 32-hexadecimal number. All of this is stored in the function substr() which returns part of a string from the range 3 to 15 giving a ten-character string. It is then stored in variable $p which is also run through a function password_hash() which hashes the password, and this is stored in the variable $ph. The user would be sent the temporary password $p to their email to be used while the hashed password $ph would be used in the database. Although $ph is hashed, it would be run through the function password_verify() on line 56 in login.php when the user logs in:
         $p = substr(md5(uniqid(rand(), true)), 3, 15);
         $ph = password_hash($p);
@@ -77,11 +79,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
 
         } else { // Did not run OK.
-            echo '<p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
+            $systemErr_2 = 'Your password could not be changed due to a system error. We apologize for any inconvenience.';
         }
 
     } else { // The validation test failed:
-        echo '<p class="error">Please try again.</p>';
+        $systemErr_1 = 'Please try again.';
+        $systemErr_2 = '';
     }
 
     // Close the database connection if else-statement passes:
