@@ -459,6 +459,11 @@ fieldset.sign-in-card {
     font-weight: 300;
 }
 
+#forgotPassCard .forgot-email-input {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
 #forgotPassCard .user-email--forgot {
     width: 458px;
     height: 40px;
