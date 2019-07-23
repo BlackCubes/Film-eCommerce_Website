@@ -306,7 +306,8 @@ fieldset.sign-in-card {
     background-color: white;
 }
 
-.sign-in-card .sign-in-cookies {
+.sign-in-card .sign-in-cookies,
+.sign-in-card .email-error, .sign-in-card .pass-error {
     width: 470px;
     margin-right: auto;
     margin-left: auto;
@@ -315,6 +316,12 @@ fieldset.sign-in-card {
 .sign-in-cookies p {
     font-size: 10px;
     font-weight: 300;
+}
+
+.sign-in-card .email-error p, .sign-in-card .pass-error p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
 }
 
 .sign-in-submit {
