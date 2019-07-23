@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $p = trim($_POST['pass']);
     } else {
         $p = FALSE;
-        echo '<p class="error">You forgot to enter your password!</p>';
+        $passErr = 'You forgot to enter your password!';
     }
 
     // This first if-statement inside the main Submit Conditional checks to see if both the email and password are TRUE, or if it is OK without any errors. If it does not pass this first conditional, then an error would show the user:
@@ -111,6 +111,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="sign-in-pass">
             <label for="signInUserPass">Password</label>
             <input type="password" id="signInUserPass" name="pass" class="user-pass" maxlength="255">
+        </div>
+        <div class="pass-error">
+            <p><?php if (isset($_POST['pass'])) echo $passErr; ?></p>
         </div>
         <div class="sign-in-cookies">
             <p>Your browser must allow cookies in order to log in.</p>
