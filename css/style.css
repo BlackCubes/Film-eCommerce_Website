@@ -462,7 +462,7 @@ fieldset.sign-in-card {
     margin: 15px 15px;
 }
 
-.forgot-email-input label {
+.forgot-email-input label, .forgot-email-input input {
     font-size: 13px;
     font-weight: 300;
 }
