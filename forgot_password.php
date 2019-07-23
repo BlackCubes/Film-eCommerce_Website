@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>Enter the email address associated with your account. We'll email you with the instructions on how to reset your password.</p>
         </div>
         <div class="forgot-email-input">
-            <label for="forgotUserEmailInput">Email</label>
+            <label for="forgotUserEmailInput">Email address</label>
             <input type="email" id="forgotUserEmailInput" name="email" class="user-email--forgot" maxlength="80">
         </div>
         <div class="forgot-email-submit">
