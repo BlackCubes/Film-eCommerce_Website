@@ -96,7 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     In the fieldset of inputting the email address and password, it is not made sticky. That is why there is no 'value' attribute.
 
 -->
-<p>Your browser must allow cookies in order to log in.</p>
 <form action="login.php" method="post">
     <fieldset class="sign-in-card">
         <div class="sign-in-title">
@@ -109,6 +108,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="sign-in-pass">
             <label for="signInUserPass">Password</label>
             <input type="password" id="signInUserPass" name="pass" class="user-pass" maxlength="255">
+        </div>
+        <div class="sign-in-cookies">
+            <p>Your browser must allow cookies in order to log in.</p>
         </div>
         <div class="sign-in-submit">
             <input type="submit" name="submit" class="sign-in-button" value="SIGN IN">
