@@ -331,6 +331,14 @@ fieldset.sign-in-card {
     height: 45px;
 }
 
+.sign-in-card .sign-in-options {
+    width: 147px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
 .sign-in-options p, .sign-in-options a,
 .seller-sign-in-option p, .seller-sign-in-option a {
     font-size: 12px;
