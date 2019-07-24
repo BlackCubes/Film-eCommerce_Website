@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
 ?>
 
 <!-- Making the registration form as a POST method: -->
-<form action="register.php" method="post" id="registerCard">
+<form action="register.php" method="post" id="registerCard1">
     <fieldset class="register-card">
         <div class="register-title">
             <h2>Create Account</h2>
@@ -146,10 +146,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             <label for="registerConfirmPassword">Confirm Password</label>
             <input type="password" id="registerConfirmPassword" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
         </div>
-        <p><strong>Phone Number</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Optional, but may be used to assist delivery)</small></p>
+        <div class="register-continue">
+            <input type="submit" name="continue_1" value="CONTINUE">
+        </div>
+        <div class="register-sign-in-option">
+            <p>Already have an account? <a href="/FilmIndustry/eCommerce/login.php">Sign in</a></p>
+        </div>
+        <div class="register-seller-option">
+            <p>Want to sell your films? Register <a href="/FilmIndustry/eCommerce/suppliers/register.php">here</a></p>
+        </div>
     </fieldset>
-    <p><small>Want to sell your films? Register <a href="suppliers/register.php">here</a>.</small></p>
-    <div align="center"><input type="submit" name="submit" value="Register"></div>
+    <p><strong>Phone Number</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Optional, but may be used to assist delivery)</small></p>
 </form>
-
+<form action="register.php" method="post" id="registerCard2">
+    <p><strong>Phone Number</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Optional, but may be used to assist delivery)</small></p>
+</form>
 <?php include('includes/footer.html'); // Include the footer. ?>
