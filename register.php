@@ -33,15 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         echo '<p class="error">Please enter your first name!</p>';
     }
 
-    // Checkig for a middle name by using regular expressions based on assumptions on what a last name would contain. This is the same as before, but there are two differences: One is that the length inside the delimiters is from 1 to 40 since a user might enter a single letter as a middle name, and 40 is the max length that was set from VARCHAR in the database. The other difference is if the user does not provide a middle name, then there would be no error based on the conditional in elseif. Instead, it would store the empty string by escaping any special characters if a malicious user would do something clever (if possible). Lastly, if it does not pass the if-conditional nor the elseif-conditional is where the user would see an error prompting them to enter a valid middle name:
-    if (preg_match('/^[A-Z \'.-]{1,40}$/i', $trimmed['middle_name'])) {
-        $mn = mysqli_real_escape_string($dbc, $trimmed['middle_name']);
-    } elseif (empty($trimmed['middle_name'])) {
-        $mn = mysqli_real_escape_string($dbc, $trimmed['middle_name']);
-    } else {
-        echo '<p class="error">Please enter a valid middle name!</p>';
-    }
-
     // Checking for a last name. This is the same as before, but this time with a length of 2 to 40 where 40 is the max length that was set from VARCHAR in the database. If the user does not provide a last name, an error would occur:
     if (preg_match('/^[A-Z \'.-]{2,40}$/i', $trimmed['last_name'])) {
         $ln = mysqli_real_escape_string($dbc, $trimmed['last_name']);
@@ -91,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             $a = md5(uniqid(rand(), true));
 
             // Adding the user to the database:
-            $q = "INSERT INTO users (email, pass, first_name, middle_name, last_name, phone_num, verify_code, registration_date) VALUES ('$e', '$p', '$fn', '$mn', '$ln', '$pn', '$a', NOW())";
+            $q = "INSERT INTO users (email, pass, first_name, last_name, phone_num, verify_code, registration_date) VALUES ('$e', '$p', '$fn', '$ln', '$pn', '$a', NOW())";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             // For the third if-statement, the function mysqli_affected_rows() returns the number of affected rows from the previous query on line 84 (the variable $r). The argument it takes is required where it specifies the MySQL connection to use which in this case it is the variable $dbc created from the file mysqli_connect.php. For the returned value, an integer greater than 0 indicates the number of rows affected; 0 indicates that no records were affected; and -1 indicates that the query returned an error. If the function does not pass this if-statement by equaling to 1, then an error would occur which would be generated that the user would see on their browsers:
@@ -155,7 +146,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             <label for="registerConfirmPassword">Confirm Password</label>
             <input type="password" id="registerConfirmPassword" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
         </div>
-        <p><strong>Middle Name:</strong> <input type="text" name="middle_name" size="20" maxlength="40" value="<?php if (isset($trimmed['middle_name'])) echo $trimmed['middle_name']; ?>"><small>(Optional)</small></p>
         <p><strong>Phone Number</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Optional, but may be used to assist delivery)</small></p>
     </fieldset>
     <p><small>Want to sell your films? Register <a href="suppliers/register.php">here</a>.</small></p>
