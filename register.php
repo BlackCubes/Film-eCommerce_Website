@@ -189,6 +189,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             <label for="shippingPhone">Phone (optional, but may be used to assist delivery)</label>
             <input type="tel" id="shippingPhone" name="phone_num" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>">
         </div>
+        <div class="register-submit">
+            <input type="submit" name="submit" value="OK, LET'S GO!">
+        </div>
     </fieldset>
 </form>
 <?php include('includes/footer.html'); // Include the footer. ?>
