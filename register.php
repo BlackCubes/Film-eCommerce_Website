@@ -128,15 +128,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
 ?>
 
 <!-- Making the registration form as a POST method: -->
-<h1>Register</h1>
-<form action="register.php" method="post">
-    <fieldset>
-        <p><strong>First Name:</strong> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>"></p>
+<form action="register.php" method="post" id="registerCard">
+    <fieldset class="register-card">
+        <div class="register-title">
+            <h2>Create Account</h2>
+        </div>
+        <div class="register-name">
+            <div class="first-name--register">
+                <label for="registerFirstNmae">First Name</label>
+                <input type="text" id="registerFirstName" name="first_name" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>">
+            </div>
+            <div class="last-name--register">
+                <label for="registerLastName">Last Name</label>
+                <input type="text" id="registerLastName" name="last_name" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>">
+            </div>
+        </div>
+        <div class="register-email">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
+        </div>
+        <div class="register-password">
+            <label for="registerPassword">Password <div class="register-password-info">(at least 10 characters long)</div></label>
+            <input type="password" id="registerPassword" name="password1" maxlength="255" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>">
+        </div>
+        <div class="register-confirm-password">
+            <label for="registerConfirmPassword">Confirm Password</label>
+            <input type="password" id="registerConfirmPassword" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
+        </div>
         <p><strong>Middle Name:</strong> <input type="text" name="middle_name" size="20" maxlength="40" value="<?php if (isset($trimmed['middle_name'])) echo $trimmed['middle_name']; ?>"><small>(Optional)</small></p>
-        <p><strong>Last Name:</strong> <input type="text" name="last_name" size="20" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>"></p>
-        <p><strong>Email Address:</strong> <input type="email" name="email" size="30" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>"></p>
-        <p><strong>Password:</strong> <input type="password" name="password1" size="20" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>"><small>At least 10 characters long.</small></p>
-        <p><strong>Confirm Password:</strong> <input type="password" name="password2" size="20" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>"></p>
         <p><strong>Phone Number</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Optional, but may be used to assist delivery)</small></p>
     </fieldset>
     <p><small>Want to sell your films? Register <a href="suppliers/register.php">here</a>.</small></p>
