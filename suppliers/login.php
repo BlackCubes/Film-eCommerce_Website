@@ -102,6 +102,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="sign-in-submit">
             <input type="submit" name="submit" value="SIGN IN">
         </div>
+        <div class="sign-in-option">
+            <p>Forgot your <a href="/FilmIndustry/eCommerce/suppliers/login.php">password</a>?</p>
+        </div>
+        <div class="customer-sign-in-option">
+            <p>Want to buy movies? Sign in <a href="/FilmIndustry/eCommerce/login.php">here</a>.</p>
+        </div>
+        <div class="registration-option">
+            <h2>New to selling?</h2>
+            <a href="/FilmIndustry/eCommerce/suppliers/register.php">REGISTER</a>
+        </div>
     </fieldset>
 </form>
 
