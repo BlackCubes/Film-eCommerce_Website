@@ -45,7 +45,7 @@ body {
 }
 
 .topnav ul li ul {
-    display: block;
+    display: none;
     position: absolute;
     overflow: visible;
     padding: 10px;
@@ -60,9 +60,9 @@ body {
     border-radius: 8px;
 }
 
-/*.topnav ul li:hover ul {
+.topnav ul li:hover ul {
     display: block;
-}*/
+}
 
 .topnav ul li ul li a {
     font-size: 13px;
