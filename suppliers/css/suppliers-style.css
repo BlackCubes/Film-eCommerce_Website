@@ -15,9 +15,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: lightslategrey;
-    -webkit-box-shadow: 0px 3px 19px -7px rgba(138,43,226,0.7);
-    -moz-box-shadow: 0px 3px 19px -7px rgba(138,43,226,0.7);
-    box-shadow: 0px 3px 19px -7px rgba(138,43,226,0.7);
+    -webkit-box-shadow: 0px 3px 27px -11px rgba(138,43,226,0.7);
+    -moz-box-shadow: 0px 3px 27px -11px rgba(138,43,226,0.7);
+    box-shadow: 0px 3px 27px -11px rgba(138,43,226,0.7);
     list-style: none;
 }
 
