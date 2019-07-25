@@ -43,8 +43,17 @@ session_start();
         </ul>
         <div class="suppliers-options">
             <ul>
-                <li><a href="#">Settings</a></li>
-                <li><a href="/FilmIndustry/eCommerce/suppliers/logout.php">Sign Out</a></li>
+                <?php
+
+                if (isset($_SESSION['supplier_id'])) {
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="/FilmIndustry/eCommerce/suppliers/logout.php">Sign Out</a></li>
+                } else {
+                    <li><a href="/FilmIndustry/eCommerce/suppliers/register.php">Register</a></li>
+                    <li><a href="/FilmIndustry/eCommerce/suppliers/login.php">Sign In</a></li>
+                }
+
+                ?>
             </ul>
         </div>
     </nav>
