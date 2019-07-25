@@ -22,6 +22,11 @@ body {
     list-style: none;
 }
 
+.topnav .topnav-logo {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .topnav li, .topnav a {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
