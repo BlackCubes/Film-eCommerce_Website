@@ -1,3 +1,16 @@
 /* IMPORTS */
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* MAIN NAVBAR */
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    list-style: none;
+}
