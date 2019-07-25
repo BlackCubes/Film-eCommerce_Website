@@ -29,3 +29,11 @@
     padding: 0px 30px;
     line-height: 40px;
 }
+
+.topnav li a {
+    transition: all 0.3s ease 0s;
+}
+
+.topnav li a:hover {
+    color: white;
+}
