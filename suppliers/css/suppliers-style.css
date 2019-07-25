@@ -37,3 +37,22 @@
 .topnav li a:hover {
     color: white;
 }
+
+.topnav ul li ul {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    padding: 10px;
+    background-color: black;
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+    opacity: 0.8;
+    border-bottom: 1px solid rgba(138,43,226,0.7);
+    border-radius: 8px;
+}
+
+.topnav ul li:hover ul {
+    display: block;
+}
