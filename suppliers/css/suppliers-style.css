@@ -2,6 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+/* BODY */
+
+body {
+    background-color: lightslategrey;
+}
+
 /* MAIN NAVBAR */
 
 .topnav {
