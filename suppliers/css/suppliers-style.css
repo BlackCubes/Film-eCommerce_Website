@@ -65,5 +65,6 @@ body {
 }*/
 
 .topnav ul li ul li a {
-    font-size: 12px;
+    font-size: 13px;
+    padding: 8px 12px;
 }
