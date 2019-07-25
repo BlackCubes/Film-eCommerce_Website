@@ -83,13 +83,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!--
 
 -->
-<h1>Login</h1>
-<p>Your browser must allow cookies in order to log in.</p>
-<form action="login.php" method="post">
-    <fieldset>
-        <p><strong>Email Address:</strong> <input type="email" name="email" size="20" maxlength="80"></p>
-        <p><strong>Password:</strong> <input type="password" name="pass" size="20"></p>
-        <div align="center"><input type="submit" name="submit" value="Login"></div>
+<form class="supplier-sign-in-form" action="login.php" method="post">
+    <fieldset class="sign-in-card">
+        <div class="sign-in-title">
+            <h2>Sign In</h2>
+        </div>
+        <div class="sign-in-email">
+            <label for="signInSupplierEmail">Email address</label>
+            <input type="email" id="signInSupplierEmail" name="email" maxlength="80">
+        </div>
+        <div class="sign-in-pass">
+            <label for="signInSupplerPass">Password</label>
+            <input type="password" id="signInSupplierPass" name="pass" maxlength="255">
+        </div>
+        <div class="sign-in-cookies">
+            <p>Your browser must allow cookies in order to log in.</p>
+        </div>
+        <div class="sign-in-submit">
+            <input type="submit" name="submit" value="SIGN IN">
+        </div>
     </fieldset>
 </form>
 
