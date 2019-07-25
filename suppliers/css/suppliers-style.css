@@ -22,3 +22,10 @@
     color: rgba(138,43,226,0.7);
     text-decoration: none;
 }
+
+.topnav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 0px 30px;
+    line-height: 40px;
+}
