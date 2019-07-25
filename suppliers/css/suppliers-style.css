@@ -19,7 +19,7 @@
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     font-size: 15px;
-    color: rgba(138,43,226,0.7);
+    color: white;
     text-decoration: none;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .topnav li a:hover {
-    color: white;
+    color: rgba(138,43,226,0.7);
 }
 
 .topnav ul li ul {
@@ -43,7 +43,7 @@
     position: absolute;
     overflow: visible;
     padding: 10px;
-    background-color: black;
+    background-color: lightslategrey;
     left: 50% !important;
     right: auto !important;
     text-align: center !important;
