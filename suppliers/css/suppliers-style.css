@@ -322,7 +322,7 @@ form#supplierForgotPassCard {
     transition: all 0.3s ease-out;
 }
 
-.forgot-email-input input:hover {
+.forgot-email-submit input:hover {
     color: rgba(243, 231, 255, 0.91);
     background-color: rgba(138,43,226,0.03);
     font-size: 15px;
