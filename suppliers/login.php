@@ -90,11 +90,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="sign-in-email">
             <label for="signInSupplierEmail">Email address</label>
-            <input type="email" id="signInSupplierEmail" name="email" maxlength="80">
+            <input type="email" id="signInSupplierEmail" name="email" class="supplier-email" maxlength="80">
         </div>
         <div class="sign-in-pass">
             <label for="signInSupplerPass">Password</label>
-            <input type="password" id="signInSupplierPass" name="pass" maxlength="255">
+            <input type="password" id="signInSupplierPass" name="pass" class="supplier-pass" maxlength="255">
         </div>
         <div class="sign-in-cookies">
             <p>Your browser must allow cookies in order to log in.</p>
