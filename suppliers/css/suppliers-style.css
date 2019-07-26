@@ -112,8 +112,20 @@ form.supplier-sign-in-form {
     font-weight: 300;
 }
 
+.sign-in-email, .sign-in-pass {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
 .sign-in-email label, .sign-in-email input,
 .sign-in-pass label, .sign-in-pass input {
     font-size: 13px;
     font-weight: 300;
+}
+
+.sign-in-email .supplier-email, .sign-in-pass .supplier-pass {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
 }
