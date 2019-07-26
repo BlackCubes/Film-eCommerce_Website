@@ -40,6 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($e && $p) {
 
+        $systemeErr_1 = $systemeErr_2 = $systemeErr_3;
+
         $q = "SELECT id, pass FROM suppliers WHERE email='$e' AND verify_code IS NULL";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -61,18 +63,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             } else {
 
-                echo '<p class="error">Either the email address and password do not match those on file, or you have not yet activated your account.</p>';
+                $systemeErr_3 = 'Either the email address and password do not match those on file, or you have not yet activated your account.';
 
             }
 
         } else {
 
-            echo '<p class="error">Either the email address and password entered do not match those on file, or you have not yet activated your account.</p>';
+            $systemeErr_2 = 'Either the email address and password entered do not match those on file, or you have not yet activated your account.';
+
+            $systemeErr_3 = ''
 
         }
 
     } else {
-        echo '<p class="error">Please try again.</p>';
+        $systemeErr_1 = 'Please try again.';
+        $systemeErr_2 = $systemeErr_3;
     }
 
     mysqli_close($dbc);
