@@ -26,16 +26,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($_POST['email'])) {
         $e = mysqli_real_escape_string($dbc, $_POST['email']);
+        $emailErr = '';
     } else {
         $e = FALSE;
-        echo '<p class="error">You forgot to enter your email address!</p>';
+        $emailErr = 'You forgot to enter your email address!';
     }
 
     if (!empty($_POST['pass'])) {
         $p = trim($_POST['pass']);
+        $passErr = '';
     } else {
         $p = FALSE;
-        echo '<p class="error">You forgot to enter your password!</p>';
+        $passErr = 'You forgot to enter your password!';
     }
 
     if ($e && $p) {
