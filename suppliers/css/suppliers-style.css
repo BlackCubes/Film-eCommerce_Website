@@ -106,3 +106,14 @@ form.supplier-sign-in-form {
 .sign-in-card label, .sign-in-card input {
     vertical-align: middle;
 }
+
+.sign-in-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.sign-in-email label, .sign-in-email input,
+.sign-in-pass label, .sign-in-pass input {
+    font-size: 13px;
+    font-weight: 300;
+}
