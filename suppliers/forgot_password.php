@@ -28,6 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($_POST['email'])) {
 
+        $emailErr_1 = $emailErr_2 = '';
+
         $q = 'SELECT id FROM suppliers WHERE email="' . mysqli_real_escape_string($dbc, $_POST['email']) . '"';
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -37,17 +39,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else {
 
-            echo '<p class="error">The submitted email address does not match those on file!</p>';
+            $emailErr_2 = 'The submitted email address does not match those on file!';
 
         }
 
     } else {
 
-        echo '<p class="error">You forgot to enter your email address!</p>';
+        $emailErr_1 = 'You forgot to enter your email address!';
+        $emailErr_2 = '';
 
     }
 
     if ($sid) {
+
+        $systemErr_1 = $systemErr_2 = '';
 
         $p = substr(md5(uniqid(rand(), true)), 3, 15);
         $ph = password_hash($p);
@@ -66,11 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
 
         } else {
-            echo '<p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
+            $systemErr_2 = 'Your password could not be changed due to a system error. We apologize for any inconvenience.';
         }
 
     } else {
-        echo '<p class="error">Please try again.</p>';
+        $systemErr_1 = 'Please try again.';
+        $systemErr_2 = '';
     }
 
     mysqli_close($dbc);
