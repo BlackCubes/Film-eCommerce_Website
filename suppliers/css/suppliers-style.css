@@ -273,3 +273,8 @@ form#supplierForgotPassCard {
     font-size: 17px;
     font-weight: 300;
 }
+
+.forgot-pass-info p {
+    font-size: 12px;
+    font-weight: 300;
+}
