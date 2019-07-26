@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $systemeErr_2 = 'Either the email address and password entered do not match those on file, or you have not yet activated your account.';
 
-            $systemeErr_3 = ''
+            $systemeErr_3 = '';
 
         }
 
