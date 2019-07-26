@@ -129,3 +129,12 @@ form.supplier-sign-in-form {
     padding: 0 10px;
     margin: 5px 0;
 }
+
+.sign-in-email input, .sign-in-pass input {
+    border: none;
+    background-color: lightslategrey;
+}
+
+.sign-in-email input:focus, .sign-in-pass input:focus {
+    background-color: white;
+}
