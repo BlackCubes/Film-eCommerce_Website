@@ -337,3 +337,15 @@ form#supplierForgotPassCard {
     width: 482px;
     height: 45px;
 }
+
+.forgot-pass-error, .system-error--forgot-pass {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.forgot-pass-error p, .system-error--forgot-pass p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
