@@ -78,7 +78,7 @@ body {
 /* SIGN IN */
 
 form.supplier-sign-in-form {
-    background-color: #663300;
+    background-color: lightslategrey;
 }
 
 .supplier-sign-in-form .sign-in-card {
