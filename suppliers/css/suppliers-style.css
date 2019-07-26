@@ -237,3 +237,23 @@ form.supplier-sign-in-form {
     text-decoration: none;
     transition: all 0.3s ease-out;
 }
+
+/* FORGOT PASSWORD PAGE */
+
+form#supplierForgotPassCard {
+    background-color: lightslategrey;
+}
+
+#supplierForgotPassCard .forgot-pass-card {
+    width: 500px;
+    height: 550px;
+    background-color: #003366;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forgot-pass-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
