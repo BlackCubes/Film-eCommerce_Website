@@ -176,3 +176,8 @@ form.supplier-sign-in-form {
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
+
+.sign-in-submit .sign-in-button {
+    width: 482px;
+    height: 45px;
+}
