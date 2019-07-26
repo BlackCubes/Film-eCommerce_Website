@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <?php if (isset($_POST['email'], $_POST['pass'])) echo '<div class="system-error"><p>' . $systemeErr_1 . '</p><p>' . $systemeErr_2 . '</p><p>' . $systemeErr_3 . '</p></div>'; ?>
         <div class="sign-in-option">
-            <p>Forgot your <a href="/FilmIndustry/eCommerce/suppliers/login.php">password</a>?</p>
+            <p>Forgot your <a href="/FilmIndustry/eCommerce/suppliers/forgot_password.php">password</a>?</p>
         </div>
         <div class="customer-sign-in-option">
             <p>Want to buy movies? Sign in <a href="/FilmIndustry/eCommerce/login.php">here</a>.</p>
