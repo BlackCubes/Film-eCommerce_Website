@@ -182,3 +182,26 @@ form.supplier-sign-in-form {
     width: 482px;
     height: 45px;
 }
+
+.sign-in-card .sign-in-option {
+    width: 147px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(138,43,226,0.37);
+}
+
+.sign-in-card .customer-sign-in-option {
+    padding-bottom: 10px;
+}
+
+.sign-in-option p, .sign-in-option a,
+.customer-sign-in-option p, .customer-sign-in-option a {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.sign-in-option a, .customer-sign-in-option a {
+    text-decoration: none;
+    color: blueviolet;
+}
