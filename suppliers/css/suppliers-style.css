@@ -349,3 +349,14 @@ form#supplierForgotPassCard {
     font-weight: 300;
     color: red;
 }
+
+.forgot-pass-success {
+    text-align: center;
+}
+
+.forgot-pass-success h3 {
+    font-family: 'Muli', sans-serif;
+    color: #336600;
+    font-size: 16px;
+    font-weight: 300;
+}
