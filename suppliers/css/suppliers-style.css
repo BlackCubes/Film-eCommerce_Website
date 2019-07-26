@@ -166,3 +166,13 @@ form.supplier-sign-in-form {
     cursor: pointer;
     transition: all 0.3s ease-out;
 }
+
+.sign-in-submit input:hover {
+    color: rgb(161, 161, 161);
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
