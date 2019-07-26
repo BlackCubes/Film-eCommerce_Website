@@ -149,3 +149,20 @@ form.supplier-sign-in-form {
     font-size: 10px;
     font-weight: 300;
 }
+
+.sign-in-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.sign-in-submit input {
+    background-color: #003366;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
