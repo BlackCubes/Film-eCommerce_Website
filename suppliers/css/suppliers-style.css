@@ -171,8 +171,8 @@ form.supplier-sign-in-form {
     color: rgb(223, 223, 223);
     font-size: 15px;
     font-weight: 300;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.37);
+    border-top: 1px solid rgba(138,43,226,0.37);
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
