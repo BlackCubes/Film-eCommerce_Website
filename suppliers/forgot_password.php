@@ -78,13 +78,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<h1>Reset Your Password</h1>
-<p>Enter your email address below and your password will be reset.</p>
-<form action="forgot_password.php" method="post">
-    <fieldset>
-        <p><strong>Email:</strong> <input type="email" name="email" size="20" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"></p>
+<form action="forgot_password.php" method="post" id="supplierForgotPassCard">
+    <fieldset class="forgot-pass-card">
+        <div class="forgot-pass-title">
+            <h2>Request Password Reset</h2>
+        </div>
+        <div class="forgot-pass-info">
+            <p>Enter the email address associated with your account. We'll email you with the instructions on how to reset your password.</p>
+        </div>
+        <div class="forgot-email-input">
+            <label for="forgotSupplierEmailInput">Email address</label>
+            <input type="email" id="forgotSupplierEmailInput" name="email" class="supplier-email--forgot" maxlength="80">
+        </div>
+        <div class="forgot-email-submit">
+            <input type="submit" name="submit" class="forgot-pass-button" value="SUBMIT">
+        </div>
     </fieldset>
-    <div align="center"><input type="submit" name="submit" value="Reset My Password"></div>
 </form>
 
 <?php include('includes/footer.html'); ?>
