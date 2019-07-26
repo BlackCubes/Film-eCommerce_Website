@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($e && $p) {
 
-        $systemeErr_1 = $systemeErr_2 = $systemeErr_3;
+        $systemeErr_1 = $systemeErr_2 = $systemeErr_3 = '';
 
         $q = "SELECT id, pass FROM suppliers WHERE email='$e' AND verify_code IS NULL";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
