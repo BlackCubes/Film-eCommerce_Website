@@ -278,3 +278,29 @@ form#supplierForgotPassCard {
     font-size: 12px;
     font-weight: 300;
 }
+
+#supplierForgotPassCard .forgot-email-input {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.forgot-email-input label, .forgot-email-input input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#supplierForgotPassCard .supplier-email--forgot {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.forgot-email-input input {
+    border: none;
+    background-color: lightslategrey;
+}
+
+.forgot-email-input input:focus {
+    background-color: white;
+}
