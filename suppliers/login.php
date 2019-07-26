@@ -99,10 +99,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="signInSupplierEmail">Email address</label>
             <input type="email" id="signInSupplierEmail" name="email" class="supplier-email" maxlength="80">
         </div>
+        <?php if (isset($_POST['email'])) echo '<div class="email-error"><p>' . $emailErr . '</p></div>'; ?>
         <div class="sign-in-pass">
             <label for="signInSupplerPass">Password</label>
             <input type="password" id="signInSupplierPass" name="pass" class="supplier-pass" maxlength="255">
         </div>
+        <?php if (isset($_POST['pass'])) echo '<div class="pass-error"><p>' . $passErr . '</p></div>'; ?>
         <div class="sign-in-cookies">
             <p>Your browser must allow cookies in order to log in.</p>
         </div>
