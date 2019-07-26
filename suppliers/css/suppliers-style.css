@@ -107,7 +107,7 @@ form.supplier-sign-in-form {
     vertical-align: middle;
 }
 
-.sign-in-title h2 {
+.sign-in-title h2, .registration-option h2 {
     font-size: 17px;
     font-weight: 300;
 }
