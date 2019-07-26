@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } else {
         $systemeErr_1 = 'Please try again.';
-        $systemeErr_2 = $systemeErr_3;
+        $systemeErr_2 = $systemeErr_3 = '';
     }
 
     mysqli_close($dbc);
