@@ -96,9 +96,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="forgotSupplierEmailInput">Email address</label>
             <input type="email" id="forgotSupplierEmailInput" name="email" class="supplier-email--forgot" maxlength="80">
         </div>
+        <?php if (isset($_POST['email'])) echo '<div class="forgot-pass-error"><p>' . $emailErr_1 . '</p><p>' . $emailErr_2 . '</p></div>'; ?>
         <div class="forgot-email-submit">
             <input type="submit" name="submit" class="forgot-pass-button" value="SUBMIT">
         </div>
+        <?php if (isset($_POST['email'])) echo '<div class="system-error--forgot-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
     </fieldset>
 </form>
 
