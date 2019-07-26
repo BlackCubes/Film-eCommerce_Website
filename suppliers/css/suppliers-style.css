@@ -94,3 +94,15 @@ form.supplier-sign-in-form {
     font-family: 'Muli', sans-serif;
     color: white;
 }
+
+.sign-in-card .sign-in-title,
+.sign-in-card .sign-in-submit,
+.sign-in-card .sign-in-option,
+.sign-in-card .customer-sign-in-option,
+.sign-in-card .registration-option {
+    text-align: center;
+}
+
+.sign-in-card label, .sign-in-card input {
+    vertical-align: middle;
+}
