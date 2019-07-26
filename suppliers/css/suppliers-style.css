@@ -169,7 +169,7 @@ form.supplier-sign-in-form {
 
 .sign-in-submit input:hover {
     color: rgba(243, 231, 255, 0.91);
-    background-color: rgba(138,43,226,0.02);
+    background-color: rgba(138,43,226,0.03);
     font-size: 15px;
     font-weight: 300;
     border-bottom: 1px solid rgba(138,43,226,0.37);
