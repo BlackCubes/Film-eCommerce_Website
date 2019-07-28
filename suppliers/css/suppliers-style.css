@@ -487,3 +487,14 @@ form#supplierChangePassCard {
     font-weight: 300;
     color: red;
 }
+
+.change-pass-success {
+    text-align: center;
+}
+
+.change-pass-success h3 {
+    font-family: 'Muli', sans-serif;
+    color: #336600;
+    font-size: 16px;
+    font-weight: 300;
+}
