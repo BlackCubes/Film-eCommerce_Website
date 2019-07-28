@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($_POST['password1'] == $_POST['password2']) {
             $p = password_hash($_POST['password1'], PASSWORD_DEFAULT);
         } else {
-            $passErr_2 = 'Your password did not match the confirmed password!';
+            $passErr_2 = 'Your confirmed password does not match your new password!';
         }
     } else {
         $passErr_1 = 'Please enter a valid password!';
