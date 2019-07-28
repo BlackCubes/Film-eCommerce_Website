@@ -383,3 +383,14 @@ form#supplierChangePassCard {
     margin-left: auto;
     margin-right: auto;
 }
+
+.change-pass-card div {
+    font-family: 'Muli', sans-serif;
+    color: white;
+}
+
+.change-pass-card .change-pass-title,
+.change-pass-card .change-pass-info,
+.change-pass-card .change-pass-submit {
+    text-align: center;
+}
