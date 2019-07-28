@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Change Password</h2>
         </div>
         <div class="change-pass-info">
-            <p>Please enter a new password that is 10 characters or more, and that is not the same as your old one.</p>
+            <p>Please enter a new password that is 10 characters or more, and that is not the same as your previous one.</p>
         </div>
         <div class="change-pass-new-input">
             <label for="changeSupplierPassInput">New password</label>
