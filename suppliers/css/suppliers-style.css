@@ -473,3 +473,17 @@ form#supplierChangePassCard {
     width: 482px;
     height: 45px;
 }
+
+.change-pass-error, .confirm-pass-error,
+.system-error--change-pass {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.change-pass-error p, .confirm-pass-error p,
+.system-error--change-pass p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
