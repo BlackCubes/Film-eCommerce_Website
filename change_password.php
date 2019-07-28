@@ -96,13 +96,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!-- Making the changing the password as a POST method. There are no sticky value elements for the password: -->
-<h1>Change Your Password</h1>
-<form action="change_password.php" method="post">
-    <fieldset>
-        <p><strong>New Password:</strong> <input type="password" name="password1" size="20"><small>At least 10 characters long.</small></p>
-        <p><strong>Confirm New Password:</strong> <input type="password" name="password2" size="20"></p>
+<form action="change_password.php" method="post" id="userChangePassCard">
+    <fieldset class="change-pass-card">
+        <div class="change-pass-title">
+            <h2>Change Password</h2>
+        </div>
+        <div class="change-pass-info">
+            <p>Please enter a new password that is 10 characters or more, and that is not the same as your previous one.</p>
+        </div>
+        <div class="change-pass-new-input">
+            <label for="changeUserPassInput">New password</label>
+            <input type="password" id="changeUserPassInput" class="user-pass--change" name="password1" maxlength="255">
+        </div>
+        <div class="change-pass-confirm-input">
+            <label for="confirmUserPassInput">Confirm new password</label>
+            <input type="password" id="confirmUserPassInput" class="user-pass--confirm" name="password2" maxlength="255">
+        </div>
+        <div class="change-pass-submit">
+            <input type="submit" class="change-pass-button" name="submit" value="SET PASSWORD & CHANGE">
+        </div>
     </fieldset>
-    <div align="center"><input type="submit" name="submit" value="Change My Password"></div>
 </form>
 
 <?php include('includes/footer.html'); // Include the footer file. ?>
