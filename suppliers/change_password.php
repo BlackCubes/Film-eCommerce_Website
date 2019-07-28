@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_affected_rows($dbc) == 1) {
 
-            echo '<h3>Your password has been changed.</h3>';
+            echo '<div class="change-pass-success"><h3>Your password has been changed.</h3></div>';
 
             mysqli_close($dbc);
 
