@@ -440,3 +440,36 @@ form#supplierChangePassCard {
 .change-pass-confirm-input input:focus {
     background-color: white;
 }
+
+.change-pass-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.change-pass-submit input {
+    background-color: #003366;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.change-pass-submit input:hover {
+    color: rgba(243, 231, 255, 0.91);
+    background-color: rgba(138,43,226,0.03);
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(138,43,226,0.37);
+    border-top: 1px solid rgba(138,43,226,0.37);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.change-pass-submit .change-pass-button {
+    width: 482px;
+    height: 45px;
+}
