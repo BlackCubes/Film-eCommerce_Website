@@ -394,3 +394,18 @@ form#supplierChangePassCard {
 .change-pass-card .change-pass-submit {
     text-align: center;
 }
+
+.change-pass-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.change-pass-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.change-pass-info p {
+    font-size: 12px;
+    font-weight: 300;
+}
