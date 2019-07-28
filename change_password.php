@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (mysqli_affected_rows($dbc) == 1) {
 
             // Display success message:
-            echo '<h3>Your password has been changed.</h3>';
+            echo '<div class="change-pass-success"><h3>Your password has been changed.</h3></div>';
 
             // Close the database connection:
             mysqli_close($dbc);
