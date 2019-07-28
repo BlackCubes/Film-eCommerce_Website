@@ -574,3 +574,34 @@ form#userChangePassCard {
     font-size: 12px;
     font-weight: 300;
 }
+
+#userChangePassCard .change-pass-new-input,
+#userChangePassCard .change-pass-confirm-input {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.change-pass-new-input label, .change-pass-new-input input,
+.change-pass-confirm-input label, .change-pass-confirm-input input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userChangePassCard .user-pass--change,
+#userChangePassCard .user-pass--confirm {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.change-pass-new-input input,
+.change-pass-confirm-input input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+.change-pass-new-input input:focus,
+.change-pass-confirm-input input:focus {
+    background-color: white;
+}
