@@ -70,6 +70,10 @@ body {
     width: 470px;
 }
 
+.topnav .suppliers-options ul li ul {
+    width: 200px
+}
+
 .topnav ul li:hover ul {
     display: block;
 }
