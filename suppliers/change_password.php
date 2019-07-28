@@ -36,16 +36,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $p = FALSE;
 
     if (strlen($_POST['password1']) >= 10) {
+        $passErr_1 = $passErr_2 = '';
         if ($_POST['password1'] == $_POST['password2']) {
             $p = password_hash($_POST['password1'], PASSWORD_DEFAULT);
         } else {
-            echo '<p class="error">Your password did not match the confirmed password!</p>';
+            $passErr_2 = 'Your password did not match the confirmed password!';
         }
     } else {
-        echo '<p class="error">Please enter a valid password!</p>';
+        $passErr_1 = 'Please enter a valid password!';
+        $passErr_2 = '';
     }
 
     if ($p) {
+
+        $systemErr_1 = $systemErr_2 = '';
 
         $q = "UPDATE suppliers SET pass='$p' WHERE id={$_SESSION['supplier_id']} LIMIT 1";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
@@ -62,13 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         } else {
 
-            echo '<p class="error">Your password was not changed. Make sure your new password is different than the current password. If you think an error occured, contact the system administrator.</p>';
+            $systemErr_2 = 'Your password was not changed. Make sure your new password is different than the current password. If you think an error occured, contact the system administrator.';
 
         }
 
     } else {
 
-        echo '<p class="error">Please try again.</p>';
+        $systemErr_1 = 'Please try again.';
+        $systemErr_2 = '';
 
     }
 
