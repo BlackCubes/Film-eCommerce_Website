@@ -409,3 +409,34 @@ form#supplierChangePassCard {
     font-size: 12px;
     font-weight: 300;
 }
+
+#supplierChangePassCard .change-pass-new-input,
+#supplierChangePassCard .change-pass-confirm-input {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.change-pass-new-input label, .change-pass-new-input input,
+.change-pass-confirm-input label, .change-pass-confirm-input input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#supplierChangePassCard .supplier-pass--change,
+#supplierChangePassCard .supplier-pass--confirm {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.change-pass-new-input input,
+.change-pass-confirm-input input {
+    border: none;
+    background-color: lightslategrey;
+}
+
+.change-pass-new-input input:focus,
+.change-pass-confirm-input input:focus {
+    background-color: white;
+}
