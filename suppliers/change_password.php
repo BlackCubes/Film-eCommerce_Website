@@ -94,13 +94,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="changeSupplierPassInput">New password</label>
             <input type="password" id="changeSupplierPassInput" class="supplier-pass--change" name="password1" maxlength="255">
         </div>
+        <?php if (isset($_POST['password1'], $_POST['password2'])) echo '<div class="change-pass-error"><p>' . $passErr_1 . '</p></div>'; ?>
         <div class="change-pass-confirm-input">
             <label for="confirmSupplierPassInput">Confirm new password</label>
             <input type="password" id="confirmSupplierPassInput" class="supplier-pass--confirm" name="password2" maxlength="255">
         </div>
+        <?php if (isset($_POST['password1'], $_POST['password2'])) echo '<div class="confirm-pass-error"><p>' . $passErr_2 . '</p></div>'; ?>
         <div class="change-pass-submit">
             <input type="submit" class="change-pass-button" name="submit" value="SET PASSWORD & CHANGE">
         </div>
+        <?php if (isset($_POST['password1'], $_POST['password2'])) echo '<div class="system-error--change-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
     </fieldset>
 </form>
 
