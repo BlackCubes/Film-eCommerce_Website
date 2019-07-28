@@ -46,7 +46,7 @@ session_start();
                 <?php
 
                 if (isset($_SESSION['supplier_id'])) {
-                    echo '<li><a href="#">Settings</a></li>
+                    echo '<li><a href="#">Settings</a><ul><li><a href="/FilmIndustry/eCommerce/suppliers/change_password.php">Change Password</a></li></ul></li>
                     <li><a href="/FilmIndustry/eCommerce/suppliers/logout.php">Sign Out</a></li>';
                 } else {
                     echo '<li><a href="/FilmIndustry/eCommerce/suppliers/register.php">Register</a></li>
