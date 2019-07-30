@@ -677,3 +677,13 @@ form#registerUserCard1 {
     margin-left: auto;
     margin-right: auto;
 }
+
+.register-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+.register-card .register-title,
+.register-card .register-continue {
+    text-align: center;
+}
