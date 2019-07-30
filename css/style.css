@@ -753,3 +753,12 @@ form#registerUserCard1 {
 .last-name--register input:focus {
     background-color: white;
 }
+
+#registerUserCard1 .user-email--register,
+#registerUserCard1 .user-new-pass--register,
+#registerUserCard1 .user-confirm-pass--register {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
