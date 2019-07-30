@@ -513,3 +513,15 @@ form#registerSupplierCard1 {
     margin-left: auto;
     margin-right: auto;
 }
+
+.register-card--supplier div {
+    font-family: 'Muli', sans-serif;
+    color: white;
+}
+
+.register-card--supplier .supplier-title--register,
+.register-card--supplier .register-continue,
+.register-card--supplier .register-sign-in-option,
+.register-card--supplier .register-user-option {
+    text-align: center;
+}
