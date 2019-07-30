@@ -575,7 +575,9 @@ form#registerSupplierCard1 {
 .legal-name--register input,
 .email--register input,
 .new-password--register input,
-.confirm-password--register input {
+.confirm-password--register input,
+.company-name--register input,
+.website-url--register input {
     border: none;
     background-color: lightslategrey;
 }
@@ -583,6 +585,30 @@ form#registerSupplierCard1 {
 .legal-name--register input:focus,
 .email--register input:focus,
 .new-password--register input:focus,
-.confirm-password--register input:focus {
+.confirm-password--register input:focus,
+.company-name--register input:focus,
+.website-url--register input:focus {
     background-color: white;
+}
+
+.company-name--register .supplier-company-name--register,
+.website-url--register .supplier-website-url--register {
+    width: 208px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.company-name-website--register .company-name--register,
+.company-name-website--register .website-url--register {
+    float: left;
+    width: 220px;
+}
+
+.company-name--register {
+    margin: 0 15px 0 0;
+}
+
+.website-url--register {
+    margin: 0 0 0 15px;
 }
