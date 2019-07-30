@@ -755,7 +755,9 @@ form#registerUserCard2 {
     font-weight: 300;
 }
 
-.register-new-password .register-password-info {
+.register-new-password .register-password-info,
+.shipping-address-2 .register-shipping-info,
+.shipping-phone .register-phone-info {
     font-size: 10px;
     font-weight: 300;
 }
