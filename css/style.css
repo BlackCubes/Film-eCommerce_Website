@@ -680,7 +680,8 @@ form#registerUserCard2 {
     margin-right: auto;
 }
 
-.register-card div {
+.register-card div,
+.register-card--shipping div {
     font-family: 'Muli', sans-serif;
     color: black;
 }
@@ -688,7 +689,10 @@ form#registerUserCard2 {
 .register-card .register-title,
 .register-card .register-continue,
 .register-card .register-sign-in-option,
-.register-card .register-seller-option {
+.register-card .register-seller-option,
+.register-card--shipping .shipping-title--register,
+.register-card--shipping .shipping-info--register,
+.register-card--shipping .register-submit {
     text-align: center;
 }
 
