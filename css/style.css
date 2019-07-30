@@ -706,7 +706,7 @@ form#registerUserCard1 {
 .register-name .first-name--register,
 .register-name .last-name--register {
     float: left;
-    width: 200px;
+    width: 220px;
 }
 
 .first-name--register label, .first-name--register input,
@@ -717,7 +717,7 @@ form#registerUserCard1 {
 
 .first-name--register .user-first-name--new,
 .last-name--register .user-last-name--new {
-    /*width: 229px;*/
+    width: 190px;
     height: 40px;
     padding: 0 10px;
     margin: 5px 0;
