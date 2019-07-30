@@ -702,3 +702,9 @@ form#registerUserCard1 {
     height: 62.2px;
     margin: 15px 15px;
 }
+
+.first-name--register label, .first-name--register input,
+.last-name--register label, .last-name--register input {
+    font-size: 13px;
+    font-weight: 300;
+}
