@@ -696,12 +696,14 @@ form#registerUserCard2 {
     text-align: center;
 }
 
-.register-title {
+.register-title,
+.shipping-title--register {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.register-title h2 {
+.register-title h2,
+.shipping-title--register h2 {
     font-size: 17px;
     font-weight: 300;
 }
