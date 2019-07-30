@@ -30,11 +30,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         <div class="shipping-state-zip">
             <div class="shipping-state">
                 <label for="shippingState">State</label>
-                <input type="text" id="shippingState" class="user-state--register" name="state" maxlength="50" placeholder="'NJ' or 'New Jersey'" value="<?php if (isset($trimmed['state'])) echo $trimmed['state']; ?>">
+                <input type="text" id="shippingState" class="user-state--register" name="state" maxlength="50" placeholder="NJ or New Jersey" value="<?php if (isset($trimmed['state'])) echo $trimmed['state']; ?>">
             </div>
             <div class="shipping-zip-code">
                 <label for="shippingZipCode">Zip Code</label>
-                <input type="text" id="shippingZipCode" class="user-zip--register" name="zip" maxlength="10" placeholder="'12345' of '12345-6789'" value="<?php if (isset($trimmed['zip'])) echo $trimmed['zip']; ?>">
+                <input type="text" id="shippingZipCode" class="user-zip--register" name="zip" maxlength="10" placeholder="12345 or 12345-6789" value="<?php if (isset($trimmed['zip'])) echo $trimmed['zip']; ?>">
             </div>
         </div>
         <div class="shipping-phone">
