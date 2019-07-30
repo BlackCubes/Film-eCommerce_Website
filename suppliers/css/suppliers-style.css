@@ -498,3 +498,18 @@ form#supplierChangePassCard {
     font-size: 16px;
     font-weight: 300;
 }
+
+/* REGISTRATION PAGE */
+
+form#registerSupplierCard1 {
+    background-color: lightslategrey;
+}
+
+#registerSupplierCard1 .register-card--supplier {
+    width: 500px;
+    height: 650px;
+    background-color: #003366;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
