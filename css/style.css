@@ -721,7 +721,10 @@ form#registerUserCard1 {
 }
 
 .first-name--register label, .first-name--register input,
-.last-name--register label, .last-name--register input {
+.last-name--register label, .last-name--register input,
+.register-email label, .register-email input,
+.register-new-password label, .register-new-password input,
+.register-confirm-password label, .register-confirm-password input {
     font-size: 13px;
     font-weight: 300;
 }
