@@ -665,11 +665,13 @@ form#userChangePassCard {
 
 /* REGISTRATION PAGE */
 
-form#registerUserCard1 {
+form#registerUserCard1,
+form#registerUserCard2 {
     background-color: rgba(148, 130, 165, 0.17);
 }
 
-#registerUserCard1 .register-card {
+#registerUserCard1 .register-card,
+#registerUserCard2 .register-card--shipping {
     width: 500px;
     height: 650px;
     background-color: white;
