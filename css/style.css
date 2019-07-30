@@ -684,7 +684,9 @@ form#registerUserCard1 {
 }
 
 .register-card .register-title,
-.register-card .register-continue {
+.register-card .register-continue,
+.register-card .register-sign-in-option,
+.register-card .register-seller-option {
     text-align: center;
 }
 
@@ -799,4 +801,23 @@ form#registerUserCard1 {
 .register-continue .register-continue-button {
     width: 482px;
     height: 45px;
+}
+
+.register-card .register-sign-in-option {
+    width: 147px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
+.register-sign-in-option p, .register-sign-in-option a,
+.register-seller-option p, .register-seller-option a {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.register-sign-in-option a, .register-seller-option a {
+    text-decoration: none;
+    color: blueviolet;
 }
