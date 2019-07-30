@@ -744,7 +744,13 @@ form#registerUserCard2 {
 .last-name--register label, .last-name--register input,
 .register-email label, .register-email input,
 .register-new-password label, .register-new-password input,
-.register-confirm-password label, .register-confirm-password input {
+.register-confirm-password label, .register-confirm-password input,
+.shipping-address-1 label, .shipping-address-1 input,
+.shipping-address-2 label, .shipping-address-2 input,
+.shipping-city label, .shipping-city input,
+.shipping-state label, .shipping-state input,
+.shipping-zip-code label, .shipping-zip-code input,
+.shipping-phone label, .shipping-phone input {
     font-size: 13px;
     font-weight: 300;
 }
