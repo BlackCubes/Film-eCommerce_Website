@@ -716,7 +716,12 @@ form#registerUserCard2 {
 #registerUserCard1 .register-name,
 #registerUserCard1 .register-email,
 #registerUserCard1 .register-new-password,
-#registerUserCard1 .register-confirm-password {
+#registerUserCard1 .register-confirm-password,
+#registerUserCard2 .shipping-address-1,
+#registerUserCard2 .shipping-address-2,
+#registerUserCard2 .shipping-city,
+#registerUserCard2 .shipping-state-zip,
+#registerUserCard2 .shipping-phone {
     height: 62.2px;
     margin: 15px 15px;
 }
