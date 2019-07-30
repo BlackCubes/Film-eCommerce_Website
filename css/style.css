@@ -804,8 +804,8 @@ form#registerUserCard1 {
 }
 
 .register-card .register-sign-in-option {
-    width: 147px;
-    height: 30px;
+    width: 185px;
+    /*height: 30px;*/
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px solid rgba(138,43,226,0.17);
