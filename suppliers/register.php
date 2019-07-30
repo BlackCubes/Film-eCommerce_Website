@@ -206,7 +206,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>Already have an account? <a href="/FilmIndustry/eCommerce/suppliers/login.php">Sign in</a></p>
         </div>
         <div class="register-user-option">
-            <p>Want to buy films? Register <a href="/FilmIndustry/eCommerce/login.php">here</a></p>
+            <p>Want to buy films? Register <a href="/FilmIndustry/eCommerce/register.php">here</a></p>
         </div>
         <!--<p><strong>Address 1:</strong> <input type="text" name="address1" size="30" maxlength="46" value="<#?php if (isset($trimmed['address1'])) echo $trimmed['address1']; ?>"></p>
         <p><strong>Address 2:</strong> <input type="text" name="address2" size="30" maxlength="46" value="<#?php if (isset($trimmed['address2'])) echo $trimmed['address2']; ?>"><small>(Optional)</small></p>
