@@ -744,13 +744,19 @@ form#registerUserCard1 {
 }
 
 .first-name--register input,
-.last-name--register input {
+.last-name--register input,
+.register-email input,
+.register-new-password input,
+.register-confirm-password input {
     border: none;
     background-color: rgba(148, 130, 165, 0.17);
 }
 
 .first-name--register input:focus,
-.last-name--register input:focus {
+.last-name--register input:focus,
+.register-email input:focus,
+.register-new-password input:focus,
+.register-confirm-password input:focus {
     background-color: white;
 }
 
