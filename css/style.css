@@ -698,7 +698,10 @@ form#registerUserCard1 {
     font-weight: 300;
 }
 
-#registerUserCard1 .register-name {
+#registerUserCard1 .register-name,
+#registerUserCard1 .register-email,
+#registerUserCard1 .register-new-password,
+#registerUserCard1 .register-confirm-password {
     height: 62.2px;
     margin: 15px 15px;
 }
