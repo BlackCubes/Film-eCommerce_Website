@@ -525,3 +525,13 @@ form#registerSupplierCard1 {
 .register-card--supplier .register-user-option {
     text-align: center;
 }
+
+.supplier-title--register {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.supplier-title--register h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
