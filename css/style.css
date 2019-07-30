@@ -773,7 +773,11 @@ form#registerUserCard2 {
 .last-name--register input,
 .register-email input,
 .register-new-password input,
-.register-confirm-password input {
+.register-confirm-password input,
+.shipping-address-1 input,
+.shipping-address-2 input,
+.shipping-city input,
+.shipping-phone input {
     border: none;
     background-color: rgba(148, 130, 165, 0.17);
 }
@@ -782,13 +786,21 @@ form#registerUserCard2 {
 .last-name--register input:focus,
 .register-email input:focus,
 .register-new-password input:focus,
-.register-confirm-password input:focus {
+.register-confirm-password input:focus,
+.shipping-address-1 input:focus,
+.shipping-address-2 input:focus,
+.shipping-city input:focus,
+.shipping-phone input:focus {
     background-color: white;
 }
 
 #registerUserCard1 .user-email--register,
 #registerUserCard1 .user-new-pass--register,
-#registerUserCard1 .user-confirm-pass--register {
+#registerUserCard1 .user-confirm-pass--register,
+#registerUserCard2 .user-address-1--register,
+#registerUserCard2 .user-address-2--register,
+#registerUserCard2 .user-city--register,
+#registerUserCard2 .user-phone--register {
     width: 458px;
     height: 40px;
     padding: 0 10px;
