@@ -136,15 +136,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         </div>
         <div class="register-email">
             <label for="registerEmail">Email</label>
-            <input type="email" id="registerEmail" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
+            <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
         </div>
         <div class="register-new-password">
             <label for="registerPassword">Password <span class="register-password-info">(at least 10 characters long)</span></label>
-            <input type="password" id="registerPassword" name="password1" maxlength="255" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>">
+            <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>">
         </div>
         <div class="register-confirm-password">
             <label for="registerConfirmPassword">Confirm Password</label>
-            <input type="password" id="registerConfirmPassword" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
+            <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
         </div>
         <div class="register-continue">
             <input type="submit" name="continue_1" value="CONTINUE">
