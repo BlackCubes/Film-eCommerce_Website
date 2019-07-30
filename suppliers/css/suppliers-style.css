@@ -645,3 +645,21 @@ form#registerSupplierCard1 {
     width: 482px;
     height: 45px;
 }
+
+.register-card--supplier .register-sign-in-option {
+    width: 185px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(138,43,226,0.37);
+}
+
+.register-sign-in-option p, .register-sign-in-option a,
+.register-user-option p, .register-user-option a {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.register-sign-in-option a, .register-user-option a {
+    text-decoration: none;
+    color: blueviolet;
+}
