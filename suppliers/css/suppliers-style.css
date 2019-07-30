@@ -535,3 +535,13 @@ form#registerSupplierCard1 {
     font-size: 17px;
     font-weight: 300;
 }
+
+#registerSupplierCard1 .supplier-title--register,
+#registerSupplierCard1 .legal-name--register,
+#registerSupplierCard1 .company-name-website--register,
+#registerSupplierCard1 .email--register,
+#registerSupplierCard1 .new-password--register,
+#registerSupplierCard1 .confirm-password--register {
+    height: 62.2px;
+    margin: 15px 15px;
+}
