@@ -545,3 +545,19 @@ form#registerSupplierCard1 {
     height: 62.2px;
     margin: 15px 15px;
 }
+
+.legal-name--register label, .legal-name--register input,
+.company-name--register label, .company-name--register input,
+.website-url--register label, .website-url--register input,
+.email--register label, .email--register input,
+.new-password--register label, .new-password--register input,
+.confirm-password--register label, .confirm-password--register input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.website-url--register .register-website-url-info,
+.new-password--register .register-password-info {
+    font-size: 10px;
+    font-weight: 300;
+}
