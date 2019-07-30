@@ -729,6 +729,12 @@ form#registerUserCard1 {
     font-weight: 300;
 }
 
+.register-new-password .register-password-info {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+
 .first-name--register .user-first-name--new,
 .last-name--register .user-last-name--new {
     width: 195px;
