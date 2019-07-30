@@ -167,24 +167,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 ?>
-
-<h1>Supplier's Registration</h1>
-<form action="register.php" method="post">
-    <fieldset>
-        <p><strong>Legal Name:</strong> <input type="text" name="legal_name" size="30" maxlength="150" value="<?php if (isset($trimmed['legal_name'])) echo $trimmed['legal_name']; ?>"></p>
-        <p><strong>Company Name:</strong> <input type="text" name="company_name" size="30" maxlength="55" value="<?php if (isset($trimmed['company_name'])) echo $trimmed['company_name']; ?>"><small>(Required)</small></p>
-        <p><strong>Website URL:</strong> <input type="url" name="website_url" size="20" value="<?php if (isset($trimmed['website_url'])) echo $trimmed['website_url']; ?>"><small>(Optional)</small></p>
-        <p><strong>Phone Number:</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Required. Used to assist delivery and customers)</small></p>
-        <p><strong>Email:</strong> <input type="email" name="email" size="30" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>"></p>
-        <p><strong>Password:</strong> <input type="password" name="password1" size="20" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>"><small>(At least 10 characters long)</small></p>
-        <p><strong>Confirm Password:</strong> <input type="password" name="password2" size="20" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>"></p>
-        <p><strong>Address 1:</strong> <input type="text" name="address1" size="30" maxlength="46" value="<?php if (isset($trimmed['address1'])) echo $trimmed['address1']; ?>"></p>
-        <p><strong>Address 2:</strong> <input type="text" name="address2" size="30" maxlength="46" value="<?php if (isset($trimmed['address2'])) echo $trimmed['address2']; ?>"><small>(Optional)</small></p>
-        <p><strong>City:</strong> <input type="text" name="city" size="20" maxlength="50" value="<?php if (isset($trimmed['city'])) echo $trimmed['city']; ?>"></p>
-        <p><strong>Zip:</strong> <input type="text" name="zip" placeholder="'12345' or '12345-6789'" size="10" maxlength="10" value="<?php if (isset($trimmed['zip'])) echo $trimmed['zip']; ?>"></p>
-        <p><strong>State:</strong> <input type="text" name="state" size="20" maxlength="50" value="<?php if (isset($trimmed['state'])) echo $trimmed['state']; ?>"></p>
-        <p><strong>Country:</strong> <input type="text" name="country" size="15" maxlength="27" value="<?php if (isset($trimmed['country'])) echo $trimmed['country']; ?>"></p>
-        <div align="center"><input type="submit" name="submit" value="Register"></div>
+<form action="register.php" method="post" id="registerSupplierCard1">
+    <fieldset class="register-card--supplier">
+        <div class="register-supplier-title">
+            <h2>Create Account</h2>
+        </div>
+        <div class="legal-name--register">
+            <label for="registerLegalName">Legal Name</label>
+            <input type="text" id="registerLegalName" class="supplier-legal-name--register" name="legal_name" maxlength="150" value="<?php if (isset($trimmed['legal_name'])) echo $trimmed['legal_name']; ?>">
+        </div>
+        <div class="company-name-website--register">
+            <div class="company-name--register">
+                <label for="registerCompanyName">Company Name</label>
+                <input type="text" id="registerCompanyName" class="supplier-company-name--register" name="company_name" maxlength="55" value="<?php if (isset($trimmed['company_name'])) echo $trimmed['company_name']; ?>">
+            </div>
+            <div class="website-url--register">
+                <label for="registerWebsiteUrl">Website URL <span class="register-website-url-info">(optional)</span></label>
+                <input type="url" id="registerWebsiteUrl" class="supplier-website-url--register" name="website_url" maxlength="2083" value="<?php if (isset($trimmed['website_url'])) echo $trimmed['website_url']; ?>">
+            </div>
+        </div>
+        <!--<p><strong>Phone Number:</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<$?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Required. Used to assist delivery and customers)</small></p>-->
+        <div class="email--register">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" class="supplier-email--register" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
+        </div>
+        <div class="new-password--register">
+            <label for="registerNewPassword">Password <span class="register-password-info">(at least 10 characters long)</span></label>
+            <input type="password" id="registerNewPassword" class="supplier-new-password--register" name="password1" maxlength="255" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>">
+        </div>
+        <div class="confirm-password--register">
+            <label for="registerConfirmPassword">Confirm Password</label>
+            <input type="password" id="registerConfirmPassword" class="supplier-confirm-password--register" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
+        </div>
+        <div class="register-continue">
+            <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
+        </div>
+        <div class="register-sign-in-option">
+            <p>Already have an account? <a href="/FilmIndustry/eCommerce/suppliers/login.php">Sign in</a></p>
+        </div>
+        <div class="register-user-option">
+            <p>Want to buy films? Register <a href="/FilmIndustry/eCommerce/login.php">here</a></p>
+        </div>
+        <!--<p><strong>Address 1:</strong> <input type="text" name="address1" size="30" maxlength="46" value="<#?php if (isset($trimmed['address1'])) echo $trimmed['address1']; ?>"></p>
+        <p><strong>Address 2:</strong> <input type="text" name="address2" size="30" maxlength="46" value="<#?php if (isset($trimmed['address2'])) echo $trimmed['address2']; ?>"><small>(Optional)</small></p>
+        <p><strong>City:</strong> <input type="text" name="city" size="20" maxlength="50" value="<#?php if (isset($trimmed['city'])) echo $trimmed['city']; ?>"></p>
+        <p><strong>Zip:</strong> <input type="text" name="zip" placeholder="'12345' or '12345-6789'" size="10" maxlength="10" value="<#?php if (isset($trimmed['zip'])) echo $trimmed['zip']; ?>"></p>
+        <p><strong>State:</strong> <input type="text" name="state" size="20" maxlength="50" value="<#?php if (isset($trimmed['state'])) echo $trimmed['state']; ?>"></p>
+        <p><strong>Country:</strong> <input type="text" name="country" size="15" maxlength="27" value="<#?php if (isset($trimmed['country'])) echo $trimmed['country']; ?>"></p>-->
     </fieldset>
 </form>
 
