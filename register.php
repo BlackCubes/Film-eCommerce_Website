@@ -147,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
         </div>
         <div class="register-continue">
-            <input type="submit" name="continue_1" value="CONTINUE">
+            <input type="submit" class="register-continue-button" name="continue_1" value="CONTINUE">
         </div>
         <div class="register-sign-in-option">
             <p>Already have an account? <a href="/FilmIndustry/eCommerce/login.php">Sign in</a></p>
