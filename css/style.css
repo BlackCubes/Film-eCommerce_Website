@@ -662,3 +662,18 @@ form#userChangePassCard {
     font-size: 16px;
     font-weight: 300;
 }
+
+/* REGISTRATION PAGE */
+
+form#registerUserCard1 {
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#registerUserCard1 .register-card {
+    width: 500px;
+    height: 650px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
