@@ -727,16 +727,20 @@ form#registerUserCard2 {
 }
 
 .register-name .first-name--register,
-.register-name .last-name--register {
+.register-name .last-name--register,
+.shipping-state-zip .shipping-state,
+.shipping-state-zip .shipping-zip-code {
     float: left;
     width: 220px;
 }
 
-.first-name--register {
+.first-name--register,
+.shipping-state {
     margin: 0 15px 0 0;
 }
 
-.last-name--register {
+.last-name--register,
+.shipping-zip-code {
     margin: 0 0 0 15px;
 }
 
@@ -764,7 +768,9 @@ form#registerUserCard2 {
 
 
 .first-name--register .user-first-name--new,
-.last-name--register .user-last-name--new {
+.last-name--register .user-last-name--new,
+.shipping-state .user-state--register,
+.shipping-zip-code .user-zip--register {
     width: 208px;
     height: 40px;
     padding: 0 10px;
@@ -779,6 +785,8 @@ form#registerUserCard2 {
 .shipping-address-1 input,
 .shipping-address-2 input,
 .shipping-city input,
+.shipping-state input,
+.shipping-zip-code input,
 .shipping-phone input {
     border: none;
     background-color: rgba(148, 130, 165, 0.17);
@@ -792,6 +800,8 @@ form#registerUserCard2 {
 .shipping-address-1 input:focus,
 .shipping-address-2 input:focus,
 .shipping-city input:focus,
+.shipping-state input:focus,
+.shipping-zip-code input:focus,
 .shipping-phone input:focus {
     background-color: white;
 }
