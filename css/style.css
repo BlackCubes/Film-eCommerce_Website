@@ -708,6 +708,11 @@ form#registerUserCard2 {
     font-weight: 300;
 }
 
+.shipping-info--register p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
 #registerUserCard1 .register-name,
 #registerUserCard1 .register-email,
 #registerUserCard1 .register-new-password,
