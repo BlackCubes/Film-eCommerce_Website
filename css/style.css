@@ -697,3 +697,8 @@ form#registerUserCard1 {
     font-size: 17px;
     font-weight: 300;
 }
+
+#registerUserCard1 .register-name {
+    height: 62.2px;
+    margin: 15px 15px;
+}
