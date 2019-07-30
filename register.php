@@ -127,11 +127,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
         <div class="register-name">
             <div class="first-name--register">
                 <label for="registerFirstName">First Name</label>
-                <input type="text" id="registerFirstName" name="first_name" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>">
+                <input type="text" id="registerFirstName" class="user-first-name--new" name="first_name" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>">
             </div>
             <div class="last-name--register">
                 <label for="registerLastName">Last Name</label>
-                <input type="text" id="registerLastName" name="last_name" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>">
+                <input type="text" id="registerLastName" class="user-last-name--new" name="last_name" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>">
             </div>
         </div>
         <div class="register-email">
