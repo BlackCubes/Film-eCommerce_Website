@@ -169,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <form action="register.php" method="post" id="registerSupplierCard1">
     <fieldset class="register-card--supplier">
-        <div class="register-supplier-title">
+        <div class="supplier-title--register">
             <h2>Create Account</h2>
         </div>
         <div class="legal-name--register">
