@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
             <label for="registerEmail">Email</label>
             <input type="email" id="registerEmail" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
         </div>
-        <div class="register-password">
+        <div class="register-new-password">
             <label for="registerPassword">Password <div class="register-password-info">(at least 10 characters long)</div></label>
             <input type="password" id="registerPassword" name="password1" maxlength="255" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>">
         </div>
