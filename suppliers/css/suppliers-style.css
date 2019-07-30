@@ -561,3 +561,28 @@ form#registerSupplierCard1 {
     font-size: 10px;
     font-weight: 300;
 }
+
+#registerSupplierCard1 .supplier-legal-name--register,
+#registerSupplierCard1 .supplier-email--register,
+#registerSupplierCard1 .supplier-new-password--register,
+#registerSupplierCard1 .supplier-confirm-password--register {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.legal-name--register input,
+.email--register input,
+.new-password--register input,
+.confirm-password--register input {
+    border: none;
+    background-color: lightslategrey;
+}
+
+.legal-name--register input:focus,
+.email--register input:focus,
+.new-password--register input:focus,
+.confirm-password--register input:focus {
+    background-color: white;
+}
