@@ -705,6 +705,7 @@ form#registerUserCard1 {
 
 .register-name .first-name--register,
 .register-name .last-name--register {
+    float: left;
     width: 235px;
 }
 
