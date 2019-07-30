@@ -687,3 +687,13 @@ form#registerUserCard1 {
 .register-card .register-continue {
     text-align: center;
 }
+
+.register-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.register-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
