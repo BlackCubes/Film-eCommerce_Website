@@ -39,7 +39,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         </div>
         <div class="shipping-phone">
             <label for="shippingPhone">Phone <span class="register-phone-info">(optional, but may be used to assist delivery)</span></label>
-            <input type="tel" id="shippingPhone" class="user-phone--register" name="phone_num" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>">
+            <input type="tel" id="shippingPhone" class="user-phone--register" name="phone_num" placeholder="123-456-7890" maxlength="15" value="<?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>">
         </div>
         <div class="register-submit">
             <input type="submit" class="submit-button--register" name="submit" value="OK, LET'S GO!">
