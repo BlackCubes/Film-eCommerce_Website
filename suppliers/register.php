@@ -186,7 +186,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="url" id="registerWebsiteUrl" class="supplier-website-url--register" name="website_url" maxlength="2083" value="<?php if (isset($trimmed['website_url'])) echo $trimmed['website_url']; ?>">
             </div>
         </div>
-        <!--<p><strong>Phone Number:</strong> <input type="tel" name="phone_num" placeholder="123-456-7890" size="15" maxlength="15" value="<$?php if (isset($trimmed['phone_num'])) echo $trimmed['phone_num']; ?>"><small>(Required. Used to assist delivery and customers)</small></p>-->
         <div class="email--register">
             <label for="registerEmail">Email</label>
             <input type="email" id="registerEmail" class="supplier-email--register" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
@@ -208,12 +207,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="register-user-option">
             <p>Want to buy films? Register <a href="/FilmIndustry/eCommerce/register.php">here</a></p>
         </div>
-        <!--<p><strong>Address 1:</strong> <input type="text" name="address1" size="30" maxlength="46" value="<#?php if (isset($trimmed['address1'])) echo $trimmed['address1']; ?>"></p>
-        <p><strong>Address 2:</strong> <input type="text" name="address2" size="30" maxlength="46" value="<#?php if (isset($trimmed['address2'])) echo $trimmed['address2']; ?>"><small>(Optional)</small></p>
-        <p><strong>City:</strong> <input type="text" name="city" size="20" maxlength="50" value="<#?php if (isset($trimmed['city'])) echo $trimmed['city']; ?>"></p>
-        <p><strong>Zip:</strong> <input type="text" name="zip" placeholder="'12345' or '12345-6789'" size="10" maxlength="10" value="<#?php if (isset($trimmed['zip'])) echo $trimmed['zip']; ?>"></p>
-        <p><strong>State:</strong> <input type="text" name="state" size="20" maxlength="50" value="<#?php if (isset($trimmed['state'])) echo $trimmed['state']; ?>"></p>
-        <p><strong>Country:</strong> <input type="text" name="country" size="15" maxlength="27" value="<#?php if (isset($trimmed['country'])) echo $trimmed['country']; ?>"></p>-->
     </fieldset>
 </form>
 
