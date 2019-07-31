@@ -554,7 +554,12 @@ form#registerSupplierCard2 {
 #registerSupplierCard1 .company-name-website--register,
 #registerSupplierCard1 .email--register,
 #registerSupplierCard1 .new-password--register,
-#registerSupplierCard1 .confirm-password--register {
+#registerSupplierCard1 .confirm-password--register,
+#registerSupplierCard2 .shipping-address-1--register,
+#registerSupplierCard2 .shipping-address-2--register,
+#registerSupplierCard2 .shipping-city--register,
+#registerSupplierCard2 .shipping-state-zip--register,
+#registerSupplierCard2 .shipping-phone--register {
     height: 62.2px;
     margin: 15px 15px;
 }
@@ -564,13 +569,21 @@ form#registerSupplierCard2 {
 .website-url--register label, .website-url--register input,
 .email--register label, .email--register input,
 .new-password--register label, .new-password--register input,
-.confirm-password--register label, .confirm-password--register input {
+.confirm-password--register label, .confirm-password--register input,
+.shipping-address-1--register label, .shipping-address-1--register input,
+.shipping-address-2--register label, .shipping-address-2--register input,
+.shipping-city--register label, .shipping-city--register input,
+.shipping-state--register label, .shipping-state--register input,
+.shipping-zip-code--register label, .shipping-zip-code--register input,
+.shipping-phone--register label, .shipping-phone--register input {
     font-size: 13px;
     font-weight: 300;
 }
 
 .website-url--register .register-website-url-info,
-.new-password--register .register-password-info {
+.new-password--register .register-password-info,
+.shipping-address-2--register .register-shipping-info,
+.shipping-phone--register .register-phone-info {
     font-size: 10px;
     font-weight: 300;
 }
@@ -578,7 +591,11 @@ form#registerSupplierCard2 {
 #registerSupplierCard1 .supplier-legal-name--register,
 #registerSupplierCard1 .supplier-email--register,
 #registerSupplierCard1 .supplier-new-password--register,
-#registerSupplierCard1 .supplier-confirm-password--register {
+#registerSupplierCard1 .supplier-confirm-password--register,
+#registerSupplierCard2 .supplier-address-1--register,
+#registerSupplierCard2 .supplier-address-2--register,
+#registerSupplierCard2 .supplier-city--register,
+#registerSupplierCard2 .supplier-phone--register {
     width: 458px;
     height: 40px;
     padding: 0 10px;
@@ -590,7 +607,13 @@ form#registerSupplierCard2 {
 .new-password--register input,
 .confirm-password--register input,
 .company-name--register input,
-.website-url--register input {
+.website-url--register input,
+.shipping-address-1--register input,
+.shipping-address-2--register input,
+.shipping-city--register input,
+.shipping-state--register input,
+.shipping-zip-code--register input,
+.shipping-phone--register input {
     border: none;
     background-color: lightslategrey;
 }
@@ -600,12 +623,20 @@ form#registerSupplierCard2 {
 .new-password--register input:focus,
 .confirm-password--register input:focus,
 .company-name--register input:focus,
-.website-url--register input:focus {
+.website-url--register input:focus,
+.shipping-address-1--register input:focus,
+.shipping-address-2--register input:focus,
+.shipping-city--register input:focus,
+.shipping-state--register input:focus,
+.shipping-zip-code--register input:focus,
+.shipping-phone--register input:focus {
     background-color: white;
 }
 
 .company-name--register .supplier-company-name--register,
-.website-url--register .supplier-website-url--register {
+.website-url--register .supplier-website-url--register,
+.shipping-state--register .supplier-state--register,
+.shipping-zip-code--register .supplier-zip--register {
     width: 208px;
     height: 40px;
     padding: 0 10px;
@@ -613,16 +644,20 @@ form#registerSupplierCard2 {
 }
 
 .company-name-website--register .company-name--register,
-.company-name-website--register .website-url--register {
+.company-name-website--register .website-url--register,
+.shipping-state-zip--register .shipping-state--register,
+.shipping-state-zip--register .shipping-zip-code--register {
     float: left;
     width: 220px;
 }
 
-.company-name--register {
+.company-name--register,
+.shipping-state--register {
     margin: 0 15px 0 0;
 }
 
-.website-url--register {
+.website-url--register,
+.shipping-zip-code--register {
     margin: 0 0 0 15px;
 }
 
