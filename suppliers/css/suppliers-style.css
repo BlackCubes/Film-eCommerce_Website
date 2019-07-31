@@ -661,14 +661,14 @@ form#registerSupplierCard2 {
     margin: 0 0 0 15px;
 }
 
-.register-continue {
+.register-continue, .register-submit {
     width: 100%;
     height: 62.2px;
     padding-top: 20px;
     padding-bottom: 5px;
 }
 
-.register-continue input {
+.register-continue input, .register-submit input {
     background-color: #003366;
     color: white;
     border: none;
@@ -678,7 +678,7 @@ form#registerSupplierCard2 {
     transition: all 0.3s ease-out;
 }
 
-.register-continue input:hover {
+.register-continue input:hover, .register-submit input:hover {
     color: rgba(243, 231, 255, 0.91);
     background-color: rgba(138,43,226,0.03);
     font-size: 15px;
@@ -689,7 +689,8 @@ form#registerSupplierCard2 {
     transition: all 0.3s ease-in-out;
 }
 
-.register-continue .register-continue-button {
+.register-continue .register-continue-button,
+.register-submit .submit-button--register {
     width: 482px;
     height: 45px;
 }
