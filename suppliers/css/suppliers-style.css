@@ -516,7 +516,8 @@ form#registerSupplierCard2 {
     margin-right: auto;
 }
 
-.register-card--supplier div {
+.register-card--supplier div,
+.register-card-2--supplier div {
     font-family: 'Muli', sans-serif;
     color: white;
 }
@@ -524,7 +525,10 @@ form#registerSupplierCard2 {
 .register-card--supplier .supplier-title--register,
 .register-card--supplier .register-continue,
 .register-card--supplier .register-sign-in-option,
-.register-card--supplier .register-user-option {
+.register-card--supplier .register-user-option,
+.register-card-2--supplier .supplier-shipping-title--register,
+.register-card-2--supplier .shipping-info--register,
+.register-card-2--supplier .register-submit {
     text-align: center;
 }
 
