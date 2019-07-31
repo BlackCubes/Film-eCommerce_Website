@@ -532,13 +532,20 @@ form#registerSupplierCard2 {
     text-align: center;
 }
 
-.supplier-title--register {
+.supplier-title--register,
+.supplier-shipping-title--register {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.supplier-title--register h2 {
+.supplier-title--register h2,
+.supplier-shipping-title--register h2 {
     font-size: 17px;
+    font-weight: 300;
+}
+
+.shipping-info--register p {
+    font-size: 12px;
     font-weight: 300;
 }
 
