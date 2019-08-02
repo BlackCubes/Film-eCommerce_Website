@@ -18,9 +18,6 @@ include('includes/header.html');
 if (isset($_SESSION['id'])) {
     header("Location: /FilmIndustry/eCommerce/index.php");
     exit;
-} elseif (isset($_SESSION['supplier_id'])) {
-    header("Location: /FilmIndustry/eCommerce/suppliers/index.php");
-    exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user submits the form.
