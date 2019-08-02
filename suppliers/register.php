@@ -205,7 +205,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>Already have an account? <a href="/FilmIndustry/eCommerce/suppliers/login.php">Sign in</a></p>
         </div>
         <div class="register-user-option">
-            <p>Want to buy films? Register <a href="/FilmIndustry/eCommerce/register.php">here</a></p>
+            <p>Want to buy films? Register <a href="/FilmIndustry/eCommerce/register_page1.php">here</a></p>
         </div>
     </fieldset>
 </form>
