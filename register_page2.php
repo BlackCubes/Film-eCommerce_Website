@@ -1,5 +1,19 @@
 <?php
 
+# register_page2.php.
+# Created on July 30, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
+
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 $page_title = 'Register';
