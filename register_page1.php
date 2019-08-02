@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
 ?>
 
 <!-- Making the registration form as a POST method: -->
-<form action="register.php" method="post" id="registerUserCard1">
+<form action="register_page2.php" method="post" id="registerUserCard1">
     <fieldset class="register-card">
         <div class="register-title">
             <h2>Create Account</h2>
