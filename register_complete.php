@@ -51,6 +51,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['a1Err'] = 'Please enter a valid shipping address!';
     }
 
+    if (preg_match('/^[A-Z0-9 ,#\'\/.]{3,46}$/iu', sanitize_input($_POST['address2']))) {
+        $_SESSION['a2Err'] = '';
+        $_SESSION['a2'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['address2']));
+    } elseif (empty(sanitize_input($_POST['address2']))) {
+        $_SESSION['a2Err'] = '';
+        $_SESSION['a2'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['address2']));
+    } else {
+        $_SESSION['a2Err'] = 'Please enter a valid second address!';
+    }
+
     if (preg_match('/^(\p{L}+(?:([\ \-\']|(\.\ ))\p{L}+)*){3,50}$/u', sanitize_input($_POST['city']))) {
         $_SESSION['cErr'] = '';
         $_SESSION['c'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['city']));
@@ -73,6 +83,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $z = TRUE;
     } else {
         $_SESSION['zipErr'] = 'Please enter a valid zip code!';
+    }
+
+    if (preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', sanitize_input($_POST['phone_num']))) {
+        $_SESSION['phoneErr'] = '';
+        $_SESSION['phone_num'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['phone_num']));
+    } elseif (empty(sanitize_input($_POST['phone_num']))) {
+        $_SESSION['phoneErr'] = '';
+        $_SESSION['phone_num'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['phone_num']));
+    } else {
+        $_SESSION['phoneErr'] = 'Please enter a valid phone number!';
     }
 
 }
