@@ -20,6 +20,13 @@ $page_title = 'Register';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+if (isset($_SESSION['id'])) {
+    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
+    exit;
+}
+
+session_start();
+
 ?>
 <form action="register.php" method="post" id="registerUserCard2">
     <fieldset class="register-card--shipping">
