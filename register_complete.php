@@ -115,11 +115,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_commit($dbc);
 
+            $body = "Thank you for registering to buy your favorite films and television shows at the Film eCommerce website! To activate your account, please click on this link\n\n";
+            $body .= BASE_URL . 'activate.php?x=' . urlencode($_SESSION['email']) . "&y=$a";
+
+            mail($_SESSION['email'], 'Registration Confirmation', $body, 'From: gutierrezelias1991@gmail.com');
+
             $_SESSION = [];
 
             session_destroy();
 
-            setcookie(session_name(), '', time()-3600);            
+            setcookie(session_name(), '', time()-3600);
 
         } else {
 
