@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q1 = "INSERT INTO users (`first_name`, `last_name`, `email`, `pass`, `phone_num`, `verify_code`, `registration_date`) VALUES ('{$_SESSION['fn']}', '{$_SESSION['ln']}', '{$_SESSION['email']}', '{$_SESSION['p']}', '{$_SESSION['phone_num']}', '{$a}', NOW())";
         $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $user_id = "SELECT id FROM useres WHERE email='{$_SESSION['email']}'";
+        $user_id = "SELECT id FROM users WHERE email='{$_SESSION['email']}'";
 
         $q2 = "INSERT INTO shippingaddress (`user_id`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`) VALUES ('{$user_id}', '{$_SESSION['a1']}', '{$_SESSION['a2']}', '{$_SESSION['c']}', '{$_SESSION['s']}', '{$_SESSION['z']}', 'United States')";
         $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q1\n<br>MySQL Error: " . mysqli_error($dbc));
