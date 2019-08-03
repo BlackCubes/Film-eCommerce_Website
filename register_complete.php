@@ -28,4 +28,19 @@ if (isset($_SESSION['id'])) {
     exit;
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require(MYSQL);
+
+    function sanitize_input($input) {
+        $input = trim($input);
+        $input = stripslashes($input);
+        $input = htmlspecialchars($input);
+        return $input;
+    }
+
+    include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+
+}
+
 ?>
