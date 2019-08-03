@@ -877,3 +877,17 @@ form#registerUserCard2 {
     text-decoration: none;
     color: blueviolet;
 }
+
+#registerUserCard1 .name-error, #registerUserCard1 .email-error,
+#registerUserCard1 .pass-error, #registerUserCard1 .system-error {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#registerUserCard1 .name-error p, #registerUserCard1 .email-error p,
+#registerUserCard1 .pass-error p, #registerUserCard1 .system-error p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
