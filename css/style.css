@@ -680,7 +680,7 @@ form#registerUserCard2 {
 #registerUserCard1 .register-card,
 #registerUserCard2 .register-card--shipping {
     width: 500px;
-    height: 650px;
+    height: 750px;
     background-color: white;
     border: none;
     margin-left: auto;
