@@ -150,6 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="register-submit">
                         <input type="submit" class="submit-button--register" name="submit" value="OK, LET'S GO!">
                     </div>
+                    <?php if (isset($_SESSION['systemErr2'])) echo '<div class="system-error"><p>' . $_SESSION['systemErr2'] . '</p></div>'; unset($_SESSION['systemErr2']); ?>
                 </fieldset>
             </form>
             <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
