@@ -879,14 +879,28 @@ form#registerUserCard2 {
 }
 
 #registerUserCard1 .name-error, #registerUserCard1 .email-error,
-#registerUserCard1 .pass-error, #registerUserCard1 .system-error {
+#registerUserCard1 .pass-error, #registerUserCard1 .system-error,
+#registerUserCard2 .address-1-error--register,
+#registerUserCard2 .address-2-error--register,
+#registerUserCard2 .city-error--register,
+#registerUserCard2 .state-error--register,
+#registerUserCard2 .zip-code-error--register,
+#registerUserCard2 .phone-error--register,
+#registerUserCard2 .system-error {
     width: 470px;
     margin-right: auto;
     margin-left: auto;
 }
 
 #registerUserCard1 .name-error p, #registerUserCard1 .email-error p,
-#registerUserCard1 .pass-error p, #registerUserCard1 .system-error p {
+#registerUserCard1 .pass-error p, #registerUserCard1 .system-error p,
+#registerUserCard2 .address-1-error--register p,
+#registerUserCard2 .address-2-error--register p,
+#registerUserCard2 .city-error--register p,
+#registerUserCard2 .state-error--register p,
+#registerUserCard2 .zip-code-error--register p,
+#registerUserCard2 .phone-error--register p,
+#registerUserCard2 .system-error p {
     font-size: 12px;
     font-weight: 300;
     color: red;
