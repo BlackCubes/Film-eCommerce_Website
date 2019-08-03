@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
-        exit;
+        exit();
     }
 
 }
