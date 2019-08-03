@@ -39,6 +39,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $fn = $ln = $e = $p = FALSE;
 
+    if (preg_match('/^[A-Z\p{L}]{1}(.[A-Z]{1}.)?([a-z\p{L}]+)?$/u', sanitize_input($_POST['first_name']))) {
+        $_SESSION['fnErr'] = '';
+        $_SESSION['fn'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['first_name']));
+        $fn = TRUE;
+    } else {
+        $_SESSION['fnErr'] = 'Please enter your first name!';
+    }
+
+    if (preg_match('/^[A-Z\p{L}]{1}([a-z\p{L}]{1}[A-Z\p{L}]{1})?([\']{1}[A-Z\p{L}]{1})?[a-z\p{L}]+([-]{1}[A-Z\p{L}]{1}[a-z\p{L}]+)?( Jr.)?$/u', sanitize_input($_POST['last_name']))) {
+        $_SESSION['lnErr'] = '';
+        $_SESSION['ln'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['last_name']));
+        $ln = TRUE;
+    } else {
+        $_SESSION['lnErr'] = 'Please enter your last name!';
+    }
+
+    if (filter_var(sanitize_input($_POST['email']), FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['emailErr'] = '';
+        $_SESSION['email'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['email']));
+        $e = TRUE;
+    } else {
+        $_SESSION['emailErr'] = 'Please enter a valid email address!';
+    }
+
+    if (strlen(sanitize_input($_POST['password1'])) >= 10) {
+        $_SESSION['passErr1'] = $_SESSION['passErr2'] = '';
+        if (sanitize_input($_POST['password1']) == sanitize_input($_POST['password2'])) {
+            $_SESSION['p'] = password_hash(sanitize_input($_POST['password1']), PASSWORD_DEFAULT);
+            $p = TRUE;
+        } else {
+            $_SESSION['passErr2'] = 'Your confirmed password does not match your new password!';
+        }
+    } else {
+        $_SESSION['passErr1'] = 'Please enter a valid password!';
+        $_SESSION['passErr2'] = '';
+    }
+
 }
 
 ?>
