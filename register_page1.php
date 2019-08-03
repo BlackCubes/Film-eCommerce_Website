@@ -146,21 +146,25 @@ session_start();
             <label for="registerEmail">Email</label>
             <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
         </div>
-        <?php if (isset($_SESSION['emailErr'])) echo '<div class="email-error"><p>' . $_SESSION['emailErr'] . '</p></div>'; ?>
+        <?php if (isset($_SESSION['emailErr'])) echo '<div class="email-error"><p>' . $_SESSION['emailErr'] . '</p></div>';
+        unset($_SESSION['emailErr']); ?>
         <div class="register-new-password">
             <label for="registerPassword">Password <span class="register-password-info">(at least 10 characters long)</span></label>
             <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255" value="<?php if (isset($_POST['password1'])) echo $_POST['password1']; ?>">
         </div>
-        <?php if (isset($_SESSION['passErr1'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr1'] . '</p></div>'; ?>
+        <?php if (isset($_SESSION['passErr1'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr1'] . '</p></div>';
+        unset($_SESSION['passsErr1']); ?>
         <div class="register-confirm-password">
             <label for="registerConfirmPassword">Confirm Password</label>
             <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($_POST['password2'])) echo $_POST['password2']; ?>">
         </div>
-        <?php if (isset($_SESSION['passErr2'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr2'] . '</p></div>'; ?>
+        <?php if (isset($_SESSION['passErr2'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr2'] . '</p></div>';
+        unset($_SESSION['passErr2']); ?>
         <div class="register-continue">
             <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
         </div>
-        <?php if (isset($_SESSION['systemErr1'])) echo '<div class="system-error"><p>' . $_SESSION['systemErr1'] . '</p></div>'; ?>
+        <?php if (isset($_SESSION['systemErr1'])) echo '<div class="system-error"><p>' . $_SESSION['systemErr1'] . '</p></div>';
+        unset($_SESSION['systemErr1']); ?>
         <div class="register-sign-in-option">
             <p>Already have an account? <a href="/FilmIndustry/eCommerce/login.php">Sign in</a></p>
         </div>
