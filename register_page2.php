@@ -88,7 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
         if (mysqli_num_rows($r) == 0) {
+
             $_SESSION['systemErr1'] = '';
+
+            mysqli_free_result($r);
+            mysqli_close($dbc);
+
         ?>
 
             <form action="register_complete.php" method="post" id="registerUserCard2">
