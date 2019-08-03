@@ -140,6 +140,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_rollback($dbc);
 
+            mysqli_free_result($r1);
+            mysqli_free_result($r2);
+            mysqli_close($dbc);
+
             $_SESSION = [];
 
             session_destroy();
@@ -149,6 +153,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo '<div class="registerUserErrorCard"><div class="register-error-card--user"><div class="user-error--register"><p>You could not be registered with the given information due to a system error. Please contact the system administrator. We apologize for any inconvenience.</p></div></div></div>';
 
             include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
+
+            exit();
 
         }
 
