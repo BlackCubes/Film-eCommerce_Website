@@ -142,6 +142,17 @@ session_start();
                 <input type="text" id="registerLastName" class="user-last-name--new" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>">
             </div>
         </div>
+        <?php
+
+        if (isset($_SESSION['fnErr']) && isset($_SESSION['lnErr'])) {
+            echo '<div class="name-error"><p>Please enter your first and last name!</p></div>';
+        } elseif (isset($_SESSION['fnErr']) && !isset($_SESSION['lnErr'])) {
+            echo '<div class="name-error"><p>' . $_SESSION['fnErr'] . '</p></div>';
+        } elseif (!isset($_SESSION['fnErr']) && isset($_SESSION['lnErr'])) {
+            echo '<div class="name-error"><p>' . $_SESSION['lnErr'] . '</p></div>';
+        }
+
+        ?>
         <div class="register-email">
             <label for="registerEmail">Email</label>
             <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
