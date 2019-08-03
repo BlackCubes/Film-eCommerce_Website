@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($a1 && $c && $s && $z) {
 
-        $_SESSION['systemErr1'] = '';
+        $_SESSION['systemErr2'] = '';
 
         $a = md5(uniqid(rand(), true));
 
@@ -159,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
     } else {
-        $_SESSION['systemErr1'] = 'Please try again';
+        $_SESSION['systemErr2'] = 'Please try again';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
         exit();
     }
