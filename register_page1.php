@@ -165,13 +165,13 @@ if (!isset($_SESSION)) {
         unset($_SESSION['emailErr']); ?>
         <div class="register-new-password">
             <label for="registerPassword">Password <span class="register-password-info">(at least 10 characters long)</span></label>
-            <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255" value="<?php if (isset($_POST['password1'])) echo $_POST['password1']; ?>">
+            <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255">
         </div>
         <?php if (isset($_SESSION['passErr1'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr1'] . '</p></div>';
         unset($_SESSION['passErr1']); ?>
         <div class="register-confirm-password">
             <label for="registerConfirmPassword">Confirm Password</label>
-            <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($_POST['password2'])) echo $_POST['password2']; ?>">
+            <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255">
         </div>
         <?php if (isset($_SESSION['passErr2'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr2'] . '</p></div>';
         unset($_SESSION['passErr2']); ?>
