@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+    $a1 = $c = $s = $z = FALSE;
+
 }
 
 ?>
