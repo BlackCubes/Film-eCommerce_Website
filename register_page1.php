@@ -137,11 +137,11 @@ if (!isset($_SESSION)) {
         <div class="register-name">
             <div class="first-name--register">
                 <label for="registerFirstName">First Name</label>
-                <input type="text" id="registerFirstName" class="user-first-name--new" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>">
+                <input type="text" id="registerFirstName" class="user-first-name--new" name="first_name" maxlength="20" value="<?php if (isset($_SESSION['fn'])) echo $_SESSION['fn']; unset($_SESSION['fn']); ?>">
             </div>
             <div class="last-name--register">
                 <label for="registerLastName">Last Name</label>
-                <input type="text" id="registerLastName" class="user-last-name--new" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>">
+                <input type="text" id="registerLastName" class="user-last-name--new" name="last_name" maxlength="40" value="<?php if (isset($_SESSION['ln'])) echo $_SESSION['ln']; unset($_SESSION['ln']); ?>">
             </div>
         </div>
         <?php
@@ -159,7 +159,7 @@ if (!isset($_SESSION)) {
         ?>
         <div class="register-email">
             <label for="registerEmail">Email</label>
-            <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
+            <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email']; unset($_SESSION['email']); ?>">
         </div>
         <?php if (isset($_SESSION['emailErr'])) echo '<div class="email-error"><p>' . $_SESSION['emailErr'] . '</p></div>';
         unset($_SESSION['emailErr']); ?>
