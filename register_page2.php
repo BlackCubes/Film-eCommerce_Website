@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($fn && $ln && $e && $p) {
         $_SESSION['systemErr1'] = ''; ?>
 
-        <form action="register.php" method="post" id="registerUserCard2">
+        <form action="register_complete.php" method="post" id="registerUserCard2">
             <fieldset class="register-card--shipping">
                 <div class="shipping-title--register">
                     <h2>Shipping Address</h2>
