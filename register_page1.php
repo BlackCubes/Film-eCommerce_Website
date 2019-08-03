@@ -175,16 +175,8 @@ if (!isset($_SESSION)) {
             <label for="registerConfirmPassword">Confirm Password</label>
             <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($_POST['password2'])) echo $_POST['password2']; ?>">
         </div>
-        <?php
-        
-        if (isset($_SESSION['passErr2'])) {
-            echo '<div class="pass-error"><p>' . $_SESSION['passErr2'] . '</p></div>';
-            unset($_SESSION['passErr2']);
-        } elseif (empty($_POST['password2'])) {
-            echo '<div class="pass-error"><p>Please confirm your new password!</p></div>';
-        }
-        
-        ?>
+        <?php if (isset($_SESSION['passErr2'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr2'] . '</p></div>';
+        unset($_SESSION['passErr2']); ?>
         <div class="register-continue">
             <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
         </div>
