@@ -21,7 +21,9 @@ if (isset($_SESSION['id'])) {
     exit;
 }
 
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 /*if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user submits the form.
 
