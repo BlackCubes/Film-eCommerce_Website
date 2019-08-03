@@ -21,11 +21,19 @@ $page_title = 'Register';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
 if (isset($_SESSION['id'])) {
+    ob_end_clean();
     header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
     exit;
 }
 
 session_start();
+
+function sanitize_input($input) {
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
+}
 
 ?>
 <form action="register.php" method="post" id="registerUserCard2">
