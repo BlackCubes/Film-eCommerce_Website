@@ -97,6 +97,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($a1 && $c && $s && $z) {
 
+        $_SESSION['systemErr1'] = '';
+
+        $q = "SELECT id FROM users WHERE email='{$_SESSION['email']}'";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
