@@ -135,24 +135,24 @@ session_start();
         <div class="register-name">
             <div class="first-name--register">
                 <label for="registerFirstName">First Name</label>
-                <input type="text" id="registerFirstName" class="user-first-name--new" name="first_name" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>">
+                <input type="text" id="registerFirstName" class="user-first-name--new" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>">
             </div>
             <div class="last-name--register">
                 <label for="registerLastName">Last Name</label>
-                <input type="text" id="registerLastName" class="user-last-name--new" name="last_name" maxlength="40" value="<?php if (isset($trimmed['last_name'])) echo $trimmed['last_name']; ?>">
+                <input type="text" id="registerLastName" class="user-last-name--new" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>">
             </div>
         </div>
         <div class="register-email">
             <label for="registerEmail">Email</label>
-            <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($trimmed['email'])) echo $trimmed['email']; ?>">
+            <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
         </div>
         <div class="register-new-password">
             <label for="registerPassword">Password <span class="register-password-info">(at least 10 characters long)</span></label>
-            <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255" value="<?php if (isset($trimmed['password1'])) echo $trimmed['password1']; ?>">
+            <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255" value="<?php if (isset($_POST['password1'])) echo $_POST['password1']; ?>">
         </div>
         <div class="register-confirm-password">
             <label for="registerConfirmPassword">Confirm Password</label>
-            <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($trimmed['password2'])) echo $trimmed['password2']; ?>">
+            <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($_POST['password2'])) echo $_POST['password2']; ?>">
         </div>
         <div class="register-continue">
             <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
