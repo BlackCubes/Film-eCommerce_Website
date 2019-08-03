@@ -134,13 +134,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <?php
         } else {
+
+            mysqli_free_result($r);
+            mysqli_close($dbc);
+
             $_SESSION['systemErr1'] = 'That email address has already been registered. If you have forgotten your password, please change it by clicking on "Change Password" on the top navbar when signing in';
             header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
-            exit;
+            exit();
         }
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
-        exit;
+        exit();
     }
 } ?>
