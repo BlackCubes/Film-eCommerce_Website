@@ -16,11 +16,12 @@ $page_title = 'Register';
 include('includes/header.html');
 
 if (isset($_SESSION['id'])) {
+    ob_end_clean();
     header("Location: /FilmIndustry/eCommerce/index.php");
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user submits the form.
+/*if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user submits the form.
 
     // Getting the database connection:
     require(MYSQL);
@@ -120,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handling the form after the user 
     // Closing the database connection where for Procedural Programming the argument requires the link identifier returned by mysqli_connect() (in this case it is the variable $dbc):
     mysqli_close($dbc);
 
-} // End of the main Submit conditional.
+} // End of the main Submit conditional.*/
 ?>
 
 <!-- Making the registration form as a POST method: -->
