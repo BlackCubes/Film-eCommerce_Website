@@ -28,15 +28,17 @@ if (isset($_SESSION['id'])) {
 
 session_start();
 
-function sanitize_input($input) {
-    $input = trim($input);
-    $input = stripslashes($input);
-    $input = htmlspecialchars($input);
-    return $input;
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
+
+    function sanitize_input($input) {
+        $input = trim($input);
+        $input = stripslashes($input);
+        $input = htmlspecialchars($input);
+        return $input;
+    }
+
+    $fn = $ln = $e = $p = FALSE;
+
 }
 
 ?>
