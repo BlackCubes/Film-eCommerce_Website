@@ -35,6 +35,10 @@ function sanitize_input($input) {
     return $input;
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+}
+
 ?>
 <form action="register.php" method="post" id="registerUserCard2">
     <fieldset class="register-card--shipping">
