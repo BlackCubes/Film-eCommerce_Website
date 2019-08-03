@@ -146,14 +146,17 @@ session_start();
             <label for="registerEmail">Email</label>
             <input type="email" id="registerEmail" class="user-email--register" name="email" maxlength="80" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
         </div>
+        <?php if (isset($_SESSION['emailErr'])) echo '<div class="email-error"><p>' . $_SESSION['emailErr'] . '</p></div>'; ?>
         <div class="register-new-password">
             <label for="registerPassword">Password <span class="register-password-info">(at least 10 characters long)</span></label>
             <input type="password" id="registerPassword" class="user-new-pass--register" name="password1" maxlength="255" value="<?php if (isset($_POST['password1'])) echo $_POST['password1']; ?>">
         </div>
+        <?php if (isset($_SESSION['passErr1'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr1'] . '</p></div>'; ?>
         <div class="register-confirm-password">
             <label for="registerConfirmPassword">Confirm Password</label>
             <input type="password" id="registerConfirmPassword" class="user-confirm-pass--register" name="password2" maxlength="255" value="<?php if (isset($_POST['password2'])) echo $_POST['password2']; ?>">
         </div>
+        <?php if (isset($_SESSION['passErr2'])) echo '<div class="pass-error"><p>' . $_SESSION['passErr2'] . '</p></div>'; ?>
         <div class="register-continue">
             <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
         </div>
