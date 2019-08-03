@@ -32,6 +32,8 @@ if (!isset($_SESSION)) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    require(MYSQL);
+
     function sanitize_input($input) {
         $input = trim($input);
         $input = stripslashes($input);
