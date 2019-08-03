@@ -95,6 +95,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['phoneErr'] = 'Please enter a valid phone number!';
     }
 
+    if ($a1 && $c && $s && $z) {
+
+    } else {
+        $_SESSION['systemErr1'] = 'Please try again';
+        header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
+        exit;
+    }
+
 }
 
 ?>
