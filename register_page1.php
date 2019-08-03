@@ -157,6 +157,7 @@ session_start();
         <div class="register-continue">
             <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
         </div>
+        <?php if (isset($_SESSION['systemErr1'])) echo '<div class="system-error"><p>' . $_SESSION['systemErr1'] . '</p></div>'; ?>
         <div class="register-sign-in-option">
             <p>Already have an account? <a href="/FilmIndustry/eCommerce/login.php">Sign in</a></p>
         </div>
