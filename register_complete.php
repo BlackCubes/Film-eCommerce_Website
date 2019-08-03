@@ -111,9 +111,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q2 = "INSERT INTO shippingaddress (`user_id`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`) VALUES ('{$user_id}', '{$_SESSION['a1']}', '{$_SESSION['a2']}', '{$_SESSION['c']}', '{$_SESSION['s']}', '{$_SESSION['z']}', 'United States')";
         $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q1\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        if (mysqli_affected_rows($dbc) == 1) {
+        if ($r1 && $r2) {
+
+            mysqli_commit($dbc);
 
         } else {
+
+            mysqli_rollback($dbc);
 
             $_SESSION = [];
 
