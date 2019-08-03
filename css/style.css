@@ -918,7 +918,7 @@ form#registerUserCard2,
 
 .register-success-card--user .user-success--register p,
 .register-error-card--user .user-error--register p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 }
 
