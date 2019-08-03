@@ -51,6 +51,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['a1Err'] = 'Please enter a valid shipping address!';
     }
 
+    if (preg_match('/^(\p{L}+(?:([\ \-\']|(\.\ ))\p{L}+)*){3,50}$/u', sanitize_input($_POST['city']))) {
+        $_SESSION['cErr'] = '';
+        $_SESSION['c'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['city']));
+        $c = TRUE;
+    } else {
+        $_SESSION['cErr'] = 'Please enter a valid city!';
+    }
+
+    if (preg_match('/^(\p{L}+(?:([\ \-\']|(\.\ ))\p{L}+)*){2,50}$/u', sanitize_input($_POST['state']))) {
+        $_SESSION['sErr'] = '';
+        $_SESSION['s'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['state']));
+        $s = TRUE;
+    } else {
+        $_SESSION['sErr'] = 'Please enter a valid state!';
+    }
+
     if (preg_match('/^(\d{5})(-\d{4})?\s?$/', sanitize_input($_POST['zip']))) {
         $_SESSION['zipErr'] = '';
         $_SESSION['z'] = mysqli_real_escape_string($dbc, sanitize_input($_POST['zip']));
