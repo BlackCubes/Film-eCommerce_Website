@@ -115,6 +115,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_commit($dbc);
 
+            $_SESSION = [];
+
+            session_destroy();
+
+            setcookie(session_name(), '', time()-3600);            
+
         } else {
 
             mysqli_rollback($dbc);
