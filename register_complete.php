@@ -109,6 +109,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $q2 = "INSERT INTO shippingaddress (`user_id`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`) VALUES ('{$user_id}', '{$_SESSION['a1']}', '{$_SESSION['a2']}', '{$_SESSION['c']}', '{$_SESSION['s']}', '{$_SESSION['z']}', 'United States')";
         $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q1\n<br>MySQL Error: " . mysqli_error($dbc));
 
+        if (mysqli_affected_rows($dbc) == 1) {
+
+        } else {
+
+            $_SESSION = [];
+
+            session_destroy();
+
+            setcookie(session_name(), '', time()-3600);            
+            
+            echo '<div class="registerUserErrorCard"><div class="register-error-card--user"><div class="user-error--register"><p>You could not be registered with the given information due to a system error. Please contact the system administrator. We apologize for any inconvenience.</p></div></div></div>';
+
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
+
+        }
+
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
