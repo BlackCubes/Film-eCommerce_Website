@@ -673,12 +673,16 @@ form#userChangePassCard {
 /* REGISTRATION PAGE */
 
 form#registerUserCard1,
-form#registerUserCard2 {
+form#registerUserCard2,
+.registerUserSuccessCard,
+.registerUserErrorCard {
     background-color: rgba(148, 130, 165, 0.17);
 }
 
 #registerUserCard1 .register-card,
-#registerUserCard2 .register-card--shipping {
+#registerUserCard2 .register-card--shipping,
+.registerUserSuccessCard .register-success-card--user,
+.registerUserErrorCard .register-error-card--user {
     width: 500px;
     height: 750px;
     background-color: white;
@@ -688,7 +692,9 @@ form#registerUserCard2 {
 }
 
 .register-card div,
-.register-card--shipping div {
+.register-card--shipping div,
+.register-success-card--user div,
+.register-error-card--user div {
     font-family: 'Muli', sans-serif;
     color: black;
 }
@@ -699,12 +705,16 @@ form#registerUserCard2 {
 .register-card .register-seller-option,
 .register-card--shipping .shipping-title--register,
 .register-card--shipping .shipping-info--register,
-.register-card--shipping .register-submit {
+.register-card--shipping .register-submit,
+.register-success-card--user .user-success--register,
+.register-error-card--user .user-error--register {
     text-align: center;
 }
 
 .register-title,
-.shipping-title--register {
+.shipping-title--register,
+.register-success-card--user .user-success--register,
+.register-error-card--user .user-error--register {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -903,5 +913,19 @@ form#registerUserCard2 {
 #registerUserCard2 .system-error p {
     font-size: 12px;
     font-weight: 300;
+    color: red;
+}
+
+.register-success-card--user .user-success--register p,
+.register-error-card--user .user-error--register p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.register-success-card--user .user-success--register p {
+    color: #336600;
+}
+
+.register-error-card--user .user-error--register p {
     color: red;
 }
