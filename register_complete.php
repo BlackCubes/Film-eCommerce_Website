@@ -101,6 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $a = md5(uniqid(rand(), true));
 
+        mysqli_autocommit($dbc, FALSE);
+
         $q1 = "INSERT INTO users (`first_name`, `last_name`, `email`, `pass`, `phone_num`, `verify_code`, `registration_date`) VALUES ('{$_SESSION['fn']}', '{$_SESSION['ln']}', '{$_SESSION['email']}', '{$_SESSION['p']}', '{$_SESSION['phone_num']}', '{$a}', NOW())";
         $r1 = mysqli_query($dbc, $q1) or trigger_error("Query: $q1\n<br>MySQL Error: " . mysqli_error($dbc));
 
