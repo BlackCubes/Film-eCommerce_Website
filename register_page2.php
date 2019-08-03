@@ -76,7 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['passErr2'] = '';
     }
 
-    if ($fn && $ln && $e && $p) { ?>
+    if ($fn && $ln && $e && $p) {
+        $_SESSION['systemErr1'] = ''; ?>
 
         <form action="register.php" method="post" id="registerUserCard2">
             <fieldset class="register-card--shipping">
@@ -121,6 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php
     } else {
+        $_SESSION['systemErr1'] = 'Please try again';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
         exit;
     }
