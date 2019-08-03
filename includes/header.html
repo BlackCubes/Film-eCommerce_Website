@@ -10,7 +10,9 @@
 ob_start();
 
 // Starting the session:
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 ?>
 
