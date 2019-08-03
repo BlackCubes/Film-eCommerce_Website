@@ -120,11 +120,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($_SESSION['email'], 'Registration Confirmation', $body, 'From: gutierrezelias1991@gmail.com');
 
+            echo '<div class="registerUserSuccessCard"><div class="register-success-card--user"><div class="user-success--register"><p>Thank you for registering! A confirmation email has been sent to your email address. Please click on the link in that email in order to activate your account.</p></div></div></div>';
+
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
+
             $_SESSION = [];
 
             session_destroy();
 
             setcookie(session_name(), '', time()-3600);
+
+            mysqli_free_result($r1);
+            mysqli_free_result($r2);
+            mysqli_close($dbc);
+
+            exit();
 
         } else {
 
