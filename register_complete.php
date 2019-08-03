@@ -107,6 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user_id = "SELECT id FROM useres WHERE email='{$_SESSION['email']}'";
 
         $q2 = "INSERT INTO shippingaddress (`user_id`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`) VALUES ('{$user_id}', '{$_SESSION['a1']}', '{$_SESSION['a2']}', '{$_SESSION['c']}', '{$_SESSION['s']}', '{$_SESSION['z']}', 'United States')";
+        $r2 = mysqli_query($dbc, $q2) or trigger_error("Query: $q1\n<br>MySQL Error: " . mysqli_error($dbc));
 
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
