@@ -146,14 +146,12 @@ if (!isset($_SESSION)) {
         </div>
         <?php
 
-        if (isset($_SESSION['fnErr']) && isset($_SESSION['lnErr'])) {
-            echo '<div class="name-error"><p>Please enter your first and last name!</p></div>';
-            unset($_SESSION['fnErr']);
-            unset($_SESSION['lnErr']);
-        } elseif (isset($_SESSION['fnErr']) && !isset($_SESSION['lnErr'])) {
+        if (isset($_SESSION['fnErr'])) {
             echo '<div class="name-error"><p>' . $_SESSION['fnErr'] . '</p></div>';
             unset($_SESSION['fnErr']);
-        } elseif (!isset($_SESSION['fnErr']) && isset($_SESSION['lnErr'])) {
+        }
+        
+        if (isset($_SESSION['lnErr'])) {
             echo '<div class="name-error"><p>' . $_SESSION['lnErr'] . '</p></div>';
             unset($_SESSION['lnErr']);
         }
