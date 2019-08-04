@@ -17,7 +17,7 @@ include('includes/header.html');
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();
-    header("Location: /FilmIndustry/eCommerce/index.php");
+    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
     exit();
 }
 
