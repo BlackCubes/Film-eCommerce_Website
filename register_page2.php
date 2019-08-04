@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($fn && $ln && $e && $p) {
 
-        $_SESSION['systemErr1'] = $_SESSION['systemErr2'] = '';
+        $_SESSION['systemErr1'] = ''; /*$_SESSION['systemErr2'] = '';*/
 
         $q = "SELECT id FROM users WHERE email='{$_SESSION['email']}'";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
@@ -171,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }*/
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
-        $_SESSION['systemErr2'] = '';
+        /*$_SESSION['systemErr2'] = '';*/
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
         exit();
     }
