@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
     } else {
-        $_SESSION['systemErr2'] = 'Please try again for the shipping address on the second registration form because the following errors occured from it: ' . $_SESSION['a1Err'] . ' ' . $_SESSION['a2Err'] . ' ' . $_SESSION['cErr'] . ' ' . $_SESSION['sErr'] . ' ' . $_SESSION['zipErr'] . ' ' . $_SESSION['phoneErr'];
+        /*$_SESSION['systemErr2'] = 'Please try again for the shipping address on the second registration form because the following errors occured from it: ' . $_SESSION['a1Err'] . ' ' . $_SESSION['a2Err'] . ' ' . $_SESSION['cErr'] . ' ' . $_SESSION['sErr'] . ' ' . $_SESSION['zipErr'] . ' ' . $_SESSION['phoneErr'];
         unset($_SESSION['a1Err']);
         unset($_SESSION['a2Err']);
         unset($_SESSION['cErr']);
@@ -161,6 +161,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         unset($_SESSION['zipErr']);
         unset($_SESSION['phoneErr']);
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+        exit();*/
+        $_SESSION['systemErr2'] = 'Please try again';
+        header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
         exit();
     }
 
