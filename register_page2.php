@@ -175,6 +175,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
         exit();
     }
+} else {
+
+    $_SESSION = [];
+    session_destroy();
+    setcookie(session_name(), '', time()-3600);
+
+    ob_end_clean();
+
+    header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+    exit();
+
 } ?>
 <form action="register_complete.php" method="post" id="registerUserCard2">
     <fieldset class="register-card--shipping">
