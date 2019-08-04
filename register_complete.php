@@ -167,6 +167,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-}
+} else {
 
+    $_SESSION = [];
+    session_destroy();
+    setcookie(session_name(), '', time()-3600);
+
+    ob_end_clean();
+
+    header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+    exit();
+
+}
 ?>
