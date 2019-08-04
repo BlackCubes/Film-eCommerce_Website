@@ -41,6 +41,8 @@ if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && validate_url('h
 
         $url = BASE_URL . 'index.php';
 
+        mysqli_close($dbc);
+
         ob_end_clean();
         header("Location: $url");
         exit();
