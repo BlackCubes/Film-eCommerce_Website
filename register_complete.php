@@ -122,8 +122,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             echo '<div class="registerUserSuccessCard"><div class="register-success-card--user"><div class="user-success--register"><p>Thank you for registering! A confirmation email has been sent to your email address. Please click on the link in that email in order to activate your account.</p></div></div></div>';
 
-            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
-
             $_SESSION = [];
 
             session_destroy();
@@ -134,6 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mysqli_free_result($r2);
             mysqli_close($dbc);
 
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
             exit();
 
         } else {
