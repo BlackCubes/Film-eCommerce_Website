@@ -134,6 +134,8 @@ require(MYSQL);
             }
 
             echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['isd'] . '&department=' . $_SESSION['department'] . '&format=' . $_SESSION['format'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
+
+            unset($_SESSION['isd'], $_SESSION['department'], $_SESSION['format']);
         }
 
         mysqli_free_result($r);
