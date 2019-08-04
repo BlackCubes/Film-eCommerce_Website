@@ -178,8 +178,9 @@ if (!isset($_SESSION)) {
         <div class="register-continue">
             <input type="submit" class="register-continue-button" name="continue" value="CONTINUE">
         </div>
-        <?php if (isset($_SESSION['systemErr1'])) echo '<div class="system-error"><p>' . $_SESSION['systemErr1'] . '</p><p>' . $_SESSION['systemErr2'] . '</p></div>';
+        <?php if (isset($_SESSION['systemErr1'])) echo '<div class="system-error"><p>' . $_SESSION['systemErr1'] . '</p>';
         unset($_SESSION['systemErr1']);
+        if (isset($_SESSION['systemErr2'])) echo '<p>' . $_SESSION['systemErr2'] . '</p></div>';
         unset($_SESSION['systemErr2']); ?>
         <div class="register-sign-in-option">
             <p>Already have an account? <a href="/FilmIndustry/eCommerce/login.php">Sign in</a></p>
