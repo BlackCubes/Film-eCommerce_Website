@@ -118,7 +118,7 @@ require(MYSQL);
             $start = 0;
         }
 
-        $q = "SELECT name, unit_price, image_1 FROM products ORDER BY name LIMIT $start, $display";
+        $q = "SELECT p.name, p.unit_price, p.image_1, p.isd, d.department, f.format FROM products AS p JOIN departments AS d ON p.department_id=d.id JOIN formats AS f ON p.format_id=f.id ORDER BY p.name LIMIT $start, $display";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
