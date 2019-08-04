@@ -20,6 +20,14 @@ $page_title = 'Test';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+function validate_url($url) {
+    $path = parse_url($url, PHP_URL_PATH);
+    $encoded_path = array_map('urlencode', explode('/', $path));
+    $url = str_replace($path, implode('/', $encoded_path), $url);
+
+    return filter_var($url, FILTER_VALIDATE_URL) ? true : false;
+}
+
 ?>
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
