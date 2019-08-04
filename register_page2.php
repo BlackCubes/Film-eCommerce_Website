@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
             exit();
 
-        ?>
+        /*?>
 
             <!--<form action="register_complete.php" method="post" id="registerUserCard2">
                 <fieldset class="register-card--shipping">
@@ -159,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </form>
             <#?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>-->
 
-        <?php
+        <?php*/
         } /*else {
 
             mysqli_close($dbc);
