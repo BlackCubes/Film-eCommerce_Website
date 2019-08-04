@@ -916,6 +916,16 @@ form#registerUserCard2,
     color: red;
 }
 
+.register-success-card--user .user-success--register,
+.register-error-card--user .user-error--register {
+    line-height: 50px;
+    width: 458px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .register-success-card--user .user-success--register p,
 .register-error-card--user .user-error--register p {
     font-size: 16px;
