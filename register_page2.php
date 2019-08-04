@@ -23,7 +23,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 if (isset($_SESSION['id'])) {
     ob_end_clean();
     header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
-    exit;
+    exit();
 }
 
 if (!isset($_SESSION)) {
