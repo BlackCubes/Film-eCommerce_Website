@@ -91,7 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $_SESSION['systemErr1'] = '';
 
-            mysqli_free_result($r);
             mysqli_close($dbc);
 
         ?>
@@ -158,7 +157,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php
         } else {
 
-            mysqli_free_result($r);
             mysqli_close($dbc);
 
             $_SESSION['systemErr1'] = 'That email address has already been registered. If you have forgotten your password, please change it by clicking on "Change Password" on the top navbar when signing in';
