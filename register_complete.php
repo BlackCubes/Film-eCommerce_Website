@@ -16,7 +16,7 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
-$page_title = 'Register';
+$page_title = 'Registration';
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();

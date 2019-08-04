@@ -10,7 +10,7 @@
 require('includes/config.inc.php');
 
 // Including the page title:
-$page_title = 'Register';
+$page_title = 'Registration';
 
 // Include the header:
 include('includes/header.html');
