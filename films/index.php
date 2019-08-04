@@ -129,7 +129,7 @@ require(MYSQL);
                 $product_image = "/FilmIndustry/uploads/products/{$product['image_1']}";
             }
 
-            echo '<div class="container-product"><div class="product-image"><img src="' . $product_image . '" alt="#"></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
+            echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
         }
 
         mysqli_free_result($r);
