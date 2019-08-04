@@ -35,6 +35,18 @@ if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && validate_url('h
     $q = "SELECT id FROM products WHERE isd='{$_GET['isd']}'";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+    if (mysqli_num_rows($r) == 1) {
+
+    } else {
+
+        $url = BASE_URL . 'index.php';
+
+        ob_end_clean();
+        header("Location: $url");
+        exit();
+
+    }
+
 } else {
 
     $url = BASE_URL . 'index.php';
