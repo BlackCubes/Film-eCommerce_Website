@@ -91,6 +91,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             #mysqli_close($dbc);
 
+            mysqli_close($dbc);
+
+            $_SESSION['systemErr1'] = 'That email address has already been registered. If you have forgotten your password, please change it by clicking on "Change Password" on the top navbar when signing in';
+            $_SESSION['systemErr2'] = '';
+            header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+            exit();
+
         ?>
 
             <!--<form action="register_complete.php" method="post" id="registerUserCard2">
@@ -153,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <#?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>-->
 
         <?php
-        } else {
+        } /*else {
 
             mysqli_close($dbc);
 
@@ -161,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
             $_SESSION['systemErr2'] = '';
             exit();
-        }
+        }*/
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
         $_SESSION['systemErr2'] = '';
