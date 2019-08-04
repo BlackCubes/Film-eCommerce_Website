@@ -123,6 +123,10 @@ require(MYSQL);
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
+            $_SESSION['isd'] = $product['isd'];
+            $_SESSION['department'] = $product['department'];
+            $_SESSION['format'] = $product['format'];
+
             if (empty($product['image_1'])) {
                 $product_image = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
             } else {
