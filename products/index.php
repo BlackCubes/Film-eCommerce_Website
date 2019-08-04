@@ -30,6 +30,11 @@ function validate_url($url) {
 
 if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && validate_url('http://localhost/FilmIndustry/eCommerce/products/index.php?isd=' . $_GET['isd'] . '&department=' . $_GET['department'] . '&format=' . $_GET['format']) && ($GET['department'] = ('Movies' || 'TV')) && ($_GET['format'] = ('4K UHD' || 'Blu-ray' || 'DVD'))) {
 
+    require(MYSQL);
+
+    $q = "SELECT id FROM products WHERE isd='{$_GET['isd']}'";
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
 } else {
 
     $url = BASE_URL . 'index.php';
