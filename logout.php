@@ -32,6 +32,8 @@ if (!isset($_SESSION['first_name'])) {
 
 } else { // Log out the logged in user.
 
+    $url = BASE_URL . 'index.php';
+
     // This would destroy all variables associated with the session by sending session an empty array:
     $_SESSION = [];
 
@@ -41,11 +43,8 @@ if (!isset($_SESSION['first_name'])) {
     // Destroying the cookie by using the function setcookie() which takes the name of the cookie as the first argument, the value of the cookie (stored on the clients computer) as the second argument, and when the cookie expires as the third argument. The function session_name() gets the current session as the name of the cookie, an empty string is used as the value of the cookie in order to destroy the stored value in the clients computer, and the cookie expiration is set to the past to delete the cookie entirely:
     setcookie(session_name(), '', time()-3600);
 
+    header("Location: $url");
+    exit();
+
 }
-
-// After the user has logged out, a successful message is shown:
-echo '<h3>You are now logged out.</h3>';
-
-// Include the footer file:
-include('includes/footer.html');
 ?>
