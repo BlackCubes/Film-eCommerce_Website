@@ -82,14 +82,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($fn && $ln && $e && $p) {
 
-        $_SESSION['systemErr1'] = '';
+        $_SESSION['systemErr1'] = $_SESSION['systemErr2'] '';
 
         $q = "SELECT id FROM users WHERE email='{$_SESSION['email']}'";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
         if (mysqli_num_rows($r) == 0) {
-
-            $_SESSION['systemErr1'] = '';
 
             mysqli_close($dbc);
 
@@ -161,10 +159,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $_SESSION['systemErr1'] = 'That email address has already been registered. If you have forgotten your password, please change it by clicking on "Change Password" on the top navbar when signing in';
             header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+            $_SESSION['systemErr2'] = '';
             exit();
         }
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
+        $_SESSION['systemErr2'] = '';
         header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
         exit();
     }
