@@ -684,7 +684,7 @@ form#registerUserCard2,
 .registerUserSuccessCard .register-success-card--user,
 .registerUserErrorCard .register-error-card--user {
     width: 500px;
-    height: 750px;
+    height: 850px;
     background-color: white;
     border: none;
     margin-left: auto;
