@@ -32,11 +32,11 @@ if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && /*validate_url(
 
     require(MYSQL);
 
-    $product_isd = $_GET['isd'];
-    $product_department = $_GET['department'];
-    $product_format = $_GET['format'];
+    $product_isd = mysqli_real_escape_string($dbc, $_GET['isd']);
+    $product_department = mysqli_real_escape_string($dbc, $_GET['department']);
+    $product_format = mysqli_real_escape_string($dbc, $_GET['format']);
 
-    $q = "SELECT id FROM products WHERE isd='{$product_isd}'";
+    $q = "SELECT id FROM products WHERE isd='" . $product_isd . "'";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
     if (mysqli_num_rows($r) == 1) {
