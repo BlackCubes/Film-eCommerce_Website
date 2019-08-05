@@ -48,11 +48,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         echo '<div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-name--view">' . $product['product_name'] . '</div>';
 
-        /*while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-name--view">' . $product['product_name'] . '</div>';
-        }*/
-
-        /*mysqli_free_result($r);*/
+        mysqli_free_result($r);
         mysqli_close($dbc);
 
         include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
