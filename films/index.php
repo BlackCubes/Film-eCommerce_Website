@@ -43,7 +43,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT DISTINCT a.first_name, a.middle_name, a.last_name FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id JOIN departments AS d ON p.department_id=d.id ORDER BY a.last_name";
+        $q = "SELECT DISTINCT a.first_name, a.middle_name, a.last_name FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY a.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Actors</b></p>';
         while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
@@ -51,7 +51,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT DISTINCT dir.first_name, dir.middle_name, dir.last_name FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id ORDER BY dir.last_name";
+        $q = "SELECT DISTINCT dir.first_name, dir.middle_name, dir.last_name FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dir.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Directors</b></p>';
         while ($director = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
@@ -59,7 +59,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT DISTINCT w.first_name, w.middle_name, w.last_name FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id JOIN departments AS d ON p.department_id=d.id ORDER BY w.last_name";
+        $q = "SELECT DISTINCT w.first_name, w.middle_name, w.last_name FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY w.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Writers</b></p>';
         while ($writer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
@@ -67,7 +67,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT DISTINCT pro.first_name, pro.middle_name, pro.last_name FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id ORDER BY pro.last_name";
+        $q = "SELECT DISTINCT pro.first_name, pro.middle_name, pro.last_name FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY pro.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Producers</b></p>';
         while ($producer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
@@ -75,7 +75,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT DISTINCT dp.first_name, dp.middle_name, dp.last_name FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id ORDER BY dp.last_name";
+        $q = "SELECT DISTINCT dp.first_name, dp.middle_name, dp.last_name FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dp.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Cinematographers</b></p>';
         while ($dp = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
