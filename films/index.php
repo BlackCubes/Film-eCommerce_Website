@@ -35,7 +35,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT genre FROM genres ORDER BY genre";
+        $q = "SELECT DISTINCT g.genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY g.genre";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Genres</b></p>';
         while ($genre = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
