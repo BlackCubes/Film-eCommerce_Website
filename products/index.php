@@ -46,7 +46,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $product = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
-        echo '<div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-name--view">' . $product['product_name'] . '</div>';
+        echo '<div class="product-container--view"><div class="main-product-info--view"><div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div></div><div class="cast-crew-product-info--view"></div><div class="extra-desc-product-info--view"></div><div class="details-product-info--view"></div></div>';
 
         mysqli_free_result($r);
         mysqli_close($dbc);
