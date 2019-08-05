@@ -49,6 +49,11 @@ if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && /*validate_url(
             echo '<div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-name--view">' . $product['product_name'] . '</div>';
         }
 
+        mysqli_free_result($r);
+        mysqli_close($dbc);
+
+        include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
+
     } else {
 
         $url = BASE_URL . 'index.php';
@@ -70,7 +75,4 @@ if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && /*validate_url(
     exit();
 
 }
-
 ?>
-
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
