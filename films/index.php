@@ -118,14 +118,12 @@ require(MYSQL);
             $start = 0;
         }
 
-        $q = "SELECT p.name, p.unit_price, p.image_1, p.isd, d.department, f.format FROM products AS p JOIN departments AS d ON p.department_id=d.id JOIN formats AS f ON p.format_id=f.id ORDER BY p.name LIMIT $start, $display";
+        $q = "SELECT name, unit_price, image_1, isd FROM products ORDER BY name LIMIT $start, $display";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
             $_SESSION['isd'] = $product['isd'];
-            $_SESSION['department'] = $product['department'];
-            $_SESSION['format'] = $product['format'];
 
             if (empty($product['image_1'])) {
                 $product_image = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
@@ -135,7 +133,7 @@ require(MYSQL);
 
             echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['isd'] . '&department=' . $_SESSION['department'] . '&format=' . $_SESSION['format'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
 
-            unset($_SESSION['isd'], $_SESSION['department'], $_SESSION['format']);
+            unset($_SESSION['isd']);
         }
 
         mysqli_free_result($r);
