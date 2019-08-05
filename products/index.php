@@ -28,7 +28,7 @@ function validate_url($url) {
     return filter_var($url, FILTER_VALIDATE_URL) ? true : false;
 }
 
-if (isset($_GET['isd']) && /*validate_url('http://localhost/FilmIndustry/eCommerce/products/index.php?isd=' . $_GET['isd'] . '&department=' . $_GET['department'] . '&format=' . $_GET['format']) &&*/ /*($GET['department'] = ('Movies' || 'TV')) && ($_GET['format'] = ('4K UHD' || 'Blu-ray' || 'DVD'))*/) {
+if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommerce/products/index.php?isd=' . $_GET['isd'] . '&department=' . $_GET['department'] . '&format=' . $_GET['format'])*/) {
 
     require(MYSQL);
 
