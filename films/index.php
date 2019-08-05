@@ -131,7 +131,7 @@ require(MYSQL);
                 $product_image = "/FilmIndustry/uploads/products/{$product['image_1']}";
             }
 
-            echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['isd'] . '&department=' . $_SESSION['department'] . '&format=' . $_SESSION['format'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
+            echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['isd'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
 
             unset($_SESSION['isd']);
         }
