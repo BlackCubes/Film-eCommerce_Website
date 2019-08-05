@@ -43,7 +43,7 @@ require(MYSQL);
         }
         echo '</div>';
 
-        $q = "SELECT first_name, middle_name, last_name FROM actors ORDER BY last_name";
+        $q = "SELECT DISTINCT a.first_name, a.middle_name, a.last_name FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id JOIN departments AS d ON p.department_id=d.id ORDER BY a.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Actors</b></p>';
         while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
