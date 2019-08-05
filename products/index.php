@@ -45,7 +45,7 @@ if (isset($_GET['isd'], $_GET['department'], $_GET['format']) && /*validate_url(
 
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        while ($product = mysqli_fetch_array($r, MYSQL_ASSOC)) {
+        while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
             echo '<div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-name--view">' . $product['product_name'] . '</div>';
         }
 
