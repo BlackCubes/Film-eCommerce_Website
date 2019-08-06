@@ -67,7 +67,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '<div class="container--product-view"><div class="main-info--product-view"><div class="image--product-view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div></div><div class="cast-crew-info--product-view"><div class="actors-info--product-view"><div class="actor-title--product-view">Actors</div>';
 
         while ($actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC)) {
-            echo '<div class="actor-list--product-view"><div class="actor-image--product-view"></div><div class="actor-name--product-view"></div></div>';
+            echo '<div class="actor-list--product-view"><div class="actor-image--product-view"></div><div class="actor-name--product-view">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</div></div>';
         }
 
         echo '</div></div><div class="extra-desc-product-info--view"></div><div class="details-product-info--view"></div></div>';
