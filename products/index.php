@@ -49,7 +49,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '<div class="product-container--view"><div class="main-product-info--view"><div class="product-image--view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div></div><div class="cast-crew-product-info--view">';
 
         while ($crew = $product) {
-            echo '<p>' $crew['actor_fn'] . ' ' . $crew['actor_ln'] . '</p>';
+            echo '<p>' . $crew['actor_fn'] . ' ' . $crew['actor_ln'] . '</p>';
         }
 
         echo '</div><div class="extra-desc-product-info--view"></div><div class="details-product-info--view"></div></div>';
