@@ -70,7 +70,13 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo '<tr><td class="director-image--product-view"></td><td class="director-name--product-view"><a href="#">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></td></tr>';
         }
 
-        echo '</tbody></table></div><div class="writer-list-container--product-view"></div><div class="actor-list-container--product-view"><div class="actor-title--product-view"><h4>Actors</h4></div><table class="actor-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
+        echo '</tbody></table></div><div class="writer-list-container--product-view"><div class="writer-title--product-view"><h4>Writer(s)</h4></div><table><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
+
+        while ($writer = mysqli_fetch_array($r_writer, MYSQLI_ASSOC)) {
+            echo '<tr><td class="writer-image--product-view"></td><td class="writer-name--product-view"><a href="#">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></td></tr>';
+        }
+
+        echo '</tbody></table></div><div class="actor-list-container--product-view"><div class="actor-title--product-view"><h4>Actors</h4></div><table class="actor-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC)) {
             echo '<tr><td class="actor-image--product-view"></td><td class="actor-name--product-view"><a href="#">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</td></tr>';
