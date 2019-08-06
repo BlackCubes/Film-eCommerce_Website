@@ -100,7 +100,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo '<tr><td class="studio-image--product-view"></td><td class="studio-name--product-view"><a href="#">' . $studio['studio_name'] . '</a></td></tr>';
         }
 
-        echo '</tbody></table></div></div><div class="extra-desc-product-info--view"></div><div class="details-product-info--view"></div></div>';
+        echo '</tbody></table></div></div><div class="extra-desc-product-info--view"><div class="extra-desc-title--product-view"><h2>Extra Description</h2></div><div class="extra-desc-info--product-view"><p>' . $product['product_more_desc'] . '</p></div></div><div class="details-product-info--view"></div></div>';
 
         mysqli_free_result($r);
         mysqli_close($dbc);
