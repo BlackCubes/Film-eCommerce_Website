@@ -64,13 +64,13 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         $q_studio = "SELECT DISTINCT s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id WHERE p.isd='" . $product_isd . "'";
         $r_studio = mysqli_query($dbc, $q_studio) or trigger_error("Query: $q_studio\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        echo '<div class="container--product-view"><div class="main-info--product-view"><div class="image--product-view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div></div><div class="cast-crew-info--product-view"><div class="actor-title--product-view"><h4>Actors</h4><table class="actor-list--product-view"><thead><tr><th colspan="2" class="actor-space--product-view"></th></tr></thead><tbody>';
+        echo '<div class="container--product-view"><div class="main-info--product-view"><div class="image--product-view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div></div><div class="cast-crew-info--product-view"><div class="actor-list-container--product-view"><div class="actor-title--product-view"><h4>Actors</h4></div><table class="actor-list--product-view"><thead><tr><th colspan="2" class="actor-space--product-view"></th></tr></thead><tbody>';
 
         while ($actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC)) {
             echo '<tr><td class="actor-image--product-view"></td><td class="actor-name--product-view"><a href="#">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</td></tr>';
         }
 
-        echo '</tbody></table></div><div class="extra-desc-product-info--view"></div><div class="details-product-info--view"></div></div>';
+        echo '</tbody></table></div></div><div class="extra-desc-product-info--view"></div><div class="details-product-info--view"></div></div>';
 
         mysqli_free_result($r);
         mysqli_close($dbc);
