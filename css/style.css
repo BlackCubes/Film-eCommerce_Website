@@ -270,6 +270,26 @@ body {
     "p-s-i";
 }
 
+.container--product-view .main-info--product-view {
+    grid-area: m-i;
+}
+
+.container--product-view .cast-crew-info--product-view {
+    grid-area: c-c-i;
+}
+
+.container--product-view .extra-desc-product-info--product-view {
+    grid-area: e-d-p-i;
+}
+
+.container--product-view .product-details-info--product-view {
+    grid-area: p-d-i;
+}
+
+.container--product-view .product-specs-info--product-view {
+    grid-area: p-s-i;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
