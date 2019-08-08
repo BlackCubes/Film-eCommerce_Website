@@ -281,6 +281,11 @@ body {
     "director-list writer-list actor-list producer-list dp-list studio-list";
 }
 
+.container--product-view .actor-image--product-view {
+    display: flex;
+    justify-content: center;
+}
+
 .container--product-view .cast-crew-container img {
     max-height: 44px;
     max-width: 59px;
