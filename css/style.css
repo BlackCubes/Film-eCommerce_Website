@@ -270,6 +270,11 @@ body {
     "p-s-i";
 }
 
+.container--product-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
 .container--product-view .main-info--product-view {
     grid-area: m-i;
 }
