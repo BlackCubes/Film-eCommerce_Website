@@ -324,6 +324,7 @@ body {
 .container--product-view .cast-crew-name--product-view a {
     font-size: 12px;
     font-weight: 300;
+    float: right;
     text-decoration: none;
     color: blueviolet;
 }
