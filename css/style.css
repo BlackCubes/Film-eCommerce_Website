@@ -296,6 +296,16 @@ body {
     text-align: center;
 }
 
+.container--product-view .director-title--product-view h4,
+.container--product-view .writer-title--product-view h4,
+.container--product-view .actor-title--product-view h4,
+.container--product-view .producer-title--product-view h4,
+.container--product-view .cinematographer-title--product-view h4,
+.container--product-view .studio-title--product-view h4 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .container--product-view .cast-crew-image--product-view {
     display: flex;
     justify-content: center;
