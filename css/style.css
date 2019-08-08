@@ -290,6 +290,7 @@ body {
 
 .container--product-view .cast-crew-container {
     display: grid;
+    margin-bottom: 50px;
     grid-template-columns: auto;
     grid-template-areas:
     "director-list writer-list actor-list producer-list dp-list studio-list";
