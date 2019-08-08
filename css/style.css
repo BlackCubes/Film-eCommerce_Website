@@ -335,6 +335,14 @@ body {
     color: blueviolet;
 }
 
+.container--product-view .director-list-container--product-view,
+.container--product-view .writer-list-container--product-view,
+.container--product-view .actor-list-container--product-view,
+.container--product-view .producer-list-container--product-view,
+.container--product-view .cinematographer-list-container--product-view {
+    border-right: 1px solid rgba(138,43,226,0.17);
+}
+
 .container--product-view .director-list--product-view,
 .container--product-view .writer-list--product-view,
 .container--product-view .actor-list--product-view,
