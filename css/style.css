@@ -286,6 +286,7 @@ body {
     "director-list writer-list actor-list producer-list dp-list studio-list";
 }
 
+.container--product-view .cast-crew-title--product-view,
 .container--product-view .director-title--product-view,
 .container--product-view .writer-title--product-view,
 .container--product-view .actor-title--product-view,
