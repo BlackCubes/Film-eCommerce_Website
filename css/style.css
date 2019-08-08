@@ -286,6 +286,15 @@ body {
     "director-list writer-list actor-list producer-list dp-list studio-list";
 }
 
+.container--product-view .director-title--product-view,
+.container--product-view .writer-title--product-view,
+.container--product-view .actor-title--product-view,
+.container--product-view .producer-title--product-view,
+.container--product-view .cinematographer-title--product-view,
+.container--product-view .studio-title--product-view {
+    text-align: center;
+}
+
 .container--product-view .cast-crew-image--product-view {
     display: flex;
     justify-content: center;
