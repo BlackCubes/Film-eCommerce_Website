@@ -296,6 +296,11 @@ body {
     text-align: center;
 }
 
+.container--product-view .cast-crew-title--product-view h2 {
+    font-size: 21px;
+    font-weight: 300;
+}
+
 .container--product-view .director-title--product-view h4,
 .container--product-view .writer-title--product-view h4,
 .container--product-view .actor-title--product-view h4,
