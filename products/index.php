@@ -94,7 +94,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '</tbody></table></div><div class="cinematographer-list-container--product-view"><div class="cinematographer-title--product-view"><h4>Cinematographers</h4></div><table class="cinematographer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($dp = mysqli_fetch_array($r_dp, MYSQLI_ASSOC)) {
-            echo '<tr><td class="cinematographer-image--product-view"></td><td class="cinematographer-name--product-view"><a href="#">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></td></tr>';
+            echo '<tr><td class="cinematographer-image--product-view"><a href="#"><img alt="' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '" title="' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $dp['dp_img'] . '"></a></td><td class="cinematographer-name--product-view"><a href="#">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></td></tr>';
         }
 
         echo '</tbody></table></div><div class="studio-list-container--product-view"><div class="studio-title--product-view"><h4>Studios</h4></div><table class="studio-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
