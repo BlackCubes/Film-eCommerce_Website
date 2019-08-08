@@ -88,7 +88,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '</tbody></table></div><div class="producer-list-container--product-view"><div class="producer-title--product-view"><h4>Producers</h4></div><table class="producer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($producer = mysqli_fetch_array($r_producer, MYSQLI_ASSOC)) {
-            echo '<tr><td class="producer-image--product-view"></td class="producer-name--product-view"><td><a href="#">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></td></tr>';
+            echo '<tr><td class="producer-image--product-view"><a href="#"><img alt="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $director['producer_ln'] . '" title="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $producer['producer_img'] . '"></a></td class="producer-name--product-view"><td><a href="#">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></td></tr>';
         }
 
         echo '</tbody></table></div><div class="cinematographer-list-container--product-view"><div class="cinematographer-title--product-view"><h4>Cinematographers</h4></div><table class="cinematographer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
