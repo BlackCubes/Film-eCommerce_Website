@@ -256,6 +256,20 @@ body {
     text-align: center;
 }
 
+/* PRODUCTS VIEW */
+
+.container--product-view {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "m-i"
+    "c-c-i"
+    "e-d-p-i"
+    "p-d-i"
+    "p-s-i";
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
