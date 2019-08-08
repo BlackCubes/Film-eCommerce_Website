@@ -296,6 +296,13 @@ body {
     max-width: 59px;
 }
 
+.container--product-view .cast-crew-name--product-view a {
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: blueviolet;
+}
+
 .container--product-view .director-list-container--product-view {
     grid-area: director-list;
 }
