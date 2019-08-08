@@ -279,6 +279,15 @@ body {
     grid-area: m-i;
 }
 
+.container--product-view .main-info--product-view,
+.container--product-view .cast-crew-info--product-view,
+.container--product-view .extra-desc-product-info--product-view,
+.container--product-view .product-details-info--product-view {
+    -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+}
+
 .container--product-view .cast-crew-container {
     display: grid;
     grid-template-columns: auto;
