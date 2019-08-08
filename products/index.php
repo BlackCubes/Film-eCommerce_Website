@@ -73,7 +73,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo '<tr><td class="cast-crew-image--product-view"><a href="#"><img alt="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" title="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $director['director_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="#">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></td></tr>';
         }
 
-        echo '</tbody></table></div><div class="writer-list-container--product-view"><div class="writer-title--product-view"><h4>Writers</h4></div><table><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
+        echo '</tbody></table></div><div class="writer-list-container--product-view"><div class="writer-title--product-view"><h4>Writers</h4></div><table class="writer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($writer = mysqli_fetch_array($r_writer, MYSQLI_ASSOC)) {
             echo '<tr><td class="cast-crew-image--product-view"><a href="#"><img alt="' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '" title="' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $writer['writer_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="#">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></td></tr>';
