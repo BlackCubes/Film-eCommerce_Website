@@ -281,7 +281,7 @@ body {
     "director-list writer-list actor-list producer-list dp-list studio-list";
 }
 
-.container--product-view .actor-image--product-view {
+.container--product-view .cast-crew-image--product-view {
     display: flex;
     justify-content: center;
 }
