@@ -274,34 +274,34 @@ body {
     grid-area: m-i;
 }
 
-.main-info--product-view .cast-crew-container {
+.container--product-view .cast-crew-container {
     display: grid;
     grid-template-columns: auto;
     grid-template-areas:
     "director-list writer-list actor-list producer-list dp-list studio-list";
 }
 
-.main-info--product-view .cast-crew-container .director-list-container--product-view {
+.container--product-view .director-list-container--product-view {
     grid-area: director-list;
 }
 
-.main-info--product-view .cast-crew-container .writer-list-container--product-view {
+.container--product-view .writer-list-container--product-view {
     grid-area: writer-list;
 }
 
-.main-info--product-view .cast-crew-container .actor-list-container--product-view {
+.container--product-view .actor-list-container--product-view {
     grid-area: actor-list;
 }
 
-.main-info--product-view .cast-crew-container .producer-list-container--product-view {
+.container--product-view .producer-list-container--product-view {
     grid-area: producer-list;
 }
 
-.main-info--product-view .cast-crew-container .dp-list-container--product-view {
+.container--product-view .dp-list-container--product-view {
     grid-area: dp-list;
 }
 
-.main-info--product-view .cast-crew-container .studio-list-container--product-view {
+.container--product-view .studio-list-container--product-view {
     grid-area: studio-list;
 }
 
