@@ -321,6 +321,12 @@ body {
     max-width: 59px;
 }
 
+.container--product-view .cast-crew-name--product-view span {
+    font-size: 13px;
+    font-weight: 300;
+    float: left;
+}
+
 .container--product-view .cast-crew-name--product-view a {
     font-size: 12px;
     font-weight: 300;
