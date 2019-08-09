@@ -387,6 +387,11 @@ body {
     margin: 30px auto 40px auto;
 }
 
+.container--product-view .product-details-list--product-view tbody {
+    display: table;
+    width: 800px;
+}
+
 .container--product-view .product-details-list--product-view tr td:nth-child(2) {
     float: right;
 }
