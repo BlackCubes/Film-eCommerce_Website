@@ -383,6 +383,10 @@ body {
     font-weight: 300;
 }
 
+.container--product-view .product-details-list--product-view {
+    margin: 30px auto 40px auto;
+}
+
 .container--product-view .product-details-list--product-view tr td:nth-child(1){
     font-size: 15px;
     font-weight: 700;
