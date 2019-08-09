@@ -348,6 +348,11 @@ body {
     font-weight: 300;
     float: right;
     text-decoration: none;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.container--product-view .cast-crew-name--product-view a:hover {
     color: blueviolet;
 }
 
