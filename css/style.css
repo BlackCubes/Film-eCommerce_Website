@@ -393,6 +393,12 @@ body {
     width: 800px;
 }
 
+.container--product-view table.product-specs-list--product-view {
+    display: table;
+    width: 1515px;
+    margin: 30px auto 40px auto;
+}
+
 .container--product-view .product-details-list--product-view tr td:nth-child(2) {
     float: right;
 }
