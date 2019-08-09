@@ -383,12 +383,12 @@ body {
 }
 
 .container--product-view .product-details-list--product-view tr td:nth-child(2) {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
 }
 
 .container--product-view .product-details-list--product-view tr td:nth-child(1){
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
 }
 
