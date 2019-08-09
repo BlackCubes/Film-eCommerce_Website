@@ -378,7 +378,8 @@ body {
 }
 
 .container--product-view .extra-desc-info--product-view p,
-.container--product-view .product-details-list--product-view tr td:nth-child(2) {
+.container--product-view .product-details-list--product-view tr td:nth-child(2),
+.container--product-view .product-specs-list--product-view tbody td {
     font-size: 13px;
     font-weight: 300;
 }
