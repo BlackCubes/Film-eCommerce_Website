@@ -305,7 +305,8 @@ body {
 .container--product-view .actor-title--product-view,
 .container--product-view .producer-title--product-view,
 .container--product-view .cinematographer-title--product-view,
-.container--product-view .studio-title--product-view {
+.container--product-view .studio-title--product-view,
+.container--product-view .product-specs-list--product-view tbody td {
     text-align: center;
 }
 
