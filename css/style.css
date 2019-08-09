@@ -377,13 +377,9 @@ body {
     margin: 30px 50px 40px 50px;
 }
 
-.container--product-view .extra-desc-info--product-view p {
-    font-size: 13px;
-    font-weight: 300;
-}
-
+.container--product-view .extra-desc-info--product-view p,
 .container--product-view .product-details-list--product-view tr td:nth-child(2) {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 300;
 }
 
