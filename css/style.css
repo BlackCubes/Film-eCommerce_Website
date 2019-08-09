@@ -401,6 +401,10 @@ body {
     font-weight: 700;
 }
 
+.container--product-view .product-details-list--product-view .genre-type:not(:first-child)::before {
+    content: " | ";
+  }
+
 .container--product-view .director-list-container--product-view {
     grid-area: director-list;
 }
