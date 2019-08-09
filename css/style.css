@@ -368,6 +368,10 @@ body {
     width: 240px;
 }
 
+.container--product-view .extra-desc-info--product-view {
+    margin: 30px 50px 40px 50px;
+}
+
 .container--product-view .extra-desc-info--product-view p {
     font-size: 13px;
     font-weight: 300;
