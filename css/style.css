@@ -401,7 +401,7 @@ body {
     font-weight: 700;
 }
 
-.container--product-view .product-details-list--product-view .genre-type:not(:first-child)::before {
+.container--product-view .product-details-list--product-view .genre-type > span:not(:first-child)::before {
     content: " | ";
   }
 
