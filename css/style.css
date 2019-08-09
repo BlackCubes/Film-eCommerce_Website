@@ -297,6 +297,9 @@ body {
 }
 
 .container--product-view .cast-crew-title--product-view,
+.container--product-view .extra-desc-title--product-view,
+.container--product-view .product-details-title--product-view,
+.container--product-view .product-specs-title--product-view,
 .container--product-view .director-title--product-view,
 .container--product-view .writer-title--product-view,
 .container--product-view .actor-title--product-view,
@@ -306,7 +309,10 @@ body {
     text-align: center;
 }
 
-.container--product-view .cast-crew-title--product-view h2 {
+.container--product-view .cast-crew-title--product-view h2,
+.container--product-view .extra-desc-title--product-view h2,
+.container--product-view .product-details-title--product-view h2,
+.container--product-view .product-specs-title--product-view h2 {
     font-size: 21px;
     font-weight: 300;
 }
