@@ -396,7 +396,8 @@ body {
     float: right;
 }
 
-.container--product-view .product-details-list--product-view tr td:nth-child(1){
+.container--product-view .product-details-list--product-view tr td:nth-child(1),
+.container--product-view .product-specs-list--product-view thead th {
     font-size: 15px;
     font-weight: 700;
 }
