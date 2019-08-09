@@ -368,6 +368,11 @@ body {
     width: 240px;
 }
 
+.container--product-view .extra-desc-info--product-view p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
 .container--product-view .director-list-container--product-view {
     grid-area: director-list;
 }
