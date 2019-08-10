@@ -32,7 +32,7 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
 
         $id = $id_decrypt;
 
-        $q = "SELECT id FROM '" . $role . "' WHERE id={$id}";
+        $q = "SELECT id FROM `{$role}` WHERE id={$id}";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
