@@ -22,10 +22,14 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php')
 
 if (isset($_GET['artist'])) {
 
-    $actor_id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
+    $id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
 
     if (is_numeric($actor_id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $actor_id_decrypt)) {
 
+        require(MYSQL);
+
+        $id = $id_decrypt;
+        
     } else {
 
         $url = BASE_URL . 'index.php';
