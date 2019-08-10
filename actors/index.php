@@ -45,7 +45,7 @@ switch ($sort) {
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
-    $q = "SELECT DISTINCT COUNT(a.id) FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id $where";
+    $q = "SELECT COUNT(DISTINCT pa.actor_id) FROM products_actors AS pa JOIN actors AS a ON pa.actor_id=a.id $where";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
