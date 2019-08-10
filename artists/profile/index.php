@@ -22,6 +22,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php')
 
 if (isset($_GET['artist'])) {
 
+    $actor_id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
+
 } else {
 
     $url = BASE_URL . 'index.php';
