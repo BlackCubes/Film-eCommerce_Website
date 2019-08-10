@@ -16,8 +16,6 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
-$page_title = 'Artist Profile Test';
-
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
 if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirectors\b)|(\bproducers\b)|(\bdps\b)|(\bwriters\b))(?!;)/', $_GET['role'])) {
