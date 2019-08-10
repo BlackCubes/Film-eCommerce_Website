@@ -42,6 +42,8 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
             $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC);
 
+            echo '<div class="container--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div>';
+
         } else {
 
             $url = BASE_URL . 'index.php';
