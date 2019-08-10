@@ -20,9 +20,11 @@ $page_title = 'Artist Profile Test';
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
-if (isset($_GET['artist'])) {
+if (isset($_GET['artist'], $_GET['role'])) {
 
     $id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
+
+    $role = $_GET['role'];
 
     if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
