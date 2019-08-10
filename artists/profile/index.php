@@ -38,11 +38,13 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
 
         if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] === $id)) {
 
-            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
-
             $q_artist = "SELECT first_name AS artist_fn, middle_name AS artist_mn, last_name AS artist_ln, about AS artist_bio, img AS artist_img FROM `{$role}` WHERE id={$id}";
             $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC);
+
+            $page_title = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
+
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
             echo '<div class="container--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div>';
 
