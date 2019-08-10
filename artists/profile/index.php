@@ -26,7 +26,8 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
 
         require(MYSQL);
 
-        $role = mysqli_real_escape_string($dbc, $_GET['role']);
+        $role_column = mysqli_real_escape_string($dbc, $_GET['role']);
+        $role_table = mysqli_real_escape_string($dbc, $_GET['role'] . 's');
 
         $id = $id_decrypt;
 
