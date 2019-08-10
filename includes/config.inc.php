@@ -34,7 +34,10 @@ define('BASE_URL', 'http://localhost/FilmIndustry/eCommerce/');
 // For now, this would be stored in a folder called 'mysql'. For a live functioning site, this would be placed above the web document root for security. Lastly, the absolute path is from my computer which would change for a finalization, or for a live site:
 define('MYSQL', 'C:\\xampp\\htdocs\\FilmIndustry\\eCommerce\\mysql\\mysqli_connect.php');
 
-$encryption_key_256bit = base64_encode(openssl_random_pseudo_bytes(32));
+// To be used for future reference:
+/*$encryption_key_256bit = base64_encode(openssl_random_pseudo_bytes(32));*/
+// Set the variable equal to a constant encryption:
+$encryption_key_256bit = '/zMwTRZKjLF1h+RPmFSGJEo9h1gLQtQBHm6N91bPiic=';
 define('KEY', $encryption_key_256bit);
 
 // Time zone (would change for a live site or finalization, but for now the time zone is my nearest location):
