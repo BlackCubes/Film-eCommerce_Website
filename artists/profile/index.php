@@ -24,11 +24,11 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
 
     $id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
 
-    $role = $_GET['role'];
-
     if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
         require(MYSQL);
+
+        $role = mysqli_real_escape_string($dbc, $_GET['role']);
 
         $id = $id_decrypt;
 
