@@ -18,7 +18,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
-if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirectors\b)|(\bproducers\b)|(\bdps\b)|(\bwriters\b))(?!;)/', $_GET['role'])) {
+if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirector\b)|(\bproducer\b)|(\bdp\b)|(\bwriter\b))(?!;)/', $_GET['role'])) {
 
     $id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
 
