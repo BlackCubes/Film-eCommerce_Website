@@ -71,13 +71,17 @@ echo '<div class="container" id="templateArtists">
     </div>
 </div>';
 
-$q = "SELECT first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
+$q = "SELECT id, first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
 echo'<div class="main-artists">';
 
 while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+    $actor_id_encrypt = urlencode(my_encrypt($actor['id'], KEY));
+
     echo '<div class="container-artist"><div class="artist-image"><img src="/FilmIndustry/eCommerce/img/' . $actor['img'] . '" alt="#"></div><div class="artist-name">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</div></div>';
+
 }
 
 echo '</div>';
