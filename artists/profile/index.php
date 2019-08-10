@@ -40,7 +40,7 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
             $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC);
 
-            $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year FROM products WHERE p.id IN (SELECT product_id FROM `products_{$role}` WHERE actor_id={$id})";
+            $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year FROM products AS p WHERE p.id IN (SELECT product_id FROM `products_{$role}` WHERE actor_id={$id})";
             $r_pa = mysqli_query($dbc, $q_pa) or trigger_error("Query: $q_pa\n<br>MySQL Error: " . mysqli_error($dbc));
 
             $page_title = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
