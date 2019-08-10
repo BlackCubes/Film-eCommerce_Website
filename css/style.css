@@ -456,6 +456,11 @@ body {
 
 /* ARTIST VIEW */
 
+.container--artist-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
 .container--artist-view .image--artist-view {
     display: flex;
     justify-content: center;
