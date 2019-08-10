@@ -456,6 +456,11 @@ body {
 
 /* ARTIST VIEW */
 
+.container--artist-view .image--artist-view {
+    display: flex;
+    justify-content: center;
+}
+
 .container--artist-view .image--artist-view img {
     max-height: 432px;
     max-width: 579px;
