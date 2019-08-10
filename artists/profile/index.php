@@ -24,7 +24,7 @@ if (isset($_GET['artist'])) {
 
     $id_decrypt = urldecode(my_decrypt($_GET['artist'], KEY));
 
-    if (is_numeric($actor_id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $actor_id_decrypt)) {
+    if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
         require(MYSQL);
 
