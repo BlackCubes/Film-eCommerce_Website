@@ -476,8 +476,8 @@ body {
 }
 
 .container--artist-view .image--artist-view img {
-    max-height: 432px;
-    max-width: 579px;
+    max-height: 485px;
+    max-width: 650px;
 }
 
 /* SIGN IN */
