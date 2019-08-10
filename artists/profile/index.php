@@ -26,7 +26,9 @@ if (isset($_GET['artist'], $_GET['role']) /*&& preg_match('/((\bactors\b)|(\bdir
 
     $role = $_GET['role'];
 
-    if (is_numeric($id_decrypt) /*&& preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)*/) {
+    echo $role;
+
+    /*if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
         require(MYSQL);
 
@@ -71,7 +73,7 @@ if (isset($_GET['artist'], $_GET['role']) /*&& preg_match('/((\bactors\b)|(\bdir
         header("Location: $url");
         exit();
 
-    }
+    }*/
 
 } else {
 
