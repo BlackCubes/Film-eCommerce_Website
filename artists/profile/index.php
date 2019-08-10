@@ -47,7 +47,13 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
 
             include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
-            echo '<div class="container--artist-view"><div class="main-info--artist-view"><div class="artist-name--product-view"><h2>' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</h2></div><div class="image--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div></div><div class="product-artist-info--artist-view"></div></div>';
+            echo '<div class="container--artist-view"><div class="main-info--artist-view"><div class="artist-name--product-view"><h2>' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</h2></div><div class="image--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div></div><div class="product-artist-info--artist-view">';
+
+            while ($product_artist = mysqli_fetch_array($r_pa, MYSQLI_ASSOC)) {
+                echo '<div class="product-artist-image--artist-info"><img src="/FilmIndustry/uploads/products/' . $product_artist['product_img'] . '"></div>';
+            }
+
+            echo '</div></div>';
 
             mysqli_free_result($r);
             mysqli_close($dbc);
