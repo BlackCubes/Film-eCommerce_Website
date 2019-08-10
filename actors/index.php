@@ -31,10 +31,10 @@ $sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'all';
 
 switch ($sort) {
     case 'f':
-        $where = "WHERE gender='F'";
+        $where = "WHERE a.gender='F'";
         break;
     case 'm':
-        $where = "WHERE gender='M'";
+        $where = "WHERE a.gender='M'";
         break;
     default:
         $where = '';
@@ -45,7 +45,7 @@ switch ($sort) {
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
-    $q = "SELECT COUNT(id) FROM actors $where";
+    $q = "SELECT COUNT(a.id) FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id $where";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
@@ -71,7 +71,7 @@ echo '<div class="container" id="templateArtists">
     </div>
 </div>';
 
-$q = "SELECT id, first_name, middle_name, last_name, img FROM actors $where ORDER BY last_name LIMIT $start, $display";
+$q = "SELECT a.id AS id, a.first_name AS first_name, a.middle_name AS middle_name, a.last_name AS last_name, a.img AS img FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id $where ORDER BY a.last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
 echo'<div class="main-artists">';
