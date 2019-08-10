@@ -461,6 +461,10 @@ body {
     color: black;
 }
 
+.container--artist-view .artist-name--product-view {
+    text-align: center;
+}
+
 .container--artist-view .image--artist-view {
     display: flex;
     justify-content: center;
