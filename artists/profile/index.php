@@ -46,6 +46,9 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactors\b)|(\bdirec
 
             echo '<div class="container--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div>';
 
+            mysqli_free_result($r);
+            mysqli_close($dbc);
+
             include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 
         } else {
