@@ -465,6 +465,11 @@ body {
     text-align: center;
 }
 
+.container--artist-view .artist-name--product-view h2 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
 .container--artist-view .image--artist-view {
     display: flex;
     justify-content: center;
