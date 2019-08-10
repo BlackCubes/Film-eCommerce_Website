@@ -31,17 +31,17 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
 
         $id = $id_decrypt;
 
-        $q = "SELECT id FROM `{$role}` WHERE id={$id}";
+        $q = "SELECT id FROM `{$role_table}` WHERE id={$id}";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
         if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] === $id)) {
 
-            $q_artist = "SELECT first_name AS artist_fn, middle_name AS artist_mn, last_name AS artist_ln, about AS artist_bio, img AS artist_img FROM `{$role}` WHERE id={$id}";
+            $q_artist = "SELECT first_name AS artist_fn, middle_name AS artist_mn, last_name AS artist_ln, about AS artist_bio, img AS artist_img FROM `{$role_table}` WHERE id={$id}";
             $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC);
 
-            $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year FROM products AS p WHERE p.id IN (SELECT product_id FROM `products_{$role}` WHERE actor_id={$id})";
+            $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year FROM products AS p WHERE p.id IN (SELECT product_id FROM `products_{$role_table}` WHERE `{$role_column}_id`={$id})";
             $r_pa = mysqli_query($dbc, $q_pa) or trigger_error("Query: $q_pa\n<br>MySQL Error: " . mysqli_error($dbc));
 
             $page_title = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
