@@ -26,9 +26,7 @@ if (isset($_GET['artist'], $_GET['role']) /*&& preg_match('/((\bactors\b)|(\bdir
 
     $role = $_GET['role'];
 
-    echo $role;
-
-    /*if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
+    if (is_numeric($id_decrypt) /*&& preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)*/) {
 
         require(MYSQL);
 
@@ -38,7 +36,7 @@ if (isset($_GET['artist'], $_GET['role']) /*&& preg_match('/((\bactors\b)|(\bdir
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
-        if ((mysqli_num_rows($r) == 1) && ($selected_id === $id)) {
+        if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] === $id)) {
 
             include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
@@ -73,7 +71,7 @@ if (isset($_GET['artist'], $_GET['role']) /*&& preg_match('/((\bactors\b)|(\bdir
         header("Location: $url");
         exit();
 
-    }*/
+    }
 
 } else {
 
