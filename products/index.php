@@ -84,7 +84,10 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '</tbody></table></div><div class="actor-list-container--product-view"><div class="actor-title--product-view"><h4>Actors</h4></div><table class="actor-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC)) {
-            echo '<tr><td class="cast-crew-image--product-view"><a href="#"><img alt="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" title="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $actor['actor_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="#">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></td></tr>';
+
+            $actor_id_encrypt = urlencode(my_encrypt($actor['actor_id'], KEY));
+
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=actor&artist=' . $actor_id_encrypt . '"><img alt="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" title="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $actor['actor_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=actor&artist=' . $actor_id_encrypt . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></td></tr>';
         }
 
         echo '</tbody></table></div><div class="producer-list-container--product-view"><div class="producer-title--product-view"><h4>Producers</h4></div><table class="producer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
