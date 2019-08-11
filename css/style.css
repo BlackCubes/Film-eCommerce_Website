@@ -490,7 +490,8 @@ body {
     font-weight: 300;
 }
 
-.container--artist-view .image--artist-view {
+.container--artist-view .image--artist-view,
+.container--artist-view .product-artist-image--artist-view {
     display: flex;
     justify-content: center;
 }
