@@ -69,7 +69,7 @@ echo '<div class="container" id="templateArtists">
     </div>
 </div>';
 
-$q = "SELECT first_name, middle_name, last_name, img FROM directors $where ORDER BY last_name LIMIT $start, $display";
+$q = "SELECT DISTINCT d.id AS id, d.first_name AS first_name, d.middle_name AS middle_name, d.last_name AS last_name, d.img AS img FROM directors AS d JOIN products_directors AS pd ON d.id=pd.director_id JOIN products AS p ON pd.product_id=p.id $where ORDER BY d.last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
 echo '<div class="main-artists">';
