@@ -645,6 +645,10 @@ body {
     margin-bottom: 50px;
 }
 
+.container--studio-view .image--studio-view img[alt="1492 Pictures"] {
+    background-color: black;
+}
+
 .container--studio-view .product-studio-image--studio-view img {
     max-width: 240px;
     max-height: 240px;
