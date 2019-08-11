@@ -59,6 +59,14 @@ echo '<div class="container" id="templateStudios">
 $q = "SELECT DISTINCT s.id AS studio_id, s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id ORDER BY s.studio_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
 
+echo '<div class="main-studios">';
+
+while ($studio = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+    $studio_id_encrypt = urlencode(my_encrypt($studio['studio_id'], KEY));
+
+}
+
 //** **//
 
 $q = "SELECT studio_name, img FROM studios LIMIT $start, $display";
