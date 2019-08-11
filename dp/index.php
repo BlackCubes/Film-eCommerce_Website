@@ -80,7 +80,7 @@ while ($dp = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
     $dp_id_encrypt = urlencode(my_encrypt($dp['id'], KEY));
 
-    echo '<div class="container-artist"><div class="artist-image"><img src="/FilmIndustry/eCommerce/img/' . $dp['img'] . '" alt="#"></div><div class="artist-name">' . $dp['first_name'] . ' ' . $dp['middle_name'] . ' ' . $dp['last_name'] . '</div></div>';
+    echo '<div class="container-artist"><div class="artist-image"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=dp&artist=' . $dp_id_encrypt . '"><img src="/FilmIndustry/eCommerce/img/' . $dp['img'] . '" alt="#"></a></div><div class="artist-name">' . $dp['first_name'] . ' ' . $dp['middle_name'] . ' ' . $dp['last_name'] . '</div></div>';
 }
 
 echo '</div>';
