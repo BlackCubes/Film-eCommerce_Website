@@ -48,6 +48,16 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
 
             include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+            echo '<div class="container--studio-view"><div class="main-info--studio-view"><div class="studio-name--studio-view"><h2>' . $studio['studio_name'] . '</h2></div><div class="image--studio-view"><img src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></div></div><div class="product-studio-info--studio-view"><div class="product-studio-title--studio-view"><h2>Filmography</h2></div><div class="product-studio-list--studio-view">';
+
+            while ($product_studio = mysqli_fetch_array($r_ps, MYSQLI_ASSOC)) {
+
+                $product_isd = $product_studio['product_isd'];
+
+                echo '<div class="container-product-studio--studio-view"><div class="product-year--studio-view"><h4>' . $product_studio['product_year'] . '</h4></div><div class="product-studio-image--studio-view"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $product_isd . '"><img src="/FilmIndustry/uploads/products/' . $product_studio['product_img'] . '"></a></div><div class="product-name--studio-view"><h4>' . $product_studio['product_name'] . '</h4></div></div>';
+
+            }
+
         } else {
 
             $url = BASE_URL . 'index.php';
