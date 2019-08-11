@@ -472,6 +472,12 @@ body {
     font-weight: 400;
 }
 
+.container--artist-view .product-year--view-artist h4,
+.container--artist-view .product-name--view-artist h4 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 .container--artist-view .image--artist-view {
     display: flex;
     justify-content: center;
