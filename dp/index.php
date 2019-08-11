@@ -77,6 +77,9 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mys
 echo '<div class="main-artists">';
 
 while ($dp = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+    $dp_id_encrypt = urlencode(my_encrypt($dp['id'], KEY));
+
     echo '<div class="container-artist"><div class="artist-image"><img src="/FilmIndustry/eCommerce/img/' . $dp['img'] . '" alt="#"></div><div class="artist-name">' . $dp['first_name'] . ' ' . $dp['middle_name'] . ' ' . $dp['last_name'] . '</div></div>';
 }
 
