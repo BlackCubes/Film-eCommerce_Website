@@ -461,7 +461,7 @@ body {
     color: black;
 }
 
-.container--artist-view .product-artist-list--product-view {
+.container--artist-view .product-artist-list--artist-view {
     display: grid;
     width: 1400px;
     margin: 30px auto 50px auto;
