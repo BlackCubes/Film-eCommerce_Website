@@ -461,11 +461,13 @@ body {
     color: black;
 }
 
-.container--artist-view .artist-name--artist-view {
+.container--artist-view .artist-name--artist-view,
+.container--artist-view .product-artist-title--artist-view {
     text-align: center;
 }
 
-.container--artist-view .artist-name--artist-view h2 {
+.container--artist-view .artist-name--artist-view h2,
+.container--artist-view .product-artist-title--artist-view h2 {
     font-size: 21px;
     font-weight: 400;
 }
