@@ -74,6 +74,31 @@ echo '</div>';
 mysqli_free_result($r);
 mysqli_close($dbc);
 
+if ($pages > 1) {
+
+    echo '<div class="pagination">';
+    $current_page = ($start/$display) + 1;
+
+    if ($current_page != 1) {
+        echo '<a href="/FilmIndustry/eCommerce/studios/index.php?s=0&p=' . $pages . '"><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></a><a href="/FilmIndustry/eCommerce/studios/index.php?s=' . ($start - $display) . '&p=' . $pages . '"><i class="fas fa-caret-left"></i></a>';
+    }
+
+    for ($i = 1; $i <= $pages; $i++) {
+        if ($i != $current_page) {
+            echo '<a href="/FilmIndustry/eCommerce/studios/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a>';
+        } else {
+            echo '<a class="active">' . $i . '</a>';
+        }
+    }
+
+    if ($current_page != $pages) {
+        echo '<a href="/FilmIndustry/eCommerce/studios/index.php?s=' . ($start + $display) . '&p=' . $pages . '"><i class="fas fa-caret-right"></i></a><a href="/FilmIndustry/eCommerce/studios/index.php?s=' . (($display * ($pages - 1))) . '&p=' . $pages . '"><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></a>';
+    }
+
+    echo '</div>';
+
+}
+
 //** **//
 
 $q = "SELECT studio_name, img FROM studios LIMIT $start, $display";
