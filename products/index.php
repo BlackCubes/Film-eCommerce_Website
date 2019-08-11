@@ -61,7 +61,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         $q_dp = "SELECT DISTINCT dp.id AS dp_id, dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln, dp.img AS dp_img FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY dp.last_name";
         $r_dp = mysqli_query($dbc, $q_dp) or trigger_error("Query: $q_dp\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $q_studio = "SELECT DISTINCT s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY s.studio_name";
+        $q_studio = "SELECT DISTINCT s.id AS studio_id, s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY s.studio_name";
         $r_studio = mysqli_query($dbc, $q_studio) or trigger_error("Query: $q_studio\n<br>MySQL Error: " . mysqli_error($dbc));
 
         $page_title = $product['product_name'];
