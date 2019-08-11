@@ -48,7 +48,7 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
 
             include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
-            echo '<div class="container--studio-view"><div class="main-info--studio-view"><div class="studio-name--studio-view"><h2>' . $studio['studio_name'] . '</h2></div><div class="image--studio-view"><img src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></div></div><div class="product-studio-info--studio-view"><div class="product-studio-title--studio-view"><h2>Filmography</h2></div><div class="product-studio-list--studio-view">';
+            echo '<div class="container--studio-view"><div class="main-info--studio-view"><div class="studio-name--studio-view"><h2>' . $studio['studio_name'] . '</h2></div><div class="image--studio-view"><img alt="' . $studio['studio_name'] . '" title="' . $studio['studio_name'] . ' picture" src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></div></div><div class="product-studio-info--studio-view"><div class="product-studio-title--studio-view"><h2>Filmography</h2></div><div class="product-studio-list--studio-view">';
 
             while ($product_studio = mysqli_fetch_array($r_ps, MYSQLI_ASSOC)) {
 
