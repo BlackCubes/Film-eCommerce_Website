@@ -51,7 +51,7 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
             echo '<div class="container--artist-view"><div class="main-info--artist-view"><div class="artist-name--artist-view"><h2>' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</h2></div><div class="image--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div></div><div class="product-artist-info--artist-view"><div class="product-artist-title--artist-view"><h2>Filmography</h2></div>';
 
             while ($product_artist = mysqli_fetch_array($r_pa, MYSQLI_ASSOC)) {
-                echo '<div class="product-artist-image--artist-view"><img src="/FilmIndustry/uploads/products/' . $product_artist['product_img'] . '"></div>';
+                echo '<div class="container-product-artist--artist-view"><div class="product-artist-image--artist-view"><img src="/FilmIndustry/uploads/products/' . $product_artist['product_img'] . '"></div></div>';
             }
 
             echo '</div></div>';
