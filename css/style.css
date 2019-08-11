@@ -505,6 +505,10 @@ body {
     justify-content: center;
 }
 
+.container--artist-view .image--artist-view {
+    margin-top: 30px;
+}
+
 .container--artist-view .image--artist-view img {
     max-height: 485px;
     max-width: 650px;
