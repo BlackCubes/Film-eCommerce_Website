@@ -41,7 +41,7 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
             $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC);
 
-            $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year FROM products AS p WHERE p.id IN (SELECT product_id FROM `products_{$role_table}` WHERE `{$role_column}_id`={$id}) ORDER BY p.release_date DESC";
+            $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year, p.isd AS product_isd FROM products AS p WHERE p.id IN (SELECT product_id FROM `products_{$role_table}` WHERE `{$role_column}_id`={$id}) ORDER BY p.release_date DESC";
             $r_pa = mysqli_query($dbc, $q_pa) or trigger_error("Query: $q_pa\n<br>MySQL Error: " . mysqli_error($dbc));
 
             $page_title = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
@@ -51,7 +51,10 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
             echo '<div class="container--artist-view"><div class="main-info--artist-view"><div class="artist-name--artist-view"><h2>' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</h2></div><div class="image--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div></div><div class="product-artist-info--artist-view"><div class="product-artist-title--artist-view"><h2>Filmography</h2></div><div class="product-artist-list--artist-view">';
 
             while ($product_artist = mysqli_fetch_array($r_pa, MYSQLI_ASSOC)) {
-                echo '<div class="container-product-artist--artist-view"><div class="product-year--view-artist"><h4>' . $product_artist['product_year'] . '</h4></div><div class="product-artist-image--artist-view"><img src="/FilmIndustry/uploads/products/' . $product_artist['product_img'] . '"></div><div class="product-name--view-artist"><h4>' . $product_artist['product_name'] . '</h4></div></div>';
+
+                $product_isd = $product_artist['product_isd'];
+
+                echo '<div class="container-product-artist--artist-view"><div class="product-year--view-artist"><h4>' . $product_artist['product_year'] . '</h4></div><div class="product-artist-image--artist-view"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $product_isd . '"><img src="/FilmIndustry/uploads/products/' . $product_artist['product_img'] . '"></a></div><div class="product-name--view-artist"><h4>' . $product_artist['product_name'] . '</h4></div></div>';
             }
 
             echo '</div></div></div>';
