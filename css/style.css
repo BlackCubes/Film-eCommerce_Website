@@ -461,6 +461,14 @@ body {
     color: black;
 }
 
+.container--artist-view .product-artist-list--product-view {
+    display: grid;
+    margin-bottom: 50px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "product-artist product-artist product-artist product-artist";
+}
+
 .container--artist-view .container-product-artist--product-view {
     grid-area: product-artist;
 }
