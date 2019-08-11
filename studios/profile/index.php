@@ -18,4 +18,15 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
+if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', $_GET['role'])) {
+    
+} else {
+
+    $url = BASE_URL . 'index.php';
+
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+
+}
 ?>
