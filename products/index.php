@@ -71,7 +71,11 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '<div class="container--product-view"><div class="main-info--product-view"><div class="image--product-view"><img src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div></div><div class="cast-crew-info--product-view"><div class="cast-crew-title--product-view"><h2>Cast & Crew</h2></div><div class="cast-crew-container"><div class="director-list-container--product-view"><div class="director-title--product-view"><h4>Directors</h4></div><table class="director-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($director = mysqli_fetch_array($r_director, MYSQLI_ASSOC)) {
+
+            $director_id_encrypt = urlencode(my_encrypt($director['id'], KEY));
+
             echo '<tr><td class="cast-crew-image--product-view"><a href="#"><img alt="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" title="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $director['director_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="#">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></td></tr>';
+            
         }
 
         echo '</tbody></table></div><div class="writer-list-container--product-view"><div class="writer-title--product-view"><h4>Writers</h4></div><table class="writer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
