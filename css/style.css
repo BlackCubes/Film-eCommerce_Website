@@ -464,7 +464,7 @@ body {
 .container--artist-view .product-artist-list--product-view {
     display: grid;
     width: 1400px;
-    margin-bottom: 50px;
+    margin: 30px auto 50px auto;
     grid-template-columns: auto;
     grid-template-areas:
     "product-artist product-artist product-artist product-artist";
