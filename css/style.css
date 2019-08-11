@@ -508,6 +508,7 @@ body {
 .container--artist-view .image--artist-view img {
     max-height: 485px;
     max-width: 650px;
+    margin-bottom: 50px;
 }
 
 .container--artist-view .product-artist-image--artist-view img {
