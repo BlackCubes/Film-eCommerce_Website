@@ -30,7 +30,7 @@ $display = 21;
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
-    $q = "SELECT COUNT(id) FROM studios";
+    $q = "SELECT COUNT(DISTINCT ps.studio_id) FROM products_studios AS ps JOIN studios AS s ON ps.studio_id=s.id";
     $r = mysqli_query($dbc, $q);
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
