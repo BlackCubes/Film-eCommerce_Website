@@ -35,6 +35,20 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
+        if ((mysqli_num_rows($r) == 1) && ($selected_id === $id)) {
+
+        } else {
+
+            $url = BASE_URL . 'index.php';
+
+            mysqli_close($dbc);
+
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+
+        }
+
     } else {
 
         $url = BASE_URL . 'index.php';
