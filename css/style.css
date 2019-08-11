@@ -461,6 +461,12 @@ body {
     color: black;
 }
 
+.container--artist-view .main-info--artist-view {
+    -webkit-box-shadow: 0px 6px 20px -17px rgba(60, 44, 75, 0.39);
+    -moz-box-shadow: 0px 6px 20px -17px rgba(60, 44, 75, 0.39);
+    box-shadow: 0px 6px 20px -17px rgba(60, 44, 75, 0.39);
+}
+
 .container--artist-view .product-artist-list--artist-view {
     display: grid;
     width: 1400px;
