@@ -47,6 +47,20 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
+echo '<div class="container" id="templateStudios">
+<div class="sidebar-a">
+    <div class="results">
+        <p><b>Organize On Gender Amount</b></p>
+        <p>Female</p>
+        <p>Male</p>
+    </div>
+</div>';
+
+$q = "SELECT DISTINCT s.id AS studio_id, s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id ORDER BY s.studio_name LIMIT $start, $display";
+$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_close($dbc));
+
+//** **//
+
 $q = "SELECT studio_name, img FROM studios LIMIT $start, $display";
 $r = mysqli_query($dbc, $q);
 
