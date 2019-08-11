@@ -38,7 +38,7 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
         if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] === $id)) {
 
             $q_artist = "SELECT first_name AS artist_fn, middle_name AS artist_mn, last_name AS artist_ln, about AS artist_bio, img AS artist_img FROM `{$role_table}` WHERE id={$id}";
-            $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $r_artist = mysqli_query($dbc, $q_artist) or trigger_error("Query: $q_artist\n<br>MySQL Error: " . mysqli_error($dbc));
             $artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC);
 
             $q_pa = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year, p.isd AS product_isd FROM products AS p WHERE p.id IN (SELECT product_id FROM `products_{$role_table}` WHERE `{$role_column}_id`={$id}) ORDER BY p.release_date DESC";
