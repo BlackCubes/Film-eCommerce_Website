@@ -31,10 +31,10 @@ $sort = (isset($_GET['sort'])) ? $_GET['sort']: 'all';
 
 switch ($sort) {
     case 'f':
-        $where = "WHERE gender='F'";
+        $where = "WHERE pro.gender='F'";
         break;
     case 'm':
-        $where = "WHERE gender='M'";
+        $where = "WHERE pro.gender='M'";
         break;
     default:
         $where = '';
@@ -45,7 +45,7 @@ switch ($sort) {
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
-    $q = "SELECT COUNT(id) FROM producers $where";
+    $q = "SELECT COUNT(DISTINCT ppro.producer_id) FROM products_producers AS ppro JOIN producers AS pro ON ppro.producer_id=pro.id $where";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
