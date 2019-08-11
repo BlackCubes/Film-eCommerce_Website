@@ -71,7 +71,7 @@ echo '<div class="container" id="templateArtists">
     </div>
 </div>';
 
-$q = "SELECT DISTINCT dp.id AS id, dp.first_name AS first_name, dp.middle_name AS middle_name, dp.last_name AS last_name, dp.img AS img FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id $where ORDER BY last_name LIMIT $start, $display";
+$q = "SELECT DISTINCT dp.id AS id, dp.first_name AS first_name, dp.middle_name AS middle_name, dp.last_name AS last_name, dp.img AS img FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id $where ORDER BY dp.last_name LIMIT $start, $display";
 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
 echo '<div class="main-artists">';
