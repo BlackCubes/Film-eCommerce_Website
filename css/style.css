@@ -256,6 +256,62 @@ body {
     text-align: center;
 }
 
+/* STUDIOS */
+
+#templateStudios.container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a p p p";
+}
+
+#templateStudios.container .main-studios {
+    display: grid;
+    grid-area: main-studio;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 338px);
+    grid-row-end: auto;
+    border-left: 1px solid rgba(138,43,226,0.17);
+}
+
+.main-studios .container-studio {
+    min-height: 334px;
+    max-height: 334px;
+    overflow: hidden;
+}
+
+.container-studio .studio-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 300px;
+    margin: 25px;
+}
+
+.container-studio .studio-image img {
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+    vertical-align: middle;
+    max-width: 320px;
+    max-height: 240px;
+}
+
+.container-studio .studio-name {
+    font-family: 'Muli', sans-serif;
+    font-weight: 560;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
 /* PRODUCTS VIEW */
 
 .container--product-view {
