@@ -65,7 +65,7 @@ while ($studio = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
     $studio_id_encrypt = urlencode(my_encrypt($studio['studio_id'], KEY));
 
-    echo '<div class="container-studio"><div class="studio-image"><a href="/FilmIndustry/eCommerce/studios/profile/index.php?role=studio&company=' . $studio_id_encrypt . '"><img src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></a></div></div>';
+    echo '<div class="container-studio"><div class="studio-image"><a href="/FilmIndustry/eCommerce/studios/profile/index.php?role=studio&company=' . $studio_id_encrypt . '"><img alt="' . $studio['studio_name'] . '" title="' . $studio['studio_name'] . '" src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></a></div></div>';
 
 }
 
