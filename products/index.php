@@ -96,7 +96,11 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         echo '</tbody></table></div><div class="producer-list-container--product-view"><div class="producer-title--product-view"><h4>Producers</h4></div><table class="producer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         while ($producer = mysqli_fetch_array($r_producer, MYSQLI_ASSOC)) {
+
+            $producer_id_encrypt = urlencode(my_encrypt($producer['producer_id'], KEY));
+
             echo '<tr><td class="cast-crew-image--product-view"><a href="#"><img alt="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $director['producer_ln'] . '" title="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $producer['producer_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="#">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></td></tr>';
+
         }
 
         echo '</tbody></table></div><div class="cinematographer-list-container--product-view"><div class="cinematographer-title--product-view"><h4>Cinematographers</h4></div><table class="cinematographer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
