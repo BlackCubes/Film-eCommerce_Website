@@ -47,19 +47,19 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         $q_genre = "SELECT DISTINCT g.genre AS product_genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY g.genre";
         $r_genre = mysqli_query($dbc, $q_genre) or trigger_error("Query: $q_genre\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $q_director = "SELECT DISTINCT d.first_name AS director_fn, d.middle_name AS director_mn, d.last_name AS director_ln, d.img AS director_img FROM directors AS d JOIN products_directors AS pd ON d.id=pd.director_id JOIN products AS p ON pd.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY d.last_name";
+        $q_director = "SELECT DISTINCT d.id AS director_id, d.first_name AS director_fn, d.middle_name AS director_mn, d.last_name AS director_ln, d.img AS director_img FROM directors AS d JOIN products_directors AS pd ON d.id=pd.director_id JOIN products AS p ON pd.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY d.last_name";
         $r_director = mysqli_query($dbc, $q_director) or trigger_error("Query: $q_director\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $q_writer = "SELECT DISTINCT w.first_name AS writer_fn, w.middle_name AS writer_mn, w.last_name AS writer_ln, w.img AS writer_img FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY w.last_name";
+        $q_writer = "SELECT DISTINCT w.id AS writer_id, w.first_name AS writer_fn, w.middle_name AS writer_mn, w.last_name AS writer_ln, w.img AS writer_img FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY w.last_name";
         $r_writer = mysqli_query($dbc, $q_writer) or trigger_error("Query: $q_writer\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $q_actor = "SELECT DISTINCT a.first_name AS actor_fn, a.middle_name AS actor_mn, a.last_name AS actor_ln, a.img AS actor_img FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY a.last_name";
+        $q_actor = "SELECT DISTINCT a.id AS actor_id, a.first_name AS actor_fn, a.middle_name AS actor_mn, a.last_name AS actor_ln, a.img AS actor_img FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY a.last_name";
         $r_actor = mysqli_query($dbc, $q_actor) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $q_producer = "SELECT DISTINCT pro.first_name AS producer_fn, pro.middle_name AS producer_mn, pro.last_name AS producer_ln, pro.img AS producer_img FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY pro.last_name";
+        $q_producer = "SELECT DISTINCT pro.id AS producer_id, pro.first_name AS producer_fn, pro.middle_name AS producer_mn, pro.last_name AS producer_ln, pro.img AS producer_img FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY pro.last_name";
         $r_producer = mysqli_query($dbc, $q_producer) or trigger_error("Query: $q_producer\n<br>MySQL Error: " . mysqli_error($dbc));
 
-        $q_dp = "SELECT DISTINCT dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln, dp.img AS dp_img FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY dp.last_name";
+        $q_dp = "SELECT DISTINCT dp.id AS dp_id, dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln, dp.img AS dp_img FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY dp.last_name";
         $r_dp = mysqli_query($dbc, $q_dp) or trigger_error("Query: $q_dp\n<br>MySQL Error: " . mysqli_error($dbc));
 
         $q_studio = "SELECT DISTINCT s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY s.studio_name";
