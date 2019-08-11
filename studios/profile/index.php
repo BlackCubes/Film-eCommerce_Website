@@ -35,7 +35,7 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
-        if ((mysqli_num_rows($r) == 1) && ($selected_id === $id)) {
+        if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] === $id)) {
 
             $q_studio = "SELECT studio_name AS studio_name, about AS studio_bio, img AS studio_img FROM `{$role_table}` WHERE id={$id}";
             $r_studio = mysqli_query($dbc, $q_studio) or trigger_error("Query: $q_studio\n<br>MySQL Error: " . mysqli_error($dbc));
