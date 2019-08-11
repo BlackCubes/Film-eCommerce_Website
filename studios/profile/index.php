@@ -19,6 +19,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
 if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', $_GET['role'])) {
+
+    $id_decrypt = urldecode(my_decrypt($_GET['company'], KEY));
     
 } else {
 
