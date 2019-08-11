@@ -338,6 +338,10 @@ body {
     max-width: 59px;
 }
 
+.container--product-view .cast-crew-container img[title="1492 Pictures"] {
+    background-color: black;
+}
+
 .container--product-view .cast-crew-name--product-view span {
     font-size: 13px;
     font-weight: 300;
