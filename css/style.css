@@ -304,6 +304,10 @@ body {
     max-height: 240px;
 }
 
+.container-studio .studio-image img[title="1492 Pictures"] {
+    background-color: black;
+}
+
 .container-studio .studio-name {
     font-family: 'Muli', sans-serif;
     font-weight: 560;
