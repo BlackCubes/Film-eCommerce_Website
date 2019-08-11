@@ -63,7 +63,7 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
             mysqli_free_result($r);
             mysqli_close($dbc);
 
-            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/include/footer.html');
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 
         } else {
 
