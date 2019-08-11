@@ -24,6 +24,17 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
 
     if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
+        require(MYSQL);
+
+        $role_column = mysqli_real_escape_string($dbc, $_GET['role']);
+        $role_table = mysqli_real_escape_string($dbc, $_GET['role'] . 's');
+
+        $id = $id_decrypt;
+
+        $q = "SELECT id FROM `{$role_table}` WHERE id={$id}";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
     } else {
 
         $url = BASE_URL . 'index.php';
