@@ -58,6 +58,13 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
 
             }
 
+            echo '</div></div></div>';
+
+            mysqli_free_result($r);
+            mysqli_close($dbc);
+
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/include/footer.html');
+
         } else {
 
             $url = BASE_URL . 'index.php';
