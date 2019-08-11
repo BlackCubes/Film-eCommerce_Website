@@ -470,8 +470,8 @@ body {
     "product-artist product-artist product-artist product-artist";
 }
 
-.container--artist-view .container-product-artist--product-view {
-    grid-area: product-artist;
+.container--artist-view .container-product-artist--artist-view {
+    width: 350px;
 }
 
 .container--artist-view .artist-name--artist-view,
