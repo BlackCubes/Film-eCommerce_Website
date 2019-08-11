@@ -474,7 +474,9 @@ body {
 }
 
 .container--artist-view .artist-name--artist-view,
-.container--artist-view .product-artist-title--artist-view {
+.container--artist-view .product-artist-title--artist-view,
+.container--artist-view .product-year--view-artist,
+.container--artist-view .product-name--view-artist {
     text-align: center;
 }
 
