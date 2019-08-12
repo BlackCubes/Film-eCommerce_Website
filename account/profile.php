@@ -14,6 +14,8 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
 if (!isset($_SESSION['id'])) {
 
     $url = BASE_URL . 'index.php';
@@ -22,8 +24,6 @@ if (!isset($_SESSION['id'])) {
     exit();
 
 }
-
-require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 ?>
