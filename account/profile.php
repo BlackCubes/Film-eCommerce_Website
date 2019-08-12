@@ -16,6 +16,8 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
+$page_title = 'Your Profile';
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
 if (!isset($_SESSION['id'])) {
