@@ -665,6 +665,14 @@ body {
     text-align: center;
 }
 
+.container--profile-view .profile-option--profile-view {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "pv-login-security pv-orders pv-wishlist"
+    "pv-upload-image pv-address pv-payment";
+}
+
 .container--profile-view .container-login-security--profile-view,
 .container--profile-view .container-upload-image--profile-view,
 .container--profile-view .container-address--profile-view,
