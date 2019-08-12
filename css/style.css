@@ -654,6 +654,13 @@ body {
     max-height: 240px;
 }
 
+/* USER PROFILE PAGE */
+
+.container--profile-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
