@@ -661,7 +661,13 @@ body {
     color: black;
 }
 
-.container--profile-view .profile-title--profile-view {
+.container--profile-view .profile-title--profile-view,
+.container--profile-view .container-login-security--profile-view,
+.container--profile-view .container-upload-image--profile-view,
+.container--profile-view .container-address--profile-view,
+.container--profile-view .container-orders--profile-view,
+.container--profile-view .container-wishlist--profile-view,
+.container--profile-view .container-payment--profile-view {
     text-align: center;
 }
 
