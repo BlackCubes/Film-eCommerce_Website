@@ -712,7 +712,7 @@ body {
 .container--profile-view .container-wishlist--profile-view,
 .container--profile-view .container-payment--profile-view {
     width: 320px;
-    height: 90px;
+    height: 130px;
     margin-left: auto;
     margin-right: auto;
 }
