@@ -714,6 +714,9 @@ body {
     width: 320px;
     height: 130px;
     margin: 20px auto 20px auto;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
 }
 
 .container--profile-view .profile-title--profile-view h2 {
@@ -757,18 +760,6 @@ body {
     color: rgb(94, 94, 94);
     font-size: 13px;
     transition: all 0.3s ease-in-out;
-}
-
-.container--profile-view .container-login-security--profile-view,
-.container--profile-view .container-upload-image--profile-view,
-.container--profile-view .container-address--profile-view,
-.container--profile-view .container-orders--profile-view,
-.container--profile-view .container-wishlist--profile-view,
-.container--profile-view .container-payment--profile-view {
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    /*transition: all 0.3s ease-out;*/
 }
 
 /*.container--profile-view .container-login-security--profile-view:hover {
