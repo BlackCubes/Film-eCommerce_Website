@@ -762,17 +762,6 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/*.container--profile-view .container-login-security--profile-view:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 12px;
-    background-color: rgba(94, 94, 94, 0.10);
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}*/
-
 /* SIGN IN */
 
 form.sign-in-form {
