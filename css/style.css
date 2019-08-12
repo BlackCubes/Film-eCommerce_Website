@@ -661,6 +661,10 @@ body {
     color: black;
 }
 
+.container--profile-view .profile-title--profile-view {
+    text-align: center;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
