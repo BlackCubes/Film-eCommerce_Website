@@ -665,6 +665,16 @@ body {
     text-align: center;
 }
 
+.container--profile-view .container-login-security--profile-view,
+.container--profile-view .container-upload-image--profile-view,
+.container--profile-view .container-address--profile-view,
+.container--profile-view .container-orders--profile-view,
+.container--profile-view .container-wishlist--profile-view,
+.container--profile-view .container-payment--profile-view {
+    width: 320px;
+    height: 90px;
+}
+
 .container--profile-view .profile-title--profile-view h2 {
     font-size: 21px;
     font-weight: 400;
