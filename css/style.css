@@ -670,6 +670,11 @@ body {
     font-weight: 400;
 }
 
+.container--profile-view .profile-option--profile-view h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
