@@ -37,13 +37,11 @@ if (!isset($_SESSION['id'])) {
     <div class="profile-option--profile-view">
         <div class="container-login-security--profile-view">
             <a href="#">
-                <div class="login-security-link--profile-view">
-                    <div class="login-security-title--profile-view">
-                        <h4>Login & security</h4>
-                    </div>
-                    <div class="login-security-info--profile-view">
-                        <p>Edit login, name, and mobile number, and delete account</p>
-                    </div>
+                <div class="login-security-title--profile-view">
+                    <h4>Login & security</h4>
+                </div>
+                <div class="login-security-info--profile-view">
+                    <p>Edit login, name, and mobile number, and delete account</p>
                 </div>
             </a>
         </div>
