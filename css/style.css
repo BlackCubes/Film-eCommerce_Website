@@ -742,6 +742,12 @@ body {
     width: 320px;
     height: 130px;
     padding: 1px;
+    transition: all 0.3s ease-out;
+}
+
+.container--profile-view .profile-option--profile-view a:hover {
+    background-color: rgba(94, 94, 94, 0.01);
+    transition: all 0.3s ease-in-out;
 }
 
 .container--profile-view .profile-option--profile-view h4:hover {
