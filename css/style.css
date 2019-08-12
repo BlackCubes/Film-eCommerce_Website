@@ -665,6 +665,11 @@ body {
     text-align: center;
 }
 
+.container--profile-view .profile-title--profile-view h2 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
