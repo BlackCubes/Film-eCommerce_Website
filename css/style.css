@@ -734,13 +734,16 @@ body {
 
 .container--profile-view .profile-option--profile-view a {
     text-decoration: none;
+}
+
+.container--profile-view .login-security-link--profile-view {
     transition: all 0.3s ease-out;
 }
 
-.container--profile-view .profile-option--profile-view a:hover {
+.container--profile-view .login-security-link--profile-view:hover {
     color: rgb(94, 94, 94);
     font-weight: 300;
-    font-size: 15px;
+    font-size: 12px;
     border-bottom: 1px solid rgba(138,43,226,0.17);
     border-top: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
