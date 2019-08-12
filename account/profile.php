@@ -16,6 +16,8 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+
 if (!isset($_SESSION['id'])) {
 
     $url = BASE_URL . 'index.php';
@@ -25,7 +27,6 @@ if (!isset($_SESSION['id'])) {
 
 }
 
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 ?>
 <div class="container--profile-view">
     <div class="profile-title--profile-view">
