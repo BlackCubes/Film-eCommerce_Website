@@ -673,6 +673,30 @@ body {
     "pv-upload-image pv-address pv-payment";
 }
 
+.container--profile-view .container-login-security--profile-view {
+    grid-area: pv-login-security;
+}
+
+.container--profile-view .container-upload-image--profile-view {
+    grid-area: pv-upload-image;
+}
+
+.container--profile-view .container-orders--profile-view {
+    grid-area: pv-orders;
+}
+
+.container--profile-view .container-address--profile-view {
+    grid-area: pv-address;
+}
+
+.container--profile-view .container-wishlist--profile-view {
+    grid-area: pv-wishlist;
+}
+
+.container--profile-view .container-payment--profile-view {
+    grid-area: pv-payment;
+}
+
 .container--profile-view .container-login-security--profile-view,
 .container--profile-view .container-upload-image--profile-view,
 .container--profile-view .container-address--profile-view,
