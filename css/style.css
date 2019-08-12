@@ -737,7 +737,11 @@ body {
 }
 
 .container--profile-view .profile-option--profile-view a {
+    display: block;
     text-decoration: none;
+    width: 320px;
+    height: 130px;
+    padding: 1px;
 }
 
 .container--profile-view .profile-option--profile-view h4:hover {
