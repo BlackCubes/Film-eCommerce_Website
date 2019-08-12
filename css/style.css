@@ -713,6 +713,8 @@ body {
 .container--profile-view .container-payment--profile-view {
     width: 320px;
     height: 90px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container--profile-view .profile-title--profile-view h2 {
