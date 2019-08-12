@@ -725,15 +725,29 @@ body {
 .container--profile-view .profile-option--profile-view h4 {
     font-size: 15px;
     font-weight: 600;
+    transition: all 0.3s ease-out;
 }
 
 .container--profile-view .profile-option--profile-view p {
     font-size: 14px;
     font-weight: 300;
+    transition: all 0.3s ease-out;
 }
 
 .container--profile-view .profile-option--profile-view a {
     text-decoration: none;
+}
+
+.container--profile-view .profile-option--profile-view h4:hover {
+    color: rgb(94, 94, 94);
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container--profile-view .profile-option--profile-view p:hover {
+    color: rgb(94, 94, 94);
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
 }
 
 .container--profile-view .login-security-link--profile-view {
@@ -741,9 +755,9 @@ body {
 }
 
 .container--profile-view .login-security-link--profile-view:hover {
-    color: rgb(94, 94, 94);
+    /*color: rgb(94, 94, 94);
     font-weight: 300;
-    font-size: 12px;
+    font-size: 12px;*/
     border-bottom: 1px solid rgba(138,43,226,0.17);
     border-top: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
