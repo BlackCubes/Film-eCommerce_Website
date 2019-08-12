@@ -732,6 +732,11 @@ body {
     font-weight: 300;
 }
 
+.container--profile-view .profile-option--profile-view a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
