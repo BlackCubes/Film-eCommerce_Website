@@ -22,6 +22,12 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+if (!isset($_SESSION['id'])) {
+    ob_end_clean();
+    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
