@@ -22,7 +22,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     ob_end_clean();
     header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
     exit();
