@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_num_rows($r) == 1) {
 
+            $cart_action = $_GET['action'];
+
         } else {
 
             $url = BASE_URL . 'index.php';
