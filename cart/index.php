@@ -41,8 +41,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_num_rows($r) == 1) {
 
+            $url = BASE_URL . 'index.php';
+
+            mysqli_close($dbc);
+
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+
         }
         
+    } else {
+
+        $url = BASE_URL . 'index.php';
+
+        ob_end_clean();
+        header("Location: $url");
+        exit();
+
     }
     
 }
