@@ -36,6 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $q = "SELECT id FROM products WHERE id={$product_isd}";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+        if (mysqli_num_rows($r) == 1) {
+            
+        }
         
     }
     
