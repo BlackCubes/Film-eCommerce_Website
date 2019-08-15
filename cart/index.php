@@ -43,6 +43,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $cart_action = $_GET['action'];
 
+            switch ($cart_action) {
+                case "add":
+                    break;
+                case "remove":
+                    break;
+                case "empty":
+                    break;
+                case "later":
+                    break;
+            }
+
         } else {
 
             $url = BASE_URL . 'index.php';
