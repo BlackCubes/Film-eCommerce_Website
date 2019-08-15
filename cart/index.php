@@ -29,7 +29,9 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+    
+    if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b))(?!;)?/', $_GET['action']))
+    
 }
 
 ?>
