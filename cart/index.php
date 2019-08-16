@@ -72,6 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     /* Redirect the user to cart view */
                     
                     break;
+
                 case "remove":
 
                     if (!empty($_SESSION['cart_item'])) {
@@ -82,8 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     }
 
                     break;
+
                 case "empty":
+                    unset($_SESSION['cart_item']);
                     break;
+
                 case "later":
                     break;
             }
