@@ -51,6 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
                     $product_cart = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+                    print_r($product_cart);
                     
                     break;
                 case "remove":
