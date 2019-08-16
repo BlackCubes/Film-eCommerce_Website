@@ -54,7 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     if (!empty($_SESSION['cart_item'])) {
                         if (in_array($product_cart['product_isd'], array_keys($_SESSION['cart_item']))) {
-
+                            foreach ($_SESSION['cart_item'] as $k => $v) {
+                                if ($product_cart['product_isd'] == $k) {
+                                    
+                                }
+                            }
                         } else {
                             $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_isd);
                         }
