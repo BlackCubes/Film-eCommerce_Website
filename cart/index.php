@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     if (empty($_SESSION['cart_item'][$k]['quantity'])) {
                                         $_SESSION['cart_item'][$k]['quantity'] = 0;
                                     }
+                                    $_SESSION['cart_item'][$k]['quantity'] += $_POST['quantity'];
                                 }
                             }
                         } else {
