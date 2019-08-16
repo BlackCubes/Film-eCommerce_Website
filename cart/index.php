@@ -68,6 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     } else {
                         $_SESSION['cart_item'] = $product_cart;
                     }
+
+                    /* Redirect the user to cart view */
                     
                     break;
                 case "remove":
