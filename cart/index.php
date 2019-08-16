@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     if (!empty($_SESSION['cart_item'])) {
 
-                        $q = "INSERT INTO carts (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$_SESSION['cart_item']['product_id']}, '" . $_SESSION['cart_item']['product_department'] . "', '" . $_SESSION['cart_item']['product_format'] . "', {$_SESSION['cart_item']['quantity']}, NOW(), NOW(), $_SESSION['id'])";
+                        $q = "INSERT INTO carts (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$_SESSION['cart_item']['product_id']}, '" . $_SESSION['cart_item']['product_department'] . "', '" . $_SESSION['cart_item']['product_format'] . "', {$_SESSION['cart_item']['quantity']}, NOW(), NOW(), {$_SESSION['id']})";
 
                         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
