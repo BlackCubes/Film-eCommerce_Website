@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $product_isd = mysqli_real_escape_string($dbc, $_GET['isd']);
 
-        $q = "SELECT id FROM products WHERE id={$product_isd}";
+        $q = "SELECT id FROM products WHERE isd='" . $product_isd . "'";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
         if (mysqli_num_rows($r) == 1) {
