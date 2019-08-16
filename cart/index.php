@@ -46,28 +46,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             switch ($cart_action) {
                 case "add":
 
-                    $q = "SELECT p.id AS product_id, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, d.department AS product_department, f.format AS product_format, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln FROM products AS p JOIN departments AS d ON p.department_id=d.id JOIN formats AS f ON p.format_id=f.id JOIN products_directors AS pdir ON p.id=pdir.product_id JOIN directors AS dir ON pdir.director_id=dir.id WHERE p.isd='" . $product_isd . "'";
+                    if (!empty($_POST['quantity'])) {
 
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+                        $q = "SELECT p.id AS product_id, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, d.department AS product_department, f.format AS product_format, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln FROM products AS p JOIN departments AS d ON p.department_id=d.id JOIN formats AS f ON p.format_id=f.id JOIN products_directors AS pdir ON p.id=pdir.product_id JOIN directors AS dir ON pdir.director_id=dir.id WHERE p.isd='" . $product_isd . "'";
 
-                    $product_cart = mysqli_fetch_array($r, MYSQLI_ASSOC);
+                        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                    if (!empty($_SESSION['cart_item'])) {
-                        if (in_array($product_cart['product_isd'], array_keys($_SESSION['cart_item']))) {
-                            foreach ($_SESSION['cart_item'] as $k => $v) {
-                                if ($product_cart['product_isd'] == $k) {
-                                    if (empty($_SESSION['cart_item'][$k]['quantity'])) {
-                                        $_SESSION['cart_item'][$k]['quantity'] = 0;
+                        $product_cart = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+                        if (!empty($_SESSION['cart_item'])) {
+                            if (in_array($product_cart['product_isd'], array_keys($_SESSION['cart_item']))) {
+                                foreach ($_SESSION['cart_item'] as $k => $v) {
+                                    if ($product_cart['product_isd'] == $k) {
+                                        if (empty($_SESSION['cart_item'][$k]['quantity'])) {
+                                            $_SESSION['cart_item'][$k]['quantity'] = 0;
+                                        }
+                                        $_SESSION['cart_item'][$k]['quantity'] += $_POST['quantity'];
                                     }
-                                    $_SESSION['cart_item'][$k]['quantity'] += $_POST['quantity'];
                                 }
+                            } else {
+                                $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_isd);
                             }
                         } else {
-                            $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_isd);
+                            $_SESSION['cart_item'] = $product_cart;
                         }
-                    } else {
-                        $_SESSION['cart_item'] = $product_cart;
-                    }
+
+                    } else {}
 
                     /* Redirect the user to cart view */
                     
