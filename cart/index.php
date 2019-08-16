@@ -56,7 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         if (in_array($product_cart['product_isd'], array_keys($_SESSION['cart_item']))) {
                             foreach ($_SESSION['cart_item'] as $k => $v) {
                                 if ($product_cart['product_isd'] == $k) {
-                                    
+                                    if (empty($_SESSION['cart_item'][$k]['quantity'])) {
+                                        $_SESSION['cart_item'][$k]['quantity'] = 0;
+                                    }
                                 }
                             }
                         } else {
