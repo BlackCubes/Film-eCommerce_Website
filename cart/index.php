@@ -52,7 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $product_cart = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
-                    print_r($product_cart);
+                    if (!empty($_SESSION['cart_item'])) {
+
+                    } else {
+                        $_SESSION['cart_item'] = $product_cart;
+                    }
                     
                     break;
                 case "remove":
