@@ -53,7 +53,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $product_cart = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
                     if (!empty($_SESSION['cart_item'])) {
+                        if (in_array($product_cart['product_isd'], array_keys($_SESSION['cart_item']))) {
 
+                        } else {
+                            $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_isd);
+                        }
                     } else {
                         $_SESSION['cart_item'] = $product_cart;
                     }
