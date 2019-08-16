@@ -75,9 +75,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     } else {
 
-                        $quantityErr = 'Please enter a quantity of 1 or more!';
+                        $_SESSION['systemErr'] = 'Please enter a quantity of 1 or more!';
 
-                        $url = BASE_URL . 'index.php';
+                        $url = BASE_URL . 'products/index.php?isd=' . $product_isd;
 
                         mysqli_close($dbc);
 
