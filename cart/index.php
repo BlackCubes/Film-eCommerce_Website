@@ -73,6 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     
                     break;
                 case "remove":
+
+                    if (!empty($_SESSION['cart_item'])) {
+                        
+                    }
+
                     break;
                 case "empty":
                     break;
