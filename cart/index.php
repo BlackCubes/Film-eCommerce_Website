@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     }
                                 }
                             } else {
-                                $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_isd);
+                                $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_cart);
                                 print_r($_SESSION['cart_item']);
                             }
                         } else {
