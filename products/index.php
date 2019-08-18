@@ -73,7 +73,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
         for ($i = 1; $i < ($product['product_stock'] - 3); $i++) {
             echo '<option value="' . $i . '"';
 
-            $selected = if ($i === 1) echo ' selected';
+            $selected = ($i === 1) ? ' selected' : '';
 
             echo $selected . '>' . $i . '</option>';
         }
