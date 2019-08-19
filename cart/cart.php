@@ -28,6 +28,15 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 
+if (isset($_SESSION['cart_item'])) {
+    foreach ($_SESSION['cart_item'] as $item) {
 ?>
+    <p><?php echo $item['product_name'] ?></p>
+<?php } ?>
+<?php } else { ?>
+    <p>Your cart is empty!</p>
+<?php }
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); 
+
+?>
