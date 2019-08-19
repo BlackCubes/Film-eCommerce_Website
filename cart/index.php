@@ -60,9 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $items_cart = array($single_product['product_isd'] => array("product_id" => $single_product['product_id'], "product_name" => $single_product['product_name'], "product_price" => $single_product['product_price'], "product_stock" => $single_product['product_stock'], "product_image" => $single_product['product_image'], "product_department" => $single_product['product_department'], "product_format" => $single_product['product_format'], "director_fn" => $single_product['director_fn'], "director_mn" => $single_product['director_mn'], "director_ln" => $single_product['director_ln'], "quantity" => $_POST['quantity']));
 
                         if (!empty($_SESSION['cart_item'])) {
-                            if (in_array($product_cart['product_isd'], array_keys($_SESSION['cart_item']))) {
+                            if (in_array($single_product['product_isd'], array_keys($_SESSION['cart_item']))) {
                                 foreach ($_SESSION['cart_item'] as $k => $v) {
-                                    if ($product_cart['product_isd'] == $k) {
+                                    if ($single_product['product_isd'] == $k) {
                                         if (empty($_SESSION['cart_item'][$k]['quantity'])) {
                                             $_SESSION['cart_item'][$k]['quantity'] = 0;
                                         }
@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     }
                                 }
                             } else {
-                                $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $product_cart);
+                                $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $items_cart);
                                 print_r($_SESSION['cart_item']);
                             }
                         } else {
-                            $_SESSION['cart_item'] = $product_cart;
+                            $_SESSION['cart_item'] = $items_cart;
                         }
 
                     } else {
