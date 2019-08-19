@@ -33,13 +33,13 @@ if (isset($_SESSION['cart_item'])) {
     $total_quantity = 0;
     $subtotal_price = 0;
 
-    echo '<div class="container--cart-view"><div class="main-info--cart-view"><div class="cart-title--cart-view"><h2>Shopping Cart</h2></div></div>';
+    echo '<div class="container--cart-view"><div class="main-info--cart-view"><div class="cart-title--cart-view"><h2>Shopping Cart</h2></div>';
 
     foreach ($_SESSION['cart_item'] as $item) {
         echo '<p>' . $item['product_name'] . '</p>';
     }
 
-    echo '</div>';
+    echo '</div></div>';
 
 } else {
     echo '<p>Your cart is empty!</p>';
