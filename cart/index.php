@@ -77,7 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 exit();
                             } else {
                                 $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $items_cart);
-                                print_r($_SESSION['cart_item']);
                             }
                         } else {
                             $_SESSION['cart_item'] = $items_cart;
