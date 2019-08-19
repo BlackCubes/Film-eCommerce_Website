@@ -29,6 +29,8 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 }
 
 if (isset($_SESSION['cart_item'])) {
+    $total_quantity = 0;
+    $subtotal_price = 0;
     foreach ($_SESSION['cart_item'] as $item) {
 ?>
     <p><?php echo $item['product_name'] ?></p>
