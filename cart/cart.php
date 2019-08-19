@@ -31,6 +31,15 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 if (isset($_SESSION['cart_item'])) {
     $total_quantity = 0;
     $subtotal_price = 0;
+?>
+<div class="container--cart-view">
+    <div class="main-info--cart-view">
+        <div class="cart-title--cart-view">
+            <h2>Shopping Cart</h2>
+        </div>
+    </div>
+</div>
+<?
     foreach ($_SESSION['cart_item'] as $item) {
 ?>
     <p><?php echo $item['product_name'] ?></p>
