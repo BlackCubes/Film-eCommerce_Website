@@ -69,6 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         $_SESSION['cart_item'][$k]['quantity'] += $_POST['quantity'];
                                     }
                                 }
+                                $url = BASE_URL . 'cart/cart.php';
+                                mysqli_free_result($r);
+                                mysqli_close($dbc);
+                                ob_end_clean();
+                                header("Location: $url");
+                                exit();
                             } else {
                                 $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $items_cart);
                                 print_r($_SESSION['cart_item']);
