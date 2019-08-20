@@ -48,6 +48,8 @@ if (isset($_SESSION['cart_item'])) {
 
     }
 
+    $item_count = ($total_quantity > 1) ? ($total_quantity . ' items') : ($total_quantity . ' item');
+
     echo '<div class="subtotal-cart--cart-view"><span class="subtotal-title-amount--cart-view">Subtotal (' . $item_count . '):</span></div></div></div></div>';
 
 } else {
