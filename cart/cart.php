@@ -42,10 +42,6 @@ if (isset($_SESSION['cart_item'])) {
 
         $subtotal_price += ($item['product_price'] * $item['quantity']);
 
-        /*$item_count = (count($item['quantity']) > 1) ? (count($item['quantity']) . ' items') : (count($item['quantity']) . ' item');
-
-        echo '<div class="subtotal-cart--cart-view"><span class="subtotal-title-amount--cart-view">Subtotal (' . $item_count . '):</span></div>';*/
-
     }
 
     $item_count = ($total_quantity > 1) ? ($total_quantity . ' items') : ($total_quantity . ' item');
