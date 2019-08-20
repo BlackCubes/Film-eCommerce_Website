@@ -775,6 +775,11 @@ body {
     color: black;
 }
 
+.container--cart-view .cart-title--cart-view h2 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
