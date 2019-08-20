@@ -122,7 +122,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b))(?!;)?/', $_GET['action']))
                 
                 break;
 
-            case "remove":
+            case "delete":
 
                 if (!empty($_SESSION['cart_item'])) {
                     foreach ($_SESSION['cart_item'] as $k => $v) {
