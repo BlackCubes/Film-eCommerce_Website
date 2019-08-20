@@ -39,7 +39,11 @@ if (isset($_SESSION['cart_item'])) {
         echo '<div class="cart-list--cart-view"><div class="product-image--cart-view">' . $item['product_image'] . '</div><div class="product-info--cart-view"><div class="product-name--cart-view"><p>' . $item['product_name'] . '<span class="director-name--cart-view"> by ' . $item['director_fn'] . ' ' . $item['director_mn'] . ' ' . $item['director_ln'] . '</span></p></div><div class="product-format--cart-view"><p>' . $item['product_format'] . '</p></div><div class="product-options--cart-view"><span class="quantity-view--cart-view">Qty: ' . $item['quantity'] . '</span><span class="product-delete--cart-view"><a href="#">Delete</a></span><span class="product-later--cart-view"><a href="#">Save for later</a></span></div></div><div class="product-price--cart-view"><p>$' . $item['product_price'] . '</p></div></div>';
     }
 
-    echo '</div></div></div>';
+    $item_count = count($_SESSION['cart_item']);
+
+    $item_count = (count($_SESSION['cart_item']) > 1) ? (count($_SESSION['cart_item']) . ' items') : (count($_SESSION['cart_item']) . ' item');
+
+    echo '<div class="subtotal-cart--cart-view"><span class="subtotal-title-amount--cart-view">Subtotal (' . $item_count . '):</span></div></div></div></div>';
 
 } else {
     echo '<p>Your cart is empty!</p>';
