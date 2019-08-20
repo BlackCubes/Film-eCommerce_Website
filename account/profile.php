@@ -66,7 +66,7 @@ if (!isset($_SESSION['id'])) {
             </a>
         </div>
         <div class="container-orders--profile-view">
-            <a href="#">
+            <a href="/FilmIndustry/eCommerce/cart/cart.php">
                 <div class="orders-title--product-view">
                     <h4>Your Orders</h4>
                 </div>
