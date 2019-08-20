@@ -129,6 +129,14 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b))(?!;)?/', $_GET['action']))
                         if ($product_isd == $k) unset($_SESSION['cart_item'][$k]);
                         if (empty($_SESSION['cart_item'])) unset($_SESSION['cart_item']);
                     }
+
+                    $url = BASE_URL . 'cart/cart.php';
+                    mysqli_free_result($r);
+                    mysqli_close($dbc);
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
+
                 }
 
                 break;
