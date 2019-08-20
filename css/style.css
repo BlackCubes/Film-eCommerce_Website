@@ -768,6 +768,13 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* USER CART VIEW */
+
+.container--cart-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
