@@ -810,6 +810,11 @@ body {
     font-weight: 500;
 }
 
+.container--cart-view .product-image--cart-view img {
+    max-width: 140px;
+    max-height: 140px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
