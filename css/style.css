@@ -799,7 +799,8 @@ body {
     font-weight: 500;
 }
 
-.container--cart-view .product-price--cart-view p {
+.container--cart-view .product-price--cart-view p,
+.container--cart-view span.subtotal-display--cart-view {
     font-size: 17px;
     font-weight: 700;
 }
