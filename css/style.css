@@ -828,6 +828,10 @@ body {
     width: 150px;
 }
 
+.container--cart-view .product-price--cart-view {
+    width: 170px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
