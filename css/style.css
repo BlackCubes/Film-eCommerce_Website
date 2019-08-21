@@ -818,7 +818,7 @@ body {
 .container--cart-view .cart-list--cart-view {
     display: grid;
     width: 1130px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     grid-template-columns: auto;
     grid-template-areas:
         "cart-image cart-info cart-price";
