@@ -46,7 +46,7 @@ if (isset($_SESSION['cart_item'])) {
 
     $item_count = ($total_quantity > 1) ? ($total_quantity . ' items') : ($total_quantity . ' item');
 
-    echo '</div><div class="subtotal-cart--cart-view"><span class="subtotal-title-amount--cart-view">Subtotal (' . $item_count . '):</span><span class="subtotal-display--cart-view"> $' . $subtotal_price . '</span></div></div></div>';
+    echo '<div class="subtotal-cart--cart-view"><span class="subtotal-title-amount--cart-view">Subtotal (' . $item_count . '):</span><span class="subtotal-display--cart-view"> $' . $subtotal_price . '</span></div></div></div></div>';
 
 } else {
     echo '<p>Your cart is empty!</p>';
