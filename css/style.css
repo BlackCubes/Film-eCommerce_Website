@@ -786,6 +786,11 @@ body {
     text-decoration: none;
 }
 
+.container--cart-view .product-name--cart-view span.director-name--cart-view {
+    font-size: 13px;
+    font-weight: 500;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
