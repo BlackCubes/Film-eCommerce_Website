@@ -824,6 +824,10 @@ body {
         "cart-image cart-info cart-price";
 }
 
+.container--cart-view .product-image--cart-view {
+    width: 150px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
