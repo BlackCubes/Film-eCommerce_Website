@@ -805,6 +805,11 @@ body {
     font-weight: 700;
 }
 
+.container--cart-view span.subtotal-title-amount--cart-view {
+    font-size: 17px;
+    font-weight: 500;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
