@@ -819,6 +819,8 @@ body {
     display: grid;
     width: 1130px;
     /*margin-bottom: 30px;*/
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.17);
     grid-template-columns: auto;
     grid-template-areas:
         "cart-image cart-info cart-price";
