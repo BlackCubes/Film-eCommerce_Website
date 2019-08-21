@@ -791,7 +791,10 @@ body {
     font-weight: 500;
 }
 
-.container--cart-view .product-format--cart-view p {
+.container--cart-view .product-format--cart-view p,
+.container--cart-view span.quantity-view--cart-view,
+.container--cart-view span.product-delete--cart-view,
+.container--cart-view span.product-later--cart-view {
     font-size: 12px;
     font-weight: 500;
 }
