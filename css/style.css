@@ -780,6 +780,12 @@ body {
     font-weight: 700;
 }
 
+.container--cart-view .product-name--cart-view a {
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
