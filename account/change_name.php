@@ -77,6 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $systemErr = 'There was an error changing your new name. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
 
+            /* Redirect the user to another page!!!! */
+
         }
 
     } else {
