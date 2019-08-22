@@ -33,7 +33,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 <form action="change_name.php" method="post" id="userChangeName">
     <fieldset class="change-name-card">
         <div class="change-name-title">
-            <h1>Change your name</h1>
+            <h2>Change your name</h2>
         </div>
         <div class="change-name-info">
             <p>If you want to change your name associated with your account, you may do so below. Be sure to click the <b>Save Changes</b> button when you are done.</p>
