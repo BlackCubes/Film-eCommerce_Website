@@ -30,5 +30,9 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 }
 
 ?>
-
+<form action="change_name.php" method="post" id="userChangeName">
+    <fieldset class="change-name-card">
+        
+    </fieldset>
+</form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
