@@ -36,3 +36,17 @@ function my_decrypt($data, $key) {
 
 // ************ ENCRYPT/DECRYPT DATA ************ //
 // ********************************************** //
+
+
+// **************************************** //
+// ************ INPUT SANITIZE ************ //
+
+function sanitize_input($input) {
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    return $input;
+}
+
+// ************ INPUT SANITIZE ************ //
+// **************************************** //
