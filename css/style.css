@@ -813,6 +813,8 @@ body {
 .container--cart-view .product-image--cart-view img {
     max-width: 140px;
     max-height: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .container--cart-view .cart-list--cart-view {
