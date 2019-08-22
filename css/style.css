@@ -848,6 +848,10 @@ body {
     width: 170px;
 }
 
+.container--cart-view .subtotal-cart--cart-view {
+    width: 1130px;
+}
+
 .container--cart-view .product-price--cart-view p,
 .container--cart-view .subtotal-cart--cart-view p {
     text-align: right;
