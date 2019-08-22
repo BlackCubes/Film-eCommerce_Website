@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_autocommit($dbc, FALSE);
 
-        $q = "UPDATE users SET first_name='" . $fn . "', middle_name='" . $mn . "', last_name='" . $ln . "' WHERE id={$_SESSION['id']}";
+        $q = "UPDATE users SET first_name='" . $fn . "', middle_name='" . $mn . "', last_name='" . $ln . "' WHERE id={$_SESSION['id']} LIMIT 1";
 
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
