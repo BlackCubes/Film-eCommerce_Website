@@ -817,6 +817,10 @@ body {
     margin-bottom: 10px;
 }
 
+.container--cart-view .main-info--cart-view {
+    margin-left: 15px;
+}
+
 .container--cart-view .cart-list--cart-view {
     display: grid;
     width: 1130px;
