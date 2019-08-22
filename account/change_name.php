@@ -61,6 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($fn && $ln) {
 
+        $systemErr = '';
+
+        mysqli_autocommit($dbc, FALSE);
+
     } else {
         $systemErr = 'Please try again';
     }
