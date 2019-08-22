@@ -45,6 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (preg_match('/(^[A-Za-z\p{L}](\.)?([a-z\p{L}]+)?$)(?!;)?/u', sanitize_input($_POST['middle_name']))) {
         $mnErr = '';
         $mn = mysqli_real_escape_string($dbc, sanitize_input($_POST['middle_name']));
+    } elseif (empty(sanitize_input($_POST['middle_name']))) {
+        $mnErr = '';
+        $mn = mysqli_real_escape_string($dbc, sanitize_input($_POST['middle_name']));
     } else {
         $mnErr = 'An error occured on your middle name!';
     }
