@@ -857,6 +857,10 @@ body {
     text-align: right;
 }
 
+.container--cart-view span.subtotal-title-amount--cart-view {
+    margin-right: 5px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
