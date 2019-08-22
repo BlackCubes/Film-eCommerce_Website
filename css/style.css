@@ -818,6 +818,7 @@ body {
 }
 
 .container--cart-view .main-info--cart-view {
+    width: 1135px;
     margin-left: 15px;
 }
 
