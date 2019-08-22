@@ -59,6 +59,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $lnErr = 'An error occured on your last name!';
     }
 
+    if ($fn && $ln) {
+
+    } else {
+        $systemErr = 'Please try again';
+    }
+
 }
 
 ?>
