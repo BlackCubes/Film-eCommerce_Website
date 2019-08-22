@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $fnErr = 'An error occured on your first name!';
     }
 
-    if preg_match('/(^[A-Za-z\p{L}](\.)?([a-z\p{L}]+)?$)(?!;)?/u', sanitize_input($_POST['middle_name'])) {
+    if (preg_match('/(^[A-Za-z\p{L}](\.)?([a-z\p{L}]+)?$)(?!;)?/u', sanitize_input($_POST['middle_name']))) {
         $mnErr = '';
         $mn = mysqli_real_escape_string($dbc, sanitize_input($_POST['middle_name']));
     } else {
