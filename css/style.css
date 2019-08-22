@@ -828,6 +828,8 @@ body {
 }
 
 .container--cart-view .product-image--cart-view {
+    display: flex;
+    justify-content: center;
     width: 150px;
 }
 
