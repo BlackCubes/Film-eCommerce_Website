@@ -71,6 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($r) {
 
+            mysqli_commit($dbc);
+
+            $systemSuccess = 'You have successfully modified your name for your account!';
+
+            /* Redirect the user to another page!!!!! */
+
         } else {
 
             mysqli_rollback($dbc);
