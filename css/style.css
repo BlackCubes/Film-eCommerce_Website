@@ -1580,3 +1580,8 @@ form#userChangeNameCard {
     font-size: 13px;
     font-weight: 300;
 }
+
+#userChangeNameCard .change-name-title,
+#userChangeNameCard .change-name-submit {
+    text-align: center;
+}
