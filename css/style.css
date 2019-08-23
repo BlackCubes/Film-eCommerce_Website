@@ -1565,6 +1565,11 @@ form#userChangeNameCard {
     color: black;
 }
 
+#userChangeNameCard .change-name-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
 #userChangeNameCard .change-name-info p {
     font-size: 12px;
     font-weight: 300;
