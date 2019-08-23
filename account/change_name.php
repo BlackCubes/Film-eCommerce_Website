@@ -116,6 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" id="changeLastName" class="user-last-name--change-name" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo sanitize_input($_POST['last_name']); ?>">
             </div>
         </div>
+        <?php if (isset($fnErr) || isset($mnErr) || isset($lnErr)) echo '<div class="full-name-error--change-name"><p>' . $fnErr . ' ' . $mnErr . ' ' . $lnErr . '</p></div>'; ?>
         <div class="change-name-submit">
             <input type="submit" class="change-name-button" name="submit" value="Save Changes">
         </div>
