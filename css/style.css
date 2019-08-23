@@ -1592,3 +1592,25 @@ form#userChangeNameCard {
 #userChangeNameCard .change-name-submit {
     text-align: center;
 }
+
+#userChangeNameCard .first-name--change-name .user-first-name--change-name,
+#userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
+#userChangeNameCard .last-name--change-name .user-last-name--change-name {
+    width: 146px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangeNameCard .first-name--change-name input,
+#userChangeNameCard .middle-name--change-name input,
+#userChangeNameCard .last-name--change-name input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeNameCard .first-name--change-name input:hover,
+#userChangeNameCard .middle-name--change-name input:hover,
+#userChangeNameCard .last-name--change-name input:hover {
+    background-color: white;
+}
