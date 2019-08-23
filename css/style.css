@@ -1547,6 +1547,15 @@ form#registerUserCard2,
 
 /* CHANGE NAME PAGE */
 
-form#userChangeName {
+form#userChangeNameCard {
     background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeNameCard .change-name-card {
+    width: 500px;
+    height: 550px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
 }
