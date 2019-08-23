@@ -1559,3 +1559,8 @@ form#userChangeNameCard {
     margin-left: auto;
     margin-right: auto;
 }
+
+.change-name-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
