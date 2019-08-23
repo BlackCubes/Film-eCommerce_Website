@@ -1605,6 +1605,11 @@ form#userChangeNameCard {
     width: 146px;
 }
 
+#userChangeNameCard .first-name--change-name,
+#userChangeNameCard .middle-name--change-name {
+    margin: 0 15px 0 0;
+}
+
 /*#userChangeNameCard .first-name--change-name .user-first-name--change-name,
 #userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
 #userChangeNameCard .last-name--change-name .user-last-name--change-name {
