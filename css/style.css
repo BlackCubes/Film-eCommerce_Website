@@ -1574,3 +1574,8 @@ form#userChangeNameCard {
     font-size: 12px;
     font-weight: 300;
 }
+
+#userChangeNameCard .change-full-name label {
+    font-size: 13px;
+    font-weight: 300;
+}
