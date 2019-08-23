@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <?php if (isset($fnErr) || isset($mnErr) || isset($lnErr)) echo '<div class="full-name-error--change-name"><p>' . $fnErr . ' ' . $mnErr . ' ' . $lnErr . '</p></div>'; ?>
         <div class="change-name-submit">
-            <input type="submit" class="change-name-button" name="submit" value="Save Changes">
+            <input type="submit" class="change-name-button" name="submit" value="SAVE CHANGES">
         </div>
         <?php if (isset($systemErr)) echo '<div class="system-error--change-name"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
