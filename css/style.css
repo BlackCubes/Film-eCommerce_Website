@@ -1544,3 +1544,9 @@ form#registerUserCard2,
 .register-error-card--user .user-error--register p {
     color: red;
 }
+
+/* CHANGE NAME PAGE */
+
+form#userChangeName {
+    background-color: rgba(148, 130, 165, 0.17);
+}
