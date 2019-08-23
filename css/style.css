@@ -1609,8 +1609,8 @@ form#userChangeNameCard {
     background-color: rgba(148, 130, 165, 0.17);
 }
 
-#userChangeNameCard .first-name--change-name input:hover,
-#userChangeNameCard .middle-name--change-name input:hover,
-#userChangeNameCard .last-name--change-name input:hover {
+#userChangeNameCard .first-name--change-name input:focus,
+#userChangeNameCard .middle-name--change-name input:focus,
+#userChangeNameCard .last-name--change-name input:focus {
     background-color: white;
 }
