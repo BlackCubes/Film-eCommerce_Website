@@ -1582,7 +1582,7 @@ form#userChangeNameCard {
 }
 
 #userChangeNameCard .full-name-error--change-name p,
-#userChangeNameCard . system-error--change-name p {
+#userChangeNameCard .system-error--change-name p {
     font-size: 12px;
     font-weight: 300;
     color: red;
