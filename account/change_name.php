@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 ?>
-<form action="change_name.php" method="post" id="userChangeName">
+<form action="change_name.php" method="post" id="userChangeNameCard">
     <fieldset class="change-name-card">
         <div class="change-name-title">
             <h2>Change your name</h2>
