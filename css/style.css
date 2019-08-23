@@ -1598,7 +1598,7 @@ form#userChangeNameCard {
     margin: 15px 15px;
 }
 
-#userChangeNameCard .first-name--change-name .user-first-name--change-name,
+/*#userChangeNameCard .first-name--change-name .user-first-name--change-name,
 #userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
 #userChangeNameCard .last-name--change-name .user-last-name--change-name {
     width: 146px;
@@ -1618,4 +1618,4 @@ form#userChangeNameCard {
 #userChangeNameCard .middle-name--change-name input:focus,
 #userChangeNameCard .last-name--change-name input:focus {
     background-color: white;
-}
+}*/
