@@ -120,6 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="change-name-submit">
             <input type="submit" class="change-name-button" name="submit" value="Save Changes">
         </div>
+        <?php if (isset($systemErr)) echo '<div class="system-error--change-name"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
