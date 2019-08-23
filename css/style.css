@@ -1593,6 +1593,11 @@ form#userChangeNameCard {
     text-align: center;
 }
 
+#userChangeNameCard .change-full-name {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
 #userChangeNameCard .first-name--change-name .user-first-name--change-name,
 #userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
 #userChangeNameCard .last-name--change-name .user-last-name--change-name {
