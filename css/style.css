@@ -1680,3 +1680,18 @@ form#userChangeNameCard {
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
+
+/* CHANGE EMAIL PAGE */
+
+form#userChangeEmailCard {
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeEmailCard .change-email-card {
+    width: 500px;
+    height: 850px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
