@@ -60,6 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_autocommit($dbc, FALSE);
 
+        $q = "SELECT pass FROM users WHERE id={$_SESSION['id']}";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $pass = mysqli_fetch_array($r, MYSQLI_NUM);
+
     } else {
         $systemErr = 'Please try again';
     }
