@@ -76,6 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $systemSuccess = 'You have successfully modified your email for your account!';
 
+                /* Redirect the user to another page!!!!! */
+
             } else {
 
                 mysqli_rollback($dbc);
