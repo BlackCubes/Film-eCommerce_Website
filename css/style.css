@@ -1581,6 +1581,11 @@ form#userChangeNameCard {
     font-weight: 300;
 }
 
+#userChangeNameCard .change-full-name span.change-middle-name-info {
+    font-size: 10px;
+    font-weight: 300;
+}
+
 #userChangeNameCard .full-name-error--change-name p,
 #userChangeNameCard .system-error--change-name p {
     font-size: 12px;
