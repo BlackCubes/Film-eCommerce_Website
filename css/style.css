@@ -1731,3 +1731,8 @@ form#userChangeEmailCard {
 #userChangeEmailCard .system-error--change-email {
     text-align: center;
 }
+
+#userChangeEmailCard .change-email-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
