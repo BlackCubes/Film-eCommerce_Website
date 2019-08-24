@@ -72,6 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($r) {
 
+                mysqli_commit($dbc);
+
+                $systemSuccess = 'You have successfully modified your email for your account!';
+
             } else {
 
                 mysqli_rollback($dbc);
