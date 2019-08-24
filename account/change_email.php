@@ -64,6 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
         $pass = mysqli_fetch_array($r, MYSQLI_NUM);
 
+        if (password_verify($p, $pass) && (mysqli_num_rows($r) == 1)) {
+
+        } else {
+            $systemErr = 'The password you entered does not match those in the system. Please try again, or contact the system administrator. We are sorry for the inconvenience.';
+            /* Redirect the user to another page!!!! */
+        }
+
     } else {
         $systemErr = 'Please try again';
     }
