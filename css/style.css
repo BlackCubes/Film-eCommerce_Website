@@ -1610,16 +1610,16 @@ form#userChangeNameCard {
     margin: 0 15px 0 0;
 }
 
-/*#userChangeNameCard .first-name--change-name .user-first-name--change-name,
+#userChangeNameCard .first-name--change-name .user-first-name--change-name,
 #userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
 #userChangeNameCard .last-name--change-name .user-last-name--change-name {
-    width: 146px;
+    width: 134px;
     height: 40px;
     padding: 0 10px;
     margin: 5px 0;
 }
 
-#userChangeNameCard .first-name--change-name input,
+/*#userChangeNameCard .first-name--change-name input,
 #userChangeNameCard .middle-name--change-name input,
 #userChangeNameCard .last-name--change-name input {
     border: none;
