@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
 
-    $e1 = $e2 = $p = FALSE;
+    $e1 = $p = FALSE;
 
     if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) == $_SESSION['user_email']) {
         $emailErr1 = $emailErr2 = '';
