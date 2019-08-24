@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
 
+    $e1 = $e2 = $p = FALSE;
+
 }
 
 ?>
