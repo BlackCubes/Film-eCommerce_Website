@@ -1736,3 +1736,10 @@ form#userChangeEmailCard {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#userChangeEmailCard .new-email-input--change-email,
+#userChangeEmailCard .confirm-email-input--change-email,
+#userChangeEmailCard .confirm-password-input--change-email {
+    height: 62.2px;
+    margin: 15px 15px;
+}
