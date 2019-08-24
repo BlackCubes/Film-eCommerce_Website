@@ -1605,6 +1605,7 @@ form#userChangeNameCard {
 
 #userChangeNameCard .change-name-info {
     margin: 15px 15px;
+    padding-bottom: 5px;
 }
 
 #userChangeNameCard .change-full-name {
