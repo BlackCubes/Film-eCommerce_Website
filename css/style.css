@@ -1594,7 +1594,8 @@ form#userChangeNameCard {
 }
 
 #userChangeNameCard .change-name-title,
-#userChangeNameCard .change-name-submit {
+#userChangeNameCard .change-name-submit,
+#userChangeNameCard .system-error--change-name {
     text-align: center;
 }
 
@@ -1603,7 +1604,8 @@ form#userChangeNameCard {
     padding-bottom: 10px;
 }
 
-#userChangeNameCard .change-name-info {
+#userChangeNameCard .change-name-info,
+#userChangeNameCard .full-name-error--change-name {
     margin: 15px 15px;
     padding-bottom: 5px;
 }
