@@ -54,6 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $passErr = 'An error occured on your password!';
     }
 
+    if ($e1 && $p) {
+
+    } else {
+        $systemErr = 'Please try again';
+    }
+
 }
 
 ?>
