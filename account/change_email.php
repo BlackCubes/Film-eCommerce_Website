@@ -70,6 +70,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+            if ($r) {
+
+            } else {
+
+                mysqli_rollback($dbc);
+
+                $systemErr = 'There was an error changing your new email. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+
+                /* Redirect the user to another page!!!! */
+
+            }
+
         } else {
             $systemErr = 'The password you entered does not match those in the system. Please try again, or contact the system administrator. We are sorry for the inconvenience.';
             /* Redirect the user to another page!!!! */
