@@ -30,4 +30,11 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 }
 
 ?>
+<form action="change_email.php" method="post" id="userChangeEmailCard">
+    <fieldset class="change-email-card">
+        <div class="change-email-title">
+            <h2>Change email</h2>
+        </div>
+    </fieldset>
+</form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
