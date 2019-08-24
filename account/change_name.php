@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Change your name</h2>
         </div>
         <div class="change-name-info">
-            <p>If you want to change your name associated with your account, you may do so below. Be sure to click the <b>Save Changes</b> button when you are done.</p>
+            <p>If you want to change your name associated with your account, you may do so below. Be sure to click the <b>SAVE CHANGES</b> button when you are done.</p>
         </div>
         <div class="change-full-name">
             <div class="first-name--change-name">
@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" id="changeFirstName" class="user-first-name--change-name" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo sanitize_input($_POST['first_name']); ?>">
             </div>
             <div class="middle-name--change-name">
-                <label for="changeMiddleName">New middle name (optional)</label>
+                <label for="changeMiddleName">New middle name <span class="change-middle-name-info">(optional)</span></label>
                 <input type="text" id="changeMiddleName" class="user-middle-name--change-name" name="middle_name" maxlength="40" value="<?php if (isset($_POST['middle_name'])) echo sanitize_input($_POST['middle_name']); ?>">
             </div>
             <div class="last-name--change-name">
