@@ -1700,3 +1700,8 @@ form#userChangeEmailCard {
     font-family: 'Muli', sans-serif;
     color: black;
 }
+
+#userChangeEmailCard .change-email-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
