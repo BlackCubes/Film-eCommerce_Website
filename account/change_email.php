@@ -66,6 +66,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (password_verify($p, $pass) && (mysqli_num_rows($r) == 1)) {
 
+            $q = "UPDATE users SET email='" . $e1 . "' WHERE id={$_SESSION['id']} LIMIT 1";
+
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
         } else {
             $systemErr = 'The password you entered does not match those in the system. Please try again, or contact the system administrator. We are sorry for the inconvenience.';
             /* Redirect the user to another page!!!! */
