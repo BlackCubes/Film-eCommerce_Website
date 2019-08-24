@@ -1598,6 +1598,11 @@ form#userChangeNameCard {
     text-align: center;
 }
 
+#userChangeNameCard .change-name-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #userChangeNameCard .change-name-info {
     margin: 15px 15px;
 }
