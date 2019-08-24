@@ -70,11 +70,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="new-email-input--change-email">
             <label for="changeNewEmail">New email address</label>
-            <input type="email" id="changeNewEmail" class="user-new-email--change-email" name="email_1" maxlength="80" value="<?php if (isset($_POST['email_1'])) echo sanitize_input($_POST['email']); ?>">
+            <input type="email" id="changeNewEmail" class="user-new-email--change-email" name="email_1" maxlength="80" value="<?php if (isset($_POST['email_1'])) echo sanitize_input($_POST['email_1']); ?>">
         </div>
         <div class="confirm-email-input--change-email">
             <label for="changeConfirmEmail">Re-enter new email</label>
-            <input type="email" id="changeConfirmEmail" class="user-confirm-email--change-email" name="email_2" maxlength="80" value="<?php if (isset($_POST['email_2'])) echo sanitize_input($_POST['email_2']); ?>">
+            <input type="email" id="changeConfirmEmail" class="user-confirm-email--change-email" name="email_2" maxlength="80">
         </div>
         <div class="confirm-password-input--change-email">
             <label for="changeConfirmPass">Password</label>
