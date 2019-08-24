@@ -1607,7 +1607,7 @@ form#userChangeNameCard {
 #userChangeNameCard .middle-name--change-name,
 #userChangeNameCard .last-name--change-name {
     float: left;
-    width: 175px;
+    width: 180px;
 }
 
 #userChangeNameCard .first-name--change-name,
