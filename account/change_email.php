@@ -37,7 +37,9 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
         </div>
         <div class="current-email--change-email">
             <label for="currentEmail">Old email address</label>
-            <div id="currentEmail" class="user-current-email--change-email"></div>
+            <div id="currentEmail" class="user-current-email--change-email">
+                <p><?php echo $_SESSION['user_email']; ?></p>
+            </div>
         </div>
         <div class="new-email-input--change-email">
             <label for="changeNewEmail">New email address</label>
