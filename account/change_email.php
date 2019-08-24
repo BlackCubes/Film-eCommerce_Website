@@ -115,17 +115,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="changeNewEmail">New email address</label>
             <input type="email" id="changeNewEmail" class="user-new-email--change-email" name="email_1" maxlength="80" value="<?php if (isset($_POST['email_1'])) echo sanitize_input($_POST['email_1']); ?>">
         </div>
+        <?php if (isset($emailErr1)) echo '<div class="email-error--change-email"><p>' . $emailErr1 . '</p></div>'; ?>
         <div class="confirm-email-input--change-email">
             <label for="changeConfirmEmail">Re-enter new email</label>
             <input type="email" id="changeConfirmEmail" class="user-confirm-email--change-email" name="email_2" maxlength="80">
         </div>
+        <?php if (isset($emailErr2)) echo '<div class="email-error--change-email"><p>' . $emailErr2 . '</p></div>'; ?>
         <div class="confirm-password-input--change-email">
             <label for="changeConfirmPass">Password</label>
             <input type="password" id="changeConfirmPass" class="user-confirm-password--change-email" name="password" maxlength="255">
         </div>
+        <?php if (isset($passErr)) echo '<div class="pass-error--change-email"><p>' . $passErr . '</p></div>'; ?>
         <div class="change-email-submit">
             <input type="submit" class="change-email-button" name="submit" value="SAVE CHANGES">
         </div>
+        <?php if (isset($systemErr)) echo '<div class="system-error--change-email"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
