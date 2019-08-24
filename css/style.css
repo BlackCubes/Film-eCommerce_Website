@@ -1717,3 +1717,11 @@ form#userChangeEmailCard {
     font-size: 13px;
     font-weight: 300;
 }
+
+#userChangeEmailCard .email-error--change-email p,
+#userChangeEmailCard .pass-error--change-email p,
+#userChangeEmailCard .system-error--change-email p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
