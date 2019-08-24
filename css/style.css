@@ -1705,3 +1705,15 @@ form#userChangeEmailCard {
     font-size: 17px;
     font-weight: 300;
 }
+
+#userChangeEmailCard .current-email--change-email label,
+#userChangeEmailCard .current-email--change-email p,
+#userChangeEmailCard .new-email-input--change-email label,
+#userChangeEmailCard .new-email-input--change-email input,
+#userChangeEmailCard .confirm-email-input--change-email label,
+#userChangeEmailCard .confirm-email-input--change-email input,
+#userChangeEmailCard .confirm-password-input--change-email label,
+#userChangeEmailCard .confirm-password-input--change-email input {
+    font-size: 13px;
+    font-weight: 300;
+}
