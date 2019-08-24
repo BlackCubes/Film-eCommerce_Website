@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) == $_SESSION['user_email']) {
         $emailErr1 = $emailErr2 = '';
-        if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) == filter_var(sanitize_input($_POST['email_2']), FILTER_VALIDATE_EMAIL))) {
+        if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) == filter_var(sanitize_input($_POST['email_2']), FILTER_VALIDATE_EMAIL)) {
             $e1 = mysqli_real_escape_string($dbc, sanitize_input($_POST['email_1']));
         } else {
             $emailErr2 = 'Your confirmed email does not match your new email!';
