@@ -47,6 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $emailErr2 = 'Please confirm your new email!';
     }
 
+    if (!empty($_POST['password'])) {
+        $passErr = '';
+        $p = sanitize_input($_POST['password']);
+    } else {
+        $passErr = 'An error occured on your password!';
+    }
+
 }
 
 ?>
