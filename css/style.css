@@ -1815,3 +1815,18 @@ form#userChangeEmailCard {
 #userChangeEmailCard .pass-error--change-email p {
     margin: 0;
 }
+
+/* CHANGE PHONE NUMBER PAGE */
+
+form#userChangePhoneCard {
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangePhoneCard .change-phone-card {
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
