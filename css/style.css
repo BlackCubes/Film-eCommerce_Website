@@ -1933,6 +1933,7 @@ form#userChangePhoneCard {
     margin: 0px 15px;
 }
 
+#userChangePhoneCard .user-current-phone--change-phone p,
 #userChangePhoneCard .phone-error--change-phone p,
 #userChangePhoneCard .system-error--change-phone p {
     margin: 0;
