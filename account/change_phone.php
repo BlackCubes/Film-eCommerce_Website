@@ -22,6 +22,8 @@ $page_title = 'Change Phone Number';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+/* CASES FOR 'continue', 'cancel', and 'delete' */
+
 ?>
 <form action="change_phone.php" method="post" id="userChangePhoneCard">
     <fieldset class="change-phone-card">
@@ -39,7 +41,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
             <input type="tel" id="changeNewPhone" class="user-new-phone--change-phone" name="phone_num" placeholder="123-456-7890" maxlength="15" value="<?php if (isset($_POST['phone_num'])) echo sanitize_input($_POST['phone_num']); ?>">
         </div>
         <div class="change-phone-submit">
-            <input type="submit" class="change-phone-button" name="submit" value="CONTINUE">
+            <input type="submit" class="change-phone-button" name="continue" value="CONTINUE">
         </div>
     </fieldset>
 </form>
