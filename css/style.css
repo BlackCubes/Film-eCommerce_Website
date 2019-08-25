@@ -1732,6 +1732,10 @@ form#userChangeEmailCard {
     text-align: center;
 }
 
+#userChangeEmailCard .user-current-email--change-email {
+    line-height: 40px;
+}
+
 #userChangeEmailCard .change-email-title {
     padding-top: 10px;
     padding-bottom: 10px;
