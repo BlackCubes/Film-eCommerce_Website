@@ -64,6 +64,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $phoneErr = 'Please enter a valid phone number!';
             }
 
+            if ($pn) {
+
+            } else {
+                $systemErr = 'Please try again';
+            }
+
             break;
 
     }
