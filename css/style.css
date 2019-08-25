@@ -1996,3 +1996,8 @@ form#userOptionLoginSecurityCard {
     font-family: 'Muli', sans-serif;
     color: black;
 }
+
+#userOptionLoginSecurityCard .option-login-security-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
