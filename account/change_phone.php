@@ -142,7 +142,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
             <?php if (isset($_SESSION['phone_num'])) {echo '<div class="delete-phone-submit"><input type="submit" class="delete-phone-button" name="submit" value="DELETE"></div>';} else {echo '';} ?>
-            </div>
         </div>
         <div class="new-phone-input--change-phone">
             <label for="changeNewPhone">Mobile Number</label>
