@@ -1737,6 +1737,7 @@ form#userChangeEmailCard {
     padding-bottom: 10px;
 }
 
+#userChangeEmailCard .current-email--change-email,
 #userChangeEmailCard .new-email-input--change-email,
 #userChangeEmailCard .confirm-email-input--change-email,
 #userChangeEmailCard .confirm-password-input--change-email {
