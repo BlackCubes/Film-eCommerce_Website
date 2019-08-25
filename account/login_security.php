@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="option-login-security-title">
             <h2>Login & Security</h2>
         </div>
-        <div class="list-login-security--account-option">
+        <!--<div class="list-login-security--account-option">-->
             <div class="edit-full-name--account-option">
                 <div class="current-full-name--account-option">
                     <label for="currentName">Name</label>
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="submit" class="edit-password-button" name="submit" value="EDIT PASSWORD">
                 </div>
             </div>
-        </div>
+        <!--</div>-->
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
