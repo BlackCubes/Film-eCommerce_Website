@@ -22,6 +22,13 @@ $page_title = 'Change Phone Number';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+}
+
 /* CASES FOR 'continue', 'cancel', and 'delete' */
 
 ?>
