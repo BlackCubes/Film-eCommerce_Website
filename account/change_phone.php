@@ -31,6 +31,12 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 
 /* CASES FOR 'continue', 'cancel', and 'delete' */
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require(MYSQL);
+
+}
+
 ?>
 <form action="change_phone.php" method="post" id="userChangePhoneCard">
     <fieldset class="change-phone-card">
