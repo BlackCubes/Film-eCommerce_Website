@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
 
-    $post_action = sanitize_input($_POST['name']);
+    $post_action = sanitize_input($_POST['submit']);
 
     switch ($post_action) {
 
