@@ -1807,6 +1807,10 @@ form#userChangeEmailCard {
 
 #userChangeEmailCard .email-error--change-email,
 #userChangeEmailCard .pass-error--change-email {
-    margin: 15px 15px;
-    padding-bottom: 5px;
+    margin: 0px 15px;
+}
+
+#userChangeEmailCard .email-error--change-email p,
+#userChangeEmailCard .pass-error--change-email p {
+    margin: 0;
 }
