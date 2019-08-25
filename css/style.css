@@ -1835,3 +1835,8 @@ form#userChangePhoneCard {
     font-family: 'Muli', sans-serif;
     color: black;
 }
+
+#userChangePhoneCard .change-phone-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
