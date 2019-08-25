@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $post_action = sanitize_input($_POST['name']);
 
     switch ($post_action) {
-        
+
     }
 
 }
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
             </div>
             <div class="delete-phone-submit">
-                <input type="submit" class="delete-phone-button" name="submit" value="Delete">
+                <input type="submit" class="delete-phone-button" name="submit" value="DELETE">
             </div>
         </div>
         <div class="new-phone-input--change-phone">
