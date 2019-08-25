@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $pn = FALSE;
 
-            if (preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', sanitize_input($_POST['phone_num'])) && sanitize_input($_POST['phone_num'])) != $_SESSION['phone_num']) {
+            if (preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', sanitize_input($_POST['phone_num'])) && sanitize_input($_POST['phone_num']) != $_SESSION['phone_num']) {
                 $phoneErr = '';
                 $pn = mysqli_real_escape_string($dbc, sanitize_input($_POST['phone_num']));
             } else {
