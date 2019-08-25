@@ -2038,6 +2038,11 @@ form#userOptionLoginSecurityCard {
     float: left;
 }
 
+#userOptionLoginSecurityCard .border-row {
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
 #userOptionLoginSecurityCard .edit-full-name--account-option,
 #userOptionLoginSecurityCard .edit-email--account-option,
 #userOptionLoginSecurityCard .edit-phone--account-option,
