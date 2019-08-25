@@ -100,9 +100,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 if ($r) {
 
-                    mysqli_commit($dbc);
-
                     $_SESSION['phone_num'] = $pn;
+
+                    mysqli_commit($dbc);
 
                     $systemSuccess = 'You have successfully modified your phone number for your account!';
 
