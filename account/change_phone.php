@@ -74,6 +74,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+                if ($r) {
+
+                } else {
+
+                    mysqli_rollback($dbc);
+
+                    $systemErr = 'There was an error changing your phone number. If you think an error occured, please contact the system administrator. We apologize for the inconvenience.';
+
+                    /* Redirect the user to another page!!!! */
+
+                }
+
             } else {
                 $systemErr = 'Please try again';
             }
