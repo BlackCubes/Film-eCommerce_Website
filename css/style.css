@@ -2047,6 +2047,8 @@ form#userOptionLoginSecurityCard {
     height: 40px;
     padding: 0 10px;
     margin: 5px 0;
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
 }
 
 #userOptionLoginSecurityCard .edit-full-name-submit,
