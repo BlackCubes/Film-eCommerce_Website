@@ -34,6 +34,52 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
         <div class="option-login-security-title">
             <h2>Login & Security</h2>
         </div>
+        <div class="list-login-security--account-option">
+            <div class="edit-full-name--account-option">
+                <div class="current-full-name--account-option">
+                    <label for="currentName">Name</label>
+                    <div id="currentName" class="user-current-name--account-option">
+                        <p><?php echo $_SESSION['first_name'] . ' ' . $_SESSION['middle_name'] . ' ' . $_SESSION['last_name']; ?></p>
+                    </div>
+                </div>
+                <div class="edit-full-name-submit">
+                    <input type="submit" class="edit-full-name-button" name="submit" value="EDIT NAME">
+                </div>
+            </div>
+            <div class="edit-email--account-option">
+                <div class="current-email--account-option">
+                    <label for="currentEmail">Email</label>
+                    <div id="currentEmail" class="user-current-email--account-option">
+                        <p><?php echo $_SESSION['user_email']; ?></p>
+                    </div>
+                </div>
+                <div class="edit-email-submit">
+                    <input type="submit" class="edit-email-button" name="submit" value="EDIT EMAIL">
+                </div>
+            </div>
+            <div class="edit-phone--account-option">
+                <div class="current-phone--account-option">
+                    <label for="currentPhone">Phone Number</label>
+                    <div id="currentPhone" class="user-current-phone--account-option">
+                        <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
+                    </div>
+                </div>
+                <div class="edit-phone-submit">
+                    <input type="submit" class="edit-phone-button" name="submit" value="EDIT PHONE">
+                </div>
+            </div>
+            <div class="edit-password--account-option">
+                <div class="current-password--account-option">
+                    <label for="currentPassword">Password</label>
+                    <div id="currentPassword" class="user-current-password--account-option">
+                        <p>********</p>
+                    </div>
+                </div>
+                <div class="edit-password-submit">
+                    <input type="submit" class="edit-password-button" name="submit" value="EDIT PASSWORD">
+                </div>
+            </div>
+        </div>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
