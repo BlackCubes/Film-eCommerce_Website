@@ -150,10 +150,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="change-phone-submit">
             <input type="submit" class="change-phone-button" name="submit" value="CONTINUE">
         </div>
-        <?php if (isset($systemErr)) echo '<div class="system-error--change-phone"><p>' . $systemErr . '</p></div>'; ?>
         <div class="cancel-phone-submit">
             <input type="submit" class="cancel-phone-button" name="submit" value="CANCEL">
         </div>
+        <?php if (isset($systemErr)) echo '<div class="system-error--change-phone"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
