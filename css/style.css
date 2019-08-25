@@ -1848,3 +1848,10 @@ form#userChangePhoneCard {
     font-size: 13px;
     font-weight: 300;
 }
+
+#userChangePhoneCard .phone-error--change-phone p,
+#userChangePhoneCard .system-error--change-phone p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
