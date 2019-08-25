@@ -1855,3 +1855,10 @@ form#userChangePhoneCard {
     font-weight: 300;
     color: red;
 }
+
+#userChangePhoneCard .change-phone-title,
+#userChangePhoneCard .change-phone-submit,
+#userChangePhoneCard .cancel-phone-submit,
+#userChangePhoneCard .system-error--change-phone {
+    text-align: center;
+}
