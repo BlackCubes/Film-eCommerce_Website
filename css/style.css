@@ -1743,3 +1743,25 @@ form#userChangeEmailCard {
     height: 62.2px;
     margin: 15px 15px;
 }
+
+#userChangeEmailCard .user-new-email--change-email,
+#userChangeEmailCard .user-confirm-email--change-email,
+#userChangeEmailCard .user-confirm-password--change-email {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangeEmailCard .new-email-input--change-email input,
+#userChangeEmailCard .confirm-email-input--change-email input,
+#userChangeEmailCard .confirm-password-input--change-email input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeEmailCard .new-email-input--change-email input:focus,
+#userChangeEmailCard .confirm-email-input--change-email input:focus,
+#userChangeEmailCard .confirm-password-input--change-email input:focus {
+    background-color: white;
+}
