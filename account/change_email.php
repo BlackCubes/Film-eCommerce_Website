@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $e1 = $p = FALSE;
 
-    if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) == $_SESSION['user_email']) {
+    if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) != $_SESSION['user_email']) {
         $emailErr1 = $emailErr2 = '';
         if (filter_var(sanitize_input($_POST['email_1']), FILTER_VALIDATE_EMAIL) == filter_var(sanitize_input($_POST['email_2']), FILTER_VALIDATE_EMAIL)) {
             $e1 = mysqli_real_escape_string($dbc, sanitize_input($_POST['email_1']));
