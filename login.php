@@ -62,7 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Once the user has succeeded on the three conditionals, then the user is officially logged in by storing their info in sessions. Once this is done is where the database connection is closed since it is no longer needed:
                 $_SESSION['id'] = $user_id;
                 $_SESSION['first_name'] = $first_name;
-                $_SESSION['user_full_name'] = $first_name . ' ' . $middle_name . ' ' . $last_name;
+                $_SESSION['middle_name'] = $middle_name;
+                $_SESSION['last_name'] = $last_name;
                 $_SESSION['user_email'] = $email;
                 $_SESSION['phone_num'] = $phone_num;
                 mysqli_close($dbc);
