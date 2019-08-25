@@ -34,6 +34,13 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
             </div>
         </div>
+        <div class="new-phone-input--change-phone">
+            <label for="changeNewPhone">Mobile Number</label>
+            <input type="tel" id="changeNewPhone" class="user-new-phone--change-phone" name="phone_num" placeholder="123-456-7890" maxlength="15" value="<?php if (isset($_POST['phone_num'])) echo sanitize_input($_POST['phone_num']); ?>">
+        </div>
+        <div class="change-phone-submit">
+            <input type="submit" class="change-phone-button" name="submit" value="CONTINUE">
+        </div>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
