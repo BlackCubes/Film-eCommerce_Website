@@ -2037,3 +2037,48 @@ form#userOptionLoginSecurityCard {
     padding: 0 10px;
     margin: 5px 0;
 }
+
+#userOptionLoginSecurityCard .edit-full-name-submit,
+#userOptionLoginSecurityCard .edit-email-submit,
+#userOptionLoginSecurityCard .edit-phone-submit,
+#userOptionLoginSecurityCard .edit-password-submit {
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 24px;
+    margin-left: 17px;
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit .edit-full-name-button,
+#userOptionLoginSecurityCard .edit-email-submit .edit-email-button,
+#userOptionLoginSecurityCard .edit-phone-submit .edit-phone-button,
+#userOptionLoginSecurityCard .edit-password-submit .edit-password-button {
+    width: 200px;
+    height: 40px;
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit input,
+#userOptionLoginSecurityCard .edit-email-submit input,
+#userOptionLoginSecurityCard .edit-phone-submit input,
+#userOptionLoginSecurityCard .edit-password-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit input:hover,
+#userOptionLoginSecurityCard .edit-email-submit input:hover,
+#userOptionLoginSecurityCard .edit-phone-submit input:hover,
+#userOptionLoginSecurityCard .edit-password-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
