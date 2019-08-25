@@ -29,8 +29,6 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 
-/* CASES FOR 'continue', 'cancel', and 'delete' */
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
