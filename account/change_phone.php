@@ -45,6 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+            if ($r) {
+
+            } else {
+
+                mysqli_rollback($dbc);
+
+                $systemErr = 'There was an error deleting your phone number. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+
+            }
+
             break;
 
         case "CANCEL":
