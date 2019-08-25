@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case "CANCEL":
 
             $url = BASE_URL . 'account/profile.php';
+            mysqli_close($dbc);
             ob_end_clean();
             header("Location: $url");
             exit();
