@@ -47,6 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($r) {
 
+                unset($_SESSION['phone_num']);
+
+                mysqli_commit($dbc);
+
+                $systemSuccess = 'You have successfully deleted your phone number from your account!';
+
+                /* Redirect the user to another page!!!! */
+
             } else {
 
                 mysqli_rollback($dbc);
