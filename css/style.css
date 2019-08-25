@@ -1869,7 +1869,13 @@ form#userChangePhoneCard {
     margin: 15px 15px;
 }
 
-#userChangePhoneCard .user-current-phone--change-phone,
+#userChangePhoneCard .user-current-phone--change-phone {
+    width: 229px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
 #userChangePhoneCard .user-new-phone--change-phone {
     width: 458px;
     height: 40px;
