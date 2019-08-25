@@ -1830,3 +1830,8 @@ form#userChangePhoneCard {
     margin-left: auto;
     margin-right: auto;
 }
+
+#userChangePhoneCard .change-phone-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
