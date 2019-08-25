@@ -17,22 +17,22 @@
 
 
 // Including the configuration file which includes some of the variables and the error management that would be used later in this file:
-require('includes/config.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
 // Naming the proper page title:
 $page_title = 'Change Password';
 
 // Including the header file:
-include('includes/header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
 // This first if-statement checks to see if the user is logged in by using session of the stored user's id. If the user is not logged in (fulfilling the if-conditional), then the individual is redirected to the home page where BASE_URL is the variable defined in config.inc.php. The function ob_end_clean() erases the output buffer and turns off output buffering on line 32. On line 33, the header() function sends a raw HTTP header to a client. Lastly, the exit() function on line 34 terminates the script:
-if (!isset($_SESSION['id'])) {
-
+if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     $url = BASE_URL . 'index.php';
     ob_end_clean();
     header("Location: $url");
     exit();
-
 }
 
 // This is the main Submit Conditional once the user submitted the HTML form input, and uses the POST metthod:
@@ -125,5 +125,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php if (isset($_POST['password1'], $_POST['password2'])) echo '<div class="system-error--change-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
     </fieldset>
 </form>
-
-<?php include('includes/footer.html'); // Include the footer file. ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); // Include the footer file. ?>
