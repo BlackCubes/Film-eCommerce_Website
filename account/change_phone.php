@@ -35,6 +35,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
             <div id="currentPhone" class="user-current-phone--change-phone">
                 <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
             </div>
+            <div class="delete-phone-submit">
+                <input type="submit" class="delete-phone-button" name="submit" value="Delete">
+            </div>
         </div>
         <div class="new-phone-input--change-phone">
             <label for="changeNewPhone">Mobile Number</label>
