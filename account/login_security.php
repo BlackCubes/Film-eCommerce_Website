@@ -78,6 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Login & Security</h2>
         </div>
         <!--<div class="list-login-security--account-option">-->
+        <div class="border-row">
             <div class="edit-full-name--account-option">
                 <div class="current-full-name--account-option">
                     <label for="currentName">Name</label>
@@ -89,6 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="submit" class="edit-full-name-button" name="submit" value="EDIT NAME">
                 </div>
             </div>
+        </div>
+        <div class="border-row">
             <div class="edit-email--account-option">
                 <div class="current-email--account-option">
                     <label for="currentEmail">Email</label>
@@ -100,6 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="submit" class="edit-email-button" name="submit" value="EDIT EMAIL">
                 </div>
             </div>
+        </div>
+        <div class="border-row">
             <div class="edit-phone--account-option">
                 <div class="current-phone--account-option">
                     <label for="currentPhone">Phone Number</label>
@@ -111,6 +116,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="submit" class="edit-phone-button" name="submit" value="EDIT PHONE">
                 </div>
             </div>
+        </div>
+        <div class="border-row">
             <div class="edit-password--account-option">
                 <div class="current-password--account-option">
                     <label for="currentPassword">Password</label>
@@ -122,6 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="submit" class="edit-password-button" name="submit" value="EDIT PASSWORD">
                 </div>
             </div>
+        </div>
         <!--</div>-->
     </fieldset>
 </form>
