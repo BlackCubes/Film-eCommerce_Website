@@ -2013,3 +2013,7 @@ form#userOptionLoginSecurityCard {
     font-size: 13px;
     font-weight: 300;
 }
+
+#userOptionLoginSecurityCard .option-login-security-title {
+    text-align: center;
+}
