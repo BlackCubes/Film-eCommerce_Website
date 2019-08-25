@@ -1872,6 +1872,11 @@ form#userChangePhoneCard {
     float: left;
 }
 
+#userChangePhoneCard .change-phone-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 #userChangePhoneCard .current-phone--change-phone,
 #userChangePhoneCard .new-phone-input--change-phone {
     height: 62.2px;
