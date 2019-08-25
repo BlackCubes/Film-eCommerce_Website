@@ -39,6 +39,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     switch ($post_action) {
 
+        case "DELETE":
+
+            break;
+
+        case "CANCEL":
+
+            break;
+
+        case "SUBMIT":
+
+            break;
+
     }
 
 }
@@ -55,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
             </div>
             <div class="delete-phone-submit">
-                <input type="submit" class="delete-phone-button" name="submit" value="DELETE">
+                <input type="submit" class="delete-phone-button" name="delete" value="DELETE">
             </div>
         </div>
         <div class="new-phone-input--change-phone">
@@ -66,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="submit" class="change-phone-button" name="submit" value="CONTINUE">
         </div>
         <div class="cancel-phone-submit">
-            <input type="submit" class="cancel-phone-button" name="submit" value="CANCEL">
+            <input type="submit" class="cancel-phone-button" name="cancel" value="CANCEL">
         </div>
     </fieldset>
 </form>
