@@ -36,7 +36,7 @@ if (!isset($_SESSION['id'])) {
     </div>
     <div class="profile-option--profile-view">
         <div class="container-login-security--profile-view">
-            <a href="#">
+            <a href="/FilmIndustry/eCommerce/account/login_security.php">
                 <div class="login-security-title--profile-view">
                     <h4>Login & security</h4>
                 </div>
