@@ -45,11 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         } else {
             $emailErr1 = 'Please enter a newer email address different from your old one!';
-            $emailErr2 = '';
+            $emailErr2 = 'Please confirm your new email!';
         }
     } else {
         $emailErr1 = 'Please enter a new email address!';
-        $emailErr2 = '';
+        $emailErr2 = 'An error occured on confirming your new email!';
     }
 
     if (!empty($_POST['password'])) {
