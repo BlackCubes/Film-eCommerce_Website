@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <form action="change_email.php" method="post" id="userChangeEmailCard">
     <fieldset class="change-email-card">
         <div class="change-email-title">
-            <h2>Change email</h2>
+            <h2>Change Email</h2>
         </div>
         <div class="current-email--change-email">
             <label for="currentEmail">Old email address</label>
