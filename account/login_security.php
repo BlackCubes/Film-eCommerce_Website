@@ -39,17 +39,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         case "EDIT NAME":
 
+            $url = BASE_URL . 'account/change_name.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+
             break;
 
         case "EDIT EMAIL":
+
+            $url = BASE_URL . 'account/change_email.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
 
             break;
 
         case "EDIT PHONE":
 
+            $url = BASE_URL . 'account/change_phone.php';
+            ob_end_clean();
+            header("Location: $url");
+
             break;
 
         case "EDIT PASSWORD":
+
+            $url = BASE_URL . 'account/change_password.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
 
             break;
 
