@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <form action="change_name.php" method="post" id="userChangeNameCard">
     <fieldset class="change-name-card">
         <div class="change-name-title">
-            <h2>Change your name</h2>
+            <h2>Change Your Name</h2>
         </div>
         <div class="change-name-info">
             <p>If you want to change your name associated with your account, you may do so below. Be sure to click the <b>SAVE CHANGES</b> button when you are done.</p>
