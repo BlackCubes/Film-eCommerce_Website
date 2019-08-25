@@ -77,6 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($r) {
 
+                $_SESSION['user_email'] = $e1;
+
                 mysqli_commit($dbc);
 
                 $systemSuccess = 'You have successfully modified your email for your account!';
