@@ -29,4 +29,11 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 ?>
+<form action="login_security.php" method="post" id="userOptionLoginSecurityCard">
+    <fieldset class="option-login-security-card">
+        <div class="option-login-security-title">
+            <h2>Login & Security</h2>
+        </div>
+    </fieldset>
+</form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
