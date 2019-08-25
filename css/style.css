@@ -1868,7 +1868,7 @@ form#userChangePhoneCard {
     width: 100%;
     height: 62.2px;
     padding-top: 20px;
-    padding-bottom: 5px;
+    padding-bottom: 2.5px;
 }
 
 #userChangePhoneCard .change-phone-submit {
@@ -1876,7 +1876,7 @@ form#userChangePhoneCard {
 }
 
 #userChangePhoneCard .cancel-phone-submit {
-    padding-top: 5px;
+    padding-top: 2.5px;
 }
 
 #userChangePhoneCard .change-phone-submit .change-phone-button,
