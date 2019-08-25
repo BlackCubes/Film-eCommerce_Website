@@ -146,9 +146,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="changeNewPhone">Mobile Number</label>
             <input type="tel" id="changeNewPhone" class="user-new-phone--change-phone" name="phone_num" placeholder="123-456-7890" maxlength="15" value="<?php if (isset($_POST['phone_num'])) echo sanitize_input($_POST['phone_num']); ?>">
         </div>
+        <?php if (isset($phoneErr)) echo '<div class="phone-error--change-phone"><p>' . $phoneErr . '</p></div>'; ?>
         <div class="change-phone-submit">
             <input type="submit" class="change-phone-button" name="submit" value="CONTINUE">
         </div>
+        <?php if (isset($systemErr)) echo '<div class="system-error--change-phone"><p>' . $systemErr . '</p></div>'; ?>
         <div class="cancel-phone-submit">
             <input type="submit" class="cancel-phone-button" name="submit" value="CANCEL">
         </div>
