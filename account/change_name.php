@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_rollback($dbc);
 
-            $systemErr = 'There was an error changing your new name. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+            $systemErr = 'There was an error changing your new name. If you think an error occured, please contact the system administrator. We apologize for the inconvenience.';
 
             /* Redirect the user to another page!!!! */
 
