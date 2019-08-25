@@ -1840,3 +1840,11 @@ form#userChangePhoneCard {
     font-size: 17px;
     font-weight: 300;
 }
+
+#userChangePhoneCard .current-phone--change-phone label,
+#userChangePhoneCard .current-phone--change-phone .user-current-phone--change-phone p,
+#userChangePhoneCard .new-phone-input--change-phone label,
+#userChangePhoneCard .new-phone-input--change-phone input {
+    font-size: 13px;
+    font-weight: 300;
+}
