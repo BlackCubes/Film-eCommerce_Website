@@ -1871,6 +1871,14 @@ form#userChangePhoneCard {
     padding-bottom: 5px;
 }
 
+#userChangePhoneCard .change-phone-submit {
+    padding-top: 20px;
+}
+
+#userChangePhoneCard .cancel-phone-submit {
+    padding-top: 5px;
+}
+
 #userChangePhoneCard .change-phone-submit .change-phone-button,
 #userChangePhoneCard .cancel-phone-submit .cancel-phone-button {
     width: 482px;
