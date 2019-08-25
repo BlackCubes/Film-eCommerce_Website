@@ -2058,8 +2058,8 @@ form#userOptionLoginSecurityCard {
     width: 200px;
     height: 40px;
     padding-left: 10px;
-    margin-top: 24px;
-    /*margin-left: 17px;*/
+    margin-top: 32px;
+    margin-left: 10px;
 }
 
 #userOptionLoginSecurityCard .edit-full-name-submit .edit-full-name-button,
