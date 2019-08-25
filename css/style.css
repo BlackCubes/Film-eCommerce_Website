@@ -2020,6 +2020,17 @@ form#userOptionLoginSecurityCard {
     padding-bottom: 10px;
 }
 
+#userOptionLoginSecurityCard .current-full-name--account-option,
+#userOptionLoginSecurityCard .edit-full-name-submit,
+#userOptionLoginSecurityCard .current-email--account-option,
+#userOptionLoginSecurityCard .edit-email-submit,
+#userOptionLoginSecurityCard .current-phone--account-option,
+#userOptionLoginSecurityCard .edit-phone-submit,
+#userOptionLoginSecurityCard .current-password--account-option,
+#userOptionLoginSecurityCard .edit-password-submit {
+    float: left;
+}
+
 #userOptionLoginSecurityCard .edit-full-name--account-option,
 #userOptionLoginSecurityCard .edit-email--account-option,
 #userOptionLoginSecurityCard .edit-phone--account-option,
