@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $url = BASE_URL . 'account/login_security.php';
             ob_end_clean();
-            header("Location: $url")
+            header("Location: $url");
             exit();
 
             /* Redirect the user to another page!!!! */
