@@ -2020,6 +2020,13 @@ form#userOptionLoginSecurityCard {
     padding-bottom: 10px;
 }
 
+#userOptionLoginSecurityCard .user-current-name--account-option,
+#userOptionLoginSecurityCard .user-current-email--account-option,
+#userOptionLoginSecurityCard .user-current-phone--account-option,
+#userOptionLoginSecurityCard .user-current-password--account-option {
+    line-height: 40px;
+}
+
 #userOptionLoginSecurityCard .current-full-name--account-option,
 #userOptionLoginSecurityCard .edit-full-name-submit,
 #userOptionLoginSecurityCard .current-email--account-option,
