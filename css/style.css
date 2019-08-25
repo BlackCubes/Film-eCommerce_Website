@@ -1755,6 +1755,7 @@ form#userChangeEmailCard {
     margin: 5px 0;
 }
 
+#userChangeEmailCard .user-current-email--change-email,
 #userChangeEmailCard .new-email-input--change-email input,
 #userChangeEmailCard .confirm-email-input--change-email input,
 #userChangeEmailCard .confirm-password-input--change-email input {
