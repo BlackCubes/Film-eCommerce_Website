@@ -1898,6 +1898,13 @@ form#userChangePhoneCard {
     background-color: white;
 }
 
+#userChangePhoneCard .delete-phone-submit {
+    width: 200px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
 #userChangePhoneCard .change-phone-submit,
 #userChangePhoneCard .cancel-phone-submit {
     width: 100%;
