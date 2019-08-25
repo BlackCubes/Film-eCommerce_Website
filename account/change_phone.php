@@ -135,9 +135,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>Change Mobile Phone Number</h2>
         </div>
         <div class="current-phone--change-phone">
-            <label for="currentPhone">Old mobile phone number</label>
-            <div id="currentPhone" class="user-current-phone--change-phone">
-                <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
+            <div class="old-phone-number--change-phone">
+                <label for="currentPhone">Old mobile phone number</label>
+                <div id="currentPhone" class="user-current-phone--change-phone">
+                    <p><?php if (isset($_SESSION['phone_num'])) {echo $_SESSION['phone_num'];} else {echo 'None';} ?></p>
+                </div>
             </div>
             <?php if (isset($_SESSION['phone_num'])) {echo '<div class="delete-phone-submit"><input type="submit" class="delete-phone-button" name="submit" value="DELETE"></div>';} else {echo '';} ?>
             </div>
