@@ -2019,3 +2019,21 @@ form#userOptionLoginSecurityCard {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#userOptionLoginSecurityCard .edit-full-name--account-option,
+#userOptionLoginSecurityCard .edit-email--account-option,
+#userOptionLoginSecurityCard .edit-phone--account-option,
+#userOptionLoginSecurityCard .edit-password--account-option {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userOptionLoginSecurityCard .user-current-name--account-option,
+#userOptionLoginSecurityCard .user-current-email--account-option,
+#userOptionLoginSecurityCard .user-current-phone--account-option,
+#userOptionLoginSecurityCard .user-current-password--account-option {
+    width: 229px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
