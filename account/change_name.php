@@ -71,6 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($r) {
 
+            $_SESSION['first_name'] = $fn;
+            $_SESSION['middle_name'] = $mn;
+            $_SESSION['last_name'] = $ln;
+
             mysqli_commit($dbc);
 
             $systemSuccess = 'You have successfully modified your name for your account!';
