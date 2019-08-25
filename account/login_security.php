@@ -28,6 +28,12 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     header("Location: $url");
     exit();
 }
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require(MYSQL);
+
+}
 ?>
 <form action="login_security.php" method="post" id="userOptionLoginSecurityCard">
     <fieldset class="option-login-security-card">
