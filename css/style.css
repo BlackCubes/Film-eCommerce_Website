@@ -1927,3 +1927,13 @@ form#userChangePhoneCard {
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
+
+#userChangePhoneCard .phone-error--change-phone,
+#userChangePhoneCard .system-error--change-phone {
+    margin: 0px 15px;
+}
+
+#userChangePhoneCard .phone-error--change-phone p,
+#userChangePhoneCard .system-error--change-phone p {
+    margin: 0;
+}
