@@ -1905,6 +1905,11 @@ form#userChangePhoneCard {
     margin: 5px 0;
 }
 
+#userChangePhoneCard .delete-phone-submit .delete-phone-button {
+    width: 200px;
+    height: 40px;
+}
+
 #userChangePhoneCard .change-phone-submit,
 #userChangePhoneCard .cancel-phone-submit {
     width: 100%;
@@ -1927,6 +1932,7 @@ form#userChangePhoneCard {
     height: 45px;
 }
 
+#userChangePhoneCard .delete-phone-submit input,
 #userChangePhoneCard .change-phone-submit input,
 #userChangePhoneCard .cancel-phone-submit input {
     background-color: white;
@@ -1938,6 +1944,7 @@ form#userChangePhoneCard {
     transition: all 0.3s ease-out;
 }
 
+#userChangePhoneCard .delete-phone-submit input:hover,
 #userChangePhoneCard .change-phone-submit input:hover,
 #userChangePhoneCard .cancel-phone-submit input:hover {
     color: rgb(94, 94, 94);
