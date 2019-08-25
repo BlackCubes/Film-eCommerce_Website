@@ -1976,3 +1976,18 @@ form#userChangePhoneCard {
 #userChangePhoneCard .system-error--change-phone p {
     margin: 0;
 }
+
+/* LOGIN & SECURITY OPTIONS PAGE */
+
+form#userOptionLoginSecurityCard {
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userOptionLoginSecurityCard .option-login-security-card {
+    width: 500px;
+    height: 850px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
