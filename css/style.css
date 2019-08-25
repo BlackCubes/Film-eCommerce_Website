@@ -1863,6 +1863,27 @@ form#userChangePhoneCard {
     text-align: center;
 }
 
+#userChangePhoneCard .new-phone-input--change-phone {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userChangePhoneCard .user-new-phone--change-phone {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangePhoneCard .new-phone-input--change-phone input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangePhoneCard .new-phone-input--change-phone input:focus {
+    background-color: white;
+}
+
 #userChangePhoneCard .change-phone-submit,
 #userChangePhoneCard .cancel-phone-submit {
     width: 100%;
