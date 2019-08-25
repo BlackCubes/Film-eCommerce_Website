@@ -41,6 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         case "DELETE":
 
+            $q = "UPDATE users SET phone_num='' WHERE id={$_SESSION['id']} LIMIT 1";
+
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
             break;
 
         case "CANCEL":
