@@ -55,6 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         case "CONTINUE":
 
+            $pn = FALSE;
+
+            if (preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', sanitize_input($_POST['phone_num']))) {
+                $phoneErr = '';
+                $pn = mysqli_real_escape_string($dbc, sanitize_input($_POST['phone_num']));
+            } else {
+                $phoneErr = 'Please enter a valid phone number!';
+            }
+
             break;
 
     }
