@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['id'] = $user_id;
                 $_SESSION['first_name'] = $first_name;
                 $_SESSION['user_email'] = $email;
-                $_SESSION['phone_num'] = $phone_num
+                $_SESSION['phone_num'] = $phone_num;
                 mysqli_close($dbc);
 
                 // Redirecting the user to the homepage after logging in:
