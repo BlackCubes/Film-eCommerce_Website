@@ -37,6 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $post_action = sanitize_input($_POST['name']);
 
+    switch ($post_action) {
+        
+    }
+
 }
 
 ?>
