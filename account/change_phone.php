@@ -45,6 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         case "CANCEL":
 
+            $url = BASE_URL . 'account/profile.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+
             break;
 
         case "CONTINUE":
