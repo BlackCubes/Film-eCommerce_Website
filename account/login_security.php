@@ -36,7 +36,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $post_action = sanitize_input($_POST['submit']);
 
     switch ($post_action) {
-        
+
+        case "EDIT NAME":
+
+            break;
+
+        case "EDIT EMAIL":
+
+            break;
+
+        case "EDIT PHONE":
+
+            break;
+
+        case "EDIT PASSWORD":
+
+            break;
+
     }
 
 }
