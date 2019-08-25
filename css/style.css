@@ -2095,3 +2095,10 @@ form#userOptionLoginSecurityCard {
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
+
+#userOptionLoginSecurityCard .user-current-name--account-option p,
+#userOptionLoginSecurityCard .user-current-email--account-option p,
+#userOptionLoginSecurityCard .user-current-phone--account-option p,
+#userOptionLoginSecurityCard .user-current-password--account-option p {
+    margin: 0;
+}
