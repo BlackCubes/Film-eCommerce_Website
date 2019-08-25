@@ -1863,6 +1863,11 @@ form#userChangePhoneCard {
     text-align: center;
 }
 
+#userChangePhoneCard .old-phone-number--change-phone,
+#userChangePhoneCard .delete-phone-submit {
+    float: left;
+}
+
 #userChangePhoneCard .current-phone--change-phone,
 #userChangePhoneCard .new-phone-input--change-phone {
     height: 62.2px;
