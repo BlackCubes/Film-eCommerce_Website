@@ -46,6 +46,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         <div class="change-phone-submit">
             <input type="submit" class="change-phone-button" name="submit" value="CONTINUE">
         </div>
+        <div class="cancel-phone-submit">
+            <input type="submit" class="cancel-phone-button" name="submit" value="CANCEL">
+        </div>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
