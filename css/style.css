@@ -2161,3 +2161,41 @@ form#userChangeAddressCard {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#userChangeAddressCard .new-address-input--change-address {
+    height: 124.4px;
+    margin: 15px 15px;
+}
+
+#userChangeAddressCard .new-city-input--change-address,
+#userChangeAddressCard .new-state-input--change-address,
+#userChangeAddressCard .new-zip-code-input--change-address {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userChangeAddressCard .user-new-address-1--change-address,
+#userChangeAddressCard .user-new-address-2--change-address,
+#userChangeAddressCard .user-new-city--change-address,
+#userChangeAddressCard .user-new-state--change-address,
+#userChangeAddressCard .user-new-zip--change-address {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangeAddressCard .new-address-input--change-address input,
+#userChangeAddressCard .new-city-input--change-address input,
+#userChangeAddressCard .new-state-input--change-address input,
+#userChangeAddressCard .new-zip-code-input--change-address input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeAddressCard .new-address-input--change-address input:focus,
+#userChangeAddressCard .new-city-input--change-address input:focus,
+#userChangeAddressCard .new-state-input--change-address input:focus,
+#userChangeAddressCard .new-zip-code-input--change-address input:focus {
+    background-color: white;
+}
