@@ -52,6 +52,9 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
             <label for="changeNewZipCode">Zip Code</label>
             <input type="text" id="changeNewZipCode" class="user-new-zip--change-address" name="zip_code" maxlength="10" placeholder="12345 or 12345-6789" value="<?php if (isset($_POST['zip_code'])) echo sanitize_input($_POST['zip_code']); ?>">
         </div>
+        <div class="change-address-submit">
+            <input type="submit" class="change-address-button" name="submit" value="SAVE CHANGES">
+        </div>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
