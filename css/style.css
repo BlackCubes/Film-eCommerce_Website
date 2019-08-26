@@ -2139,3 +2139,15 @@ form#userChangeAddressCard {
     font-size: 17px;
     font-weight: 300;
 }
+
+#userChangeAddressCard .new-address-input--change-address label,
+#userChangeAddressCard .new-address-input--change-address input,
+#userChangeAddressCard .new-city-input--change-address label,
+#userChangeAddressCard .new-city-input--change-address input,
+#userChangeAddressCard .new-state-input--change-address label,
+#userChangeAddressCard .new-state-input--change-address input,
+#userChangeAddressCard .new-zip-code-input--change-address label,
+#userChangeAddressCard .new-zip-code-input--change-address input {
+    font-size: 13px;
+    font-weight: 300;
+}
