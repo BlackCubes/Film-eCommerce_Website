@@ -121,8 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     header("Location: $url");
                     exit();
 
-                    /* Redirect the user to another page!!!! */
-
                 } else {
 
                     mysqli_rollback($dbc);
@@ -133,8 +131,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     ob_end_clean();
                     header("Location: $url");
                     exit();
-
-                    /* Redirect the user to another page!!!! */
 
                 }
 
