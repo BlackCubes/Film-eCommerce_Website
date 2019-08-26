@@ -71,6 +71,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             break;
     }
 }
+
+if (!empty($_SESSION['systemSuccess'])) {
+    echo '<div class="system-success--account-option"><p>' . $_SESSION['systemSuccess'] . '</p></div>';
+    unset($_SESSION['systemSuccess']);
+} else {
+    unset($_SESSION['systemSuccess']);
+}
+
+if (!empty($_SESSION['systemErr'])) {
+    echo '<div class=""system-error--account-option><p>' . $_SESSION['systemErr'] . '</p></div>';
+} else {
+    unset($_SESSION['systemErr']);
+}
 ?>
 <form action="login_security.php" method="post" id="userOptionLoginSecurityCard">
     <fieldset class="option-login-security-card">
