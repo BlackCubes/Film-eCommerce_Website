@@ -79,6 +79,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_autocommit($dbc, FALSE);
 
+        $q = "UPDATE shippingaddress SET address_1='" . $a1 . "', address_2='" . $a2 . "', city='" . $city . "', state='" . $state . "', zip='" . $zip . "' WHERE user_id={$_SESSION['id']} LIMIT 1";
+
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
     } else {
         $systemErr = 'Please try again';
     }
