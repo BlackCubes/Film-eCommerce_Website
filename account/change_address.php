@@ -85,6 +85,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($r) {
 
+            mysqli_commit($dbc);
+
+            $_SESSION['systemSuccess'] = 'You have successfully modified your address for your account!';
+
+            $url = BASE_URL . 'account/profile.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+
         } else {
 
             mysqli_rollback($dbc);
