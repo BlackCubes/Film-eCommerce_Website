@@ -66,6 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stateErr = 'There was an error on inputting your state!';
     }
 
+    if (preg_match('/^(\d{5})(-\d{4})?\s?$/', sanitize_input($_POST['zip_code']))) {
+        $zipErr = '';
+        $zip = mysqli_real_escape_string($dbc, sanitize_input($_POST['zip_code']));
+    } else {
+        $zipErr = 'There was an error on your zip code!';
+    }
+
 }
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
