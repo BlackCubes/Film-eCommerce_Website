@@ -2156,3 +2156,8 @@ form#userChangeAddressCard {
 #userChangeAddressCard .change-address-submit {
     text-align: center;
 }
+
+#userChangeAddressCard .change-address-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
