@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($e1 && $p) {
 
-        $systemErr = '';
+        $systemErr = $_SESSION['systemSuccess'] = $_SESSION['systemErr'] = '';
 
         mysqli_autocommit($dbc, FALSE);
 
@@ -81,7 +81,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 mysqli_commit($dbc);
 
-                $systemSuccess = 'You have successfully modified your email for your account!';
+                $_SESSION['systemSuccess'] = 'You have successfully modified your email for your account!';
+
+                $url = BASE_URL . 'account/login_security.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
 
                 /* Redirect the user to another page!!!!! */
 
@@ -89,14 +94,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 mysqli_rollback($dbc);
 
-                $systemErr = 'There was an error changing your new email. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+                $_SESSION['systemErr'] = 'There was an error changing your new email. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+
+                $url = BASE_URL . 'account/login_security.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
 
                 /* Redirect the user to another page!!!! */
 
             }
 
         } else {
-            $systemErr = 'The password you entered does not match those in the system. Please try again, or contact the system administrator. We are sorry for the inconvenience.';
+
+            $_SESSION['systemErr'] = 'The password you entered does not match those in the system. Please try again, or contact the system administrator. We are sorry for the inconvenience.';
+
+            $url = BASE_URL . 'account/login_security.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
             /* Redirect the user to another page!!!! */
         }
 
