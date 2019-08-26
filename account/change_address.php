@@ -74,7 +74,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($a1 && $city && $state && $zip) {
-        
+
+        $systemErr = $_SESSION['systemSuccess'] = $_SESSION['systemErr'] = '';
+
+        mysqli_autocommit($dbc, FALSE);
+
     } else {
         $systemErr = 'Please try again';
     }
