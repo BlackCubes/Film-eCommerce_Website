@@ -83,6 +83,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+        if ($r) {
+
+        } else {
+
+            mysqli_rollback($dbc);
+
+            $_SESSION['systemErr'] = 'There was an error changing your address. If you think an error occured, please contact the system administrator. We apologize for the inconvenience';
+
+            $url = BASE_URL . 'account/profile.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+
+        }
+
     } else {
         $systemErr = 'Please try again';
     }
