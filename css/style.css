@@ -2129,3 +2129,8 @@ form#userChangeAddressCard {
     margin-left: auto;
     margin-right: auto;
 }
+
+#userChangeAddressCard .change-address-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
