@@ -2114,3 +2114,18 @@ form#userOptionLoginSecurityCard {
 #userOptionLoginSecurityCard .user-current-password--account-option p {
     margin: 0;
 }
+
+/* CHANGE ADDRESS PAGE */
+
+form#userChangeAddressCard {
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeAddressCard .change-address-card {
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
