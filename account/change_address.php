@@ -29,6 +29,11 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    require(MYSQL);
+
+}
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
     <fieldset class="change-address-card">
