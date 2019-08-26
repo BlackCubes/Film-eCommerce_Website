@@ -52,6 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $a2Err = 'There was an error on your second address!';
     }
 
+    if (preg_match('/^(\p{L}+(?:([\ \-\']|(\.\ ))\p{L}+)*){3,50}$/u', sanitize_input($_POST['city']))) {
+        $cityErr = '';
+        $city = mysqli_real_escape_string($dbc, sanitize_input($_POST['city']));
+    } else {
+        $cityErr = 'There was an error on inputting your city!';
+    }
+
 }
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
