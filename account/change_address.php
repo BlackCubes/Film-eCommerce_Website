@@ -73,6 +73,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $zipErr = 'There was an error on your zip code!';
     }
 
+    if ($a1 && $city && $state && $zip) {
+        
+    } else {
+        $systemErr = 'Please try again';
+    }
+
 }
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
