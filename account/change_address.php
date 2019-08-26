@@ -35,6 +35,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $a1 = $city = $state = $zip = FALSE;
 
+    if (preg_match('/^[A-Z0-9 ,#\'\/.]{3,46}$/iu', sanitize_input($_POST['address_1']))) {
+        $a1Err = '';
+        $a1 = mysqli_real_escape_string($dbc, sanitize_input($_POST['address_1']));
+    } else {
+        $a1Err = 'There was an error on your first address!';
+    }
+
+    if (preg_match('/^[A-Z0-9 ,#\'\/.]{3,46}$/iu', sanitize_input($_POST['address_2']))) {
+        $a2Err = '';
+        $a2 = mysqli_real_escape_string($dbc, sanitize_input($_POST['address_2']));
+    } elseif (empty(sanitize_input($_POST['address_2']))) {
+        $a2Err = '';
+        $a2 = mysqli_real_escape_string($dbc, sanitize_input($_POST['address_2']));
+    } else {
+        $a2Err = 'There was an error on your second address!';
+    }
+
 }
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
