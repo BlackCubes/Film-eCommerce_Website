@@ -39,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         case "DELETE":
 
+            $_SESSION['systemSuccess'] = $_SESSION['systemErr'] = '';
+
             $q = "UPDATE users SET phone_num='' WHERE id={$_SESSION['id']} LIMIT 1";
 
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
@@ -49,7 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 mysqli_commit($dbc);
 
-                $systemSuccess = 'You have successfully deleted your phone number from your account!';
+                $_SESSION['systemSuccess'] = 'You have successfully deleted your phone number from your account!';
+
+                $url = BASE_URL . 'account/login_security.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
 
                 /* Redirect the user to another page!!!! */
 
@@ -57,7 +64,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 mysqli_rollback($dbc);
 
-                $systemErr = 'There was an error deleting your phone number. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+                $_SESSION['systemErr'] = 'There was an error deleting your phone number. If you think an error occured, please contact the system administrator. We are sorry for the inconvenience.';
+
+                $url = BASE_URL . 'account/login_security.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
 
                 /* Redirect the user to another page!!!! */
 
