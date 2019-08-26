@@ -59,6 +59,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $cityErr = 'There was an error on inputting your city!';
     }
 
+    if (preg_match('/^(\p{L}+(?:([\ \-\']|(\.\ ))\p{L}+)*){2,50}$/u', sanitize_input($_POST['state']))) {
+        $stateErr = '';
+        $state = mysqli_real_escape_string($dbc, sanitize_input($_POST['state']));
+    } else {
+        $stateErr = 'There was an error on inputting your state!';
+    }
+
 }
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
