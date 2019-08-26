@@ -2134,3 +2134,8 @@ form#userChangeAddressCard {
     font-family: 'Muli', sans-serif;
     color: black;
 }
+
+#userChangeAddressCard .change-address-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
