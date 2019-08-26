@@ -56,7 +56,7 @@ if (!isset($_SESSION['id'])) {
             </a>
         </div>
         <div class="container-address--profile-view">
-            <a href="#">
+            <a href="/FilmIndustry/eCommerce/account/change_address.php">
                 <div class="address-title--profile-view">
                     <h4>Your address</h4>
                 </div>
