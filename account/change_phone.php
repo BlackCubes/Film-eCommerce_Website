@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($pn) {
 
-                $systemErr = '';
+                $systemErr = $_SESSION['systemSuccess'] = $_SESSION['systemErr'] = '';
 
                 mysqli_autocommit($dbc, FALSE);
 
@@ -102,7 +102,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     mysqli_commit($dbc);
 
-                    $systemSuccess = 'You have successfully modified your phone number for your account!';
+                    $_SESSION['systemSuccess'] = 'You have successfully modified your phone number for your account!';
+
+                    $url = BASE_URL . 'account/login_security.php';
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
 
                     /* Redirect the user to another page!!!! */
 
@@ -110,7 +115,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     mysqli_rollback($dbc);
 
-                    $systemErr = 'There was an error changing your phone number. If you think an error occured, please contact the system administrator. We apologize for the inconvenience.';
+                    $_SESSION['systemErr'] = 'There was an error changing your phone number. If you think an error occured, please contact the system administrator. We apologize for the inconvenience.';
+
+                    $url = BASE_URL . 'account/login_security.php';
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
 
                     /* Redirect the user to another page!!!! */
 
