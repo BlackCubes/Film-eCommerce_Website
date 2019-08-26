@@ -61,9 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($fn && $ln) {
 
-        $_SESSION['change_name_systemSuccess'] = $_SESSION['change_name_systemErr'] = '';
-
-        $systemErr = '';
+        $systemErr = $_SESSION['systemSuccess'] = $_SESSION['systemErr'] = '';
 
         mysqli_autocommit($dbc, FALSE);
 
@@ -79,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_commit($dbc);
 
-            $_SESSION['change_name_systemSuccess'] = 'You have successfully modified your name for your account!';
+            $_SESSION['systemSuccess'] = 'You have successfully modified your name for your account!';
 
             $url = BASE_URL . 'account/login_security.php';
             ob_end_clean();
@@ -92,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mysqli_rollback($dbc);
 
-            $_SESSION['change_name_systemErr'] = 'There was an error changing your new name. If you think an error occured, please contact the system administrator. We apologize for the inconvenience.';
+            $_SESSION['systemErr'] = 'There was an error changing your new name. If you think an error occured, please contact the system administrator. We apologize for the inconvenience.';
 
             $url = BASE_URL . 'account/login_security.php';
             ob_end_clean();
