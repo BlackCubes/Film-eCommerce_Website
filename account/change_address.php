@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
 
+    $a1 = $city = $state = $zip = FALSE;
+
 }
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
