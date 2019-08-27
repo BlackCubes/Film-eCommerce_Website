@@ -2152,8 +2152,20 @@ form#userChangeAddressCard {
     font-weight: 300;
 }
 
+#userChangeAddressCard .address-error--change-address p,
+#userChangeAddressCard .city-error--change-address p,
+#userChangeAddressCard .state-error--change-address p,
+#userChangeAddressCard .zip-code-error--change-address p,
+#userChangeAddressCard .system-error--change-address p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+    margin: 0;
+}
+
 #userChangeAddressCard .change-address-title,
-#userChangeAddressCard .change-address-submit {
+#userChangeAddressCard .change-address-submit,
+#userChangeAddressCard .system-error--change-address {
     text-align: center;
 }
 
@@ -2230,4 +2242,12 @@ form#userChangeAddressCard {
     border-top: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
+}
+
+#userChangeAddressCard .address-error--change-address,
+#userChangeAddressCard .city-error--change-address,
+#userChangeAddressCard .state-error--change-address,
+#userChangeAddressCard .zip-code-error--change-address,
+#userChangeAddressCard .system-error--change-address {
+    margin: 0px 15px;
 }
