@@ -61,16 +61,6 @@ if (!isset($_SESSION['id'])) {
                 </div>
             </a>
         </div>
-        <div class="container-upload-image--profile-view">
-            <a href="#">
-                <div class="upload-image-title--profile-view">
-                    <h4>Upload your image</h4>
-                </div>
-                <div class="upload-image-info--profile-view">
-                    <p>Upload your profile picture</p>
-                </div>
-            </a>
-        </div>
         <div class="container-address--profile-view">
             <a href="/FilmIndustry/eCommerce/account/change_address.php">
                 <div class="address-title--profile-view">
