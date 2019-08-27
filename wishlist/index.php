@@ -29,4 +29,13 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 
+if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) {
+
+} else {
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+}
+
 ?>
