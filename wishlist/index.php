@@ -98,6 +98,21 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
                 $item_cart = array($single_product['product_isd'] => array("product_id" => $single_product['product_id'], "product_isd" => $single_product['product_isd'], "product_name" => $single_product['product_name'], "product_price" => $single_product['product_price'], "product_stock" => $single_product['product_stock'], "product_image" => $single_product['product_image'], "product_department" => $single_product['product_department'], "product_format" => $single_product['product_format'], "director_fn" => $single_product['director_fn'], "director_mn" => $single_product['director_mn'], "director_ln" => $single_product['director_ln'], "quantity" => $single_product['quantity']));
 
+                if (!empty($_SESSION['cart_item'])) {
+
+                } else {
+
+                    $_SESSION['cart_item'] = $item_cart;
+
+                    $url = BASE_URL . 'cart/cart.php';
+                    mysqli_free_result($r);
+                    mysqli_close($dbc);
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
+
+                }
+
                 break;
 
         }
