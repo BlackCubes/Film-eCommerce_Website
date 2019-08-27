@@ -62,6 +62,17 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+                if ($r) {
+
+                } else {
+                    $url = BASE_URL . 'index.php';
+                    mysqli_close($dbc);
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
+                    /* Redirect the user to another location!!! */
+                }
+
                 break;
 
             case "delete":
