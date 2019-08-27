@@ -2244,7 +2244,6 @@ form#userChangeAddressCard {
     transition: all 0.3s ease-in-out;
 }
 
-#userChangeAddressCard .address-error--change-address,
 #userChangeAddressCard .city-error--change-address,
 #userChangeAddressCard .state-error--change-address,
 #userChangeAddressCard .zip-code-error--change-address,
