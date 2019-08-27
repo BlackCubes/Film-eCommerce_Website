@@ -669,7 +669,6 @@ body {
 
 .container--profile-view .profile-title--profile-view,
 .container--profile-view .container-login-security--profile-view,
-.container--profile-view .container-upload-image--profile-view,
 .container--profile-view .container-address--profile-view,
 .container--profile-view .container-orders--profile-view,
 .container--profile-view .container-wishlist--profile-view,
@@ -684,15 +683,11 @@ body {
     grid-template-columns: auto;
     grid-template-areas:
     "pv-login-security pv-orders pv-wishlist"
-    "pv-upload-image pv-address pv-payment";
+    "pv-address blank pv-payment";
 }
 
 .container--profile-view .container-login-security--profile-view {
     grid-area: pv-login-security;
-}
-
-.container--profile-view .container-upload-image--profile-view {
-    grid-area: pv-upload-image;
 }
 
 .container--profile-view .container-orders--profile-view {
@@ -712,7 +707,6 @@ body {
 }
 
 .container--profile-view .container-login-security--profile-view,
-.container--profile-view .container-upload-image--profile-view,
 .container--profile-view .container-address--profile-view,
 .container--profile-view .container-orders--profile-view,
 .container--profile-view .container-wishlist--profile-view,
