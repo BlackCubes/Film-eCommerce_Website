@@ -38,6 +38,16 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
     $q = "SELECT id FROM products WHERE isd='" . $product_isd . "'";
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+    if (mysqli_num_rows($r) == 1) {
+
+    } else {
+        $url = BASE_URL . 'index.php';
+        mysqli_close($dbc);
+        ob_end_clean();
+        header("Location: $url");
+        exit();
+    }
+
 } else {
     $url = BASE_URL . 'index.php';
     ob_end_clean();
