@@ -42,6 +42,16 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
         $wishlist_action = $_GET['action'];
 
+        $product_id = mysqli_fetch_array($r, MYSQLI_NUM);
+
+        $q = "SELECT d.department FROM departments AS d JOIN products AS p ON d.id=p.department_id WHERE p.isd='" . $product_isd . "'";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $product_department = mysqli_fetch_array($r, MYSQLI_NUM);
+
+        $q = "SELECT f.format FROM formats AS f JOIN products AS p on f.id=p.format_id WHERE p.isd='" . $product_isd . "'";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+        $product_format = mysqli_fetch_array($r, MYSQLI_NUM);
+
         switch ($wishlist_action) {
 
             case "add":
