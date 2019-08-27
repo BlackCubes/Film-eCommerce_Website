@@ -56,6 +56,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
             case "add":
 
+                mysqli_autocommit($dbc, FALSE);
+
                 $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id}, '" . $product_department . "', '" . $product_format . "', {$_POST['quantity']}, NOW(), NOW(), {$_SESSION['id']})";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
