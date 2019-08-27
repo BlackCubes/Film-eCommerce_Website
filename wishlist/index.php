@@ -40,6 +40,24 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
     if (mysqli_num_rows($r) == 1) {
 
+        $wishlist_action = $_GET['action'];
+
+        switch ($wishlist_action) {
+
+            case "add":
+
+                break;
+
+            case "delete":
+
+                break;
+
+            case "cart":
+
+                break;
+
+        }
+
     } else {
         $url = BASE_URL . 'index.php';
         mysqli_close($dbc);
