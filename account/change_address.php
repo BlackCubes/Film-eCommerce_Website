@@ -128,17 +128,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="changeNewCity">City</label>
             <input type="text" id="changeNewCity" class="user-new-city--change-address" name="city" maxlength="50" value="<?php if (isset($_POST['city'])) echo sanitize_input($_POST['city']); ?>">
         </div>
+        <?php if (isset($cityErr)) echo '<div class="city-error--change-address"><p>' . $cityErr . '</p></div>'; ?>
         <div class="new-state-input--change-address">
             <label for="changeNewState">State</label>
             <input type="text" id="changeNewState" class="user-new-state--change-address" name="state" maxlength="50" placeholder="NJ or New Jersey" value="<?php if (isset($_POST['state'])) echo sanitize_input($_POST['state']); ?>">
         </div>
+        <?php if (isset($stateErr)) echo '<div class="state-error--change-address"><p>' . $stateErr . '</p></div>'; ?>
         <div class="new-zip-code-input--change-address">
             <label for="changeNewZipCode">Zip Code</label>
             <input type="text" id="changeNewZipCode" class="user-new-zip--change-address" name="zip_code" maxlength="10" placeholder="12345 or 12345-6789" value="<?php if (isset($_POST['zip_code'])) echo sanitize_input($_POST['zip_code']); ?>">
         </div>
+        <?php if (isset($zipErr)) echo '<div class="zip-code-error--change-address"><p>' . $zipErr . '</p></div>'; ?>
         <div class="change-address-submit">
             <input type="submit" class="change-address-button" name="submit" value="SAVE CHANGES">
         </div>
+        <?php if (isset($systemErr)) echo '<div class="system-error--change-address"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
 </form>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
