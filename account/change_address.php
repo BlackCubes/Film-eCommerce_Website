@@ -125,7 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" id="changeNewAddress" class="user-new-address-2--change-address" name="address_2" maxlength="46" placeholder="Apartment / Suite / Other (optional)" value="<?php if (isset($_POST['address_2'])) echo sanitize_input($_POST['address_2']); ?>">
             <?php if (isset($a2Err)) echo '<div class="address-error--change-address"><p>' . $a2Err . '</p></div>'; ?>
         </div>
-        <?php if (isset($a1Err) || isset($a2Err)) echo '<div class="address-error--change-address"><p>' . $a1Err . ' ' . $a2Err . '</p></div>'; ?>
         <div class="new-city-input--change-address">
             <label for="changeNewCity">City</label>
             <input type="text" id="changeNewCity" class="user-new-city--change-address" name="city" maxlength="50" value="<?php if (isset($_POST['city'])) echo sanitize_input($_POST['city']); ?>">
