@@ -31,6 +31,13 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 
 if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) {
 
+    require(MYSQL);
+
+    $product_isd = mysqli_real_escape_string($dbc, $_GET['isd']);
+
+    $q = "SELECT id FROM products WHERE isd='" . $product_isd . "'";
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
 } else {
     $url = BASE_URL . 'index.php';
     ob_end_clean();
