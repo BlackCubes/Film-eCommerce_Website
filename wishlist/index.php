@@ -46,7 +46,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
             case "add":
 
-                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES (SELECT id FROM products WHERE isd='" . $product_isd . "', 'SELECT d.department FROM departments AS d JOIN products AS p ON d.id=p.department_id WHERE p.isd='" . $product_isd . "'', 'SELECT f.format FROM formats AS f JOIN products AS p ON f.id=p.format_id WHERE p.isd='" . $product_isd . "'', $_POST['quantity'], NOW(), NOW(), $_SESSION['id'])";
+                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES (SELECT id FROM products WHERE isd='" . $product_isd . "', 'SELECT d.department FROM departments AS d JOIN products AS p ON d.id=p.department_id WHERE p.isd='" . $product_isd . "'', 'SELECT f.format FROM formats AS f JOIN products AS p ON f.id=p.format_id WHERE p.isd='" . $product_isd . "'', {$_POST['quantity']}, NOW(), NOW(), $_SESSION['id'])";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
