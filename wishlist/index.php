@@ -18,4 +18,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
 
+if (!isset($_SESSION)) {
+    session_start();
+}
+
 ?>
