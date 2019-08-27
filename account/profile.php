@@ -31,6 +31,22 @@ if (!isset($_SESSION['id'])) {
 
 ?>
 <div class="container--profile-view">
+    <?php
+
+    if (!empty($_SESSION['systemSuccess'])) {
+        echo '<div class="system-success--account-option"><p>' . $_SESSION['systemSuccess'] . '</p></div>';
+        unset($_SESSION['systemSuccess']);
+    } else {
+        unset($_SESSION['systemSuccess']);
+    }
+
+    if (!empty($_SESSION['systemErr'])) {
+        echo '<div class=""system-error--account-option><p>' . $_SESSION['systemErr'] . '</p></div>';
+    } else {
+        unset($_SESSION['systemErr']);
+    }
+
+    ?>
     <div class="profile-title--profile-view">
         <h2>Your Profile</h2>
     </div>
