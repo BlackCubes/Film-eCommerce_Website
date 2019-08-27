@@ -22,4 +22,11 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
+    $url = BASE_URL . 'index.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+}
+
 ?>
