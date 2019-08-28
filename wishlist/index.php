@@ -100,7 +100,22 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
 
                 if (!empty($_SESSION['cart_item'])) {
                     if (in_array($single_product['product_isd'], array_keys($_SESSION['cart_item']))) {
+                        foreach ($_SESSION['cart_item'] as $k => $v) {
+                            if ($single_product['product_isd'] == $k) {
+                                if (empty($_SESSION['cart_item'][$K]['quantity'])) {
+                                    $_SESSION['cart_item'][$k]['quantity'] = 0;
+                                }
+                                $_SESSION['cart_item'][$k]['quantity'] += $_POST['quantity'];
+                            }
+                        }
 
+                        $url = BASE_URL . 'cart/cart.php';
+                        mysqli_free_result($r);
+                        mysqli_close($dbc);
+                        ob_end_clean();
+                        header("Location: $url");
+                        exit();
+                        
                     } else {
 
                         $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $items_cart);
