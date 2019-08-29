@@ -90,7 +90,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 } else {
 
-                    $url = BASE_URL . 'cart.cart.php';
+                    $url = BASE_URL . 'index.php';
                     ob_end_clean();
                     header("Location: $url");
                     exit();
