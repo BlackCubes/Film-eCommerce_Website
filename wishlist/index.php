@@ -29,7 +29,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 
-if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) {
+if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) {
 
     require(MYSQL);
 
@@ -81,6 +81,10 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) 
                     exit();
                     /* Redirect the user to another location!!! */
                 }
+
+                break;
+
+            case "move":
 
                 break;
 
