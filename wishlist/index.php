@@ -86,17 +86,6 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
             case "move":
 
-                if (!empty($_SESSION['cart_item'])) {
-
-                } else {
-
-                    $url = BASE_URL . 'index.php';
-                    ob_end_clean();
-                    header("Location: $url");
-                    exit();
-
-                }
-
                 break;
 
             case "delete":
