@@ -22,5 +22,11 @@ $page_title = 'Your Wishlists';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+}
+
 ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
