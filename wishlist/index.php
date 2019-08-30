@@ -67,7 +67,6 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                     mysqli_commit($dbc);
 
                     $url = BASE_URL . 'wishlist/wishlist.php';
-                    mysqli_free_result($r);
                     mysqli_close($dbc);
                     ob_end_clean();
                     header("Location: $url");
