@@ -58,7 +58,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 mysqli_autocommit($dbc, FALSE);
 
-                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id[0]}, '" . $product_department[0] . "', '" . $product_format[0] . "', {$_POST['quantity']}, NOW(), NOW(), {$_SESSION['id']})";
+                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id[0]}, '" . $product_department[0] . "', '" . $product_format[0] . "', 1, NOW(), NOW(), {$_SESSION['id']})";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
