@@ -35,6 +35,10 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
 
 if (mysqli_num_rows($r) == 1){
 ?>
+<div class="container--wishlist-view">
+    <h2>Your Wishlists</h2>
+    <p></p>
+</div>
 <?php } else { ?>
 <p>Your wishlist is empty!</p>
 <?php
