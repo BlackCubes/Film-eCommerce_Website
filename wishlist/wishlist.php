@@ -28,5 +28,6 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     exit();
 }
 
+require(MYSQL);
 ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
