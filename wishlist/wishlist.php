@@ -29,5 +29,8 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 }
 
 require(MYSQL);
+
+$q = "SELECT product_department FROM wishlists WHERE user_id={$_SESSION['id']}";
+$r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
