@@ -867,7 +867,8 @@ body {
     font-weight: 700;
 }
 
-.container--wishlist-view .product-name--wishlist-view p {
+.container--wishlist-view .product-name--wishlist-view p,
+.container--wishlist-view .product-price--wishlist-view p {
     font-size: 17px;
     font-weight: 700;
 }
