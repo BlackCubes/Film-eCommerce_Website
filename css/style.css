@@ -873,6 +873,11 @@ body {
     font-weight: 700;
 }
 
+.container--wishlist-view .product-cast--wishlist-view p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
 .container--wishlist-view .product-type--wishlist-view p,
 .container--wishlist-view .product-stock--wishlist-view p,
 .container--wishlist-view .product-quantity--wishlist-view p,
