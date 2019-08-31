@@ -39,6 +39,8 @@ if (mysqli_num_rows($r) == 1){
 
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+    $wishlist = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
 ?>
 <div class="container--wishlist-view">
     <h2>Your Wishlists</h2>
