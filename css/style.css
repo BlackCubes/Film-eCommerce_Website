@@ -894,6 +894,13 @@ body {
     text-decoration: none;
 }
 
+.container--wishlist-view .product-image--wishlist-view img {
+    max-width: 140px;
+    max-height: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
