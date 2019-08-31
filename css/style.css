@@ -918,6 +918,12 @@ body {
         "wishlist-image wishlist-info wishlist-option";
 }
 
+.container--wishlist-view .product-image--wishlist-view {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
