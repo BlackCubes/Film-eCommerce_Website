@@ -89,6 +89,12 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
             case "delete":
 
+                mysqli_autocommit($dbc, FALSE);
+
+                $q = "DELETE FROM wishlists WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']}";
+
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
                 break;
 
             case "cart":
