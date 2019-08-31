@@ -915,7 +915,7 @@ body {
     border-bottom: 1px solid rgba(138,43,226,0.17);
     grid-template-columns: auto;
     grid-template-areas:
-        "wishlist-image wishlist-info wishlist-option";
+        "wishlist-image wishlist-info wishlist-more-info wishlist-option";
 }
 
 .container--wishlist-view .product-image--wishlist-view {
@@ -925,7 +925,11 @@ body {
 }
 
 .container--wishlist-view .product-info--wishlist-view {
-    width: 810px;
+    width: 607.5px;
+}
+
+.container--wishlist-view .product-more-info--wishlist-view {
+    width: 202.5px;
 }
 
 .container--wishlist-view .product-options--cart-view {
