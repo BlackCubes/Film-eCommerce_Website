@@ -35,7 +35,7 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
 
 if (mysqli_num_rows($r) == 1){
 
-    $q = "SELECT DISTINCT p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, a.first_name AS actor_fn, a.middle_name AS actor_mn, a.last_name AS actor_ln, wl.product_department AS product_department, wl.product_format AS product_format, wl.quantity AS product_quantity, wl.date_created AS product_date_created FROM wishlists AS wl JOIN products AS p ON wl.product_id=p.id JOIN products_actors AS pa ON p.id=pa.product_id JOIN actors AS a ON pa.actor_id=a.id WHERE wl.user_id={$_SESSION['id']} ORDER BY a.last_name";
+    $q = "SELECT DISTINCT p.isd AS product_isd, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, a.first_name AS actor_fn, a.middle_name AS actor_mn, a.last_name AS actor_ln, wl.product_department AS product_department, wl.product_format AS product_format, wl.quantity AS product_quantity, wl.date_created AS product_date_created FROM wishlists AS wl JOIN products AS p ON wl.product_id=p.id JOIN products_actors AS pa ON p.id=pa.product_id JOIN actors AS a ON pa.actor_id=a.id WHERE wl.user_id={$_SESSION['id']} ORDER BY a.last_name";
 
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -46,6 +46,15 @@ if (mysqli_num_rows($r) == 1){
     <div class="main-info--wishlist-view">
         <div class="wishlist-title--wishlist-view">
             <h2>Your Wishlists</h2>
+        </div>
+        <div class="results--wishlist-view">
+            <div class="wish-list--wishlist-view">
+                <div class="product-image--wishlist-view">
+                    <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $wishlist['product_isd']; ?>"><img alt="<?php echo $wishlist['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $wishlist['product_image']; ?>"></a>
+                </div>
+                <div class="product-info--wishlist-view"></div>
+                <div class="product-options--wishlist-view"></div>
+            </div>
         </div>
     </div>
 </div>
