@@ -906,6 +906,18 @@ body {
     margin-left: 15px;
 }
 
+.container--wishlist-view .wish-list--wishlist-view {
+    display: grid;
+    width: 1130px;
+    height: 160px;
+    /*margin-bottom: 30px;*/
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    grid-template-columns: auto;
+    grid-template-areas:
+        "wishlist-image wishlist-info wishlist-option";
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
