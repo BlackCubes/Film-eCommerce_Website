@@ -66,10 +66,10 @@ if (mysqli_num_rows($r) == 1){
                         <p><?php echo $wishlist['product_price']; ?></p>
                     </div>
                     <div class="product-stock--wishlist-view">
-                        <p><?php echo $wishlist['product_stock']; ?> In Stock</p>
+                        <p><?php echo $wishlist['product_stock']; ?> in Stock</p>
                     </div>
                     <div class="product-quantity--wishlist-view">
-                        <p><?php echo $wishlist['product_quantity']; ?></p>
+                        <p>Qty: <?php echo $wishlist['product_quantity']; ?></p>
                     </div>
                 </div>
                 <div class="product-options--wishlist-view">
