@@ -901,6 +901,11 @@ body {
     margin-bottom: 10px;
 }
 
+.container--wishlist-view .main-info--wishlist-view {
+    width: 1135px;
+    margin-left: 15px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
