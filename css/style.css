@@ -882,6 +882,7 @@ body {
 .container--wishlist-view .product-stock--wishlist-view p,
 .container--wishlist-view .product-quantity--wishlist-view p,
 .container--wishlist-view .wishlist-date-created--wishlist-view p,
+.container--wishlist-view .product-cart-check--wishlist-view p,
 .container--wishlist-view .cart-move-submit a,
 .container--wishlist-view .wishlist-delete-submit a {
     font-size: 12px;
