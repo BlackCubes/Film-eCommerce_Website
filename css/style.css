@@ -855,6 +855,13 @@ body {
     margin-right: 5px;
 }
 
+/* USER WISHLIST VIEW */
+
+.container--wishlist-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
