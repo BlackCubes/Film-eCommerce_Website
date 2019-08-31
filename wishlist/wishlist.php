@@ -81,7 +81,7 @@ if (mysqli_num_rows($r) == 1){
                         <a href="/FilmIndustry/eCommerce/wishlist/index.php?action=cart&isd=<?php echo $wishlist['product_isd']; ?>">Add to Cart</a>
                     </div>
                     <div class="wishlist-delete-submit">
-                        <a href="#">Delete</a>
+                        <a href="/FilmIndustry/eCommerce/wishlist/index.php?action=delete&isd=<?php echo $wishlist['product_isd']; ?>">Delete</a>
                     </div>
                 </div>
             </div>
