@@ -73,7 +73,19 @@ if (mysqli_num_rows($r) == 1){
                         <p><?php echo $wishlist['product_stock']; ?> in Stock</p>
                     </div>
                     <div class="product-cart-check--wishlist-view">
-                        <p>In cart: <?php if ($_SESSION['cart_item']['product_isd'] === $wishlist['product_isd']){ echo 'Yes';} else {echo 'No';} ?></p>
+                        <p>In cart: 
+                            <?php
+                            if (isset($_SESSION['cart_item'])) {
+                                if ($_SESSION['cart_item']['product_isd'] === $wishlist['product_isd']) {
+                                    echo 'Yes';
+                                } else {
+                                    echo 'No';
+                                }
+                            } else {
+                                echo 'No';
+                            }
+                            ?>
+                        </p>
                     </div>
                 </div>
                 <div class="product-options--wishlist-view">
