@@ -52,8 +52,37 @@ if (mysqli_num_rows($r) == 1){
                 <div class="product-image--wishlist-view">
                     <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $wishlist['product_isd']; ?>"><img alt="<?php echo $wishlist['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $wishlist['product_image']; ?>"></a>
                 </div>
-                <div class="product-info--wishlist-view"></div>
-                <div class="product-options--wishlist-view"></div>
+                <div class="product-info--wishlist-view">
+                    <div class="product-name--wishlist-view">
+                        <p><a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $wishlist['product_isd']; ?>"><?php echo $wishlist['product_name']; ?></a></p>
+                    </div>
+                    <div class="product-type--wishlist-view">
+                        <p>(<?php echo $wishlist['product_department'] . ': ' . $wishlist['product_format']; ?>)</p>
+                    </div>
+                    <div class="product-cast--wishlist-view">
+                        <p><?php echo $wishlist['actor_fn'] . ' ' . $wishlist['actor_mn'] . ' ' . $wishlist['actor_ln']; ?></p>
+                    </div>
+                    <div class="product-price--wishlist-view">
+                        <p><?php echo $wishlist['product_price']; ?></p>
+                    </div>
+                    <div class="product-stock--wishlist-view">
+                        <p><?php echo $wishlist['product_stock']; ?> In Stock</p>
+                    </div>
+                    <div class="product-quantity--wishlist-view">
+                        <p><?php echo $wishlist['product_quantity']; ?></p>
+                    </div>
+                </div>
+                <div class="product-options--wishlist-view">
+                    <div class="wishlist-date-created--wishlist-view">
+                        <p>Item added <?php echo $wishlist['wishlist_date_created']; ?></p>
+                    </div>
+                    <div class="cart-move-submit">
+                        <a href="/FilmIndustry/eCommerce/wishlist/index.php?action=cart&isd=<?php echo $wishlist['product_isd']; ?>">Add to Cart</a>
+                    </div>
+                    <div class="wishlist-delete-submit">
+                        <a href="#">Delete</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
