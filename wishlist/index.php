@@ -95,6 +95,12 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 if ($r) {
 
+                    mysqli_commit($dbc);
+
+                    $q = "DELETE FROM carts WHERE product_id={$product_id} AND user_id={$_SESSION['id']} LIMIT 1";
+
+                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
                 } else {
                     $url = BASE_URL . 'index.php';
                     mysqli_close($dbc);
