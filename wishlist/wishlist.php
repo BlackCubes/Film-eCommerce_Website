@@ -61,7 +61,7 @@ if (mysqli_num_rows($r) == 1){
                         <p>(<?php echo $wishlist['product_department'] . ': ' . $wishlist['product_format']; ?>)</p>
                     </div>
                     <div class="product-cast--wishlist-view">
-                        <p><?php echo $wishlist['actor_fn'] . ' ' . $wishlist['actor_mn'] . ' ' . $wishlist['actor_ln']; ?></p>
+                        <p><?php echo $wishlist['director_fn'] . ' ' . $wishlist['director_mn'] . ' ' . $wishlist['director_ln']; ?></p>
                     </div>
                     <div class="product-price--wishlist-view">
                         <p>$<?php echo $wishlist['product_price']; ?></p>
