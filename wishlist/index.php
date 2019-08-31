@@ -85,6 +85,8 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
             case "move":
 
+                /* CHECK IF PRODUCT ALREADY EXISTS AND IF IT DOES THEN REDIRECT WITH ERROR MESSAGE! */
+
                 mysqli_autocommit($dbc, FALSE);
 
                 $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id}, {$product_department}, {$product_format}, (SELECT quantity FROM carts WHERE product_id={$product_id} AND user_id={$_SESSION['id']}), NOW(), NOW(), {$_SESSION['id']})";
