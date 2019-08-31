@@ -867,6 +867,15 @@ body {
     font-weight: 700;
 }
 
+.container--wishlist-view .product-name--wishlist-view p {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.container--wishlist-view .product-name--wishlist-view a {
+    text-decoration: none;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
