@@ -46,7 +46,9 @@ if (mysqli_num_rows($r) == 1){
             <h2>Your Wishlists</h2>
         </div>
         <div class="results--wishlist-view">
-            <?php while ($wishlist = mysqli_fetch_array($r, MYSQLI_ASSOC)) { ?>
+            <?php while ($wishlist = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+                 $count = 0;
+            ?>
             <div class="wish-list--wishlist-view">
                 <div class="product-image--wishlist-view">
                     <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $wishlist['product_isd']; ?>"><img alt="<?php echo $wishlist['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $wishlist['product_image']; ?>"></a>
@@ -59,7 +61,7 @@ if (mysqli_num_rows($r) == 1){
                         <p>(<?php echo $wishlist['product_department'] . ': ' . $wishlist['product_format']; ?>)</p>
                     </div>
                     <div class="product-cast--wishlist-view">
-                        <p><?php for ($i = 0; $i < 2; $i++) {echo $wishlist['actor_fn'] . ' ' . $wishlist['actor_mn'] . ' ' . $wishlist['actor_ln'];} ?></p>
+                        <p><?php echo $wishlist['actor_fn'] . ' ' . $wishlist['actor_mn'] . ' ' . $wishlist['actor_ln']; ?></p>
                     </div>
                     <div class="product-price--wishlist-view">
                         <p>$<?php echo $wishlist['product_price']; ?></p>
