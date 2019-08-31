@@ -862,6 +862,11 @@ body {
     color: black;
 }
 
+.container--wishlist-view .wishlist-title--wishlist-view h2 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
