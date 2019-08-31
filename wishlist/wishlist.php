@@ -76,7 +76,7 @@ if (mysqli_num_rows($r) == 1){
                         <p>In cart: 
                             <?php
                             if (isset($_SESSION['cart_item'])) {
-                                if ($_SESSION['cart_item']['product_isd'] === $wishlist['product_isd']) {
+                                if (in_array($wishlist['product_isd'], array_keys($_SESSION['cart_item']))) {
                                     echo 'Yes';
                                 } else {
                                     echo 'No';
