@@ -97,6 +97,14 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 if ($r) {
 
+                    mysqli_commit($dbc);
+
+                    $url = BASE_URL . 'wishlist/wishlist.php';
+                    mysqli_close($dbc);
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
+
                 } else {
                     $url = BASE_URL . 'index.php';
                     mysqli_close($dbc);
