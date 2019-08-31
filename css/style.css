@@ -894,6 +894,10 @@ body {
     text-decoration: none;
 }
 
+.container--wishlist-view .product-info--wishlist-view {
+    text-align: center;
+}
+
 .container--wishlist-view .product-image--wishlist-view img {
     max-width: 140px;
     max-height: 140px;
