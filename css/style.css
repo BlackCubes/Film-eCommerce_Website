@@ -924,6 +924,14 @@ body {
     width: 150px;
 }
 
+.container--wishlist-view .product-info--wishlist-view {
+    width: 810px;
+}
+
+.container--wishlist-view .product-options--cart-view {
+    width: 170px;
+}
+
 /* SIGN IN */
 
 form.sign-in-form {
