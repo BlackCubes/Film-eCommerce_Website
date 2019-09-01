@@ -81,6 +81,11 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
         <?php } ?>
         </div>
     </div>
+    <?php
+
+    require(MYSQL);
+
+    ?>
     <div class="cart-later-info--later-view">
         <div class="later-title--later-view">
             <h2>Saved for later</h2>
