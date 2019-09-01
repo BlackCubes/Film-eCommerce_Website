@@ -29,7 +29,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 }
 
     
-if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bmove\b))(?!;)?/', $_GET['action'])) {
+if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)?/', $_GET['action'])) {
 
     require(MYSQL);
 
@@ -195,6 +195,10 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bmove\b))(?!;)?/', $_GET[
                 }
 
                 /* Redirect the user */
+
+                break;
+
+            case "omit":
 
                 break;
 
