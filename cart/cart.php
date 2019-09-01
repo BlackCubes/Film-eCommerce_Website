@@ -102,9 +102,10 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
             
         ?>
         <div class="later-title--later-view">
-            <h2>Saved for later</h2>
+            <h2>Saved for later (<?php echo $cart_later['later_count']; ?>)</h2>
         </div>
         <div class="cart-later-results--later-view">
+            <?php while ($later = $cart_later) { ?>
             <div class="cart-later-list--later-view">
                 <div class="product-image--later-view">
                     <a href="#"><img alt="#" src="#"></a>
@@ -121,6 +122,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
         <?php } else { ?>
         <div class="later-title--later-view">
