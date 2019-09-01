@@ -248,7 +248,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
                             }
                         }
 
-                        $url = BASE_URL . 'cart/index.php?action=omit&isd="' . $product_isd . '"';
+                        $url = BASE_URL . 'cart/index.php?action=omit&isd=' . $product_isd . '';
                         mysqli_free_result($r);
                         mysqli_close($dbc);
                         ob_end_clean();
@@ -259,7 +259,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                         $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $items_cart);
 
-                        $url = BASE_URL . 'cart/index.php?action=omit&isd="' . $product_isd . '"';
+                        $url = BASE_URL . 'cart/index.php?action=omit&isd=' . $product_isd . '';
                         mysqli_free_result($r);
                         mysqli_close($dbc);
                         ob_end_clean();
@@ -271,7 +271,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                     $_SESSION['cart_item'] = $items_cart;
 
-                    $url = BASE_URL . 'cart/index.php?action=omit&isd="' . $product_isd . '"';
+                    $url = BASE_URL . 'cart/index.php?action=omit&isd=' . $product_isd . '';
                     mysqli_free_result($r);
                     mysqli_close($dbc);
                     ob_end_clean();
