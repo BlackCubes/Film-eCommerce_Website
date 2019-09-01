@@ -73,7 +73,7 @@ if (isset($_SESSION['cart_item'])) {
 
             ?>
             <div class="subtotal-cart--cart-view">
-                <p><span class="subtotal-title-amount--cart-view">Subtotal (<?php echo $item_count; ?>):</span><span class="subtotal-display--cart-view"> $<?php echo $subtotal_price; ?>'</span></p>
+                <p><span class="subtotal-title-amount--cart-view">Subtotal (<?php echo $item_count; ?>):</span><span class="subtotal-display--cart-view"> $<?php echo $subtotal_price; ?></span></p>
             </div>
         </div>
     </div>
