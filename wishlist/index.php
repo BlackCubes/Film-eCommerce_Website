@@ -56,7 +56,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
             case "add":
 
-                $q = "SELECT product_id FROM wishlists WHERE product_id='" . $product_id . "' AND user_id={$_SESSION['id']}";
+                $q = "SELECT product_id FROM wishlists WHERE product_id='" . $product_id[0] . "' AND user_id={$_SESSION['id']}";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -89,7 +89,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 } elseif (mysqli_num_rows($r) == 1) {
 
-                    $q = "UPDATE wishlists SET quantity=quantity+1 WHERE product_id={$product_id} AND user_id={$_SESSION['id']}";
+                    $q = "UPDATE wishlists SET quantity=quantity+1 WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']}";
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -122,7 +122,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 mysqli_autocommit($dbc, FALSE);
 
-                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id}, {$product_department}, {$product_format}, (SELECT quantity FROM carts WHERE product_id={$product_id} AND user_id={$_SESSION['id']}), NOW(), NOW(), {$_SESSION['id']})";
+                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id[0]}, {$product_department}, {$product_format}, (SELECT quantity FROM carts WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']}), NOW(), NOW(), {$_SESSION['id']})";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -130,7 +130,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                     mysqli_commit($dbc);
 
-                    $q = "DELETE FROM carts WHERE product_id={$product_id} AND user_id={$_SESSION['id']} LIMIT 1";
+                    $q = "DELETE FROM carts WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']} LIMIT 1";
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
