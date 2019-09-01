@@ -200,6 +200,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
             case "omit":
 
+                mysqli_autocommit($dbc, FALSE);
+
                 break;
 
             case "move":
