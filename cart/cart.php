@@ -99,6 +99,8 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             $cart_later = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+            $later = array();
             
         ?>
         <div class="later-title--later-view">
