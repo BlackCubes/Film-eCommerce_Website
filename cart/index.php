@@ -153,6 +153,10 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                     mysqli_autocommit($dbc, FALSE);
 
+                    $q = "SELECT product_id FROM carts WHERE product_id='" . $product_id[0] . "' AND user_id={$_SESSION['id']}";
+
+                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
                     foreach ($_SESSION['cart_item'] as $k => $v) {
                         if ($product_isd == $k) {
                             $q = "INSERT INTO carts (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$_SESSION['cart_item'][$k]['product_id']}, '" . $_SESSION['cart_item'][$k]['product_department'] . "', '" . $_SESSION['cart_item'][$k]['product_format'] . "', {$_SESSION['cart_item'][$k]['quantity']}, NOW(), NOW(), {$_SESSION['id']})";
