@@ -200,7 +200,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bmove\b))(?!;)?/', $_GET[
 
                 $q = "SELECT c.product_id AS product_id, p.isd AS product_isd, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, c.product_department AS product_department, c.product_format AS product_format, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln, c.quantity AS quantity FROM carts AS c JOIN products AS p ON c.product_id=p.id JOIN products_directors AS pdir ON p.id=pdir.product_id JOIN directors AS dir ON pdir.director_id=dir.id WHERE c.user_id={$_SESSION['id']} AND p.isd='" . $product_isd . "'";
 
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc))
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
                 break;
         }
