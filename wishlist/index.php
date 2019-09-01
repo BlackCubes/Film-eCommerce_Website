@@ -89,7 +89,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 } elseif (mysqli_num_rows($r) == 1) {
 
-                    $q = "UPDATE wishlists SET quantity=quantity+1 WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']}";
+                    $q = "UPDATE wishlists SET quantity=quantity+1, date_modified=NOW() WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']}";
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
