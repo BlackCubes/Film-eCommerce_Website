@@ -56,7 +56,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
             case "add":
 
-                $q = "SELECT product_id FROM wishlists WHERE product_id='" . $product_id . "'";
+                $q = "SELECT product_id FROM wishlists WHERE product_id='" . $product_id . "' AND user_id={$_SESSION['id']}";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
@@ -88,7 +88,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                     }
 
                 } elseif (mysqli_num_rows($r) == 1) {
-                    
+
                 }
 
                 break;
