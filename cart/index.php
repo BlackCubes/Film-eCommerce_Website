@@ -157,36 +157,39 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                    foreach ($_SESSION['cart_item'] as $k => $v) {
-                        if ($product_isd == $k) {
-                            $q = "INSERT INTO carts (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$_SESSION['cart_item'][$k]['product_id']}, '" . $_SESSION['cart_item'][$k]['product_department'] . "', '" . $_SESSION['cart_item'][$k]['product_format'] . "', {$_SESSION['cart_item'][$k]['quantity']}, NOW(), NOW(), {$_SESSION['id']})";
-                        }
-                    }
-
-                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
-
-                    if ($r) {
-
-                        mysqli_commit($dbc);
+                    if (mysqli_num_rows($r) == 0){
 
                         foreach ($_SESSION['cart_item'] as $k => $v) {
-                            if ($product_isd == $k) unset($_SESSION['cart_item'][$k]);
-                            if (empty($_SESSION['cart_item'])) unset($_SESSION['cart_item']);
+                            if ($product_isd == $k) {
+                                $q = "INSERT INTO carts (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$_SESSION['cart_item'][$k]['product_id']}, '" . $_SESSION['cart_item'][$k]['product_department'] . "', '" . $_SESSION['cart_item'][$k]['product_format'] . "', {$_SESSION['cart_item'][$k]['quantity']}, NOW(), NOW(), {$_SESSION['id']})";
+                            }
                         }
 
-                        $url = BASE_URL . 'cart/cart.php';
-                        mysqli_close($dbc);
-                        ob_end_clean();
-                        header("Location: $url");
-                        exit();
+                        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                    } else {
-                        $url = BASE_URL . 'index.php';
-                        mysqli_close($dbc);
-                        ob_end_clean();
-                        header("Location: $url");
-                        exit();         
-                        /* Redirect the user to another location!!! */               
+                        if ($r) {
+
+                            mysqli_commit($dbc);
+
+                            foreach ($_SESSION['cart_item'] as $k => $v) {
+                                if ($product_isd == $k) unset($_SESSION['cart_item'][$k]);
+                                if (empty($_SESSION['cart_item'])) unset($_SESSION['cart_item']);
+                            }
+
+                            $url = BASE_URL . 'cart/cart.php';
+                            mysqli_close($dbc);
+                            ob_end_clean();
+                            header("Location: $url");
+                            exit();
+
+                        } else {
+                            $url = BASE_URL . 'index.php';
+                            mysqli_close($dbc);
+                            ob_end_clean();
+                            header("Location: $url");
+                            exit();         
+                            /* Redirect the user to another location!!! */               
+                        }
                     }
 
                 } else {
