@@ -176,7 +176,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                     if (in_array($single_product['product_isd'], array_keys($_SESSION['cart_item']))) {
                         foreach ($_SESSION['cart_item'] as $k => $v) {
                             if ($single_product['product_isd'] == $k) {
-                                if (empty($_SESSION['cart_item'][$K]['quantity'])) {
+                                if (empty($_SESSION['cart_item'][$k]['quantity'])) {
                                     $_SESSION['cart_item'][$k]['quantity'] = 0;
                                 }
                                 $_SESSION['cart_item'][$k]['quantity'] += $single_product['quantity'];
