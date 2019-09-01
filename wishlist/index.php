@@ -122,6 +122,10 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 mysqli_autocommit($dbc, FALSE);
 
+                $q = "SELECT product_id FROM wishlists WHERE product_id='" . $product_id[0] . "' AND user_id={$_SESSION['id']}";
+
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
                 $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id[0]}, {$product_department}, {$product_format}, (SELECT quantity FROM carts WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']}), NOW(), NOW(), {$_SESSION['id']})";
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
