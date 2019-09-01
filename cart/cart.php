@@ -27,12 +27,6 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
     header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
     exit();
 }
-
-if (isset($_SESSION['cart_item'])) {
-
-    $total_quantity = 0;
-    $subtotal_price = 0;
-
 ?>
 <div class="container--cart-view">
     <div class="main-info--cart-view">
@@ -40,7 +34,15 @@ if (isset($_SESSION['cart_item'])) {
             <h2>Shopping Cart</h2>
         </div>
         <div class="results--cart-view">
-            <?php foreach ($_SESSION['cart_item'] as $item) { ?>
+        <?php
+
+        if (isset($_SESSION['cart_item'])) {
+
+            $total_quantity = 0;
+            $subtotal_price = 0;
+
+            foreach ($_SESSION['cart_item'] as $item) {
+        ?>
             <div class="cart-list--cart-view">
                 <div class="product-image--cart-view">
                     <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $item['product_isd']; ?>"><img alt="<?php echo $item['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $item['product_image']; ?>"></a>
@@ -74,12 +76,10 @@ if (isset($_SESSION['cart_item'])) {
             <div class="subtotal-cart--cart-view">
                 <p><span class="subtotal-title-amount--cart-view">Subtotal (<?php echo $item_count; ?>):</span><span class="subtotal-display--cart-view"> $<?php echo $subtotal_price; ?></span></p>
             </div>
+        <?php } else { ?>
+            <p>Your cart is empty!</p>
+        <?php } ?>
         </div>
     </div>
 </div>
-<?php } else { ?>
-<p>Your cart is empty!</p>
-<?php
-}
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
-?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
