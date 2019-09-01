@@ -90,6 +90,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 
     ?>
     <div class="cart-later-info--later-view">
+        <?php if (mysqli_num_rows($r) == 1) { ?>
         <div class="later-title--later-view">
             <h2>Saved for later</h2>
         </div>
@@ -111,6 +112,11 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
                 </div>
             </div>
         </div>
+        <?php } else { ?>
+        <div class="later-title--later-view">
+            <h2>No items saved for later</h2>
+        </div>
+        <?php } ?>
     </div>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
