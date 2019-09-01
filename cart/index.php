@@ -190,6 +190,13 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
                             exit();         
                             /* Redirect the user to another location!!! */               
                         }
+
+                    } elseif (mysqli_num_rows($r) == 1) {
+
+                        $q = "UPDATE carts SET quantity=quantity+1, date_modified=NOW() WHERE product_id={$product_id} AND user_id={$_SESSION['id']}";
+
+                        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
                     }
 
                 } else {
