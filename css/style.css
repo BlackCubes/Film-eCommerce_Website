@@ -769,18 +769,21 @@ body {
     color: black;
 }
 
-.container--cart-view .cart-title--cart-view h2 {
+.container--cart-view .cart-title--cart-view h2,
+.container--cart-view .later-title--later-view h2 {
     font-size: 21px;
     font-weight: 700;
 }
 
-.container--cart-view .product-name--cart-view a {
+.container--cart-view .product-name--cart-view a,
+.container--cart-view .product-name--later-view a {
     font-size: 17px;
     font-weight: 700;
     text-decoration: none;
 }
 
-.container--cart-view .product-name--cart-view span.director-name--cart-view {
+.container--cart-view .product-name--cart-view span.director-name--cart-view,
+.container--cart-view .product-name--later-view span.director-name--later-view {
     font-size: 13px;
     font-weight: 500;
 }
@@ -788,11 +791,16 @@ body {
 .container--cart-view .product-format--cart-view p,
 .container--cart-view span.quantity-view--cart-view,
 .container--cart-view span.product-delete--cart-view,
-.container--cart-view span.product-later--cart-view {
+.container--cart-view span.product-later--cart-view,
+.container--cart-view .product-format--later-view p,
+.container--cart-view span.quantity-view--later-view,
+.container--cart-view span.product-delete--later-view,
+.container--cart-view span.product-cart--later-view,
+.container--cart-view span.product-wishlist--later-view {
     font-size: 12px;
     font-weight: 500;
 }
-
+/**/
 .container--cart-view .product-price--cart-view p,
 .container--cart-view span.subtotal-display--cart-view {
     font-size: 17px;
