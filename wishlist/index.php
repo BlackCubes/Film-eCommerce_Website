@@ -86,6 +86,8 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                         exit();
                         /* Redirect the user to another location!!! */
                     }
+
+                } elseif (mysqli_num_rows($r) == 1) {
                     
                 }
 
