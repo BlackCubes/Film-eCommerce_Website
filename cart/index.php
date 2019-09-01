@@ -202,6 +202,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bmove\b))(?!;)?/', $_GET[
 
                 $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
+                $single_product = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
                 break;
         }
 
