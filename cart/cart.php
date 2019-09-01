@@ -32,9 +32,8 @@ if (isset($_SESSION['cart_item'])) {
 
     $total_quantity = 0;
     $subtotal_price = 0;
-    
-?>
 
+?>
 <div class="container--cart-view">
     <div class="main-info--cart-view">
         <div class="cart-title--cart-view">
