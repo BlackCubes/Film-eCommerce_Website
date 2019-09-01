@@ -97,6 +97,8 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
             $q = "SELECT DISTINCT COUNT(c.id) AS later_count, c.product_id AS product_id, p.isd AS product_isd, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, c.product_department AS product_department, c.product_format AS product_format, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln, c.quantity AS quantity, DATE_FORMAT(c.date_created, '%M %d, %Y') AS later_date_created FROM carts AS c JOIN products AS p ON c.product_id=p.id JOIN products_directors AS pdir ON p.id=pdir.product_id JOIN directors AS dir on pdir.director_id=dir.id WHERE c.user_id={$_SESSION['id']} ORDER BY later_date_created DESC";
 
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+            $cart_later = mysqli_fetch_array($r, MYSQLI_ASSOC);
             
         ?>
         <div class="later-title--later-view">
