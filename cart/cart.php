@@ -103,7 +103,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
             <h2>Saved for later</h2>
         </div>
         <div class="cart-later-results--later-view">
-            <?php while ($later = mysqli_fetch_array($r, MYSQLI_ASSOC);) { ?>
+            <?php while ($later = mysqli_fetch_array($r, MYSQLI_ASSOC)) { ?>
             <div class="cart-later-list--later-view">
                 <div class="product-image--later-view">
                     <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $later['product_isd']; ?>"><img alt="<?php echo $later['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $later['product_image']; ?>"></a>
