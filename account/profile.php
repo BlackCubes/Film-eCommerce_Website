@@ -82,7 +82,7 @@ if (!isset($_SESSION['id'])) {
             </a>
         </div>
         <div class="container-wishlist--profile-view">
-            <a href="#">
+            <a href="/FilmIndustry/eCommerce/wishlist/wishlist.php">
                 <div class="wishlist-title--product-view">
                     <h4>Your Wishlists</h4>
                 </div>
