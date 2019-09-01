@@ -239,6 +239,21 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                 if (!empty($_SESSION['cart_item'])) {
                     if (in_array($single_product['product_isd'], array_keys($_SESSION['cart_item']))) {
+                        foreach ($_SESSION['cart_item'] as $k => $v) {
+                            if ($single_product['product_isd'] == $k) {
+                                if (empty($_SESSION['cart_item'][$k]['quantity'])) {
+                                    $_SESSION['cart_item'][$k]['quantity'] = 0;
+                                }
+                                $_SESSION['cart_item'][$k]['quantity'] += $single_product['quantity'];
+                            }
+                        }
+
+                        $url = BASE_URL . 'cart/index.php?action=omit&isd="' . $product_isd . '"';
+                        mysqli_free_result($r);
+                        mysqli_close($dbc);
+                        ob_end_clean();
+                        header("Location: $url");
+                        exit();                        
 
                     } else {
 
