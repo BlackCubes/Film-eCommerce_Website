@@ -176,6 +176,13 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b))(?!;)?/', $_GET['action']))
                         /* Redirect the user to another location!!! */               
                     }
 
+                } else {
+                    $url = BASE_URL . 'index.php';
+                    mysqli_close($dbc);
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();         
+                    /* Redirect the user to another location!!! */
                 }
 
                 /* Redirect the user */
