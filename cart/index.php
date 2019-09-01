@@ -202,6 +202,10 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                 mysqli_autocommit($dbc, FALSE);
 
+                $q = "DELETE FROM carts WHERE product_id={$product_id[0]} AND user_id={$_SESSION['id']} LIMIT 1";
+
+                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
                 break;
 
             case "move":
