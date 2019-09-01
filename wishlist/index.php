@@ -179,7 +179,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                                 if (empty($_SESSION['cart_item'][$K]['quantity'])) {
                                     $_SESSION['cart_item'][$k]['quantity'] = 0;
                                 }
-                                $_SESSION['cart_item'][$k]['quantity'] += $_POST['quantity'];
+                                $_SESSION['cart_item'][$k]['quantity'] += $single_product['quantity'];
                             }
                         }
 
