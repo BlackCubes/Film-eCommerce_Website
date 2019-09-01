@@ -198,7 +198,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bmove\b))(?!;)?/', $_GET[
 
             case "move":
 
-                break
+                break;
         }
 
     } else {
