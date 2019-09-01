@@ -55,7 +55,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
                         <p><?php echo $item['product_format']; ?></p>
                     </div>
                     <div class="product-options--cart-view">
-                        <span class="quantity-view--cart-view">Qty: <?php echo $item['quantity']; ?></span><span class="product-delete--cart-view"><a href="/FilmIndustry/eCommerce/cart/index.php?action=delete&isd=<?php echo $item['product_isd']; ?>">Delete</a></span><span class="product-later--cart-view"><a href="#">Save for later</a></span>
+                        <span class="quantity-view--cart-view">Qty: <?php echo $item['quantity']; ?></span><span class="product-delete--cart-view"><a href="/FilmIndustry/eCommerce/cart/index.php?action=delete&isd=<?php echo $item['product_isd']; ?>">Delete</a></span><span class="product-later--cart-view"><a href="/FilmIndustry/eCommerce/cart/index.php?action=later&isd=<?php echo $item['product_isd']; ?>">Save for later</a></span>
                     </div>
                 </div>
                 <div class="product-price--cart-view">
