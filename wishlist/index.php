@@ -62,27 +62,31 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                 mysqli_autocommit($dbc, FALSE);
 
-                $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id[0]}, '" . $product_department[0] . "', '" . $product_format[0] . "', 1, NOW(), NOW(), {$_SESSION['id']})";
+                if (mysqli_num_rows($r) == 0) {
 
-                $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+                    $q = "INSERT INTO wishlists (product_id, product_department, product_format, quantity, date_created, date_modified, user_id) VALUES ({$product_id[0]}, '" . $product_department[0] . "', '" . $product_format[0] . "', 1, NOW(), NOW(), {$_SESSION['id']})";
 
-                if ($r) {
+                    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
-                    mysqli_commit($dbc);
+                    if ($r) {
 
-                    $url = BASE_URL . 'wishlist/wishlist.php';
-                    mysqli_close($dbc);
-                    ob_end_clean();
-                    header("Location: $url");
-                    exit();
+                        mysqli_commit($dbc);
 
-                } else {
-                    $url = BASE_URL . 'index.php';
-                    mysqli_close($dbc);
-                    ob_end_clean();
-                    header("Location: $url");
-                    exit();
-                    /* Redirect the user to another location!!! */
+                        $url = BASE_URL . 'wishlist/wishlist.php';
+                        mysqli_close($dbc);
+                        ob_end_clean();
+                        header("Location: $url");
+                        exit();
+
+                    } else {
+                        $url = BASE_URL . 'index.php';
+                        mysqli_close($dbc);
+                        ob_end_clean();
+                        header("Location: $url");
+                        exit();
+                        /* Redirect the user to another location!!! */
+                    }
+                    
                 }
 
                 break;
