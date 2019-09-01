@@ -81,5 +81,28 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
         <?php } ?>
         </div>
     </div>
+    <div class="cart-later-info--later-view">
+        <div class="later-title--later-view">
+            <h2>Saved for later</h2>
+        </div>
+        <div class="cart-later-results--later-view">
+            <div class="cart-later-list--later-view">
+                <div class="product-image--later-view">
+                    <a href="#"><img alt="#" src="#"></a>
+                </div>
+                <div class="product-info--later-view">
+                    <div class="product-name--later-view">
+                        <p><a href="#"></a><span class="director-name--later-view"> by </span></p>
+                    </div>
+                    <div class="product-format--later-view">
+                        <p></p>
+                    </div>
+                    <div class="product-options--later-view">
+                        <span class="quantity-view--later-view">Qty: </span><span class="product-delete--later-view"><a href="#">Delete</a></span><span class="product-cart--later-view"><a href="#">Add to Cart</a></span><span class="product-wishlist--later-view"><a href="#">Move to Wish List</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
