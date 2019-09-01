@@ -222,6 +222,7 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
                     ob_end_clean();
                     header("Location: $url");
                     exit();
+                    /* Redirect the user to another location!!! */
                 }
 
                 break;
