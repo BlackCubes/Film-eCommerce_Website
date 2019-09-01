@@ -116,7 +116,7 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
                         <p><?php echo $later['product_format']; ?></p>
                     </div>
                     <div class="product-options--later-view">
-                        <span class="quantity-view--later-view">Qty: <?php echo $later['quantity']; ?></span><span class="product-delete--later-view"><a href="#">Delete</a></span><span class="product-cart--later-view"><a href="#">Add to Cart</a></span><span class="product-wishlist--later-view"><a href="#">Move to Wish List</a></span>
+                        <span class="quantity-view--later-view">Qty: <?php echo $later['quantity']; ?></span><span class="product-delete--later-view"><a href="/FilmIndustry/eCommerce/cart/index.php?action=omit&isd=<?php echo $later['product_isd']; ?>">Delete</a></span><span class="product-cart--later-view"><a href="/FilmIndustry/eCommerce/cart/index.php?action=move&isd=<?php echo $later['product_isd']; ?>">Add to Cart</a></span><span class="product-wishlist--later-view"><a href="#">Move to Wish List</a></span>
                     </div>
                 </div>
                 <div class="product-price--later-view">
