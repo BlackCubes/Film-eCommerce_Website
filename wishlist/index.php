@@ -118,8 +118,6 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
             case "move":
 
-                /* CHECK IF PRODUCT ALREADY EXISTS AND IF IT DOES THEN REDIRECT WITH ERROR MESSAGE! */
-
                 mysqli_autocommit($dbc, FALSE);
 
                 $q = "SELECT quantity FROM carts WHERE product_id='" . $product_id[0] . "' AND user_id={$_SESSION['id']}";
