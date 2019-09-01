@@ -119,6 +119,9 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
                         <span class="quantity-view--later-view">Qty: <?php echo $later['quantity']; ?></span><span class="product-delete--later-view"><a href="#">Delete</a></span><span class="product-cart--later-view"><a href="#">Add to Cart</a></span><span class="product-wishlist--later-view"><a href="#">Move to Wish List</a></span>
                     </div>
                 </div>
+                <div class="product-price--later-view">
+                    <p>$<?php echo $later['product_price']; ?></p>
+                </div>
             </div>
             <?php } ?>
         </div>
