@@ -42,6 +42,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bmove\b))(?!;)?/', $_GET[
 
         $cart_action = $_GET['action'];
 
+        $product_id = mysqli_fetch_array($r, MYSQLI_NUM);
+
         switch ($cart_action) {
 
             case "add":
