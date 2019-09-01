@@ -108,17 +108,17 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
             <?php while ($later = $cart_later) { ?>
             <div class="cart-later-list--later-view">
                 <div class="product-image--later-view">
-                    <a href="#"><img alt="#" src="#"></a>
+                    <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $later['product_isd']; ?>"><img alt="<?php echo $later['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $later['product_image']; ?>"></a>
                 </div>
                 <div class="product-info--later-view">
                     <div class="product-name--later-view">
-                        <p><a href="#"></a><span class="director-name--later-view"> by </span></p>
+                        <p><a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $later['product_isd']; ?>"><?php echo $later['product_name']; ?></a><span class="director-name--later-view"> by <?php echo $later['director_fn'] . ' ' . $later['director_mn'] . ' ' . $later['director_ln']; ?></span></p>
                     </div>
                     <div class="product-format--later-view">
-                        <p></p>
+                        <p><?php echo $later['product_format']; ?></p>
                     </div>
                     <div class="product-options--later-view">
-                        <span class="quantity-view--later-view">Qty: </span><span class="product-delete--later-view"><a href="#">Delete</a></span><span class="product-cart--later-view"><a href="#">Add to Cart</a></span><span class="product-wishlist--later-view"><a href="#">Move to Wish List</a></span>
+                        <span class="quantity-view--later-view">Qty: <?php echo $later['quantity']; ?></span><span class="product-delete--later-view"><a href="#">Delete</a></span><span class="product-cart--later-view"><a href="#">Add to Cart</a></span><span class="product-wishlist--later-view"><a href="#">Move to Wish List</a></span>
                     </div>
                 </div>
             </div>
