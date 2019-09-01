@@ -85,6 +85,9 @@ if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
 
     require(MYSQL);
 
+    $q = "SELECT product_department FROM carts WHERE user_id={$_SESSION['id']} LIMIT 1";
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
     ?>
     <div class="cart-later-info--later-view">
         <div class="later-title--later-view">
