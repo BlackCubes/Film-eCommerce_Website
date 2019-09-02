@@ -97,9 +97,13 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 
-    } elseif ($r_studio) { ?>
+    } elseif ($r_studio) {
 
+        while ($studio = mysqli_fetch_array($r_studio, MYSQLI_ASSOC)) {
+?>
+<p><?php echo $studio['studio_name']; ?></p>
 <?php
+        }
 
         mysqli_free_result($r_studio);
         mysqli_close($dbc);
