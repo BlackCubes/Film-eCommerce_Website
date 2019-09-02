@@ -35,7 +35,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     switch ($table_type) {
 
-        case "genres":
+        case "genre":
 
             $q = "SELECT DISTINCT g.genre AS genres FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "'";
 
@@ -43,7 +43,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
             break;
         
-        case "actors":
+        case "actor":
         default:
 
             $q = "SELECT DISTINCT a.first_name AS artist_fn, a.middle_name AS artist_mn, a.last_name AS artist_ln FROM `{$table_type}` a JOIN `products_{$table_type}` pa ON a.id=pa.{$column_type}_id JOIN products p ON pa.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "' ORDER BY artist_ln";
@@ -52,7 +52,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
             break;
 
-        case "studios":
+        case "studio":
 
             $q = "SELECT DISTINCT s.studio_name AS studio_name FROM `{$table_type}` s JOIN `products_{$table_type}` ps ON s.id=ps.{$column_type}_id JOIN products p ON ps.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "' ORDER BY studio_name";
 
