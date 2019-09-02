@@ -73,7 +73,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 <p>Viewing: <?php echo $column_type; ?></p>
 <?php
 
-        mysqli_free_result($r);
+        mysqli_free_result($r_genre);
         mysqli_close($dbc);
 
         include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
@@ -82,7 +82,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 <p>Viewing: <?php echo $column_type; ?></p>
 <?php
 
-        mysqli_free_result($r);
+        mysqli_free_result($r_artist);
         mysqli_close($dbc);
 
         include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
@@ -91,7 +91,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 <p>Viewing: <?php echo $column_type; ?></p>
 <?php
 
-        mysqli_free_result($r);
+        mysqli_free_result($r_studio);
         mysqli_close($dbc);
 
         include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
