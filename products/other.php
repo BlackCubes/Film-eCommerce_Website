@@ -46,7 +46,9 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         case "actors":
         default:
 
-            $q = "SELECT ";
+            $q = "SELECT DISTINCT a.first_name AS artist_fn, a.middle_name AS artist_mn, a.last_name AS artist_ln FROM `{$table_type}` a JOIN `products_{$table_type}` pa ON a.id=pa.{$column_type}_id JOIN products p ON pa.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "' ORDER BY artist_ln";
+
+            $r_artist = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             break;
 
