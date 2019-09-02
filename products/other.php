@@ -29,13 +29,15 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
 <?php
 
+    mysqli_free_result($r);
+    mysqli_close($dbc);
+
+    include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
+
 } else {
     $url = BASE_URL . 'index.php';
     ob_end_clean();
     header("Location: $url");
     exit();
 }
-
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
-
 ?>
