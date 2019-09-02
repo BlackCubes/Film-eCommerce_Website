@@ -44,8 +44,13 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             $r_artist = $r_studio = FALSE;
 
             $q = "SELECT COUNT(DISTINCT g.id) FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "'";
-
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $row = mysqli_fetch_array($r, MYSQLI_NUM);
+            $records = $row[0];
+
+            $column_display = 3;
+
+            $row_display = ceil($records/$column_display);
 
             break;
         
