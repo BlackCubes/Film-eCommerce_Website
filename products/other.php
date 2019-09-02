@@ -69,10 +69,15 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     }
 ?>
 <p>Viewing: <?php echo $column_type; ?></p>
-<?php    if ($r_genre) {
-?>
-
 <?php
+
+    if ($r_genre) {
+
+        while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
+?>
+<p><?php echo $genre['genres']; ?></p>
+<?php
+        }
 
         mysqli_free_result($r_genre);
         mysqli_close($dbc);
