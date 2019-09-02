@@ -102,7 +102,17 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
 ?>
-<p><?php echo $genre['genres']; ?></p>
+<?php
+            for ($i = 0; $i < $row_display; $i++) {
+                echo '<ul><li><a href="#>' . $genre['genres'] . '</a></li></ul>';
+            }
+            for ($i = 0; $i < $row_display; $i++) {
+                echo '<ul><li><a href="#>' . $genre['genres'] . '</a></li></ul>';
+            }
+            for ($i = 0; $i < $row_display; $i++) {
+                echo '<ul><li><a href="#>' . $genre['genres'] . '</a></li></ul>';
+            }
+?>
 <?php
         }
 
