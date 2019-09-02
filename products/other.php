@@ -68,7 +68,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     }
 ?>
-<p>Viewing: <?php echo ucfirst($column_type); ?></p>
+<p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
 <?php
 
     if ($r_genre) {
