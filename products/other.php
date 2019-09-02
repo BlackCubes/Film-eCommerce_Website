@@ -33,7 +33,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     $table_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']) . 's');
     $column_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']));
 
-    switch ($table_type) {
+    switch ($column_type) {
 
         case "genre":
 
