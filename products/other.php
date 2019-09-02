@@ -36,6 +36,10 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         case "genres":
 
+            $q = "SELECT DISTINCT g.genre AS genres FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "'";
+
+            $r_genre = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
             break;
         
         case "actors":
