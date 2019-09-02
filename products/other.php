@@ -84,9 +84,13 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
 
-    } elseif ($r_artist) { ?>
+    } elseif ($r_artist) {
 
+        while ($artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC)) {
+?>
+<p><?php echo $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln']; ?></p>
 <?php
+        }
 
         mysqli_free_result($r_artist);
         mysqli_close($dbc);
