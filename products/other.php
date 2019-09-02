@@ -23,6 +23,8 @@ $page_title = 'See All Results';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
 if (isset($_GET['type'], $_GET['name'])) {
+
+    require(MYSQL);
 ?>
 
 <?php
