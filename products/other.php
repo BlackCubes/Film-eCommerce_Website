@@ -45,7 +45,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         case "actors":
         default:
 
-            $q = "SELECT "
+            $q = "SELECT ";
 
             break;
 
