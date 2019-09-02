@@ -31,6 +31,23 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     $format = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
 
     $table_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']));
+
+    switch ($table_type) {
+
+        case "genres":
+
+            break;
+        
+        case "actors":
+        default:
+
+            break;
+
+        case "studios":
+
+            break;
+
+    }
 ?>
 
 <?php
