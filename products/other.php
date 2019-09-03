@@ -100,7 +100,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     if ($r_genre) {
 
-        $non_duplication = array(array());
+        $non_duplication = array();
 
         while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
             array_push($non_duplication, $genre);
