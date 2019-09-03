@@ -112,7 +112,9 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         for ($i = 0; $i < $column_display; $i++) {
             for ($j = 0; $j < $row_display; $j++) {
-                $stored_values[$j] = $genres[$j];
+                for ($k = 0; $k < $row_display; $k++) {
+                    $stored_values[$j] = $genres[$j];
+                }
             }
             $non_duplication[$i] = $stored_values;
         }
