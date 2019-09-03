@@ -106,10 +106,8 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             $non_duplication[] = $genre;
         }*/
 
-        for ($i = 0; $i < $column_display; $i++) {
-            for ($j = 0; $j < $row_display; $j++) {
-                $non_duplication[] = array($i => array($j => $i));
-            }
+        for ($i = 0; $j = 0; $i < $column_display; $j < $row_display; $i++; $j++) {
+            $non_duplication[$i] = array($j => $i);
         }
 
         print_r($non_duplication);
