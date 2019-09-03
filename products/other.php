@@ -105,7 +105,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 <?php
             echo '<ul>';
             for ($i = 0; $i < $row_display; $i++) {
-                echo '<li><a href="#>' . $genre['genres'] . '</a></li>';
+                echo '<li><a href="#">' . $genre['genres'] . '</a></li>';
             }
             echo '</ul>';
 
