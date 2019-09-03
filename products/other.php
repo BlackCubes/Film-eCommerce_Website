@@ -108,6 +108,12 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         print_r($non_duplication);
 
+        echo '<ul>';
+        for ($i = 0; $i < $row_display; $i++) {
+            echo '<li>' . $non_duplication[$i]['genres'] . '</li>';
+        }
+        echo '</ul>';
+
         /*echo '<ul>';
         for ($i = 0; $i < $row_display; $i++) {
             echo '<li><a href="#">' . $genre['genres'] . '</a></li>';
