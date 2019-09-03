@@ -103,16 +103,16 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         $non_duplication = array();
 
         while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
-
-            $non_duplication = $genre['genres'];
-
-            echo '<ul>';
-            for ($i = 0; $i < $row_display; $i++) {
-                echo '<li><a href="#">' . $genre['genres'] . '</a></li>';
-            }
-            echo '</ul>';
-
+            array_push($non_duplication, $genre);
         }
+
+        print_r($non_duplication);
+
+        /*echo '<ul>';
+        for ($i = 0; $i < $row_display; $i++) {
+            echo '<li><a href="#">' . $genre['genres'] . '</a></li>';
+        }
+        echo '</ul>';*/
 
         mysqli_free_result($r_genre);
         mysqli_close($dbc);
