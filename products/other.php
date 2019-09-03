@@ -100,11 +100,11 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     if ($r_genre) {
 
-        $non_duplication = $stored_values = array();
+        $non_duplication = $stored_values = $genres = array();
 
-        /*while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
-            $non_duplication[] = $genre;
-        }*/
+        while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
+            $genres[] = $genre['genres'];
+        }
 
         /*for ($i = 0; $j = 0; $i < $column_display; $j < $row_display; $i++; $j++) {
             $non_duplication[$i] = array($j => $i);
@@ -112,7 +112,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         for ($i = 0; $i < $column_display; $i++) {
             for ($j = 0; $j < $row_display; $j++) {
-                $stored_values[$j] = $j;
+                $stored_values[$j] = $genres[$j];
             }
             $non_duplication[$i] = $stored_values;
         }
