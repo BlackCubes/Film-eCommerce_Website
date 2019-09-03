@@ -100,18 +100,18 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     if ($r_genre) {
 
-        echo '<ul>';
         while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
 ?>
 <?php
+            echo '<ul>';
             for ($i = 0; $i < $row_display; $i++) {
                 echo '<li><a href="#">' . $genre['genres'] . '</a></li>';
             }
+            echo '</ul>';
 
 ?>
 <?php
         }
-        echo '</ul>';
 
         mysqli_free_result($r_genre);
         mysqli_close($dbc);
