@@ -108,7 +108,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         for ($i = 0; $i < $column_display; $i++) {
             for ($j = 0; $j < $row_display; $j++) {
-                $non_duplication = array($i => array($j => $i));
+                $non_duplication[] = array($i => array($j => $i));
             }
         }
 
