@@ -100,9 +100,19 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     if ($r_genre) {
 
-        $non_duplication = array();
+        $non_duplication = array(array());
 
-        while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
+        for ($i = 0; $i < $column_display; $i++) {
+            for ($j = 0; $j < $row_display; $j++) {
+                while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
+                    array_push($non_duplication, $genre)
+                }
+            }
+        }
+
+        print_r($non_duplication);
+
+        /*while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
             array_push($non_duplication, $genre);
         }
 
@@ -112,7 +122,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         for ($i = 0; $i < $row_display; $i++) {
             echo '<li>' . $non_duplication[$i]['genres'] . '</li>';
         }
-        echo '</ul>';
+        echo '</ul>';*/
 
         /*echo '<ul>';
         for ($i = 0; $i < $row_display; $i++) {
