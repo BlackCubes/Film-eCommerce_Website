@@ -116,7 +116,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             $column_values_3[$j] = $genres[$j];
         }
 
-        $result_list = array(0 => $column_values_1, 1 => $column_values_2, 2 => $column_values_3);
+        $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
 
         print_r($result_list);
 
