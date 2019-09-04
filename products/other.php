@@ -141,8 +141,36 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     } elseif ($r_artist) {
 
+        $result_list = $column_values_1 = $column_values_2 = $column_values_3 = $artists = array();
+
         while ($artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC)) {
-            echo $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
+            if (empty($artist['artist_mn'])) {
+                $artists[] = $artist['artist_fn'] . ' ' . $artist['artist_ln'];
+            } else {
+                $artists[] = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
+            }
+        }
+
+        for ($j = 0; $j < $row_display; $j++) {
+            $column_values_1[$j] = $artists[$j];
+        }
+        for ($j = $row_display; $j < 2*$row_display; $j++) {
+            $column_values_2[$j] = $artists[$j];
+        }
+        for ($j = 2*$row_display; $j < $records; $j++) {
+            $column_values_3[$j] = $artists[$j];
+        }
+
+        $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
+
+        /*print_r($result_list);*/
+
+        for ($i = 0; $i < $column_display; $i++) {
+            echo '<ul>';
+            for ($j = 0; $j < count($result_list[$i]); $j++) {
+                echo '<li>' . $result_list[$i][$j] . '</li>';
+            }
+            echo '</ul>';
         }
 
         mysqli_free_result($r_artist);
