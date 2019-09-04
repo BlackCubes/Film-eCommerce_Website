@@ -142,9 +142,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     } elseif ($r_artist) {
 
         while ($artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC)) {
-?>
-<p><?php echo $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln']; ?></p>
-<?php
+            echo $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
         }
 
         mysqli_free_result($r_artist);
