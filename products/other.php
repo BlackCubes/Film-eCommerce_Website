@@ -100,28 +100,25 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     if ($r_genre) {
 
-        $non_duplication = $stored_values_1 = $stored_values_2 = $stored_values_3 = $genres = array();
+        $result_list = $column_values_1 = $column_values_2 = $column_values_3 = $genres = array();
 
         while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
             $genres[] = $genre['genres'];
         }
 
-        /*for ($i = 0; $j = 0; $i < $column_display; $j < $row_display; $i++; $j++) {
-            $non_duplication[$i] = array($j => $i);
-        }*/
-
         for ($j = 0; $j < $row_display; $j++) {
-            $stored_values_1[$j] = $genres[$j];
+            $column_values_1[$j] = $genres[$j];
         }
         for ($j = $row_display; $j < 2*$row_display; $j++) {
-            $stored_values_2[$j] = $genres[$j];
+            $column_values_2[$j] = $genres[$j];
         }
         for ($j = 2*$row_display; $j < $records; $j++) {
-            $stored_values_3[$j] = $genres[$j];
+            $column_values_3[$j] = $genres[$j];
         }
-        $non_duplication = array(1 => $stored_values_1, 2 => $stored_values_2, 3 => $stored_values_3);
 
-        print_r(array_unique($non_duplication, SORT_REGULAR));
+        $result_list = array(0 => $column_values_1, 1 => $column_values_2, 2 => $column_values_3);
+
+        print_r($result_list);
 
         /*echo '<ul>';
         for ($i = 0; $i < $row_display; $i++) {
