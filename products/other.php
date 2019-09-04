@@ -111,15 +111,13 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         }*/
 
         for ($i = 0; $i < $column_display; $i++) {
-            for ($j = 0; $j < $row_display; $j++) {
-                for ($k = 0; $k < $records; $k++) {
-                    $stored_values[$k] = $genres[$k];
-                }
+            for ($j = $row_display; $j < 2*$row_display; $j++) {
+                $stored_values[$j] = $genres[$j];
             }
             $non_duplication[$i] = $stored_values;
         }
 
-        print_r($non_duplication);
+        print_r(array_unique($non_duplication, SORT_REGULAR));
 
         /*echo '<ul>';
         for ($i = 0; $i < $row_display; $i++) {
