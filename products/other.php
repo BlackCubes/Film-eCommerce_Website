@@ -180,10 +180,32 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     } elseif ($r_studio) {
 
+        $result_list = $column_values_1 = $column_values_2 = $column_values_3 = $studios = array();
+
         while ($studio = mysqli_fetch_array($r_studio, MYSQLI_ASSOC)) {
-?>
-<p><?php echo $studio['studio_name']; ?></p>
-<?php
+            $studios[] = $studio['studio_name'];
+        }
+
+        for ($j = 0; $j < $row_display; $j++) {
+            $column_values_1[$j] = $studios[$j];
+        }
+        for ($j = $row_display; $j < 2*$row_display; $j++) {
+            $column_values_2[$j] = $studios[$j];
+        }
+        for ($j = 2*$row_display; $j < $records; $j++) {
+            $column_values_3[$j] = $studios[$j];
+        }
+
+        $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
+
+        /*print_r($result_list);*/
+
+        for ($i = 0; $i < $column_display; $i++) {
+            echo '<ul>';
+            for ($j = 0; $j < count($result_list[$i]); $j++) {
+                echo '<li>' . $result_list[$i][$j] . '</li>';
+            }
+            echo '</ul>';
         }
 
         mysqli_free_result($r_studio);
