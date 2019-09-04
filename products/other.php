@@ -118,13 +118,15 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
 
-        print_r($result_list);
+        /*print_r($result_list);*/
 
-        /*echo '<ul>';
-        for ($i = 0; $i < $row_display; $i++) {
-            echo '<li>' . $non_duplication[$i]['genres'] . '</li>';
+        for ($i = 0; $i < $column_display; $i++) {
+            echo '<ul>';
+            for ($j = 0; $j < count($result_list[$i]); $j++) {
+                echo '<li>' . $result_list[$i][$j] . '</li>';
+            }
+            echo '</ul>';
         }
-        echo '</ul>';*/
 
         /*echo '<ul>';
         for ($i = 0; $i < $row_display; $i++) {
