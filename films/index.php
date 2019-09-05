@@ -85,7 +85,7 @@ if (isset($_GET['type'], $_GET['name'])) {
 
             $genre_id_encrypt = urlencode(my_encrypt($genre['genre_id'], KEY));
 
-            echo '<p>' . $genre['genre'] . '</p>';
+            echo '<a href=/FilmIndustry/eCommerce/films/index.php?type=genre&name=' . $genre_id_encrypt . '>' . $genre['genre'] . '</a>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=genre">See more</a></div>';
 
