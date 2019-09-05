@@ -95,6 +95,9 @@ if (isset($_GET['type'], $_GET['name'])) {
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Actors</b></p>';
         while ($actor = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+            $actor_id_encrypt = urlencode(my_encrypt($actor['actor_id'], KEY));
+
             echo '<p>' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=actor">See more</a></div>';
