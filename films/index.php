@@ -27,6 +27,15 @@ if (isset($_GET['type'], $_GET['name'])) {
 
         $id_decrypt = urldecode(my_decrypt($_GET['name'], KEY));
 
+        if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
+
+        } else {
+            $url = BASE_URL . 'index.php';
+            ob_end_clean();
+            header("Location: $url");
+            exit();
+        }
+
     } else {
         $url = BASE_URL . 'index.php';
         ob_end_clean();
