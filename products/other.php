@@ -187,7 +187,11 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         $result_list = $column_values_1 = $column_values_2 = $column_values_3 = $studios = array();
 
         while ($studio = mysqli_fetch_array($r_studio, MYSQLI_ASSOC)) {
-            $studios[] = $studio['studio_name'];
+
+            $studio_id_encrypt = urlencode(my_encrypt($studio['studio_id'], KEY));
+
+            $studios[] = '<li><a href="#">' . $studio['studio_name'] . '</a></li>';
+
         }
 
         for ($j = 0; $j < $row_display; $j++) {
@@ -207,7 +211,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         for ($i = 0; $i < $column_display; $i++) {
             echo '<ul>';
             for ($j = 0; $j < count($result_list[$i]); $j++) {
-                echo '<li>' . $result_list[$i][$j] . '</li>';
+                echo $result_list[$i][$j];
             }
             echo '</ul>';
         }
