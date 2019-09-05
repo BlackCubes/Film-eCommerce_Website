@@ -29,8 +29,8 @@ if (isset($_GET['type'], $_GET['name'])) {
 
         if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
-            $role_column = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']));
-            $role_table = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']) . 's');
+            $column_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']));
+            $table_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']) . 's');
 
             $id = $id_decrypt;
 
