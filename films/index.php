@@ -42,7 +42,7 @@ if (isset($_GET['type'], $_GET['name'])) {
 
             if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] == $id)) {
                 
-                $where = "JOIN `products_{$table_type}` pa ON p.id=pa.product_id WHERE pa.{$column_type}={$id}";
+                $where = "JOIN `products_{$table_type}` pa ON p.id=pa.product_id WHERE pa.{$column_type}_id={$id}";
 
             } else {
                 $url = BASE_URL . 'index.php';
