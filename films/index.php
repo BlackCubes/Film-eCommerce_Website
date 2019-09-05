@@ -144,7 +144,7 @@ if (isset($_GET['type'], $_GET['name'])) {
         if (isset($_GET['p']) && is_numeric($_GET['p'])) {
             $pages = $_GET['p'];
         } else {
-            $q = "SELECT COUNT(id) FROM products";
+            $q = "SELECT COUNT(DISTINCT p.id) FROM products p $where";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row = mysqli_fetch_array($r, MYSQLI_NUM);
             $records = $row[0];
