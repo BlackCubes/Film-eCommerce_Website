@@ -144,11 +144,15 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         $result_list = $column_values_1 = $column_values_2 = $column_values_3 = $artists = array();
 
         while ($artist = mysqli_fetch_array($r_artist, MYSQLI_ASSOC)) {
+
+            $artist_id_encrypt = urlencode(my_encrypt($artist['artist_id'], KEY));
+
             if (empty($artist['artist_mn'])) {
-                $artists[] = $artist['artist_fn'] . ' ' . $artist['artist_ln'];
+                $artists[] = '<li><a href="#">' . $artist['artist_fn'] . ' ' . $artist['artist_ln'] . '</a></li>';
             } else {
                 $artists[] = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
             }
+
         }
 
         for ($j = 0; $j < $row_display; $j++) {
@@ -168,7 +172,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         for ($i = 0; $i < $column_display; $i++) {
             echo '<ul>';
             for ($j = 0; $j < count($result_list[$i]); $j++) {
-                echo '<li>' . $result_list[$i][$j] . '</li>';
+                echo $result_list[$i][$j];
             }
             echo '</ul>';
         }
