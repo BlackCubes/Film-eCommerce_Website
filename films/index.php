@@ -161,7 +161,7 @@ if (isset($_GET['type'], $_GET['name'])) {
             $start = 0;
         }
 
-        $q = "SELECT name, unit_price, image_1, isd FROM products ORDER BY name LIMIT $start, $display";
+        $q = "SELECT p.name AS product_name, p.unit_price AS product_price, p.image_1 AS product_image, p.isd AS product_isd FROM products p $where ORDER BY name LIMIT $start, $display";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
