@@ -25,6 +25,8 @@ require(MYSQL);
 if (isset($_GET['type'], $_GET['name'])) {
     if (preg_match('/((\bgenre\b)|(\bactor\b)|(\bdirector\b)|(\bwriter\b)|(\bproducer\b)|(\bdp\b)|(\bstudio\b))(?!;)/', $_GET['type'])) {
 
+        $id_decrypt = urldecode(my_decrypt($_GET['name'], KEY));
+
     } else {
         $url = BASE_URL . 'index.php';
         ob_end_clean();
