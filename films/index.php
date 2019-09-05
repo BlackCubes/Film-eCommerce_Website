@@ -67,13 +67,13 @@ require(MYSQL);
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=writer">See more</a></div>';
 
-        $q = "SELECT DISTINCT pro.first_name, pro.middle_name, pro.last_name FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY pro.last_name";
+        $q = "SELECT DISTINCT pro.first_name, pro.middle_name, pro.last_name FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY pro.last_name LIMIT 5";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Producers</b></p>';
         while ($producer = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
             echo '<p>' . $producer['first_name'] . ' ' . $producer['middle_name'] . ' ' . $producer['last_name'] . '</p>';
         }
-        echo '</div>';
+        echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=producer">See more</a></div>';
 
         $q = "SELECT DISTINCT dp.first_name, dp.middle_name, dp.last_name FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dp.last_name";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
