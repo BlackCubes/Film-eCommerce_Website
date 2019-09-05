@@ -83,13 +83,13 @@ require(MYSQL);
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=dp">See more</a></div>';
 
-        $q = "SELECT DISTINCT stu.studio_name FROM studios AS stu JOIN products_studios AS pstu ON stu.id=pstu.studio_id JOIN products AS p ON pstu.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY stu.studio_name";
+        $q = "SELECT DISTINCT stu.studio_name FROM studios AS stu JOIN products_studios AS pstu ON stu.id=pstu.studio_id JOIN products AS p ON pstu.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY stu.studio_name LIMIT 5";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Studios</b></p>';
         while ($studio = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
             echo '<p>' . $studio['studio_name'] . '</p>';
         }
-        echo '</div>';
+        echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=studio">See more</a></div>';
 
         ?>
     </div>
