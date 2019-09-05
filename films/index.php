@@ -38,6 +38,15 @@ if (isset($_GET['type'], $_GET['name'])) {
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
+            if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] == $id)) {
+
+            } else {
+                $url = BASE_URL . 'index.php';
+                ob_end_clean();
+                header("Location: $url");
+                exit();
+            }
+
         } else {
             $url = BASE_URL . 'index.php';
             ob_end_clean();
