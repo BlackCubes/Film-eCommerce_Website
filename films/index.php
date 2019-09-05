@@ -135,11 +135,14 @@ if (isset($_GET['type'], $_GET['name'])) {
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=producer">See more</a></div>';
 
-        $q = "SELECT DISTINCT dp.first_name, dp.middle_name, dp.last_name FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dp.last_name LIMIT 5";
+        $q = "SELECT DISTINCT dp.id AS dp_id, dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dp.last_name LIMIT 5";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Cinematographers</b></p>';
         while ($dp = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<p>' . $dp['first_name'] . ' ' . $dp['middle_name'] . ' ' . $dp['last_name'] . '</p>';
+
+            $dp_id_encrypt = urlencode(my_encrypt($dp['dp_id'], KEY));
+
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=dp&name=' . $dp_id_encrypt . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=dp">See more</a></div>';
 
