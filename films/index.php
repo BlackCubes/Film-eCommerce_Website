@@ -98,7 +98,7 @@ if (isset($_GET['type'], $_GET['name'])) {
 
             $actor_id_encrypt = urlencode(my_encrypt($actor['actor_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=actor">See more</a></div>';
 
