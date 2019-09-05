@@ -103,7 +103,10 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         $result_list = $column_values_1 = $column_values_2 = $column_values_3 = $genres = array();
 
         while ($genre = mysqli_fetch_array($r_genre, MYSQLI_ASSOC)) {
-            $genres[] = $genre['genres'];
+
+            $genre_id_encrypt = urlencode(my_encrypt($genre['genre_id'], KEY));
+
+            $genres[] = '<li><a href="#">' . $genre['genres'] . '</a></li>';
         }
 
         for ($j = 0; $j < $row_display; $j++) {
@@ -123,7 +126,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         for ($i = 0; $i < $column_display; $i++) {
             echo '<ul>';
             for ($j = 0; $j < count($result_list[$i]); $j++) {
-                echo '<li>' . $result_list[$i][$j] . '</li>';
+                echo $result_list[$i][$j];
             }
             echo '</ul>';
         }
