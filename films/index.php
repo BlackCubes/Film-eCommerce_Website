@@ -34,6 +34,10 @@ if (isset($_GET['type'], $_GET['name'])) {
 
             $id = $id_decrypt;
 
+            $q = "SELECT id FROM `{$role_table}` WHERE id={$id}";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
         } else {
             $url = BASE_URL . 'index.php';
             ob_end_clean();
