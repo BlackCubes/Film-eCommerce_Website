@@ -22,6 +22,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 
 require(MYSQL);
 
+if (isset($_GET['type'], $_GET['name'])) {
+    
+}
 ?>
 <div class="container">
     <div class="sidebar-a">
