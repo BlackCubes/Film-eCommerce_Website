@@ -166,17 +166,17 @@ if (isset($_GET['type'], $_GET['name'])) {
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 
-            $_SESSION['isd'] = $product['isd'];
+            $_SESSION['product_isd'] = $product['product_isd'];
 
-            if (empty($product['image_1'])) {
+            if (empty($product['product_image'])) {
                 $product_image = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
             } else {
-                $product_image = "/FilmIndustry/uploads/products/{$product['image_1']}";
+                $product_image = "/FilmIndustry/uploads/products/{$product['product_image']}";
             }
 
-            echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['isd'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['name'] . '</div><div class="product-price">$' . $product['unit_price'] . '</div></div>';
+            echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['product_isd'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['product_name'] . '</div><div class="product-price">$' . $product['product_price'] . '</div></div>';
 
-            unset($_SESSION['isd']);
+            unset($_SESSION['product_isd']);
         }
 
         mysqli_free_result($r);
