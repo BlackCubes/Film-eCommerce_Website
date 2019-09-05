@@ -102,11 +102,14 @@ if (isset($_GET['type'], $_GET['name'])) {
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=actor">See more</a></div>';
 
-        $q = "SELECT DISTINCT dir.first_name, dir.middle_name, dir.last_name FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dir.last_name LIMIT 5";
+        $q = "SELECT DISTINCT dir.id AS director_id, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id WHERE d.department='Movies' ORDER BY dir.last_name LIMIT 5";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Directors</b></p>';
         while ($director = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<p>' . $director['first_name'] . ' ' . $director['middle_name'] . ' ' . $director['last_name'] . '</p>';
+
+            $director_id_encrypt = urlencode(my_encrypt($director['director_id'], KEY));
+
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $director_id_encrypt . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=director">See more</a></div>';
 
