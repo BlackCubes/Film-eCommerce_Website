@@ -150,7 +150,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             if (empty($artist['artist_mn'])) {
                 $artists[] = '<li><a href="#">' . $artist['artist_fn'] . ' ' . $artist['artist_ln'] . '</a></li>';
             } else {
-                $artists[] = $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'];
+                $artists[] = '<li><a href="#">' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</a></li>';
             }
 
         }
