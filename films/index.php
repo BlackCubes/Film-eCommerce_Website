@@ -87,7 +87,7 @@ if (isset($_GET['type'], $_GET['name'])) {
 
             $genre_id_encrypt = urlencode(my_encrypt($genre['genre_id'], KEY));
 
-            echo '<p><a href=/FilmIndustry/eCommerce/films/index.php?type=genre&name=' . $genre_id_encrypt . '>' . $genre['genre'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=genre&name=' . $genre_id_encrypt . '">' . $genre['genre'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=genre">See more</a></div>';
 
@@ -98,7 +98,7 @@ if (isset($_GET['type'], $_GET['name'])) {
 
             $actor_id_encrypt = urlencode(my_encrypt($actor['actor_id'], KEY));
 
-            echo '<p>' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $actor['first_name'] . ' ' . $actor['middle_name'] . ' ' . $actor['last_name'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=actor">See more</a></div>';
 
