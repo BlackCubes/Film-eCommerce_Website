@@ -21,6 +21,11 @@ class breadcrumb
     private $separator = ' | ';
 
     private $domain = 'http://localhost/FilmIndustry/eCommerce/index.php';
+
+    public function build($array)
+    {
+        
+    }
 }
 
 ?>
