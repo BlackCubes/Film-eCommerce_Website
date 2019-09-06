@@ -16,7 +16,11 @@
 
 class breadcrumb
 {
-    
+    private $breadcrumb;
+
+    private $separator = ' | ';
+
+    private $domain = 'http://localhost/FilmIndustry/eCommerce/index.php';
 }
 
 ?>
