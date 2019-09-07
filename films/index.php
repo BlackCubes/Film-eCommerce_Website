@@ -69,6 +69,8 @@ if (isset($_GET['type'], $_GET['name'])) {
 } else {
     $where = '';
 }
+
+$breadcrumb = new breadcrumb();
 ?>
 <div class="container">
     <div class="sidebar-a">
