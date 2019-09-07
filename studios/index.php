@@ -49,6 +49,10 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
     $start = 0;
 }
 
+$breadcrumb = new breadcrumb();
+
+echo $breadcrumb->build(array('Studios' => 'studios/index.php'));
+
 echo '<div class="container" id="templateStudios">
 <div class="sidebar-a">
     <div class="results">
