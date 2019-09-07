@@ -24,7 +24,7 @@ class breadcrumb
 
     public function build($array)
     {
-        $breadcrumbs = array_merge(array('home' => ''), $array);
+        $breadcrumbs = array_merge(array('Home' => ''), $array);
 
         $count = 0;
 
