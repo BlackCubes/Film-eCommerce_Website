@@ -71,6 +71,8 @@ if (isset($_GET['type'], $_GET['name'])) {
 }
 
 $breadcrumb = new breadcrumb();
+
+echo $breadcrumb->build(array('Films' => 'films'));
 ?>
 <div class="container">
     <div class="sidebar-a">
