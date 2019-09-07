@@ -72,10 +72,10 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         $breadcrumb = new breadcrumb();
 
-        if ($product['product_format'] === 'Movies') {
+        if ($product['product_department'] === 'Movies') {
             $department_title = 'FILMS';
-        } elseif ($product['product_format'] === 'TV') {
-            $department_title = $product['product_format'];
+        } elseif ($product['product_department'] === 'TV') {
+            $department_title = $product['product_department'];
         }
 
         echo $breadcrumb->build(array(ucfirst(strtolower($department_title)) => strtolower($department_title) . 'index.php', $product['product_name'] => ''));
