@@ -60,7 +60,7 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
                 $link_name = $role_table;
             }
 
-            echo $breadcrumb->build(array(ucfirst($role_table) => $role_table . '/index.php', $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] => ''));
+            echo $breadcrumb->build(array(ucfirst($title_name) => $link_name . '/index.php', $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] => ''));
 
             echo '<div class="container--artist-view"><div class="main-info--artist-view"><div class="artist-name--artist-view"><h2>' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</h2></div><div class="image--artist-view"><img src="/FilmIndustry/eCommerce/img/' . $artist['artist_img'] . '"></div></div><div class="product-artist-info--artist-view"><div class="product-artist-title--artist-view"><h2>Filmography</h2></div><div class="product-artist-list--artist-view">';
 
