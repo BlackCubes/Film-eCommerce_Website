@@ -22,6 +22,8 @@ $page_title = 'Films';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.php');
+
 require(MYSQL);
 
 if (isset($_GET['type'], $_GET['name'])) {
