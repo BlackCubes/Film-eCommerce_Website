@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $breadcrumb = new breadcrumb();
 
-echo $breadcrumb->build('Account' => 'account/profile.php', 'Login & Security' => 'account/login_security.php', 'Change Mobile Phone Number' => 'account/change_phone.php');
+echo $breadcrumb->build(array('Account' => 'account/profile.php', 'Login & Security' => 'account/login_security.php', 'Change Mobile Phone Number' => 'account/change_phone.php'));
 ?>
 <form action="change_phone.php" method="post" id="userChangePhoneCard">
     <fieldset class="change-phone-card">
