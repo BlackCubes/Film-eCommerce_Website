@@ -23,6 +23,8 @@ $page_title = 'Producers';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.php');
+
 require(MYSQL);
 
 $display = 21;
