@@ -53,7 +53,9 @@ if (isset($_GET['artist'], $_GET['role']) && preg_match('/((\bactor\b)|(\bdirect
             $breadcrumb = new breadcrumb();
 
             if ($role_table === 'dps') {
-                $role_table = 'Cinematographers';
+                $role_domain_name = 'Cinematographers';
+            } else {
+                $role_domain_name = $role_table;
             }
 
             echo $breadcrumb->build(array(ucfirst($role_table) => $role_table . '/index.php', $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] => ''));
