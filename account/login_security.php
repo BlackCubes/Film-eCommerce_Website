@@ -86,6 +86,10 @@ if (!empty($_SESSION['systemErr'])) {
 } else {
     unset($_SESSION['systemErr']);
 }
+
+$breadcrumb = new breadcrumb();
+
+echo $breadcrumb->build(array('Account' => 'account/profile.php', 'Login & Security' => 'account/login_security.php'));
 ?>
 <form action="login_security.php" method="post" id="userOptionLoginSecurityCard">
     <fieldset class="option-login-security-card">
