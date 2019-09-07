@@ -27,6 +27,18 @@ class breadcrumb
         $breadcrumbs = array_merge(array('home' => ''), $array);
 
         $count = 0;
+
+        foreach($breadcrumbs as $title => $link) {
+
+            $this->breadcrumb .= '<span itemscope="" itemtype="https://schema.org/breadcrumb"><a href="' . $this->domain . '/' . $link . '" itemprop="url"><span itemprop="title">' . $title . '</span></a></span>';
+
+            $count++;
+
+            if ($count !== count($breadcrumbs)) {
+                $this->breadcrumb .= $this->separator;
+            }
+        }
+        return $this->breadcrumb;
     }
 }
 
