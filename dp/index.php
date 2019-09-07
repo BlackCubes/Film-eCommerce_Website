@@ -66,7 +66,7 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 
 $breadcrumb = new breadcrumb();
 
-echo $breadcrumb->build(array('Cinematographer' => 'dp/index.php'));
+echo $breadcrumb->build(array('Cinematographers' => 'dp/index.php'));
 
 echo '<div class="container" id="templateArtists">
 <div class="sidebar-a">
