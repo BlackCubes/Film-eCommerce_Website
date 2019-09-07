@@ -98,6 +98,12 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     }
 
     $breadcrumb = new breadcrumb();
+
+    if ($department === 'Movies') {
+        $department_domain_name = 'films';
+    } elseif ($department === 'TV') {
+        $department_domain_name = 'tv';
+    }
 ?>
 <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
 <?php
