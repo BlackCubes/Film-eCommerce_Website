@@ -106,7 +106,9 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     }
 
     if ($table_type === 'dps') {
-        $table_type = 'Cinematographers';
+        $type_domain_name = 'Cinematographers';
+    } else {
+        $type_domain_name = $table_type;
     }
 
     echo $breadcrumb->build(array(ucfirst(strtolower($department_domain_name)) => strtolower($department_domain_name) . '/index.php', ucfirst($table_type) => ''));
