@@ -114,6 +114,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
+
+$breadcrumb = new breadcrumb();
+
+echo $breadcrumb->build(array('Account' => 'account/profile.php', 'Edit Your Address' => 'account/change_address.php'));
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
     <fieldset class="change-address-card">
