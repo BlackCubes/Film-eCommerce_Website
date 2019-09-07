@@ -96,6 +96,8 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             break;
 
     }
+
+    $breadcrumb = new breadcrumb();
 ?>
 <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
 <?php
