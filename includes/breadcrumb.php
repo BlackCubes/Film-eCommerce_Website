@@ -20,11 +20,11 @@ class breadcrumb
 
     private $separator = ' | ';
 
-    private $domain = 'http://localhost/FilmIndustry/eCommerce/index.php';
+    private $domain = 'http://localhost/FilmIndustry/eCommerce';
 
     public function build($array)
     {
-        $breadcrumbs = array_merge(array('Home' => ''), $array);
+        $breadcrumbs = array_merge(array('Home' => 'index.php'), $array);
 
         $count = 0;
 
