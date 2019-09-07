@@ -109,7 +109,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         $table_type = 'Cinematographers';
     }
 
-    echo $breadcrumb->build(array(ucfirst($department_domain_name) => $department_domain_name . '/index.php', ucfirst($table_type) => ''));
+    echo $breadcrumb->build(array(ucfirst(strtolower($department_domain_name)) => strtolower($department_domain_name) . '/index.php', ucfirst($table_type) => ''));
 ?>
 <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
 <?php
