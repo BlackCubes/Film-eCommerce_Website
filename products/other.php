@@ -100,14 +100,16 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     $breadcrumb = new breadcrumb();
 
     if ($department === 'Movies') {
-        $department_domain_name = 'films';
+        $department_domain_name = 'FILMS';
     } elseif ($department === 'TV') {
-        $department_domain_name = 'tv';
+        $department_domain_name = 'TV';
     }
 
     if ($table_type === 'dps') {
         $table_type = 'Cinematographers';
     }
+
+    echo $breadcrumb->build(array(ucfirst($department_domain_name) => $department_domain_name . '/index.php', ucfirst($table_type) => ''));
 ?>
 <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
 <?php
