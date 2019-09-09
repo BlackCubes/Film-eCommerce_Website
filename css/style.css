@@ -145,9 +145,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 8fr;
     grid-template-rows: auto;
     grid-template-areas:
+        "breadcrumb breadcrumb breadcrumb breadcrumb"
         "s-a m-p m-p m-p"
         "s-a m-p m-p m-p"
         "s-a m-p m-p m-p"
