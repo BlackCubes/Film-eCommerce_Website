@@ -279,9 +279,10 @@ body {
 
 #templateStudios.container {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 8fr;
     grid-template-rows: auto;
     grid-template-areas: 
+        "breadcrumb breadcrumb breadcrumb breadcrumb"
         "s-a main-studio main-studio main-studio"
         "s-a main-studio main-studio main-studio"
         "s-a main-studio main-studio main-studio"
