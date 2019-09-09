@@ -99,7 +99,8 @@ body {
     padding-bottom: 5px;
 }
 
-.breadcrumb span a {
+.breadcrumb span a,
+.breadcrumb span {
     font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 12px;
