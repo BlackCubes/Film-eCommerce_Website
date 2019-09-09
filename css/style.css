@@ -685,6 +685,11 @@ body {
 
 /* SIDEBAR OPTIONS PAGE */
 
+.container--option-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
 .container--option-view .option-lists--option-view {
     display: grid;
     grid-template-areas:
