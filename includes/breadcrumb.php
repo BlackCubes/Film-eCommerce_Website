@@ -30,7 +30,15 @@ class breadcrumb
 
         foreach($breadcrumbs as $title => $link) {
 
-            $this->breadcrumb .= '<span itemscope="" itemtype="https://schema.org/breadcrumb"><a href="' . $this->domain . '/' . $link . '" itemprop="url"><span itemprop="title">' . $title . '</span></a></span>';
+            if (empty($link)) {
+
+                $this->breadcrumb .= '<span itemscope="" itemtype="https://schema.org/breadcrumb">' . $title . '</span></span>';
+
+            } else {
+
+                $this->breadcrumb .= '<span itemscope="" itemtype="https://schema.org/breadcrumb"><a href="' . $this->domain . '/' . $link . '" itemprop="url"><span itemprop="title">' . $title . '</span></a></span>';
+
+            }
 
             $count++;
 
