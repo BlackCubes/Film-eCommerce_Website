@@ -111,9 +111,11 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         $title_name = $table_type;
     }
 
-    echo $breadcrumb->build(array(ucfirst(strtolower($department_domain_name)) => strtolower($department_domain_name) . '/index.php', ucfirst($title_name) => ''));
 ?>
 <div class="container--option-view">
+    <div class="breadcrumb">
+        <?php echo $breadcrumb->build(array(ucfirst(strtolower($department_domain_name)) => strtolower($department_domain_name) . '/index.php', ucfirst($title_name) => '')); ?>
+    </div>
 <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
 <?php
 
