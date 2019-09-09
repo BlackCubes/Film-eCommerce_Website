@@ -564,6 +564,7 @@ body {
     margin: 30px auto 50px auto;
     grid-template-columns: auto;
     grid-template-areas:
+    "breadcrumb breadcrumb breadcrumb breadcrumb"
     "product-artist product-artist product-artist product-artist";
 }
 
