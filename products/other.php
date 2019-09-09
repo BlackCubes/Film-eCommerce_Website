@@ -117,7 +117,8 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         <?php echo $breadcrumb->build(array(ucfirst(strtolower($department_domain_name)) => strtolower($department_domain_name) . '/index.php', ucfirst($title_name) => '')); ?>
     </div>
     <div class="main-info--option-view">
-    <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
+        <p>Viewing: <?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></p>
+        <div class="option-lists--option-view">
 <?php
 
     if ($r_genre) {
@@ -159,7 +160,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         }
         echo '</ul>';*/
 
-        echo '</div></div>';
+        echo '</div></div></div>';
 
         mysqli_free_result($r_genre);
         mysqli_close($dbc);
@@ -204,7 +205,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             echo '</ul>';
         }
 
-        echo '</div></div>';
+        echo '</div></div></div>';
 
         mysqli_free_result($r_artist);
         mysqli_close($dbc);
@@ -245,7 +246,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             echo '</ul>';
         }
 
-        echo '</div></div>';
+        echo '</div></div></div>';
 
         mysqli_free_result($r_studio);
         mysqli_close($dbc);
