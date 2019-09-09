@@ -94,7 +94,7 @@ body {
 
 .breadcrumb {
     grid-area: breadcrumb;
-    margin: 5px 15px 5px 15px;
+    margin: 10px 15px 10px 15px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
