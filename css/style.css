@@ -90,6 +90,12 @@ body {
     font-size: 14px;
 }
 
+/* BREADCRUMB */
+
+.breadcrumb {
+    grid-area: breadcrumb;
+}
+
 /* PAGINATION */
 
 .pagination {
@@ -206,7 +212,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
+        "breadcrumb breadcrumb breadcrumb breadcrumb"
         "s-a m-a m-a m-a"
         "s-a m-a m-a m-a"
         "s-a m-a m-a m-a"
