@@ -694,6 +694,10 @@ body {
     text-decoration: none;
 }
 
+.container--option-view .option-lists--option-view ul {
+    list-style: none;
+}
+
 .container--option-view .option-lists--option-view {
     display: grid;
     grid-template-areas:
