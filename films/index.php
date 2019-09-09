@@ -72,9 +72,11 @@ if (isset($_GET['type'], $_GET['name'])) {
 
 $breadcrumb = new breadcrumb();
 
-echo $breadcrumb->build(array('Films' => 'films/index.php'));
 ?>
 <div class="container">
+    <div class="breadcrumb">
+        <?php echo $breadcrumb->build(array('Films' => 'films/index.php')); ?>
+    </div>
     <div class="sidebar-a">
         <?php
 
