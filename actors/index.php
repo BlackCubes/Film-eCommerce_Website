@@ -69,6 +69,7 @@ $breadcrumb = new breadcrumb();
 echo $breadcrumb->build(array('Actors' => 'actors/index.php'));
 
 echo '<div class="container" id="templateArtists">
+<div class="breadcrumb">' . $breadcrumb->build(array('Actors' => 'actors/index.php')) . '</div>
 <div class="sidebar-a">
     <div class="results">
         <p><b>Gender</b></p>
