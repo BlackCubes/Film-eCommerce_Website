@@ -690,6 +690,10 @@ body {
     color: black;
 }
 
+.container--option-view .option-lists--option-view ul li a {
+    text-decoration: none;
+}
+
 .container--option-view .option-lists--option-view {
     display: grid;
     grid-template-areas:
