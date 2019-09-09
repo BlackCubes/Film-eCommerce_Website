@@ -685,7 +685,11 @@ body {
 
 /* SIDEBAR OPTIONS PAGE */
 
-
+.container--option-view .option-lists--option-view {
+    display: grid;
+    grid-template-areas:
+        "option-list option-list option-list";
+}
 
 /* USER PROFILE PAGE */
 
