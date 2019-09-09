@@ -342,7 +342,8 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
+    "breadcrumb"
     "m-i"
     "c-c-i"
     "e-d-p-i"
