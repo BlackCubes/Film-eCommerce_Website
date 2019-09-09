@@ -51,8 +51,6 @@ if (isset($_GET['s']) && is_numeric($_GET['s'])) {
 
 $breadcrumb = new breadcrumb();
 
-echo $breadcrumb->build(array('Studios' => 'studios/index.php'));
-
 echo '<div class="container" id="templateStudios">
 <div class="breadcrumb">' . $breadcrumb->build(array('Studios' => 'studios/index.php')) . '</div>
 <div class="sidebar-a">
