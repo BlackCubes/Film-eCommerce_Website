@@ -163,20 +163,20 @@ body {
     grid-area: s-a;
 }
 
-.container .sidebar-a p,
-.container .sidebar-a a {
+.container .sidebar-a .results p,
+.container .sidebar-a .results p a {
     font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 12px;
     color: black;
 }
 
-.container .sidebar-a a {
+.container .sidebar-a .results p a {
     text-decoration: none;
     transition: all 0.3s ease 0s;
 }
 
-.container .sidebar-a a:hover {
+.container .sidebar-a .results p a:hover {
     color: blueviolet;
 }
 
