@@ -713,6 +713,12 @@ body {
     color: black;
 }
 
+.container--option-view span.option-header--option-view,
+.container--option-view span.option-title--option-view,
+.container--option-view span.option-letters--option-view {
+    font-size: 13px;
+}
+
 .container--option-view .option-lists--option-view ul li a {
     font-size: 13px;
     font-weight: 300;
