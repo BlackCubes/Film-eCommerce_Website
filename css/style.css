@@ -164,7 +164,8 @@ body {
 }
 
 .container .sidebar-a .results p,
-.container .sidebar-a .results p a {
+.container .sidebar-a .results p a,
+.container .sidebar-a .results a {
     font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -178,6 +179,11 @@ body {
 
 .container .sidebar-a .results p a:hover {
     color: blueviolet;
+}
+
+.container .sidebar-a .results a {
+    color: blueviolet;
+    text-decoration: none;
 }
 
 .container .sidebar-a .results {
