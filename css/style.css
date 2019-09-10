@@ -748,6 +748,7 @@ body {
 .container--option-view .option-header-center--option-view {
     display: flex;
     justify-content: center;
+    line-height: 36px;
 }
 
 .container--option-view .option-lists--option-view {
