@@ -160,6 +160,8 @@ body {
 }
 
 .container .sidebar-a {
+    margin-left: 15px;
+    margin-right: 10px;
     grid-area: s-a;
 }
 
