@@ -136,7 +136,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
             $genre_id_encrypt = urlencode(my_encrypt($genre['genre_id'], KEY));
 
-            $genres[] = '<li><a href="/FilmIndustry/eCommerce/films/index.php?type=' . $column_type . '&name=' . $genre_id_encrypt . '">' . $genre['genres'] . '</a></li>';
+            $genres[] = '<li><a title="' . $genre['genres'] . '" href="/FilmIndustry/eCommerce/films/index.php?type=' . $column_type . '&name=' . $genre_id_encrypt . '">' . $genre['genres'] . '</a></li>';
         }
 
         for ($j = 0; $j < $row_display; $j++) {
