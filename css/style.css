@@ -742,7 +742,7 @@ body {
 .container--option-view .option-title-letters--option-view {
     height: 36px;
     width: 1270px;
-    background-color: blueviolet;
+    background-color: rgb(250, 246, 255);
 }
 
 .container--option-view .option-header-center--option-view {
