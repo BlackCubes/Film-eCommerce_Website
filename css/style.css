@@ -736,6 +736,11 @@ body {
     transition: all 0.3s ease-out;
 }
 
+.container--option-view .option-lists--option-view ul li a:hover {
+    color: blueviolet;
+    transition: all 0.3s ease-in-out;
+}
+
 .container--option-view .option-lists--option-view ul {
     list-style: none;
 }
