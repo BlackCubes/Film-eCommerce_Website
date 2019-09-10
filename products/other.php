@@ -227,7 +227,22 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             echo '</ul>';
         }
 
-        echo '</div></div></div>';
+        echo '</div><div class="option-title-letters--option-view">
+        <div class="option-header-center--option-view"><span class="option-title--option-view">Viewing:</span><span class="option-name-type--option-view">';
+
+        if ($column_type == 'dp') {
+            echo 'Cinematographer';
+        } else {
+            echo ucfirst($column_type);
+        }
+        
+        echo '</span><span class="option-letters--option-view">#</span>';
+        
+        foreach (range('A', 'Z') as $letters) {
+            echo '<span class="option-letters--option-view">' . $letters . '</span>';
+        }
+        
+        echo '</div></div></div></div>';
 
         mysqli_free_result($r_artist);
         mysqli_close($dbc);
@@ -268,7 +283,22 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             echo '</ul>';
         }
 
-        echo '</div></div></div>';
+        echo '</div><div class="option-title-letters--option-view">
+        <div class="option-header-center--option-view"><span class="option-title--option-view">Viewing:</span><span class="option-name-type--option-view">';
+
+        if ($column_type == 'dp') {
+            echo 'Cinematographer';
+        } else {
+            echo ucfirst($column_type);
+        }
+        
+        echo '</span><span class="option-letters--option-view">#</span>';
+        
+        foreach (range('A', 'Z') as $letters) {
+            echo '<span class="option-letters--option-view">' . $letters . '</span>';
+        }
+        
+        echo '</div></div></div></div>';
 
         mysqli_free_result($r_studio);
         mysqli_close($dbc);
