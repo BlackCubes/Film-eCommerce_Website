@@ -739,6 +739,10 @@ body {
     list-style: none;
 }
 
+.container--option-view .option-title-letters--option-view {
+    background-color: blueviolet;
+}
+
 .container--option-view .option-header-center--option-view {
     display: flex;
     justify-content: center;
