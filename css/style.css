@@ -733,12 +733,11 @@ body {
     font-size: 13px;
     font-weight: 300;
     text-decoration: none;
-    transition: all 0.3s ease-out;
 }
 
 .container--option-view .option-lists--option-view ul li a:hover {
     color: blueviolet;
-    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
 }
 
 .container--option-view .option-lists--option-view ul {
