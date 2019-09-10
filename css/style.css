@@ -733,6 +733,7 @@ body {
     font-size: 13px;
     font-weight: 300;
     text-decoration: none;
+    transition: all 0.3s ease-out;
 }
 
 .container--option-view .option-lists--option-view ul {
