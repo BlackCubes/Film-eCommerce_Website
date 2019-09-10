@@ -721,6 +721,12 @@ body {
 
 .container--option-view span.option-title--option-view {
     font-weight: 700;
+    padding: 0 5px;
+}
+
+.container--option-view span.option-letters--option-view {
+    color: #999;
+    padding: 0 5px;
 }
 
 .container--option-view .option-lists--option-view ul li a {
