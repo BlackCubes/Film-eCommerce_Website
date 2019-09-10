@@ -193,11 +193,16 @@ body {
 
 .container .sidebar-a .results p a:hover {
     color: blueviolet;
+    text-decoration: underline;
 }
 
 .container .sidebar-a .results > a {
     color: blueviolet;
     text-decoration: none;
+}
+
+.container .sidebar-a .results > a:hover {
+    text-decoration: underline;
 }
 
 .container .sidebar-a .results {
