@@ -743,6 +743,8 @@ body {
     height: 36px;
     width: 1270px;
     background-color: rgb(250, 246, 255);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.17);
 }
 
 .container--option-view .option-header-center--option-view {
