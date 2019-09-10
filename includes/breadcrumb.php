@@ -32,7 +32,7 @@ class breadcrumb
 
             if (empty($link)) {
 
-                $this->breadcrumb .= '<span itemscope="" itemtype="https://schema.org/breadcrumb">' . $title . '</span></span>';
+                $this->breadcrumb .= '<span itemscope="" itemtype="https://schema.org/breadcrumb"><span class="main-location" itemprop="title">' . $title . '</span></span></span>';
 
             } else {
 
