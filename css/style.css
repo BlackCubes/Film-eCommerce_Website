@@ -739,6 +739,11 @@ body {
     list-style: none;
 }
 
+.container--option-view .option-header-center--option-view {
+    display: flex;
+    justify-content: center;
+}
+
 .container--option-view .option-lists--option-view {
     display: grid;
     grid-template-areas:
