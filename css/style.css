@@ -108,6 +108,10 @@ body {
     text-decoration: none;
 }
 
+.breadcrumb span.main-location {
+    color: blueviolet;
+}
+
 /* PAGINATION */
 
 .pagination {
