@@ -118,10 +118,12 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     </div>
     <div class="main-info--option-view">
         <div class="option-title-letters--option-view">
-            <span class="option-header--option-view">Viewing:</span>
-            <span class="option-title--option-view"><?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></span>
-            <span class="option-letters--option-view">#</span>
-            <?php foreach (range('A', 'Z') as $letters) { echo '<span class="option-letters--option-view">' . $letters . '</span>'; } ?>
+            <div class="option-header-center--option-view">
+                <span class="option-title--option-view">Viewing:</span>
+                <span class="option-name-type--option-view"><?php if ($column_type == 'dp') { echo 'Cinematographer'; } else { echo ucfirst($column_type); } ?></span>
+                <span class="option-letters--option-view">#</span>
+                <?php foreach (range('A', 'Z') as $letters) { echo '<span class="option-letters--option-view">' . $letters . '</span>'; } ?>
+            </div>
         </div>
         <div class="option-lists--option-view">
 <?php
