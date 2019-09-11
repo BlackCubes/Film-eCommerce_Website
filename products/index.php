@@ -116,7 +116,15 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             $crew_values[$i] = $crew_directors[$i];
         }
 
-        echo '<span class="crew-director"></span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
+        foreach ($cast_values as $cast) {
+            echo $cast;
+        }
+
+        foreach ($crew_values as $crew) {
+            echo $crew;
+        }
+
+        echo '<span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
 
         for ($i = 1; $i < ($product['product_stock'] - 3); $i++) {
             echo '<option value="' . $i . '"';
