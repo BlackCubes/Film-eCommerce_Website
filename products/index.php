@@ -80,8 +80,6 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         echo '<div class="container--product-view"><div class="breadcrumb">' . $breadcrumb->build(array(ucfirst(strtolower($department_title)) => strtolower($department_title) . '/index.php', $product['product_name'] => '')) . '</div><div class="main-info--product-view"><div class="image--product-view"><img alt="' . $product['product_name'] . '" src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-info-option"><div class="product-title--info-option"><h1>' . $product['product_name'] . '</h1></div><div class="product-edition--info-option"><h3>' . $product['product_edition'] . '</h3></div><div class="cast-crew-format--info-option">';
 
-        $cast_count = 0;
-
         $cast_actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC);
 
         for ($i = 0; $i < 2; $i++) {
