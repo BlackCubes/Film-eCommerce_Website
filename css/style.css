@@ -421,11 +421,13 @@ body {
 .product-info-option .product-title--info-option h1 {
     font-size: 21px;
     font-weight: 400;
+    margin: 0;
 }
 
 .product-info-option .product-edition--info-option h3 {
     font-size: 17px;
     font-weight: 400;
+    margin: 0;
     color: #767676;
 }
 
