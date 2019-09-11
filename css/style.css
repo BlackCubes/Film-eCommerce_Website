@@ -278,6 +278,11 @@ body {
     overflow: hidden;
 }
 
+.main-artists .container-artist .artist-image > a {
+    height: 240px;
+    width: 320px;
+}
+
 .container-artist .artist-image {
     display: flex;
     justify-content: center;
