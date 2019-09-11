@@ -105,11 +105,15 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             $crew_id_encrypt = urlencode(my_encrypt($crew_director['director_id'], KEY));
             
             if (empty($crew_director['director_mn'])) {
-                $crew_directors = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution">(Director)</span></span>';
+                $crew_directors[] = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution">(Director)</span></span>';
             } else {
-                $crew_directors = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_mn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution">(Director)</span></span>';
+                $crew_directors[] = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_mn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution">(Director)</span></span>';
             }
 
+        }
+
+        for ($i = 0; $i < 2; $i++) {
+            $crew_values[$i] = $crew_directors[$i]
         }
 
         echo '<span class="crew-director"></span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
