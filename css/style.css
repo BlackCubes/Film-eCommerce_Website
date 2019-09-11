@@ -279,8 +279,10 @@ body {
 }
 
 .main-artists .container-artist .artist-image > a {
-    height: 240px;
-    width: 320px;
+    justify-content: center;
+    display: flex;
+    max-width: 320px;
+    max-height: 240px;
 }
 
 .container-artist .artist-image {
