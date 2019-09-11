@@ -94,7 +94,9 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         }
 
-        echo '<span class="cast-crew"></span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
+        $cast_director = mysqli_fetch_array($r_director, MYSQLI_ASSOC);
+
+        echo '<span class="crew-director">' . $cast_director['director_fn'] . ' ' . $cast_director['director_mn'] . ' ' . $cast_director['director_ln'] . '</span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
 
         for ($i = 1; $i < ($product['product_stock'] - 3); $i++) {
             echo '<option value="' . $i . '"';
