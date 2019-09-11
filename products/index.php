@@ -105,9 +105,9 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             $crew_id_encrypt = urlencode(my_encrypt($crew_director['director_id'], KEY));
             
             if (empty($crew_director['director_mn'])) {
-                $crew_directors[] = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution"> (Director) </span></span>';
+                $crew_directors[] = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution"> (Director)</span></span>';
             } else {
-                $crew_directors[] = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_mn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution"> (Director) </span></span>';
+                $crew_directors[] = '<span class="crew-director"><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $crew_id_encrypt . '">' . $crew_director['director_fn'] . ' ' . $crew_director['director_mn'] . ' ' . $crew_director['director_ln'] . '</a><span class="contribution"> (Director)</span></span>';
             }
 
         }
