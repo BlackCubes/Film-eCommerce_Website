@@ -84,6 +84,16 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         $cast_actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC);
 
+        for ($i = 0; $i < 2; $i++) {
+
+            if (empty($cast_actor['actor_mn'])) {
+                echo '<span class="cast-actor">' . $cast_actor['actor_fn'] . ' ' . $cast_actor['actor_ln'] . '</span>';
+            } else {
+                echo '<span class="cast-actor">' . $cast_actor['actor_fn'] . ' ' . $cast_actor['actor_mn'] . ' ' . $cast_actor['actor_ln'] . '</span>';
+            }
+
+        }
+
         echo '<span class="cast-crew"></span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
 
         for ($i = 1; $i < ($product['product_stock'] - 3); $i++) {
