@@ -94,6 +94,10 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         }
 
+        for ($i = 0; $i < 2; $i++) {
+            $cast_values[$i] = $cast_actors[$i];
+        }
+
         $cast_director = mysqli_fetch_array($r_director, MYSQLI_ASSOC);
 
         echo '<span class="crew-director">' . $cast_director['director_fn'] . ' ' . $cast_director['director_mn'] . ' ' . $cast_director['director_ln'] . '</span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
