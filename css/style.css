@@ -402,12 +402,15 @@ body {
 }
 
 .main-info--product-view .image--product-view {
+    display: flex;
     width: 411px;
+    justify-content: center;
 }
 
 .main-info--product-view .image--product-view img {
     max-width: 359px;
     max-height: 359px;
+    text-align: center;
 }
 
 .main-info--product-view .product-info-option {
