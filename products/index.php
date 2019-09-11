@@ -80,14 +80,16 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         echo '<div class="container--product-view"><div class="breadcrumb">' . $breadcrumb->build(array(ucfirst(strtolower($department_title)) => strtolower($department_title) . '/index.php', $product['product_name'] => '')) . '</div><div class="main-info--product-view"><div class="image--product-view"><img alt="' . $product['product_name'] . '" src="/FilmIndustry/uploads/products/' . $product['product_image_1'] . '"></div><div class="product-info-option"><div class="product-title--info-option"><h1>' . $product['product_name'] . '</h1></div><div class="product-edition--info-option"><h3>' . $product['product_edition'] . '</h3></div><div class="cast-crew-format--info-option">';
 
-        $cast_actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC);
+        $cast_values = $cast_actors = array();
 
-        for ($i = 0; $i < 2; $i++) {
+        while ($cast_actor = mysqli_fetch_array($r_actor, MYSQLI_ASSOC)) {
+
+            $actor_id_encrypt = urlencode(my_encrypt($cast_actor['actor_id'], KEY));
 
             if (empty($cast_actor['actor_mn'])) {
-                echo '<span class="cast-actor">' . $cast_actor['actor_fn'] . ' ' . $cast_actor['actor_ln'] . '</span>';
+                $cast_actors[] = '<span class="cast-actor"><a href="/FilmIndustry/eCommerce/films/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $cast_actor['actor_fn'] . ' ' . $cast_actor['actor_ln'] . '</a><span class="contribution">(Actor),</span></span>';
             } else {
-                echo '<span class="cast-actor">' . $cast_actor['actor_fn'] . ' ' . $cast_actor['actor_mn'] . ' ' . $cast_actor['actor_ln'] . '</span>';
+                $cast_actors[] = '<span class="cast-actor"><a href="/FilmIndustry/eCommerce/films/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $cast_actor['actor_fn'] . ' ' . $cast_actor['actor_mn'] . ' ' . $cast_actor['actor_ln'] . '</a><span class="contribution">(Actor),</span></span>';
             }
 
         }
