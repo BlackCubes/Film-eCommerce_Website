@@ -403,6 +403,7 @@ body {
 
 .main-info--product-view .image--product-view {
     display: flex;
+    margin-bottom: 22px;
     width: 411px;
     justify-content: center;
 }
