@@ -405,6 +405,11 @@ body {
     width: 411px;
 }
 
+.main-info--product-view .image--product-view img {
+    max-width: 359px;
+    max-height: 359px;
+}
+
 .main-info--product-view .product-info-option {
     width: 783px;
 }
