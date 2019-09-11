@@ -423,6 +423,12 @@ body {
     font-weight: 400;
 }
 
+.product-info-option .product-edition--info-option h3 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #767676;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
