@@ -476,6 +476,10 @@ body {
     text-align: left;
 }
 
+.additional-table-container--info-option th.additional-format-title {
+    font-weight: 700;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
