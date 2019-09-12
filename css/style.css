@@ -467,7 +467,12 @@ body {
 
 .cast-crew-format--info-option span.cast-crew-format-separator {
     margin: 0 8px;
-    color: #ddd
+    color: #ddd;
+}
+
+.additional-table-container--info-option > table > thead > tr > th {
+    font-size: 11px;
+    font-weight: 300;
 }
 
 .main-info--product-view .cart-wishlist-container {
