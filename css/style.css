@@ -486,6 +486,11 @@ body {
     padding: 3px 5px 3px 0;
 }
 
+.additional-table-container--info-option > table > tbody > tr > td {
+    font-size: 12px;
+    font-weight: 300;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
