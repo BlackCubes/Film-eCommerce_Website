@@ -451,7 +451,8 @@ body {
 .cast-crew-format--info-option .cast-actor > span.contribution,
 .cast-crew-format--info-option .crew-director > span.contribution,
 .cast-crew-format--info-option span.format-title,
-.cast-crew-format--info-option span.department-title {
+.cast-crew-format--info-option span.department-title,
+.additional-table-container--info-option th.secondary-color {
     color: #555;
 }
 
