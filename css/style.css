@@ -447,6 +447,11 @@ body {
     text-decoration: underline;
 }
 
+.cast-crew-format--info-option .cast-actor > span.contribution,
+.cast-crew-format--info-option .crew-director > span.contribution {
+    color: #555;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
