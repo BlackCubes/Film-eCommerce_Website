@@ -452,6 +452,11 @@ body {
     color: #555;
 }
 
+.cast-crew-format--info-option span.cast-crew-format-separator {
+    margin: 0 8px;
+    color: #ddd
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
