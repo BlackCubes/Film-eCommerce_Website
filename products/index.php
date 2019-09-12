@@ -124,7 +124,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo $crew;
         }
 
-        echo '<span class="cast-crew-format-separator">|</span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span><span class="cast-crew-format-separator">|</span><span class="department-title">Department: </span><span class="department-type">' . $product['product_department'] . '</span></div><hr></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
+        echo '<span class="cast-crew-format-separator">|</span><span class="format-title">Format: </span><span class="format-type">' . $product['product_format'] . '</span><span class="cast-crew-format-separator">|</span><span class="department-title">Department: </span><span class="department-type">' . $product['product_department'] . '</span></div><hr><table class="additional-options-table"><thead></thead><tbody></tbody></table></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
 
         for ($i = 1; $i < ($product['product_stock'] - 3); $i++) {
             echo '<option value="' . $i . '"';
