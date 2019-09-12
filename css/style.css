@@ -414,7 +414,8 @@ body {
     text-align: center;
 }
 
-.main-info--product-view .product-info-option {
+.main-info--product-view .product-info-option,
+.product-info-option .additional-table-container--info-option > table {
     width: 783px;
 }
 
