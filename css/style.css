@@ -431,6 +431,11 @@ body {
     color: #767676;
 }
 
+.product-info-option .cast-crew-format--info-option {
+    font-size: 13px;
+    font-weight: 300;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
