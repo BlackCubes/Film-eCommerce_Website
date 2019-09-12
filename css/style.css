@@ -436,6 +436,17 @@ body {
     font-weight: 300;
 }
 
+.cast-crew-format--info-option .cast-actor > a,
+.cast-crew-format--info-option .crew-director > a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.cast-crew-format--info-option .cast-actor > a:hover,
+.cast-crew-format--info-option .crew-director > a:hover {
+    text-decoration: underline;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
