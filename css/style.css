@@ -481,6 +481,11 @@ body {
     font-weight: 700;
 }
 
+.additional-table-container--info-option th.additional-format-title,
+.additional-table-container--info-option th.secondary-color {
+    padding: 3px 5px 3px 0;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
