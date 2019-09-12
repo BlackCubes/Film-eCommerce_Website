@@ -448,7 +448,9 @@ body {
 }
 
 .cast-crew-format--info-option .cast-actor > span.contribution,
-.cast-crew-format--info-option .crew-director > span.contribution {
+.cast-crew-format--info-option .crew-director > span.contribution,
+.cast-crew-format--info-option span.format-title,
+.cast-crew-format--info-option span.department-title {
     color: #555;
 }
 
