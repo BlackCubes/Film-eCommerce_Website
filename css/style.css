@@ -452,7 +452,7 @@ body {
 .cast-crew-format--info-option .crew-director > span.contribution,
 .cast-crew-format--info-option span.format-title,
 .cast-crew-format--info-option span.department-title,
-.additional-table-container--info-option th.secondary-color {
+.additional-options-title th.secondary-color {
     color: #555;
 }
 
@@ -471,28 +471,28 @@ body {
     color: #ddd;
 }
 
-.additional-table-container--info-option > table > thead > tr > th {
+.additional-options-title > thead > tr > th {
     font-size: 11px;
     font-weight: 300;
     text-align: left;
 }
 
-.additional-table-container--info-option th.additional-format-title {
+.additional-options-title th.additional-format-title {
     font-weight: 700;
 }
 
-.additional-table-container--info-option th.additional-format-title,
-.additional-table-container--info-option th.secondary-color,
-.additional-table-container--info-option > table > tbody > tr > td {
+.additional-options-title th.additional-format-title,
+.additional-options-title th.secondary-color,
+.additional-options-description > tbody > tr > td {
     padding: 3px 5px 3px 0;
 }
 
-.additional-table-container--info-option > table > tbody > tr > td {
+.additional-options-description > tbody > tr > td {
     font-size: 12px;
     font-weight: 300;
 }
 
-.additional-table-container--info-option td.product-price {
+.additional-options-description td.product-price {
     color: #B12704;
 }
 
