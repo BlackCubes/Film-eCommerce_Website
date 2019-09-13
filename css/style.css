@@ -482,7 +482,8 @@ body {
 }
 
 .additional-table-container--info-option th.additional-format-title,
-.additional-table-container--info-option th.secondary-color {
+.additional-table-container--info-option th.secondary-color,
+.additional-table-container--info-option > table > tbody > tr > td {
     padding: 3px 5px 3px 0;
 }
 
