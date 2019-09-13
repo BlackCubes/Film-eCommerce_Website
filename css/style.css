@@ -483,6 +483,7 @@ body {
 
 .additional-options-title td.additional-disc-title,
 .additional-options-description td.additional-disc-value {
+    text-align: right;
     width: 60px;
 }
 
