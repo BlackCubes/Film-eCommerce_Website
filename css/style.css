@@ -487,6 +487,11 @@ body {
     padding: 3px 5px 3px 0;
 }
 
+.additional-table-container--info-option .table-body-container,
+.additional-table-container--info-option .additional-options-description {
+    height: 43px;
+}
+
 .additional-table-container--info-option .table-body-container {
     background: none repeat scroll 0 0 rgba(243, 230, 255, 0.17);
     border: 1px solid rgba(193, 135, 247, 0.37);
