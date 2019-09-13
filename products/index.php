@@ -140,7 +140,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo '-';
         }
         
-        echo '</td><td class="additional-disc-value">' . $product['product_discs'] . '</td><td class="product-price">$' . $product['product_price'] . '</td></tr></tbody></table></div></div></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
+        echo '</td><td class="additional-disc-value">' . $product['product_discs'] . '</td><td class="product-price">$' . $product['product_price'] . '</td></tr></tbody></table></div></div></div><div class="cart-wishlist-container"><form method="post" action="/FilmIndustry/eCommerce/cart/index.php?action=add&isd=' . $product_isd . '" id="cartCard"><div class="cart-card-inner"><div class="cart-quantity"><label for="cartQuantity">Qty: </label><select name="quantity" id="cartQuantity">';
 
         for ($i = 1; $i < ($product['product_stock'] - 3); $i++) {
             echo '<option value="' . $i . '"';
@@ -150,7 +150,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo $selected . '>' . $i . '</option>';
         }
 
-        echo '</select></div><input type="submit" value="Add to Cart"><a href="/FilmIndustry/eCommerce/wishlist/index.php?action=add&isd=' . $product_isd . '">Wishlist</a></form></div></div><div class="cast-crew-info--product-view"><div class="cast-crew-title--product-view"><h2>Cast & Crew</h2></div><div class="cast-crew-container"><div class="director-list-container--product-view"><div class="director-title--product-view"><h4>Directors</h4></div><table class="director-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
+        echo '</select></div><input type="submit" value="Add to Cart"><a href="/FilmIndustry/eCommerce/wishlist/index.php?action=add&isd=' . $product_isd . '">Wishlist</a></div></form></div></div><div class="cast-crew-info--product-view"><div class="cast-crew-title--product-view"><h2>Cast & Crew</h2></div><div class="cast-crew-container"><div class="director-list-container--product-view"><div class="director-title--product-view"><h4>Directors</h4></div><table class="director-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         mysqli_data_seek($r_director, 0);
 
