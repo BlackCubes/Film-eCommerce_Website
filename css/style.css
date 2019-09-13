@@ -471,6 +471,11 @@ body {
     color: #ddd;
 }
 
+.additional-options-title td.additional-format-title,
+.additional-options-description td.additional-format-date-value {
+    width: 411px;
+}
+
 .additional-options-title > tbody > tr > td {
     font-size: 11px;
     font-weight: 300;
