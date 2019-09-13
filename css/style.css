@@ -523,6 +523,7 @@ body {
 
 .additional-options-description .indentation {
     padding-left: 15px;
+    display: block;
 }
 
 .main-info--product-view .cart-wishlist-container {
