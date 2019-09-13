@@ -517,6 +517,11 @@ body {
     font-weight: 300;
 }
 
+.additional-options-title td.additional-price-title,
+.additional-options-description td.product-price {
+    text-align: center;
+}
+
 .additional-options-description td.product-price {
     color: #B12704;
 }
