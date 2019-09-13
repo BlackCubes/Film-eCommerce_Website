@@ -473,12 +473,12 @@ body {
 
 .additional-options-title td.additional-format-title,
 .additional-options-description td.additional-format-date-value {
-    width: 311px;
+    width: 350px;
 }
 
 .additional-options-title td.additional-edition-title,
 .additional-options-description td.additional-edition-value {
-    width: 263px;
+    width: 224px;
 }
 
 .additional-options-title td.additional-disc-title,
