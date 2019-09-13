@@ -415,7 +415,7 @@ body {
 }
 
 .main-info--product-view .product-info-option,
-.product-info-option .additional-table-container--info-option > table {
+.product-info-option .additional-table-container--info-option  table {
     width: 783px;
 }
 
