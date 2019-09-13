@@ -521,6 +521,10 @@ body {
     color: #B12704;
 }
 
+.additional-options-description .indentation {
+    padding-left: 15px;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
