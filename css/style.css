@@ -491,6 +491,10 @@ body {
     font-weight: 300;
 }
 
+.additional-table-container--info-option td.product-price {
+    color: #B12704;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
