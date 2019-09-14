@@ -43,11 +43,11 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $post_action = sanitize_input($_POST['submit']);
 
+            $_SESSION['quantity_cart'] = $_POST['quantity'];
+
             switch ($post_action) {
 
                 case "Add to Cart":
-
-                    $_SESSION['quantity_cart'] = $_POST['quantity'];
 
                     $url = BASE_URL . 'cart/index.php?action=add&isd=' . $product_isd;
                     ob_end_clean();
