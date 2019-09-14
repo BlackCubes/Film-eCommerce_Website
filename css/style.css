@@ -549,6 +549,11 @@ body {
     color: #767676
 }
 
+.main-description-inner .description-value {
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
 .main-description-inner .description-value p {
     font-size: 14px;
     font-weight: 400;
