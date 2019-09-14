@@ -539,6 +539,12 @@ body {
     color: #767676
 }
 
+.main-description-inner .description-value p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
