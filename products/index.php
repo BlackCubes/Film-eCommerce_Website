@@ -41,6 +41,18 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+            $post_action = sanitize_input($_POST['submit']);
+
+            switch ($post_action) {
+
+                case "Add to Cart":
+                    break;
+
+                case "Wishlist":
+                    break;
+
+            }
+
         }
 
         $q_product = "SELECT DISTINCT p.name AS product_name, DATE_FORMAT(p.release_date, '%M %d, %Y') AS product_release_date, p.description AS product_desc, p.isd AS product_isd, p.sku AS product_sku, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image_1, p.image_2 AS product_image_2, f.format AS product_format, d.department AS product_department, pd.edition AS product_edition, pd.discs AS product_discs, pd.runtime AS product_runtime, DATE_FORMAT(pd.media_date, '%M %d, %Y') AS product_media_date, pd.more_description AS product_more_desc, r.rated AS product_rated, s.spec_format_type AS product_spec_format_type, s.video_desc AS product_video_desc, s.audio_desc AS product_audio_desc, s.subtitles_desc AS product_sub_desc FROM products AS p JOIN formats AS f ON p.format_id=f.id JOIN departments AS d ON p.department_id=d.id JOIN productdetails AS pd ON p.id=pd.id JOIN ratings AS r ON pd.rated_id=r.id JOIN specs AS s ON pd.spec_id=s.id WHERE p.isd='" . $product_isd . "'";
