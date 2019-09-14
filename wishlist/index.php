@@ -72,6 +72,8 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                         mysqli_commit($dbc);
 
+                        unset($_SESSION['quantity_cart']);
+
                         $url = BASE_URL . 'wishlist/wishlist.php';
                         mysqli_close($dbc);
                         ob_end_clean();
@@ -79,6 +81,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                         exit();
 
                     } else {
+                        unset($_SESSION['quantity_cart']);
                         $url = BASE_URL . 'index.php';
                         mysqli_close($dbc);
                         ob_end_clean();
@@ -97,6 +100,8 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
 
                         mysqli_commit($dbc);
 
+                        unset($_SESSION['quantity_cart']);
+
                         $url = BASE_URL . 'wishlist/wishlist.php';
                         mysqli_close($dbc);
                         ob_end_clean();
@@ -104,6 +109,7 @@ if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['
                         exit();
 
                     } else {
+                        unset($_SESSION['quantity_cart']);
                         $url = BASE_URL . 'index.php';
                         mysqli_close($dbc);
                         ob_end_clean();
