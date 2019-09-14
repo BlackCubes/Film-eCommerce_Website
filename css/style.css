@@ -643,6 +643,17 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+#cartCard .quantity-error {
+    margin: 0px 15px;
+}
+
+#cartCard .quantity-error p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+    margin: 0;
+}
+
 .container--product-view .main-info--product-view,
 .container--product-view .cast-crew-info--product-view,
 .container--product-view .extra-desc-product-info--product-view,
