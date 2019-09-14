@@ -46,6 +46,12 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             switch ($post_action) {
 
                 case "Add to Cart":
+
+                    $url = BASE_URL . 'cart/index.php?action=add&isd=' . $product_isd;
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
+
                     break;
 
                 case "Wishlist":
