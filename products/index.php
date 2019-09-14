@@ -51,7 +51,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $quan = FALSE;
 
-            if ((is_numeric($_POST['quantity'])) && ($_POST['quantity'] > 0) && ($_POST['quantity'] <= ($product['product_stock']))) {
+            if ((is_numeric($_POST['quantity'])) && ($_POST['quantity'] > 0) && ($_POST['quantity'] < ($product['product_stock']))) {
                 $quantityErr = '';
                 $quan = TRUE;
                 $_SESSION['quantity_cart'] = $_POST['quantity'];
