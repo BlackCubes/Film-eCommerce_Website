@@ -193,7 +193,13 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             echo $selected . '>' . $i . '</option>';
         }
 
-        echo '</select></div><div class="cart-stock"><span class="stock-success">In Stock.</span></div><div class="cart-add-button"><input type="submit" class="product-cart-button" name="submit" value="Add to Cart"></div><div class="wishlist-add-button"><input type="submit" class="product-wishlist-button" name="submit" value="Wishlist"></div></div></form></div></div><div class="cast-crew-info--product-view"><div class="cast-crew-title--product-view"><h2>Cast & Crew</h2></div><div class="cast-crew-container"><div class="director-list-container--product-view"><div class="director-title--product-view"><h4>Directors</h4></div><table class="director-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
+        echo '</select>';
+
+        if (isset($quantityErr)) {
+            echo '<dvi class="quantity-error"><p>' . $quantityErr . '</p></div>';
+        }
+
+        echo '</div><div class="cart-stock"><span class="stock-success">In Stock.</span></div><div class="cart-add-button"><input type="submit" class="product-cart-button" name="submit" value="Add to Cart"></div><div class="wishlist-add-button"><input type="submit" class="product-wishlist-button" name="submit" value="Wishlist"></div></div></form></div></div><div class="cast-crew-info--product-view"><div class="cast-crew-title--product-view"><h2>Cast & Crew</h2></div><div class="cast-crew-container"><div class="director-list-container--product-view"><div class="director-title--product-view"><h4>Directors</h4></div><table class="director-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
 
         mysqli_data_seek($r_director, 0);
 
