@@ -39,6 +39,10 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
     if (mysqli_num_rows($r) == 1) {
 
+        $q_product = "SELECT DISTINCT p.name AS product_name, DATE_FORMAT(p.release_date, '%M %d, %Y') AS product_release_date, p.description AS product_desc, p.isd AS product_isd, p.sku AS product_sku, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image_1, p.image_2 AS product_image_2, f.format AS product_format, d.department AS product_department, pd.edition AS product_edition, pd.discs AS product_discs, pd.runtime AS product_runtime, DATE_FORMAT(pd.media_date, '%M %d, %Y') AS product_media_date, pd.more_description AS product_more_desc, r.rated AS product_rated, s.spec_format_type AS product_spec_format_type, s.video_desc AS product_video_desc, s.audio_desc AS product_audio_desc, s.subtitles_desc AS product_sub_desc FROM products AS p JOIN formats AS f ON p.format_id=f.id JOIN departments AS d ON p.department_id=d.id JOIN productdetails AS pd ON p.id=pd.id JOIN ratings AS r ON pd.rated_id=r.id JOIN specs AS s ON pd.spec_id=s.id WHERE p.isd='" . $product_isd . "'";
+        $r_product = mysqli_query($dbc, $q_product) or trigger_error("Query: $q_product\n<br>MySQL Error: " . mysqli_error($dbc));
+        $product = mysqli_fetch_array($r_product, MYSQLI_ASSOC);
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             session_start();
@@ -81,10 +85,6 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
             }
 
         }
-
-        $q_product = "SELECT DISTINCT p.name AS product_name, DATE_FORMAT(p.release_date, '%M %d, %Y') AS product_release_date, p.description AS product_desc, p.isd AS product_isd, p.sku AS product_sku, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image_1, p.image_2 AS product_image_2, f.format AS product_format, d.department AS product_department, pd.edition AS product_edition, pd.discs AS product_discs, pd.runtime AS product_runtime, DATE_FORMAT(pd.media_date, '%M %d, %Y') AS product_media_date, pd.more_description AS product_more_desc, r.rated AS product_rated, s.spec_format_type AS product_spec_format_type, s.video_desc AS product_video_desc, s.audio_desc AS product_audio_desc, s.subtitles_desc AS product_sub_desc FROM products AS p JOIN formats AS f ON p.format_id=f.id JOIN departments AS d ON p.department_id=d.id JOIN productdetails AS pd ON p.id=pd.id JOIN ratings AS r ON pd.rated_id=r.id JOIN specs AS s ON pd.spec_id=s.id WHERE p.isd='" . $product_isd . "'";
-        $r_product = mysqli_query($dbc, $q_product) or trigger_error("Query: $q_product\n<br>MySQL Error: " . mysqli_error($dbc));
-        $product = mysqli_fetch_array($r_product, MYSQLI_ASSOC);
 
         $q_genre = "SELECT DISTINCT g.genre AS product_genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id WHERE p.isd='" . $product_isd . "' ORDER BY g.genre";
         $r_genre = mysqli_query($dbc, $q_genre) or trigger_error("Query: $q_genre\n<br>MySQL Error: " . mysqli_error($dbc));
