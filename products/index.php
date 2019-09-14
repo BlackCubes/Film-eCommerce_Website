@@ -41,6 +41,8 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+            session_start();
+
             $post_action = sanitize_input($_POST['submit']);
 
             $_SESSION['quantity_cart'] = $_POST['quantity'];
