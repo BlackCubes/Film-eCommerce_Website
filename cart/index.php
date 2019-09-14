@@ -80,6 +80,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
 
                         $_SESSION['cart_item'] = array_merge($_SESSION['cart_item'], $items_cart);
 
+                        unset($_SESSION['quantity_cart']);
+
                         $url = BASE_URL . 'cart/cart.php';
                         mysqli_free_result($r);
                         mysqli_close($dbc);
@@ -91,6 +93,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
                 } else {
 
                     $_SESSION['cart_item'] = $items_cart;
+
+                    unset($_SESSION['quantity_cart']);
 
                     $url = BASE_URL . 'cart/cart.php';
                     mysqli_free_result($r);
