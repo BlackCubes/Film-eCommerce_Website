@@ -548,16 +548,24 @@ body {
     padding: 14px 18px;
 }
 
+#cartCard .cart-product-price .price-title-left {
+    width: 31%;
+    text-align: left;
+}
+
 #cartCard .cart-product-price span.cart-price-title {
     font-size: 13px;
     font-weight: 700;
-    text-align: left;
+}
+
+#cartCard .cart-product-price .price-value-right {
+    width: 69%;
+    text-align: right;
 }
 
 #cartCard .cart-product-price span.cart-price-value {
     font-size: 17px;
     font-weight: 400;
-    text-align: right;
     color: #B12704;
 }
 
