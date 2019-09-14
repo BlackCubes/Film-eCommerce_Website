@@ -45,7 +45,15 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $post_action = sanitize_input($_POST['submit']);
 
-            $_SESSION['quantity_cart'] = $_POST['quantity'];
+            $quan = FALSE;
+
+            if ((is_numeric($_POST['quantity'])) && ($_POST['quantity'] > 0) && ($_POST['quantity'] <= ($product['product_stock'] - 3))) {
+                $quantityErr = '';
+                $quan = TRUE;
+                $_SESSION['quantity_cart'] = $_POST['quantity'];
+            } else {
+                $quantityErr = 'Please enter a valid quantity!';
+            }
 
             switch ($post_action) {
 
