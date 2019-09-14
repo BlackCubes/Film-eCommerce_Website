@@ -576,6 +576,11 @@ body {
     color: #B12704;
 }
 
+#cartCard .cart-quantity {
+    width: 100%;
+    height: 35px;
+}
+
 #cartCard .cart-quantity label {
     font-size: 13px;
     font-weight: 300;
