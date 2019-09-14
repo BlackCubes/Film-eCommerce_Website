@@ -532,6 +532,13 @@ body {
     display: block;
 }
 
+.main-description-inner .description-title h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: #767676
+}
+
 .main-info--product-view .cart-wishlist-container {
     width: 325px;
 }
