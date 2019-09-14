@@ -557,6 +557,7 @@ body {
 .main-description-inner .description-value p {
     font-size: 14px;
     font-weight: 400;
+    line-height: 20px;
     margin: 0;
 }
 
