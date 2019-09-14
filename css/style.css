@@ -593,6 +593,11 @@ body {
     padding: 3px;
 }
 
+#cartCard .cart-stock {
+    width: 100%;
+    height: 30px;
+}
+
 #cartCard .cart-stock span.stock-success {
     font-size: 17px;
     font-weight: 400;
