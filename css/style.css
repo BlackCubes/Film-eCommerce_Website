@@ -532,6 +532,12 @@ body {
     display: block;
 }
 
+.product-info-option .main-description-container {
+    height: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .main-description-inner .description-title h4 {
     font-size: 16px;
     font-weight: 400;
