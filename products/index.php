@@ -55,26 +55,29 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
                 $quantityErr = 'Please enter a valid quantity!';
             }
 
-            switch ($post_action) {
+            if ($quan) {
 
-                case "Add to Cart":
+                switch ($post_action) {
 
-                    $url = BASE_URL . 'cart/index.php?action=add&isd=' . $product_isd;
-                    ob_end_clean();
-                    header("Location: $url");
-                    exit();
+                    case "Add to Cart":
 
-                    break;
+                        $url = BASE_URL . 'cart/index.php?action=add&isd=' . $product_isd;
+                        ob_end_clean();
+                        header("Location: $url");
+                        exit();
 
-                case "Wishlist":
+                        break;
 
-                    $url = BASE_URL . 'wishlist/index.php?action=add&isd=' . $product_isd;
-                    ob_end_clean();
-                    header("Location: $url");
-                    exit();
+                    case "Wishlist":
 
-                    break;
+                        $url = BASE_URL . 'wishlist/index.php?action=add&isd=' . $product_isd;
+                        ob_end_clean();
+                        header("Location: $url");
+                        exit();
 
+                        break;
+
+                }
             }
 
         }
