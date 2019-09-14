@@ -582,6 +582,12 @@ body {
     padding: 0 5px 2px 2px;
 }
 
+#cartCard .cart-quantity select {
+    border: 1px solid rgba(206, 153, 255, 0.37);
+    border-radius: 4px 4px 4px 4px;
+    padding: 3px;
+}
+
 .container--product-view .main-info--product-view,
 .container--product-view .cast-crew-info--product-view,
 .container--product-view .extra-desc-product-info--product-view,
