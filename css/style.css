@@ -538,6 +538,10 @@ body {
     margin-bottom: 10px;
 }
 
+.product-info-option .main-description-container .main-description-inner {
+    padding: 8px 8px;
+}
+
 .main-description-inner .description-title h4 {
     font-size: 16px;
     font-weight: 400;
