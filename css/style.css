@@ -548,6 +548,11 @@ body {
     padding: 14px 18px;
 }
 
+#cartCard .cart-product-price {
+    width: 100%;
+    height: 25px;
+}
+
 #cartCard .cart-product-price .price-title-left {
     float: left;
     width: 31%;
