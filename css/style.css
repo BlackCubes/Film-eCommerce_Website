@@ -593,6 +593,12 @@ body {
     padding: 3px;
 }
 
+#cartCard .cart-stock span.stock-success {
+    font-size: 17px;
+    font-weight: 400;
+    color: #007600;
+}
+
 .container--product-view .main-info--product-view,
 .container--product-view .cast-crew-info--product-view,
 .container--product-view .extra-desc-product-info--product-view,
