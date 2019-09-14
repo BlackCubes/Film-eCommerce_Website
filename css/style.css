@@ -536,6 +536,13 @@ body {
     width: 325px;
 }
 
+.cart-wishlist-container #cartCard {
+    width: 270px;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid rgba(138,43,226,0.17);;
+}
+
 .container--product-view .main-info--product-view,
 .container--product-view .cast-crew-info--product-view,
 .container--product-view .extra-desc-product-info--product-view,
