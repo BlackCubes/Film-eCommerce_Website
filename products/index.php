@@ -55,6 +55,12 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
                     break;
 
                 case "Wishlist":
+
+                    $url = BASE_URL . 'wishlist/index.php?action=add&isd=' . $product_isd;
+                    ob_end_clean();
+                    header("Location: $url");
+                    exit();
+
                     break;
 
             }
