@@ -67,6 +67,8 @@ if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)
                             }
                         }
 
+                        unset($_SESSION['quantity_cart']);
+
                         $url = BASE_URL . 'cart/cart.php';
                         mysqli_free_result($r);
                         mysqli_close($dbc);
