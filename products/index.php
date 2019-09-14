@@ -47,6 +47,8 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
                 case "Add to Cart":
 
+                    $_SESSION['quantity_cart'] = $_POST['quantity'];
+
                     $url = BASE_URL . 'cart/index.php?action=add&isd=' . $product_isd;
                     ob_end_clean();
                     header("Location: $url");
