@@ -1731,7 +1731,8 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (81, 'Kinberg Genre', '', 'studios/kinberg-genre_Cover.jpg'),
 (82, 'TSG Entertainment', '', 'studios/tsg-entertainment_Cover.jpg'),
 (83, 'Heyday Films', '', 'studios/heyday-films_Cover.png'),
-(84, '1492 Pictures', '', 'studios/1492-pictures_Cover.png');
+(84, '1492 Pictures', '', 'studios/1492-pictures_Cover.png'),
+(85, 'Moving Picture Company (MPC)', '', 'studios/moving-picture-company_Cover.jpg');
 
 -- --------------------------------------------------------
 
