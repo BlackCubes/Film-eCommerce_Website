@@ -96,15 +96,16 @@ body {
 
 /* BREADCRUMB */
 
-.breadcrumb {
+.breadcrumb,
+.account-breadcrumb {
     grid-area: breadcrumb;
     margin: 10px 15px 10px 15px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.breadcrumb span a,
-.breadcrumb span {
+.breadcrumb span a, .breadcrumb span,
+.account-breadcrumb span a, .account-breadcrumb span {
     font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 12px;
@@ -112,15 +113,18 @@ body {
     text-decoration: none;
 }
 
-.breadcrumb span a > span {
+.breadcrumb span a > span,
+.account-breadcrumb span a > span {
     transition: all 0.3s ease 0s;
 }
 
-.breadcrumb span a:hover > span {
+.breadcrumb span a:hover > span,
+.account-breadcrumb span a:hover > span {
     color: blueviolet;
 }
 
-.breadcrumb span.main-location {
+.breadcrumb span.main-location,
+.account-breadcrumb span.main-location {
     color: rgb(119, 39, 194);
 }
 
