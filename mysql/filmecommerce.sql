@@ -1543,6 +1543,13 @@ CREATE TABLE `shippingaddress` (
   `country` varchar(27) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `shippingaddress`
+--
+
+INSERT INTO `shippingaddress` (`id`, `user_id`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`) VALUES
+(2, 2, '1372 S Reed Ave', '', 'Reedley', 'CA', '93654', 'United States');
+
 -- --------------------------------------------------------
 
 --
