@@ -120,9 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-$breadcrumb = new breadcrumb();
+$account_breadcrumb = new account_breadcrumb();
 
-echo $breadcrumb->build(array('Account' => 'account/profile.php', 'Login & Security' => 'account/login_security.php', 'Change Email' => 'account/change_email.php'));
+echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Email' => '')) . '</div>';
 ?>
 <form action="change_email.php" method="post" id="userChangeEmailCard">
     <fieldset class="change-email-card">
