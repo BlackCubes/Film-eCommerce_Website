@@ -730,6 +730,8 @@ body {
 .container--product-view .studio-title--product-view h4 {
     font-size: 15px;
     font-weight: 300;
+    color: #767676;
+    text-decoration: underline;
 }
 
 .container--product-view .cast-crew-image--product-view {
@@ -816,6 +818,7 @@ body {
 .container--product-view .product-specs-list--product-view thead th {
     font-size: 15px;
     font-weight: 700;
+    color: #767676;
 }
 
 .container--product-view .product-details-list--product-view .genre-type > span:not(:first-child)::before {
