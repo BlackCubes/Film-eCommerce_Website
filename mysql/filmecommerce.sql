@@ -804,7 +804,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (11, 2, 11, '', 3, 161, '2017-11-07', 'Harry Potter and the Chamber of Secrets (4K Ultra HD + Blu-ray + Digital)'),
 (12, 2, 12, '', 3, 142, '2017-11-07', 'Harry Potter and the Prisoner of Azkaban (4K Ultra HD + Blu-ray + Digital)'),
 (13, 3, 13, '', 3, 157, '2017-11-07', 'Harry Potter and the Goblet of Fire (4K Ultra HD + Blu-ray + Digital)'),
-(14, 3, 14, '', 3, 138, '2017-03-28', 'Harry Potter and the Order of the Phoenix (4K Ultra HD + Blu-ray)');
+(14, 3, 14, '', 3, 138, '2017-03-28', 'Harry Potter and the Order of the Phoenix (4K Ultra HD + Blu-ray)'),
+(15, 2, 15, 'Standard Edition', 3, 153, '2017-03-28', 'The customer may or may not receive the slip cover. Harry Potter and the Half Blood Prince (4K Ultra HD + Blu-ray + Digital)');
 
 -- --------------------------------------------------------
 
