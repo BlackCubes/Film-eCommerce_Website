@@ -1807,6 +1807,13 @@ CREATE TABLE `users` (
   `registration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `middle_name`, `last_name`, `email`, `pass`, `phone_num`, `profile_pic`, `verify_code`, `registration_date`) VALUES
+(2, 'Elias', '', 'Gutierrez', 'gutierrezelias1991@gmail.com', '$2y$10$tp5Iq/CMKi7FjLe5BnDCtuzxkylBeQS1jmAs.JW3n8T1LhB0GHy4K', '559-595-3839', NULL, NULL, '2019-08-04 05:21:06');
+
 -- --------------------------------------------------------
 
 --
