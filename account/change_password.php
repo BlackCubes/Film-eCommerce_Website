@@ -101,9 +101,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 } // End of the main Submit Conditional
 
-$breadcrumb = new breadcrumb();
+$account_breadcrumb = new account_breadcrumb();
 
-echo $breadcrumb->build(array('Account' => 'account/profile.php', 'Login & Security' => 'account/login_security.php', 'Change Password' => 'account/change_password.php'));
+echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Password' => '')) . '</div>';
 ?>
 <!-- Making the changing the password as a POST method. There are no sticky value elements for the password: -->
 <form action="change_password.php" method="post" id="userChangePassCard">
