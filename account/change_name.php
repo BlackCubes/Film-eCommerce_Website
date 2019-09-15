@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $account_breadcrumb = new account_breadcrumb();
 
-echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'account/login_security.php', 'Change Your Name' => '')) . '</div>';
+echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Your Name' => '')) . '</div>';
 ?>
 <form action="change_name.php" method="post" id="userChangeNameCard">
     <fieldset class="change-name-card">
