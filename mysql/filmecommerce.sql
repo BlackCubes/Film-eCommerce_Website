@@ -289,7 +289,12 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (232, 'Bill', '', 'Nighy', 'M', '', 'actors/bill-nighy_Cover.jpg'),
 (233, 'Ian', '', 'Kelly', 'M', '', 'actors/ian-kelly_Cover.png'),
 (234, 'Michelle', '', 'Fairley', 'F', '', 'actors/michelle-fairley_Cover.jpg'),
-(235, 'Carolyn', '', 'Pickles', 'F', '', 'actors/carolyn-pickles_Cover.jpg');
+(235, 'Carolyn', '', 'Pickles', 'F', '', 'actors/carolyn-pickles_Cover.jpg'),
+(236, 'Evanna', '', 'Lynch', 'F', '', 'actors/evanna-lynch_Cover.jpg'),
+(237, 'Clémence', '', 'Poésy', 'F', '', 'actors/clemence-poesy_Cover.jpg'),
+(238, 'Graham', '', 'Duff', 'M', '', 'actors/graham-duff_Cover.jpeg'),
+(239, 'Anthony', '', 'Allgood', 'M', '', 'actors/anthony-allgood_Cover.jpg'),
+(240, 'Rusty', '', 'Goffe', 'M', '', 'actors/rusty-goffe_Cover.jpg');
 
 -- --------------------------------------------------------
 
