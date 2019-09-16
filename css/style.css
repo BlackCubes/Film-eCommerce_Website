@@ -9,6 +9,12 @@ body {
     margin: 0;
 }
 
+/* ACCOUNT MAIN */
+
+main.main--account {
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
 /* MAIN NAVBAR */
 
 /*header {
