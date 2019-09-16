@@ -295,7 +295,17 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (238, 'Graham', '', 'Duff', 'M', '', 'actors/graham-duff_Cover.jpeg'),
 (239, 'Anthony', '', 'Allgood', 'M', '', 'actors/anthony-allgood_Cover.jpg'),
 (240, 'Rusty', '', 'Goffe', 'M', '', 'actors/rusty-goffe_Cover.jpg'),
-(241, 'Domhnall', '', 'Gleeson', 'M', '', 'actors/domhnall-gleeson_Cover.jpg');
+(241, 'Domhnall', '', 'Gleeson', 'M', '', 'actors/domhnall-gleeson_Cover.jpg'),
+(242, 'Tommy', 'Lee', 'Jones', 'M', '', 'actors/tommy-lee-jones_Cover.jpg'),
+(243, 'Vincent', '', 'Cassel', 'M', '', 'actors/vincent-cassel_Cover.jpg'),
+(244, 'Ato', '', 'Essandoh', 'M', '', 'actors/ato-essandoh_Cover.jpg'),
+(245, 'Scott', '', 'Shepherd', 'M', '', 'actors/scott-shepherd_Cover.jpg'),
+(246, 'Bill', '', 'Camp', 'M', '', 'actors/bill-camp_Cover.jpg'),
+(247, 'Vinzenz', '', 'Kiefer', 'M', '', 'actors/vinzenz-kiefer_Cover.jpg'),
+(248, 'Stephen', '', 'Kunken', 'M', '', 'actors/stephen-kunken_Cover.jpg'),
+(249, 'Ben', '', 'Stylianou', 'M', '', 'actors/ben-stylianou_Cover.jpg'),
+(250, 'Kaya', '', 'Yuzuki', 'F', '', 'actors/kaya-yuzuki_Cover.jpg'),
+(251, 'Matthew', '', 'O\'Neill', 'M', '', 'actors/matthew-oneill_Cover.jpg');
 
 -- --------------------------------------------------------
 
