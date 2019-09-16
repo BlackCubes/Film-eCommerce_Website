@@ -13,7 +13,7 @@ require('includes/config.inc.php');
 $page_title = 'Forgot Password';
 
 // Include the header file:
-include('includes/header.html');
+include('includes/account_header.html');
 
 // This is the main Submit Conditional after the user submits using the POST method:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -114,4 +114,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </fieldset>
 </form>
 
-<?php include('includes/footer.html'); // Include the footer file. ?>
+<?php include('includes/account_footer.html'); // Include the footer file. ?>
