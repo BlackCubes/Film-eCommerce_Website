@@ -294,7 +294,8 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (237, 'Clémence', '', 'Poésy', 'F', '', 'actors/clemence-poesy_Cover.jpg'),
 (238, 'Graham', '', 'Duff', 'M', '', 'actors/graham-duff_Cover.jpeg'),
 (239, 'Anthony', '', 'Allgood', 'M', '', 'actors/anthony-allgood_Cover.jpg'),
-(240, 'Rusty', '', 'Goffe', 'M', '', 'actors/rusty-goffe_Cover.jpg');
+(240, 'Rusty', '', 'Goffe', 'M', '', 'actors/rusty-goffe_Cover.jpg'),
+(241, 'Domhnall', '', 'Gleeson', 'M', '', 'actors/domhnall-gleeson_Cover.jpg');
 
 -- --------------------------------------------------------
 
