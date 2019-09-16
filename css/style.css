@@ -350,6 +350,13 @@ body {
     overflow: hidden;
 }
 
+.main-studios .container-studio .studio-image > a {
+    justify-content: center;
+    display: flex;
+    max-width: 320px;
+    max-height: 240px;
+}
+
 .container-studio .studio-image {
     display: flex;
     justify-content: center;
