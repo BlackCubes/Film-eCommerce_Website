@@ -1723,7 +1723,8 @@ INSERT INTO `specs` (`id`, `spec_format_type`, `video_desc`, `audio_desc`, `subt
 (14, '4K UHD MAIN FEATURE', '2160p UHD 16x9 2.4:1', 'DTS:X English, English Descriptive Audio 2.0, Dolby Digital: Français 5.1 (Dubbed in Quebec) &amp; Español 5.1', 'English SDH, Français, &amp; Español'),
 (15, '4K UHD MAIN FEATURE', '2160p UHD 16x9 2.4:1', 'DTS:X English, DTS-HD MA: Français 5.1, English Descriptive Audio 2.0, Dolby Digital: Français 5.1 (Dubbed in Quebec) &amp; Español 5.1 (Both Castilian &amp; Latin)', 'English SDH, Français, and Español'),
 (16, '4K UHD MAIN FEATURE', '2160p UHD 16x9 2.4:1', 'DTS:X: English, Dolby Digital: Español 5.1', 'English SDH &amp; Español'),
-(17, '4K UHD MAIN FEATURE', '2160p UHD 16x9 2.4:1', 'DTS:X English, English Descriptive Audio 2.0, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1', 'English SDH, Français, and Español');
+(17, '4K UHD MAIN FEATURE', '2160p UHD 16x9 2.4:1', 'DTS:X English, English Descriptive Audio 2.0, Dolby Digital: Français 5.1 (Dubbed in Quebec), Español 5.1', 'English SDH, Français, and Español'),
+(18, '4K UHD MAIN FEATURE', 'UHD HDR10 Widescreen 2.40:1', 'English DTS:X Immersive Audio, DTS Headphone:X 2.0; Español DTS-HD 7.1; Français DTS Digital Surround 5.1', 'English SDH, Español, Français');
 
 -- --------------------------------------------------------
 
