@@ -839,7 +839,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (14, 3, 14, '', 3, 138, '2017-03-28', 'Harry Potter and the Order of the Phoenix (4K Ultra HD + Blu-ray)'),
 (15, 2, 15, 'Standard Edition', 3, 153, '2017-03-28', 'The customer may or may not receive the slip cover. Harry Potter and the Half Blood Prince (4K Ultra HD + Blu-ray + Digital)'),
 (16, 3, 16, '', 3, 146, '2017-03-28', 'Harry Potter and the Deathly Hallows Part 1 (4K Ultra HD + Blu-ray). Comes without Slip Cover'),
-(17, 3, 17, 'Standard Edition', 3, 130, '2017-03-28', 'Harry Potter and the Deathly Hallows Part 2 (4K Ultra HD + Blu-ray)');
+(17, 3, 17, 'Standard Edition', 3, 130, '2017-03-28', 'Harry Potter and the Deathly Hallows Part 2 (4K Ultra HD + Blu-ray)'),
+(18, 3, 18, '4K Ultra HD+Blu-ray+Digital', 2, 123, '2016-12-06', 'Includes a digital copy of Jason Bourne (Subject to expiration. Go to NBCUCodes.com for details.). Features High Dynamic Range (HDR10) for Brighter, Deeper, More Lifelike Color.');
 
 -- --------------------------------------------------------
 
