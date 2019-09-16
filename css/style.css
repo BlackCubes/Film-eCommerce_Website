@@ -1563,6 +1563,13 @@ fieldset.sign-in-card {
 
 /* FORGOT PASSWORD PAGE */
 
+form#forgotPassCard {
+    width: 540px;
+    height: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #forgotPassCard .forgot-pass-card {
     width: 500px;
     height: 550px;
