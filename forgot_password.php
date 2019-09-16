@@ -92,26 +92,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 } // End of the main Submit Conditional.
 ?>
-
-<!-- Making the form as a POST method: -->
-<form action="forgot_password.php" method="post" id="forgotPassCard">
-    <fieldset class="forgot-pass-card">
-        <div class="forgot-pass-title">
-            <h2>Request Password Reset</h2>
-        </div>
-        <div class="forgot-pass-info">
-            <p>Enter the email address associated with your account. We'll email you with the instructions on how to reset your password.</p>
-        </div>
-        <div class="forgot-email-input">
-            <label for="forgotUserEmailInput">Email address</label>
-            <input type="email" id="forgotUserEmailInput" name="email" class="user-email--forgot" maxlength="80">
-        </div>
-        <?php if (isset($_POST['email'])) echo '<div class="forgot-pass-error"><p>' . $emailErr_1 . '</p><p>' . $emailErr_2 . '</p></div>'; ?>
-        <div class="forgot-email-submit">
-            <input type="submit" name="submit" class="forgot-pass-button" value="SUBMIT">
-        </div>
-        <?php if (isset($_POST['email'])) echo '<div class="system-error--forgot-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
-    </fieldset>
-</form>
-
+<div class="account-container">
+    <form action="forgot_password.php" method="post" id="forgotPassCard">
+        <fieldset class="forgot-pass-card">
+            <div class="forgot-pass-title">
+                <h2>Request Password Reset</h2>
+            </div>
+            <div class="forgot-pass-info">
+                <p>Enter the email address associated with your account. We'll email you with the instructions on how to reset your password.</p>
+            </div>
+            <div class="forgot-email-input">
+                <label for="forgotUserEmailInput">Email address</label>
+                <input type="email" id="forgotUserEmailInput" name="email" class="user-email--forgot" maxlength="80">
+            </div>
+            <?php if (isset($_POST['email'])) echo '<div class="forgot-pass-error"><p>' . $emailErr_1 . '</p><p>' . $emailErr_2 . '</p></div>'; ?>
+            <div class="forgot-email-submit">
+                <input type="submit" name="submit" class="forgot-pass-button" value="SUBMIT">
+            </div>
+            <?php if (isset($_POST['email'])) echo '<div class="system-error--forgot-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
+        </fieldset>
+    </form>
+</div>
 <?php include('includes/account_footer.html'); // Include the footer file. ?>
