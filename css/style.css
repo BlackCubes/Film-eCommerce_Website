@@ -94,6 +94,18 @@ body {
     width: 147px;
 }
 
+/* ACCOUNT NAVBAR */
+
+.top-nav--account {
+    height: 80px;
+}
+
+.top-nav--account .company-logo--account {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+}
+
 /* BREADCRUMB */
 
 .breadcrumb,
