@@ -1768,7 +1768,11 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (82, 'TSG Entertainment', '', 'studios/tsg-entertainment_Cover.jpg'),
 (83, 'Heyday Films', '', 'studios/heyday-films_Cover.png'),
 (84, '1492 Pictures', '', 'studios/1492-pictures_Cover.png'),
-(85, 'Moving Picture Company (MPC)', '', 'studios/moving-picture-company_Cover.jpg');
+(85, 'Moving Picture Company (MPC)', '', 'studios/moving-picture-company_Cover.jpg'),
+(86, 'Perfect World Pictures', '', 'studios/perfect-world-pictures_Cover.png'),
+(87, 'Pearl Street Films', '', 'studios/pearl-street-films_Cover.png'),
+(88, 'Double Negative (DNEG)', '', 'studios/double-negative_Cover.png'),
+(89, 'Sur-Film', '', 'studios/sur-film_Cover.png');
 
 -- --------------------------------------------------------
 
