@@ -305,7 +305,22 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (248, 'Stephen', '', 'Kunken', 'M', '', 'actors/stephen-kunken_Cover.jpg'),
 (249, 'Ben', '', 'Stylianou', 'M', '', 'actors/ben-stylianou_Cover.jpg'),
 (250, 'Kaya', '', 'Yuzuki', 'F', '', 'actors/kaya-yuzuki_Cover.jpg'),
-(251, 'Matthew', '', 'O\'Neill', 'M', '', 'actors/matthew-oneill_Cover.jpg');
+(251, 'Matthew', '', 'O\'Neill', 'M', '', 'actors/matthew-oneill_Cover.jpg'),
+(252, 'Keanu', '', 'Reeves', 'M', '', 'actors/keanu-reeves_Cover.jpg'),
+(253, 'Michael', '', 'Nyqvist', 'M', '', 'actors/michael-nyqvist_Cover.jpg'),
+(254, 'Alfie', '', 'Allen', 'M', '', 'actors/alfie-allen_Cover.jpg'),
+(255, 'Willem', '', 'Dafoe', 'M', '', 'actors/willem-dafoe_Cover.jpg'),
+(256, 'Dean', '', 'Winters', 'M', '', 'actors/dean-winters_Cover.jpg'),
+(257, 'Adrianne', '', 'Palicki', 'F', '', 'actors/adrianne-palicki_Cover.jpg'),
+(258, 'Omer', '', 'Barnea', 'M', '', 'actors/omer-barnea_Cover.jpg'),
+(259, 'Toby', 'Leonard', 'Moore', 'M', '', 'actors/toby-leonard-Moore_Cover.jpg'),
+(260, 'Daniel', '', 'Bernhardt', 'M', '', 'actors/daniel-bernhardt_Cover.jpg'),
+(261, 'Bridget', '', 'Moynahan', 'F', '', 'actors/bridget-moynahan_Cover.jpg'),
+(262, 'John', '', 'Leguizamo', 'M', '', 'actors/john-leguizamo_Cover.jpg'),
+(263, 'Ian', '', 'McShane', 'M', '', 'actors/ian-mcshane_Cover.jpeg'),
+(264, 'Bridget', '', 'Regan', 'F', '', 'actors/bridget-regan_Cover.jpg'),
+(265, 'Lance', '', 'Reddick', 'M', '', 'actors/lance-reddick_Cover.jpg'),
+(266, 'Keith', '', 'Jardine', 'M', '', 'actors/keith-jardine_Cover.jpg');
 
 -- --------------------------------------------------------
 
