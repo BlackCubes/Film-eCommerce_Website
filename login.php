@@ -7,13 +7,13 @@
 // This file is the login page for the user to login if registered.
 
 // Include the configuration file which would be used to call some of the variables and the error management:
-require('includes/config.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 // Add the proper page title:
 $page_title = 'Login';
 
 // Include the header file:
-include('includes/header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_header.html');
 
 // The main Submit Conditional using the POST method:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -97,7 +97,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 } // End of Submit Conditional.
 ?>
-
 <!--
 
     Making the login form as a POST method.
@@ -107,47 +106,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     In the fieldset of inputting the email address and password, it is not made sticky. That is why there is no 'value' attribute.
 
 -->
-<form class="sign-in-form" action="login.php" method="post">
-    <fieldset class="sign-in-card">
-        <div class="sign-in-title">
-            <h2>Sign In</h2>
-        </div>
-        <div class="sign-in-email">
-            <label for="signInUserEmail">Email address</label>
-            <input type="email" id="signInUserEmail" name="email" class="user-email" maxlength="80">
-        </div>
-        <div class="email-error">
-            <p><?php if (isset($_POST['email'])) echo $emailErr; ?></p>
-        </div>
-        <div class="sign-in-pass">
-            <label for="signInUserPass">Password</label>
-            <input type="password" id="signInUserPass" name="pass" class="user-pass" maxlength="255">
-        </div>
-        <div class="pass-error">
-            <p><?php if (isset($_POST['pass'])) echo $passErr; ?></p>
-        </div>
-        <div class="sign-in-cookies">
-            <p>Your browser must allow cookies in order to log in.</p>
-        </div>
-        <div class="sign-in-submit">
-            <input type="submit" name="submit" class="sign-in-button" value="SIGN IN">
-        </div>
-        <div class="system-error">
-            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_1; ?></p>
-            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_2; ?></p>
-            <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_3; ?></p>
-        </div>
-        <div class="sign-in-options">
-            <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
-        </div>
-        <div class="seller-sign-in-option">
-            <p>Seller? Sign in <a href="/FilmIndustry/eCommerce/suppliers/login.php">here</a>.</p>
-        </div>
-        <div class="registration-option">
-            <h2>New?</h2>
-            <a href="/FilmIndustry/eCommerce/register_page1.php" class="register-button" role="button">REGISTER</a>
-        </div>
-    </fieldset>
-</form>
-
-<?php include('includes/footer.html'); // Include the footer file. ?>
+<div class="account-container">
+    <form class="sign-in-form" action="login.php" method="post">
+        <fieldset class="sign-in-card">
+            <div class="sign-in-title">
+                <h2>Sign In</h2>
+            </div>
+            <div class="sign-in-email">
+                <label for="signInUserEmail">Email address</label>
+                <input type="email" id="signInUserEmail" name="email" class="user-email" maxlength="80">
+            </div>
+            <div class="email-error">
+                <p><?php if (isset($_POST['email'])) echo $emailErr; ?></p>
+            </div>
+            <div class="sign-in-pass">
+                <label for="signInUserPass">Password</label>
+                <input type="password" id="signInUserPass" name="pass" class="user-pass" maxlength="255">
+            </div>
+            <div class="pass-error">
+                <p><?php if (isset($_POST['pass'])) echo $passErr; ?></p>
+            </div>
+            <div class="sign-in-cookies">
+                <p>Your browser must allow cookies in order to log in.</p>
+            </div>
+            <div class="sign-in-submit">
+                <input type="submit" name="submit" class="sign-in-button" value="SIGN IN">
+            </div>
+            <div class="system-error">
+                <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_1; ?></p>
+                <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_2; ?></p>
+                <p><?php if (isset($_POST['email'], $_POST['pass'])) echo $systemErr_3; ?></p>
+            </div>
+            <div class="sign-in-options">
+                <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
+            </div>
+            <div class="seller-sign-in-option">
+                <p>Seller? Sign in <a href="/FilmIndustry/eCommerce/suppliers/login.php">here</a>.</p>
+            </div>
+            <div class="registration-option">
+                <h2>New?</h2>
+                <a href="/FilmIndustry/eCommerce/register_page1.php" class="register-button" role="button">REGISTER</a>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); // Include the footer file. ?>
