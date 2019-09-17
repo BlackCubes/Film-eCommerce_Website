@@ -9,11 +9,18 @@ body {
     margin: 0;
 }
 
+/* ACCOUNT BODY */
+
+body.body--account {
+    background-color: rgba(148, 130, 165, 0.17);
+    margin: 0;
+}
+
 /* ACCOUNT MAIN */
 
-main.main--account {
+/*main.main--account {
     background-color: rgba(148, 130, 165, 0.17);
-}
+}*/
 
 /* MAIN NAVBAR */
 
