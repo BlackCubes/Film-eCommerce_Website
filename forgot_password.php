@@ -7,13 +7,13 @@
 // This file would send the user a temporary password to their email to use to log in if they are registered in the system.
 
 // Including the configuration file which would use some of the variables and the error management:
-require('includes/config.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 // Naming the proper page title:
 $page_title = 'Forgot Password';
 
 // Include the header file:
-include('includes/account_header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_header.html');
 
 // This is the main Submit Conditional after the user submits using the POST method:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -73,9 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             mail($_POST['email'], 'Your temporary password.', $body, 'From: gutierrezelias1991@gmail.com');
 
             // Print a message to the user, close the database connection by using the function mysqli_close(), include the footer file, and terminate the current script with no message by using the function exit():
-            echo '<div class="forgot-pass-success"><h3>Your password has been changed. You will receive the new, temporary password at the email address with which you registered. Once you have logged in with this password, you may change it by clicking on the Change Password link.</h3></div>';
+            echo '<div class="account-container"><div class="forgot-pass-success"><h3>Your password has been changed. You will receive the new, temporary password at the email address with which you registered. Once you have logged in with this password, you may change it by clicking on the Change Password link.</h3></div></div>';
             mysqli_close($dbc);
-            include('includes/footer.html');
+            include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html');
             exit();
 
         } else { // Did not run OK.
@@ -113,4 +113,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </fieldset>
     </form>
 </div>
-<?php include('includes/account_footer.html'); // Include the footer file. ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); // Include the footer file. ?>
