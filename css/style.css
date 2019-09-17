@@ -1835,7 +1835,7 @@ form#registerUserCard2,
 .registerUserErrorCard {
     width: 540px;
     height: 860px;
-    margin: 50px auto 50px auto
+    margin: 50px auto 50px auto;
 }
 
 #registerUserCard1 .register-card,
@@ -2102,7 +2102,9 @@ form#registerUserCard2,
 /* CHANGE NAME PAGE */
 
 form#userChangeNameCard {
-    background-color: rgba(148, 130, 165, 0.17);
+    width: 640px;
+    height: 460px;
+    margin: 50px auto 50px auto;
 }
 
 #userChangeNameCard .change-name-card {
