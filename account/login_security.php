@@ -74,6 +74,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
+echo '<div class="account-container">';
+
+$account_breadcrumb = new account_breadcrumb();
+
+echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => '')) . '</div>';
+
 if (!empty($_SESSION['systemSuccess'])) {
     echo '<div class="system-success--account-option"><p>' . $_SESSION['systemSuccess'] . '</p></div>';
     unset($_SESSION['systemSuccess']);
@@ -86,10 +92,6 @@ if (!empty($_SESSION['systemErr'])) {
 } else {
     unset($_SESSION['systemErr']);
 }
-
-$account_breadcrumb = new account_breadcrumb();
-
-echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => '')) . '</div>';
 ?>
 <form action="login_security.php" method="post" id="userOptionLoginSecurityCard">
     <fieldset class="option-login-security-card">
@@ -152,4 +154,10 @@ echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Logi
         <!--</div>-->
     </fieldset>
 </form>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); ?>
+<?php
+
+echo '</div>';
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html');
+
+?>
