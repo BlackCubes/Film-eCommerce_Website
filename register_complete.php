@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             mail($_SESSION['email'], 'Registration Confirmation', $body, 'From: gutierrezelias1991@gmail.com');
 
-            echo '<div class="registerUserSuccessCard"><div class="register-success-card--user"><div class="user-success--register"><p>Thank you for registering! A confirmation email has been sent to your email address. Please click on the link in that email in order to activate your account.</p></div></div></div>';
+            echo '<div class="account-container"><div class="registerUserSuccessCard"><div class="register-success-card--user"><div class="user-success--register"><p>Thank you for registering! A confirmation email has been sent to your email address. Please click on the link in that email in order to activate your account.</p></div></div></div></div>';
 
             $_SESSION = [];
 
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             setcookie(session_name(), '', time()-3600);            
             
-            echo '<div class="registerUserErrorCard"><div class="register-error-card--user"><div class="user-error--register"><p>You could not be registered with the given information due to a system error. Please contact the system administrator. We apologize for any inconvenience.</p></div></div></div>';
+            echo '<div class="account-container"><div class="registerUserErrorCard"><div class="register-error-card--user"><div class="user-error--register"><p>You could not be registered with the given information due to a system error. Please contact the system administrator. We apologize for any inconvenience.</p></div></div></div></div>';
 
             mysqli_close($dbc);
 
