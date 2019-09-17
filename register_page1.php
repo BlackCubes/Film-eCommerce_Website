@@ -7,13 +7,13 @@
 // This file is the registration page for the website.
 
 // Include the configuration script (this would be used to call some of the variables and the error management):
-require('includes/config.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
 // Including the page title:
 $page_title = 'Registration';
 
 // Include the header:
-include('includes/header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_header.html');
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();
@@ -190,4 +190,4 @@ if (!isset($_SESSION)) {
         </fieldset>
     </form>
 </div>
-<?php include('includes/footer.html'); // Include the footer. ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); // Include the footer. ?>
