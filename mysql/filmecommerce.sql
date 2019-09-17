@@ -320,7 +320,17 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (263, 'Ian', '', 'McShane', 'M', '', 'actors/ian-mcshane_Cover.jpeg'),
 (264, 'Bridget', '', 'Regan', 'F', '', 'actors/bridget-regan_Cover.jpg'),
 (265, 'Lance', '', 'Reddick', 'M', '', 'actors/lance-reddick_Cover.jpg'),
-(266, 'Keith', '', 'Jardine', 'M', '', 'actors/keith-jardine_Cover.jpg');
+(266, 'Keith', '', 'Jardine', 'M', '', 'actors/keith-jardine_Cover.jpg'),
+(267, 'Riccardo', '', 'Scamarcio', 'M', '', 'actors/riccardo-scamarcio_Cover.jpg'),
+(268, 'Ruby', '', 'Rose', 'F', '', 'actors/ruby-rose_Cover.jpg'),
+(269, 'Common', '', '', 'M', '', 'actors/common_Cover.jpg'),
+(270, 'Claudia', '', 'Gerini', 'F', '', 'actors/claudia-gerini_Cover.jpg'),
+(271, 'Laurence', '', 'Fishburne', 'M', '', 'actors/laurence-fishburne_Cover.jpg'),
+(272, 'Tobias', '', 'Segal', 'M', '', 'actors/tobias-segal_Cover.jpg'),
+(273, 'Thomas', '', 'Sadoski', 'M', '', 'actors/thomas-sadoski_Cover.jpg'),
+(274, 'Erik', '', 'Frandsen', 'M', '', 'actors/erik-frandsen_Cover.jpg'),
+(275, 'David', 'Patrick', 'Kelly', 'M', '', 'actors/david-patrick-kelly_Cover.jpg'),
+(276, 'Perry', '', 'Yung', 'M', '', 'actors/perry-yung_Cover.jpg');
 
 -- --------------------------------------------------------
 
