@@ -18,7 +18,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.p
 
 $page_title = 'Registration';
 
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_header.html');
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();
@@ -246,4 +246,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </fieldset>
     </form>
 </div>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); ?>
