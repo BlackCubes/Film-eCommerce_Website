@@ -1915,7 +1915,8 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (91, 'Thunder Road Pictures', '', 'studios/thunder-road-pictures_Cover.jpg'),
 (92, '87Eleven', '', 'studios/87-eleven_Cover.jpg'),
 (93, 'MJW Films', '', 'studios/mjw-films_Cover.jpg'),
-(94, 'Huayi Brothers Media', '', 'studios/huayi-brothers-media_Cover.png');
+(94, 'Huayi Brothers Media', '', 'studios/huayi-brothers-media_Cover.png'),
+(95, 'TIK Films', '', 'studios/tik-films_Cover.png');
 
 -- --------------------------------------------------------
 
