@@ -815,7 +815,18 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (128, 'Juan', 'Cano', 'Nono', 'M', '', 'producers/juan-cano-nono_Cover.jpg'),
 (129, 'Christopher', '', 'Rouse', 'M', '', 'producers/christopher-rouse_Cover.jpg'),
 (130, 'Jennifer', '', 'Todd', 'F', '', 'producers/jennifer-todd_Cover.jpg'),
-(131, 'Andreas', '', 'Wentz', 'M', '', 'producers/andreas-wentz_Cover.jpg');
+(131, 'Andreas', '', 'Wentz', 'M', '', 'producers/andreas-wentz_Cover.jpg'),
+(132, 'Tara', '', 'Finegan', 'F', '', 'producers/tara-finegan_Cover.jpg'),
+(133, 'Kevin', 'Scott', 'Frakes', 'M', '', 'producers/kevin-scott-frakes_Cover.jpg'),
+(134, 'Basil', '', 'Iwanyk', 'M', '', 'producers/basil-iwanyk_Cover.jpg'),
+(135, 'Peter', '', 'Lawson', 'M', '', 'producers/peter-lawson_Cover.jpg'),
+(136, 'Erica', '', 'Lee', 'F', '', 'producers/erica-lee_Cover.jpg'),
+(137, 'David', '', 'Leitch', 'M', '', 'producers/david-leitch_Cover.jpg'),
+(138, 'Eva', '', 'Longoria', 'F', '', 'producers/eva-longoria_Cover.jpg'),
+(139, 'Raj', 'Brinder', 'Singh', 'M', '', 'producers/raj-brinder-singh_Cover.jpg'),
+(140, 'Jared', '', 'Underwood', 'M', '', 'producers/jared-underwood_Cover.jpg'),
+(141, 'Joseph', '', 'Vincenti', 'M', '', 'producers/joseph-vincenti_Cover.jpg'),
+(142, 'Stephen', '', 'Hamel', 'M', '', 'producers/stephen-hamel_Cover.jpg');
 
 -- --------------------------------------------------------
 
