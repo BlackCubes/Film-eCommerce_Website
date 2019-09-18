@@ -2104,7 +2104,7 @@ form#registerUserCard2,
 form#userChangeNameCard {
     width: 640px;
     height: 460px;
-    margin: 50px auto 50px auto;
+    margin: 20px auto 20px auto;
 }
 
 #userChangeNameCard .change-name-card {
@@ -2538,7 +2538,7 @@ form#userChangePhoneCard {
 form#userOptionLoginSecurityCard {
     width: 540px;
     height: 540px;
-    margin: 50px auto 50px auto;
+    margin: 20px auto 20px auto;
 }
 
 #userOptionLoginSecurityCard .option-login-security-card {
