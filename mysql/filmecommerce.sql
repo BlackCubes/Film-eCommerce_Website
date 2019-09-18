@@ -345,7 +345,16 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (288, 'Nathan', '', 'Osgood', 'M', '', 'actors/nathan-osgood_Cover.jpg'),
 (289, 'John', '', 'McLaughlin', 'M', '', 'actors/john-mclaughlin_Cover.jpg'),
 (290, 'Rolf', '', 'Saxon', 'M', '', 'actors/rolf-saxon_Cover.jpg'),
-(291, 'Karel', '', 'Dobry', 'M', '', 'actors/karel-dobry_Cover.jpg');
+(291, 'Karel', '', 'Dobry', 'M', '', 'actors/karel-dobry_Cover.jpg'),
+(292, 'Dougray', '', 'Scott', 'M', '', 'actors/dougray-scott_Cover.jpg'),
+(293, 'Richard', '', 'Roxburgh', 'M', '', 'actors/richard-roxburgh_Cover.jpg'),
+(294, 'John', '', 'Polson', 'M', '', 'actors/john-polson_Cover.jpg'),
+(295, 'Rade', '', 'Serbedzija', 'M', '', 'actors/rade-serbedzija_Cover.jpg'),
+(296, 'William', '', 'Mapother', 'M', '', 'actors/william-mapother_Cover.jpg'),
+(297, 'Dominic', '', 'Purcell', 'M', '', 'actors/dominic-purcell_Cover.jpg'),
+(298, 'Mathew', '', 'Wilkinson', 'M', '', 'actors/mathew-wilkinson_Cover.jpeg'),
+(299, 'Nicholas', '', 'Bell', 'M', '', 'actors/nicholas-bell_Cover.jpg'),
+(300, 'Kee', '', 'Chan', 'M', '', 'actors/kee-chan_Cover.jpg');
 
 -- --------------------------------------------------------
 
