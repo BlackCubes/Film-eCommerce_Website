@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $account_breadcrumb = new account_breadcrumb();
 
-echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Email' => '')) . '</div>';
+echo '<div class="account-container"><div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Email' => '')) . '</div>';
 ?>
 <form action="change_email.php" method="post" id="userChangeEmailCard">
     <fieldset class="change-email-card">
@@ -156,4 +156,10 @@ echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Logi
         <?php if (isset($systemErr)) echo '<div class="system-error--change-email"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
 </form>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
+<?php
+
+echo '</div>';
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
+
+?>
