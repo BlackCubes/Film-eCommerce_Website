@@ -330,7 +330,22 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (273, 'Thomas', '', 'Sadoski', 'M', '', 'actors/thomas-sadoski_Cover.jpg'),
 (274, 'Erik', '', 'Frandsen', 'M', '', 'actors/erik-frandsen_Cover.jpg'),
 (275, 'David', 'Patrick', 'Kelly', 'M', '', 'actors/david-patrick-kelly_Cover.jpg'),
-(276, 'Perry', '', 'Yung', 'M', '', 'actors/perry-yung_Cover.jpg');
+(276, 'Perry', '', 'Yung', 'M', '', 'actors/perry-yung_Cover.jpg'),
+(277, 'Tom', '', 'Cruise', 'M', '', 'actors/tom-cruise_Cover.png'),
+(278, 'Jon', '', 'Voight', 'M', '', 'actors/jon-voight_Cover.jpg'),
+(279, 'Emmanuelle', '', 'Béart', 'F', '', 'actors/emmanuelle-beart_Cover.jpg'),
+(280, 'Henry', '', 'Czerny', 'M', '', 'actors/henry-czerny_Cover.jpg'),
+(281, 'Jean', '', 'Reno', 'M', '', 'actors/jean-reno_Cover.jpg'),
+(282, 'Ving', '', 'Rhames', 'M', '', 'actors/ving-rhames_Cover.jpg'),
+(283, 'Kristin', 'Scott', 'Thomas', 'F', '', 'actors/kristin-scott-thomas_Cover.jpg'),
+(284, 'Vanessa', '', 'Redgrave', 'F', '', 'actors/vanessa-redgrave_Cover.png'),
+(285, 'Ingeborga', '', 'Dapkunaite', 'F', '', 'actors/ingeborga-dapkunaite_Cover.jpg'),
+(286, 'Valentina', '', 'Yakunina', 'F', '', 'actors/valentina-yakunina_Cover.jpg'),
+(287, 'Marek', '', 'Vasut', 'M', '', 'actors/marek-vasut_Cover.jpg'),
+(288, 'Nathan', '', 'Osgood', 'M', '', 'actors/nathan-osgood_Cover.jpg'),
+(289, 'John', '', 'McLaughlin', 'M', '', 'actors/john-mclaughlin_Cover.jpg'),
+(290, 'Rolf', '', 'Saxon', 'M', '', 'actors/rolf-saxon_Cover.jpg'),
+(291, 'Karel', '', 'Dobry', 'M', '', 'actors/karel-dobry_Cover.jpg');
 
 -- --------------------------------------------------------
 
