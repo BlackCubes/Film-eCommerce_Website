@@ -2240,7 +2240,9 @@ form#userChangeNameCard {
 /* CHANGE EMAIL PAGE */
 
 form#userChangeEmailCard {
-    background-color: rgba(148, 130, 165, 0.17);
+    width: 540px;
+    height: 710px;
+    margin: 20px auto 50px auto;
 }
 
 #userChangeEmailCard .change-email-card {
