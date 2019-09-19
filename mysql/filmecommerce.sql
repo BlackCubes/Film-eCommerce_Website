@@ -2058,7 +2058,10 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (93, 'MJW Films', '', 'studios/mjw-films_Cover.jpg'),
 (94, 'Huayi Brothers Media', '', 'studios/huayi-brothers-media_Cover.png'),
 (95, 'TIK Films', '', 'studios/tik-films_Cover.png'),
-(96, 'Cruise/Wagner Productions', '', 'studios/cruise-wagner-productions_Cover.png');
+(96, 'Cruise/Wagner Productions', '', 'studios/cruise-wagner-productions_Cover.png'),
+(97, 'China Film Co-Production Corporation', '', 'studios/china-film-coproduction-corporation_Cover.png'),
+(98, 'China Film Group Corporation', '', 'studios/china-film-group-corporation_Cover.png'),
+(99, 'Luce Cinecittà', '', 'studios/luce-cinecitta_Cover.png');
 
 -- --------------------------------------------------------
 
