@@ -1942,7 +1942,8 @@ INSERT INTO `specs` (`id`, `spec_format_type`, `video_desc`, `audio_desc`, `subt
 (18, '4K UHD MAIN FEATURE', 'UHD HDR10 Widescreen 2.40:1', 'English DTS:X Immersive Audio, DTS Headphone:X 2.0; Español DTS-HD 7.1; Français DTS Digital Surround 5.1', 'English SDH, Español, Français'),
 (19, '4K UHD MAIN FEATURE', '2160p Ultra High Definition', 'English Dolby Atmos, Spanish 5.1 Dolby Digital Audio, French 5.1 Dolby Digital Audio, English 2.0 Dolby Digital AUdio Optimized for Late-Night Listening, English Descriptive Audio', 'English and Spanish Subtitles, English SDH'),
 (20, '4K UHD MAIN FEATURE', '2160p Ultra High Definition', 'English Dolby Atmos, Spanish and French 5.1 Dolby Digital Audio, English 2.0 Dolby Digital Audio Optimized for Late-Night Listening', 'English and Spanish Subtitles, English SDH'),
-(21, '4K UHD FEATURE FILM', 'Native 4K 2160p', 'ENGLISH 5.1 DOLBY TRUEHD, FRENCH 5.1 DOLBY DIGITAL, SPANISH 5.1 DOLBY DIGITAL, PORTUGUESE 5.1 DOLBY DIGITAL, ENGLISH AUDIO DESCRIPTION', 'ENGLISH, ENGLISH SDH, FRENCH, SPANISH, PORTUGUESE');
+(21, '4K UHD FEATURE FILM', 'Native 4K 2160p', 'ENGLISH 5.1 DOLBY TRUEHD, FRENCH 5.1 DOLBY DIGITAL, SPANISH 5.1 DOLBY DIGITAL, PORTUGUESE 5.1 DOLBY DIGITAL, ENGLISH AUDIO DESCRIPTION', 'ENGLISH, ENGLISH SDH, FRENCH, SPANISH, PORTUGUESE'),
+(22, '4K UHD FEATURE FILM', 'Native 4K 2160p', 'English: Dolby TrueHD 5.1 (48kHz, 24-bit), German: Dolby Digital 5.1 (640 kbps), Spanish: Dolby Digital 5.1 (640 kbps), French: Dolby Digital 5.1 (640 kbps), Italian: Dolby Digital 5.1 (640 kbps), Japanese: Dolby Digital 5.1, Portuguese: Dolby Digital 2.0', 'English, English SDH, French, German, Italian, Japanese, Portuguese, Spanish, Danish, Dutch, Finnish');
 
 -- --------------------------------------------------------
 
