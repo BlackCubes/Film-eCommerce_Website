@@ -210,6 +210,8 @@ $breadcrumb = new breadcrumb();
             unset($_SESSION['product_isd']);
         }
 
+        echo '</div>';
+
         mysqli_free_result($r);
         mysqli_close($dbc);
 
@@ -239,6 +241,5 @@ $breadcrumb = new breadcrumb();
         }
 
         ?>
-    </div>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
