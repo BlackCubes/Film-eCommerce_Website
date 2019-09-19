@@ -354,7 +354,17 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (297, 'Dominic', '', 'Purcell', 'M', '', 'actors/dominic-purcell_Cover.jpg'),
 (298, 'Mathew', '', 'Wilkinson', 'M', '', 'actors/mathew-wilkinson_Cover.jpeg'),
 (299, 'Nicholas', '', 'Bell', 'M', '', 'actors/nicholas-bell_Cover.jpg'),
-(300, 'Kee', '', 'Chan', 'M', '', 'actors/kee-chan_Cover.jpg');
+(300, 'Kee', '', 'Chan', 'M', '', 'actors/kee-chan_Cover.jpg'),
+(301, 'Philip', 'Seymour', 'Hoffman', 'M', '', 'actors/philip-seymour-hoffman_Cover.jpg'),
+(302, 'Billy', '', 'Crudup', 'M', '', 'actors/billy-crudup_Cover.jpg'),
+(303, 'Jonathan', 'Rhys', 'Meyers', 'M', '', 'actors/jonathan-rhys-meyers_Cover.jpg'),
+(304, 'Keri', '', 'Russell', 'F', '', 'actors/keri-russell_Cover.jpg'),
+(305, 'Maggie', '', 'Q', 'F', '', 'actors/maggie-q_Cover.jpeg'),
+(306, 'Simon', '', 'Pegg', 'M', '', 'actors/simon-pegg_Cover.jpg'),
+(307, 'Bahar', '', 'Soomekh', 'M', '', 'actors/bahar-soomekh_Cover.jpg'),
+(308, 'Jeff', '', 'Chase', 'M', '', 'actors/jeff-chase_Cover.jpg'),
+(309, 'Michael', '', 'Berry Jr.', 'M', '', 'actors/michael-berry-jr_Cover.jpg'),
+(310, 'Carla', '', 'Gallo', 'F', '', 'actors/carla-gallo_Cover.jpg');
 
 -- --------------------------------------------------------
 
