@@ -215,7 +215,7 @@ $breadcrumb = new breadcrumb();
 
         if ($pages > 1) {
 
-            echo '<div class="product-pagination">';
+            echo '<div class="pagination">';
             $current_page = ($start/$display) + 1;
 
             if ($current_page != 1) {
