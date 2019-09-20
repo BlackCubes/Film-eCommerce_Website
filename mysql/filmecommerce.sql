@@ -904,7 +904,23 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (155, 'Sanping', '', 'Han', 'M', '', 'producers/sanping-han_Cover.jpg'),
 (156, 'Stratton', '', 'Leopold', 'M', '', 'producers/stratton-leopold_Cover.jpg'),
 (157, 'Enzo', '', 'Sisti', 'M', '', 'producers/enzo-sisti_Cover.jpg'),
-(158, 'Haicheng', '', 'Zhao', 'M', '', 'producers/haicheng-zhao_Cover.jpg');
+(158, 'Haicheng', '', 'Zhao', 'M', '', 'producers/haicheng-zhao_Cover.jpg'),
+(159, 'J.J.', '', 'Abrams', 'M', '', 'producers/jj-abrams_Cover.jpeg'),
+(160, 'Josh', '', 'Appelbaum', 'M', '', 'producers/josh-appelbaum_Cover.jpg'),
+(161, 'Bryan', '', 'Burk', 'M', '', 'producers/bryan-burk_Cover.jpg'),
+(162, 'Jeffrey', '', 'Chernov', 'M', '', 'producers/jeffrey-chernov_Cover.jpg'),
+(163, 'David', '', 'Ellison', 'M', '', 'producers/david-ellison_Cover.png'),
+(164, 'Dana', '', 'Goldberg', 'F', '', 'producers/dana-goldberg_Cover.jpg'),
+(165, 'Tommy', '', 'Harper', 'M', '', 'producers/tommy-harper_Cover.jpg'),
+(166, 'David', '', 'Minkowski', 'M', '', 'producers/david-minkowski_Cover.jpg'),
+(167, 'André', '', 'Nemec', 'M', '', 'producers/andre-nemec_Cover.jpg'),
+(168, 'Tabrez', '', 'Noorani', 'M', '', 'producers/tabrez-noorani_Cover.jpeg'),
+(169, 'Tom', 'C.', 'Peitzman', 'M', '', 'producers/tom-c-peitzman_Cover.jpg'),
+(170, 'Ben', '', 'Rosenblatt', 'M', '', 'producers/ben-rosenblatt_Cover.jpg'),
+(171, 'Pravesh', '', 'Sahni', 'M', '', 'producers/pravesh-sahni_Cover.jpg'),
+(172, 'Paul', '', 'Schwake', 'M', '', 'producers/paul-schwake_Cover.jpg'),
+(173, 'Tim', '', 'Smythe', 'M', '', 'producers/tim-smythe_Cover.jpg'),
+(174, 'Matthew', '', 'Stillman', 'M', '', 'producers/matthew-stillman_Cover.jpeg');
 
 -- --------------------------------------------------------
 
