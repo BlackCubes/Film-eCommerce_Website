@@ -25,7 +25,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php')
 $page_title = 'Change Password';
 
 // Including the header file:
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_header.html');
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.php');
 
@@ -130,4 +130,4 @@ echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Logi
         <?php if (isset($_POST['password1'], $_POST['password2'])) echo '<div class="system-error--change-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
     </fieldset>
 </form>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); // Include the footer file. ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); // Include the footer file. ?>
