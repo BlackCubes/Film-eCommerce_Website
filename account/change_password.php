@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $account_breadcrumb = new account_breadcrumb();
 
-echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Password' => '')) . '</div>';
+echo '<div class="account-container"><div class="account-breadcrumb">' . $account_breadcrumb->build(array('Login & Security' => 'login_security.php', 'Change Password' => '')) . '</div>';
 ?>
 <!-- Making the changing the password as a POST method. There are no sticky value elements for the password: -->
 <form action="change_password.php" method="post" id="userChangePassCard">
@@ -130,4 +130,10 @@ echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Logi
         <?php if (isset($_POST['password1'], $_POST['password2'])) echo '<div class="system-error--change-pass"><p>' . $systemErr_1 . '</p><p>' . $systemErr_2 . '</p></div>'; ?>
     </fieldset>
 </form>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); // Include the footer file. ?>
+<?php
+
+echo '</div>';
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html');
+
+?>
