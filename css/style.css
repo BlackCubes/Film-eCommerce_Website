@@ -2682,7 +2682,9 @@ form#userOptionLoginSecurityCard {
 /* CHANGE ADDRESS PAGE */
 
 form#userChangeAddressCard {
-    background-color: rgba(148, 130, 165, 0.17);
+    width: 540px;
+    height: 7100px;
+    margin: 20px auto 50px auto;
 }
 
 #userChangeAddressCard .change-address-card {
