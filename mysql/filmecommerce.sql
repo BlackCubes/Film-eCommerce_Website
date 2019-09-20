@@ -364,7 +364,18 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (307, 'Bahar', '', 'Soomekh', 'M', '', 'actors/bahar-soomekh_Cover.jpg'),
 (308, 'Jeff', '', 'Chase', 'M', '', 'actors/jeff-chase_Cover.jpg'),
 (309, 'Michael', '', 'Berry Jr.', 'M', '', 'actors/michael-berry-jr_Cover.jpg'),
-(310, 'Carla', '', 'Gallo', 'F', '', 'actors/carla-gallo_Cover.jpg');
+(310, 'Carla', '', 'Gallo', 'F', '', 'actors/carla-gallo_Cover.jpg'),
+(311, 'Paula', '', 'Patton', 'M', '', 'actors/paula-patton_Cover.jpg'),
+(312, 'Vladimir', '', 'Mashkov', 'M', '', 'actors/vladimir-mashkov_Cover.jpg'),
+(313, 'Samuli', '', 'Edelmann', 'M', '', 'actors/samuli-edelmann_Cover.jpg'),
+(314, 'Ivan', '', 'Shvedoff', 'M', '', 'actors/ivan-shvedoff_Cover.jpg'),
+(315, 'Anil', '', 'Kapoor', 'M', '', 'actors/anil-kapoor_Cover.jpg'),
+(316, 'Léa', '', 'Seydoux', 'F', '', 'actors/lea-seydoux_Cover.jpg'),
+(317, 'Josh', '', 'Holloway', 'M', '', 'actors/josh-holloway_Cover.jpg'),
+(318, 'Pavel', '', 'Kríz', 'M', '', 'actors/pavel-kriz_Cover.jpg'),
+(319, 'Miraj', '', 'Grbic', 'M', '', 'actors/miraj-grbic_Cover.jpg'),
+(320, 'Ilia', '', 'Volok', 'F', '', 'actors/ilia-volok_Cover.jpg'),
+(321, 'Goran', '', 'Navojec', 'M', '', 'actors/goran-navojec_Cover.jpeg');
 
 -- --------------------------------------------------------
 
