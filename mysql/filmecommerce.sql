@@ -937,7 +937,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (19, 4, 19, '', 2, 101, '2017-02-07', 'An ex-hitman comes out of retirement to track down the gangsters that took everything from him.'),
 (20, 4, 20, '', 2, 122, '2017-06-13', 'After returning to the criminal underworld to repay a debt, John Wick discovers that a large bounty has been put on his life.'),
 (21, 3, 21, '', 1, 110, '2018-06-26', ''),
-(22, 3, 22, '', 1, 123, '2018-06-26', '');
+(22, 3, 22, '', 1, 123, '2018-06-26', ''),
+(23, 3, 23, '', 1, 125, '2018-06-26', '');
 
 -- --------------------------------------------------------
 
