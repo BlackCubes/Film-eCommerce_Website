@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $account_breadcrumb = new account_breadcrumb();
 
-echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Edit Your Address' => '')) . '</div>';
+echo '<div class="account-container"><div class="account-breadcrumb">' . $account_breadcrumb->build(array('Edit Your Address' => '')) . '</div>';
 ?>
 <form action="change_address.php" method="post" id="userChangeAddressCard">
     <fieldset class="change-address-card">
@@ -152,4 +152,10 @@ echo '<div class="account-breadcrumb">' . $account_breadcrumb->build(array('Edit
         <?php if (isset($systemErr)) echo '<div class="system-error--change-address"><p>' . $systemErr . '</p></div>'; ?>
     </fieldset>
 </form>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html'); ?>
+<?php
+
+echo '</div>';
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_footer.html');
+
+?>
