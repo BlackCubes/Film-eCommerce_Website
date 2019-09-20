@@ -1701,7 +1701,9 @@ form#forgotPassCard {
 /* CHANGE PASSWORD */
 
 form#userChangePassCard {
-    background-color: rgba(148, 130, 165, 0.17);
+    width: 540px;
+    height: 590px;
+    margin: 20px auto 50px auto;
 }
 
 #userChangePassCard .change-pass-card {
