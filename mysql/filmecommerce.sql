@@ -586,7 +586,15 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (89, 'Timothy', 'Van', 'Patten', 'M', '', 'directors/timothy-van-patten_Cover.jpg'),
 (90, 'Brian', '', 'Kirk', 'M', '', 'directors/brian-kirk_Cover.jpg'),
 (91, 'Daniel', '', 'Minahan', 'M', '', 'directors/daniel-minahan_Cover.jpg'),
-(92, 'Alan', '', 'Taylor', 'M', '', 'directors/alan-taylor_Cover.jpg');
+(92, 'Alan', '', 'Taylor', 'M', '', 'directors/alan-taylor_Cover.jpg'),
+(93, 'Michael', '', 'Uppendahl', 'M', '', 'directors/michael-uppendahl_Cover.jpg'),
+(94, 'Daniel', '', 'Attias', 'M', '', 'directors/daniel-attias_Cover.jpg'),
+(95, 'Andrew', '', 'Bernstein', 'M', '', 'directors/andrew-bernstein_Cover.jpg'),
+(96, 'Kevin', '', 'Hooks', 'M', '', 'directors/kevin-hooks_Cover.jpg'),
+(97, 'Greg', '', 'Yaitanes', 'M', '', 'directors/greg-yaitanes_Cover.jpg'),
+(98, 'Ana', 'Lily', 'Amirpour', 'F', '', 'directors/ana-lily-amirpour_Cover.jpg'),
+(99, 'Julie', 'Anne', 'Robinson', 'F', '', 'directors/julie-anne-robinson_Cover.jpg'),
+(100, 'Nicole', '', 'Kassell', 'F', '', 'directors/nicole-kassell_Cover.jpg');
 
 -- --------------------------------------------------------
 
