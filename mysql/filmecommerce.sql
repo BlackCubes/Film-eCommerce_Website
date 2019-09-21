@@ -375,7 +375,20 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (318, 'Pavel', '', 'Kríz', 'M', '', 'actors/pavel-kriz_Cover.jpg'),
 (319, 'Miraj', '', 'Grbic', 'M', '', 'actors/miraj-grbic_Cover.jpg'),
 (320, 'Ilia', '', 'Volok', 'F', '', 'actors/ilia-volok_Cover.jpg'),
-(321, 'Goran', '', 'Navojec', 'M', '', 'actors/goran-navojec_Cover.jpeg');
+(321, 'Goran', '', 'Navojec', 'M', '', 'actors/goran-navojec_Cover.jpeg'),
+(322, 'Sean', '', 'Bean', 'M', '', 'actors/sean-bean_Cover.jpg'),
+(323, 'Mark', '', 'Addy', 'M', '', 'actors/mark-addy_Cover.jpg'),
+(324, 'Nikolaj', '', 'Coster-Waldau', 'M', '', 'actors/nikolaj-costerwaldau_Cover.jpg'),
+(325, 'Lena', '', 'Headey', 'F', '', 'actors/lena-headey_Cover.jpg'),
+(326, 'Emilia', '', 'Clarke', 'F', '', 'actors/emilia-clarke_Cover.jpg'),
+(327, 'Iain', '', 'Glen', 'M', '', 'actors/iain-glen_Cover.jpg'),
+(328, 'Harry', '', 'Lloyd', 'M', '', 'actors/harry-lloyd_Cover.jpg'),
+(329, 'Kit', '', 'Harington', 'M', '', 'actors/kit-harington_Cover.jpg'),
+(330, 'Sophie', '', 'Turner', 'F', '', 'actors/sophie-turner_Cover.jpg'),
+(331, 'Maisie', '', 'Williams', 'F', '', 'actors/maisie-williams_Cover.jpg'),
+(332, 'Richard', '', 'Madden', 'M', '', 'actors/richard-madden_Cover.jpg'),
+(333, 'Isaac', 'Hempstead', 'Wright', 'M', '', 'actors/isaac-hempstead-wright_Cover.jpg'),
+(334, 'Jack', '', 'Gleeson', 'M', '', 'actors/jack-gleeson_Cover.png');
 
 -- --------------------------------------------------------
 
