@@ -388,7 +388,12 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (331, 'Maisie', '', 'Williams', 'F', '', 'actors/maisie-williams_Cover.jpg'),
 (332, 'Richard', '', 'Madden', 'M', '', 'actors/richard-madden_Cover.jpg'),
 (333, 'Isaac', 'Hempstead', 'Wright', 'M', '', 'actors/isaac-hempstead-wright_Cover.jpg'),
-(334, 'Jack', '', 'Gleeson', 'M', '', 'actors/jack-gleeson_Cover.png');
+(334, 'Jack', '', 'Gleeson', 'M', '', 'actors/jack-gleeson_Cover.png'),
+(335, 'Rory', '', 'McCann', 'M', '', 'actors/rory-mccann_Cover.jpg'),
+(336, 'Donald', '', 'Sumpter', 'M', '', 'actors/donald-sumpter_Cover.jpg'),
+(337, 'Conleth', '', 'Hill', 'M', '', 'actors/conleth-hill_Cover.jpg'),
+(338, 'James', '', 'Cosmo', 'M', '', 'actors/james-cosmo_Cover.jpg'),
+(339, 'Owen', '', 'Teale', 'M', '', 'actors/owen-teale_Cover.jpg');
 
 -- --------------------------------------------------------
 
