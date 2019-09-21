@@ -995,7 +995,19 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (178, 'Tom', '', 'McCarthy', 'M', '', 'producers/tom-mccarthy_Cover.jpg'),
 (179, 'Christopher', '', 'Newman', 'M', '', 'producers/christopher-newman_Cover.jpg'),
 (180, 'Greg', '', 'Spence', 'M', '', 'producers/greg-spence_Cover.jpg'),
-(181, 'Ralph', '', 'Vicinanza', 'M', '', 'producers/ralph-vicinanza_Cover.jpg');
+(181, 'Ralph', '', 'Vicinanza', 'M', '', 'producers/ralph-vicinanza_Cover.jpg'),
+(182, 'Scott', '', 'Brown', 'M', '', 'producers/scott-brown_Cover.jpg'),
+(183, 'Lila', '', 'Byock', 'F', '', 'producers/lila-byock_Cover.jpg'),
+(184, 'Stephen', '', 'King', 'M', '', 'producers/stephen-king_Cover.jpg'),
+(185, 'Mark', '', 'Lafferty', 'M', '', 'producers/mark-lafferty_Cover.jpg'),
+(186, 'Sam', '', 'Shaw', 'M', '', 'producers/sam-shaw_Cover.jpg'),
+(187, 'Tom', '', 'Spezialy', 'M', '', 'producers/tom-spezialy_Cover.jpg'),
+(188, 'Ben', '', 'Stephenson', 'M', '', 'producers/ben-stephenson_Cover.jpg'),
+(189, 'Robin', '', 'Sweet', 'F', '', 'producers/robin-sweet_Cover.jpg'),
+(190, 'Dustin', '', 'Thomason', 'M', '', 'producers/dustin-thomason_Cover.jpg'),
+(191, 'Michael', '', 'Uppendahl', 'M', '', 'producers/michael-uppendahl_Cover.jpg'),
+(192, 'Vinnie', '', 'Wilhelm', 'M', '', 'producers/vinnie_wilhelm_Cover.jpg'),
+(193, 'Liz', '', 'Glotzer', 'F', '', 'producers/liz-glotzer_Cover.jpg');
 
 -- --------------------------------------------------------
 
