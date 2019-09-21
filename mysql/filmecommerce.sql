@@ -539,7 +539,11 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (85, 'Brian', 'De', 'Palma', 'M', '', 'directors/brian-de-palma_Cover.jpg'),
 (86, 'John', '', 'Woo', 'M', '', 'directors/john-woo_Cover.jpg'),
 (87, 'J.J.', '', 'Abrams', 'M', '', 'directors/jj-abrams_Cover.jpeg'),
-(88, 'Brad', '', 'Bird', 'M', '', 'directors/brad-bird_Cover.jpg');
+(88, 'Brad', '', 'Bird', 'M', '', 'directors/brad-bird_Cover.jpg'),
+(89, 'Timothy', 'Van', 'Patten', 'M', '', 'directors/timothy-van-patten_Cover.jpg'),
+(90, 'Brian', '', 'Kirk', 'M', '', 'directors/brian-kirk_Cover.jpg'),
+(91, 'Daniel', '', 'Minahan', 'M', '', 'directors/daniel-minahan_Cover.jpg'),
+(92, 'Alan', '', 'Taylor', 'M', '', 'directors/alan-taylor_Cover.jpg');
 
 -- --------------------------------------------------------
 
