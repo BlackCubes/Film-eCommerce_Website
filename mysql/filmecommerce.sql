@@ -2326,7 +2326,8 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (100, 'Skydance Media', '', 'studios/skydance-media_Cover.png'),
 (101, 'Bad Robot', '', 'studios/bad-robot_Cover.png'),
 (102, 'Home Box Office (HBO)', '', 'studios/home-box-office_Cover.png'),
-(103, 'Generator Entertainment', '', 'studios/generator-entertainment_Cover.jpg');
+(103, 'Generator Entertainment', '', 'studios/generator-entertainment_Cover.jpg'),
+(104, 'Darkbloom Productions', '', 'studios/darkbloom-productions_Cover.png');
 
 -- --------------------------------------------------------
 
