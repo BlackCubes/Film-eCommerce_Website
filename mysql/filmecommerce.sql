@@ -738,7 +738,12 @@ INSERT INTO `dps` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `ab
 (86, 'Alik', '', 'Sakharov', 'M', '', 'dp/alik-sakharov_Cover.jpeg'),
 (87, 'Marco', '', 'Pontecorvo', 'M', '', 'dp/marco-pontecorvo_Cover.jpg'),
 (88, 'Matthew', '', 'Jensen', 'M', '', 'dp/matthew-jensen_Cover.jpg'),
-(89, 'Richard', '', 'Rutkowski', 'M', '', 'dp/richard-rutkowski_Cover.jpg');
+(89, 'Richard', '', 'Rutkowski', 'M', '', 'dp/richard-rutkowski_Cover.jpg'),
+(90, 'Paul', '', 'Cameron', 'M', '', 'dp/paul-cameron_Cover.jpg'),
+(91, 'Brendan', '', 'Galvin', 'M', '', 'dp/brendan-galvin_Cover.jpg'),
+(92, 'Robert', '', 'McLachlan', 'M', '', 'dp/robert-mclachlan_Cover.jpg'),
+(93, 'Jeffrey', '', 'Jur', 'M', '', 'dp/jeffrey-jur_Cover.jpg'),
+(94, 'David', '', 'Franco', 'M', '', 'dp/david-franco_Cover.jpg');
 
 -- --------------------------------------------------------
 
