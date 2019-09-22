@@ -1054,7 +1054,24 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (190, 'Dustin', '', 'Thomason', 'M', '', 'producers/dustin-thomason_Cover.jpg'),
 (191, 'Michael', '', 'Uppendahl', 'M', '', 'producers/michael-uppendahl_Cover.jpg'),
 (192, 'Vinnie', '', 'Wilhelm', 'M', '', 'producers/vinnie_wilhelm_Cover.jpg'),
-(193, 'Liz', '', 'Glotzer', 'F', '', 'producers/liz-glotzer_Cover.jpg');
+(193, 'Liz', '', 'Glotzer', 'F', '', 'producers/liz-glotzer_Cover.jpg'),
+(194, 'David', '', 'Coatsworth', 'M', '', 'producers/david-coatsworth_Cover.jpg'),
+(195, 'Susan', '', 'Ekins', 'F', '', 'producers/susan-ekins_Cover.jpg'),
+(196, 'Lisa', '', 'Joy', 'F', '', 'producers/lisa-joy_Cover.jpeg'),
+(197, 'Kathy', '', 'Lingg', 'F', '', 'producers/kathy-lingg_Cover.jpg'),
+(198, 'Jonathan', '', 'Nolan', 'M', '', 'producers/jonathan-nolan_Cover.jpg'),
+(199, 'Stephen', '', 'Semel', 'M', '', 'producers/stephen-semel_Cover.jpeg'),
+(200, 'Jerry', '', 'Weintraub', 'M', '', 'producers/jerry-weintraub_Cover.jpg'),
+(201, 'Athena', '', 'Wickham', 'F', '', 'producers/athena-wickham_Cover.png'),
+(202, 'Ed', '', 'Brubaker', 'M', '', 'producers/ed-brubaker_Cover.png'),
+(203, 'Richard', 'J.', 'Lewis', 'M', '', 'producers/richard-j-lewis_Cover.jpg'),
+(204, 'Kath', '', 'Lingenfelter', 'F', '', 'producers/kath-lingenfelter_Cover.jpg'),
+(205, 'Cherylanne', '', 'Martin', 'F', '', 'producers/cherylanne-martin_Cover.jpg'),
+(206, 'Dominic', '', 'Mitchell', 'M', '', 'producers/dominic-mitchell_Cover.jpg'),
+(207, 'Roberto', '', 'Patino', 'M', '', 'producers/roberto-patino_Cover.jpg'),
+(208, 'Alan', '', 'Poul', 'M', '', 'producers/alan-poul_Cover.jpeg'),
+(209, 'Daniel', 'T.', 'Thomsen', 'M', '', 'producers/daniel-t-thomsen_Cover.jpg'),
+(210, 'Bridget', '', 'Carpenter', 'F', '', 'producers/bridget-carpenter_Cover.jpg');
 
 -- --------------------------------------------------------
 
