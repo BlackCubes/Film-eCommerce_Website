@@ -461,7 +461,21 @@ INSERT INTO `actors` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, 
 (404, 'James', 'Landry', 'Hébert', 'M', '', 'actors/james-landry-hebert_Cover.jpg'),
 (405, 'Oliver', '', 'Bell', 'M', '', 'actors/oliver-bell_Cover.jpg'),
 (406, 'Tessa', '', 'Thompson', 'F', '', 'actors/tessa-thompson_Cover.jpg'),
-(407, 'Talulah', '', 'Riley', 'F', '', 'actors/talulah-riley_Cover.jpg');
+(407, 'Talulah', '', 'Riley', 'F', '', 'actors/talulah-riley_Cover.jpg'),
+(408, 'Fares', '', 'Fares', 'M', '', 'actors/fares-fares_Cover.jpg'),
+(409, 'Gustaf', '', 'Skarsgård', 'M', '', 'actors/gustaf-skarsgard_Cover.jpg'),
+(410, 'Betty', '', 'Gabriel', 'F', '', 'actors/betty-gabriel_Cover.jpg'),
+(411, 'Zahn', '', 'McClarnon', 'M', '', 'actors/zahn-mcclarnon_Cover.jpg'),
+(412, 'Katja', '', 'Herbers', 'F', '', 'actors/katja-herbers_Cover.jpg'),
+(413, 'Peter', '', 'Mullan', 'M', '', 'actors/peter-mullan_Cover.jpg'),
+(414, 'Jonathan', '', 'Tucker', 'M', '', 'actors/jonathan-tucker_Cover.jpg'),
+(415, 'Rinko', '', 'Kikuchi', 'F', '', 'actors/rinko-kikuchi_Cover.jpg'),
+(416, 'Julia', '', 'Jones', 'F', '', 'actors/julia-jones_Cover.jpg'),
+(417, 'Martin', '', 'Sensmeier', 'M', '', 'actors/martin-sensmeier_Cover.png'),
+(418, 'Irene', '', 'Bedard', 'F', '', 'actors/irene-bedard_Cover.jpg'),
+(419, 'Booboo', '', 'Stewart', 'M', '', 'actors/booboo-stewart_Cover.jpg'),
+(420, 'Sela', '', 'Ward', 'F', '', 'actors/sela-ward_Cover.jpg'),
+(421, 'Jack', '', 'Conley', 'M', '', 'actors/jack-conley_Cover.jpg');
 
 -- --------------------------------------------------------
 
