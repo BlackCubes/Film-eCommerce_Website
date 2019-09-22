@@ -1121,7 +1121,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (24, 3, 24, '', 1, 132, '2018-06-26', ''),
 (25, 13, 25, '4K Ultra HD', 4, 561, '2018-06-05', 'Nine noble families fight for control over the mythical lands of Westeros.'),
 (26, 13, 26, 'Blu-Ray+4K', 4, 500, '2019-01-08', 'Castle Rock: The Complete First Season (4K Ultra HD/Blu-ray/Digital Copy). A psychological-horror series set in the Stephen King multiverse, Castle Rock is an original story that combines the mythological scale and intimate character storytelling of King\''),
-(27, 13, 27, 'New Box Art', 6, 619, '2018-02-13', 'Westworld: The Complete First Season (Repackaged/4K UHD/BD/Digital Copy)');
+(27, 13, 27, 'New Box Art', 6, 619, '2018-02-13', 'Westworld: The Complete First Season (Repackaged/4K UHD/BD/Digital Copy)'),
+(28, 13, 28, 'Limited Edition', 6, 619, '2017-11-07', 'Westworld: The Complete First Season (Limited Edition) (4K UHD/BD/Digital Copy) (4K Ultra HD)');
 
 -- --------------------------------------------------------
 
