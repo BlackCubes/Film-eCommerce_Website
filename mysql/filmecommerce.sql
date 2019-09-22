@@ -641,7 +641,11 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (105, 'Jonny', '', 'Campbell', 'M', '', 'directors/jonny-campbell_Cover.jpg'),
 (106, 'Frederick', 'E.O.', 'Toye', 'M', '', 'directors/frederick-eo-toye_Cover.jpg'),
 (107, 'Stephen', '', 'Williams', 'M', '', 'directors/stephen-williams_Cover.png'),
-(108, 'Michelle', '', 'MacLaren', 'F', '', 'directors/michelle-maclaren_Cover.jpg');
+(108, 'Michelle', '', 'MacLaren', 'F', '', 'directors/michelle-maclaren_Cover.jpg'),
+(109, 'Lisa', '', 'Joy', 'F', '', 'directors/lisa-joy_Cover.jpeg'),
+(110, 'Craig', '', 'Zobel', 'M', '', 'directors/craig-zobel_Cover.jpg'),
+(111, 'Tarik', '', 'Saleh', 'M', '', 'directors/tarik-saleh_Cover.jpg'),
+(112, 'Uta', '', 'Briesewitz', 'F', '', 'directors/uta-briesewitz_Cover.jpg');
 
 -- --------------------------------------------------------
 
