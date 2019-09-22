@@ -403,7 +403,8 @@ body.body--account {
     max-height: 240px;
 }
 
-.container-studio .studio-image img[title="1492 Pictures"] {
+.container-studio .studio-image img[title="1492 Pictures"],
+.container-studio .studio-image img[title="Darkbloom Productions"] {
     background-color: black;
 }
 
@@ -788,7 +789,8 @@ body.body--account {
     max-width: 59px;
 }
 
-.container--product-view .cast-crew-container img[title="1492 Pictures"] {
+.container--product-view .cast-crew-container img[title="1492 Pictures"],
+.container--product-view .cast-crew-container img[title="Darkbloom Productions"] {
     background-color: black;
 }
 
@@ -1038,7 +1040,8 @@ body.body--account {
     margin-bottom: 50px;
 }
 
-.container--studio-view .image--studio-view img[alt="1492 Pictures"] {
+.container--studio-view .image--studio-view img[alt="1492 Pictures"],
+.container--studio-view .image--studio-view img[alt="Darkbloom Productions"] {
     background-color: black;
 }
 
