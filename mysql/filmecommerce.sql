@@ -1064,7 +1064,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (22, 3, 22, '', 1, 123, '2018-06-26', ''),
 (23, 3, 23, '', 1, 125, '2018-06-26', ''),
 (24, 3, 24, '', 1, 132, '2018-06-26', ''),
-(25, 13, 25, '4K Ultra HD', 4, 561, '2018-06-05', 'Nine noble families fight for control over the mythical lands of Westeros.');
+(25, 13, 25, '4K Ultra HD', 4, 561, '2018-06-05', 'Nine noble families fight for control over the mythical lands of Westeros.'),
+(26, 13, 26, 'Blu-Ray+4K', 4, 500, '2019-01-08', 'Castle Rock: The Complete First Season (4K Ultra HD/Blu-ray/Digital Copy). A psychological-horror series set in the Stephen King multiverse, Castle Rock is an original story that combines the mythological scale and intimate character storytelling of King\'');
 
 -- --------------------------------------------------------
 
