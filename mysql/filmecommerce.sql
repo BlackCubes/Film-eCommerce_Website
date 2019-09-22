@@ -2763,7 +2763,16 @@ INSERT INTO `writers` (`id`, `first_name`, `middle_name`, `last_name`, `gender`,
 (113, 'Lila', '', 'Byock', 'F', '', 'writers/lila-byock_Cover.jpg'),
 (114, 'Vinnie', '', 'Wilhelm', 'M', '', 'writers/vinnie_wilhelm_Cover.jpg'),
 (115, 'Marc', '', 'Bernardin', 'M', '', 'writers/marc-bernardin_Cover.png'),
-(116, 'Mark', '', 'Lafferty', 'M', '', 'writers/mark-lafferty_Cover.jpg');
+(116, 'Mark', '', 'Lafferty', 'M', '', 'writers/mark-lafferty_Cover.jpg'),
+(117, 'Lisa', '', 'Joy', 'F', '', 'writers/lisa-joy_Cover.jpeg'),
+(118, 'Michael', '', 'Crichton', 'M', '', 'writers/michael-crichton_Cover.jpg'),
+(119, 'Charles', '', 'Yu', 'M', '', 'writers/charles-yu_Cover.jpg'),
+(120, 'Halley', 'Wegryn', 'Gross', 'F', '', 'writers/halley-wegryn-gross_Cover.jpg'),
+(121, 'Daniel', 'T.', 'Thomsen', 'M', '', 'writers/daniel-t-thomsen_Cover.jpg'),
+(122, 'Ed', '', 'Brubaker', 'M', '', 'writers/ed-brubaker_Cover.png'),
+(123, 'Dominic', '', 'Mitchell', 'M', '', 'writers/dominic-mitchell_Cover.jpg'),
+(124, 'Dan', '', 'Dietz', 'M', '', 'writers/dan-dietz_Cover.jpg'),
+(125, 'Kath', '', 'Lingenfelter', 'F', '', 'writers/kath-lingenfelter_Cover.jpg');
 
 --
 -- Indexes for dumped tables
