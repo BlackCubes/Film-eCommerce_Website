@@ -26,7 +26,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.p
 
 require(MYSQL);
 
-if (isset($_GET['type'], $_GET['name']) {
+if (isset($_GET['type'], $_GET['name'])) {
     if (preg_match('/((\bgenre\b)|(\bactor\b)|(\bdirector\b)|(\bwriter\b)|(\bproducer\b)|(\bdp\b)|(\bstudio\b))(?!;)/', $_GET['type'])) {
 
         $id_decrypt = urldecode(my_decrypt($_GET['name'], KEY));
