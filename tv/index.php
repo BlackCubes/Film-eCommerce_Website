@@ -81,8 +81,8 @@ if (isset($_GET['format'])) {
             $format_get = '';
         } else {
             $format_join = "JOIN formats f ON p.format_id=f.id";
-            $format_where = "AND f.format=";
             $format_get = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
+            $format_where = "AND f.format='{$format_get}'";
         }
 
     } else {
