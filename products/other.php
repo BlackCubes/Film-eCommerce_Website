@@ -198,9 +198,9 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             $artist_id_encrypt = urlencode(my_encrypt($artist['artist_id'], KEY));
 
             if (empty($artist['artist_mn'])) {
-                $artists[] = '<li><a title="' . $artist['artist_fn'] . ' ' . $artist['artist_ln'] . '" href="/FilmIndustry/eCommerce/films/index.php?type=' . $column_type . '&name=' . $artist_id_encrypt . '">' . $artist['artist_fn'] . ' ' . $artist['artist_ln'] . '</a></li>';
+                $artists[] = '<li><a title="' . $artist['artist_fn'] . ' ' . $artist['artist_ln'] . '" href="/FilmIndustry/eCommerce/' . strtolower($department_domain_name) . '/index.php?type=' . $column_type . '&name=' . $artist_id_encrypt . '">' . $artist['artist_fn'] . ' ' . $artist['artist_ln'] . '</a></li>';
             } else {
-                $artists[] = '<li><a title="' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '" href="/FilmIndustry/eCommerce/films/index.php?type=' . $column_type . '&name=' . $artist_id_encrypt . '">' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</a></li>';
+                $artists[] = '<li><a title="' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '" href="/FilmIndustry/eCommerce/' . strtolower($department_domain_name) . '/index.php?type=' . $column_type . '&name=' . $artist_id_encrypt . '">' . $artist['artist_fn'] . ' ' . $artist['artist_mn'] . ' ' . $artist['artist_ln'] . '</a></li>';
             }
 
         }
