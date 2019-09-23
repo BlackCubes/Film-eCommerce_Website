@@ -78,5 +78,11 @@ $breadcrumb = new breadcrumb();
     <div class="breadcrumb">
         <?php echo $breadcrumb->build(array('TV' => 'tv/index.php')); ?>
     </div>
+    <div class="sidebar-a">
+
+    </div>
+    <div class="main-product">
+
+    </div>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
