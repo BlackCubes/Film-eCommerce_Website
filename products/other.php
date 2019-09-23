@@ -257,7 +257,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
             $studio_id_encrypt = urlencode(my_encrypt($studio['studio_id'], KEY));
 
-            $studios[] = '<li><a title="' . $studio['studio_name'] . '" href="/FilmIndustry/eCommerce/films/index.php?type=' . $column_type . '&name=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></li>';
+            $studios[] = '<li><a title="' . $studio['studio_name'] . '" href="/FilmIndustry/eCommerce/' . strtolower($department_domain_name) . '/index.php?type=' . $column_type . '&name=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></li>';
 
         }
 
