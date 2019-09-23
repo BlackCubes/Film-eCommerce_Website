@@ -31,13 +31,19 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     $department = mysqli_real_escape_string($dbc, sanitize_input($_GET['department']));
 
     if (sanitize_input($_GET['format']) == 'all') {
-        $format_join = '';
-        $format_where = '';
-        $format = '';
+
+        $format_join = $format_where = $format = '';
+        $format_to_url = sanitize_input($_GET['format']);
+
     } else {
+
         $format_join = "JOIN formats f ON p.format_id=f.id";
-        $format_where = "AND f.format=";
+
         $format = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
+
+        $format_where = "AND f.format='{$format}'";
+
+        $format_to_url = sanitize_input($_GET['format']);
     }
 
     $table_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']) . 's');
