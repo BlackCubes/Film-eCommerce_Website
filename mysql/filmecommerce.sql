@@ -1092,7 +1092,16 @@ INSERT INTO `producers` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (207, 'Roberto', '', 'Patino', 'M', '', 'producers/roberto-patino_Cover.jpg'),
 (208, 'Alan', '', 'Poul', 'M', '', 'producers/alan-poul_Cover.jpeg'),
 (209, 'Daniel', 'T.', 'Thomsen', 'M', '', 'producers/daniel-t-thomsen_Cover.jpg'),
-(210, 'Bridget', '', 'Carpenter', 'F', '', 'producers/bridget-carpenter_Cover.jpg');
+(210, 'Bridget', '', 'Carpenter', 'F', '', 'producers/bridget-carpenter_Cover.jpg'),
+(211, 'Howard', '', 'Cummings', 'M', '', 'producers/howard-cummings_Cover.jpg'),
+(212, 'Dan', '', 'Dietz', 'M', '', 'producers/dan-dietz_Cover.jpg'),
+(213, 'Ron', '', 'Fitzgerald', 'M', '', 'producers/ron-fitzgerald_Cover.jpg'),
+(214, 'Eugene', '', 'Kelly', 'M', '', 'producers/eugene-kelly_Cover.jpg'),
+(215, 'Michael', '', 'Polaire', 'M', '', 'producers/michael-polaire_Cover.jpg'),
+(216, 'Frederick', 'E.O.', 'Toye', 'M', '', 'producers/frederick-eo-toye_Cover.jpg'),
+(217, 'Carly', '', 'Wray', 'F', '', 'producers/carly-wray_Cover.jpg'),
+(218, 'Kelly', '', 'Calligan', 'F', '', 'producers/kelly-calligan_Cover.jpg'),
+(219, 'Chevy', '', 'Chen', 'M', '', 'producers/chevy-chen_Cover.jpg');
 
 -- --------------------------------------------------------
 
