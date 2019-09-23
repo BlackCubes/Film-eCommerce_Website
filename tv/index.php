@@ -100,7 +100,7 @@ if (isset($_GET['format'])) {
     }
 } else {
     $format_get = $format_join = $format_where = '';
-    $format_to_url = sanitize_input($_GET['format']);
+    $format_to_url = 'all';
 }
 
 $breadcrumb = new breadcrumb();
