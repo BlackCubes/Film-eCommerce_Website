@@ -216,6 +216,31 @@ $breadcrumb = new breadcrumb();
         mysqli_free_result($r);
         mysqli_close($dbc);
 
+        if ($pages > 1) {
+
+            echo '<div class="pagination">';
+            $current_page = ($start/$display) + 1;
+
+            if ($current_page != 1) {
+                echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . ($start - $display) . '&p=' . $pages . '">Previous</a>';
+            }
+
+            for ($i = 1; $i <= $pages; $i++) {
+                if ($i != $current_page) {
+                    echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a>';
+                } else {
+                    echo $i . ' ';
+                }
+            }
+
+            if ($current_page != $pages) {
+                echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . ($start + $display) . '&p=' . $pages . '">Next</a>';
+            }
+
+            echo'</div>';
+
+        }
+
         ?>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
