@@ -31,8 +31,10 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
     $department = mysqli_real_escape_string($dbc, sanitize_input($_GET['department']));
 
     if (sanitize_input($_GET['format']) == 'all') {
+        $format_join = '';
         $format = '';
     } else {
+        $format_join = "JOIN formats f ON p.format_id=f.id";
         $format = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
     }
 
