@@ -2842,7 +2842,10 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (102, 'Home Box Office (HBO)', '', 'studios/home-box-office_Cover.png'),
 (103, 'Generator Entertainment', '', 'studios/generator-entertainment_Cover.jpg'),
 (104, 'Darkbloom Productions', '', 'studios/darkbloom-productions_Cover.png'),
-(105, 'Warner Bros. Television', '', 'studios/warner-bros-television_Cover.png');
+(105, 'Warner Bros. Television', '', 'studios/warner-bros-television_Cover.png'),
+(106, 'Hartswood Films', '', 'studios/hartswood-films_Cover.jpg'),
+(107, 'BBC Cymru Wales', '', 'studios/bbc-cymru-wales_Cover.png'),
+(108, 'Masterpiece Theatre', '', 'studios/masterpiece-theatre_Cover.jpg');
 
 -- --------------------------------------------------------
 
