@@ -33,6 +33,16 @@ if (isset($_GET['type'], $_GET['name'], $_GET['format'])) {
 
         if (is_numeric($id_decrypt) && preg_match('/^[1-9]{1}([0-9]{1,10})?$/', $id_decrypt)) {
 
+            if (sanitize_input($_GET['format']) == 'all') {
+                $format_join = '';
+                $format_where = '';
+                $format_get = '';
+            } else {
+                $format_join = "JOIN formats f ON p.format_id=f.id";
+                $format_where = "AND f.format=";
+                $format_get = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
+            }
+
             $column_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']));
             $table_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']) . 's');
 
