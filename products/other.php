@@ -30,7 +30,11 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
     $department = mysqli_real_escape_string($dbc, sanitize_input($_GET['department']));
 
-    $format = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
+    if (sanitize_input($_GET['format']) == 'all') {
+        $format = '';
+    } else {
+        $format = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
+    }
 
     $table_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']) . 's');
     $column_type = mysqli_real_escape_string($dbc, sanitize_input($_GET['type']));
