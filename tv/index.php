@@ -26,6 +26,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.p
 
 require(MYSQL);
 
+$breadcrumb = new breadcrumb();
 ?>
 
 <div class="container-fluid">
