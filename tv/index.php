@@ -1,8 +1,18 @@
 <?php
 
-# TV Page Re-Touch v.1
-# Created February 20, 2019
-# Created by Elias Gutierrez
+# index.php (Users/Customers Shop for TV page).
+# Re-created on September 22, 2019.
+# Created by Elias Gutierrez.
+
+// *************************************** //
+// ************ DOCUMENTATION ************ //
+
+/*
+
+*/
+
+// ************ DOCUMENTATION ************ //
+// *************************************** //
 
 $page_title = 'Television';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
