@@ -95,7 +95,7 @@ $breadcrumb = new breadcrumb();
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Formats</b></p>';
         while ($format = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-            echo '<p>' . $format['format'] . '</p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?format=' . $format['format'] . '">' . $format['format'] . '</a></p>';
         }
         echo '</div>';
 
