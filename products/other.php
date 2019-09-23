@@ -53,13 +53,13 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         case "genre":
 
-            $q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genres FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id " . $format_join . " WHERE d.department='" . $department . "' $format_where ORDER BY g.genre";
+            $q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genres FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id $format_join WHERE d.department='" . $department . "' $format_where ORDER BY g.genre";
 
             $r_genre = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
 
             $r_artist = $r_studio = FALSE;
 
-            $q = "SELECT COUNT(DISTINCT g.id) FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE d.department='" . $department . "'";
+            $q = "SELECT COUNT(DISTINCT g.id) FROM genres g JOIN products_genres pg ON g.id=pg.genre_id JOIN products p ON pg.product_id=p.id JOIN departments d ON p.department_id=d.id $format_join WHERE d.department='" . $department . "' $format_where";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row = mysqli_fetch_array($r, MYSQLI_NUM);
             $records = $row[0];
