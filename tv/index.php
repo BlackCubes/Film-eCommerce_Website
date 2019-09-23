@@ -14,8 +14,17 @@
 // ************ DOCUMENTATION ************ //
 // *************************************** //
 
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
+
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/secure.php');
+
 $page_title = 'Television';
+
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.php');
+
+require(MYSQL);
 
 ?>
 
