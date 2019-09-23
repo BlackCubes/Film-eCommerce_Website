@@ -782,7 +782,7 @@ CREATE TABLE `formats` (
 --
 
 INSERT INTO `formats` (`id`, `format`) VALUES
-(2, '4K UHD'),
+(2, '4K-UHD'),
 (1, 'Blu-ray'),
 (3, 'DVD');
 
