@@ -194,7 +194,7 @@ $breadcrumb = new breadcrumb();
             $start = 0;
         }
 
-        $q = "SELECT DISTINCT p.name AS product_name, p.unit_price AS product_price, p.image_1 AS product_image, p.isd AS product_isd FROM products p $where WHERE p.department_id=1 ORDER BY p.name LIMIT $start, $display";
+        $q = "SELECT DISTINCT p.name AS product_name, p.unit_price AS product_price, p.image_1 AS product_image, p.isd AS product_isd FROM products p $join_table WHERE p.department_id=1 $and_where ORDER BY p.name LIMIT $start, $display";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
 
         while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
