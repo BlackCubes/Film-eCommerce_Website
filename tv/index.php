@@ -96,7 +96,7 @@ $breadcrumb = new breadcrumb();
 
             $genre_id_encrypt = urlencode(my_encrypt($genre['genre_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=genre&name=' . $genre_id_encrypt . '">' . $genre['genre'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=genre&name=' . $genre_id_encrypt . '">' . $genre['genre'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=genre">See more</a></div>';
 
@@ -107,7 +107,7 @@ $breadcrumb = new breadcrumb();
 
             $actor_id_encrypt = urlencode(my_encrypt($actor['actor_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=actor&name=' . $actor_id_encrypt . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=actor">See more</a></div>';
 
@@ -118,7 +118,7 @@ $breadcrumb = new breadcrumb();
 
             $director_id_encrypt = urlencode(my_encrypt($director['director_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=director&name=' . $director_id_encrypt . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=director&name=' . $director_id_encrypt . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=director">See more</a></div>';
 
@@ -129,7 +129,7 @@ $breadcrumb = new breadcrumb();
 
             $writer_id_encrypt = urlencode(my_encrypt($writer['writer_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=writer&name=' . $writer_id_encrypt . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=writer&name=' . $writer_id_encrypt . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=writer">See more</a></div>';
 
@@ -140,7 +140,7 @@ $breadcrumb = new breadcrumb();
 
             $producer_id_encrypt = urlencode(my_encrypt($producer['producer_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=producer&name=' . $producer_id_encrypt . '">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=producer&name=' . $producer_id_encrypt . '">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=producer">See more</a></div>';
 
@@ -151,7 +151,7 @@ $breadcrumb = new breadcrumb();
 
             $dp_id_encrypt = urlencode(my_encrypt($dp['dp_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=dp&name=' . $dp_id_encrypt . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=dp&name=' . $dp_id_encrypt . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=dp">See more</a></div>';
 
@@ -162,7 +162,7 @@ $breadcrumb = new breadcrumb();
 
             $studio_id_encrypt = urlencode(my_encrypt($studio['studio_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?type=studio&name=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=studio&name=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=DVD&type=studio">See more</a></div>';
 
