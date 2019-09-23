@@ -127,7 +127,7 @@ $breadcrumb = new breadcrumb();
 
             $genre_id_encrypt = urlencode(my_encrypt($genre['genre_id'], KEY));
 
-            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?type=genre&name=' . $genre_id_encrypt . '">' . $genre['genre'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/tv/index.php?format=' . $format_to_url . '&type=genre&name=' . $genre_id_encrypt . '">' . $genre['genre'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=TV&format=' . $format_to_url . '&type=genre">See more</a></div>';
 
