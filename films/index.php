@@ -43,8 +43,10 @@ if (isset($_GET['type'], $_GET['name'])) {
             $selected_id = mysqli_fetch_array($r, MYSQLI_ASSOC);
 
             if ((mysqli_num_rows($r) == 1) && ($selected_id['id'] == $id)) {
+
+                $join_table = "JOIN `products_{$table_type}` pa ON p.id=pa.product_id";
                 
-                $where = "JOIN `products_{$table_type}` pa ON p.id=pa.product_id WHERE pa.{$column_type}_id={$id}";
+                $and_where = "AND pa.{$column_type}_id={$id}";
 
             } else {
                 $url = BASE_URL . 'index.php';
@@ -67,7 +69,7 @@ if (isset($_GET['type'], $_GET['name'])) {
         exit();
     }
 } else {
-    $where = '';
+    $join_table = $and_where = '';
 }
 
 $breadcrumb = new breadcrumb();
