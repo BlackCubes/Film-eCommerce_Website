@@ -74,5 +74,9 @@ if (isset($_GET['type'], $_GET['name'])) {
 
 $breadcrumb = new breadcrumb();
 ?>
-
+<div class="container">
+    <div class="breadcrumb">
+        <?php echo $breadcrumb->build(array('TV' => 'tv/index.php')); ?>
+    </div>
+</div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
