@@ -79,7 +79,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
             $r_genre = $r_studio = FALSE;
 
-            $q = "SELECT COUNT(DISTINCT a.id) FROM `{$table_type}` a JOIN `products_{$table_type}` pa ON a.id=pa.{$column_type}_id JOIN products p ON pa.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE $format_join d.department='" . $department . "' $format_where";
+            $q = "SELECT COUNT(DISTINCT a.id) FROM `{$table_type}` a JOIN `products_{$table_type}` pa ON a.id=pa.{$column_type}_id JOIN products p ON pa.product_id=p.id JOIN departments d ON p.department_id=d.id $format_join WHERE d.department='" . $department . "' $format_where";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row = mysqli_fetch_array($r, MYSQLI_NUM);
             $records = $row[0];
@@ -98,7 +98,7 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
             $r_genre = $r_artist = FALSE;
 
-            $q = "SELECT COUNT(DISTINCT s.id) FROM `{$table_type}` s JOIN `products_{$table_type}` ps ON s.id=ps.{$column_type}_id JOIN products p ON ps.product_id=p.id JOIN departments d ON p.department_id=d.id WHERE $format_join d.department='" . $department . "' $format_where";
+            $q = "SELECT COUNT(DISTINCT s.id) FROM `{$table_type}` s JOIN `products_{$table_type}` ps ON s.id=ps.{$column_type}_id JOIN products p ON ps.product_id=p.id JOIN departments d ON p.department_id=d.id $format_join WHERE d.department='" . $department . "' $format_where";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row = mysqli_fetch_array($r, MYSQLI_NUM);
             $records = $row[0];
