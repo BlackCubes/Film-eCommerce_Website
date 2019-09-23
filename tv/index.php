@@ -82,6 +82,29 @@ if (isset($_GET['type'], $_GET['name'], $_GET['format'])) {
     $join_table = $and_where = $format_get = $format_join = $format_where = '';
 }
 
+if (isset($_GET['format'])) {
+    if (preg_match('/((\bBlu-Ray\b)|(\b4K-UHD\b)|(\bDVD\b)|(\ball\b))(?!;)/', $_GET['format'])) {
+
+        if (sanitize_input($_GET['format']) == 'all') {
+            $format_join = '';
+            $format_where = '';
+            $format_get = '';
+        } else {
+            $format_join = "JOIN formats f ON p.format_id=f.id";
+            $format_where = "AND f.format=";
+            $format_get = mysqli_real_escape_string($dbc, sanitize_input($_GET['format']));
+        }
+
+    } else {
+        $url = BASE_URL . 'index.php';
+        ob_end_clean();
+        header("Location: $url");
+        exit();
+    }
+} else {
+    $format_get = $format_join = $format_where = '';
+}
+
 $breadcrumb = new breadcrumb();
 ?>
 <div class="container">
