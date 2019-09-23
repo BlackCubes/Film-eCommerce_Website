@@ -169,7 +169,53 @@ $breadcrumb = new breadcrumb();
         ?>
     </div>
     <div class="main-product">
+        <?php
 
-    </div>
+        $display = 21;
+
+        if (isset($_GET['p']) && is_numeric($_GET['p'])) {
+            $pages = $_GET['p'];
+        } else {
+            $q = "SELECT COUNT(DISTINCT p.id) FROM products p $join_table WHERE p.department_id=2 $and_where";
+            $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+            $row = mysqli_fetch_array($r, MYSQLI_NUM);
+            $records = $row[0];
+            if ($records > $display) {
+                $pages = ceil($records/$display);
+            } else {
+                $pages = 1;
+            }
+        }
+
+        if (isset($_GET['s']) && is_numeric($_GET['s'])) {
+            $start = $_GET['s'];
+        } else {
+            $start = 0;
+        }
+
+        $q = "SELECT DISTINCT p.name AS product_name, p.unit_price AS product_price, p.image_1 AS product_image, p.isd AS product_isd FROM products p $join_table WHERE p.department_id=2 $and_where ORDER BY p.name LIMIT $start, $display";
+        $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
+
+        while ($product = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+
+            $_SESSION['product_isd'] = $product['product_isd'];
+
+            if (empty($product['product_image'])) {
+                $product_image = '/FilmIndustry/eCommerce/img/unavailable-image.jpg';
+            } else {
+                $product_image = "/FilmIndustry/uploads/products/{$product['product_image']}";
+            }
+
+            echo '<div class="container-product"><div class="product-image"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $_SESSION['product_isd'] . '"><img src="' . $product_image . '" alt="#"></a></div><div class="product-name">' . $product['product_name'] . '</div><div class="product-price">$' . $product['product_price'] . '</div></div>';
+
+            unset($_SESSION['product_isd']);
+        }
+
+        echo '</div>';
+
+        mysqli_free_result($r);
+        mysqli_close($dbc);
+
+        ?>
 </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
