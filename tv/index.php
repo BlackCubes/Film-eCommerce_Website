@@ -186,7 +186,7 @@ $breadcrumb = new breadcrumb();
         if (isset($_GET['p']) && is_numeric($_GET['p'])) {
             $pages = $_GET['p'];
         } else {
-            $q = "SELECT COUNT(DISTINCT p.id) FROM products p $join_table WHERE p.department_id=2 $and_where";
+            $q = "SELECT COUNT(DISTINCT p.id) FROM products p $join_table $format_join WHERE p.department_id=2 $and_where $format_where $format_get";
             $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
             $row = mysqli_fetch_array($r, MYSQLI_NUM);
             $records = $row[0];
