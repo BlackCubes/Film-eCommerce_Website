@@ -79,7 +79,7 @@ if (isset($_GET['type'], $_GET['name'], $_GET['format'])) {
         exit();
     }
 } else {
-    $join_table = $and_where = '';
+    $join_table = $and_where = $format_get = $format_join = $format_where '';
 }
 
 $breadcrumb = new breadcrumb();
