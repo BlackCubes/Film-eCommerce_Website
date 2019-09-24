@@ -253,7 +253,7 @@ $breadcrumb = new breadcrumb();
             $current_page = ($start/$display) + 1;
 
             if ($current_page != 1) {
-                echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . ($start - $display) . '&p=' . $pages . '">Previous</a>';
+                echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=0&p=' . $pages . '"><i class="fas fa-caret-left"></i><i class="fas fa-caret-left"></i></a><a href="/FilmIndustry/eCommerce/films/index.php?s=' . ($start - $display) . '&p=' . $pages . '"><i class="fas fa-caret-left"></i></a>';
             }
 
             for ($i = 1; $i <= $pages; $i++) {
