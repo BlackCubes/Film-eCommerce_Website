@@ -1094,10 +1094,13 @@ body.body--account {
 
 .container--option-view .option-lists--option-view ul:nth-child(2) {
     text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .container--option-view .option-lists--option-view ul:nth-child(3) {
     text-align: right;
+    padding-right: 40px;
 }
 
 .container--option-view .main-info--option-view {
