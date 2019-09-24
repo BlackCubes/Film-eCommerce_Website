@@ -663,7 +663,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="productFormat">
             <label for="product-format">Format: </label>
             <input type="radio" name="format" id="product-format" value="Blu-ray" <?php if (isset($_POST['format']) && $_POST['format']=='Blu-ray') echo 'checked'; ?>>Blu-ray
-            <input type="radio" name="format" id="product-format" value="4K UHD" <?php if (isset($_POST['format']) && $_POST['format']=='4K UHD') echo 'checked'; ?>>4K UHD
+            <input type="radio" name="format" id="product-format" value="4K-UHD" <?php if (isset($_POST['format']) && $_POST['format']=='4K-UHD') echo 'checked'; ?>>4K UHD
             <input type="radio" name="format" id="product-format" value="DVD" <?php if (isset($_POST['format']) && $_POST['format']=='DVD') echo 'checked'; ?>>DVD
             <span class="text-danger">* <?php if (isset($_POST['format'])) echo $formatErr; ?></span>
         </div>
