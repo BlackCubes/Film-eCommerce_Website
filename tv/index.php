@@ -258,9 +258,9 @@ $breadcrumb = new breadcrumb();
 
             for ($i = 1; $i <= $pages; $i++) {
                 if ($i != $current_page) {
-                    echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a>';
+                    echo '<a href="/FilmIndustry/eCommerce/tv/index.php?s=' . (($display * ($i - 1))) . '&p=' . $pages . '">' . $i . '</a>';
                 } else {
-                    echo $i . ' ';
+                    echo '<a class="active">' . $i . '</a>';
                 }
             }
 
