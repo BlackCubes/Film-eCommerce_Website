@@ -265,7 +265,7 @@ $breadcrumb = new breadcrumb();
             }
 
             if ($current_page != $pages) {
-                echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . ($start + $display) . '&p=' . $pages . '">Next</a>';
+                echo '<a href="/FilmIndustry/eCommerce/films/index.php?s=' . ($start + $display) . '&p=' . $pages . '"><i class="fas fa-caret-right"></i></a><a href="/FilmIndustry/eCommerce/films/index.php?s=' . (($display * ($pages - 1))) . '&p=' . $pages . '"><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i></a>';
             }
 
             echo'</div>';
