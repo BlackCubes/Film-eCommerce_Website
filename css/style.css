@@ -1089,13 +1089,13 @@ body.body--account {
 }
 
 .container--option-view .main-info--option-view {
-    width: 1270px;
-    margin: 10px 15px 10px 15px;
+    width: 1500px;
+    margin: 10px auto 10px auto;
 }
 
 .container--option-view .option-title-letters--option-view {
     height: 36px;
-    width: 1270px;
+    width: 1500px;
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgb(250, 246, 255);
