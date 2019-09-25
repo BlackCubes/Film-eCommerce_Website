@@ -41,7 +41,7 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
             $r_studio = mysqli_query($dbc, $q_studio) or trigger_error("Query: $q_studio\n<br>MySQL Error: " . mysqli_error($dbc));
             $studio = mysqli_fetch_array($r_studio, MYSQLI_ASSOC);
 
-            $q_ps = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year, p.isd AS product_isd, d.department FROM products AS p JOIN departments AS d ON p.department_id=d.id WHERE p.id IN (SELECT product_id FROM `products_{$role_table}` WHERE `{$role_column}_id`={$id}) ORDER BY p.release_date DESC";
+            $q_ps = "SELECT p.name AS product_name, p.image_1 AS product_img, DATE_FORMAT(p.release_date, '%Y') AS product_year, p.isd AS product_isd, d.department AS product_department FROM products AS p JOIN departments AS d ON p.department_id=d.id WHERE p.id IN (SELECT product_id FROM `products_{$role_table}` WHERE `{$role_column}_id`={$id}) ORDER BY p.release_date DESC";
             $r_ps = mysqli_query($dbc, $q_ps) or trigger_error("Query: $q_ps\n<br>MySQL Error: " . mysqli_error($dbc));
 
             $page_title = $studio['studio_name'];
