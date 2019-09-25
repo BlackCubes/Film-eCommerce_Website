@@ -30,7 +30,8 @@ if (!isset($_SESSION['id'])) {
 
 if (isset($_SESSION['supplier_id'])) {
     ob_end_clean();
-    header("Location: http://localhost/FilmIndustry/eCommerce/suppliers/index.php")
+    header("Location: http://localhost/FilmIndustry/eCommerce/suppliers/index.php");
+    exit();
 }
 
     
