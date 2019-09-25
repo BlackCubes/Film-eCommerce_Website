@@ -58,7 +58,7 @@ if (isset($_GET['role'], $_GET['company']) && preg_match('/(\bstudio\b)(?!;)/', 
 
                 $product_isd = $product_studio['product_isd'];
 
-                echo '<div class="container-product-studio--studio-view"><div class="product-year--studio-view"><h4>' . $product_studio['product_year'] . '</h4></div><div class="product-studio-image--studio-view"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $product_isd . '"><img src="/FilmIndustry/uploads/products/' . $product_studio['product_img'] . '"></a></div><div class="product-name--studio-view"><h4>' . $product_studio['product_name'] . '</h4></div></div>';
+                echo '<div class="container-product-studio--studio-view"><div class="product-year--studio-view"><h4>' . $product_studio['product_year'] . ' (' . $product_studio['product_department'] . ')</h4></div><div class="product-studio-image--studio-view"><a href="/FilmIndustry/eCommerce/products/index.php?isd=' . $product_isd . '"><img src="/FilmIndustry/uploads/products/' . $product_studio['product_img'] . '"></a></div><div class="product-name--studio-view"><h4>' . $product_studio['product_name'] . '</h4></div></div>';
 
             }
 
