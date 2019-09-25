@@ -22,10 +22,15 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
+if (!isset($_SESSION['id'])) {
     ob_end_clean();
-    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
+    header("Location: http://localhost/FilmIndustry/eCommerce/login.php");
     exit();
+}
+
+if (isset($_SESSION['supplier_id'])) {
+    ob_end_clean();
+    header("Location: http://localhost/FilmIndustry/eCommerce/suppliers/index.php")
 }
 
     
