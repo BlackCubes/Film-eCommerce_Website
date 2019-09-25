@@ -73,7 +73,7 @@ if (isset($_GET['type'], $_GET['name'])) {
 }
 
 if (isset($_GET['format'])) {
-    if (preg_match('/((\bBlu-Ray\b)|(\b4K-UHD\b)|(\bDVD\b)|(\ball\b))(?!;)/', $_GET['format'])) {
+    if (preg_match('/((\bBlu-ray\b)|(\b4K-UHD\b)|(\bDVD\b)|(\ball\b))(?!;)/', $_GET['format'])) {
 
         if (sanitize_input($_GET['format']) == 'all') {
             
