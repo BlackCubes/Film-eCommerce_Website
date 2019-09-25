@@ -2952,7 +2952,11 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (105, 'Warner Bros. Television', '', 'studios/warner-bros-television_Cover.png'),
 (106, 'Hartswood Films', '', 'studios/hartswood-films_Cover.jpg'),
 (107, 'BBC Cymru Wales', '', 'studios/bbc-cymru-wales_Cover.png'),
-(108, 'Masterpiece Theatre', '', 'studios/masterpiece-theatre_Cover.jpg');
+(108, 'Masterpiece Theatre', '', 'studios/masterpiece-theatre_Cover.jpg'),
+(109, 'High Bridge Productions', '', 'studios/high-bridge-productions_Cover.jpg'),
+(110, 'Gran Via Productions', '', 'studios/gran-via-productions_Cover.png'),
+(111, 'Sony Pictures Television', '', 'studios/sony-pictures-television_Cover.png'),
+(112, 'American Movie Classics (AMC)', '', 'studios/american-movie-classics_Cover.png');
 
 -- --------------------------------------------------------
 
