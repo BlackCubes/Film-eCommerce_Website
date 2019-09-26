@@ -2926,7 +2926,8 @@ INSERT INTO `specs` (`id`, `spec_format_type`, `video_desc`, `audio_desc`, `subt
 (28, '4K UHD EPISODES', '2160p UHD 16x9 1.78:1', 'English: Dolby Atmos, English: Dolby TrueHD 7.1, German: Dolby Digital 5.1, Italian: Dolby Digital 5.1, Spanish: Dolby Digital 5.1, Portuguese: Dolby Digital 5.1, Czech: Dolby Digital 5.1, Polish: Dolby Digital 5.1', 'English SDH, French, German SDH, Italian SDH, Portuguese, Spanish, Arabic, Danish, Dutch, Finnish'),
 (29, '4K UHD EPISODES', 'Native 4K 2160p 16x9 1.78:1', 'English: Dolby Atmos, Dolby TrueHD 7.1; French: Dolby Digital 5.1 (640 kbps); German: Dolby Digital 5.1 (640 kbps); Italian: Dolby Digital 5.1 (640 kbps); Spanish: Dolby Digital 5.1 (640 kbps); Portuguese: Dolby Digital 5.1; Czech: Dolby Digital 5.1', 'English SDH, French, German SDH, Italian SDH, Portuguese, Spanish, Czech, Danish, Dutch, Finnish'),
 (30, '4K UHD EPISODES', '4K 2160p 1.78:1 HDR10', 'English: Dolby Atmos', 'English SDH, French, Spanish'),
-(33, '4K UHD EPISODES', 'Upscaled 4K 2160p 1.78:1', 'English: DTS-HD Master Audio 5.1', 'English SDH');
+(33, '4K UHD EPISODES', 'Upscaled 4K 2160p 1.78:1', 'English: DTS-HD Master Audio 5.1', 'English SDH'),
+(34, 'BLU-RAY EPISODES', '1080p High Definition', 'English: DTS-HD Master Audio 5.1 (48kHz, 24-bit)', 'English SDH, French');
 
 -- --------------------------------------------------------
 
