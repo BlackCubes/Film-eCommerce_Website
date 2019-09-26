@@ -305,6 +305,12 @@ body.body--account {
     grid-area: page-title
 }
 
+#templateArtists.container .page-title h1 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
 #templateArtists.container .main-artists {
     display: grid;
     grid-area: m-a;
