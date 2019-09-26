@@ -300,6 +300,10 @@ body.body--account {
         "s-a p p p";
 }
 
+#templateArtists.container .page-title {
+    grid-area: page-title
+}
+
 #templateArtists.container .main-artists {
     display: grid;
     grid-area: m-a;
