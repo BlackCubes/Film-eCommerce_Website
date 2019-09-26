@@ -307,6 +307,8 @@ body.body--account {
 }
 
 #templateArtists.container .page-title h1 {
+    font-family: 'Muli', sans-serif;
+    color: black;
     font-size: 18px;
     font-weight: 400;
     margin: 0;
