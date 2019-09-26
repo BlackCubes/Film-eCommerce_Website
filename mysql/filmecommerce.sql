@@ -714,7 +714,13 @@ INSERT INTO `directors` (`id`, `first_name`, `middle_name`, `last_name`, `gender
 (112, 'Uta', '', 'Briesewitz', 'F', '', 'directors/uta-briesewitz_Cover.jpg'),
 (113, 'Coky', '', 'Giedroyc', 'F', '', 'directors/coky-giedroyc_Cover.jpg'),
 (114, 'Paul', '', 'McGuigan', 'M', '', 'directors/paul-mcguigan_Cover.jpg'),
-(115, 'Euros', '', 'Lyn', 'M', '', 'directors/euros-lyn_Cover.jpg');
+(115, 'Euros', '', 'Lyn', 'M', '', 'directors/euros-lyn_Cover.jpg'),
+(116, 'Vince', '', 'Gilligan', 'M', '', 'directors/vince-gilligan_Cover.png'),
+(117, 'Adam', '', 'Bernstein', 'M', '', 'directors/adam-bernstein_Cover.jpg'),
+(118, 'Jim', '', 'McKay', 'M', '', 'directors/jim-mckay_Cover.jpg'),
+(119, 'Tricia', '', 'Brock', 'F', '', 'directors/tricia-brock_Cover.jpg'),
+(120, 'Bronwen', '', 'Hughes', 'F', '', 'directors/bronwen-hughes_Cover.jpg'),
+(121, 'Tim', '', 'Hunter', 'M', '', 'directors/tim-hunter_Cover.jpg');
 
 -- --------------------------------------------------------
 
