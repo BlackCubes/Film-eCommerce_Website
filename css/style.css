@@ -302,7 +302,8 @@ body.body--account {
 }
 
 #templateArtists.container .page-title {
-    grid-area: page-title
+    grid-area: page-title;
+    text-align: center;
 }
 
 #templateArtists.container .page-title h1 {
