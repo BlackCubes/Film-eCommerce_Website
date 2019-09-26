@@ -291,6 +291,7 @@ body.body--account {
     grid-template-rows: auto;
     grid-template-areas:
         "breadcrumb breadcrumb breadcrumb breadcrumb"
+        "page-title page-title page-title page-title"
         "s-a m-a m-a m-a"
         "s-a m-a m-a m-a"
         "s-a m-a m-a m-a"
