@@ -1241,7 +1241,8 @@ INSERT INTO `productdetails` (`id`, `rated_id`, `spec_id`, `edition`, `discs`, `
 (28, 13, 28, 'Limited Edition', 6, 619, '2017-11-07', 'Westworld: The Complete First Season (Limited Edition) (4K UHD/BD/Digital Copy) (4K Ultra HD)'),
 (29, 13, 29, '4K Ultra HD+Blu-ray+Digital HD', 6, 631, '2018-12-04', 'Your Digital Copy redemption code is printed on an insert inside your Blu-ray/DVD package. A Digital Copy is a digital version of the full-length movie that you get when you own specially-marked Blu-ray/DVD discs bearing the “Digital” logo.'),
 (30, 13, 30, 'Best Buy Exclusive SteelBook', 3, 631, '2018-12-04', 'SteelBook, 4K Ultra HD Blu-ray'),
-(31, 12, 33, '', 2, 461, '2018-11-06', 'Sherlock: Season One (4K Ultra HD)');
+(31, 12, 33, '', 2, 461, '2018-11-06', 'Sherlock: Season One (4K Ultra HD)'),
+(32, 13, 34, '', 2, 346, '2010-03-16', 'Cast and Crew Commentaries. Deleted/Extended Scenes. Making of Breaking Bad. AMC Shootout - Interview with Vince Gilligan and Bryan Cranston. Screen Tests. Inside Breaking Bad. Vince Gilligan\'s Photo Gallery');
 
 -- --------------------------------------------------------
 
