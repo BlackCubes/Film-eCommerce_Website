@@ -24,7 +24,14 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_head
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.php');
 
-if (!isset($_SESSION['id']) || isset($_SESSION['supplier_id'])) {
+if (!isset($_SESSION['id'])) {
+    $url = BASE_URL . 'login.php';
+    ob_end_clean();
+    header("Location: $url");
+    exit();
+}
+
+if (isset($_SESSION['supplier_id'])) {
     $url = BASE_URL . 'index.php';
     ob_end_clean();
     header("Location: $url");
