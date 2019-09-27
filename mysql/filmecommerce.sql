@@ -3111,7 +3111,9 @@ INSERT INTO `studios` (`id`, `studio_name`, `about`, `img`) VALUES
 (109, 'High Bridge Productions', '', 'studios/high-bridge-productions_Cover.jpg'),
 (110, 'Gran Via Productions', '', 'studios/gran-via-productions_Cover.png'),
 (111, 'Sony Pictures Television', '', 'studios/sony-pictures-television_Cover.png'),
-(112, 'American Movie Classics (AMC)', '', 'studios/american-movie-classics_Cover.png');
+(112, 'American Movie Classics (AMC)', '', 'studios/american-movie-classics_Cover.png'),
+(113, 'RadicalMedia', '', 'studios/radicalmedia_Cover.jpg'),
+(114, 'Weiner Bros.', '', 'studios/weiner-bros_Cover.jpg');
 
 -- --------------------------------------------------------
 
