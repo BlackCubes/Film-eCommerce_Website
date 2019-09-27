@@ -74,6 +74,9 @@ echo '<div class="container" id="templateArtists">
         <p><a href="/FilmIndustry/eCommerce/writers/index.php?sort=f">Female</a></p>
         <p><a href="/FilmIndustry/eCommerce/writers/index.php?sort=m">Male</a></p>
     </div>
+</div>
+<div class="page-title">
+    <h1>Writers</h1>
 </div>';
 
 $q = "SELECT DISTINCT w.id AS id, w.first_name AS first_name, w.middle_name AS middle_name, w.last_name AS last_name, w.img AS img FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id $where ORDER BY w.last_name LIMIT $start, $display";
