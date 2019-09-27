@@ -302,12 +302,12 @@ body.body--account {
         "s-a p p p";
 }
 
-#templateArtists.container .page-title {
+.page-title {
     grid-area: page-title;
     text-align: center;
 }
 
-#templateArtists.container .page-title h1 {
+.page-title h1 {
     font-family: 'Muli', sans-serif;
     color: black;
     font-size: 20px;
