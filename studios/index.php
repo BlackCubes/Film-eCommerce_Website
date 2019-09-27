@@ -59,6 +59,9 @@ echo '<div class="container" id="templateStudios">
         <p>Female</p>
         <p>Male</p>
     </div>
+</div>
+<div class="page-title">
+    <h1>Studios</h1>
 </div>';
 
 $q = "SELECT DISTINCT s.id AS studio_id, s.studio_name AS studio_name, s.img AS studio_img FROM studios AS s JOIN products_studios AS ps ON s.id=ps.studio_id JOIN products AS p ON ps.product_id=p.id ORDER BY s.studio_name LIMIT $start, $display";
