@@ -372,6 +372,7 @@ body.body--account {
     grid-template-rows: auto;
     grid-template-areas: 
         "breadcrumb breadcrumb breadcrumb breadcrumb"
+        "page-title page-title page-title page-title"
         "s-a main-studio main-studio main-studio"
         "s-a main-studio main-studio main-studio"
         "s-a main-studio main-studio main-studio"
