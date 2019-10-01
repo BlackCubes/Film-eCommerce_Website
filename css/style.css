@@ -121,6 +121,10 @@ footer.footer span.site-footer__list-title {
     text-transform: uppercase;
 }
 
+footer.footer .site-footer__link-list li {
+    list-style: none;
+}
+
 footer.footer .site-footer__link-list .site-footer__link-list-item a {
     font-size: 11px;
     color: black;
