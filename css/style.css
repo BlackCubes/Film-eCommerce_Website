@@ -115,6 +115,12 @@ footer.footer div {
     color: black;
 }
 
+footer.footer span.site-footer__list-title {
+    font-size: 12px;
+    padding: 3px 10px 3px 0;
+    text-transform: uppercase;
+}
+
 /* ACCOUNT NAVBAR */
 
 .top-nav--account {
