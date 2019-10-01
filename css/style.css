@@ -107,6 +107,14 @@ body.body--account {
     width: 147px;
 }
 
+/* MAIN FOOTER */
+
+footer.footer div {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
 /* ACCOUNT NAVBAR */
 
 .top-nav--account {
