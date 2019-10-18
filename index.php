@@ -204,4 +204,4 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         </div>
     </div>
 </section>-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'FilmIndustry/eCommerce/includes/footer.html'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
