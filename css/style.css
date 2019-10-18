@@ -109,10 +109,14 @@ body.body--account {
 
 /* MAIN FOOTER */
 
+footer.footer {
+    background-color: #767676;
+}
+
 footer.footer div {
     font-family: 'Muli', sans-serif;
     font-weight: 500;
-    color: black;
+    color: white;
 }
 
 footer.footer span.site-footer__list-title {
