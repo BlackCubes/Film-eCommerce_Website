@@ -28,11 +28,11 @@ define('EMAIL', 'gutierrezelias1991@gmail.com');
 
 // Site URL (base for all redirections):
 // This would be for my computer, but would change for finalization:
-define('BASE_URL', $_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/');
+define('BASE_URL', dirname(__DIR__).'/');
 
 // Location of the MySQL connection:
 // For now, this would be stored in a folder called 'mysql'. For a live functioning site, this would be placed above the web document root for security. Lastly, the absolute path is from my computer which would change for a finalization, or for a live site:
-define('MYSQL', $_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/mysql/mysqli_connect.php');
+define('MYSQL', dirname(__DIR__).'/mysql/mysqli_connect.php');
 
 // To be used for future reference:
 /*$encryption_key_256bit = base64_encode(openssl_random_pseudo_bytes(32));*/
