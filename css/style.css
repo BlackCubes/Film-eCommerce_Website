@@ -145,6 +145,13 @@ footer.footer .upper-footer .grid__item {
     float: left;
 }
 
+footer.footer .lower-footer .site-footer__copyright {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 35px 0 5px;
+}
+
 /* ACCOUNT NAVBAR */
 
 .top-nav--account {
