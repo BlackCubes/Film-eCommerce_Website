@@ -136,6 +136,10 @@ footer.footer .container-footer {
     margin: 0 auto;
 }
 
+footer.footer .upper-footer .grid__item {
+    float: left;
+}
+
 /* ACCOUNT NAVBAR */
 
 .top-nav--account {
