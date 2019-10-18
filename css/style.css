@@ -153,6 +153,7 @@ footer.footer .upper-footer ul {
 footer.footer .site-footer__link-list .site-footer__link-list-item {
     display: block;
     padding: 0 20px 0 0;
+    width: 184px;
 }
 
 footer.footer .lower-footer .site-footer__copyright {
