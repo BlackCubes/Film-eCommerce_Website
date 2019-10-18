@@ -28,7 +28,7 @@ define('EMAIL', 'gutierrezelias1991@gmail.com');
 
 // Site URL (base for all redirections):
 // This would be for my computer, but would change for finalization:
-define('BASE_URL', dirname(__DIR__).'/');
+define('BASE_URL', 'http://localhost:8080/FilmIndustry/eCommerce/');
 
 // Location of the MySQL connection:
 // For now, this would be stored in a folder called 'mysql'. For a live functioning site, this would be placed above the web document root for security. Lastly, the absolute path is from my computer which would change for a finalization, or for a live site:
