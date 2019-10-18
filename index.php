@@ -4,9 +4,11 @@
 # Created on October 17, 2019.
 # Created by Elias Gutierrez.
 
-$page_title = 'Welcome to this site!';
-include(__DIR__.'\includes\header.html');
+require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
+$page_title = 'Welcome to this site!';
+
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 ?>
 
 <!-- Try to fix the id of section0 -->
@@ -202,9 +204,4 @@ include(__DIR__.'\includes\header.html');
         </div>
     </div>
 </section>-->
-
-<?php
-
-include(__DIR__.'\includes\footer.html');
-
-?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'FilmIndustry/eCommerce/includes/footer.html'); ?>
