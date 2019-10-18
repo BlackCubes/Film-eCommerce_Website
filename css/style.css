@@ -132,18 +132,20 @@ footer.footer .site-footer__link-list .site-footer__link-list-item a {
 }
 
 footer.footer .container-footer {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 footer.footer .upper-footer {
     margin: 0;
     padding: 0;
+    height: 205px;
 }
 
 footer.footer .upper-footer .grid__item {
     float: left;
     width: 30%;
+    margin-top: 55px;
 }
 
 footer.footer .upper-footer ul {
