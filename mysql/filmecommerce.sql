@@ -921,7 +921,7 @@ CREATE TABLE `orderdetails` (
   `product_department` varchar(35) NOT NULL,
   `product_format` varchar(10) NOT NULL,
   `quantity` tinyint(3) UNSIGNED NOT NULL,
-  `unit_price` decimal(5,2) UNSIGNED NOT NULL,
+  `unit_price` decimal(5,2) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
