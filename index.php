@@ -1,9 +1,8 @@
 <?php
 
 # Film eCommerce v.3 - Homepage
-# Created February 11, 2019
-# Created January 11, 2019 (v.2)
-# Created by Elias Gutierrez
+# Created on October 17, 2019.
+# Created by Elias Gutierrez.
 
 $page_title = 'Welcome to this site!';
 include(__DIR__.'\includes\header.html');
