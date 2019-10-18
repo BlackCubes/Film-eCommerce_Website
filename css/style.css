@@ -136,6 +136,11 @@ footer.footer .container-footer {
     margin: 0 auto;
 }
 
+footer.footer .upper-footer {
+    margin: 0;
+    padding: 0;
+}
+
 footer.footer .upper-footer .grid__item {
     float: left;
 }
