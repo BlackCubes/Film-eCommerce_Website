@@ -145,6 +145,11 @@ footer.footer .upper-footer .grid__item {
     float: left;
 }
 
+footer.footer .upper-footer ul {
+    margin: 0;
+    padding: 0;
+}
+
 footer.footer .lower-footer .site-footer__copyright {
     text-align: center;
     max-width: 700px;
