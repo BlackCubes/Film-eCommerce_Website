@@ -23,7 +23,7 @@ class breadcrumb
 
     private $separator = ' | ';
 
-    private $domain = 'http://localhost/FilmIndustry/eCommerce';
+    private $domain = 'http://localhost:8080/FilmIndustry/eCommerce';
 
     public function build($array)
     {
