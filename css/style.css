@@ -152,6 +152,12 @@ footer.footer .lower-footer .site-footer__copyright {
     padding: 35px 0 5px;
 }
 
+footer.footer .site-footer__copyright .site-footer__copyright-content {
+    font-size: 11px;
+    display: block;
+    padding: 15px 0;
+}
+
 /* ACCOUNT NAVBAR */
 
 .top-nav--account {
