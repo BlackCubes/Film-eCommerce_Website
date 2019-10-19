@@ -2933,3 +2933,10 @@ form#userChangeAddressCard {
 #userChangeAddressCard .system-error--change-address {
     margin: 0px 15px;
 }
+
+/* SHIPPING AND DELIVERY PAGE */
+
+.pages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
