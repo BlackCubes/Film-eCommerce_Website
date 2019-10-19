@@ -2983,3 +2983,11 @@ form#userChangeAddressCard {
     border: 1px solid #ddd;
     padding: 10px 14px;
 }
+
+.pages-container .section-body p {
+    color: #404040;
+    margin: 0 0 19.4px;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    font-weight: 600;
+}
