@@ -2947,3 +2947,8 @@ form#userChangeAddressCard {
     margin: auto;
     left: 0px;
 }
+
+.pages-container .section-header {
+    margin-bottom: 55px;
+    text-align: center;
+}
