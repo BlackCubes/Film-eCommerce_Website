@@ -2962,7 +2962,11 @@ form#userChangeAddressCard {
     margin: 0 0 17.5px;
 }
 
-.pages-container .shipping-deliver-table {
+.section-body {
+    color: #3d4246;
+}
+
+.pages-container .shipping-deliver-table table {
     display: table;
     table-layout: fixed;
     border-spacing: 0;
