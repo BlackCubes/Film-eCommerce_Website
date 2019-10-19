@@ -2937,6 +2937,7 @@ form#userChangeAddressCard {
 /* SHIPPING AND DELIVERY PAGE */
 
 .pages-container {
+    font-family: 'Muli', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
 }
