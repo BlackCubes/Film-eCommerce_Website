@@ -2975,3 +2975,9 @@ form#userChangeAddressCard {
     width: 100%;
     margin-bottom: 27.5px;
 }
+
+.pages-container .shipping-deliver-table td {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+}
