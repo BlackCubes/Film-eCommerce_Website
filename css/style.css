@@ -146,6 +146,11 @@ footer.footer .upper-footer {
     height: 205px;
 }
 
+footer.footer .lower-footer {
+    margin: 0;
+    padding: 0;
+}
+
 footer.footer .upper-footer .grid__item {
     float: left;
     width: 16%;
