@@ -2999,3 +2999,7 @@ form#userChangeAddressCard {
     margin-top: 55px;
     margin-bottom: 27.5px;
 }
+
+.pages-container .section-body p strong {
+    font-weight: 700;
+}
