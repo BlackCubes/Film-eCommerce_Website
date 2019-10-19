@@ -132,7 +132,14 @@ footer.footer .site-footer__link-list li {
 footer.footer .site-footer__link-list .site-footer__link-list-item a {
     font-size: 11px;
     color: black;
+}
+
+footer.footer a {
     text-decoration: none;
+}
+
+footer.footer .lower-footer .site-footer__copyright-content a {
+    color: white;
 }
 
 footer.footer .container-footer {
