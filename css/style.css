@@ -2991,3 +2991,11 @@ form#userChangeAddressCard {
     line-height: 1.5;
     font-weight: 600;
 }
+
+.pages-container .section-body h4 {
+    font-size: 1.21429em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 55px;
+    margin-bottom: 27.5px;
+}
