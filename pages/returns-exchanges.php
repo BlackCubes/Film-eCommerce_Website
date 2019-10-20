@@ -15,7 +15,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         </div>
         <div class="section-body">
             <p>Although you cannot actually buy anything at the website, at (Website), our goal is your complete satisfaction. You may return any new item for any reason within 30 days for a refund. The item must be in the original, unopened package, to be accepted back for a refund.</p>
-            <h4>How to Return an Item</h4>
+            <h4 style="font-weight: bold;">How to Return an Item</h4>
             <p>
                 If an item is damaged, defective, or incorrect, contact us and we will issue a Return Authorization. If the item is not damaged, defective, or incorrect, please include a copy of the packing slip and write the reason for the return, and if you would like a refund or an exchange.
                 <br>
