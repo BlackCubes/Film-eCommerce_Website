@@ -10,7 +10,16 @@ $page_title = 'Welcome to this site!';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 ?>
-
+<section class="homepage-section">
+    <div class="website-intro-card"></div>
+    <div class="films-television-card"></div>
+</section>
+<section class="homepage-section">
+    <div class="actor-director-card"></div>
+    <div class="writer-cinematographer-card"></div>
+    <div class="producer-studio-card"></div>
+    <div class="login-info-card"></div>
+</section>
 <!-- Try to fix the id of section0 -->
 <!-- Maybe for the CSS, don't need the id's? Maybe could call it from the div or class instead? -->
 <!-- Later, delete the id's of leftSide, rightSide, televisionHeadline, and filmHeadline from CSS -->
