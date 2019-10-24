@@ -11,14 +11,85 @@ $page_title = 'Welcome to this site!';
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 ?>
 <section class="homepage-section">
-    <div class="website-intro-card"></div>
-    <div class="films-television-card"></div>
+    <div class="website-intro-card">
+        <div class="unit-wrapper">
+            <div class="unit-headline-wrapper">
+                <h2 class="headline">Film eCommerce</h2>
+                <h3 class="subhead">Professional Artists. The Best Studios. The Hottest Deals.</h3>
+                <p class="info">A website dedicated to the people whom have revolutionized entire cultures in the land that never sleeps.</p>
+                <div class="homepage-links">
+                    <a class="page-links" href="#">Learn more about Artists</a>
+                    <a class="page-links" href="#">Explore Products</a>
+                    <a class="page-links" href="#">Create Account or Login</a>
+                </div>
+            </div>
+            <div class="unit-image-wrapper"></div>
+        </div>
+    </div>
+    <div class="films-television-card">
+        <div class="unit-wrapper">
+            <div class="unit-headline-wrapper">
+                <h2 class="headline">Films and Television</h2>
+                <h3 class="subhead">Buy the best stories in the best formats at the best price.</h3>
+                <div class="homepage-links">
+                    <a class="page-links" href="#">Explore Films</a>
+                    <a class="page-links" href="#">Explore Television</a>
+                </div>
+            </div>
+            <div class="unit-image-wrapper"></div>
+        </div>
+    </div>
 </section>
 <section class="homepage-section">
-    <div class="actor-director-card"></div>
-    <div class="writer-cinematographer-card"></div>
-    <div class="producer-studio-card"></div>
-    <div class="login-info-card"></div>
+    <div class="actor-director-card">
+        <div class="unit-wrapper">
+            <div class="unit-wraper-headline">
+                <h2 class="headline">Actors&nbsp;|&nbsp;Directors</h2>
+                <h3 class="subhead">The best performers. The visionary geniuses.</h3>
+                <div class="homepage-links">
+                    <a class="page-links" href="#">View Directors</a>
+                    <a class="page-links" href="#">View Actors</a>
+                </div>
+            </div>
+            <div class="unit-image-wrapper"></div>
+        </div>
+    </div>
+    <div class="writer-cinematographer-card">
+        <div class="unit-wrapper">
+            <div class="unit-wrapper-headline">
+                <h2 class="headline">Writers&nbsp;|&nbsp;Cinematographers</h2>
+                <h3 class="subhead">Creating stories from pen to lens.</h3>
+                <div class="homepage-links">
+                    <a class="page-links" href="#">View Cinematographers</a>
+                    <a class="page-links" href="#">View Writers</a>
+                </div>
+            </div>
+            <div class="unit-image-wrapper"></div>
+        </div>
+    </div>
+    <div class="producer-studio-card">
+        <div class="unit-wrapper">
+            <div class="unit-wrapper-headline">
+                <h2 class="headline">Producers&nbsp;|&nbsp;Studios</h2>
+                <h3 class="subhead">The ambitious ones. The game changers.</h3>
+                <div class="homepage-links">
+                    <a class="page-links" href="#">View Studios</a>
+                    <a class="page-links" href="#">View Producers</a>
+                </div>
+            </div>
+            <div class="unit-image-wrapper"></div>
+        </div>
+    </div>
+    <div class="login-info-card">
+        <div class="unit-wrapper">
+            <div class="unit-wrapper-headline">
+                <h2 class="headline">Join</h2>
+                <h3 class="subhead">Enjoy your favorite products, exclusives, and rarities.</h3>
+                <h3 class="subhead">Enjoy your experience.</h3>
+            </div>
+            <div class="unit-image-wrapper"></div>
+        </div>
+    </div>
 </section>
 <!-- Try to fix the id of section0 -->
 <!-- Maybe for the CSS, don't need the id's? Maybe could call it from the div or class instead? -->
