@@ -344,7 +344,7 @@ section.homepage-section:nth-child(1) .info {
     color: #818FA1;
 }
 
-section.homepage-section > .website-intro-card .homepage-links {
+section.homepage-section > .website-intro-card .unit-image-wrapper {
     text-align: center;
 }
 
