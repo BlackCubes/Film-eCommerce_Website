@@ -281,6 +281,13 @@ section.homepage-section {
     background-color: white;
 }
 
+section.homepage-section h2,
+section.homepage-section h3,
+section.homepage-section p {
+    margin: 0;
+    padding: 0;
+}
+
 section.homepage-section:nth-child(1) {
     height: 1964px;
 }
