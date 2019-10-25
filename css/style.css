@@ -285,6 +285,12 @@ section.homepage-section:nth-child(1) {
     height: 1964px;
 }
 
+section.homepage-section > .website-intro-card {
+    border-bottom-width: 6px;
+    padding-top: 44px;
+    height: 596px;
+}
+
 section.homepage-section:nth-child(2) {
     height: 1440px;
 }
