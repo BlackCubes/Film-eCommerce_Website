@@ -326,6 +326,14 @@ section.homepage-section:nth-child(1) .headline {
     letter-spacing: -0.005em;
 }
 
+section.homepage-section:nth-child(1) .subhead {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.14815;
+    letter-spacing: 0.008em;
+    margin-top: 6px;
+}
+
 section.homepage-section > .website-intro-card .unit-headline-wrapper {
     padding-top: 47px;
     text-align: center;
