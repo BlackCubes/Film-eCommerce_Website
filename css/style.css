@@ -312,6 +312,11 @@ section.homepage-section > .website-intro-card > .unit-wrapper {
     width: 100%;
 }
 
+section.homepage-section > .films-television-card > .unit-wrapper {
+    height: 720px;
+    width: 100%;
+}
+
 section.homepage-section .dark-bg {
     background-color: #101511;
 }
