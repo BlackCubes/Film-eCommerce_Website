@@ -468,6 +468,8 @@ section.homepage-section > .login-info-card {
     width: 580px;
     height: 622px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section.homepage-section > .actor-director-card img:nth-child(1) {
