@@ -472,6 +472,11 @@ section.homepage-section > .login-info-card {
     margin-right: auto;
 }
 
+section.homepage-section:nth-child(2) .unit-wrapper {
+    height: 580px;
+    width: 100%;
+}
+
 section.homepage-section > .actor-director-card img:nth-child(1) {
     width: 389px;
     height: 311px;
