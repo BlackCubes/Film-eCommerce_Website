@@ -276,6 +276,7 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 /* HOMEPAGE */
 
 section.homepage-section {
+    font-family: 'Muli', sans-serif;
     width: 100%;
     background-color: white;
 }
