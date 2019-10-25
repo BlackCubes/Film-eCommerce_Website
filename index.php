@@ -57,8 +57,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     <div class="actor-director-card">
         <div class="unit-wrapper">
             <div class="unit-wraper-headline">
-                <h2 class="headline">Actors&nbsp;|&nbsp;Directors</h2>
-                <h3 class="subhead">The best performers. The visionary geniuses.</h3>
+                <h4 class="headline">Actors&nbsp;|&nbsp;Directors</h4>
+                <h5 class="subhead">The best performers. The visionary geniuses.</h5>
                 <div class="homepage-links">
                     <a class="page-links" href="#">View Directors</a>
                     <a class="page-links" href="#">View Actors</a>
@@ -73,8 +73,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     <div class="writer-cinematographer-card">
         <div class="unit-wrapper dark-bg">
             <div class="unit-wrapper-headline">
-                <h2 class="headline">Writers&nbsp;|&nbsp;Cinematographers</h2>
-                <h3 class="subhead">Creating stories from pen to lens.</h3>
+                <h4 class="headline">Writers&nbsp;|&nbsp;Cinematographers</h4>
+                <h5 class="subhead">Creating stories from pen to lens.</h5>
                 <div class="homepage-links">
                     <a class="page-links" href="#">View Cinematographers</a>
                     <a class="page-links" href="#">View Writers</a>
@@ -88,8 +88,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     <div class="producer-studio-card">
         <div class="unit-wrapper">
             <div class="unit-wrapper-headline">
-                <h2 class="headline">Producers&nbsp;|&nbsp;Studios</h2>
-                <h3 class="subhead">The ambitious ones. The game changers.</h3>
+                <h4 class="headline">Producers&nbsp;|&nbsp;Studios</h4>
+                <h5 class="subhead">The ambitious ones. The game changers.</h5>
                 <div class="homepage-links">
                     <a class="page-links" href="#">View Studios</a>
                     <a class="page-links" href="#">View Producers</a>
@@ -105,9 +105,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     <div class="login-info-card">
         <div class="unit-wrapper">
             <div class="unit-wrapper-headline">
-                <h2 class="headline">Join</h2>
-                <h3 class="subhead">Enjoy your favorite products, exclusives, and rarities.</h3>
-                <h3 class="subhead">Enjoy your experience.</h3>
+                <h4 class="headline">Join</h4>
+                <h5 class="subhead">Enjoy your favorite products, exclusives, and rarities.</h5>
+                <h5 class="subhead">Enjoy your experience.</h5>
             </div>
             <div class="unit-image-wrapper"></div>
         </div>
