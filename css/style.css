@@ -297,6 +297,11 @@ section.homepage-section > .website-intro-card > .unit-wrapper {
     background-color: #101511;
 }
 
+section.homepage-section > .website-intro-card .unit-headline-wrapper {
+    padding-top: 47px;
+    text-align: center;
+}
+
 section.homepage-section:nth-child(2) {
     height: 1440px;
 }
