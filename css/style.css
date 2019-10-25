@@ -457,6 +457,8 @@ section.homepage-section:nth-child(2) {
     display: grid;
     height: 1440px;
     grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 section.homepage-section > .actor-director-card,
