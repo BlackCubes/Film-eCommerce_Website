@@ -299,6 +299,10 @@ section.homepage-section > .website-intro-card {
     height: 596px;
 }
 
+section.homepage-section .unit-wrapper {
+    overflow: hidden;
+}
+
 section.homepage-section > .website-intro-card > .unit-wrapper {
     height: 596px;
     width: 100%;
