@@ -356,6 +356,11 @@ section.homepage-section .dark-bg a {
     color: #818FA1;
 }
 
+section.homepage-section .dark-bg a:hover {
+    color: rgb(102, 187, 255);
+    text-decoration: underline;
+}
+
 section.homepage-section .homepage-links a {
     text-decoration: none;
 }
