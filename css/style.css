@@ -417,10 +417,6 @@ section.homepage-section > .website-intro-card img:nth-child(3) {
     height: 138.54px;
 }
 
-section.homepage-section:nth-child(2) {
-    height: 1440px;
-}
-
 section.homepage-section > .films-television-card img:nth-child(1) {
     width: 465px;
     height: 262px;
@@ -455,6 +451,10 @@ section.homepage-section > .films-television-card img:nth-child(7) {
 section.homepage-section > .films-television-card img:nth-child(8) {
     width: 470.5px;
     height: 262px;
+}
+
+section.homepage-section:nth-child(2) {
+    height: 1440px;
 }
 
 /* MAIN CONTAINER */
