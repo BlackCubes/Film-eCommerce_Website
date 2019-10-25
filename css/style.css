@@ -299,6 +299,10 @@ section.homepage-section > .website-intro-card {
     height: 596px;
 }
 
+section.homepage-section > .films-television-card {
+    height: 720px;
+}
+
 section.homepage-section .unit-wrapper {
     overflow: hidden;
 }
