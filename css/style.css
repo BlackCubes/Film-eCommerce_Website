@@ -339,6 +339,21 @@ section.homepage-section:nth-child(1) .info {
     color: #818FA1;
 }
 
+section.homepage-section > .website-intro-card img:nth-child(1) {
+    width: 217px;
+    height: 174px;
+}
+
+section.homepage-section > .website-intro-card img:nth-child(2) {
+    width: 150px;
+    height: 231px;
+}
+
+section.homepage-section > .website-intro-card img:nth-child(3) {
+    width: 138.54px;
+    height: 138.54px;
+}
+
 section.homepage-section > .website-intro-card .unit-headline-wrapper {
     padding-top: 47px;
     text-align: center;
