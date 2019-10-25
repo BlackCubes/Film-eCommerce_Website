@@ -279,6 +279,7 @@ section.homepage-section {
     font-family: 'Muli', sans-serif;
     width: 100%;
     background-color: white;
+    overflow: hidden;
 }
 
 section.homepage-section h2,
