@@ -465,6 +465,16 @@ section.homepage-section > .login-info-card {
     height: 622px;
 }
 
+section.homepage-section > .actor-director-card img:nth-child(1) {
+    width: 389px;
+    height: 311px;
+}
+
+section.homepage-section > .actor-director-card img:nth-child(2) {
+    width: 298px;
+    height: 399px;
+}
+
 /* MAIN CONTAINER */
 
 .container {
