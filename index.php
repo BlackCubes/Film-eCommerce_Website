@@ -6,7 +6,7 @@
 
 require($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/config.inc.php');
 
-$page_title = 'Welcome to this site!';
+$page_title = 'Film eCommerce';
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html');
 ?>
