@@ -42,8 +42,12 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <h2 class="headline">Films and Television</h2>
                 <h3 class="subhead">Buy the best stories in the best formats at the best price.</h3>
                 <div class="homepage-links">
-                    <a class="page-links" href="#">Explore Films</a>
-                    <a class="page-links" href="#">Explore Television</a>
+                    <div class="page-links">
+                        <a href="#">Explore Films</a>
+                    </div>
+                    <div class="page-links">
+                        <a href="#">Explore Television</a>
+                    </div>
                 </div>
             </div>
             <div class="unit-image-wrapper">
@@ -66,8 +70,12 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <h4 class="headline">Actors&nbsp;|&nbsp;Directors</h4>
                 <h5 class="subhead">The best performers. The visionary geniuses.</h5>
                 <div class="homepage-links">
-                    <a class="page-links" href="#">View Directors</a>
-                    <a class="page-links" href="#">View Actors</a>
+                    <div class="page-links">
+                        <a href="#">View Directors</a>
+                    </div>
+                    <div class="page-links">
+                        <a href="#">View Actors</a>
+                    </div>
                 </div>
             </div>
             <div class="unit-image-wrapper">
@@ -82,8 +90,12 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <h4 class="headline">Writers&nbsp;|&nbsp;Cinematographers</h4>
                 <h5 class="subhead">Creating stories from pen to lens.</h5>
                 <div class="homepage-links">
-                    <a class="page-links" href="#">View Cinematographers</a>
-                    <a class="page-links" href="#">View Writers</a>
+                    <div class="page-links">
+                        <a href="#">View Cinematographers</a>
+                    </div>
+                    <div class="page-links">
+                        <a href="#">View Writers</a>
+                    </div>
                 </div>
             </div>
             <div class="unit-image-wrapper">
@@ -97,8 +109,12 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <h4 class="headline">Producers&nbsp;|&nbsp;Studios</h4>
                 <h5 class="subhead">The ambitious ones. The game changers.</h5>
                 <div class="homepage-links">
-                    <a class="page-links" href="#">View Studios</a>
-                    <a class="page-links" href="#">View Producers</a>
+                    <div class="page-links">
+                        <a href="#">View Studios</a>
+                    </div>
+                    <div class="page-links">
+                        <a href="#">View Producers</a>
+                    </div>
                 </div>
             </div>
             <div class="unit-image-wrapper">
