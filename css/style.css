@@ -319,6 +319,12 @@ section.homepage-section .dark-bg h5 {
     color: white;
 }
 
+section.homepage-section:nth-child(1) .headline {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+}
+
 section.homepage-section > .website-intro-card .unit-headline-wrapper {
     padding-top: 47px;
     text-align: center;
