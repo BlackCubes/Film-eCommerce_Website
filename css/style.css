@@ -344,6 +344,14 @@ section.homepage-section:nth-child(1) .info {
     color: #818FA1;
 }
 
+section.homepage-section:nth-child(1) .homepage-links {
+    font-size: 21px;
+    line-height: 1.38105;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    margin-top: 0.6em;
+}
+
 section.homepage-section .homepage-links a {
     text-decoration: none;
 }
