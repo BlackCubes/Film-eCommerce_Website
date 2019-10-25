@@ -454,7 +454,9 @@ section.homepage-section > .films-television-card img:nth-child(8) {
 }
 
 section.homepage-section:nth-child(2) {
+    display: grid;
     height: 1440px;
+    grid-template-columns: 1fr 1fr;
 }
 
 section.homepage-section > .actor-director-card,
