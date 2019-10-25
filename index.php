@@ -23,7 +23,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                     <a class="page-links" href="#">Create Account or Login</a>
                 </div>
             </div>
-            <div class="unit-image-wrapper"></div>
+            <div class="unit-image-wrapper">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/d-b-weiss_Cover.png">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/breaking-bad-split.png">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/log-in.svg">
+            </div>
         </div>
     </div>
     <div class="films-television-card">
@@ -36,7 +40,16 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                     <a class="page-links" href="#">Explore Television</a>
                 </div>
             </div>
-            <div class="unit-image-wrapper"></div>
+            <div class="unit-image-wrapper">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/john-wick-3.jpg">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/mission-impossible-4.jpg">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/the-dark-knight.jpg">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/sherlock.jpg">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/harry-potter-3.jpg">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/game-of-thrones-s5.jpg">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/castle-rock.png">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/westworld-s2.jpg">
+            </div>
         </div>
     </div>
 </section>
@@ -51,7 +64,10 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                     <a class="page-links" href="#">View Actors</a>
                 </div>
             </div>
-            <div class="unit-image-wrapper"></div>
+            <div class="unit-image-wrapper">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/christopher-nolan_Cover.png">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/emilia-clarke_Cover.png">
+            </div>
         </div>
     </div>
     <div class="writer-cinematographer-card">
@@ -64,7 +80,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                     <a class="page-links" href="#">View Writers</a>
                 </div>
             </div>
-            <div class="unit-image-wrapper"></div>
+            <div class="unit-image-wrapper">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/stephen-king_Cover.jpg">
+            </div>
         </div>
     </div>
     <div class="producer-studio-card">
@@ -77,7 +95,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                     <a class="page-links" href="#">View Producers</a>
                 </div>
             </div>
-            <div class="unit-image-wrapper"></div>
+            <div class="unit-image-wrapper">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/marvel-studios_Cover.png">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/ryan-reynolds-large.png">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/stan-lee_Cover.jpg">
+            </div>
         </div>
     </div>
     <div class="login-info-card">
