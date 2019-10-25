@@ -463,6 +463,7 @@ section.homepage-section > .producer-studio-card,
 section.homepage-section > .login-info-card {
     width: 580px;
     height: 622px;
+    overflow: hidden;
 }
 
 section.homepage-section > .actor-director-card img:nth-child(1) {
