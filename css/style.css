@@ -352,6 +352,10 @@ section.homepage-section:nth-child(1) .homepage-links {
     margin-top: 0.6em;
 }
 
+section.homepage-section .dark-bg a {
+    color: #818FA1;
+}
+
 section.homepage-section .homepage-links a {
     text-decoration: none;
 }
