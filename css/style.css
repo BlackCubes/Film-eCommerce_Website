@@ -322,6 +322,7 @@ section.homepage-section .dark-bg h5 {
 section.homepage-section:nth-child(1) .headline {
     font-size: 56px;
     font-weight: 600;
+    line-height: 1.07143;
     letter-spacing: -0.005em;
 }
 
