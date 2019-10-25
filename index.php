@@ -12,7 +12,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 ?>
 <section class="homepage-section">
     <div class="website-intro-card">
-        <div class="unit-wrapper">
+        <div class="unit-wrapper dark-bg">
             <div class="unit-headline-wrapper">
                 <h2 class="headline">Film eCommerce</h2>
                 <h3 class="subhead">Professional Artists. The Best Studios. The Hottest Deals.</h3>
@@ -71,7 +71,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         </div>
     </div>
     <div class="writer-cinematographer-card">
-        <div class="unit-wrapper">
+        <div class="unit-wrapper dark-bg">
             <div class="unit-wrapper-headline">
                 <h2 class="headline">Writers&nbsp;|&nbsp;Cinematographers</h2>
                 <h3 class="subhead">Creating stories from pen to lens.</h3>
