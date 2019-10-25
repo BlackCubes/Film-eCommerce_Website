@@ -457,6 +457,14 @@ section.homepage-section:nth-child(2) {
     height: 1440px;
 }
 
+section.homepage-section > .actor-director-card,
+section.homepage-section > .writer-cinematographer-card,
+section.homepage-section > .producer-studio-card,
+section.homepage-section > .login-info-card {
+    width: 580px;
+    height: 622px;
+}
+
 /* MAIN CONTAINER */
 
 .container {
