@@ -301,6 +301,9 @@ section.homepage-section > .website-intro-card {
 section.homepage-section > .website-intro-card > .unit-wrapper {
     height: 596px;
     width: 100%;
+}
+
+section.homepage-section .dark-bg {
     background-color: #101511;
 }
 
