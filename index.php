@@ -18,9 +18,15 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <h3 class="subhead">Professional Artists. The Best Studios. The Hottest Deals.</h3>
                 <p class="info">A website dedicated to the people whom have revolutionized entire cultures in the land that never sleeps.</p>
                 <div class="homepage-links">
-                    <a class="page-links" href="#">Learn more about Artists</a>
-                    <a class="page-links" href="#">Explore Products</a>
-                    <a class="page-links" href="#">Create Account or Login</a>
+                    <div class="page-links">
+                        <a href="#">Learn more about Artists</a>
+                    </div>
+                    <div class="page-links">
+                        <a href="#">Explore Products</a>
+                    </div>
+                    <div class="page-links">
+                        <a href="#">Create Account or Login</a>
+                    </div>
                 </div>
             </div>
             <div class="unit-image-wrapper">
