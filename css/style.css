@@ -465,8 +465,8 @@ section.homepage-section > .actor-director-card,
 section.homepage-section > .writer-cinematographer-card,
 section.homepage-section > .producer-studio-card,
 section.homepage-section > .login-info-card {
-    width: 580px;
-    height: 622px;
+    width: 622px;
+    height: 580px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
