@@ -307,6 +307,13 @@ section.homepage-section .dark-bg {
     background-color: #101511;
 }
 
+section.homepage-section .dark-bg h2,
+section.homepage-section .dark-bg h3,
+section.homepage-section .dark-bg h4,
+section.homepage-section .dark-bg h5 {
+    color: white;
+}
+
 section.homepage-section > .website-intro-card .unit-headline-wrapper {
     padding-top: 47px;
     text-align: center;
