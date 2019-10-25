@@ -334,6 +334,11 @@ section.homepage-section:nth-child(1) .subhead {
     margin-top: 6px;
 }
 
+section.homepage-section:nth-child(1) .info {
+    margin-top: 0.4em;
+    color: #818FA1;
+}
+
 section.homepage-section > .website-intro-card .unit-headline-wrapper {
     padding-top: 47px;
     text-align: center;
