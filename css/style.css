@@ -472,6 +472,11 @@ section.homepage-section > .login-info-card {
     margin-right: auto;
 }
 
+section.homepage-section > .actor-director-card,
+section.homepage-section > .login-info-card {
+    background-color: #FAFAFA;
+}
+
 section.homepage-section:nth-child(2) .unit-wrapper {
     height: 580px;
     width: 100%;
