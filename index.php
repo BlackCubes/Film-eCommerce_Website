@@ -66,7 +66,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 <section class="homepage-section">
     <div class="actor-director-card">
         <div class="unit-wrapper">
-            <div class="unit-wraper-headline">
+            <div class="unit-headline-wrapper">
                 <h4 class="headline">Actors&nbsp;|&nbsp;Directors</h4>
                 <h5 class="subhead">The best performers. The visionary geniuses.</h5>
                 <div class="homepage-links">
@@ -86,7 +86,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     </div>
     <div class="writer-cinematographer-card">
         <div class="unit-wrapper dark-bg">
-            <div class="unit-wrapper-headline">
+            <div class="unit-headline-wrapper">
                 <h4 class="headline">Writers&nbsp;|&nbsp;Cinematographers</h4>
                 <h5 class="subhead">Creating stories from pen to lens.</h5>
                 <div class="homepage-links">
@@ -105,7 +105,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     </div>
     <div class="producer-studio-card">
         <div class="unit-wrapper yellow-bg">
-            <div class="unit-wrapper-headline">
+            <div class="unit-headline-wrapper">
                 <h4 class="headline">Producers&nbsp;|&nbsp;Studios</h4>
                 <h5 class="subhead">The ambitious ones. The game changers.</h5>
                 <div class="homepage-links">
@@ -126,7 +126,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     </div>
     <div class="login-info-card">
         <div class="unit-wrapper">
-            <div class="unit-wrapper-headline">
+            <div class="unit-headline-wrapper">
                 <h4 class="headline">Join</h4>
                 <h5 class="subhead">Enjoy your favorite products, exclusives, and rarities.</h5>
                 <h5 class="subhead">Enjoy your experience.</h5>
