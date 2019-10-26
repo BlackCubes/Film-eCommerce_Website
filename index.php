@@ -129,7 +129,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
             <div class="unit-headline-wrapper">
                 <h4 class="headline">Join</h4>
                 <h5 class="subhead">Enjoy your favorite products, exclusives, and rarities.</h5>
-                <h5 class="subhead">Enjoy your experience.</h5>
+                <h5 class="subhead">Own your experience.</h5>
             </div>
             <div class="unit-image-wrapper"></div>
         </div>
