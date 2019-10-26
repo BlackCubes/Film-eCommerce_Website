@@ -118,9 +118,9 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 </div>
             </div>
             <div class="unit-image-wrapper">
+                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/stan-lee_Cover.jpg">
                 <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/marvel-studios_Cover.png">
                 <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/ryan-reynolds-large.png">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/stan-lee_Cover.jpg">
             </div>
         </div>
     </div>
