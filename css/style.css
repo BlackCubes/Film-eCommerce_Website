@@ -561,20 +561,25 @@ section.homepage-section > .writer-cinematographer-card img {
 
 section.homepage-section > .producer-studio-card img:nth-child(1) {
     width: 100%;
-    height: 375px;
+    height: 446px;
     position: relative;
+    top: 10px;
 }
 
 section.homepage-section > .producer-studio-card img:nth-child(2) {
     width: 309px;
     height: 69px;
     position: absolute;
+    left: 30px;
+    top: 2420px;
 }
 
 section.homepage-section > .producer-studio-card img:nth-child(3) {
     width: 249px;
     height: 311px;
     position: absolute;
+    left: 9px;
+    top: 2451px;
 }
 
 /* MAIN CONTAINER */
