@@ -548,10 +548,11 @@ section.homepage-section > .actor-director-card img:nth-child(1) {
 }
 
 section.homepage-section > .actor-director-card img:nth-child(2) {
-    width: 294px;
-    height: 395px;
+    width: 284px;
+    height: 385px;
     position: absolute;
     left: 300px;
+    top: 1657px;
 }
 
 section.homepage-section > .writer-cinematographer-card img {
