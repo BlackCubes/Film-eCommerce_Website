@@ -585,8 +585,10 @@ section.homepage-section:nth-child(2) .subhead {
     margin-top: 12px;
 }
 
+section.homepage-section > .films-television-card .headline,
 section.homepage-section > .actor-director-card .headline,
 section.homepage-section > .login-info-card .headline,
+section.homepage-section > .films-television-card .subhead,
 section.homepage-section > .actor-director-card .subhead,
 section.homepage-section > .login-info-card .subhead {
     color: #2E2E2E
