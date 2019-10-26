@@ -565,6 +565,7 @@ section.homepage-section > .producer-studio-card img:nth-child(1) {
     height: 446px;
     position: relative;
     top: 10px;
+    opacity: 0.8;
 }
 
 section.homepage-section > .producer-studio-card img:nth-child(2) {
