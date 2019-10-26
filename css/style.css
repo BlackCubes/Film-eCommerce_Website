@@ -516,6 +516,14 @@ section.homepage-section > .login-info-card .subhead {
     color: #2E2E2E
 }
 
+section.homepage-section:nth-child(2) .homepage-links {
+    font-size: 17px;
+    line-height: 1.23543;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    margin-top: 0.7em;
+}
+
 section.homepage-section > .actor-director-card img:nth-child(1) {
     width: 389px;
     height: 311px;
