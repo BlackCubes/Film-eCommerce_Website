@@ -425,6 +425,7 @@ section.homepage-section > .films-television-card .unit-image-wrapper {
     grid-template-columns: 268px 197px 195px 275px;
     grid-template-rows: 155px 97px 40px 111px 85px;
     overflow: hidden;
+    justify-content: center;
 }
 
 section.homepage-section > .films-television-card img:nth-child(1) {
