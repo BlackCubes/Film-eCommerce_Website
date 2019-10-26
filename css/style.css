@@ -484,6 +484,15 @@ section.homepage-section .yellow-bg {
     background-color: #E6951F;
 }
 
+section.homepage-section .yellow-bg h4,
+section.homepage-section .yellow-bg h5 {
+    color: white;
+}
+
+section.homepage-section .yellow-bg a {
+    color: red;
+}
+
 section.homepage-section:nth-child(2) .unit-wrapper {
     height: 580px;
     width: 100%;
