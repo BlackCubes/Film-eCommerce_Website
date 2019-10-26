@@ -498,6 +498,13 @@ section.homepage-section:nth-child(2) .headline {
     letter-spacing: 0em;
 }
 
+section.homepage-section > .actor-director-card .headline,
+section.homepage-section > .login-info-card .headline,
+section.homepage-section > .actor-director-card .subhead,
+section.homepage-section > .login-info-card .subhead {
+    color: #2E2E2E
+}
+
 section.homepage-section > .actor-director-card img:nth-child(1) {
     width: 389px;
     height: 311px;
