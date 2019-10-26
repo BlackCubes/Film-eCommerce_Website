@@ -104,7 +104,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         </div>
     </div>
     <div class="producer-studio-card">
-        <div class="unit-wrapper">
+        <div class="unit-wrapper yellow-bg">
             <div class="unit-wrapper-headline">
                 <h4 class="headline">Producers&nbsp;|&nbsp;Studios</h4>
                 <h5 class="subhead">The ambitious ones. The game changers.</h5>
