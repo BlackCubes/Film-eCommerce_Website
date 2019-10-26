@@ -486,6 +486,11 @@ section.homepage-section:nth-child(2) .unit-wrapper {
     width: 100%;
 }
 
+section.homepage-section:nth-child(2) .unit-headline-wrapper {
+    margin-top: 56px;
+    text-align: center;
+}
+
 section.homepage-section > .actor-director-card img:nth-child(1) {
     width: 389px;
     height: 311px;
