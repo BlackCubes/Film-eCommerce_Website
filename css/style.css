@@ -533,7 +533,9 @@ section.homepage-section:nth-child(2) .homepage-links {
     margin-top: 1.5em;
 }
 
-section.homepage-section > .actor-director-card .unit-image-wrapper {
+section.homepage-section > .actor-director-card .unit-image-wrapper,
+section.homepage-section > .writer-cinematographer-card .unit-image-wrapper,
+section.homepage-section > .producer-studio-card .unit-image-wrapper {
     width: 100%;
     height: 395px;
 }
