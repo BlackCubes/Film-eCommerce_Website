@@ -543,6 +543,11 @@ section.homepage-section > .actor-director-card img:nth-child(2) {
     height: 399px;
 }
 
+section.homepage-section > .writer-cinematographer-card img {
+    width: 100%;
+    height: 388.75px;
+}
+
 /* MAIN CONTAINER */
 
 .container {
