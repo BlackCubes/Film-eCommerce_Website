@@ -472,9 +472,13 @@ section.homepage-section > .login-info-card {
     margin-right: auto;
 }
 
-section.homepage-section > .actor-director-card,
-section.homepage-section > .login-info-card {
+section.homepage-section > .actor-director-card .unit-wrapper,
+section.homepage-section > .login-info-card .unit-wrapper {
     background-color: #FAFAFA;
+}
+
+section.homepage-section .yellow-bg {
+    background-color: #E6951F;
 }
 
 section.homepage-section:nth-child(2) .unit-wrapper {
