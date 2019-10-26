@@ -491,6 +491,13 @@ section.homepage-section:nth-child(2) .unit-headline-wrapper {
     text-align: center;
 }
 
+section.homepage-section:nth-child(2) .headline {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0em;
+}
+
 section.homepage-section > .actor-director-card img:nth-child(1) {
     width: 389px;
     height: 311px;
