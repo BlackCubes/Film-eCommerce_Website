@@ -303,6 +303,7 @@ section.homepage-section > .website-intro-card {
 
 section.homepage-section > .films-television-card {
     height: 720px;
+    margin-top: 20px;
 }
 
 section.homepage-section .unit-wrapper {
