@@ -51,14 +51,18 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 </div>
             </div>
             <div class="unit-image-wrapper">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/john-wick-3.jpg">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/mission-impossible-4.jpg">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/the-dark-knight.jpg">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/sherlock.jpg">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/harry-potter-3.jpg">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/game-of-thrones-s5.jpg">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/castle-rock.png">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/westworld-s2.jpg">
+                <div class="left-image-grid">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/john-wick-3.jpg">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/mission-impossible-4.jpg">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/the-dark-knight.jpg">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/sherlock.jpg">
+                </div>
+                <div class="right-image-grid">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/harry-potter-3.jpg">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/game-of-thrones-s5.jpg">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/castle-rock.png">
+                    <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/westworld-s2.jpg">
+                </div>
             </div>
         </div>
     </div>
