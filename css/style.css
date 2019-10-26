@@ -426,6 +426,7 @@ section.homepage-section > .films-television-card .unit-image-wrapper {
     grid-template-rows: 155px 97px 40px 111px 85px;
     overflow: hidden;
     justify-content: center;
+    margin-top: 5px;
 }
 
 section.homepage-section > .films-television-card img:nth-child(1) {
@@ -539,6 +540,7 @@ section.homepage-section > .login-info-card {
     margin-right: auto;
 }
 
+section.homepage-section > .films-television-card .unit-wrapper,
 section.homepage-section > .actor-director-card .unit-wrapper,
 section.homepage-section > .login-info-card .unit-wrapper {
     background-color: #FAFAFA;
