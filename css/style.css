@@ -546,10 +546,10 @@ section.homepage-section > .actor-director-card img:nth-child(1) {
 }
 
 section.homepage-section > .actor-director-card img:nth-child(2) {
-    width: 298px;
-    height: 399px;
+    width: 294px;
+    height: 395px;
     position: absolute;
-    left: 50px;
+    left: 300px;
 }
 
 section.homepage-section > .writer-cinematographer-card img {
