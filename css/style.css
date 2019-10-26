@@ -427,6 +427,13 @@ section.homepage-section > .films-television-card .left-image-grid {
     overflow: hidden;
 }
 
+section.homepage-section > .films-television-card .right-image-grid {
+    display: grid;
+    grid-template-columns: 195px 276px;
+    grid-template-rows: 155px 137px 196px;
+    overflow: hidden;
+}
+
 section.homepage-section > .films-television-card img:nth-child(1) {
     width: 465px;
     height: 262px;
@@ -460,6 +467,34 @@ section.homepage-section > .films-television-card img:nth-child(4) {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+section.homepage-section > .films-television-card img:nth-child(5) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+section.homepage-section > .films-television-card img:nth-child(6) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+section.homepage-section > .films-television-card img:nth-child(7) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+section.homepage-section > .films-television-card img:nth-child(8) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
     grid-row-end: 4;
 }
 
