@@ -371,7 +371,8 @@ section.homepage-section .website-intro-card .homepage-links {
     margin-right: auto;
 }
 
-section.homepage-section .films-television-card .homepage-links {
+section.homepage-section .films-television-card .homepage-links,
+section.homepage-section:nth-child(2) .homepage-links {
     display: grid;
     width: 75%;
     grid-template-columns: 1fr 1fr;
