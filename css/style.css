@@ -106,51 +106,6 @@ body.body--account {
     width: 147px;
 }
 
-/* MEDIA QUERY */
-
-/* FOR MOBILE */
-@media only screen and (max-width: 480px) {
-
-    /* MAIN NAVBAR */
-    .topnav {
-        display: block;
-    }
-
-    .topnav-logo {
-        height: 30px;
-        text-align: center;
-    }
-
-    .topnav li, .topnav a {
-        font-size: 20px;
-    }
-
-    .topnav ul li {
-        display: block;
-        padding: 0;
-        line-height: 0;
-    }
-
-    /* MAIN FOOTER */
-    footer.footer,
-    footer.footer .container-footer {
-        width: 100%;
-    }
-
-    footer.footer .upper-footer .grid__item {
-        float: none;
-        display: block;
-        width: 100%;
-        margin-top: 55px;
-    }
-
-    /* HOMEPAGE */
-    section.homepage-section > .website-intro-card,
-    section.homepage-section > .films-television-card {
-        width: 100%;
-    }
-}
-
 /* MAIN FOOTER */
 footer.footer {
     background-color: #767676;
@@ -229,6 +184,51 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
     font-size: 11px;
     display: block;
     padding: 15px 0;
+}
+
+/* MEDIA QUERY */
+
+/* FOR MOBILE */
+@media only screen and (max-width: 480px) {
+
+    /* MAIN NAVBAR */
+    .topnav {
+        display: block;
+    }
+
+    .topnav-logo {
+        height: 30px;
+        text-align: center;
+    }
+
+    .topnav li, .topnav a {
+        font-size: 20px;
+    }
+
+    .topnav ul li {
+        display: block;
+        padding: 0;
+        line-height: 0;
+    }
+
+    /* MAIN FOOTER */
+    footer.footer,
+    footer.footer .container-footer {
+        width: 100%;
+    }
+
+    footer.footer .upper-footer .grid__item {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    /* HOMEPAGE */
+    section.homepage-section > .website-intro-card,
+    section.homepage-section > .films-television-card {
+        width: 100%;
+    }
 }
 
 /* ACCOUNT NAVBAR */
