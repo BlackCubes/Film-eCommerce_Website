@@ -46,7 +46,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                         <a href="/FilmIndustry/eCommerce/films/index.php">Explore Films</a>
                     </div>
                     <div class="page-links">
-                        <a href="/FilmsIndustry/eCommerce/tv/index.php">Explore Television</a>
+                        <a href="/FilmIndustry/eCommerce/tv/index.php">Explore Television</a>
                     </div>
                 </div>
             </div>
