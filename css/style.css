@@ -742,6 +742,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     section.homepage-section img {
         display: none;
     }
+
+    section.homepage-section:nth-child(1) .headline {
+        font-size: 27px;
+    }
 }
 
 /* MAIN CONTAINER */
