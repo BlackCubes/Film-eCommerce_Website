@@ -229,6 +229,14 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
         margin-top: 25px;
     }
 
+    footer.footer .lower-footer {
+        width: 100%;
+    }
+
+    footer.footer .lower-footer .site-footer__copyright {
+        width: 100%;
+    }
+
     /* HOMEPAGE */
     section.homepage-section > .website-intro-card,
     section.homepage-section > .films-television-card {
