@@ -676,7 +676,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
 
     /* MAIN NAVBAR */
     .topnav {
