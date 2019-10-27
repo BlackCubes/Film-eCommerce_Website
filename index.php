@@ -39,7 +39,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     <div class="films-television-card">
         <div class="unit-wrapper">
             <div class="unit-headline-wrapper">
-                <h2 class="headline">Films and Television</h2>
+                <h2 class="headline">Films&nbsp;|&nbsp;Television</h2>
                 <h3 class="subhead">Buy the best stories in the best formats at the best price.</h3>
                 <div class="homepage-links">
                     <div class="page-links">
