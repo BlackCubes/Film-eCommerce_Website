@@ -137,6 +137,13 @@ body.body--account {
         width: 100%;
     }
 
+    footer.footer .upper-footer .grid__item {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 55px;
+    }
+
     /* HOMEPAGE */
     section.homepage-section > .website-intro-card,
     section.homepage-section > .films-television-card {
