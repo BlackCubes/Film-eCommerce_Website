@@ -19,10 +19,10 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 <p class="info">A website dedicated to the people whom have revolutionized entire cultures in the land that never sleeps.</p>
                 <div class="homepage-links">
                     <div class="page-links">
-                        <a href="#">Learn more about Artists</a>
+                        <a href="/FilmIndustry/eCommerce/index.php#artistsStudios">Learn more about Artists</a>
                     </div>
                     <div class="page-links">
-                        <a href="#">Explore Products</a>
+                        <a href="/FilmIndustry/eCommerce/index.php#filmsTelevision">Explore Products</a>
                     </div>
                     <div class="page-links">
                         <a href="/FilmIndustry/eCommerce/register_page1.php">Create Account or Login</a>
@@ -36,7 +36,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
             </div>
         </div>
     </div>
-    <div class="films-television-card">
+    <div class="films-television-card" id="filmsTelevision">
         <div class="unit-wrapper">
             <div class="unit-headline-wrapper">
                 <h2 class="headline">Films&nbsp;|&nbsp;Television</h2>
@@ -64,7 +64,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     </div>
 </section>
 <section class="homepage-section">
-    <div class="actor-director-card">
+    <div class="actor-director-card" id="artistsStudios">
         <div class="unit-wrapper">
             <div class="unit-headline-wrapper">
                 <h4 class="headline">Actors&nbsp;|&nbsp;Directors</h4>
