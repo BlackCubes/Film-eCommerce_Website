@@ -734,6 +734,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
+    section.homepage-section:nth-child(2) {
+        display: block;
+        height: 100%;
+    }
+
     section.homepage-section img {
         display: none;
     }
