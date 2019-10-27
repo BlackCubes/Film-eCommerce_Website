@@ -726,7 +726,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     /* HOMEPAGE */
     section.homepage-section > .website-intro-card,
-    section.homepage-section > .films-television-card {
+    section.homepage-section > .films-television-card,
+    section.homepage-section > .actor-director-card,
+    section.homepage-section > .writer-cinematographer-card,
+    section.homepage-section > .producer-studio-card,
+    section.homepage-section > .login-info-card {
         width: 100%;
     }
 
