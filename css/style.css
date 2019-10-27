@@ -275,7 +275,10 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 
 /* MEDIA QUERY */
 
+/* FOR MOBILE */
 @media only screen and (max-width: 480px) {
+
+    /* MAIN NAVBAR */
     .topnav {
         display: block;
     }
@@ -293,6 +296,12 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
         display: block;
         padding: 0;
         line-height: 0;
+    }
+
+    /* HOMEPAGE */
+    section.homepage-section > .website-intro-card,
+    section.homepage-section > .films-television-card {
+        width: 100%;
     }
 }
 
