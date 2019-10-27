@@ -426,11 +426,13 @@ section.homepage-section > .website-intro-card img {
 section.homepage-section > .website-intro-card img:nth-child(1) {
     width: 267px;
     height: 224px;
+    filter: brightness(0.8);
 }
 
 section.homepage-section > .website-intro-card img:nth-child(2) {
     width: 200px;
     height: 291px;
+    filter: brightness(0.8);
 }
 
 section.homepage-section > .website-intro-card img:nth-child(3) {
