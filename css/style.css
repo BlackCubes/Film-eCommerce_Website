@@ -734,7 +734,9 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
-    section.homepage-section .website-intro-card .homepage-links {
+    section.homepage-section .website-intro-card .homepage-links,
+    section.homepage-section .films-television-card .homepage-links,
+    section.homepage-section:nth-child(2) .homepage-links {
         display: block;
         margin-left: 0;
         margin-right: 0;
