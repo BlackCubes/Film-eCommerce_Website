@@ -544,7 +544,7 @@ section.homepage-section:nth-child(2) {
     display: grid;
     height: 1240px;
     grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -643,7 +643,7 @@ section.homepage-section > .actor-director-card img:nth-child(2) {
     height: 385px;
     position: absolute;
     left: 300px;
-    top: 1657px;
+    top: 1642px;
 }
 
 section.homepage-section > .writer-cinematographer-card img {
@@ -664,7 +664,7 @@ section.homepage-section > .producer-studio-card img:nth-child(2) {
     height: 69px;
     position: absolute;
     left: 30px;
-    top: 2320px;
+    top: 2305px;
 }
 
 section.homepage-section > .producer-studio-card img:nth-child(3) {
@@ -672,7 +672,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     height: 311px;
     position: absolute;
     left: 9px;
-    top: 2351px;
+    top: 2336px;
 }
 
 /* MAIN CONTAINER */
