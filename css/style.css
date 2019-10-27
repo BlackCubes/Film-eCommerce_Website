@@ -107,29 +107,6 @@ body.body--account {
     width: 147px;
 }
 
-/* MEDIA QUERY */
-
-@media only screen and (max-width: 480px) {
-    .topnav {
-        display: block;
-    }
-
-    .topnav-logo {
-        height: 30px;
-        text-align: center;
-    }
-
-    .topnav li, .topnav a {
-        font-size: 20px;
-    }
-
-    .topnav ul li {
-        display: block;
-        padding: 0;
-        line-height: 0;
-    }
-}
-
 /* MAIN FOOTER */
 
 footer.footer {
@@ -294,6 +271,29 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
     border-bottom: 1px solid rgba(138,43,226,0.17);
     border-top: 1px solid rgba(138,43,226,0.17);
     border-radius: 8px;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 480px) {
+    .topnav {
+        display: block;
+    }
+
+    .topnav-logo {
+        height: 30px;
+        text-align: center;
+    }
+
+    .topnav li, .topnav a {
+        font-size: 20px;
+    }
+
+    .topnav ul li {
+        display: block;
+        padding: 0;
+        line-height: 0;
+    }
 }
 
 /* HOMEPAGE */
