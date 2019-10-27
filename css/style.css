@@ -398,7 +398,7 @@ section.homepage-section > .website-intro-card .unit-image-wrapper {
     display: grid;
     width: 75%;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 58px auto 0 auto;
+    margin: 36px auto 0 auto;
 }
 
 section.homepage-section > .website-intro-card img {
@@ -407,18 +407,18 @@ section.homepage-section > .website-intro-card img {
 }
 
 section.homepage-section > .website-intro-card img:nth-child(1) {
-    width: 217px;
-    height: 174px;
+    width: 267px;
+    height: 224px;
 }
 
 section.homepage-section > .website-intro-card img:nth-child(2) {
-    width: 150px;
-    height: 231px;
+    width: 200px;
+    height: 281px;
 }
 
 section.homepage-section > .website-intro-card img:nth-child(3) {
-    width: 138.54px;
-    height: 138.54px;
+    width: 188.54px;
+    height: 188.54px;
 }
 
 section.homepage-section > .films-television-card .unit-image-wrapper {
