@@ -219,6 +219,7 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 
     footer.footer .upper-footer {
         height: 100%;
+        margin-left: 20px;
     }
 
     footer.footer .upper-footer .grid__item {
