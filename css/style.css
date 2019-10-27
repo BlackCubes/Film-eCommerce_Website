@@ -109,7 +109,7 @@ body.body--account {
 
 /* MEDIA QUERY */
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 480px) {
     .topnav {
         display: block;
     }
