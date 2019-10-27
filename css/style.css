@@ -748,7 +748,15 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         height: 100%;
     }
 
-    section.homepage-section img {
+    section.homepage-section > .actor-director-card img:nth-child(1),
+    section.homepage-section > .actor-director-card img:nth-child(2),
+    section.homepage-section > .writer-cinematographer-card img,
+    section.homepage-section > .producer-studio-card img:nth-child(1),
+    section.homepage-section > .producer-studio-card img:nth-child(2),
+    section.homepage-section > .producer-studio-card img:nth-child(3),
+    section.homepage-section > .website-intro-card img:nth-child(1),
+    section.homepage-section > .website-intro-card img:nth-child(2),
+    section.homepage-section > .website-intro-card img:nth-child(3) {
         display: none;
     }
 
@@ -770,6 +778,16 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     section.homepage-section > .films-television-card .unit-image-wrapper {
         display: block;
         width: 100%;
+    }
+
+    section.homepage-section > .films-television-card img:nth-child(1) {
+        width: 100%;
+        height: 56.344%;
+    }
+
+    section.homepage-section > .films-television-card img:nth-child(8) {
+        width: 470.5px;
+        height: 55.685%;
     }
 }
 
