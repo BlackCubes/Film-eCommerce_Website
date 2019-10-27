@@ -44,10 +44,6 @@ body.body--account {
     -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
     box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
     list-style: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
 }
 
 .topnav li, .topnav a {
@@ -301,7 +297,6 @@ section.homepage-section:nth-child(1) {
 
 section.homepage-section > .website-intro-card {
     border-bottom-width: 6px;
-    padding-top: 44px;
     height: 596px;
 }
 
