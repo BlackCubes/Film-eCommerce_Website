@@ -746,6 +746,14 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     section.homepage-section:nth-child(1) .headline {
         font-size: 27px;
     }
+
+    section.homepage-section:nth-child(1) .subhead {
+        font-size: 19px;
+    }
+
+    section.homepage-section:nth-child(1) .homepage-links {
+        font-size: 19px;
+    }
 }
 
 /* MAIN CONTAINER */
