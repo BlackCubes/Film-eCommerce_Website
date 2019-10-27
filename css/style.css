@@ -749,15 +749,18 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         display: none;
     }
 
-    section.homepage-section:nth-child(1) .headline {
+    section.homepage-section:nth-child(1) .headline,
+    section.homepage-section:nth-child(2) .headline {
         font-size: 27px;
     }
 
-    section.homepage-section:nth-child(1) .subhead {
+    section.homepage-section:nth-child(1) .subhead,
+    section.homepage-section:nth-child(2) .subhead {
         font-size: 19px;
     }
 
-    section.homepage-section:nth-child(1) .homepage-links {
+    section.homepage-section:nth-child(1) .homepage-links,
+    section.homepage-section:nth-child(2) .homepage-links {
         font-size: 19px;
     }
 }
