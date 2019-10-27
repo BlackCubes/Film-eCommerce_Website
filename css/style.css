@@ -792,7 +792,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     section.homepage-section > .films-television-card img:nth-child(8) {
-        width: 470.5px;
+        width: 100%;
         height: 55.685%;
     }
 }
