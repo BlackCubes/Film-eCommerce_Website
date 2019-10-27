@@ -217,6 +217,10 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
         width: 100%;
     }
 
+    footer.footer .upper-footer {
+        height: 100%;
+    }
+
     footer.footer .upper-footer .grid__item {
         float: none;
         display: block;
