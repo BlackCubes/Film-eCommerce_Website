@@ -63,8 +63,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
         </div>
     </div>
 </section>
-<section class="homepage-section">
-    <div class="actor-director-card" id="artistsStudios">
+<section class="homepage-section" id="artistsStudios">
+    <div class="actor-director-card">
         <div class="unit-wrapper">
             <div class="unit-headline-wrapper">
                 <h4 class="headline">Actors&nbsp;|&nbsp;Directors</h4>
