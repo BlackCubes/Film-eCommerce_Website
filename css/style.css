@@ -186,64 +186,6 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
     padding: 15px 0;
 }
 
-/* MEDIA QUERY */
-
-/* FOR MOBILE */
-@media only screen and (max-width: 480px) {
-
-    /* MAIN NAVBAR */
-    .topnav {
-        display: block;
-    }
-
-    .topnav-logo {
-        height: 30px;
-        text-align: center;
-    }
-
-    .topnav li, .topnav a {
-        font-size: 20px;
-    }
-
-    .topnav ul li {
-        display: block;
-        padding: 0;
-        line-height: 0;
-    }
-
-    /* MAIN FOOTER */
-    footer.footer,
-    footer.footer .container-footer {
-        width: 100%;
-    }
-
-    footer.footer .upper-footer {
-        height: 100%;
-        margin-left: 20px;
-    }
-
-    footer.footer .upper-footer .grid__item {
-        float: none;
-        display: block;
-        width: 100%;
-        margin-top: 25px;
-    }
-
-    footer.footer .lower-footer {
-        width: 100%;
-    }
-
-    footer.footer .lower-footer .site-footer__copyright {
-        width: 100%;
-    }
-
-    /* HOMEPAGE */
-    section.homepage-section > .website-intro-card,
-    section.homepage-section > .films-television-card {
-        width: 100%;
-    }
-}
-
 /* ACCOUNT NAVBAR */
 
 .top-nav--account {
@@ -729,6 +671,64 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     position: absolute;
     left: 9px;
     top: 2336px;
+}
+
+/* MEDIA QUERY */
+
+/* FOR MOBILE */
+@media only screen and (max-width: 480px) {
+
+    /* MAIN NAVBAR */
+    .topnav {
+        display: block;
+    }
+
+    .topnav-logo {
+        height: 30px;
+        text-align: center;
+    }
+
+    .topnav li, .topnav a {
+        font-size: 20px;
+    }
+
+    .topnav ul li {
+        display: block;
+        padding: 0;
+        line-height: 0;
+    }
+
+    /* MAIN FOOTER */
+    footer.footer,
+    footer.footer .container-footer {
+        width: 100%;
+    }
+
+    footer.footer .upper-footer {
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    footer.footer .upper-footer .grid__item {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    footer.footer .lower-footer {
+        width: 100%;
+    }
+
+    footer.footer .lower-footer .site-footer__copyright {
+        width: 100%;
+    }
+
+    /* HOMEPAGE */
+    section.homepage-section > .website-intro-card,
+    section.homepage-section > .films-television-card {
+        width: 100%;
+    }
 }
 
 /* MAIN CONTAINER */
