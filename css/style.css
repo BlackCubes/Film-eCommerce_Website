@@ -407,7 +407,7 @@ section.homepage-section > .website-intro-card .unit-image-wrapper {
     display: grid;
     width: 75%;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 36px auto 0 auto;
+    margin: 26px auto 0 auto;
 }
 
 section.homepage-section > .website-intro-card img {
@@ -422,7 +422,7 @@ section.homepage-section > .website-intro-card img:nth-child(1) {
 
 section.homepage-section > .website-intro-card img:nth-child(2) {
     width: 200px;
-    height: 281px;
+    height: 291px;
 }
 
 section.homepage-section > .website-intro-card img:nth-child(3) {
