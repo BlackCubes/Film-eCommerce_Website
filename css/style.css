@@ -361,7 +361,15 @@ section.homepage-section:nth-child(1) .homepage-links {
     line-height: 1.38105;
     font-weight: 400;
     letter-spacing: 0.011em;
+}
+
+section.homepage-section > .website-intro-card .homepage-links {
     margin-top: 2.5em;
+}
+
+section.homepage-section > .films-television-card .homepage-links {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 section.homepage-section .website-intro-card .homepage-links {
