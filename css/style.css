@@ -122,6 +122,12 @@ body.body--account {
     .topnav li, .topnav a {
         font-size: 20px;
     }
+
+    .topnav ul li {
+        display: block;
+        padding: 0;
+        line-height: 0;
+    }
 }
 
 /* MAIN FOOTER */
