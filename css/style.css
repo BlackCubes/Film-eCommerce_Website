@@ -756,7 +756,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     section.homepage-section > .producer-studio-card img:nth-child(3),
     section.homepage-section > .website-intro-card img:nth-child(1),
     section.homepage-section > .website-intro-card img:nth-child(2),
-    section.homepage-section > .website-intro-card img:nth-child(3) {
+    section.homepage-section > .website-intro-card img:nth-child(3),
+    section.homepage-section > .films-television-card img:nth-child(2),
+    section.homepage-section > .films-television-card img:nth-child(3),
+    section.homepage-section > .films-television-card img:nth-child(4),
+    section.homepage-section > .films-television-card img:nth-child(5),
+    section.homepage-section > .films-television-card img:nth-child(6),
+    section.homepage-section > .films-television-card img:nth-child(7) {
         display: none;
     }
 
