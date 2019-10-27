@@ -560,6 +560,10 @@ section.homepage-section .yellow-bg a {
     color: red;
 }
 
+section.homepage-section .yellow-bg a:hover {
+    text-decoration: underline red;
+}
+
 section.homepage-section:nth-child(2) .unit-wrapper {
     height: 580px;
     width: 100%;
