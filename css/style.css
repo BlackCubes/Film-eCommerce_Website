@@ -393,6 +393,16 @@ section.homepage-section .homepage-links a {
     text-decoration: none;
 }
 
+section.homepage-section > .films-television-card a,
+section.homepage-section > .actor-director-card a {
+    color: #8A2BE2
+}
+
+section.homepage-section > .films-television-card a:hover,
+section.homepage-section > .actor-director-card a:hover {
+    text-decoration: underline #8A2BE2;
+}
+
 section.homepage-section > .website-intro-card .unit-image-wrapper {
     display: grid;
     width: 75%;
