@@ -734,6 +734,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
+    section.homepage-section .website-intro-card .homepage-links {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     section.homepage-section:nth-child(2) {
         display: block;
         height: 100%;
