@@ -39,7 +39,7 @@ body.body--account {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.897);
     -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
     -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
     box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
