@@ -942,14 +942,17 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         float: left;
         width: 55%;
         margin-top: 15px;
-        margin-left: 9px;
     }
 
     .container-product .product-price {
         float: left;
         width: 55%;
         margin-top: 5px;
-        margin-left: 9px;
+    }
+
+    .container-product .product-image img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
