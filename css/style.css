@@ -812,7 +812,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     section.homepage-section > .writer-cinematographer-card img {
         width: 90%;
         height: 84.56%;
-        padding-top: 50%;
+        padding-top: 50px;
     }
 }
 
