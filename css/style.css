@@ -758,6 +758,85 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     color: black;
 }
 
+/* ARTISTS */
+#templateArtists.container {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "breadcrumb breadcrumb breadcrumb breadcrumb"
+        "page-title page-title page-title page-title"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a m-a m-a m-a"
+        "s-a p p p";
+}
+
+.page-title {
+    grid-area: page-title;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-family: 'Muli', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 30px;
+}
+
+#templateArtists.container .main-artists {
+    display: grid;
+    grid-area: m-a;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 338px);
+    grid-row-end: auto;
+    border-left: 1px solid rgba(138,43,226,0.17);
+}
+
+.main-artists .container-artist {
+    min-height: 334px;
+    max-height: 334px;
+    overflow: hidden;
+}
+
+.main-artists .container-artist .artist-image > a {
+    justify-content: center;
+    display: flex;
+    max-width: 320px;
+    max-height: 240px;
+}
+
+.container-artist .artist-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 300px;
+    margin: 25px;
+}
+
+.container-artist .artist-image img {
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+    vertical-align: middle;
+    max-width: 320px;
+    max-height: 240px;
+}
+
+.container-artist .artist-name {
+    font-family: 'Muli', sans-serif;
+    font-weight: 560;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -954,89 +1033,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         max-width: 100%;
         max-height: 100%;
     }
-}
 
-/* ARTISTS */
-#templateArtists.container {
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "breadcrumb breadcrumb breadcrumb breadcrumb"
-        "page-title page-title page-title page-title"
-        "s-a m-a m-a m-a"
-        "s-a m-a m-a m-a"
-        "s-a m-a m-a m-a"
-        "s-a m-a m-a m-a"
-        "s-a m-a m-a m-a"
-        "s-a m-a m-a m-a"
-        "s-a p p p";
-}
-
-.page-title {
-    grid-area: page-title;
-    text-align: center;
-}
-
-.page-title h1 {
-    font-family: 'Muli', sans-serif;
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 10px 0 30px 0;
-    text-transform: uppercase;
-    letter-spacing: 30px;
-}
-
-#templateArtists.container .main-artists {
-    display: grid;
-    grid-area: m-a;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 338px);
-    grid-row-end: auto;
-    border-left: 1px solid rgba(138,43,226,0.17);
-}
-
-.main-artists .container-artist {
-    min-height: 334px;
-    max-height: 334px;
-    overflow: hidden;
-}
-
-.main-artists .container-artist .artist-image > a {
-    justify-content: center;
-    display: flex;
-    max-width: 320px;
-    max-height: 240px;
-}
-
-.container-artist .artist-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 300px;
-    margin: 25px;
-}
-
-.container-artist .artist-image img {
-    /*display: block;
-    margin-left: auto;
-    margin-right: auto;*/
-    vertical-align: middle;
-    max-width: 320px;
-    max-height: 240px;
-}
-
-.container-artist .artist-name {
-    font-family: 'Muli', sans-serif;
-    font-weight: 560;
-    font-size: 16px;
-    color: black;
-    text-align: center;
+    /* ARTISTS */
+    
 }
 
 /* STUDIOS */
-
 #templateStudios.container {
     display: grid;
     grid-template-columns: 1fr 8fr;
