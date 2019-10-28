@@ -3,14 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 /* BODY */
-
 body {
     background-color: white;
     margin: 0;
 }
 
 /* ACCOUNT BODY */
-
 body.body--account {
     background-color: rgba(148, 130, 165, 0.17);
     margin: 0;
@@ -187,7 +185,6 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 }
 
 /* ACCOUNT NAVBAR */
-
 .top-nav--account {
     height: 80px;
     background-color: white;
@@ -203,7 +200,6 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 }
 
 /* BREADCRUMB */
-
 .breadcrumb,
 .account-breadcrumb {
     grid-area: breadcrumb;
@@ -237,7 +233,6 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 }
 
 /* PAGINATION */
-
 .pagination {
     display: inline-block;
     grid-area: p;
@@ -272,7 +267,6 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 }
 
 /* HOMEPAGE */
-
 section.homepage-section {
     font-family: 'Muli', sans-serif;
     width: 100%;
@@ -673,6 +667,97 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     top: 2336px;
 }
 
+/* MAIN CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "breadcrumb breadcrumb breadcrumb breadcrumb"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a m-p m-p m-p"
+        "s-a p p p";
+}
+
+.container .sidebar-a {
+    margin-left: 15px;
+    margin-right: 10px;
+    grid-area: s-a;
+}
+
+.container .sidebar-a .results p,
+.container .sidebar-a .results p a,
+.container .sidebar-a .results > a {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+}
+
+.container .sidebar-a .results p a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.container .sidebar-a .results p a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.container .sidebar-a .results > a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.container .sidebar-a .results > a:hover {
+    text-decoration: underline;
+}
+
+.container .sidebar-a .results {
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.container .main-product {
+    display: grid;
+    grid-area: m-p;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 338px);
+    grid-row-end: auto;
+    border-left: 1px solid rgba(138,43,226,0.17);
+}
+
+.main-product .container-product {
+    min-height: 300px;
+    max-height: 300px;
+    padding-top: 24px;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.container-product .product-image img {
+    max-width: 240px;
+    max-height: 240px;
+}
+
+.container-product .product-name {
+    font-family: 'Muli', sans-serif;
+    font-weight: 560;
+    font-size: 16px;
+    color: black;
+}
+
+.container-product .product-price {
+    font-family: 'Muli', sans-serif;
+    font-weight: 570;
+    font-size: 18px;
+    color: black;
+}
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -827,100 +912,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 }
 
-/* MAIN CONTAINER */
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "breadcrumb breadcrumb breadcrumb breadcrumb"
-        "s-a m-p m-p m-p"
-        "s-a m-p m-p m-p"
-        "s-a m-p m-p m-p"
-        "s-a m-p m-p m-p"
-        "s-a m-p m-p m-p"
-        "s-a m-p m-p m-p"
-        "s-a p p p";
-}
-
-.container .sidebar-a {
-    margin-left: 15px;
-    margin-right: 10px;
-    grid-area: s-a;
-}
-
-.container .sidebar-a .results p,
-.container .sidebar-a .results p a,
-.container .sidebar-a .results > a {
-    font-family: 'Muli', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    color: black;
-}
-
-.container .sidebar-a .results p a {
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.container .sidebar-a .results p a:hover {
-    color: blueviolet;
-    text-decoration: underline;
-}
-
-.container .sidebar-a .results > a {
-    color: blueviolet;
-    text-decoration: none;
-}
-
-.container .sidebar-a .results > a:hover {
-    text-decoration: underline;
-}
-
-.container .sidebar-a .results {
-    padding-top: 1px;
-    padding-bottom: 5px;
-}
-
-.container .main-product {
-    display: grid;
-    grid-area: m-p;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 338px);
-    grid-row-end: auto;
-    border-left: 1px solid rgba(138,43,226,0.17);
-}
-
-.main-product .container-product {
-    min-height: 300px;
-    max-height: 300px;
-    padding-top: 24px;
-    padding-left: 20px;
-    overflow: hidden;
-}
-
-.container-product .product-image img {
-    max-width: 240px;
-    max-height: 240px;
-}
-
-.container-product .product-name {
-    font-family: 'Muli', sans-serif;
-    font-weight: 560;
-    font-size: 16px;
-    color: black;
-}
-
-.container-product .product-price {
-    font-family: 'Muli', sans-serif;
-    font-weight: 570;
-    font-size: 18px;
-    color: black;
-}
-
 /* ARTISTS */
-
 #templateArtists.container {
     display: grid;
     grid-template-columns: 1fr 8fr;
