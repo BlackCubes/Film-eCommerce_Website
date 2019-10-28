@@ -921,11 +921,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         display: block;
         width: 100%;
         height: 100%;
+        border: none;
     }
 
     .main-product .container-product {
         width: 100%;
         height: 100%;
+        padding: 0;
     }
 
     .main-product .container-product .product-image {
@@ -937,6 +939,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .container-product .product-name {
         float: left;
+        width: 55%;
     }
 
     .container-product .product-price {
