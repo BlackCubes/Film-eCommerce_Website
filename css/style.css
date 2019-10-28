@@ -806,7 +806,9 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     section.homepage-section > .actor-director-card img:nth-child(1) {
         width: 75%;
-        height: 76.3%;
+        height: 85%;
+        top: 0;
+        padding-top: 50px;
     }
 
     section.homepage-section > .writer-cinematographer-card img {
