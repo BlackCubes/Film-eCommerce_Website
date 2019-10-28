@@ -927,6 +927,21 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
         height: 100%;
     }
+
+    .main-product .container-product .product-image {
+        height: 100%;
+        width: 40%;
+        margin: 0;
+        float: left;
+    }
+
+    .container-product .product-name {
+        float: left;
+    }
+
+    .container-product .product-price {
+        float: left;
+    }
 }
 
 /* ARTISTS */
