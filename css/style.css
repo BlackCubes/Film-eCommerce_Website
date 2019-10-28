@@ -914,6 +914,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     /* MAIN CONTAINER */
     .container {
         display: block;
+        width: 100%;
+    }
+
+    .container .main-product {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }
 
