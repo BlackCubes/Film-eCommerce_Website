@@ -1052,6 +1052,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
         height: 100%;
     }
+
+    .container-artist .artist-image {
+        display: block;
+        margin: 20px;
+    }
 }
 
 /* STUDIOS */
