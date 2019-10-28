@@ -1035,7 +1035,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     /* ARTISTS */
-    
+    #templateArtists.container {
+        display: block;
+        width: 100%;
+    }
 }
 
 /* STUDIOS */
