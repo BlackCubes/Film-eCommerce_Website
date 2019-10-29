@@ -1865,6 +1865,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         letter-spacing: 3px;
     }
 
+    .container--studio-view .product-year--studio-view h4,
+    .container--studio-view .product-name--studio-view h4 {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .container--studio-view .image--studio-view img {
         max-width: 100%;
     }
