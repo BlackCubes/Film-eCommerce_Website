@@ -1829,6 +1829,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--studio-view .image--studio-view {
         height: 100%;
         width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .container--studio-view .product-studio-list--studio-view {
