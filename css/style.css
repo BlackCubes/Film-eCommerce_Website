@@ -1816,6 +1816,14 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         display: block;
         width: 100%;
     }
+
+    .container--studio-view .product-studio-list--studio-view {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin-top: 10px;
+    }
 }
 
 /* SIDEBAR OPTIONS PAGE */
