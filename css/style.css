@@ -906,280 +906,6 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     text-align: center;
 }
 
-/* MEDIA QUERY */
-
-/* FOR MOBILE */
-@media only screen and (max-width: 600px) {
-
-    /* MAIN NAVBAR */
-    .topnav {
-        display: block;
-    }
-
-    .topnav-logo {
-        height: 30px;
-        text-align: center;
-    }
-
-    .topnav li, .topnav a {
-        font-size: 20px;
-    }
-
-    .topnav ul li {
-        display: block;
-        padding: 0;
-        line-height: 0;
-    }
-
-    /* MAIN FOOTER */
-    footer.footer,
-    footer.footer .container-footer {
-        width: 100%;
-    }
-
-    footer.footer .upper-footer {
-        height: 100%;
-        margin-left: 20px;
-    }
-
-    footer.footer .upper-footer .grid__item {
-        float: none;
-        display: block;
-        width: 100%;
-        margin-top: 25px;
-    }
-
-    footer.footer .lower-footer {
-        width: 100%;
-    }
-
-    footer.footer .lower-footer .site-footer__copyright {
-        width: 100%;
-    }
-
-    /* HOMEPAGE */
-    section.homepage-section > .website-intro-card,
-    section.homepage-section > .films-television-card,
-    section.homepage-section > .actor-director-card,
-    section.homepage-section > .writer-cinematographer-card,
-    section.homepage-section > .producer-studio-card,
-    section.homepage-section > .login-info-card {
-        width: 100%;
-    }
-
-    section.homepage-section .website-intro-card .homepage-links,
-    section.homepage-section .films-television-card .homepage-links,
-    section.homepage-section:nth-child(2) .homepage-links {
-        display: block;
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    section.homepage-section:nth-child(2) {
-        display: block;
-        height: 100%;
-    }
-
-    section.homepage-section > .actor-director-card img:nth-child(2),
-    section.homepage-section > .producer-studio-card img:nth-child(1),
-    section.homepage-section > .producer-studio-card img:nth-child(3),
-    section.homepage-section > .website-intro-card img:nth-child(1),
-    section.homepage-section > .website-intro-card img:nth-child(2),
-    section.homepage-section > .website-intro-card img:nth-child(3),
-    section.homepage-section > .films-television-card img:nth-child(2),
-    section.homepage-section > .films-television-card img:nth-child(3),
-    section.homepage-section > .films-television-card img:nth-child(4),
-    section.homepage-section > .films-television-card img:nth-child(5),
-    section.homepage-section > .films-television-card img:nth-child(6),
-    section.homepage-section > .films-television-card img:nth-child(7) {
-        display: none;
-    }
-
-    section.homepage-section:nth-child(1) .headline,
-    section.homepage-section:nth-child(2) .headline {
-        font-size: 27px;
-    }
-
-    section.homepage-section:nth-child(1) .subhead,
-    section.homepage-section:nth-child(2) .subhead {
-        font-size: 19px;
-    }
-
-    section.homepage-section:nth-child(1) .homepage-links,
-    section.homepage-section:nth-child(2) .homepage-links {
-        font-size: 19px;
-    }
-
-    section.homepage-section > .films-television-card .unit-image-wrapper {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    section.homepage-section > .actor-director-card .unit-image-wrapper {
-        display: block;
-        text-align: center;
-    }
-
-    section.homepage-section > .writer-cinematographer-card .unit-image-wrapper,
-    section.homepage-section > .producer-studio-card .unit-image-wrapper {
-        text-align: center;
-    }
-
-    section.homepage-section > .films-television-card img:nth-child(1) {
-        width: 75%;
-        height: 42.258%;
-    }
-
-    section.homepage-section > .films-television-card img:nth-child(8) {
-        width: 75%;
-        height: 41.764%;
-    }
-
-    section.homepage-section > .actor-director-card img:nth-child(1) {
-        width: 80%;
-        height: 64.036%;
-        top: 0;
-        padding-top: 100px;
-    }
-
-    section.homepage-section > .writer-cinematographer-card img {
-        width: 90%;
-        height: 56.25%;
-        padding-top: 100px;
-    }
-
-    section.homepage-section > .producer-studio-card img:nth-child(2) {
-        width: 80%;
-        height: 17.875%;
-        position: relative;
-        left: 0;
-        top: 0;
-        padding-top: 100px;
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-        display: block;
-        width: 100%;
-    }
-
-    .container .main-product {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: none;
-        margin-top: 10px;
-    }
-
-    .main-product .container-product {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    }
-
-    .main-product .container-product .product-image {
-        height: 100%;
-        width: 40%;
-        margin: 0 0 0 15px;
-        float: left;
-    }
-
-    .container-product .product-name {
-        float: left;
-        width: 55%;
-        margin-top: 15px;
-    }
-
-    .container-product .product-price {
-        float: left;
-        width: 55%;
-        margin-top: 5px;
-    }
-
-    .container-product .product-image img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    /* ARTISTS */
-    #templateArtists.container {
-        display: block;
-        width: 100%;
-    }
-
-    #templateArtists.container .main-artists {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: none;
-        margin-top: 10px;
-    }
-
-    .main-artists .container-artist {
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        margin-top: 30px;
-    }
-
-    .container-artist .artist-image {
-        height: 100%;
-        width: 90%;
-        margin: 20px;
-    }
-
-    .container-artist .artist-name {
-        width: 100%;
-    }
-
-    .page-title {
-        width: 100%;
-    }
-    
-    .page-title h1 {
-        font-size: 13px;
-        margin: 10px 0 10px 0;
-        letter-spacing: 5px;
-    }
-
-    .container-artist .artist-image img {
-        max-width: 100%;
-    }
-
-    /* STUDIOS */
-    #templateStudios.container {
-        display: block;
-        width: 100%;
-    }
-
-    #templateStudios.container .main-studios {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: none;
-        margin-top: 10px;
-    }
-
-    .main-studios .container-studio {
-        width: 100%;
-        height: 100%;
-        min-height: 0;
-        margin-top: 30px;
-    }
-
-    .container-studio .studio-image {
-        height: 100%;
-        width: 90%;
-        margin: 20px;
-    }
-
-    .container-studio .studio-image img {
-        max-width: 100%;
-    }
-}
-
 /* PRODUCTS VIEW */
 .container--product-view {
     display: grid;
@@ -1741,8 +1467,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     max-height: 240px;
 }
 
-/* STUDIO VIEW */
-
+/* STUDIO PROFILE VIEW */
 .container--studio-view div {
     font-family: 'Muli', sans-serif;
     color: black;
@@ -1811,6 +1536,283 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 .container--studio-view .product-studio-image--studio-view img {
     max-width: 240px;
     max-height: 240px;
+}
+
+/* MEDIA QUERY */
+
+/* FOR MOBILE */
+@media only screen and (max-width: 600px) {
+
+    /* MAIN NAVBAR */
+    .topnav {
+        display: block;
+    }
+
+    .topnav-logo {
+        height: 30px;
+        text-align: center;
+    }
+
+    .topnav li, .topnav a {
+        font-size: 20px;
+    }
+
+    .topnav ul li {
+        display: block;
+        padding: 0;
+        line-height: 0;
+    }
+
+    /* MAIN FOOTER */
+    footer.footer,
+    footer.footer .container-footer {
+        width: 100%;
+    }
+
+    footer.footer .upper-footer {
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    footer.footer .upper-footer .grid__item {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    footer.footer .lower-footer {
+        width: 100%;
+    }
+
+    footer.footer .lower-footer .site-footer__copyright {
+        width: 100%;
+    }
+
+    /* HOMEPAGE */
+    section.homepage-section > .website-intro-card,
+    section.homepage-section > .films-television-card,
+    section.homepage-section > .actor-director-card,
+    section.homepage-section > .writer-cinematographer-card,
+    section.homepage-section > .producer-studio-card,
+    section.homepage-section > .login-info-card {
+        width: 100%;
+    }
+
+    section.homepage-section .website-intro-card .homepage-links,
+    section.homepage-section .films-television-card .homepage-links,
+    section.homepage-section:nth-child(2) .homepage-links {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    section.homepage-section:nth-child(2) {
+        display: block;
+        height: 100%;
+    }
+
+    section.homepage-section > .actor-director-card img:nth-child(2),
+    section.homepage-section > .producer-studio-card img:nth-child(1),
+    section.homepage-section > .producer-studio-card img:nth-child(3),
+    section.homepage-section > .website-intro-card img:nth-child(1),
+    section.homepage-section > .website-intro-card img:nth-child(2),
+    section.homepage-section > .website-intro-card img:nth-child(3),
+    section.homepage-section > .films-television-card img:nth-child(2),
+    section.homepage-section > .films-television-card img:nth-child(3),
+    section.homepage-section > .films-television-card img:nth-child(4),
+    section.homepage-section > .films-television-card img:nth-child(5),
+    section.homepage-section > .films-television-card img:nth-child(6),
+    section.homepage-section > .films-television-card img:nth-child(7) {
+        display: none;
+    }
+
+    section.homepage-section:nth-child(1) .headline,
+    section.homepage-section:nth-child(2) .headline {
+        font-size: 27px;
+    }
+
+    section.homepage-section:nth-child(1) .subhead,
+    section.homepage-section:nth-child(2) .subhead {
+        font-size: 19px;
+    }
+
+    section.homepage-section:nth-child(1) .homepage-links,
+    section.homepage-section:nth-child(2) .homepage-links {
+        font-size: 19px;
+    }
+
+    section.homepage-section > .films-television-card .unit-image-wrapper {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    section.homepage-section > .actor-director-card .unit-image-wrapper {
+        display: block;
+        text-align: center;
+    }
+
+    section.homepage-section > .writer-cinematographer-card .unit-image-wrapper,
+    section.homepage-section > .producer-studio-card .unit-image-wrapper {
+        text-align: center;
+    }
+
+    section.homepage-section > .films-television-card img:nth-child(1) {
+        width: 75%;
+        height: 42.258%;
+    }
+
+    section.homepage-section > .films-television-card img:nth-child(8) {
+        width: 75%;
+        height: 41.764%;
+    }
+
+    section.homepage-section > .actor-director-card img:nth-child(1) {
+        width: 80%;
+        height: 64.036%;
+        top: 0;
+        padding-top: 100px;
+    }
+
+    section.homepage-section > .writer-cinematographer-card img {
+        width: 90%;
+        height: 56.25%;
+        padding-top: 100px;
+    }
+
+    section.homepage-section > .producer-studio-card img:nth-child(2) {
+        width: 80%;
+        height: 17.875%;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-top: 100px;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+        display: block;
+        width: 100%;
+    }
+
+    .container .main-product {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin-top: 10px;
+    }
+
+    .main-product .container-product {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .main-product .container-product .product-image {
+        height: 100%;
+        width: 40%;
+        margin: 0 0 0 15px;
+        float: left;
+    }
+
+    .container-product .product-name {
+        float: left;
+        width: 55%;
+        margin-top: 15px;
+    }
+
+    .container-product .product-price {
+        float: left;
+        width: 55%;
+        margin-top: 5px;
+    }
+
+    .container-product .product-image img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* ARTISTS */
+    #templateArtists.container {
+        display: block;
+        width: 100%;
+    }
+
+    #templateArtists.container .main-artists {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin-top: 10px;
+    }
+
+    .main-artists .container-artist {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        margin-top: 30px;
+    }
+
+    .container-artist .artist-image {
+        height: 100%;
+        width: 90%;
+        margin: 20px;
+    }
+
+    .container-artist .artist-name {
+        width: 100%;
+    }
+
+    .page-title {
+        width: 100%;
+    }
+    
+    .page-title h1 {
+        font-size: 13px;
+        margin: 10px 0 10px 0;
+        letter-spacing: 5px;
+    }
+
+    .container-artist .artist-image img {
+        max-width: 100%;
+    }
+
+    /* STUDIOS */
+    #templateStudios.container {
+        display: block;
+        width: 100%;
+    }
+
+    #templateStudios.container .main-studios {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin-top: 10px;
+    }
+
+    .main-studios .container-studio {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        margin-top: 30px;
+    }
+
+    .container-studio .studio-image {
+        height: 100%;
+        width: 90%;
+        margin: 20px;
+    }
+
+    .container-studio .studio-image img {
+        max-width: 100%;
+    }
+
+    /* STUDIO PROFILE VIEW */
+    
 }
 
 /* SIDEBAR OPTIONS PAGE */
