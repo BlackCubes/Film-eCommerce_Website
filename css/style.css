@@ -1168,6 +1168,16 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         min-height: 0;
         margin-top: 30px;
     }
+
+    .container-studio .studio-image {
+        height: 100%;
+        width: 90%;
+        margin: 20px;
+    }
+
+    .container-studio .studio-image img {
+        max-width: 100%;
+    }
 }
 
 /* PRODUCTS VIEW */
