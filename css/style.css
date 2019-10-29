@@ -1070,7 +1070,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .page-title h1 {
         font-size: 13px;
         margin: 10px 0 10px 0;
-        letter-spacing: 13px;
+        letter-spacing: 5px;
     }
 
     .container-artist .artist-image img {
