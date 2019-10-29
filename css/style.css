@@ -1054,7 +1054,6 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     .container-artist .artist-image {
-        display: block;
         height: 100%;
         width: 90%;
         margin: 20px;
