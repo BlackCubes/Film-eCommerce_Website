@@ -1400,8 +1400,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     grid-area: p-s-i;
 }
 
-/* ARTIST VIEW */
-
+/* ARTIST PROFILE VIEW */
 .container--artist-view div {
     font-family: 'Muli', sans-serif;
     color: black;
@@ -1810,6 +1809,9 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container-studio .studio-image img {
         max-width: 100%;
     }
+
+    /* ARTIST PROFILE VIEW */
+    
 
     /* STUDIO PROFILE VIEW */
     .container--studio-view {
