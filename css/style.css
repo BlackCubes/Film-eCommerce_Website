@@ -837,6 +837,75 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     text-align: center;
 }
 
+/* STUDIOS */
+#templateStudios.container {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "breadcrumb breadcrumb breadcrumb breadcrumb"
+        "page-title page-title page-title page-title"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a main-studio main-studio main-studio"
+        "s-a p p p";
+}
+
+#templateStudios.container .main-studios {
+    display: grid;
+    grid-area: main-studio;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 338px);
+    grid-row-end: auto;
+    border-left: 1px solid rgba(138,43,226,0.17);
+}
+
+.main-studios .container-studio {
+    min-height: 334px;
+    max-height: 334px;
+    overflow: hidden;
+}
+
+.main-studios .container-studio .studio-image > a {
+    justify-content: center;
+    display: flex;
+    max-width: 320px;
+    max-height: 240px;
+}
+
+.container-studio .studio-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 300px;
+    margin: 25px;
+}
+
+.container-studio .studio-image img {
+    /*display: block;
+    margin-left: auto;
+    margin-right: auto;*/
+    vertical-align: middle;
+    max-width: 320px;
+    max-height: 240px;
+}
+
+.container-studio .studio-image img[title="1492 Pictures"],
+.container-studio .studio-image img[title="Darkbloom Productions"] {
+    background-color: black;
+}
+
+.container-studio .studio-name {
+    font-family: 'Muli', sans-serif;
+    font-weight: 560;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -1078,79 +1147,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container-artist .artist-image img {
         max-width: 100%;
     }
-}
 
-/* STUDIOS */
-#templateStudios.container {
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "breadcrumb breadcrumb breadcrumb breadcrumb"
-        "page-title page-title page-title page-title"
-        "s-a main-studio main-studio main-studio"
-        "s-a main-studio main-studio main-studio"
-        "s-a main-studio main-studio main-studio"
-        "s-a main-studio main-studio main-studio"
-        "s-a main-studio main-studio main-studio"
-        "s-a main-studio main-studio main-studio"
-        "s-a p p p";
-}
-
-#templateStudios.container .main-studios {
-    display: grid;
-    grid-area: main-studio;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 338px);
-    grid-row-end: auto;
-    border-left: 1px solid rgba(138,43,226,0.17);
-}
-
-.main-studios .container-studio {
-    min-height: 334px;
-    max-height: 334px;
-    overflow: hidden;
-}
-
-.main-studios .container-studio .studio-image > a {
-    justify-content: center;
-    display: flex;
-    max-width: 320px;
-    max-height: 240px;
-}
-
-.container-studio .studio-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 300px;
-    margin: 25px;
-}
-
-.container-studio .studio-image img {
-    /*display: block;
-    margin-left: auto;
-    margin-right: auto;*/
-    vertical-align: middle;
-    max-width: 320px;
-    max-height: 240px;
-}
-
-.container-studio .studio-image img[title="1492 Pictures"],
-.container-studio .studio-image img[title="Darkbloom Productions"] {
-    background-color: black;
-}
-
-.container-studio .studio-name {
-    font-family: 'Muli', sans-serif;
-    font-weight: 560;
-    font-size: 16px;
-    color: black;
-    text-align: center;
+    /* STUDIOS */
 }
 
 /* PRODUCTS VIEW */
-
 .container--product-view {
     display: grid;
     grid-template-columns: auto;
