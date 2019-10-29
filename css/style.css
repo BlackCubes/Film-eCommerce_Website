@@ -1844,6 +1844,14 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         height: 100%;
     }
 
+    .container--studio-view .product-studio-title--studio-view {
+        width: 100%;
+    }
+
+    .container--studio-view .product-studio-title--studio-view h2 {
+        font-size: 17px;
+    }
+
     .container--studio-view .image--studio-view img {
         max-width: 100%;
     }
