@@ -1882,6 +1882,16 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         border-right: none;
     }
 
+    #cartCard .cart-quantity {
+        height: 45px;
+        margin-top: 15px;
+    }
+
+    #cartCard .cart-stock {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     .product-info-option > hr {
         width: 90%;
     }
@@ -1909,6 +1919,18 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     #cartCard .cart-product-price span.cart-price-value {
+        font-size: 15px;
+    }
+
+    #cartCard .cart-quantity label {
+        font-size: 16px;
+    }
+    
+    #cartCard .cart-quantity select {
+        font-size: 15px;
+    }
+
+    #cartCard .cart-stock span.stock-success {
         font-size: 15px;
     }
 
