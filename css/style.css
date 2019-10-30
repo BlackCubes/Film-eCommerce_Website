@@ -1837,6 +1837,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .main-info--product-view .product-info-option {
         width: 100%;
+        text-align: center;
     }
 
     .main-info--product-view .image--product-view img {
