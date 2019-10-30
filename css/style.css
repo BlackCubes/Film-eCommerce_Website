@@ -1822,6 +1822,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         display: none;
     }
 
+    .container--product-view .main-info--product-view {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     /* ARTIST PROFILE VIEW */
     .container--artist-view {
         display: block;
