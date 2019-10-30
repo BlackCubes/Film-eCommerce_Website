@@ -1817,6 +1817,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     .container--product-view .cast-crew-info--product-view,
+    .container--product-view .additional-table-container--info-option,
     .container--product-view .product-specs-info--product-view {
         display: none;
     }
