@@ -1854,6 +1854,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         margin-top: 5px;
     }
 
+    .product-info-option > hr {
+        width: 90%;
+    }
+
     .product-info-option .product-title--info-option h1 {
         font-size: 17px;
         letter-spacing: 3px;
