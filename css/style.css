@@ -1816,6 +1816,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
+    .container--product-view .cast-crew-info--product-view,
+    .container--product-view .product-specs-info--product-view {
+        display: none;
+    }
+
     /* ARTIST PROFILE VIEW */
     .container--artist-view {
         display: block;
