@@ -1828,6 +1828,15 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         height: 100%;
     }
 
+    .main-info--product-view .image--product-view {
+        width: 90%;
+        height: 100%;
+    }
+
+    .main-info--product-view .image--product-view img {
+        max-width: 100%;
+    }
+
     /* ARTIST PROFILE VIEW */
     .container--artist-view {
         display: block;
