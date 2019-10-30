@@ -1835,6 +1835,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         margin-right: auto;
     }
 
+    .main-info--product-view .product-info-option {
+        width: 100%;
+    }
+
     .main-info--product-view .image--product-view img {
         max-width: 100%;
     }
