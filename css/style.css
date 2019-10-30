@@ -1845,6 +1845,15 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         text-align: center;
     }
 
+    .product-info-option .product-edition--info-option {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .product-info-option .product-edition--info-option h3 {
+        font-size: 15px;
+    }
+
     .product-info-option .cast-crew-format--info-option {
         font-size: 12px;
         width: 100%;
