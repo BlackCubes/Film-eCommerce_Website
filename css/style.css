@@ -1845,6 +1845,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         text-align: center;
     }
 
+    .product-info-option .cast-crew-format--info-option {
+        font-size: 12px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
     .main-info--product-view .image--product-view img {
         max-width: 100%;
     }
