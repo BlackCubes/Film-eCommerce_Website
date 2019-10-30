@@ -1868,6 +1868,20 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         padding-left: 0;
     }
 
+    .main-info--product-view .cart-wishlist-container {
+        width: 100%;
+    }
+
+    .cart-wishlist-container #cartCard {
+        width: 90%;
+        margin: 23px auto;
+        border-top: 1px solid rgba(138,43,226,0.17);
+        border-radius: 0;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+    }
+
     .product-info-option > hr {
         width: 90%;
     }
@@ -1892,6 +1906,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         font-weight: 400;
         line-height: 20px;
         margin: 0;
+    }
+
+    #cartCard .cart-product-price span.cart-price-value {
+        font-size: 15px;
     }
 
     .main-info--product-view .image--product-view img {
