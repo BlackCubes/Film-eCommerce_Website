@@ -906,7 +906,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     text-align: center;
 }
 
-/* PRODUCTS VIEW */
+/* PRODUCTS PROFILE VIEW */
 .container--product-view {
     display: grid;
     grid-template-columns: auto;
@@ -1808,6 +1808,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .container-studio .studio-image img {
         max-width: 100%;
+    }
+
+    /* PRODUCTS PROFILE VIEW */
+    .container--product-view {
+        display: block;
+        width: 100%;
     }
 
     /* ARTIST PROFILE VIEW */
