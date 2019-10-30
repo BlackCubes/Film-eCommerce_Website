@@ -1904,6 +1904,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
+    .container--product-view .extra-desc-product-info--product-view {
+        width: 100%;
+    }
+
     .product-info-option > hr {
         width: 90%;
     }
