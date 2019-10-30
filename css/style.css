@@ -1892,6 +1892,18 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         margin-bottom: 0;
     }
 
+    #cartCard .cart-add-button,
+    #cartCard .wishlist-add-button {
+        float: left;
+        width: 50%;
+        margin: 0;
+    }
+
+    #cartCard .cart-add-button .product-cart-button,
+    #cartCard .wishlist-add-button .product-wishlist-button {
+        width: 100%;
+    }
+
     .product-info-option > hr {
         width: 90%;
     }
@@ -1932,6 +1944,16 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     #cartCard .cart-stock span.stock-success {
         font-size: 15px;
+    }
+
+    #cartCard .cart-add-button input,
+    #cartCard .wishlist-add-button input {
+        font-size: 15px;
+    }
+
+    #cartCard .cart-add-button input:hover,
+    #cartCard .wishlist-add-button input:hover {
+        font-size: 14px;
     }
 
     .main-info--product-view .image--product-view img {
