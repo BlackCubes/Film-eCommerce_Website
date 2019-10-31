@@ -2647,6 +2647,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         margin-right: auto;
     }
 
+    .container--cart-view .cart-title--cart-view,
+    .container--cart-view .later-title--later-view {
+        width: 100%;
+    }
+
     /* USER WISHLIST VIEW */
 }
 
