@@ -1537,6 +1537,85 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     max-height: 240px;
 }
 
+/* SIDEBAR OPTIONS PAGE */
+.container--option-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+.container--option-view span.option-title--option-view,
+.container--option-view span.option-name-type--option-view,
+.container--option-view span.option-letters--option-view {
+    font-size: 13px;
+}
+
+.container--option-view span.option-name-type--option-view {
+    font-weight: 700;
+    padding: 0 5px;
+}
+
+.container--option-view span.option-letters--option-view {
+    color: #999;
+    padding: 0 5px;
+}
+
+.container--option-view .option-lists--option-view ul li a {
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.container--option-view .option-lists--option-view ul li a:hover {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.container--option-view .option-lists--option-view ul {
+    list-style: none;
+}
+
+.container--option-view .option-lists--option-view ul:nth-child(1) {
+    text-align: left;
+}
+
+.container--option-view .option-lists--option-view ul:nth-child(2) {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.container--option-view .option-lists--option-view ul:nth-child(3) {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.container--option-view .main-info--option-view {
+    width: 1450px;
+    margin: 10px auto 10px auto;
+}
+
+.container--option-view .option-title-letters--option-view {
+    height: 36px;
+    width: 1450px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(250, 246, 255);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
+.container--option-view .option-header-center--option-view {
+    display: flex;
+    justify-content: center;
+    line-height: 36px;
+}
+
+.container--option-view .option-lists--option-view {
+    display: grid;
+    grid-template-areas:
+        "option-list option-list option-list";
+}
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -2167,86 +2246,6 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--studio-view .image--studio-view img {
         max-width: 100%;
     }
-}
-
-/* SIDEBAR OPTIONS PAGE */
-
-.container--option-view div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-.container--option-view span.option-title--option-view,
-.container--option-view span.option-name-type--option-view,
-.container--option-view span.option-letters--option-view {
-    font-size: 13px;
-}
-
-.container--option-view span.option-name-type--option-view {
-    font-weight: 700;
-    padding: 0 5px;
-}
-
-.container--option-view span.option-letters--option-view {
-    color: #999;
-    padding: 0 5px;
-}
-
-.container--option-view .option-lists--option-view ul li a {
-    font-size: 13px;
-    font-weight: 300;
-    text-decoration: none;
-}
-
-.container--option-view .option-lists--option-view ul li a:hover {
-    color: blueviolet;
-    text-decoration: underline;
-}
-
-.container--option-view .option-lists--option-view ul {
-    list-style: none;
-}
-
-.container--option-view .option-lists--option-view ul:nth-child(1) {
-    text-align: left;
-}
-
-.container--option-view .option-lists--option-view ul:nth-child(2) {
-    text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.container--option-view .option-lists--option-view ul:nth-child(3) {
-    text-align: right;
-    padding-right: 40px;
-}
-
-.container--option-view .main-info--option-view {
-    width: 1450px;
-    margin: 10px auto 10px auto;
-}
-
-.container--option-view .option-title-letters--option-view {
-    height: 36px;
-    width: 1450px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: rgb(250, 246, 255);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-}
-
-.container--option-view .option-header-center--option-view {
-    display: flex;
-    justify-content: center;
-    line-height: 36px;
-}
-
-.container--option-view .option-lists--option-view {
-    display: grid;
-    grid-template-areas:
-        "option-list option-list option-list";
 }
 
 /* USER PROFILE PAGE */
