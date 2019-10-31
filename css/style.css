@@ -1905,7 +1905,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     .container--product-view .extra-desc-product-info--product-view {
-        width: 100%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-top: 1px solid rgba(138,43,226,0.17);
     }
 
     .container--product-view .product-details-info--product-view {
@@ -1918,6 +1921,15 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .container--product-view .product-details-list--product-view tbody {
         width: 100%;
+    }
+
+    .container--product-view .main-info--product-view,
+    .container--product-view .cast-crew-info--product-view,
+    .container--product-view .extra-desc-product-info--product-view,
+    .container--product-view .product-details-info--product-view {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
     }
 
     .product-info-option > hr {
