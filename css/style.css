@@ -1971,6 +1971,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         margin-top: 15px;
     }
 
+    .main-description-inner .description-title h4 {
+        letter-spacing: 3px;
+    }
+
     .main-description-inner .description-value p {
         font-size: 13px;
         font-weight: 400;
