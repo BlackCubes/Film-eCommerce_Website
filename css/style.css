@@ -1923,10 +1923,20 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .container--product-view .product-details-info--product-view {
         width: 100%;
+        border-top: 1px solid rgba(138,43,226,0.17);
+    }
+
+    .container--product-view .product-details-title--product-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
 
     .container--product-view .product-details-list--product-view {
         width: 90%;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .container--product-view .product-details-list--product-view tbody {
@@ -2004,6 +2014,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .container--product-view .extra-desc-info--product-view p {
         margin: 0;
+    }
+
+    .container--product-view .product-details-list--product-view tr td:nth-child(1) {
+        font-size: 13px;
     }
 
     .main-info--product-view .image--product-view img {
