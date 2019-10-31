@@ -1616,6 +1616,107 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         "option-list option-list option-list";
 }
 
+/* USER PROFILE PAGE */
+.container--profile-view div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+.container--profile-view .profile-title--profile-view,
+.container--profile-view .container-login-security--profile-view,
+.container--profile-view .container-address--profile-view,
+.container--profile-view .container-orders--profile-view,
+.container--profile-view .container-wishlist--profile-view,
+.container--profile-view .container-payment--profile-view {
+    text-align: center;
+}
+
+.container--profile-view .profile-option--profile-view {
+    display: grid;
+    width: 1100px;
+    margin: 30px auto 50px auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "pv-login-security pv-orders pv-wishlist"
+    "pv-address blank pv-payment";
+}
+
+.container--profile-view .container-login-security--profile-view {
+    grid-area: pv-login-security;
+}
+
+.container--profile-view .container-orders--profile-view {
+    grid-area: pv-orders;
+}
+
+.container--profile-view .container-address--profile-view {
+    grid-area: pv-address;
+}
+
+.container--profile-view .container-wishlist--profile-view {
+    grid-area: pv-wishlist;
+}
+
+.container--profile-view .container-payment--profile-view {
+    grid-area: pv-payment;
+}
+
+.container--profile-view .container-login-security--profile-view,
+.container--profile-view .container-address--profile-view,
+.container--profile-view .container-orders--profile-view,
+.container--profile-view .container-wishlist--profile-view,
+.container--profile-view .container-payment--profile-view {
+    width: 320px;
+    height: 130px;
+    margin: 20px auto 20px auto;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+}
+
+.container--profile-view .profile-title--profile-view h2 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.container--profile-view .profile-option--profile-view h4 {
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease-out;
+}
+
+.container--profile-view .profile-option--profile-view p {
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.3s ease-out;
+}
+
+.container--profile-view .profile-option--profile-view a {
+    display: block;
+    text-decoration: none;
+    width: 320px;
+    height: 130px;
+    padding: 1px;
+    transition: all 0.3s ease-out;
+}
+
+.container--profile-view .profile-option--profile-view a:hover {
+    background-color: rgba(94, 94, 94, 0.01);
+    transition: all 0.3s ease-in-out;
+}
+
+/*.container--profile-view .profile-option--profile-view h4:hover {
+    color: rgb(94, 94, 94);
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container--profile-view .profile-option--profile-view p:hover {
+    color: rgb(94, 94, 94);
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+}*/
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -2294,110 +2395,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 }
 
-/* USER PROFILE PAGE */
-
-.container--profile-view div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-.container--profile-view .profile-title--profile-view,
-.container--profile-view .container-login-security--profile-view,
-.container--profile-view .container-address--profile-view,
-.container--profile-view .container-orders--profile-view,
-.container--profile-view .container-wishlist--profile-view,
-.container--profile-view .container-payment--profile-view {
-    text-align: center;
-}
-
-.container--profile-view .profile-option--profile-view {
-    display: grid;
-    width: 1100px;
-    margin: 30px auto 50px auto;
-    grid-template-columns: auto;
-    grid-template-areas:
-    "pv-login-security pv-orders pv-wishlist"
-    "pv-address blank pv-payment";
-}
-
-.container--profile-view .container-login-security--profile-view {
-    grid-area: pv-login-security;
-}
-
-.container--profile-view .container-orders--profile-view {
-    grid-area: pv-orders;
-}
-
-.container--profile-view .container-address--profile-view {
-    grid-area: pv-address;
-}
-
-.container--profile-view .container-wishlist--profile-view {
-    grid-area: pv-wishlist;
-}
-
-.container--profile-view .container-payment--profile-view {
-    grid-area: pv-payment;
-}
-
-.container--profile-view .container-login-security--profile-view,
-.container--profile-view .container-address--profile-view,
-.container--profile-view .container-orders--profile-view,
-.container--profile-view .container-wishlist--profile-view,
-.container--profile-view .container-payment--profile-view {
-    width: 320px;
-    height: 130px;
-    margin: 20px auto 20px auto;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-}
-
-.container--profile-view .profile-title--profile-view h2 {
-    font-size: 21px;
-    font-weight: 400;
-}
-
-.container--profile-view .profile-option--profile-view h4 {
-    font-size: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease-out;
-}
-
-.container--profile-view .profile-option--profile-view p {
-    font-size: 14px;
-    font-weight: 300;
-    transition: all 0.3s ease-out;
-}
-
-.container--profile-view .profile-option--profile-view a {
-    display: block;
-    text-decoration: none;
-    width: 320px;
-    height: 130px;
-    padding: 1px;
-    transition: all 0.3s ease-out;
-}
-
-.container--profile-view .profile-option--profile-view a:hover {
-    background-color: rgba(94, 94, 94, 0.01);
-    transition: all 0.3s ease-in-out;
-}
-
-/*.container--profile-view .profile-option--profile-view h4:hover {
-    color: rgb(94, 94, 94);
-    font-size: 14px;
-    transition: all 0.3s ease-in-out;
-}
-
-.container--profile-view .profile-option--profile-view p:hover {
-    color: rgb(94, 94, 94);
-    font-size: 13px;
-    transition: all 0.3s ease-in-out;
-}*/
-
 /* USER CART VIEW */
-
 .container--cart-view div {
     font-family: 'Muli', sans-serif;
     color: black;
