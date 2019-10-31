@@ -1913,7 +1913,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
     .container--product-view .extra-desc-title--product-view {
         width: 100%;
-        margin-top: 10px;
+        margin-top: 20px;
+    }
+
+    .container--product-view .extra-desc-info--product-view {
+        margin: 10px auto 30px auto;
+        text-align: center;
     }
 
     .container--product-view .product-details-info--product-view {
@@ -1995,6 +2000,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         color: #767676;
         margin: 0;
         letter-spacing: 2px;
+    }
+
+    .container--product-view .extra-desc-info--product-view p {
+        margin: 0;
     }
 
     .main-info--product-view .image--product-view img {
