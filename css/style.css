@@ -2252,6 +2252,20 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         display: block;
         width: 100%;
     }
+
+    .container--option-view .option-title-letters--option-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--option-view .option-header-center--option-view {
+        width: 100%;
+    }
+
+    .container--option-view span.option-letters--option-view {
+        display: none;
+    }
 }
 
 /* USER PROFILE PAGE */
