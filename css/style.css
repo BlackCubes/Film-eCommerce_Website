@@ -2633,6 +2633,14 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--profile-view .profile-option--profile-view p {
         font-size: 12px;
     }
+
+    /* USER CART VIEW */
+    .container--cart-view {
+        display: block;
+        width: 100%;
+    }
+
+    /* USER WISHLIST VIEW */
 }
 
 /* SIGN IN */
