@@ -2393,6 +2393,23 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--option-view .option-lists--option-view ul li a {
         font-size: 12px;
     }
+
+    /* USER PROFILE PAGE */
+    .container--profile-view {
+        display: block;
+        width: 100%;
+    }
+    
+    .container--profile-view .profile-title--profile-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--profile-view .profile-option--profile-view {
+        display: block;
+        width: 90%;
+    }
 }
 
 /* USER CART VIEW */
