@@ -1984,6 +1984,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         font-size: 14px;
     }
 
+    .container--product-view .extra-desc-title--product-view h2,
+    .container--product-view .product-details-title--product-view h2 {
+        font-size: 16px;
+        color: #767676;
+        margin: 0;
+    }
+
     .main-info--product-view .image--product-view img {
         max-width: 100%;
     }
