@@ -2640,6 +2640,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
+    .container--cart-view .main-info--cart-view,
+    .container--cart-view .cart-later-info--later-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* USER WISHLIST VIEW */
 }
 
