@@ -1922,21 +1922,22 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     .container--product-view .product-details-info--product-view {
-        width: 100%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         border-top: 1px solid rgba(138,43,226,0.17);
     }
 
     .container--product-view .product-details-title--product-view {
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
     }
 
     .container--product-view .product-details-list--product-view {
-        width: 90%;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        width: 100%;
+        margin: 10px 0 20px 0;
     }
 
     .container--product-view .product-details-list--product-view tbody {
