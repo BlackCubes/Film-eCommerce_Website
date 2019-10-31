@@ -2643,7 +2643,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--cart-view .main-info--cart-view,
     .container--cart-view .cart-later-info--later-view {
         width: 90%;
-        margin: 20px auto 30px auto;
+        margin: 40px auto 40px auto;
     }
 
     .container--cart-view .cart-title--cart-view,
@@ -2701,6 +2701,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--cart-view span.subtotal-display--cart-view,
     .container--cart-view .product-price--later-view p {
         font-size: 15px;
+    }
+
+    .container--cart-view span.subtotal-title-amount--cart-view {
+        font-size: 16px;
     }
 
     .container--cart-view .product-image--cart-view img,
