@@ -2246,6 +2246,12 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--studio-view .image--studio-view img {
         max-width: 100%;
     }
+
+    /* SIDEBAR OPTIONS PAGE */
+    .container--option-view .main-info--option-view {
+        display: block;
+        width: 100%;
+    }
 }
 
 /* USER PROFILE PAGE */
