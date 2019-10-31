@@ -2266,6 +2266,32 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--option-view span.option-letters--option-view {
         display: none;
     }
+
+    .container--option-view .option-lists--option-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--option-view .option-lists--option-view ul:nth-child(1) {
+        padding: 0;
+    }
+
+    .container--option-view .option-lists--option-view ul:nth-child(2) {
+        padding: 0;
+    }
+    
+    .container--option-view .option-lists--option-view ul:nth-child(3) {
+        padding: 0;
+    }
+
+    .container--option-view .option-lists--option-view ul li {
+        margin-top: 10px;
+    }
+
+    .container--option-view .option-lists--option-view ul li a {
+        font-size: 12px;
+    }
 }
 
 /* USER PROFILE PAGE */
