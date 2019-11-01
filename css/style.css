@@ -2328,6 +2328,993 @@ form#userChangePassCard {
     font-weight: 300;
 }
 
+/* REGISTRATION PAGE */
+form#registerUserCard1,
+form#registerUserCard2,
+.registerUserSuccessCard,
+.registerUserErrorCard {
+    width: 540px;
+    height: 860px;
+    margin: 50px auto 50px auto;
+}
+
+#registerUserCard1 .register-card,
+#registerUserCard2 .register-card--shipping,
+.registerUserSuccessCard .register-success-card--user,
+.registerUserErrorCard .register-error-card--user {
+    width: 500px;
+    height: 850px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-card div,
+.register-card--shipping div,
+.register-success-card--user div,
+.register-error-card--user div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+.register-card .register-title,
+.register-card .register-continue,
+.register-card .register-sign-in-option,
+.register-card .register-seller-option,
+.register-card--shipping .shipping-title--register,
+.register-card--shipping .shipping-info--register,
+.register-card--shipping .register-submit,
+.register-success-card--user .user-success--register,
+.register-error-card--user .user-error--register {
+    text-align: center;
+}
+
+.register-title,
+.shipping-title--register,
+.register-success-card--user .user-success--register,
+.register-error-card--user .user-error--register {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.register-title h2,
+.shipping-title--register h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.shipping-info--register p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#registerUserCard1 .register-name,
+#registerUserCard1 .register-email,
+#registerUserCard1 .register-new-password,
+#registerUserCard1 .register-confirm-password,
+#registerUserCard2 .shipping-address-1,
+#registerUserCard2 .shipping-address-2,
+#registerUserCard2 .shipping-city,
+#registerUserCard2 .shipping-state-zip,
+#registerUserCard2 .shipping-phone {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.register-name .first-name--register,
+.register-name .last-name--register,
+.shipping-state-zip .shipping-state,
+.shipping-state-zip .shipping-zip-code {
+    float: left;
+    width: 220px;
+}
+
+.first-name--register,
+.shipping-state {
+    margin: 0 15px 0 0;
+}
+
+.last-name--register,
+.shipping-zip-code {
+    margin: 0 0 0 15px;
+}
+
+.first-name--register label, .first-name--register input,
+.last-name--register label, .last-name--register input,
+.register-email label, .register-email input,
+.register-new-password label, .register-new-password input,
+.register-confirm-password label, .register-confirm-password input,
+.shipping-address-1 label, .shipping-address-1 input,
+.shipping-address-2 label, .shipping-address-2 input,
+.shipping-city label, .shipping-city input,
+.shipping-state label, .shipping-state input,
+.shipping-zip-code label, .shipping-zip-code input,
+.shipping-phone label, .shipping-phone input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.register-new-password .register-password-info,
+.shipping-address-2 .register-shipping-info,
+.shipping-phone .register-phone-info {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+
+.first-name--register .user-first-name--new,
+.last-name--register .user-last-name--new,
+.shipping-state .user-state--register,
+.shipping-zip-code .user-zip--register {
+    width: 208px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.first-name--register input,
+.last-name--register input,
+.register-email input,
+.register-new-password input,
+.register-confirm-password input,
+.shipping-address-1 input,
+.shipping-address-2 input,
+.shipping-city input,
+.shipping-state input,
+.shipping-zip-code input,
+.shipping-phone input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+.first-name--register input:focus,
+.last-name--register input:focus,
+.register-email input:focus,
+.register-new-password input:focus,
+.register-confirm-password input:focus,
+.shipping-address-1 input:focus,
+.shipping-address-2 input:focus,
+.shipping-city input:focus,
+.shipping-state input:focus,
+.shipping-zip-code input:focus,
+.shipping-phone input:focus {
+    background-color: white;
+}
+
+#registerUserCard1 .user-email--register,
+#registerUserCard1 .user-new-pass--register,
+#registerUserCard1 .user-confirm-pass--register,
+#registerUserCard2 .user-address-1--register,
+#registerUserCard2 .user-address-2--register,
+#registerUserCard2 .user-city--register,
+#registerUserCard2 .user-phone--register {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.register-continue, .register-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.register-continue input, .register-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.register-continue input:hover, .register-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-continue .register-continue-button,
+.register-submit .submit-button--register {
+    width: 482px;
+    height: 45px;
+}
+
+.register-card .register-sign-in-option {
+    width: 185px;
+    /*height: 30px;*/
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
+.register-sign-in-option p, .register-sign-in-option a,
+.register-seller-option p, .register-seller-option a {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.register-sign-in-option a, .register-seller-option a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+#registerUserCard1 .name-error, #registerUserCard1 .email-error,
+#registerUserCard1 .pass-error, #registerUserCard1 .system-error,
+#registerUserCard2 .address-1-error--register,
+#registerUserCard2 .address-2-error--register,
+#registerUserCard2 .city-error--register,
+#registerUserCard2 .state-error--register,
+#registerUserCard2 .zip-code-error--register,
+#registerUserCard2 .phone-error--register,
+#registerUserCard2 .system-error {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#registerUserCard1 .name-error p, #registerUserCard1 .email-error p,
+#registerUserCard1 .pass-error p, #registerUserCard1 .system-error p,
+#registerUserCard2 .address-1-error--register p,
+#registerUserCard2 .address-2-error--register p,
+#registerUserCard2 .city-error--register p,
+#registerUserCard2 .state-error--register p,
+#registerUserCard2 .zip-code-error--register p,
+#registerUserCard2 .phone-error--register p,
+#registerUserCard2 .system-error p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+.register-success-card--user .user-success--register,
+.register-error-card--user .user-error--register {
+    line-height: 50px;
+    width: 458px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-success-card--user .user-success--register p,
+.register-error-card--user .user-error--register p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.register-success-card--user .user-success--register p {
+    color: #336600;
+}
+
+.register-error-card--user .user-error--register p {
+    color: red;
+}
+
+/* CHANGE NAME PAGE */
+
+form#userChangeNameCard {
+    width: 640px;
+    height: 460px;
+    margin: 20px auto 50px auto;
+}
+
+#userChangeNameCard .change-name-card {
+    width: 600px;
+    height: 450px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.change-name-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+#userChangeNameCard .change-name-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#userChangeNameCard .change-name-info p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#userChangeNameCard .change-full-name label,
+#userChangeNameCard .change-full-name input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userChangeNameCard .change-full-name span.change-middle-name-info {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+#userChangeNameCard .full-name-error--change-name p,
+#userChangeNameCard .system-error--change-name p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+#userChangeNameCard .change-name-title,
+#userChangeNameCard .change-name-submit,
+#userChangeNameCard .system-error--change-name {
+    text-align: center;
+}
+
+#userChangeNameCard .change-name-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#userChangeNameCard .change-name-info,
+#userChangeNameCard .full-name-error--change-name {
+    margin: 15px 15px;
+    padding-bottom: 5px;
+}
+
+#userChangeNameCard .change-full-name {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userChangeNameCard .first-name--change-name,
+#userChangeNameCard .middle-name--change-name,
+#userChangeNameCard .last-name--change-name {
+    float: left;
+    width: 180px;
+}
+
+#userChangeNameCard .first-name--change-name,
+#userChangeNameCard .middle-name--change-name {
+    margin: 0 15px 0 0;
+}
+
+#userChangeNameCard .first-name--change-name .user-first-name--change-name,
+#userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
+#userChangeNameCard .last-name--change-name .user-last-name--change-name {
+    width: 161px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangeNameCard .first-name--change-name input,
+#userChangeNameCard .middle-name--change-name input,
+#userChangeNameCard .last-name--change-name input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeNameCard .first-name--change-name input:focus,
+#userChangeNameCard .middle-name--change-name input:focus,
+#userChangeNameCard .last-name--change-name input:focus {
+    background-color: white;
+}
+
+#userChangeNameCard .change-name-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#userChangeNameCard .change-name-submit .change-name-button {
+    width: 578px;
+    height: 45px;
+}
+
+#userChangeNameCard .change-name-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#userChangeNameCard .change-name-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* CHANGE EMAIL PAGE */
+
+form#userChangeEmailCard {
+    width: 540px;
+    height: 710px;
+    margin: 20px auto 50px auto;
+}
+
+#userChangeEmailCard .change-email-card {
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userChangeEmailCard .change-email-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+#userChangeEmailCard .change-email-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#userChangeEmailCard .current-email--change-email label,
+#userChangeEmailCard .current-email--change-email p,
+#userChangeEmailCard .new-email-input--change-email label,
+#userChangeEmailCard .new-email-input--change-email input,
+#userChangeEmailCard .confirm-email-input--change-email label,
+#userChangeEmailCard .confirm-email-input--change-email input,
+#userChangeEmailCard .confirm-password-input--change-email label,
+#userChangeEmailCard .confirm-password-input--change-email input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userChangeEmailCard .email-error--change-email p,
+#userChangeEmailCard .pass-error--change-email p,
+#userChangeEmailCard .system-error--change-email p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+#userChangeEmailCard .change-email-title,
+#userChangeEmailCard .change-email-submit,
+#userChangeEmailCard .system-error--change-email {
+    text-align: center;
+}
+
+#userChangeEmailCard .user-current-email--change-email {
+    line-height: 40px;
+}
+
+#userChangeEmailCard .change-email-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#userChangeEmailCard .current-email--change-email,
+#userChangeEmailCard .new-email-input--change-email,
+#userChangeEmailCard .confirm-email-input--change-email,
+#userChangeEmailCard .confirm-password-input--change-email {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userChangeEmailCard .user-current-email--change-email,
+#userChangeEmailCard .user-new-email--change-email,
+#userChangeEmailCard .user-confirm-email--change-email,
+#userChangeEmailCard .user-confirm-password--change-email {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangeEmailCard .user-current-email--change-email,
+#userChangeEmailCard .new-email-input--change-email input,
+#userChangeEmailCard .confirm-email-input--change-email input,
+#userChangeEmailCard .confirm-password-input--change-email input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeEmailCard .new-email-input--change-email input:focus,
+#userChangeEmailCard .confirm-email-input--change-email input:focus,
+#userChangeEmailCard .confirm-password-input--change-email input:focus {
+    background-color: white;
+}
+
+#userChangeEmailCard .change-email-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#userChangeEmailCard .change-email-submit .change-email-button {
+    width: 482px;
+    height: 45px;
+}
+
+#userChangeEmailCard .change-email-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#userChangeEmailCard .change-email-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#userChangeEmailCard .email-error--change-email,
+#userChangeEmailCard .pass-error--change-email {
+    margin: 0px 15px;
+}
+
+#userChangeEmailCard .user-current-email--change-email p,
+#userChangeEmailCard .email-error--change-email p,
+#userChangeEmailCard .pass-error--change-email p {
+    margin: 0;
+}
+
+/* CHANGE PHONE NUMBER PAGE */
+
+form#userChangePhoneCard {
+    width: 540px;
+    height: 510px;
+    margin: 20px auto 50px auto;
+}
+
+#userChangePhoneCard .change-phone-card {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userChangePhoneCard .change-phone-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+#userChangePhoneCard .change-phone-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#userChangePhoneCard .current-phone--change-phone label,
+#userChangePhoneCard .current-phone--change-phone .user-current-phone--change-phone p,
+#userChangePhoneCard .new-phone-input--change-phone label,
+#userChangePhoneCard .new-phone-input--change-phone input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userChangePhoneCard .phone-error--change-phone p,
+#userChangePhoneCard .system-error--change-phone p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+#userChangePhoneCard .change-phone-title,
+#userChangePhoneCard .change-phone-submit,
+#userChangePhoneCard .cancel-phone-submit,
+#userChangePhoneCard .system-error--change-phone {
+    text-align: center;
+}
+
+#userChangePhoneCard .user-current-phone--change-phone {
+    line-height: 40px;
+}
+
+#userChangePhoneCard .old-phone-number--change-phone,
+#userChangePhoneCard .delete-phone-submit {
+    float: left;
+}
+
+#userChangePhoneCard .change-phone-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#userChangePhoneCard .current-phone--change-phone,
+#userChangePhoneCard .new-phone-input--change-phone {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userChangePhoneCard .user-current-phone--change-phone {
+    width: 229px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangePhoneCard .user-new-phone--change-phone {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangePhoneCard .user-current-phone--change-phone,
+#userChangePhoneCard .new-phone-input--change-phone input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangePhoneCard .new-phone-input--change-phone input:focus {
+    background-color: white;
+}
+
+#userChangePhoneCard .delete-phone-submit {
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 24px;
+    margin-left: 17px;
+}
+
+#userChangePhoneCard .delete-phone-submit .delete-phone-button {
+    width: 200px;
+    height: 40px;
+}
+
+#userChangePhoneCard .change-phone-submit,
+#userChangePhoneCard .cancel-phone-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 2.5px;
+}
+
+#userChangePhoneCard .change-phone-submit {
+    padding-top: 20px;
+}
+
+#userChangePhoneCard .cancel-phone-submit {
+    padding-top: 2.5px;
+}
+
+#userChangePhoneCard .change-phone-submit .change-phone-button,
+#userChangePhoneCard .cancel-phone-submit .cancel-phone-button {
+    width: 482px;
+    height: 45px;
+}
+
+#userChangePhoneCard .delete-phone-submit input,
+#userChangePhoneCard .change-phone-submit input,
+#userChangePhoneCard .cancel-phone-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#userChangePhoneCard .delete-phone-submit input:hover,
+#userChangePhoneCard .change-phone-submit input:hover,
+#userChangePhoneCard .cancel-phone-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#userChangePhoneCard .phone-error--change-phone,
+#userChangePhoneCard .system-error--change-phone {
+    margin: 0px 15px;
+}
+
+#userChangePhoneCard .user-current-phone--change-phone p,
+#userChangePhoneCard .phone-error--change-phone p,
+#userChangePhoneCard .system-error--change-phone p {
+    margin: 0;
+}
+
+/* LOGIN & SECURITY OPTIONS PAGE */
+
+form#userOptionLoginSecurityCard {
+    width: 540px;
+    height: 540px;
+    margin: 20px auto 50px auto;
+}
+
+#userOptionLoginSecurityCard .option-login-security-card {
+    width: 500px;
+    height: 530px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userOptionLoginSecurityCard .option-login-security-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+#userOptionLoginSecurityCard .option-login-security-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#userOptionLoginSecurityCard .current-full-name--account-option label,
+#userOptionLoginSecurityCard .user-current-name--account-option p,
+#userOptionLoginSecurityCard .current-email--account-option label,
+#userOptionLoginSecurityCard .user-current-email--account-option p,
+#userOptionLoginSecurityCard .current-phone--account-option label,
+#userOptionLoginSecurityCard .user-current-phone--account-option p,
+#userOptionLoginSecurityCard .current-password--account-option label,
+#userOptionLoginSecurityCard .user-current-password--account-option p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userOptionLoginSecurityCard .option-login-security-title {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#userOptionLoginSecurityCard .user-current-name--account-option,
+#userOptionLoginSecurityCard .user-current-email--account-option,
+#userOptionLoginSecurityCard .user-current-phone--account-option,
+#userOptionLoginSecurityCard .user-current-password--account-option {
+    line-height: 40px;
+}
+
+#userOptionLoginSecurityCard .current-full-name--account-option,
+#userOptionLoginSecurityCard .edit-full-name-submit,
+#userOptionLoginSecurityCard .current-email--account-option,
+#userOptionLoginSecurityCard .edit-email-submit,
+#userOptionLoginSecurityCard .current-phone--account-option,
+#userOptionLoginSecurityCard .edit-phone-submit,
+#userOptionLoginSecurityCard .current-password--account-option,
+#userOptionLoginSecurityCard .edit-password-submit {
+    float: left;
+}
+
+#userOptionLoginSecurityCard .border-row {
+    border-top: 1px solid rgba(138,43,226,0.17);
+    margin: 30px 0;
+}
+
+#userOptionLoginSecurityCard .edit-full-name--account-option,
+#userOptionLoginSecurityCard .edit-email--account-option,
+#userOptionLoginSecurityCard .edit-phone--account-option,
+#userOptionLoginSecurityCard .edit-password--account-option {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userOptionLoginSecurityCard .user-current-name--account-option,
+#userOptionLoginSecurityCard .user-current-email--account-option,
+#userOptionLoginSecurityCard .user-current-phone--account-option,
+#userOptionLoginSecurityCard .user-current-password--account-option {
+    width: 229px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit,
+#userOptionLoginSecurityCard .edit-email-submit,
+#userOptionLoginSecurityCard .edit-phone-submit,
+#userOptionLoginSecurityCard .edit-password-submit {
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 24px;
+    margin-left: 10px;
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit .edit-full-name-button,
+#userOptionLoginSecurityCard .edit-email-submit .edit-email-button,
+#userOptionLoginSecurityCard .edit-phone-submit .edit-phone-button,
+#userOptionLoginSecurityCard .edit-password-submit .edit-password-button {
+    width: 200px;
+    height: 40px;
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit input,
+#userOptionLoginSecurityCard .edit-email-submit input,
+#userOptionLoginSecurityCard .edit-phone-submit input,
+#userOptionLoginSecurityCard .edit-password-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#userOptionLoginSecurityCard .edit-full-name-submit input:hover,
+#userOptionLoginSecurityCard .edit-email-submit input:hover,
+#userOptionLoginSecurityCard .edit-phone-submit input:hover,
+#userOptionLoginSecurityCard .edit-password-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#userOptionLoginSecurityCard .user-current-name--account-option p,
+#userOptionLoginSecurityCard .user-current-email--account-option p,
+#userOptionLoginSecurityCard .user-current-phone--account-option p,
+#userOptionLoginSecurityCard .user-current-password--account-option p {
+    margin: 0;
+}
+
+/* CHANGE ADDRESS PAGE */
+
+form#userChangeAddressCard {
+    width: 540px;
+    height: 7100px;
+    margin: 20px auto 50px auto;
+}
+
+#userChangeAddressCard .change-address-card {
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#userChangeAddressCard .change-address-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+#userChangeAddressCard .change-address-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#userChangeAddressCard .new-address-input--change-address label,
+#userChangeAddressCard .new-address-input--change-address input,
+#userChangeAddressCard .new-city-input--change-address label,
+#userChangeAddressCard .new-city-input--change-address input,
+#userChangeAddressCard .new-state-input--change-address label,
+#userChangeAddressCard .new-state-input--change-address input,
+#userChangeAddressCard .new-zip-code-input--change-address label,
+#userChangeAddressCard .new-zip-code-input--change-address input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userChangeAddressCard .address-error--change-address p,
+#userChangeAddressCard .city-error--change-address p,
+#userChangeAddressCard .state-error--change-address p,
+#userChangeAddressCard .zip-code-error--change-address p,
+#userChangeAddressCard .system-error--change-address p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+    margin: 0;
+}
+
+#userChangeAddressCard .change-address-title,
+#userChangeAddressCard .change-address-submit,
+#userChangeAddressCard .system-error--change-address {
+    text-align: center;
+}
+
+#userChangeAddressCard .change-address-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#userChangeAddressCard .new-address-input--change-address {
+    height: 147.4px;
+    margin: 15px 15px;
+}
+
+#userChangeAddressCard .new-city-input--change-address,
+#userChangeAddressCard .new-state-input--change-address,
+#userChangeAddressCard .new-zip-code-input--change-address {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+#userChangeAddressCard .user-new-address-1--change-address,
+#userChangeAddressCard .user-new-address-2--change-address,
+#userChangeAddressCard .user-new-city--change-address,
+#userChangeAddressCard .user-new-state--change-address,
+#userChangeAddressCard .user-new-zip--change-address {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+#userChangeAddressCard .new-address-input--change-address input,
+#userChangeAddressCard .new-city-input--change-address input,
+#userChangeAddressCard .new-state-input--change-address input,
+#userChangeAddressCard .new-zip-code-input--change-address input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+#userChangeAddressCard .new-address-input--change-address input:focus,
+#userChangeAddressCard .new-city-input--change-address input:focus,
+#userChangeAddressCard .new-state-input--change-address input:focus,
+#userChangeAddressCard .new-zip-code-input--change-address input:focus {
+    background-color: white;
+}
+
+#userChangeAddressCard .change-address-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+#userChangeAddressCard .change-address-submit .change-address-button {
+    width: 482px;
+    height: 45px;
+}
+
+#userChangeAddressCard .change-address-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+#userChangeAddressCard .change-address-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#userChangeAddressCard .city-error--change-address,
+#userChangeAddressCard .state-error--change-address,
+#userChangeAddressCard .zip-code-error--change-address,
+#userChangeAddressCard .system-error--change-address {
+    margin: 0px 15px;
+}
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -3337,995 +4324,7 @@ form#userChangePassCard {
     }
 }
 
-/* REGISTRATION PAGE */
-form#registerUserCard1,
-form#registerUserCard2,
-.registerUserSuccessCard,
-.registerUserErrorCard {
-    width: 540px;
-    height: 860px;
-    margin: 50px auto 50px auto;
-}
-
-#registerUserCard1 .register-card,
-#registerUserCard2 .register-card--shipping,
-.registerUserSuccessCard .register-success-card--user,
-.registerUserErrorCard .register-error-card--user {
-    width: 500px;
-    height: 850px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.register-card div,
-.register-card--shipping div,
-.register-success-card--user div,
-.register-error-card--user div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-.register-card .register-title,
-.register-card .register-continue,
-.register-card .register-sign-in-option,
-.register-card .register-seller-option,
-.register-card--shipping .shipping-title--register,
-.register-card--shipping .shipping-info--register,
-.register-card--shipping .register-submit,
-.register-success-card--user .user-success--register,
-.register-error-card--user .user-error--register {
-    text-align: center;
-}
-
-.register-title,
-.shipping-title--register,
-.register-success-card--user .user-success--register,
-.register-error-card--user .user-error--register {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.register-title h2,
-.shipping-title--register h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.shipping-info--register p {
-    font-size: 12px;
-    font-weight: 300;
-}
-
-#registerUserCard1 .register-name,
-#registerUserCard1 .register-email,
-#registerUserCard1 .register-new-password,
-#registerUserCard1 .register-confirm-password,
-#registerUserCard2 .shipping-address-1,
-#registerUserCard2 .shipping-address-2,
-#registerUserCard2 .shipping-city,
-#registerUserCard2 .shipping-state-zip,
-#registerUserCard2 .shipping-phone {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-.register-name .first-name--register,
-.register-name .last-name--register,
-.shipping-state-zip .shipping-state,
-.shipping-state-zip .shipping-zip-code {
-    float: left;
-    width: 220px;
-}
-
-.first-name--register,
-.shipping-state {
-    margin: 0 15px 0 0;
-}
-
-.last-name--register,
-.shipping-zip-code {
-    margin: 0 0 0 15px;
-}
-
-.first-name--register label, .first-name--register input,
-.last-name--register label, .last-name--register input,
-.register-email label, .register-email input,
-.register-new-password label, .register-new-password input,
-.register-confirm-password label, .register-confirm-password input,
-.shipping-address-1 label, .shipping-address-1 input,
-.shipping-address-2 label, .shipping-address-2 input,
-.shipping-city label, .shipping-city input,
-.shipping-state label, .shipping-state input,
-.shipping-zip-code label, .shipping-zip-code input,
-.shipping-phone label, .shipping-phone input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-.register-new-password .register-password-info,
-.shipping-address-2 .register-shipping-info,
-.shipping-phone .register-phone-info {
-    font-size: 10px;
-    font-weight: 300;
-}
-
-
-.first-name--register .user-first-name--new,
-.last-name--register .user-last-name--new,
-.shipping-state .user-state--register,
-.shipping-zip-code .user-zip--register {
-    width: 208px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-.first-name--register input,
-.last-name--register input,
-.register-email input,
-.register-new-password input,
-.register-confirm-password input,
-.shipping-address-1 input,
-.shipping-address-2 input,
-.shipping-city input,
-.shipping-state input,
-.shipping-zip-code input,
-.shipping-phone input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-.first-name--register input:focus,
-.last-name--register input:focus,
-.register-email input:focus,
-.register-new-password input:focus,
-.register-confirm-password input:focus,
-.shipping-address-1 input:focus,
-.shipping-address-2 input:focus,
-.shipping-city input:focus,
-.shipping-state input:focus,
-.shipping-zip-code input:focus,
-.shipping-phone input:focus {
-    background-color: white;
-}
-
-#registerUserCard1 .user-email--register,
-#registerUserCard1 .user-new-pass--register,
-#registerUserCard1 .user-confirm-pass--register,
-#registerUserCard2 .user-address-1--register,
-#registerUserCard2 .user-address-2--register,
-#registerUserCard2 .user-city--register,
-#registerUserCard2 .user-phone--register {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-.register-continue, .register-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-.register-continue input, .register-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-.register-continue input:hover, .register-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-.register-continue .register-continue-button,
-.register-submit .submit-button--register {
-    width: 482px;
-    height: 45px;
-}
-
-.register-card .register-sign-in-option {
-    width: 185px;
-    /*height: 30px;*/
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-}
-
-.register-sign-in-option p, .register-sign-in-option a,
-.register-seller-option p, .register-seller-option a {
-    font-size: 12px;
-    font-weight: 300;
-}
-
-.register-sign-in-option a, .register-seller-option a {
-    text-decoration: none;
-    color: blueviolet;
-}
-
-#registerUserCard1 .name-error, #registerUserCard1 .email-error,
-#registerUserCard1 .pass-error, #registerUserCard1 .system-error,
-#registerUserCard2 .address-1-error--register,
-#registerUserCard2 .address-2-error--register,
-#registerUserCard2 .city-error--register,
-#registerUserCard2 .state-error--register,
-#registerUserCard2 .zip-code-error--register,
-#registerUserCard2 .phone-error--register,
-#registerUserCard2 .system-error {
-    width: 470px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#registerUserCard1 .name-error p, #registerUserCard1 .email-error p,
-#registerUserCard1 .pass-error p, #registerUserCard1 .system-error p,
-#registerUserCard2 .address-1-error--register p,
-#registerUserCard2 .address-2-error--register p,
-#registerUserCard2 .city-error--register p,
-#registerUserCard2 .state-error--register p,
-#registerUserCard2 .zip-code-error--register p,
-#registerUserCard2 .phone-error--register p,
-#registerUserCard2 .system-error p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-.register-success-card--user .user-success--register,
-.register-error-card--user .user-error--register {
-    line-height: 50px;
-    width: 458px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.register-success-card--user .user-success--register p,
-.register-error-card--user .user-error--register p {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.register-success-card--user .user-success--register p {
-    color: #336600;
-}
-
-.register-error-card--user .user-error--register p {
-    color: red;
-}
-
-/* CHANGE NAME PAGE */
-
-form#userChangeNameCard {
-    width: 640px;
-    height: 460px;
-    margin: 20px auto 50px auto;
-}
-
-#userChangeNameCard .change-name-card {
-    width: 600px;
-    height: 450px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.change-name-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-#userChangeNameCard .change-name-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-#userChangeNameCard .change-name-info p {
-    font-size: 12px;
-    font-weight: 300;
-}
-
-#userChangeNameCard .change-full-name label,
-#userChangeNameCard .change-full-name input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#userChangeNameCard .change-full-name span.change-middle-name-info {
-    font-size: 10px;
-    font-weight: 300;
-}
-
-#userChangeNameCard .full-name-error--change-name p,
-#userChangeNameCard .system-error--change-name p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-#userChangeNameCard .change-name-title,
-#userChangeNameCard .change-name-submit,
-#userChangeNameCard .system-error--change-name {
-    text-align: center;
-}
-
-#userChangeNameCard .change-name-title {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#userChangeNameCard .change-name-info,
-#userChangeNameCard .full-name-error--change-name {
-    margin: 15px 15px;
-    padding-bottom: 5px;
-}
-
-#userChangeNameCard .change-full-name {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-#userChangeNameCard .first-name--change-name,
-#userChangeNameCard .middle-name--change-name,
-#userChangeNameCard .last-name--change-name {
-    float: left;
-    width: 180px;
-}
-
-#userChangeNameCard .first-name--change-name,
-#userChangeNameCard .middle-name--change-name {
-    margin: 0 15px 0 0;
-}
-
-#userChangeNameCard .first-name--change-name .user-first-name--change-name,
-#userChangeNameCard .middle-name--change-name .user-middle-name--change-name,
-#userChangeNameCard .last-name--change-name .user-last-name--change-name {
-    width: 161px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-#userChangeNameCard .first-name--change-name input,
-#userChangeNameCard .middle-name--change-name input,
-#userChangeNameCard .last-name--change-name input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-#userChangeNameCard .first-name--change-name input:focus,
-#userChangeNameCard .middle-name--change-name input:focus,
-#userChangeNameCard .last-name--change-name input:focus {
-    background-color: white;
-}
-
-#userChangeNameCard .change-name-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-#userChangeNameCard .change-name-submit .change-name-button {
-    width: 578px;
-    height: 45px;
-}
-
-#userChangeNameCard .change-name-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-#userChangeNameCard .change-name-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* CHANGE EMAIL PAGE */
-
-form#userChangeEmailCard {
-    width: 540px;
-    height: 710px;
-    margin: 20px auto 50px auto;
-}
-
-#userChangeEmailCard .change-email-card {
-    width: 500px;
-    height: 700px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#userChangeEmailCard .change-email-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-#userChangeEmailCard .change-email-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-#userChangeEmailCard .current-email--change-email label,
-#userChangeEmailCard .current-email--change-email p,
-#userChangeEmailCard .new-email-input--change-email label,
-#userChangeEmailCard .new-email-input--change-email input,
-#userChangeEmailCard .confirm-email-input--change-email label,
-#userChangeEmailCard .confirm-email-input--change-email input,
-#userChangeEmailCard .confirm-password-input--change-email label,
-#userChangeEmailCard .confirm-password-input--change-email input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#userChangeEmailCard .email-error--change-email p,
-#userChangeEmailCard .pass-error--change-email p,
-#userChangeEmailCard .system-error--change-email p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-#userChangeEmailCard .change-email-title,
-#userChangeEmailCard .change-email-submit,
-#userChangeEmailCard .system-error--change-email {
-    text-align: center;
-}
-
-#userChangeEmailCard .user-current-email--change-email {
-    line-height: 40px;
-}
-
-#userChangeEmailCard .change-email-title {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#userChangeEmailCard .current-email--change-email,
-#userChangeEmailCard .new-email-input--change-email,
-#userChangeEmailCard .confirm-email-input--change-email,
-#userChangeEmailCard .confirm-password-input--change-email {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-#userChangeEmailCard .user-current-email--change-email,
-#userChangeEmailCard .user-new-email--change-email,
-#userChangeEmailCard .user-confirm-email--change-email,
-#userChangeEmailCard .user-confirm-password--change-email {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-#userChangeEmailCard .user-current-email--change-email,
-#userChangeEmailCard .new-email-input--change-email input,
-#userChangeEmailCard .confirm-email-input--change-email input,
-#userChangeEmailCard .confirm-password-input--change-email input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-#userChangeEmailCard .new-email-input--change-email input:focus,
-#userChangeEmailCard .confirm-email-input--change-email input:focus,
-#userChangeEmailCard .confirm-password-input--change-email input:focus {
-    background-color: white;
-}
-
-#userChangeEmailCard .change-email-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-#userChangeEmailCard .change-email-submit .change-email-button {
-    width: 482px;
-    height: 45px;
-}
-
-#userChangeEmailCard .change-email-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-#userChangeEmailCard .change-email-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-#userChangeEmailCard .email-error--change-email,
-#userChangeEmailCard .pass-error--change-email {
-    margin: 0px 15px;
-}
-
-#userChangeEmailCard .user-current-email--change-email p,
-#userChangeEmailCard .email-error--change-email p,
-#userChangeEmailCard .pass-error--change-email p {
-    margin: 0;
-}
-
-/* CHANGE PHONE NUMBER PAGE */
-
-form#userChangePhoneCard {
-    width: 540px;
-    height: 510px;
-    margin: 20px auto 50px auto;
-}
-
-#userChangePhoneCard .change-phone-card {
-    width: 500px;
-    height: 500px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#userChangePhoneCard .change-phone-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-#userChangePhoneCard .change-phone-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-#userChangePhoneCard .current-phone--change-phone label,
-#userChangePhoneCard .current-phone--change-phone .user-current-phone--change-phone p,
-#userChangePhoneCard .new-phone-input--change-phone label,
-#userChangePhoneCard .new-phone-input--change-phone input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#userChangePhoneCard .phone-error--change-phone p,
-#userChangePhoneCard .system-error--change-phone p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-#userChangePhoneCard .change-phone-title,
-#userChangePhoneCard .change-phone-submit,
-#userChangePhoneCard .cancel-phone-submit,
-#userChangePhoneCard .system-error--change-phone {
-    text-align: center;
-}
-
-#userChangePhoneCard .user-current-phone--change-phone {
-    line-height: 40px;
-}
-
-#userChangePhoneCard .old-phone-number--change-phone,
-#userChangePhoneCard .delete-phone-submit {
-    float: left;
-}
-
-#userChangePhoneCard .change-phone-title {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#userChangePhoneCard .current-phone--change-phone,
-#userChangePhoneCard .new-phone-input--change-phone {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-#userChangePhoneCard .user-current-phone--change-phone {
-    width: 229px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-#userChangePhoneCard .user-new-phone--change-phone {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-#userChangePhoneCard .user-current-phone--change-phone,
-#userChangePhoneCard .new-phone-input--change-phone input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-#userChangePhoneCard .new-phone-input--change-phone input:focus {
-    background-color: white;
-}
-
-#userChangePhoneCard .delete-phone-submit {
-    width: 200px;
-    height: 40px;
-    padding-left: 10px;
-    margin-top: 24px;
-    margin-left: 17px;
-}
-
-#userChangePhoneCard .delete-phone-submit .delete-phone-button {
-    width: 200px;
-    height: 40px;
-}
-
-#userChangePhoneCard .change-phone-submit,
-#userChangePhoneCard .cancel-phone-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 2.5px;
-}
-
-#userChangePhoneCard .change-phone-submit {
-    padding-top: 20px;
-}
-
-#userChangePhoneCard .cancel-phone-submit {
-    padding-top: 2.5px;
-}
-
-#userChangePhoneCard .change-phone-submit .change-phone-button,
-#userChangePhoneCard .cancel-phone-submit .cancel-phone-button {
-    width: 482px;
-    height: 45px;
-}
-
-#userChangePhoneCard .delete-phone-submit input,
-#userChangePhoneCard .change-phone-submit input,
-#userChangePhoneCard .cancel-phone-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-#userChangePhoneCard .delete-phone-submit input:hover,
-#userChangePhoneCard .change-phone-submit input:hover,
-#userChangePhoneCard .cancel-phone-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-#userChangePhoneCard .phone-error--change-phone,
-#userChangePhoneCard .system-error--change-phone {
-    margin: 0px 15px;
-}
-
-#userChangePhoneCard .user-current-phone--change-phone p,
-#userChangePhoneCard .phone-error--change-phone p,
-#userChangePhoneCard .system-error--change-phone p {
-    margin: 0;
-}
-
-/* LOGIN & SECURITY OPTIONS PAGE */
-
-form#userOptionLoginSecurityCard {
-    width: 540px;
-    height: 540px;
-    margin: 20px auto 50px auto;
-}
-
-#userOptionLoginSecurityCard .option-login-security-card {
-    width: 500px;
-    height: 530px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#userOptionLoginSecurityCard .option-login-security-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-#userOptionLoginSecurityCard .option-login-security-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-#userOptionLoginSecurityCard .current-full-name--account-option label,
-#userOptionLoginSecurityCard .user-current-name--account-option p,
-#userOptionLoginSecurityCard .current-email--account-option label,
-#userOptionLoginSecurityCard .user-current-email--account-option p,
-#userOptionLoginSecurityCard .current-phone--account-option label,
-#userOptionLoginSecurityCard .user-current-phone--account-option p,
-#userOptionLoginSecurityCard .current-password--account-option label,
-#userOptionLoginSecurityCard .user-current-password--account-option p {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#userOptionLoginSecurityCard .option-login-security-title {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#userOptionLoginSecurityCard .user-current-name--account-option,
-#userOptionLoginSecurityCard .user-current-email--account-option,
-#userOptionLoginSecurityCard .user-current-phone--account-option,
-#userOptionLoginSecurityCard .user-current-password--account-option {
-    line-height: 40px;
-}
-
-#userOptionLoginSecurityCard .current-full-name--account-option,
-#userOptionLoginSecurityCard .edit-full-name-submit,
-#userOptionLoginSecurityCard .current-email--account-option,
-#userOptionLoginSecurityCard .edit-email-submit,
-#userOptionLoginSecurityCard .current-phone--account-option,
-#userOptionLoginSecurityCard .edit-phone-submit,
-#userOptionLoginSecurityCard .current-password--account-option,
-#userOptionLoginSecurityCard .edit-password-submit {
-    float: left;
-}
-
-#userOptionLoginSecurityCard .border-row {
-    border-top: 1px solid rgba(138,43,226,0.17);
-    margin: 30px 0;
-}
-
-#userOptionLoginSecurityCard .edit-full-name--account-option,
-#userOptionLoginSecurityCard .edit-email--account-option,
-#userOptionLoginSecurityCard .edit-phone--account-option,
-#userOptionLoginSecurityCard .edit-password--account-option {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-#userOptionLoginSecurityCard .user-current-name--account-option,
-#userOptionLoginSecurityCard .user-current-email--account-option,
-#userOptionLoginSecurityCard .user-current-phone--account-option,
-#userOptionLoginSecurityCard .user-current-password--account-option {
-    width: 229px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-#userOptionLoginSecurityCard .edit-full-name-submit,
-#userOptionLoginSecurityCard .edit-email-submit,
-#userOptionLoginSecurityCard .edit-phone-submit,
-#userOptionLoginSecurityCard .edit-password-submit {
-    width: 200px;
-    height: 40px;
-    padding-left: 10px;
-    margin-top: 24px;
-    margin-left: 10px;
-}
-
-#userOptionLoginSecurityCard .edit-full-name-submit .edit-full-name-button,
-#userOptionLoginSecurityCard .edit-email-submit .edit-email-button,
-#userOptionLoginSecurityCard .edit-phone-submit .edit-phone-button,
-#userOptionLoginSecurityCard .edit-password-submit .edit-password-button {
-    width: 200px;
-    height: 40px;
-}
-
-#userOptionLoginSecurityCard .edit-full-name-submit input,
-#userOptionLoginSecurityCard .edit-email-submit input,
-#userOptionLoginSecurityCard .edit-phone-submit input,
-#userOptionLoginSecurityCard .edit-password-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-#userOptionLoginSecurityCard .edit-full-name-submit input:hover,
-#userOptionLoginSecurityCard .edit-email-submit input:hover,
-#userOptionLoginSecurityCard .edit-phone-submit input:hover,
-#userOptionLoginSecurityCard .edit-password-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-#userOptionLoginSecurityCard .user-current-name--account-option p,
-#userOptionLoginSecurityCard .user-current-email--account-option p,
-#userOptionLoginSecurityCard .user-current-phone--account-option p,
-#userOptionLoginSecurityCard .user-current-password--account-option p {
-    margin: 0;
-}
-
-/* CHANGE ADDRESS PAGE */
-
-form#userChangeAddressCard {
-    width: 540px;
-    height: 7100px;
-    margin: 20px auto 50px auto;
-}
-
-#userChangeAddressCard .change-address-card {
-    width: 500px;
-    height: 700px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#userChangeAddressCard .change-address-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-#userChangeAddressCard .change-address-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-#userChangeAddressCard .new-address-input--change-address label,
-#userChangeAddressCard .new-address-input--change-address input,
-#userChangeAddressCard .new-city-input--change-address label,
-#userChangeAddressCard .new-city-input--change-address input,
-#userChangeAddressCard .new-state-input--change-address label,
-#userChangeAddressCard .new-state-input--change-address input,
-#userChangeAddressCard .new-zip-code-input--change-address label,
-#userChangeAddressCard .new-zip-code-input--change-address input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#userChangeAddressCard .address-error--change-address p,
-#userChangeAddressCard .city-error--change-address p,
-#userChangeAddressCard .state-error--change-address p,
-#userChangeAddressCard .zip-code-error--change-address p,
-#userChangeAddressCard .system-error--change-address p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-    margin: 0;
-}
-
-#userChangeAddressCard .change-address-title,
-#userChangeAddressCard .change-address-submit,
-#userChangeAddressCard .system-error--change-address {
-    text-align: center;
-}
-
-#userChangeAddressCard .change-address-title {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#userChangeAddressCard .new-address-input--change-address {
-    height: 147.4px;
-    margin: 15px 15px;
-}
-
-#userChangeAddressCard .new-city-input--change-address,
-#userChangeAddressCard .new-state-input--change-address,
-#userChangeAddressCard .new-zip-code-input--change-address {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-#userChangeAddressCard .user-new-address-1--change-address,
-#userChangeAddressCard .user-new-address-2--change-address,
-#userChangeAddressCard .user-new-city--change-address,
-#userChangeAddressCard .user-new-state--change-address,
-#userChangeAddressCard .user-new-zip--change-address {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-#userChangeAddressCard .new-address-input--change-address input,
-#userChangeAddressCard .new-city-input--change-address input,
-#userChangeAddressCard .new-state-input--change-address input,
-#userChangeAddressCard .new-zip-code-input--change-address input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-#userChangeAddressCard .new-address-input--change-address input:focus,
-#userChangeAddressCard .new-city-input--change-address input:focus,
-#userChangeAddressCard .new-state-input--change-address input:focus,
-#userChangeAddressCard .new-zip-code-input--change-address input:focus {
-    background-color: white;
-}
-
-#userChangeAddressCard .change-address-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-#userChangeAddressCard .change-address-submit .change-address-button {
-    width: 482px;
-    height: 45px;
-}
-
-#userChangeAddressCard .change-address-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-#userChangeAddressCard .change-address-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-#userChangeAddressCard .city-error--change-address,
-#userChangeAddressCard .state-error--change-address,
-#userChangeAddressCard .zip-code-error--change-address,
-#userChangeAddressCard .system-error--change-address {
-    margin: 0px 15px;
-}
-
 /* SHIPPING AND DELIVERY PAGE */
-
 .pages-container {
     font-family: 'Muli', sans-serif;
     font-size: 14px;
