@@ -2600,7 +2600,6 @@ form#registerUserCard2,
 }
 
 /* CHANGE NAME PAGE */
-
 form#userChangeNameCard {
     width: 640px;
     height: 460px;
@@ -4321,6 +4320,15 @@ form#userChangeAddressCard {
     .change-pass-error, .confirm-pass-error,
     .system-error--change-pass {
         width: 95%;
+    }
+
+    /* CHANGE NAME PAGE */
+    form#userChangeNameCard {
+        width: 100%;
+    }
+    
+    #userChangeNameCard .change-name-card {
+        width: 90%;
     }
 }
 
