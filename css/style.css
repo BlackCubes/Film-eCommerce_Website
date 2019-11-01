@@ -3252,6 +3252,18 @@ form#userChangePassCard {
         width: 90%;
     }
 
+    .forgot-pass-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .forgot-pass-info {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #forgotPassCard .forgot-email-input {
         width: 95%;
         margin-left: auto;
