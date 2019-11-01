@@ -1724,7 +1724,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 }
 
 .container--cart-view .cart-title--cart-view h2,
-.container--cart-view .later-title--later-view h2 {
+.container--cart-view .later-title--later-view h2,
+.empty-title--wishlist-view h2 {
     font-size: 21px;
     font-weight: 700;
 }
@@ -2725,7 +2726,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     .container--wishlist-view .wishlist-title--wishlist-view,
-    .container--wishlist-view .results--wishlist-view {
+    .container--wishlist-view .results--wishlist-view,
+    .empty-title--wishlist-view {
         width: 100%;
         text-align: center;
     }
@@ -2748,7 +2750,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
-    .container--wishlist-view .wishlist-title--wishlist-view h2 {
+    .container--wishlist-view .wishlist-title--wishlist-view h2,
+    .empty-title--wishlist-view h2 {
         font-size: 16px;
         letter-spacing: 5px;
     }
