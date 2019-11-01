@@ -1911,6 +1911,423 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     width: 170px;
 }
 
+/* SIGN IN */
+form.sign-in-form {
+    width: 540px;
+    height: 630px;
+    margin: 50px auto 50px auto;
+}
+
+fieldset.sign-in-card {
+    width: 500px;
+    height: 620px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-in-card div {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+}
+
+.sign-in-card .sign-in-title,
+.sign-in-card .sign-in-submit,
+.sign-in-card .sign-in-options,
+.sign-in-card .seller-sign-in-option,
+.sign-in-card .registration-option {
+    text-align: center;
+}
+
+.sign-in-card label, .sign-in-card input {
+    /*display: block;*/
+    vertical-align: middle;
+}
+
+.sign-in-title h2, .registration-option h2 {
+    font-weight: 300;
+}
+
+.sign-in-email, .sign-in-pass {
+    /*width: 100%;*/
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.sign-in-email label, .sign-in-pass label {
+    font-size: 13px;
+}
+
+.sign-in-email .user-email, .sign-in-pass .user-pass {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.sign-in-email input, .sign-in-pass input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+.sign-in-email input:focus, .sign-in-pass input:focus {
+    background-color: white;
+}
+
+.sign-in-card .sign-in-cookies,
+.sign-in-card .email-error,
+.sign-in-card .pass-error,
+.sign-in-card .system-error {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sign-in-cookies p {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.sign-in-card .system-error p,
+.sign-in-card .email-error p,
+.sign-in-card .pass-error p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+.sign-in-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.sign-in-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    /*padding: 10px 20px;*/
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.sign-in-submit input:hover, .registration-option a:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-in-submit .sign-in-button {
+    width: 482px;
+    height: 45px;
+}
+
+.sign-in-card .sign-in-options {
+    width: 147px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
+.sign-in-card .seller-sign-in-option {
+    padding-bottom: 10px;
+}
+
+.sign-in-options p, .sign-in-options a,
+.seller-sign-in-option p, .seller-sign-in-option a {
+    font-size: 12px;
+}
+
+.sign-in-options a, .seller-sign-in-option a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.sign-in-card .registration-option {
+    border-top: 1px solid rgba(138,43,226,0.17);
+    padding-top: 5px;
+}
+
+.registration-option .register-button {
+    display: block;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    width: 470px;
+    height: 35px;
+    line-height: 35px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+
+/* FORGOT PASSWORD PAGE */
+form#forgotPassCard {
+    width: 540px;
+    height: 560px;
+    margin: 50px auto 50px auto;
+}
+
+#forgotPassCard .forgot-pass-card {
+    width: 500px;
+    height: 550px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.forgot-pass-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+.forgot-pass-card .forgot-pass-title,
+.forgot-pass-card .forgot-pass-info,
+.forgot-pass-card .forgot-email-submit {
+    text-align: center;
+}
+
+.forgot-pass-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.forgot-pass-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.forgot-pass-info p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#forgotPassCard .forgot-email-input {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.forgot-email-input label, .forgot-email-input input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#forgotPassCard .user-email--forgot {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.forgot-email-input input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+.forgot-email-input input:focus {
+    background-color: white;
+}
+
+.forgot-email-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.forgot-email-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.forgot-email-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.forgot-email-submit .forgot-pass-button {
+    width: 482px;
+    height: 45px;
+}
+
+.forgot-pass-error, .system-error--forgot-pass {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.forgot-pass-error p, .system-error--forgot-pass p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+.forgot-pass-success {
+    text-align: center;
+}
+
+.forgot-pass-success h3 {
+    font-family: 'Muli', sans-serif;
+    color: midnightblue;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* CHANGE PASSWORD */
+form#userChangePassCard {
+    width: 540px;
+    height: 590px;
+    margin: 20px auto 50px auto;
+}
+
+#userChangePassCard .change-pass-card {
+    width: 500px;
+    height: 580px;
+    background-color: white;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.change-pass-card div {
+    font-family: 'Muli', sans-serif;
+    color: black;
+}
+
+.change-pass-card .change-pass-title,
+.change-pass-card .change-pass-info,
+.change-pass-card .change-pass-submit {
+    text-align: center;
+}
+
+.change-pass-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.change-pass-title h2 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.change-pass-info p {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#userChangePassCard .change-pass-new-input,
+#userChangePassCard .change-pass-confirm-input {
+    height: 62.2px;
+    margin: 15px 15px;
+}
+
+.change-pass-new-input label, .change-pass-new-input input,
+.change-pass-confirm-input label, .change-pass-confirm-input input {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#userChangePassCard .user-pass--change,
+#userChangePassCard .user-pass--confirm {
+    width: 458px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+}
+
+.change-pass-new-input input,
+.change-pass-confirm-input input {
+    border: none;
+    background-color: rgba(148, 130, 165, 0.17);
+}
+
+.change-pass-new-input input:focus,
+.change-pass-confirm-input input:focus {
+    background-color: white;
+}
+
+.change-pass-submit {
+    width: 100%;
+    height: 62.2px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.change-pass-submit input {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.change-pass-submit input:hover {
+    color: rgb(94, 94, 94);
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-top: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.change-pass-submit .change-pass-button {
+    width: 482px;
+    height: 45px;
+}
+
+.change-pass-error, .confirm-pass-error,
+.system-error--change-pass {
+    width: 470px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.change-pass-error p, .confirm-pass-error p,
+.system-error--change-pass p {
+    font-size: 12px;
+    font-weight: 300;
+    color: red;
+}
+
+.change-pass-success {
+    text-align: center;
+}
+
+.change-pass-success h3 {
+    font-family: 'Muli', sans-serif;
+    color: #336600;
+    font-size: 16px;
+    font-weight: 300;
+}
+
 /* MEDIA QUERY */
 
 /* FOR MOBILE */
@@ -2766,427 +3183,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 }
 
-/* SIGN IN */
-form.sign-in-form {
-    width: 540px;
-    height: 630px;
-    margin: 50px auto 50px auto;
-}
-
-fieldset.sign-in-card {
-    width: 500px;
-    height: 620px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sign-in-card div {
-    font-family: 'Muli', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: black;
-}
-
-.sign-in-card .sign-in-title,
-.sign-in-card .sign-in-submit,
-.sign-in-card .sign-in-options,
-.sign-in-card .seller-sign-in-option,
-.sign-in-card .registration-option {
-    text-align: center;
-}
-
-.sign-in-card label, .sign-in-card input {
-    /*display: block;*/
-    vertical-align: middle;
-}
-
-.sign-in-title h2, .registration-option h2 {
-    font-weight: 300;
-}
-
-.sign-in-email, .sign-in-pass {
-    /*width: 100%;*/
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-.sign-in-email label, .sign-in-pass label {
-    font-size: 13px;
-}
-
-.sign-in-email .user-email, .sign-in-pass .user-pass {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-.sign-in-email input, .sign-in-pass input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-.sign-in-email input:focus, .sign-in-pass input:focus {
-    background-color: white;
-}
-
-.sign-in-card .sign-in-cookies,
-.sign-in-card .email-error,
-.sign-in-card .pass-error,
-.sign-in-card .system-error {
-    width: 470px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.sign-in-cookies p {
-    font-size: 10px;
-    font-weight: 300;
-}
-
-.sign-in-card .system-error p,
-.sign-in-card .email-error p,
-.sign-in-card .pass-error p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-.sign-in-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-.sign-in-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    /*padding: 10px 20px;*/
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-.sign-in-submit input:hover, .registration-option a:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-.sign-in-submit .sign-in-button {
-    width: 482px;
-    height: 45px;
-}
-
-.sign-in-card .sign-in-options {
-    width: 147px;
-    height: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-}
-
-.sign-in-card .seller-sign-in-option {
-    padding-bottom: 10px;
-}
-
-.sign-in-options p, .sign-in-options a,
-.seller-sign-in-option p, .seller-sign-in-option a {
-    font-size: 12px;
-}
-
-.sign-in-options a, .seller-sign-in-option a {
-    text-decoration: none;
-    color: blueviolet;
-}
-
-.sign-in-card .registration-option {
-    border-top: 1px solid rgba(138,43,226,0.17);
-    padding-top: 5px;
-}
-
-.registration-option .register-button {
-    display: block;
-    color: black;
-    background-color: white;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    width: 470px;
-    height: 35px;
-    line-height: 35px;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    transition: all 0.3s ease-out;
-}
-
-/* FORGOT PASSWORD PAGE */
-
-form#forgotPassCard {
-    width: 540px;
-    height: 560px;
-    margin: 50px auto 50px auto;
-}
-
-#forgotPassCard .forgot-pass-card {
-    width: 500px;
-    height: 550px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.forgot-pass-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-.forgot-pass-card .forgot-pass-title,
-.forgot-pass-card .forgot-pass-info,
-.forgot-pass-card .forgot-email-submit {
-    text-align: center;
-}
-
-.forgot-pass-title {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.forgot-pass-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.forgot-pass-info p {
-    font-size: 12px;
-    font-weight: 300;
-}
-
-#forgotPassCard .forgot-email-input {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-.forgot-email-input label, .forgot-email-input input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#forgotPassCard .user-email--forgot {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-.forgot-email-input input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-.forgot-email-input input:focus {
-    background-color: white;
-}
-
-.forgot-email-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-.forgot-email-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-.forgot-email-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-.forgot-email-submit .forgot-pass-button {
-    width: 482px;
-    height: 45px;
-}
-
-.forgot-pass-error, .system-error--forgot-pass {
-    width: 470px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.forgot-pass-error p, .system-error--forgot-pass p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-.forgot-pass-success {
-    text-align: center;
-}
-
-.forgot-pass-success h3 {
-    font-family: 'Muli', sans-serif;
-    color: midnightblue;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-/* CHANGE PASSWORD */
-
-form#userChangePassCard {
-    width: 540px;
-    height: 590px;
-    margin: 20px auto 50px auto;
-}
-
-#userChangePassCard .change-pass-card {
-    width: 500px;
-    height: 580px;
-    background-color: white;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.change-pass-card div {
-    font-family: 'Muli', sans-serif;
-    color: black;
-}
-
-.change-pass-card .change-pass-title,
-.change-pass-card .change-pass-info,
-.change-pass-card .change-pass-submit {
-    text-align: center;
-}
-
-.change-pass-title {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.change-pass-title h2 {
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.change-pass-info p {
-    font-size: 12px;
-    font-weight: 300;
-}
-
-#userChangePassCard .change-pass-new-input,
-#userChangePassCard .change-pass-confirm-input {
-    height: 62.2px;
-    margin: 15px 15px;
-}
-
-.change-pass-new-input label, .change-pass-new-input input,
-.change-pass-confirm-input label, .change-pass-confirm-input input {
-    font-size: 13px;
-    font-weight: 300;
-}
-
-#userChangePassCard .user-pass--change,
-#userChangePassCard .user-pass--confirm {
-    width: 458px;
-    height: 40px;
-    padding: 0 10px;
-    margin: 5px 0;
-}
-
-.change-pass-new-input input,
-.change-pass-confirm-input input {
-    border: none;
-    background-color: rgba(148, 130, 165, 0.17);
-}
-
-.change-pass-new-input input:focus,
-.change-pass-confirm-input input:focus {
-    background-color: white;
-}
-
-.change-pass-submit {
-    width: 100%;
-    height: 62.2px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-}
-
-.change-pass-submit input {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-}
-
-.change-pass-submit input:hover {
-    color: rgb(94, 94, 94);
-    font-weight: 300;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(138,43,226,0.17);
-    border-top: 1px solid rgba(138,43,226,0.17);
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-.change-pass-submit .change-pass-button {
-    width: 482px;
-    height: 45px;
-}
-
-.change-pass-error, .confirm-pass-error,
-.system-error--change-pass {
-    width: 470px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.change-pass-error p, .confirm-pass-error p,
-.system-error--change-pass p {
-    font-size: 12px;
-    font-weight: 300;
-    color: red;
-}
-
-.change-pass-success {
-    text-align: center;
-}
-
-.change-pass-success h3 {
-    font-family: 'Muli', sans-serif;
-    color: #336600;
-    font-size: 16px;
-    font-weight: 300;
-}
-
 /* REGISTRATION PAGE */
-
 form#registerUserCard1,
 form#registerUserCard2,
 .registerUserSuccessCard,
