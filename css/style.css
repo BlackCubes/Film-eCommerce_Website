@@ -2737,7 +2737,6 @@ form#userChangeNameCard {
 }
 
 /* CHANGE EMAIL PAGE */
-
 form#userChangeEmailCard {
     width: 540px;
     height: 710px;
@@ -4382,6 +4381,23 @@ form#userChangeAddressCard {
     #userChangeNameCard .change-name-info p {
         text-align: center;
     }
+
+    /* CHANGE EMAIL PAGE */
+    form#userChangeEmailCard {
+        width: 100%;
+    }
+
+    #userChangeEmailCard .change-email-card {
+        width: 90%;
+    }
+
+    #userChangeEmailCard .change-email-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
 }
 
 /* SHIPPING AND DELIVERY PAGE */
