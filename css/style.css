@@ -2873,7 +2873,6 @@ form#userChangeEmailCard {
 }
 
 /* CHANGE PHONE NUMBER PAGE */
-
 form#userChangePhoneCard {
     width: 540px;
     height: 510px;
@@ -4427,6 +4426,17 @@ form#userChangeAddressCard {
     .system-error--change-pass {
         width: 95%;
     }
+
+    /* CHANGE PHONE NUMBER PAGE */
+    form#userChangePhoneCard {
+        width: 100%;
+    }
+
+    #userChangePhoneCard .change-phone-card {
+        width: 90%;
+    }
+
+    
 }
 
 /* SHIPPING AND DELIVERY PAGE */
