@@ -113,7 +113,9 @@ if (mysqli_num_rows($r) == 1){
     </div>
 </div>
 <?php } else { ?>
-<p>Your wishlist is empty!</p>
+<div class="empty-title--wishlist-view">
+    <h2>Your wishlist is empty!</h2>
+</div>
 <?php
 }
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
