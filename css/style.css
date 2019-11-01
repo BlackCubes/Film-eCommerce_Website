@@ -3242,6 +3242,35 @@ form#userChangePassCard {
     .registration-option .register-button {
         width: 95%;
     }
+
+    /* FORGOT PASSWORD PAGE */
+    form#forgotPassCard {
+        width: 100%;
+    }
+    
+    #forgotPassCard .forgot-pass-card {
+        width: 90%;
+    }
+
+    #forgotPassCard .forgot-email-input {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #forgotPassCard .user-email--forgot {
+        width: 95%;
+    }
+
+    .forgot-email-submit {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .forgot-email-submit .forgot-pass-button {
+        width: 95%;
+    }
 }
 
 /* REGISTRATION PAGE */
