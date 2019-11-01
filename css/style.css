@@ -4397,7 +4397,36 @@ form#userChangeAddressCard {
         margin-right: auto;
     }
 
-    
+    #userChangeEmailCard .current-email--change-email,
+    #userChangeEmailCard .new-email-input--change-email,
+    #userChangeEmailCard .confirm-email-input--change-email,
+    #userChangeEmailCard .confirm-password-input--change-email {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangeEmailCard .user-current-email--change-email,
+    #userChangeEmailCard .user-new-email--change-email,
+    #userChangeEmailCard .user-confirm-email--change-email,
+    #userChangeEmailCard .user-confirm-password--change-email {
+        width: 95%;
+    }
+
+    #userChangeEmailCard .change-email-submit {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangeEmailCard .change-email-submit .change-email-button {
+        width: 95%;
+    }
+
+    .change-pass-error, .confirm-pass-error,
+    .system-error--change-pass {
+        width: 95%;
+    }
 }
 
 /* SHIPPING AND DELIVERY PAGE */
