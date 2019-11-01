@@ -2756,6 +2756,11 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--wishlist-view .product-name--wishlist-view p {
         font-size: 14px;
     }
+
+    .container--wishlist-view .product-image--wishlist-view img {
+        max-width: 240px;
+        max-height: 240px;
+    }
 }
 
 /* SIGN IN */
