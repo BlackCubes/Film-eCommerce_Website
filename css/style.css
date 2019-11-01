@@ -2714,6 +2714,35 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     }
 
     /* USER WISHLIST VIEW */
+    .container--wishlist-view {
+        display: block;
+        width: 100%;
+    }
+
+    .container--wishlist-view .main-info--wishlist-view {
+        width: 90%;
+        margin: 30px auto 30px auto;
+    }
+
+    .container--wishlist-view .wishlist-title--wishlist-view,
+    .container--wishlist-view .results--wishlist-view {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container--wishlist-view .wish-list--wishlist-view {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--wishlist-view .product-image--wishlist-view {
+        width: 100%;
+    }
+
+    .container--wishlist-view .product-info--wishlist-view {
+        width: 100%;
+    }
 }
 
 /* SIGN IN */
