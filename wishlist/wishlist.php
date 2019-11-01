@@ -110,14 +110,11 @@ if (mysqli_num_rows($r) == 1){
             </div>
             <?php } ?>
         </div>
+        <?php } else { ?>
+        <div class="empty-title--wishlist-view">
+            <h2>Your wishlist is empty!</h2>
+        </div>
+        <?php } ?>
     </div>
 </div>
-<?php } else { ?>
-<div class="empty-title--wishlist-view">
-    <h2>Your wishlist is empty!</h2>
-</div>
-<?php
-}
-include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html');
-
-?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/footer.html'); ?>
