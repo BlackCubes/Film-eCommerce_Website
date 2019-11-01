@@ -2743,6 +2743,15 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     .container--wishlist-view .product-info--wishlist-view {
         width: 100%;
     }
+
+    .container--wishlist-view .wishlist-title--wishlist-view h2 {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .container--wishlist-view .product-name--wishlist-view p {
+        font-size: 14px;
+    }
 }
 
 /* SIGN IN */
