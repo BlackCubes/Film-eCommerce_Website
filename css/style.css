@@ -2744,6 +2744,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         width: 100%;
     }
 
+    .container--wishlist-view .product-more-info--wishlist-view {
+        width: 100%;
+    }
+
     .container--wishlist-view .wishlist-title--wishlist-view h2 {
         font-size: 16px;
         letter-spacing: 5px;
