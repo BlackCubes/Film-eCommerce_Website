@@ -3283,6 +3283,10 @@ form#userChangePassCard {
     .forgot-email-submit .forgot-pass-button {
         width: 95%;
     }
+
+    .forgot-pass-error, .system-error--forgot-pass {
+        width: 95%;
+    }
 }
 
 /* REGISTRATION PAGE */
