@@ -66,7 +66,7 @@ class account_breadcrumb
 
     private $separator = ' | ';
 
-    private $domain = 'http://localhost/FilmIndustry/eCommerce/account';
+    private $domain = 'http://localhost:8080/FilmIndustry/eCommerce/account';
 
     public function build($array)
     {
