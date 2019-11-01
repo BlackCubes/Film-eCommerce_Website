@@ -3181,6 +3181,11 @@ form#userChangePassCard {
         max-width: 240px;
         max-height: 240px;
     }
+
+    /* SIGN IN */
+    .account-container {
+        width: 100%;
+    }
 }
 
 /* REGISTRATION PAGE */
