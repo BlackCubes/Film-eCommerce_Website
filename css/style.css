@@ -2329,6 +2329,7 @@ form#userChangePassCard {
 }
 
 /* REGISTRATION PAGE */
+
 form#registerUserCard1,
 form#registerUserCard2,
 .registerUserSuccessCard,
@@ -3035,7 +3036,6 @@ form#userChangePhoneCard {
 }
 
 /* LOGIN & SECURITY OPTIONS PAGE */
-
 form#userOptionLoginSecurityCard {
     width: 540px;
     height: 540px;
@@ -4490,6 +4490,78 @@ form#userChangeAddressCard {
         width: 95%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* LOGIN & SECURITY OPTIONS PAGE */
+    form#userOptionLoginSecurityCard {
+        width: 100%;
+    }
+
+    #userOptionLoginSecurityCard .option-login-security-card {
+        width: 90%;
+    }
+
+    #userOptionLoginSecurityCard .option-login-security-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userOptionLoginSecurityCard .border-row {
+        width: 100%;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name--account-option,
+    #userOptionLoginSecurityCard .edit-email--account-option,
+    #userOptionLoginSecurityCard .edit-phone--account-option,
+    #userOptionLoginSecurityCard .edit-password--account-option {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userOptionLoginSecurityCard .current-full-name--account-option,
+    #userOptionLoginSecurityCard .edit-full-name-submit,
+    #userOptionLoginSecurityCard .current-email--account-option,
+    #userOptionLoginSecurityCard .edit-email-submit,
+    #userOptionLoginSecurityCard .current-phone--account-option,
+    #userOptionLoginSecurityCard .edit-phone-submit,
+    #userOptionLoginSecurityCard .current-password--account-option,
+    #userOptionLoginSecurityCard .edit-password-submit {
+        width: 60%;
+    }
+
+    #userOptionLoginSecurityCard .user-current-name--account-option,
+    #userOptionLoginSecurityCard .user-current-email--account-option,
+    #userOptionLoginSecurityCard .user-current-phone--account-option,
+    #userOptionLoginSecurityCard .user-current-password--account-option {
+        width: 90%;
+        padding: 0 5px;
+    }
+
+    #userOptionLoginSecurityCard .current-full-name--account-option label,
+    #userOptionLoginSecurityCard .user-current-name--account-option p,
+    #userOptionLoginSecurityCard .current-email--account-option label,
+    #userOptionLoginSecurityCard .user-current-email--account-option p,
+    #userOptionLoginSecurityCard .current-phone--account-option label,
+    #userOptionLoginSecurityCard .user-current-phone--account-option p,
+    #userOptionLoginSecurityCard .current-password--account-option label,
+    #userOptionLoginSecurityCard .user-current-password--account-option p {
+        font-size: 11px;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name-submit,
+    #userOptionLoginSecurityCard .edit-email-submit,
+    #userOptionLoginSecurityCard .edit-phone-submit,
+    #userOptionLoginSecurityCard .edit-password-submit {
+        width: 40%;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name-submit .edit-full-name-button,
+    #userOptionLoginSecurityCard .edit-email-submit .edit-email-button,
+    #userOptionLoginSecurityCard .edit-phone-submit .edit-phone-button,
+    #userOptionLoginSecurityCard .edit-password-submit .edit-password-button {
+        width: 100%;
     }
 }
 
