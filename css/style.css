@@ -4491,10 +4491,6 @@ form#userChangeAddressCard {
         margin-left: auto;
         margin-right: auto;
     }
-
-    #userChangePhoneCard .phone-error--change-phone {
-        margin-top: 30px;
-    }
 }
 
 /* SHIPPING AND DELIVERY PAGE */
