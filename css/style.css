@@ -4445,14 +4445,14 @@ form#userChangeAddressCard {
     #userChangePhoneCard .current-phone--change-phone,
     #userChangePhoneCard .new-phone-input--change-phone {
         width: 95%;
-        height: 70px;
+        height: 80px;
         margin-left: auto;
         margin-right: auto;
     }
 
     #userChangePhoneCard .old-phone-number--change-phone,
     #userChangePhoneCard .delete-phone-submit {
-        width: 51%;
+        width: 57%;
     }
 
     #userChangePhoneCard .user-current-phone--change-phone {
@@ -4460,7 +4460,7 @@ form#userChangeAddressCard {
     }
 
     #userChangePhoneCard .delete-phone-submit {
-        width: 48%;
+        width: 42%;
         margin-left: 0;
         padding-left: 0;
     }
