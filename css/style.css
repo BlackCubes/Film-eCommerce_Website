@@ -4461,6 +4461,8 @@ form#userChangeAddressCard {
 
     #userChangePhoneCard .delete-phone-submit {
         width: 48%;
+        margin-left: 0;
+        padding-left: 0;
     }
 
     #userChangePhoneCard .delete-phone-submit .delete-phone-button {
