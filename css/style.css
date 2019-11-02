@@ -4583,6 +4583,7 @@ form#userChangeAddressCard {
     /* CHANGE ADDRESS PAGE */
     form#userChangeAddressCard {
         width: 100%;
+        height: 100%;
     }
 
     #userChangeAddressCard .change-address-card {
