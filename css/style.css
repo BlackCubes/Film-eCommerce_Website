@@ -3175,7 +3175,6 @@ form#userOptionLoginSecurityCard {
 }
 
 /* CHANGE ADDRESS PAGE */
-
 form#userChangeAddressCard {
     width: 540px;
     height: 7100px;
@@ -4579,6 +4578,21 @@ form#userChangeAddressCard {
     #userOptionLoginSecurityCard .edit-phone-submit input:hover,
     #userOptionLoginSecurityCard .edit-password-submit input:hover {
         font-size: 12px;
+    }
+
+    /* CHANGE ADDRESS PAGE */
+    form#userChangeAddressCard {
+        width: 100%;
+    }
+
+    #userChangeAddressCard .change-address-card {
+        width: 90%;
+    }
+
+    #userChangeAddressCard .change-address-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
