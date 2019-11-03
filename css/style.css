@@ -3317,24 +3317,7 @@ form#userChangeAddressCard {
 @media only screen and (max-width: 600px) {
 
     /* MAIN NAVBAR */
-    .topnav {
-        display: block;
-    }
-
-    .topnav-logo {
-        height: 30px;
-        text-align: center;
-    }
-
-    .topnav li, .topnav a {
-        font-size: 20px;
-    }
-
-    .topnav ul li {
-        display: block;
-        padding: 0;
-        line-height: 0;
-    }
+    
 
     /* MAIN FOOTER */
     footer.footer,
