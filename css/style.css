@@ -3333,7 +3333,143 @@ form#userChangeAddressCard {
 @media only screen and (max-width: 600px) {
 
     /* MAIN NAVBAR */
-    
+    .header {
+        width: 100%;
+    }
+
+    .header ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header .topnav > li > a {
+        display: block;
+        padding: 20px;
+    }
+
+    .header .subnav li a {
+        display: block;
+        padding: 10px 10px 10px 40px;
+    }
+
+    .header li a:hover,
+    .header .menu-btn:hover {
+        background-color: #f4f4f4;
+    }
+
+    .header .topnav-logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+
+    .header .topnav {
+        float: left;
+        width: 100%;
+    }
+
+    .header .cart-wish-icons {
+        text-align: right;
+        padding-top: 14px;
+        font-size: 11px;
+    }
+
+    .header .topnav,
+    .header .subnav {
+        clear: both;
+        max-height: 0;
+        transition: max-height .15s ease-out;
+    }
+
+    .header .menu-icon {
+        cursor: pointer;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        -moz-user-select: none;
+    }
+
+    .header .subnav-icon {
+        float: right;
+        padding: 0.2px 5px;
+        position: relative;
+        top: 5px;
+    }
+
+    .header .menu-icon .nav-icon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .15s ease-out;
+        width: 18px;
+    }
+
+    .header .subnav-icon {
+        background: #333;
+        display: block;
+        width: 1px;
+        height: 1px;
+        position: relative;
+        transition: background .15s ease-out;
+    }
+
+    .header .menu-icon .nav-icon:before,
+    .header .menu-icon .nav-icon:after,
+    .header .subnav-icon:before {
+        display: block;
+        background: #333;
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .15s ease-out;
+    }
+
+    .header .menu-icon .nav-icon:before {
+        top: 5px;
+    }
+
+    .header .menu-icon .nav-icon:after {
+        top: -5px;
+    }
+
+    .header .subnav-icon:before {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    .header .menu-btn {
+        display: none;
+    }
+
+    .header .menu-btn:checked ~ .topnav {
+        max-height: 440px;
+    }
+
+    .header .topnav li a:focus ~ .subnav {
+        max-height: 300px;
+    }
+
+    .header .menu-btn:checked ~ .menu-icon .nav-icon {
+        background: transparent;
+    }
+
+    .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .header .topnav li a:focus .subnav-icon:before {
+        transform: rotate(0deg);
+    }
 
     /* MAIN FOOTER */
     footer.footer,
