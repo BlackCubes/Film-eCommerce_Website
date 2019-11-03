@@ -3354,10 +3354,10 @@ form#userChangeAddressCard {
         position: static;
         overflow: hidden;
         padding: 0;
-        left: 0;
-        right: 0;
-        text-align: initial;
-        transform: none;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: initial !important;
+        transform: none !important;
         opacity: 1;
         border-bottom: 0;
         border-radius: 0;
