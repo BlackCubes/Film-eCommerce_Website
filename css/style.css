@@ -3405,8 +3405,7 @@ form#userChangeAddressCard {
         font-size: 11px;
     }
 
-    .header .topnav/*,
-    .header .subnav*/ {
+    .header .topnav {
         clear: both;
         max-height: 0;
         transition: max-height .15s ease-out;
