@@ -3335,6 +3335,8 @@ form#userChangeAddressCard {
     /* MAIN NAVBAR */
     .header {
         width: 100%;
+        position: fixed;
+        z-index: 3;
     }
 
     .header ul {
