@@ -3335,11 +3335,35 @@ form#userChangeAddressCard {
     /* MAIN NAVBAR */
     .header {
         width: 100%;
+        display: block;
+        background-color: rgb(255, 255, 255);
     }
 
     .header ul {
         margin: 0;
         padding: 0;
+    }
+
+    .header ul li {
+        display: block;
+        padding: 0;
+        line-height: 15px;
+    }
+
+    .header ul li ul {
+        position: static;
+        overflow: hidden;
+        padding: 0;
+        left: 0;
+        right: 0;
+        text-align: initial;
+        transform: none;
+        opacity: 1;
+        border-bottom: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
     }
 
     .header .topnav > li > a {
@@ -3361,7 +3385,7 @@ form#userChangeAddressCard {
         display: block;
         float: left;
         font-size: 2em;
-        padding: 10px 20px;
+        padding: 0;
     }
 
     .header .topnav {
@@ -3383,6 +3407,7 @@ form#userChangeAddressCard {
     }
 
     .header .menu-icon {
+        display: block;
         cursor: pointer;
         float: right;
         padding: 28px 20px;
