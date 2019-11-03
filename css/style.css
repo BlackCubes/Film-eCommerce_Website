@@ -3394,6 +3394,10 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
+    .header ul li:hover ul {
+        display: none;
+    }
+
     .header .cart-wish-icons {
         text-align: right;
         padding-top: 14px;
@@ -3478,6 +3482,7 @@ form#userChangeAddressCard {
     }
 
     .header .topnav > li > a:focus ~ .subnav {
+        display: block;
         max-height: 300px;
     }
 
