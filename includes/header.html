@@ -26,7 +26,51 @@ if (!isset($_SESSION)) {
 <script src="https://kit.fontawesome.com/7e5f392f21.js"></script>
 </head>
 <body>
-<header>
+<header class="header">
+    <a href="/FilmIndustry/eCommerce/index.php">Home</a>
+    <input type="checkbox" class="menu-btn" id="menu-btn" />
+    <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+    <a class="cart-icon" href="/FilmIndustry/eCommerce/cart/cart.php"><i class="fas fa-shopping-cart"></i></a>
+    <a class="wishlist-icon" href="/FilmIndustry/eCommerce/wishlist/wishlist.php"><i class="fas fa-heart"></i></a>
+    <ul class="topnav">
+        <li><a>Departments<span class="subnav-icon"></span></a>
+            <ul class="subnav">
+                <li><a href="/FilmIndustry/eCommerce/films/index.php">Films</a></li>
+                <li><a href="/FilmIndustry/eCommerce/tv/index.php">TV</a></li>
+            </ul>
+        </li>
+        <li><a href="/FilmIndustry/eCommerce/studios/index.php">Studios</a></li>
+        <li><a>Artists<span class="subnav-icon"></span></a>
+            <ul class="subnav">
+                <li><a href="/FilmIndustry/eCommerce/actors/index.php">Actors</a></li>
+                <li><a href="/FilmIndustry/eCommerce/directors/index.php">Directors</a></li>
+                <li><a href="/FilmIndustry/eCommerce/writers/index.php">Writers</a></li>
+                <li><a href="/FilmIndustry/eCommerce/producers/index.php">Producers</a></li>
+                <li><a href="/FilmIndustry/eCommerce/dp/index.php">Cinematographers</a></li>
+            </ul>
+        </li>
+        <li><?php if (isset($_SESSION['id'])) { echo '<a>Account</a>'; } else { echo '<a>Options</a>'; } ?>
+            <ul class="subnav">
+                <?php
+
+                echo '<div class="topnav-welcome"><li>Welcome';
+
+                if (isset($_SESSION['first_name'])) {
+                    echo ", {$_SESSION['first_name']}";
+                }
+                    
+                echo '!</li></div>';
+
+                if (isset($_SESSION['id'])) {
+                    echo '<li><a href="/FilmIndustry/eCommerce/account/profile.php">Profile</a></li><li><a href="/FilmIndustry/eCommerce/logout.php">Sign Out</a></li>';
+                } else {
+                    echo '<li><a href="/FilmIndustry/eCommerce/login.php">Sign In</a></li><li><a href="/FilmIndustry/eCommerce/register_page1.php">New?</a></li><li><a href="/FilmIndustry/eCommerce/forgot_password.php">Password?</a></li>';
+                }
+
+                ?>
+            </ul>
+        </li>
+    </ul>
     <!--<a href="/FilmIndustry/eCommerce/index.php">Home</a>-->
     <!--<nav class="topnav">
         <div class="topnav-logo"><a href="/FilmIndustry/eCommerce/index.php">Home</a></div>
