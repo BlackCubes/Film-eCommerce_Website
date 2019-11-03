@@ -3377,7 +3377,8 @@ form#userChangeAddressCard {
     }
 
     .header li a:hover,
-    .header .menu-btn:hover {
+    .header .menu-btn:hover,
+    .header .submenu-btn:hover {
         background-color: #f4f4f4;
     }
 
@@ -3437,7 +3438,7 @@ form#userChangeAddressCard {
         width: 18px;
     }
 
-    .header .subnav-icon {
+    .header .submenu-icon .subnav-icon {
         background: #333;
         display: block;
         width: 1px;
@@ -3448,7 +3449,7 @@ form#userChangeAddressCard {
 
     .header .menu-icon .nav-icon:before,
     .header .menu-icon .nav-icon:after,
-    .header .subnav-icon:before {
+    .header .submenu-icon .subnav-icon:before {
         display: block;
         background: #333;
         content: '';
@@ -3466,13 +3467,14 @@ form#userChangeAddressCard {
         top: -5px;
     }
 
-    .header .subnav-icon:before {
+    .header .submenu-icon .subnav-icon:before {
         top: 0;
         right: 0;
         transform: rotate(90deg);
     }
 
-    .header .menu-btn {
+    .header .menu-btn,
+    .header .submenu-btn {
         display: none;
     }
 
@@ -3481,7 +3483,7 @@ form#userChangeAddressCard {
         max-height: 440px;
     }
 
-    .header .topnav > li > a:focus ~ .subnav {
+    .header .submenu-btn:checked ~ .subnav {
         display: block;
         max-height: 300px;
     }
@@ -3500,7 +3502,7 @@ form#userChangeAddressCard {
         top: 0;
     }
 
-    .header .topnav > li > a:focus > .subnav-icon:before {
+    .header .submenu-btn:checked ~ .subnav-icon:before {
         transform: rotate(0deg);
     }
 
