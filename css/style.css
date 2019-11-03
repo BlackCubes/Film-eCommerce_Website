@@ -32,7 +32,7 @@ body.body--account {
     box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
 }*/
 
-.topnav {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ body.body--account {
     list-style: none;
 }
 
-.topnav li, .topnav a {
+.header li, .header a {
     font-family: 'Muli', sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -51,22 +51,22 @@ body.body--account {
     text-decoration: none;
 }
 
-.topnav ul li {
+.header ul li {
     display: inline-block;
     position: relative;
     padding: 0px 30px;
     line-height: 40px;
 }
 
-.topnav li a {
+.header li a {
     transition: all 0.3s ease 0s;
 }
 
-.topnav li a:hover {
+.header li a:hover {
     color: blueviolet;
 }
 
-.topnav ul li ul {
+.header ul li ul {
     display: none;
     position: absolute;
     overflow: visible;
@@ -84,23 +84,23 @@ body.body--account {
     box-shadow: 0px 8px 18px -18px rgba(138,43,226,0.53);
 }
 
-.topnav ul li:hover ul {
+.header ul li:hover ul {
     display: block;
 }
 
-.topnav .topnav-welcome {
+.header .topnav-welcome {
     border-bottom: 1px solid rgba(138,43,226,0.17);
 }
 
-.topnav ul li ul li a, .topnav .topnav-welcome {
+.header ul li ul li a, .header .topnav-welcome {
     padding: 8px 14px;
 }
 
-.topnav ul li ul li a, .topnav ul li ul li {
+.header ul li ul li a, .header ul li ul li {
     font-size: 14px;
 }
 
-.topnav ul li:nth-child(4) ul li {
+.header ul li:nth-child(4) ul li {
     width: 147px;
 }
 
