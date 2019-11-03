@@ -30,8 +30,6 @@ if (!isset($_SESSION)) {
     <a class="topnav-logo" href="/FilmIndustry/eCommerce/index.php">Home</a>
     <input type="checkbox" class="menu-btn" id="menu-btn" />
     <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
-    <a class="cart-icon" href="/FilmIndustry/eCommerce/cart/cart.php"><i class="fas fa-shopping-cart"></i></a>
-    <a class="wishlist-icon" href="/FilmIndustry/eCommerce/wishlist/wishlist.php"><i class="fas fa-heart"></i></a>
     <ul class="topnav">
         <li><a>Departments<span class="subnav-icon"></span></a>
             <ul class="subnav">
@@ -70,6 +68,10 @@ if (!isset($_SESSION)) {
                 ?>
             </ul>
         </li>
+        <div class="cart-wish-icons">
+            <a class="cart-icon" href="/FilmIndustry/eCommerce/cart/cart.php"><i class="fas fa-shopping-cart"></i></a>
+            <a class="wishlist-icon" href="/FilmIndustry/eCommerce/wishlist/wishlist.php"><i class="fas fa-heart"></i></a>
+        </div>
     </ul>
     <!--<a href="/FilmIndustry/eCommerce/index.php">Home</a>-->
     <!--<nav class="topnav">
