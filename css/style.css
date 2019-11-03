@@ -3449,7 +3449,7 @@ form#userChangeAddressCard {
         max-height: 440px;
     }
 
-    .header .topnav li a:focus ~ .subnav {
+    .header .topnav > li > a:focus ~ .subnav {
         max-height: 300px;
     }
 
