@@ -3396,6 +3396,7 @@ form#userChangeAddressCard {
 
     .header .subnav {
         display: none;
+        width: 85%;
     }
 
     .header .cart-wish-icons {
