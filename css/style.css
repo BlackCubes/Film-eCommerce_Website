@@ -51,6 +51,12 @@ body.body--account {
     text-decoration: none;
 }
 
+.header .menu-btn,
+.header .menu-icon,
+.header .nav-icon {
+    display: none;
+}
+
 .header ul li {
     display: inline-block;
     position: relative;
