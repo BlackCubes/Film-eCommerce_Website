@@ -3452,7 +3452,7 @@ form#userChangeAddressCard {
         max-height: 440px;
     }
 
-    .header .submenu-btn:checked ~ .subnav {
+    .header .submenu-btn:checked > .subnav {
         max-height: 300px;
     }
 
