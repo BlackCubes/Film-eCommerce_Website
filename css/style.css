@@ -3389,6 +3389,7 @@ form#userChangeAddressCard {
     }
 
     .header .topnav {
+        display: none;
         float: left;
         width: 100%;
     }
@@ -3472,6 +3473,7 @@ form#userChangeAddressCard {
     }
 
     .header .menu-btn:checked ~ .topnav {
+        display: block;
         max-height: 440px;
     }
 
