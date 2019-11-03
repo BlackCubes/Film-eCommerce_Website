@@ -57,6 +57,15 @@ body.body--account {
     display: none;
 }
 
+.header .cart-wish-icons {
+    margin: 10px;
+}
+
+.header .cart-icon,
+.header .wishlist-icon {
+    padding: 10px;
+}
+
 .header ul li {
     display: inline-block;
     position: relative;
