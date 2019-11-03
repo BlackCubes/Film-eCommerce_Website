@@ -3394,7 +3394,6 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
-    .header ul li:hover ul,
     .header .subnav {
         display: none;
     }
