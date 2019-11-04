@@ -3360,7 +3360,9 @@ form#userChangeAddressCard {
         z-index: 2;
     }
 
-    #menuToggle span.nav-icon {
+    #menuToggle span.nav-icon,
+    #menuToggle span.nav-icon:before,
+    #menuToggle span.nav-icon:after {
         display: flex;
         width: 29px;
         height: 2px;
