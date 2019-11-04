@@ -3430,13 +3430,19 @@ form#userChangeAddressCard {
     .header .topnav-logo {
         float: none;
         position: absolute;
-        top: 5%;
+        top: 4.5%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .header .cart-wish-icons {
         float: right;
+    }
+
+    .header .cart-wish-icons .cart-icon,
+    .header .cart-wish-icons .wishlist-icon {
+        color: black;
+        padding: 10px;
     }
 
     .header .topnav-logo a {
