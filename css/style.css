@@ -3334,6 +3334,7 @@ form#userChangeAddressCard {
 
     /* MAIN NAVBAR */
     .header {
+        font-family: 'Muli', sans-serif;
         width: 100%;
         background-color: black;
         height: 65px;
@@ -3399,7 +3400,7 @@ form#userChangeAddressCard {
         transform: rotate(-45deg) translate(0, -1px);
     }
 
-    header .topnav {
+    .header .topnav {
         position: absolute;
         width: 60%;
         height: 100vh;
@@ -3414,21 +3415,35 @@ form#userChangeAddressCard {
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 
-    header .topnav li {
+    .header .topnav li {
         padding: 10px;
         transition-delay: 2s;
     }
 
-    header #menuToggle input.menu-btn:checked ~ ul {
+    .header #menuToggle input.menu-btn:checked ~ ul {
         transform: none;
     }
 
-    header .cart-wish-icons {
+    .header .topnav-logo {
+        float: none;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header .cart-wish-icons {
         float: right;
     }
 
+    .header .topnav-logo a {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        text-decoration: none;
+    }
+
     .header .topnav a {
-        font-family: 'Muli', sans-serif;
         font-size: 1em;
         font-weight: 400;
         color: #1E1E23;
