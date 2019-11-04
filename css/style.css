@@ -3411,6 +3411,15 @@ form#userChangeAddressCard {
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 
+    header .topnav li {
+        padding: 10px 0;
+        transition-delay: 2s;
+    }
+
+    header #menuToggle input.menu-btn:checked ~ ul {
+        transform: none;
+    }
+
     /*.header {
         width: 100%;
         display: block;
