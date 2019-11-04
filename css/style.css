@@ -3465,6 +3465,14 @@ form#userChangeAddressCard {
         opacity: 0.5;
     }
 
+    .header .topnav .subnav li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .header .topnav .subnav li a:hover {
+        color: blueviolet;
+    }
+
     .header ul {
         padding: 0;
         list-style-type: none;
