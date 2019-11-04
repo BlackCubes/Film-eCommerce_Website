@@ -3333,7 +3333,7 @@ form#userChangeAddressCard {
 @media only screen and (max-width: 600px) {
 
     /* MAIN NAVBAR */
-    .header {
+    /*.header {
         width: 100%;
         display: block;
         background-color: rgb(255, 255, 255);
@@ -3504,7 +3504,7 @@ form#userChangeAddressCard {
 
     .header .submenu-btn:checked ~ .subnav-icon:before {
         transform: rotate(0deg);
-    }
+    }*/
 
     /* MAIN FOOTER */
     footer.footer,
