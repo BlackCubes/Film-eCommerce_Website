@@ -3424,6 +3424,25 @@ form#userChangeAddressCard {
         float: right;
     }
 
+    .header .topnav a {
+        font-family: 'Muli', sans-serif;
+        font-size: 1.5em;
+        font-weight: 400;
+        color: #1E1E23;
+        opacity: 1;
+        text-decoration: none;
+        transition: 200ms;
+    }
+
+    .header .topnav a:hover {
+        opacity: 0.5;
+    }
+
+    .header ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
     /*.header {
         width: 100%;
         display: block;
