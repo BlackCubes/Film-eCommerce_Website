@@ -3333,6 +3333,12 @@ form#userChangeAddressCard {
 @media only screen and (max-width: 600px) {
 
     /* MAIN NAVBAR */
+    .header {
+        width: 100%;
+        background-color: black;
+        height: 65px;
+    }
+
     /*.header {
         width: 100%;
         display: block;
