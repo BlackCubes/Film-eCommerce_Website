@@ -31,7 +31,7 @@ body.body--account {
     -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
     box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
 }*/
-
+/*
 .header {
     display: flex;
     justify-content: space-between;
@@ -118,7 +118,7 @@ body.body--account {
 
 .header ul li:nth-child(4) ul li {
     width: 147px;
-}
+}*/
 
 /* MAIN FOOTER */
 footer.footer {
