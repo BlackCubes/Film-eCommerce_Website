@@ -3420,6 +3420,10 @@ form#userChangeAddressCard {
         transform: none;
     }
 
+    header .cart-wish-icons {
+        float: right;
+    }
+
     /*.header {
         width: 100%;
         display: block;
