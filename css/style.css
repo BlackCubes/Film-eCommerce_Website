@@ -3350,6 +3350,16 @@ form#userChangeAddressCard {
         user-select: none;
     }
 
+    #menuToggle input {
+        display: flex;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
     /*.header {
         width: 100%;
         display: block;
