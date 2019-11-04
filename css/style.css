@@ -3336,8 +3336,11 @@ form#userChangeAddressCard {
     .header {
         font-family: 'Muli', sans-serif;
         width: 100%;
-        background-color: black;
         height: 65px;
+        background-color: rgba(255, 255, 255, 0.897);
+        -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
+        -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
+        box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
     }
 
     #menuToggle {
@@ -3370,7 +3373,7 @@ form#userChangeAddressCard {
         left: 12px;
         margin-bottom: 5px;
         position: relative;
-        background: #fff;
+        background: black;
         border-radius: 3px;
         z-index: 1;
         transform-origin: 5px 0px;
@@ -3439,7 +3442,7 @@ form#userChangeAddressCard {
     .header .topnav-logo a {
         font-size: 12px;
         font-weight: 400;
-        color: white;
+        color: black;
         text-decoration: none;
     }
 
