@@ -3833,10 +3833,7 @@ form#userChangeAddressCard {
         border: 1px solid rgab(0, 0, 0, 0.1);
     }
 
-    .sidebar-mobile [value="Formats"]:checked ~ .posts [data-category~="Formats"] {
-        display: block;
-    }
-
+    .sidebar-mobile [value="Formats"]:checked ~ .posts .post:not([data-category~="Formats"]),
     .sidebar-mobile [value="Genres"]:checked ~ .posts .post:not([data-category~="Genres"]),
     .sidebar-mobile [value="Actors"]:checked ~ .posts .post:not([data-category~="Actors"]),
     .sidebar-mobile [value="Directors"]:checked ~ .posts .post:not([data-category~="Directors"]),
