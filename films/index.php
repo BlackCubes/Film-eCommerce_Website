@@ -260,7 +260,7 @@ $sidebar = new sidebarFilter();
     <div class="sidebar-a">
         <?php
 
-        echo $sidebar->formatConstruction($dbc) . $sidebar->genreConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->actorConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->directorConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->writerConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->producerConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->dpConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->studioContruction($dbc, $format_join, $format_where, $format_to_url);
+        echo $sidebar->formatConstruction($dbc) . $sidebar->genreConstruction($dbc, $format_join, $format_where, $format_to_url);
 
         /*
         $q = "SELECT format FROM formats ORDER BY format";
