@@ -3780,6 +3780,12 @@ form#userChangeAddressCard {
     }
 
     /* SIDEBAR */
+    :root {
+        --black: #1a1a1a;
+        --white: #fff;
+        --green: #49b293;
+    }
+
     .container .sidebar-a {
         display: none;
     }
