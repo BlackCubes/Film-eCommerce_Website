@@ -327,18 +327,20 @@ class sidebarMobile
     // WRITER QUERY:
     public function writerMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
-        /*$this->q = "SELECT DISTINCT w.id AS writer_id, w.first_name AS writer_fn, w.middle_name AS writer_mn, w.last_name AS writer_ln FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY w.last_name LIMIT 5";
+        $this->q = "SELECT DISTINCT w.id AS writer_id, w.first_name AS writer_fn, w.middle_name AS writer_mn, w.last_name AS writer_ln FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY w.last_name LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         while ($writer = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
 
             $this->encryption = urlencode(my_encrypt($writer['writer_id'], KEY));
 
-            echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=writer&name=' . $this->encryption . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></li>';
+            echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=writer&name=' . $this->encryption . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></li>';
+            /*echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=writer&name=' . $this->encryption . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></li>';*/
 
         }
 
-        echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=writer">More Writers</a></li>';*/
+        echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=writer">More Writers</a></li>';
+        /*echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=writer">More Writers</a></li>';*/
 
     }
 
