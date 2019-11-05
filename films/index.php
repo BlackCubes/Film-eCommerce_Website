@@ -412,6 +412,29 @@ $sidebar = new sidebarFilter();
     <div class="breadcrumb">
         <?php echo $breadcrumb->build(array('Films' => 'films/index.php')); ?>
     </div>
+    <div class="sidebar-mobile">
+        <input type="radio" name="categories" id="Formats" value="Formats" checked>
+        <input type="radio" name="categories" id="Genres" value="Genres">
+        <input type="radio" name="categories" id="Actors" value="Actors">
+        <input type="radio" name="categories" id="Directors" value="Directors">
+        <input type="radio" name="categories" id="Writers" value="Writers">
+        <input type="radio" name="categories" id="Producers" value="Producers">
+        <input type="radio" name="categories" id="Cinematographers" value="Cinematographers">
+        <input type="radio" name="categories" id="Studios" value="Studios">
+        <ol class="filters">
+            <li><label for="Formats">Formats</label></li>
+            <li><label for="Genres">Genres</label></li>
+            <li><label for="Actors">Actors</label></li>
+            <li><label for="Directors">Directors</label></li>
+            <li><label for="Writers">Writers</label></li>
+            <li><label for="Producers">Producers</label></li>
+            <li><label for="Cinematographers">Cinematographers</label></li>
+            <li><label for="Studios">Studos</label></li>
+        </ol>
+        <ol class="posts">
+            
+        </ol>
+    </div>
     <div class="sidebar-a">
         <?php
 
