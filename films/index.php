@@ -407,6 +407,7 @@ class sidebarMobile
 
 $breadcrumb = new breadcrumb();
 $sidebar = new sidebarFilter();
+$sidebarMobile = new sidebarMobile();
 ?>
 <div class="container">
     <div class="breadcrumb">
@@ -432,7 +433,7 @@ $sidebar = new sidebarFilter();
             <li><label for="Studios">Studos</label></li>
         </ol>
         <ol class="posts">
-            
+
         </ol>
     </div>
     <div class="sidebar-a">
