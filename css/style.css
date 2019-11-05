@@ -3794,6 +3794,10 @@ form#userChangeAddressCard {
 
     }*/
 
+    .sidebar-mobile ol {
+        list-style: none;
+    }
+
     .sidebar-mobile input[type="radio"] {
         position: absolute;
         left: -9999px;
