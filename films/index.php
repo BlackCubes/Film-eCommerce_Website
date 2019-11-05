@@ -318,7 +318,8 @@ class sidebarMobile
 
         }
 
-        echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';
+        echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';
+        /*echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';*/
 
     }
 
