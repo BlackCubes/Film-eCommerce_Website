@@ -129,10 +129,12 @@ class sidebarFilter
 
         $this->q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY g.genre LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
+
+        echo '<div class="results"><p><b>Genres</b></p>';
         
         while ($genre = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
             $this->encryption = urlencode(my_encrypt($genre['genre_id'], KEY));
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=genre&name=' . $this->encryption . '">' . $genre['genre_id'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=genre&name=' . $this->encryption . '">' . $genre['genre'] . '</a></p>';
         }
 
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">See more</a></div>';
