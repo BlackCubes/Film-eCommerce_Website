@@ -281,7 +281,8 @@ class sidebarMobile
             /*echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=genre&name=' . $this->encryption . '">' . $genre['genre'] . '</a></li>';*/
         }
 
-        echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';
+        echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';
+        /*echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';*/
 
     }
 
