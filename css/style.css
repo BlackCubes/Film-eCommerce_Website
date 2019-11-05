@@ -3784,6 +3784,15 @@ form#userChangeAddressCard {
         display: none;
     }
 
+    /*.container .sidebar-mobile {
+
+    }*/
+
+    .sidebar-mobile input[type="radio"] {
+        position: absolute;
+        left: -9999px;
+    }
+
     /* MAIN CONTAINER */
     .container {
         display: block;
