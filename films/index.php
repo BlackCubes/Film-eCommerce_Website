@@ -433,7 +433,11 @@ $sidebarMobile = new sidebarMobile();
             <li><label for="Studios">Studos</label></li>
         </ol>
         <ol class="posts">
+            <?php
 
+            echo $sidebarMobile->formatMobile($dbc) . $sidebarMobile->genreMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->actorMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->directorMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->writerMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->producerMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->dpMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->studioMobile($dbc, $format_join, $format_where, $format_to_url);
+
+            ?>
         </ol>
     </div>
     <div class="sidebar-a">
