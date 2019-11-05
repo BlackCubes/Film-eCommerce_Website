@@ -265,7 +265,6 @@ class sidebarMobile
 
         while ($format = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
             echo '<li class="post" data-category="Formats"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $format['format'] . '">' . $format['format'] . '</a></li>';
-            /*echo '<li class="post" data-category="Formats"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $format['format'] . '">' . $format['format'] . '</a></li>';*/
         }
 
     }
