@@ -305,7 +305,7 @@ class sidebarMobile
     // DIRECTOR QUERY:
     public function directorMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
-        $this->q = "SELECT DISTINCT dir.id AS director_id, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY dir.last_name LIMIT 5";
+        /*$this->q = "SELECT DISTINCT dir.id AS director_id, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY dir.last_name LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         while ($director = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
@@ -316,7 +316,7 @@ class sidebarMobile
 
         }
 
-        echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';
+        echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';*/
 
     }
 
