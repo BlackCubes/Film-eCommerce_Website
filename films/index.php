@@ -314,7 +314,8 @@ class sidebarMobile
 
             $this->encryption = urlencode(my_encrypt($director['director_id'], KEY));
 
-            echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=director&name=' . $this->encryption . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></li>';
+            echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=director&name=' . $this->encryption . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></li>';
+            /*echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=director&name=' . $this->encryption . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></li>';*/
 
         }
 
