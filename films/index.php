@@ -164,7 +164,7 @@ class sidebarFilter
     public function directorConstruction($database, $formatJoin, $formatWhere, $formatURL) {
 
         $this->q = "SELECT DISTINCT dir.id AS director_id, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln FROM directors AS dir JOIN products_directors AS pdir ON dir.id=pdir.director_id JOIN products AS p ON pdir.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY dir.last_name LIMIT 5";
-        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error " . mysqli_error($database));
+        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         echo '<div class="results"><p><b>Directors</b></p>';
 
@@ -183,7 +183,7 @@ class sidebarFilter
     public function writerConstruction($database, $formatJoin, $formatWhere, $formatURL) {
 
         $this->q = "SELECT DISTINCT w.id AS writer_id, w.first_name AS writer_fn, w.middle_name AS writer_mn, w.last_name AS writer_ln FROM writers AS w JOIN products_writers AS pw ON w.id=pw.writer_id JOIN products AS p ON pw.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY w.last_name LIMIT 5";
-        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error " . mysqli_error($database));
+        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         echo '<div class="results"><p><b>Writers</b></p>';
 
@@ -201,7 +201,7 @@ class sidebarFilter
     public function producerConstruction($database, $formatJoin, $formatWhere, $formatURL) {
 
         $this->q = "SELECT DISTINCT pro.id AS producer_id, pro.first_name AS producer_fn, pro.middle_name AS producer_mn, pro.last_name AS producer_ln FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY pro.last_name LIMIT 5";
-        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error " . mysqli_error($database));
+        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         echo '<div class="results"><p><b>Producers</b></p>';
 
@@ -219,7 +219,7 @@ class sidebarFilter
     public function dpConstruction($database, $formatJoin, $formatWhere, $formatURL) {
 
         $this->q = "SELECT DISTINCT dp.id AS dp_id, dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY dp.last_name LIMIT 5";
-        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error " . mysqli_error($database));
+        $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         echo '<div class="results"><p><b>Cinematographers</b></p>';
 
@@ -243,7 +243,7 @@ class sidebarFilter
 
         while ($studio = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
             $this->encryption = urlencode(my_encrypt($studio['studio_id'], KEY));
-            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=studio&name=' . $this->encryption . '">' . $studio['studio_id'] . '</a></p>';
+            echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=studio&name=' . $this->encryption . '">' . $studio['studio_name'] . '</a></p>';
         }
 
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=studio">See more</a></div>';
