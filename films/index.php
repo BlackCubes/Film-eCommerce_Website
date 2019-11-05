@@ -252,6 +252,10 @@ class sidebarFilter
 
 }
 
+class sidebarMobile {
+    
+}
+
 $breadcrumb = new breadcrumb();
 $sidebar = new sidebarFilter();
 ?>
