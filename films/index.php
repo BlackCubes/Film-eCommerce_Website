@@ -270,7 +270,6 @@ $sidebar = new sidebarFilter();
             echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $format['format'] . '">' . $format['format'] . '</a></p>';
         }
         echo '</div>';
-        */
 
         $q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id JOIN departments AS d ON p.department_id=d.id $format_join WHERE d.department='Movies' $format_where ORDER BY g.genre LIMIT 5";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
@@ -348,6 +347,7 @@ $sidebar = new sidebarFilter();
             echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $format_to_url . '&type=studio&name=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></p>';
         }
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $format_to_url . '&type=studio">See more</a></div>';
+        */
 
         ?>
     </div>
