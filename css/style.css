@@ -3779,6 +3779,11 @@ form#userChangeAddressCard {
         padding-top: 100px;
     }
 
+    /* SIDEBAR */
+    .container .sidebar-a {
+        display: none;
+    }
+
     /* MAIN CONTAINER */
     .container {
         display: block;
