@@ -269,6 +269,15 @@ class sidebarMobile
 
     }
 
+    $this->q = "SELECT format FROM formats ORDER BY format";
+    $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
+
+    echo '<div class="results"><p><b>Formats</b></p>';
+
+    while ($format = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
+        echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $format['format'] . '">' . $format['format'] . '</a></p>';
+    }
+
     // GENRE QUERY:
     public function genreMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
