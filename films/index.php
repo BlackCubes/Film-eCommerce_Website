@@ -287,18 +287,20 @@ class sidebarMobile
     // ACTOR QUERY:
     public function actorMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
-        /*$this->q = "SELECT DISTINCT a.id AS actor_id, a.first_name AS actor_fn, a.middle_name AS actor_mn, a.last_name AS actor_ln FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY a.last_name LIMIT 5";
+        $this->q = "SELECT DISTINCT a.id AS actor_id, a.first_name AS actor_fn, a.middle_name AS actor_mn, a.last_name AS actor_ln FROM actors AS a JOIN products_actors AS pa ON a.id=pa.actor_id JOIN products AS p ON pa.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY a.last_name LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         while ($actor = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
 
             $this->encryption = urlencode(my_encrypt($actor['actor_id'], KEY));
 
-            echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=actor&name=' . $this->encryption . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></li>';
+            echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=actor&name=' . $this->encryption . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></li>';
+            /*echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=actor&name=' . $this->encryption . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></li>';*/
 
         }
 
-        echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=actor">More Actors</a></li>';*/
+        echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=actor">More Actors</a></li>';
+        /*echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=actor">More Actors</a></li>';*/
 
     }
 
