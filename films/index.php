@@ -359,7 +359,7 @@ class sidebarMobile
     // CINEMATOGRAPHER QUERY:
     public function dpMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
-        $this->q = "SELECT DISTINCT dp.id AS dp_id, dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY dp.last_name LIMIT 5";
+        /*$this->q = "SELECT DISTINCT dp.id AS dp_id, dp.first_name AS dp_fn, dp.middle_name AS dp_mn, dp.last_name AS dp_ln FROM dps AS dp JOIN products_dps AS pdp ON dp.id=pdp.dp_id JOIN products AS p ON pdp.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY dp.last_name LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         while ($dp = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
@@ -368,7 +368,7 @@ class sidebarMobile
 
             echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=dp&name=' . $this->encryption . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></li>';
         }
-        echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=dp">More Cinematographers</a></li>';
+        echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=dp">More Cinematographers</a></li>';*/
 
     }
 
