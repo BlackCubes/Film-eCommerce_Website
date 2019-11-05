@@ -3799,6 +3799,30 @@ form#userChangeAddressCard {
         left: -9999px;
     }
 
+    .sidebar-mobile .filters {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .sidebar-mobile .filters * {
+        display: inline-block;
+    }
+
+    .filters label {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 2rem;
+        min-width: 50px;
+        line-height: normal;
+        cursor: pointer;
+        transition: all 0.1s;
+    }
+
+    .filters label:hover {
+        background: var(--green);
+        color: var(--white);
+    }
+
     /* MAIN CONTAINER */
     .container {
         display: block;
