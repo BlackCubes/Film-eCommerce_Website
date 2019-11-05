@@ -252,7 +252,8 @@ class sidebarFilter
 
 }
 
-class sidebarMobile {
+class sidebarMobile
+{
 
     private $q, $r, $encryption;
 
