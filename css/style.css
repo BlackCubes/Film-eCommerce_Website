@@ -3808,7 +3808,7 @@ form#userChangeAddressCard {
         display: inline-block;
     }
 
-    .filters label {
+    .sidebar-mobile .filters label {
         padding: 0.5rem 1rem;
         margin-bottom: 0.25rem;
         border-radius: 2rem;
@@ -3818,7 +3818,7 @@ form#userChangeAddressCard {
         transition: all 0.1s;
     }
 
-    .filters label:hover {
+    .sidebar-mobile .filters label:hover {
         background: var(--green);
         color: var(--white);
     }
