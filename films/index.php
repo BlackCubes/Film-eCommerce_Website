@@ -247,10 +247,11 @@ class sidebarFilter
         echo '<a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=studio">See more</a></div>';
 
     }
-    
+
 }
 
 $breadcrumb = new breadcrumb();
+$sidebar = new sidebarFilter();
 ?>
 <div class="container">
     <div class="breadcrumb">
@@ -259,6 +260,9 @@ $breadcrumb = new breadcrumb();
     <div class="sidebar-a">
         <?php
 
+        echo $sidebar->formatConstruction($dbc);
+
+        /*
         $q = "SELECT format FROM formats ORDER BY format";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
         echo '<div class="results"><p><b>Formats</b></p>';
@@ -266,6 +270,7 @@ $breadcrumb = new breadcrumb();
             echo '<p><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $format['format'] . '">' . $format['format'] . '</a></p>';
         }
         echo '</div>';
+        */
 
         $q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id JOIN departments AS d ON p.department_id=d.id $format_join WHERE d.department='Movies' $format_where ORDER BY g.genre LIMIT 5";
         $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
