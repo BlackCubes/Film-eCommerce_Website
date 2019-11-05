@@ -341,7 +341,7 @@ class sidebarMobile
     // PRODUCER QUERY:
     public function producerMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
-        $this->q = "SELECT DISTINCT pro.id AS producer_id, pro.first_name AS producer_fn, pro.middle_name AS producer_mn, pro.last_name AS producer_ln FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY pro.last_name LIMIT 5";
+        /*$this->q = "SELECT DISTINCT pro.id AS producer_id, pro.first_name AS producer_fn, pro.middle_name AS producer_mn, pro.last_name AS producer_ln FROM producers AS pro JOIN products_producers AS ppro ON pro.id=ppro.producer_id JOIN products AS p ON ppro.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY pro.last_name LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         while ($producer = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
@@ -352,7 +352,7 @@ class sidebarMobile
 
         }
 
-        echo '<li class="post" data-category="Producers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=producer">More Producers</a></li>';
+        echo '<li class="post" data-category="Producers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=producer">More Producers</a></li>';*/
 
     }
 
