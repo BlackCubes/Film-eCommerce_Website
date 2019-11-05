@@ -239,7 +239,7 @@ class sidebarFilter
         $this->q = "SELECT DISTINCT stu.id AS studio_id, stu.studio_name AS studio_name FROM studios AS stu JOIN products_studios AS pstu ON stu.id=pstu.studio_id JOIN products AS p ON pstu.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY stu.studio_name LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
-        echo '<div class="results"><p><b>Formats</b></p>';
+        echo '<div class="results"><p><b>Studios</b></p>';
 
         while ($studio = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
             $this->encryption = urlencode(my_encrypt($studio['studio_id'], KEY));
