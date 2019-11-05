@@ -272,7 +272,7 @@ class sidebarMobile
     // GENRE QUERY:
     public function genreMobile($database, $formatJoin, $formatWhere, $formatURL) {
 
-        $this->q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY g.genre LIMIT 5";
+        /*$this->q = "SELECT DISTINCT g.id AS genre_id, g.genre AS genre FROM genres AS g JOIN products_genres AS pg ON g.id=pg.genre_id JOIN products AS p ON pg.product_id=p.id JOIN departments AS d ON p.department_id=d.id $formatJoin WHERE d.department='Movies' $formatWhere ORDER BY g.genre LIMIT 5";
         $this->r = mysqli_query($database, $this->q) or trigger_error("Query: {$this->q}\n<br>MySQL Error: " . mysqli_error($database));
 
         while ($genre = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
@@ -280,7 +280,7 @@ class sidebarMobile
             echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=genre&name=' . $this->encryption . '">' . $genre['genre'] . '</a></li>';
         }
 
-        echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';
+        echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';*/
 
     }
 
