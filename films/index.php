@@ -278,11 +278,9 @@ class sidebarMobile
         while ($genre = mysqli_fetch_array($this->r, MYSQLI_ASSOC)) {
             $this->encryption = urlencode(my_encrypt($genre['genre_id'], KEY));
             echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=genre&name=' . $this->encryption . '">' . $genre['genre'] . '</a></li>';
-            /*echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=genre&name=' . $this->encryption . '">' . $genre['genre'] . '</a></li>';*/
         }
 
         echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';
-        /*echo '<li class="post" data-category="Genres"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=genre">More Genres</a></li>';*/
 
     }
 
