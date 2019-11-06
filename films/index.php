@@ -102,7 +102,7 @@ if (isset($_GET['format'])) {
     $format_get = $format_join = $format_where = '';
     $format_to_url = 'all';
 }
-
+/*
 class sidebarFilter
 {
 
@@ -295,12 +295,10 @@ class sidebarMobile
             $this->encryption = urlencode(my_encrypt($actor['actor_id'], KEY));
 
             echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=actor&name=' . $this->encryption . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></li>';
-            /*echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=actor&name=' . $this->encryption . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></li>';*/
 
         }
 
         echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=actor">More Actors</a></li>';
-        /*echo '<li class="post" data-category="Actors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=actor">More Actors</a></li>';*/
 
     }
 
@@ -315,12 +313,10 @@ class sidebarMobile
             $this->encryption = urlencode(my_encrypt($director['director_id'], KEY));
 
             echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=director&name=' . $this->encryption . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></li>';
-            /*echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=director&name=' . $this->encryption . '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></li>';*/
 
         }
 
         echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';
-        /*echo '<li class="post" data-category="Directors"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=director">More Directors</a></li>';*/
 
     }
 
@@ -335,12 +331,10 @@ class sidebarMobile
             $this->encryption = urlencode(my_encrypt($writer['writer_id'], KEY));
 
             echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=writer&name=' . $this->encryption . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></li>';
-            /*echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=writer&name=' . $this->encryption . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></li>';*/
 
         }
 
         echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=writer">More Writers</a></li>';
-        /*echo '<li class="post" data-category="Writers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=writer">More Writers</a></li>';*/
 
     }
 
@@ -355,12 +349,10 @@ class sidebarMobile
             $this->encryption = urlencode(my_encrypt($producer['producer_id'], KEY));
 
             echo '<li class="post" data-category="Producers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=producer&name=' . $this->encryption . '">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></li>';
-            /*echo '<li class="post" data-category="Producers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=producer&name=' . $this->encryption . '">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></li>';*/
 
         }
 
         echo '<li class="post" data-category="Producers"><a href="/FilmIndustry/eCommerce/producers/other.php?department=Movies&format=' . $formatURL . '&type=producer">More Producers</a></li>';
-        /*echo '<li class="post" data-category="Producers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=producer">More Producers</a></li>';*/
 
     }
 
@@ -375,11 +367,9 @@ class sidebarMobile
             $this->encryption = urlencode(my_encrypt($dp['dp_id'], KEY));
 
             echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=dp&name=' . $this->encryption . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></li>';
-            /*echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=dp&name=' . $this->encryption . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></li>';*/
         }
 
         echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=dp">More Cinematographers</a></li>';
-        /*echo '<li class="post" data-category="Cinematographers"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=dp">More Cinematographers</a></li>';*/
 
     }
 
@@ -394,16 +384,15 @@ class sidebarMobile
             $this->encryption = urlencode(my_encrypt($studio['studio_id'], KEY));
 
             echo '<li class="post" data-category="Studios"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=studio&name=' . $this->encryption . '">' . $studio['studio_name'] . '</a></li>';
-            /*echo '<li class="post" data-category="Studios"><a href="/FilmIndustry/eCommerce/films/index.php?format=' . $formatURL . '&type=studio&name=' . $this->encryption . '">' . $studio['studio_name'] . '</a></li>';*/
             
         }
 
         echo '<li class="post" data-category="Studios"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=studio">More Studios</a></li>';
-        /*echo '<li class="post" data-category="Studios"><a href="/FilmIndustry/eCommerce/products/other.php?department=Movies&format=' . $formatURL . '&type=studio">More Studios</a></li>';*/
 
     }
     
 }
+*/
 
 $breadcrumb = new breadcrumb();
 $sidebar = new sidebarFilter();
