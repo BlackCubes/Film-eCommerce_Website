@@ -3827,7 +3827,8 @@ form#userChangeAddressCard {
         transition: all 0.1s;
     }
 
-    .sidebar-mobile .filters label:hover {
+    .sidebar-mobile .filters label:hover,
+    .sidebar-mobile .posts a:hover {
         background: var(--green);
         color: var(--white);
     }
