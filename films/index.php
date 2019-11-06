@@ -426,7 +426,7 @@ $sidebarMobile = new sidebarMobile();
         <ol class="posts">
             <?php
 
-            echo $sidebarMobile->formatMobile($dbc) . $sidebarMobile->genreMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->actorMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->directorMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->writerMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->producerMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->dpMobile($dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->studioMobile($dbc, $format_join, $format_where, $format_to_url);
+            echo $sidebarMobile->formatMobile('films', $dbc) . $sidebarMobile->genreMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->actorMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->directorMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->writerMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->producerMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->dpMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebarMobile->studioMobile('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url);
 
             ?>
         </ol>
@@ -434,7 +434,7 @@ $sidebarMobile = new sidebarMobile();
     <div class="sidebar-a">
         <?php
 
-        echo $sidebar->formatConstruction($dbc) . $sidebar->genreConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->actorConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->directorConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->writerConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->producerConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->dpConstruction($dbc, $format_join, $format_where, $format_to_url) . $sidebar->studioContruction($dbc, $format_join, $format_where, $format_to_url);
+        echo $sidebar->formatConstruction('films', $dbc) . $sidebar->genreConstruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebar->actorConstruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebar->directorConstruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebar->writerConstruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebar->producerConstruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebar->dpConstruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url) . $sidebar->studioContruction('films', departmentNameChange('films'), $dbc, $format_join, $format_where, $format_to_url);
 
         ?>
     </div>
