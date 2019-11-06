@@ -3329,13 +3329,16 @@ form#userChangeAddressCard {
 
 /* MEDIA QUERY */
 
-/* FOR TABLETS */
-@media only screen and (max-width: 768px) {
-    
+@custom-media --viewport-4 (max-width: 479.98px);
+@custom-media --viewport-7 (max-width: 767.98px);
+
+/* HOW 780PX FEELS LIKE */
+@media only screen and (--viewport-7) {
+
 }
 
-/* FOR MOBILE */
-@media only screen and (max-width: 480px) {
+/* HOW 480PX FEELS LIKE */
+@media only screen and (--viewport-4) {
 
     /* MAIN NAVBAR */
     .header {
