@@ -3861,6 +3861,8 @@ form#userChangeAddressCard {
     }
 
     .sidebar-mobile .posts a {
+        font-size: 13px;
+        color: var(--black);
         text-decoration: none;
     }
 
