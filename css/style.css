@@ -3332,6 +3332,152 @@ form#userChangeAddressCard {
 /* HOW 768PX FEELS LIKE */
 @media only screen and (max-width: 768px) {
 
+    /* MAIN NAVBAR */
+    .header {
+        font-family: 'Muli', sans-serif;
+        width: 100%;
+        height: 65px;
+        background-color: rgba(255, 255, 255, 0.897);
+        -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
+        -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
+        box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
+    }
+
+    #menuToggle {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 25px;
+        left: 0;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input.menu-btn {
+        display: flex;
+        width: 40px;
+        height: 32px;
+        left: 5px;
+        bottom: -6px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    #menuToggle span.nav-icon {
+        display: flex;
+        width: 29px;
+        height: 2px;
+        left: 12px;
+        margin-bottom: 5px;
+        position: relative;
+        background: black;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 5px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+
+    #menuToggle span.nav-icon:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span.nav-icon:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #menuToggle input.menu-btn:checked ~ span.nav-icon {
+        opacity: 1;
+        transform: rotate(45deg) translate(-3px, -1px);
+        background: #36383F;
+    }
+
+    #menuToggle input.menu-btn:checked ~ span.nav-icon:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input.menu-btn:checked ~ span.nav-icon:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    .header .topnav {
+        position: absolute;
+        width: 60%;
+        max-height: 110vh;
+        box-shadow: 0 0 10px #85888C;
+        margin: -30px 0 0 0;
+        padding: 20px;
+        padding-top: 70px;
+        background-color: #F5F6FA;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    .header .topnav li {
+        padding: 10px;
+        transition-delay: 2s;
+    }
+
+    .header #menuToggle input.menu-btn:checked ~ ul {
+        transform: none;
+    }
+
+    .header .topnav-logo {
+        float: none;
+        position: absolute;
+        top: 4.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header .cart-wish-icons {
+        float: right;
+    }
+
+    .header .cart-wish-icons .cart-icon,
+    .header .cart-wish-icons .wishlist-icon {
+        color: black;
+        padding: 10px;
+    }
+
+    .header .topnav-logo a {
+        font-size: 12px;
+        font-weight: 400;
+        color: black;
+        text-decoration: none;
+    }
+
+    .header .topnav a {
+        font-size: 1em;
+        font-weight: 400;
+        color: #1E1E23;
+        opacity: 1;
+        text-decoration: none;
+        transition: 200ms;
+    }
+
+    .header .topnav a:hover {
+        opacity: 0.5;
+    }
+
+    .header .topnav .subnav li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .header .topnav .subnav li a:hover {
+        color: blueviolet;
+    }
+
+    .header ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    
 }
 
 /* HOW 480PX FEELS LIKE */
