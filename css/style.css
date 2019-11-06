@@ -3477,6 +3477,169 @@ form#userChangeAddressCard {
         padding: 0;
         list-style-type: none;
     }
+
+    /* MAIN FOOTER */
+    footer.footer,
+    footer.footer .container-footer {
+        width: 100%;
+    }
+
+    footer.footer .upper-footer {
+        height: 100%;
+        margin-left: 20px;
+    }
+
+    footer.footer .upper-footer .grid__item {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    footer.footer .lower-footer {
+        width: 100%;
+    }
+
+    footer.footer .lower-footer .site-footer__copyright {
+        width: 100%;
+    }
+
+    /* PAGINATION */
+    .pagination {
+        width: 100%;
+    }
+
+    .pagination a {
+        display: inline-block;
+    }
+
+    /* HOMEPAGE */
+
+    /* SIDEBAR */
+    :root {
+        --black: #1a1a1a;
+        --white: #fff;
+        --green: #49b293;
+        --lightpurple: rgba(66, 17, 112, 0.30);
+    }
+
+    .container .sidebar-a {
+        display: none;
+    }
+
+    .container .sidebar-mobile {
+        font-family: 'Muli', sans-serif;
+        width: 100%;
+    }
+
+    .sidebar-mobile ol {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    .sidebar-mobile input[type="radio"] {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .sidebar-mobile .filters {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .sidebar-mobile .filters * {
+        display: inline-block;
+    }
+
+    .sidebar-mobile .filters label {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 2rem;
+        min-width: 50px;
+        line-height: normal;
+        cursor: pointer;
+        transition: all 0.1s;
+    }
+
+    .sidebar-mobile .filters label:hover,
+    .sidebar-mobile .posts a:hover {
+        color: rgba(66, 17, 112, 0.30);
+        background-color: rgba(243, 230, 255, 0.17);
+        border-bottom: 1px solid rgba(138,43,226,0.17);
+        border-top: 1px solid rgba(138,43,226,0.17);
+        border-radius: 2rem;
+    }
+
+    .sidebar-mobile .posts * {
+        display: inline-block;
+    }
+
+    .sidebar-mobile .posts {
+        text-align: center;
+    }
+
+    .sidebar-mobile [value="Formats"]:checked ~ .posts .post:not([data-category~="Formats"]),
+    .sidebar-mobile [value="Genres"]:checked ~ .posts .post:not([data-category~="Genres"]),
+    .sidebar-mobile [value="Actors"]:checked ~ .posts .post:not([data-category~="Actors"]),
+    .sidebar-mobile [value="Directors"]:checked ~ .posts .post:not([data-category~="Directors"]),
+    .sidebar-mobile [value="Writers"]:checked ~ .posts .post:not([data-category~="Writers"]),
+    .sidebar-mobile [value="Producers"]:checked ~ .posts .post:not([data-category~="Producers"]),
+    .sidebar-mobile [value="Cinematographers"]:checked ~ .posts .post:not([data-category~="Cinematographers"]),
+    .sidebar-mobile [value="Studios"]:checked ~ .posts .post:not([data-category~="Studios"]) {
+        display: none;
+    }
+
+    .sidebar-mobile .posts a {
+        font-size: 15px;
+        color: rgba(26, 26, 26, 0.7);
+        margin: 0.25rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 1rem;
+        line-height: normal;
+        transition: all 0.1s;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(138,43,226,0.47);
+        border-top: 1px solid rgba(138,43,226,0.47);
+    }
+
+    /* MAIN CONTAINER */
+
+    /* ARTISTS */
+
+    /* STUDIOS */
+
+    /* PRODUCTS PROFILE VIEW */
+
+    /* ARTIST PROFILE VIEW */
+
+    /* STUDIO PROFILE VIEW */
+
+    /* SIDEBAR OPTIONS PAGE */
+
+    /* USER PROFILE PAGE */
+
+    /* USER CART VIEW */
+
+    /* USER WISHLIST VIEW */
+
+    /* SIGN IN */
+
+    /* FORGOT PASSWORD PAGE */
+
+    /* CHANGE PASSWORD */
+
+    /* CHANGE NAME PAGE */
+
+    /* CHANGE EMAIL PAGE */
+
+    /* CHANGE PHONE NUMBER PAGE */
+
+    /* LOGIN & SECURITY OPTIONS PAGE */
+
+    /* CHANGE ADDRESS PAGE */
     
 }
 
