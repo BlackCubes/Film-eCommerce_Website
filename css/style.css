@@ -3790,9 +3790,9 @@ form#userChangeAddressCard {
         display: none;
     }
 
-    /*.container .sidebar-mobile {
-
-    }*/
+    .container .sidebar-mobile {
+        width: 100%;
+    }
 
     .sidebar-mobile ol {
         list-style: none;
