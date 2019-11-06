@@ -3832,7 +3832,7 @@ form#userChangeAddressCard {
         color: var(--white);
     }
 
-    .sidebar-mobile .posts {
+    .sidebar-mobile .posts * {
         display: inline-block;
         /*display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -3841,13 +3841,13 @@ form#userChangeAddressCard {
     }
 
     .sidebar-mobile .posts .post {
-        background: #fafafa;
+        /*background: #fafafa;
         margin-top: 10px;
         margin-left: 5px;
         margin-right: 5px;
         padding: 5px;
         border: 1px solid black;
-        border-radius: 30px;
+        border-radius: 30px;*/
     }
 
     .sidebar-mobile [value="Formats"]:checked ~ .posts .post:not([data-category~="Formats"]),
