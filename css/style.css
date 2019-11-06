@@ -3833,6 +3833,7 @@ form#userChangeAddressCard {
     }
 
     .sidebar-mobile .posts * {
+        display: inline-block;
         /*display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-top: 0;
