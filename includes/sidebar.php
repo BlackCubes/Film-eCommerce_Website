@@ -7,18 +7,14 @@
 // ************************************************ //
 // ************ DEPARTMENT NAME CHANGE ************ //
 
-public function departmentNameChange($department) {
-
-    private $name_change;
-
+function departmentNameChange($department) {
+    $name_change = '';
     if ($department === 'films') {
         $name_change = 'Movies';
     } else {
         $name_change = 'TV';
     }
-
     return $name_change;
-    
 }
 
 // ************ DEPARTMENT NAME CHANGE ************ //
