@@ -114,7 +114,7 @@ $sidebarMobile = new sidebarMobile();
         <?php echo $breadcrumb->build(array('TV' => 'tv/index.php')); ?>
     </div>
     <div class="sidebar-mobile">
-    <input type="radio" name="categories" id="Formats" value="Formats" checked>
+        <input type="radio" name="categories" id="Formats" value="Formats" checked>
         <input type="radio" name="categories" id="Genres" value="Genres">
         <input type="radio" name="categories" id="Actors" value="Actors">
         <input type="radio" name="categories" id="Directors" value="Directors">
