@@ -3832,7 +3832,7 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .filters label:hover,
     .sidebar-mobile .posts a:hover {
-        background: var(--green);
+        background: var(--lightpurple);
         color: var(--white);
     }
 
