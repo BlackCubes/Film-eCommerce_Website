@@ -4,6 +4,27 @@
 # Created on November 6, 2019.
 # Created by Elias Gutierrez.
 
+// ************************************************ //
+// ************ DEPARTMENT NAME CHANGE ************ //
+
+public function departmentNameChange($department) {
+
+    private $name_change;
+
+    if ($department === 'films') {
+        $name_change = 'Movies';
+    } else {
+        $name_change = 'TV';
+    }
+
+    return $name_change;
+    
+}
+
+// ************ DEPARTMENT NAME CHANGE ************ //
+// ************************************************ //
+
+
 // ***************************************** //
 // ************ DESKTOP SIDEBAR ************ //
 
