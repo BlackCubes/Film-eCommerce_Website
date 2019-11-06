@@ -3871,14 +3871,19 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .posts a {
         font-size: 13px;
-        color: var(--black);
+        color: rgba(26, 26, 26, 0.7);
         margin: 0.25rem;
         padding: 0.2rem 0.5rem;
         border-radius: 1rem;
-        border: 1px solid;
+        /*border: 1px solid;*/
         line-height: normal;
         transition: all 0.1s;
         text-decoration: none;
+        /*color: rgba(66, 17, 112, 0.30);
+        background-color: rgba(243, 230, 255, 0.17);*/
+        border-bottom: 1px solid rgba(138,43,226,0.47);
+        border-top: 1px solid rgba(138,43,226,0.47);
+        /*border-radius: 8px;*/
     }
 
     /* MAIN CONTAINER */
