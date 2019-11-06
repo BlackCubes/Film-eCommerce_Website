@@ -3833,7 +3833,6 @@ form#userChangeAddressCard {
     }
 
     .sidebar-mobile .posts * {
-        display: inline-block;
         /*display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-top: 0;
@@ -3841,13 +3840,7 @@ form#userChangeAddressCard {
     }
 
     .sidebar-mobile .posts .post {
-        /*background: #fafafa;
-        margin-top: 10px;
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 5px;
-        border: 1px solid black;
-        border-radius: 30px;*/
+        text-align: center;
     }
 
     .sidebar-mobile [value="Formats"]:checked ~ .posts .post:not([data-category~="Formats"]),
@@ -3863,12 +3856,13 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .posts a {
         font-size: 13px;
+        color: var(--black);
+        margin: 0.25rem;
         padding: 0.2rem 0.5rem;
         border-radius: 1rem;
         border: 1px solid;
         line-height: normal;
         transition: all 0.1s;
-        /*color: var(--black);*/
         text-decoration: none;
     }
 
