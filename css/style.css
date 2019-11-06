@@ -3784,6 +3784,9 @@ form#userChangeAddressCard {
         --black: #1a1a1a;
         --white: #fff;
         --green: #49b293;
+        --lightpurple: rgba(66, 17, 112, 0.30);
+    /*background-color: rgba(243, 230, 255, 0.17);
+    border-bottom: 1px solid rgba(138,43,226,0.17);*/
     }
 
     .container .sidebar-a {
