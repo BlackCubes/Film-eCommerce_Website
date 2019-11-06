@@ -3677,6 +3677,15 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
+    /* PAGINATION */
+    .pagination {
+        width: 100%;
+    }
+
+    .pagination a {
+        display: inline-block;
+    }
+
     /* HOMEPAGE */
     section.homepage-section > .website-intro-card,
     section.homepage-section > .films-television-card,
