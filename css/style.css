@@ -3868,8 +3868,8 @@ form#userChangeAddressCard {
         border: 1px solid;
         line-height: normal;
         transition: all 0.1s;
-        /*color: var(--black);
-        text-decoration: none;*/
+        /*color: var(--black);*/
+        text-decoration: none;
     }
 
     /* MAIN CONTAINER */
