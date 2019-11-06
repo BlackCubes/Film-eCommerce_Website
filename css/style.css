@@ -3837,8 +3837,13 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .filters label:hover,
     .sidebar-mobile .posts a:hover {
-        background: var(--lightpurple);
-        color: var(--white);
+        /*background: var(--lightpurple);
+        color: var(--white);*/
+        color: rgba(66, 17, 112, 0.30);
+        background-color: rgba(243, 230, 255, 0.17);
+        border-bottom: 1px solid rgba(138,43,226,0.17);
+        border-top: 1px solid rgba(138,43,226,0.17);
+        border-radius: 8px;
     }
 
     .sidebar-mobile .posts * {
