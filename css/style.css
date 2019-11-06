@@ -3791,10 +3791,15 @@ form#userChangeAddressCard {
     }
 
     .container .sidebar-mobile {
+        font-family: 'Muli', sans-serif;
         width: 100%;
     }
 
     .sidebar-mobile ol {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
         list-style: none;
     }
 
@@ -3805,7 +3810,7 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .filters {
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .sidebar-mobile .filters * {
@@ -3829,12 +3834,19 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .posts {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 0;
+        text-align: center;
     }
 
     .sidebar-mobile .posts .post {
         background: #fafafa;
-        border: 1px solid rgab(0, 0, 0, 0.1);
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 30px;
     }
 
     .sidebar-mobile [value="Formats"]:checked ~ .posts .post:not([data-category~="Formats"]),
@@ -3846,6 +3858,10 @@ form#userChangeAddressCard {
     .sidebar-mobile [value="Cinematographers"]:checked ~ .posts .post:not([data-category~="Cinematographers"]),
     .sidebar-mobile [value="Studios"]:checked ~ .posts .post:not([data-category~="Studios"]) {
         display: none;
+    }
+
+    .sidebar-mobile .posts a {
+        text-decoration: none;
     }
 
     /* MAIN CONTAINER */
