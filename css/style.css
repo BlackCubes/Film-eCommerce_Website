@@ -3833,10 +3833,11 @@ form#userChangeAddressCard {
     }
 
     .sidebar-mobile .posts {
-        display: grid;
+        display: inline-block;
+        /*display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-top: 0;
-        text-align: center;
+        text-align: center;*/
     }
 
     .sidebar-mobile .posts .post {
@@ -3862,8 +3863,13 @@ form#userChangeAddressCard {
 
     .sidebar-mobile .posts a {
         font-size: 13px;
-        color: var(--black);
-        text-decoration: none;
+        padding: 0.2rem 0.5rem;
+        border-radius: 1rem;
+        border: 1px solid;
+        line-height: normal;
+        transition: all 0.1s;
+        /*color: var(--black);
+        text-decoration: none;*/
     }
 
     /* MAIN CONTAINER */
