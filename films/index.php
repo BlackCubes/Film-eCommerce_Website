@@ -24,6 +24,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
 
 include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.php');
 
+include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/sidebar.php');
+
 require(MYSQL);
 
 if (isset($_GET['type'], $_GET['name'])) {
