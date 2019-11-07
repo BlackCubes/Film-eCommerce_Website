@@ -4183,6 +4183,69 @@ form#userChangeAddressCard {
     }
 
     /* CHANGE PHONE NUMBER PAGE */
+    form#userChangePhoneCard {
+        width: 80%;
+    }
+
+    #userChangePhoneCard .change-phone-card {
+        width: 90%;
+    }
+
+    #userChangePhoneCard .change-phone-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangePhoneCard .current-phone--change-phone,
+    #userChangePhoneCard .new-phone-input--change-phone {
+        width: 95%;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangePhoneCard .old-phone-number--change-phone,
+    #userChangePhoneCard .delete-phone-submit {
+        width: 57%;
+    }
+
+    #userChangePhoneCard .user-current-phone--change-phone {
+        width: 65%;
+    }
+
+    #userChangePhoneCard .delete-phone-submit {
+        width: 42%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    #userChangePhoneCard .delete-phone-submit .delete-phone-button {
+        width: 100%;
+    }
+
+    #userChangePhoneCard .user-new-phone--change-phone {
+        width: 95%;
+    }
+
+    #userChangePhoneCard .change-phone-submit,
+    #userChangePhoneCard .cancel-phone-submit {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangePhoneCard .change-phone-submit .change-phone-button,
+    #userChangePhoneCard .cancel-phone-submit .cancel-phone-button {
+        width: 95%;
+    }
+
+    #userChangePhoneCard .phone-error--change-phone,
+    #userChangePhoneCard .system-error--change-phone {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     /* LOGIN & SECURITY OPTIONS PAGE */
 
