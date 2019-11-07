@@ -3744,12 +3744,9 @@ form#userChangeAddressCard {
     }
 
     .container--product-view .main-info--product-view {
-        display: grid;
+        display: block;
         width: 100%;
         height: 100%;
-        margin: 30px auto 50px auto;
-        grid-template-columns: auto;
-        grid-template-areas: "image-left-side info-middle-contain cart-right-side";
     }
 
     .main-info--product-view .image--product-view {
