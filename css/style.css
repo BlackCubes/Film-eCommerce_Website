@@ -3732,7 +3732,6 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
-    .container--product-view .cast-crew-info--product-view,
     .container--product-view .additional-table-container--info-option,
     .container--product-view .product-specs-info--product-view,
     .cast-crew-format--info-option span.cast-crew-format-separator,
@@ -3818,6 +3817,12 @@ form#userChangeAddressCard {
     #cartCard .cart-add-button .product-cart-button,
     #cartCard .wishlist-add-button .product-wishlist-button {
         width: 100%;
+    }
+
+    .container--product-view .cast-crew-info--product-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .container--product-view .extra-desc-product-info--product-view {
