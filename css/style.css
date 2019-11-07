@@ -3920,6 +3920,65 @@ form#userChangeAddressCard {
     /* USER WISHLIST VIEW */
 
     /* SIGN IN */
+    .account-container {
+        width: 100%;
+    }
+
+    form.sign-in-form {
+        width: 100%;
+    }
+    
+    fieldset.sign-in-card {
+        width: 90%;
+    }
+
+    .sign-in-email, .sign-in-pass {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sign-in-email .user-email, .sign-in-pass .user-pass {
+        width: 95%;
+    }
+
+    .sign-in-card .sign-in-cookies,
+    .sign-in-card .email-error,
+    .sign-in-card .pass-error,
+    .sign-in-card .system-error {
+        width: 95%;
+    }
+
+    .sign-in-submit {
+        width: 95%;
+        height: 62.2px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sign-in-submit .sign-in-button {
+        width: 95%;
+    }
+
+    .sign-in-card .sign-in-options {
+        width: 95%;
+    }
+
+    .sign-in-card .seller-sign-in-option {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sign-in-card .registration-option {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .registration-option .register-button {
+        width: 95%;
+    }
 
     /* FORGOT PASSWORD PAGE */
 
