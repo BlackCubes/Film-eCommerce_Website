@@ -3825,6 +3825,13 @@ form#userChangeAddressCard {
         margin-right: auto;
     }
 
+    .container--product-view .cast-crew-container {
+        grid-template-areas:
+            "director-list writer-list"
+            "actor-list producer-list"
+            "dp-list studio-list";
+    }
+
     .container--product-view .extra-desc-product-info--product-view {
         width: 90%;
         margin-left: auto;
