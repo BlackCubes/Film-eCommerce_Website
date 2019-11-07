@@ -3666,14 +3666,12 @@ form#userChangeAddressCard {
         grid-template-rows: repeat(7, 338px);
         grid-row-end: auto;
         border: none;
-        margin-top: 10px;
     }
 
     .main-artists .container-artist {
         width: 100%;
         height: 100%;
         min-height: 0;
-        margin-top: 30px;
     }
 
     .container-artist .artist-image {
