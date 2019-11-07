@@ -3963,6 +3963,83 @@ form#userChangeAddressCard {
     }
 
     /* USER CART VIEW */
+    .container--cart-view {
+        display: block;
+        width: 100%;
+    }
+
+    .container--cart-view .main-info--cart-view,
+    .container--cart-view .cart-later-info--later-view {
+        width: 90%;
+        margin: 40px auto 40px auto;
+    }
+
+    .container--cart-view .cart-title--cart-view,
+    .container--cart-view .later-title--later-view,
+    .container--cart-view .results--cart-view,
+    .container--cart-view .cart-later-results--later-view {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container--cart-view .cart-list--cart-view,
+    .container--cart-view .cart-later-list--later-view {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--cart-view .product-image--cart-view,
+    .container--cart-view .product-image--later-view {
+        width: 100%;
+    }
+
+    .container--cart-view .product-info--cart-view ,
+    .container--cart-view .product-info--later-view{
+        width: 100%;
+    }
+
+    .container--cart-view .product-price--cart-view,
+    .container--cart-view .product-price--later-view {
+        width: 100%;
+    }
+
+    .container--cart-view .subtotal-cart--cart-view {
+        width: 100%;
+    }
+
+    .container--cart-view .cart-title--cart-view h2,
+    .container--cart-view .later-title--later-view h2 {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .container--cart-view .product-name--cart-view a,
+    .container--cart-view .product-name--later-view a {
+        font-size: 14px;
+    }
+
+    .container--cart-view .product-price--cart-view p,
+    .container--cart-view .subtotal-cart--cart-view p,
+    .container--cart-view .product-price--later-view p {
+        text-align: left;
+    }
+
+    .container--cart-view .product-price--cart-view p,
+    .container--cart-view span.subtotal-display--cart-view,
+    .container--cart-view .product-price--later-view p {
+        font-size: 15px;
+    }
+
+    .container--cart-view span.subtotal-title-amount--cart-view {
+        font-size: 16px;
+    }
+
+    .container--cart-view .product-image--cart-view img,
+    .container--cart-view .product-image--later-view img {
+        max-width: 240px;
+        max-height: 240px;
+    }
 
     /* USER WISHLIST VIEW */
 
