@@ -3983,6 +3983,49 @@ form#userChangeAddressCard {
     }
 
     /* FORGOT PASSWORD PAGE */
+    form#forgotPassCard {
+        width: 100%;
+    }
+    
+    #forgotPassCard .forgot-pass-card {
+        width: 90%;
+    }
+
+    .forgot-pass-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .forgot-pass-info {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #forgotPassCard .forgot-email-input {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #forgotPassCard .user-email--forgot {
+        width: 95%;
+    }
+
+    .forgot-email-submit {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .forgot-email-submit .forgot-pass-button {
+        width: 95%;
+    }
+
+    .forgot-pass-error, .system-error--forgot-pass {
+        width: 95%;
+    }
 
     /* CHANGE PASSWORD */
 
