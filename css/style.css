@@ -3914,6 +3914,51 @@ form#userChangeAddressCard {
     }
 
     /* USER PROFILE PAGE */
+    .container--profile-view {
+        display: block;
+        width: 100%;
+    }
+    
+    .container--profile-view .profile-title--profile-view {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--profile-view .profile-option--profile-view {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--profile-view .container-login-security--profile-view,
+    .container--profile-view .container-address--profile-view,
+    .container--profile-view .container-orders--profile-view,
+    .container--profile-view .container-wishlist--profile-view,
+    .container--profile-view .container-payment--profile-view {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container--profile-view .profile-title--profile-view h2 {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .container--profile-view .profile-option--profile-view a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--profile-view .profile-option--profile-view h4 {
+        font-size: 13px;
+    }
+
+    .container--profile-view .profile-option--profile-view p {
+        font-size: 12px;
+    }
 
     /* USER CART VIEW */
 
