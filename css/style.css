@@ -4249,7 +4249,7 @@ form#userChangeAddressCard {
 
     /* LOGIN & SECURITY OPTIONS PAGE */
     form#userOptionLoginSecurityCard {
-        width: 80%;
+        width: 70%;
     }
 
     #userOptionLoginSecurityCard .option-login-security-card {
