@@ -3979,12 +3979,10 @@ form#userChangeAddressCard {
     .container--cart-view .results--cart-view,
     .container--cart-view .cart-later-results--later-view {
         width: 100%;
-        text-align: center;
     }
 
     .container--cart-view .cart-list--cart-view,
     .container--cart-view .cart-later-list--later-view {
-        display: block;
         width: 100%;
         height: 100%;
     }
@@ -4017,12 +4015,6 @@ form#userChangeAddressCard {
     .container--cart-view .product-name--cart-view a,
     .container--cart-view .product-name--later-view a {
         font-size: 14px;
-    }
-
-    .container--cart-view .product-price--cart-view p,
-    .container--cart-view .subtotal-cart--cart-view p,
-    .container--cart-view .product-price--later-view p {
-        text-align: left;
     }
 
     .container--cart-view .product-price--cart-view p,
