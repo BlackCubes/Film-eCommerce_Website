@@ -3878,7 +3878,7 @@ form#userChangeAddressCard {
     }
 
     .container--option-view .option-title-letters--option-view {
-        width: 90%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -3887,12 +3887,8 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
-    .container--option-view span.option-letters--option-view {
-        display: none;
-    }
-
     .container--option-view .option-lists--option-view {
-        width: 90%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
