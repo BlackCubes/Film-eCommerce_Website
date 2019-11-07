@@ -3926,10 +3926,13 @@ form#userChangeAddressCard {
     }
 
     .container--profile-view .profile-option--profile-view {
-        display: block;
+        display: grid;
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 30px auto 50px auto;
+        grid-template-areas:
+            "pv-login-security pv-orders"
+            "pv-wishlist pv-address"
+            "pv-payment blank";
     }
 
     .container--profile-view .container-login-security--profile-view,
