@@ -4337,6 +4337,61 @@ form#userChangeAddressCard {
     }
 
     /* CHANGE ADDRESS PAGE */
+    form#userChangeAddressCard {
+        width: 80%;
+        height: 100%;
+    }
+
+    #userChangeAddressCard .change-address-card {
+        width: 90%;
+    }
+
+    #userChangeAddressCard .change-address-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangeAddressCard .new-address-input--change-address {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangeAddressCard .user-new-address-1--change-address,
+    #userChangeAddressCard .user-new-address-2--change-address,
+    #userChangeAddressCard .user-new-city--change-address,
+    #userChangeAddressCard .user-new-state--change-address,
+    #userChangeAddressCard .user-new-zip--change-address {
+        width: 95%;
+    }
+
+    #userChangeAddressCard .new-city-input--change-address,
+    #userChangeAddressCard .new-state-input--change-address,
+    #userChangeAddressCard .new-zip-code-input--change-address {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangeAddressCard .change-address-submit {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangeAddressCard .change-address-submit .change-address-button {
+        width: 95%;
+    }
+
+    #userChangeAddressCard .city-error--change-address,
+    #userChangeAddressCard .state-error--change-address,
+    #userChangeAddressCard .zip-code-error--change-address,
+    #userChangeAddressCard .system-error--change-address {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
 }
 
