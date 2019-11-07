@@ -4034,6 +4034,55 @@ form#userChangeAddressCard {
     }
 
     /* USER WISHLIST VIEW */
+    .container--wishlist-view {
+        display: block;
+        width: 100%;
+    }
+
+    .container--wishlist-view .main-info--wishlist-view {
+        width: 90%;
+        margin: 30px auto 30px auto;
+    }
+
+    .container--wishlist-view .wishlist-title--wishlist-view,
+    .container--wishlist-view .results--wishlist-view,
+    .container--wishlist-view .empty-title--wishlist-view {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container--wishlist-view .wish-list--wishlist-view {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--wishlist-view .product-image--wishlist-view {
+        width: 100%;
+    }
+
+    .container--wishlist-view .product-info--wishlist-view {
+        width: 100%;
+    }
+
+    .container--wishlist-view .product-more-info--wishlist-view {
+        width: 100%;
+    }
+
+    .container--wishlist-view .wishlist-title--wishlist-view h2,
+    .container--wishlist-view .empty-title--wishlist-view h2 {
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+
+    .container--wishlist-view .product-name--wishlist-view p {
+        font-size: 14px;
+    }
+
+    .container--wishlist-view .product-image--wishlist-view img {
+        max-width: 240px;
+        max-height: 240px;
+    }
 
     /* SIGN IN */
     .account-container {
