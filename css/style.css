@@ -4248,6 +4248,93 @@ form#userChangeAddressCard {
     }
 
     /* LOGIN & SECURITY OPTIONS PAGE */
+    form#userOptionLoginSecurityCard {
+        width: 80%;
+    }
+
+    #userOptionLoginSecurityCard .option-login-security-card {
+        width: 90%;
+    }
+
+    #userOptionLoginSecurityCard .option-login-security-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userOptionLoginSecurityCard .border-row {
+        width: 100%;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name--account-option,
+    #userOptionLoginSecurityCard .edit-email--account-option,
+    #userOptionLoginSecurityCard .edit-phone--account-option,
+    #userOptionLoginSecurityCard .edit-password--account-option {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userOptionLoginSecurityCard .current-full-name--account-option,
+    #userOptionLoginSecurityCard .edit-full-name-submit,
+    #userOptionLoginSecurityCard .current-email--account-option,
+    #userOptionLoginSecurityCard .edit-email-submit,
+    #userOptionLoginSecurityCard .current-phone--account-option,
+    #userOptionLoginSecurityCard .edit-phone-submit,
+    #userOptionLoginSecurityCard .current-password--account-option,
+    #userOptionLoginSecurityCard .edit-password-submit {
+        width: 60%;
+    }
+
+    #userOptionLoginSecurityCard .user-current-name--account-option,
+    #userOptionLoginSecurityCard .user-current-email--account-option,
+    #userOptionLoginSecurityCard .user-current-phone--account-option,
+    #userOptionLoginSecurityCard .user-current-password--account-option {
+        width: 90%;
+        padding: 0 5px;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name-submit,
+    #userOptionLoginSecurityCard .edit-email-submit,
+    #userOptionLoginSecurityCard .edit-phone-submit,
+    #userOptionLoginSecurityCard .edit-password-submit {
+        width: 40%;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name-submit .edit-full-name-button,
+    #userOptionLoginSecurityCard .edit-email-submit .edit-email-button,
+    #userOptionLoginSecurityCard .edit-phone-submit .edit-phone-button,
+    #userOptionLoginSecurityCard .edit-password-submit .edit-password-button {
+        width: 100%;
+    }
+
+    #userOptionLoginSecurityCard .current-full-name--account-option label,
+    #userOptionLoginSecurityCard .user-current-name--account-option p,
+    #userOptionLoginSecurityCard .current-email--account-option label,
+    #userOptionLoginSecurityCard .user-current-email--account-option p,
+    #userOptionLoginSecurityCard .current-phone--account-option label,
+    #userOptionLoginSecurityCard .user-current-phone--account-option p,
+    #userOptionLoginSecurityCard .current-password--account-option label,
+    #userOptionLoginSecurityCard .user-current-password--account-option p {
+        font-size: 11px;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name-submit input,
+    #userOptionLoginSecurityCard .edit-email-submit input,
+    #userOptionLoginSecurityCard .edit-phone-submit input,
+    #userOptionLoginSecurityCard .edit-password-submit input {
+        border: none;
+        font-size: 13px;
+    }
+
+    #userOptionLoginSecurityCard .edit-full-name-submit input:hover,
+    #userOptionLoginSecurityCard .edit-email-submit input:hover,
+    #userOptionLoginSecurityCard .edit-phone-submit input:hover,
+    #userOptionLoginSecurityCard .edit-password-submit input:hover {
+        font-size: 12px;
+    }
 
     /* CHANGE ADDRESS PAGE */
     
