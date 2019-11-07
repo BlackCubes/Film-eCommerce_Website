@@ -4028,6 +4028,52 @@ form#userChangeAddressCard {
     }
 
     /* CHANGE PASSWORD */
+    form#userChangePassCard {
+        width: 100%;
+    }
+    
+    #userChangePassCard .change-pass-card {
+        width: 90%;
+    }
+
+    .change-pass-title {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .change-pass-info {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangePassCard .change-pass-new-input,
+    #userChangePassCard .change-pass-confirm-input {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #userChangePassCard .user-pass--change,
+    #userChangePassCard .user-pass--confirm {
+        width: 95%;
+    }
+
+    .change-pass-submit {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .change-pass-submit .change-pass-button {
+        width: 95%;
+    }
+
+    .change-pass-error, .confirm-pass-error,
+    .system-error--change-pass {
+        width: 95%;
+    }
 
     /* CHANGE NAME PAGE */
 
