@@ -3940,9 +3940,8 @@ form#userChangeAddressCard {
     .container--profile-view .container-orders--profile-view,
     .container--profile-view .container-wishlist--profile-view,
     .container--profile-view .container-payment--profile-view {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .container--profile-view .profile-title--profile-view h2 {
