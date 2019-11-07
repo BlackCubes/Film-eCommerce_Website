@@ -3805,6 +3805,71 @@ form#userChangeAddressCard {
     }
 
     /* STUDIO PROFILE VIEW */
+    .container--studio-view {
+        display: block;
+        width: 100%;
+    }
+
+    .container--studio-view .main-info--studio-view {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--studio-view .studio-name--studio-view {
+        width: 100%;
+    }
+
+    .container--studio-view .image--studio-view {
+        height: 100%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--studio-view .product-studio-list--studio-view {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 10px 0 0 0;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "product-studio product-studio";
+    }
+
+    .container--studio-view .product-studio-info--studio-view {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--studio-view .product-studio-title--studio-view {
+        width: 100%;
+    }
+
+    .container--studio-view .container-product-studio--studio-view {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .container--studio-view .product-year--studio-view {
+        width: 100%;
+    }
+
+    .container--studio-view .studio-name--studio-view h2,
+    .container--studio-view .product-studio-title--studio-view h2 {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    .container--studio-view .product-year--studio-view h4,
+    .container--studio-view .product-name--studio-view h4 {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container--studio-view .image--studio-view img {
+        max-width: 100%;
+    }
 
     /* SIDEBAR OPTIONS PAGE */
 
