@@ -4048,11 +4048,9 @@ form#userChangeAddressCard {
     .container--wishlist-view .results--wishlist-view,
     .container--wishlist-view .empty-title--wishlist-view {
         width: 100%;
-        text-align: center;
     }
 
     .container--wishlist-view .wish-list--wishlist-view {
-        display: block;
         width: 100%;
         height: 100%;
     }
