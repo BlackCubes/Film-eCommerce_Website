@@ -3729,6 +3729,80 @@ form#userChangeAddressCard {
     /* PRODUCTS PROFILE VIEW */
 
     /* ARTIST PROFILE VIEW */
+    .container--artist-view {
+        display: block;
+        width: 100%;
+    }
+
+    .container--artist-view .main-info--artist-view {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--artist-view .artist-name--artist-view {
+        width: 100%;
+    }
+
+    .container--artist-view .image--artist-view {
+        height: 100%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--artist-view .product-artist-list--artist-view {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin: 10px 0 0 0;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "product-artist product-artist";
+    }
+
+    .container--artist-view .product-artist-info--artist-view {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container--artist-view .product-artist-title--artist-view {
+        width: 100%;
+    }
+
+    .container--artist-view .container-product-artist--studio-view {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .container--artist-view .product-year--view-artist {
+        width: 100%;
+    }
+
+    .container--artist-view .container-product-artist--artist-view {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .container--artist-view .product-year--view-artist {
+        width: 100%;
+    }
+
+    .container--artist-view .artist-name--artist-view h2,
+    .container--artist-view .product-artist-title--artist-view h2 {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    .container--artist-view .product-year--view-artist h4,
+    .container--artist-view .product-name--view-artist h4 {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container--artist-view .image--artist-view img {
+        max-width: 100%;
+    }
 
     /* STUDIO PROFILE VIEW */
 
