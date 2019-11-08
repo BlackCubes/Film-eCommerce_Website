@@ -3733,12 +3733,7 @@ form#userChangeAddressCard {
     }
 
     .container--product-view .additional-table-container--info-option,
-    .container--product-view .product-specs-info--product-view,
-    .cast-crew-format--info-option span.cast-crew-format-separator,
-    .cast-crew-format--info-option span.format-title,
-    .cast-crew-format--info-option span.format-type,
-    .cast-crew-format--info-option span.department-title,
-    .cast-crew-format--info-option span.department-type {
+    .container--product-view .product-specs-info--product-view {
         display: none;
     }
 
