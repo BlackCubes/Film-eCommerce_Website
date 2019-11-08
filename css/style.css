@@ -3341,6 +3341,9 @@ form#userChangeAddressCard {
     /* HOMEPAGE */
 
     /* SIDEBAR */
+    .sidebar-mobile {
+        display: none;
+    }
 
     /* MAIN CONTAINER */
 
