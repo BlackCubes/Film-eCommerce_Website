@@ -3356,6 +3356,9 @@ form#userChangeAddressCard {
     }
 
     /* ARTISTS */
+    .container-artist .artist-image img {
+        max-width: 100%;
+    }
 
     /* STUDIOS */
 
