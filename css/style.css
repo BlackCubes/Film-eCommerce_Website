@@ -3485,15 +3485,20 @@ form#userChangeAddressCard {
     }
 
     footer.footer .upper-footer {
+        display: grid;
         height: 100%;
-        margin-left: 20px;
+        grid-template-areas:
+            "tablet-footer tablet-footer";
     }
 
     footer.footer .upper-footer .grid__item {
         float: none;
         display: block;
-        width: 100%;
+        width: 95%;
         margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: -webkit-center;
     }
 
     footer.footer .lower-footer {
