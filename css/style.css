@@ -3346,6 +3346,14 @@ form#userChangeAddressCard {
     }
 
     /* MAIN CONTAINER */
+    .container .main-product {
+        grid-template-rows: repeat(7, 368px);
+    }
+
+    .main-product .container-product {
+        min-height: 322px;
+        max-height: 322px;
+    }
 
     /* ARTISTS */
 
