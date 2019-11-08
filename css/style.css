@@ -3693,6 +3693,7 @@ form#userChangeAddressCard {
     }
 
     .container .sidebar-mobile {
+        display: block;
         font-family: 'Muli', sans-serif;
         width: 100%;
     }
