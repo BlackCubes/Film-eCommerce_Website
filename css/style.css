@@ -3329,6 +3329,57 @@ form#userChangeAddressCard {
 
 /* MEDIA QUERY */
 
+/* HOW 1024PX FEELS LIKE */
+@media only screen and (max-width: 1024px) {
+
+    /* MAIN NAVBAR */
+
+    /* MAIN FOOTER */
+
+    /* PAGINATION */
+
+    /* HOMEPAGE */
+
+    /* SIDEBAR */
+
+    /* MAIN CONTAINER */
+
+    /* ARTISTS */
+
+    /* STUDIOS */
+
+    /* PRODUCTS PROFILE VIEW */
+
+    /* ARTIST PROFILE VIEW */
+
+    /* STUDIO PROFILE VIEW */
+
+    /* SIDEBAR OPTIONS PAGE */
+
+    /* USER PROFILE PAGE */
+
+    /* USER CART VIEW */
+
+    /* USER WISHLIST VIEW */
+
+    /* SIGN IN */
+
+    /* FORGOT PASSWORD PAGE */
+
+    /* CHANGE PASSWORD */
+
+    /* CHANGE NAME PAGE */
+
+    /* CHANGE EMAIL PAGE */
+
+    /* CHANGE PHONE NUMBER PAGE */
+
+    /* LOGIN & SECURITY OPTIONS PAGE */
+
+    /* CHANGE ADDRESS PAGE */
+
+}
+
 /* HOW 768PX FEELS LIKE */
 @media only screen and (max-width: 768px) {
 
