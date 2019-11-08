@@ -4996,6 +4996,7 @@ form#userChangeAddressCard {
     }
 
     footer.footer .upper-footer {
+        display: block;
         height: 100%;
         margin-left: 20px;
     }
