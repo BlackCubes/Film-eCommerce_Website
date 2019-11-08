@@ -3543,6 +3543,7 @@ form#userChangeAddressCard {
     }
 
     section.homepage-section > .actor-director-card img:nth-child(2),
+    section.homepage-section > .producer-studio-card img:nth-child(3),
     section.homepage-section > .website-intro-card img:nth-child(1),
     section.homepage-section > .website-intro-card img:nth-child(2),
     section.homepage-section > .website-intro-card img:nth-child(3),
@@ -3605,13 +3606,16 @@ form#userChangeAddressCard {
         padding-top: 2px;
     }
 
+    section.homepage-section > .producer-studio-card img:nth-child(1) {
+        width: 90%;
+    }
+    
     section.homepage-section > .producer-studio-card img:nth-child(2) {
-        width: 80%;
-        height: 17.875%;
-        position: relative;
-        left: 0;
-        top: 0;
-        padding-top: 100px;
+        width: 309px;
+        height: 69px;
+        position: absolute;
+        left: 60px;
+        top: 2850px;
     }
 
     /* SIDEBAR */
