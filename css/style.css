@@ -3599,16 +3599,12 @@ form#userChangeAddressCard {
     }
 
     section.homepage-section > .actor-director-card img:nth-child(1) {
-        width: 80%;
-        height: 64.036%;
-        top: 0;
-        padding-top: 100px;
+        top: 70px;
     }
 
     section.homepage-section > .writer-cinematographer-card img {
         width: 90%;
-        height: 56.25%;
-        padding-top: 100px;
+        padding-top: 2px;
     }
 
     section.homepage-section > .producer-studio-card img:nth-child(2) {
