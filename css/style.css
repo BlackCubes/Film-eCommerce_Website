@@ -3378,12 +3378,7 @@ form#userChangeAddressCard {
     }
 
     .main-info--product-view .image--product-view {
-        width: 220px;
-    }
-    
-    .main-info--product-view .image--product-view img {
-        max-width: 200px;
-        max-height: 200px;
+        width: 280px;
     }
 
     .main-info--product-view .product-info-option,
@@ -3498,6 +3493,11 @@ form#userChangeAddressCard {
 
     #cartCard .cart-stock span.stock-success {
         font-size: 15px;
+    }
+
+    .main-info--product-view .image--product-view img {
+        max-width: 280px;
+        max-height: 280px;
     }
 
     /* ARTIST PROFILE VIEW */
