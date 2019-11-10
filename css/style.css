@@ -3464,6 +3464,34 @@ form#userChangeAddressCard {
     }
 
     /* USER PROFILE PAGE */
+    .container--profile-view .profile-option--profile-view {
+        width: 100%;
+    }
+
+    .container--profile-view .container-login-security--profile-view,
+    .container--profile-view .container-address--profile-view,
+    .container--profile-view .container-orders--profile-view,
+    .container--profile-view .container-wishlist--profile-view,
+    .container--profile-view .container-payment--profile-view {
+        width: 255px;
+    }
+
+    .container--profile-view .profile-title--profile-view h2 {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+    .container--profile-view .profile-option--profile-view a {
+        width: 100%;
+    }
+
+    .container--profile-view .profile-option--profile-view h4 {
+        font-size: 14px;
+    }
+
+    .container--profile-view .profile-option--profile-view p {
+        font-size: 13px;
+    }
 
     /* USER CART VIEW */
 
