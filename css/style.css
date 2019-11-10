@@ -699,6 +699,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
         "s-a p p p";
 }
 
+.container .sidebar-mobile {
+    display: none;
+}
+
 .container .sidebar-a {
     margin-left: 15px;
     margin-right: 10px;
