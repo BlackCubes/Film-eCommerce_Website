@@ -168,11 +168,87 @@ body.body--account {
 
 .header {
     font-family: 'Muli', sans-serif;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.897);
-    -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
-    -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
-    box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.9);
+    -webkit-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    -moz-box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    box-shadow: 0px 3px 17px -17px rgba(138,43,226,0.7);
+    list-style: none;
+}
+
+.header li, .header a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.header input.menu-btn,
+.header .nav-icon {
+    display: none;
+}
+
+.header .topnav-logo,
+.header .cart-wish-icons {
+    margin: 10px;
+}
+
+.header .cart-icon,
+.header .wishlist-icon {
+    padding: 10px;
+}
+
+.header ul li {
+    display: inline-block;
+    position: relative;
+    padding: 0px 30px;
+    line-height: 40px;
+}
+
+.header li a {
+    transition: all 0.3s ease 0s;
+}
+
+.header li a:hover {
+    color: blueviolet;
+}
+
+.header ul li ul {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    padding: 10px;
+    background-color: white;
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translate(-50%, 0) !important;
+    opacity: 0.8;
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 8px 18px -18px rgba(138,43,226,0.53);
+    -moz-box-shadow: 0px 8px 18px -18px rgba(138,43,226,0.53);
+    box-shadow: 0px 8px 18px -18px rgba(138,43,226,0.53);
+}
+
+.header ul li:hover ul {
+    display: block;
+}
+
+.header .topnav-welcome {
+    border-bottom: 1px solid rgba(138,43,226,0.17);
+}
+
+.header ul li ul li a, .header .topnav-welcome {
+    padding: 8px 14px;
+}
+
+.header ul li ul li a, .header ul li ul li {
+    font-size: 14px;
+}
+
+.header ul li:nth-child(4) ul li {
+    width: 147px;
 }
 
 /*header {
