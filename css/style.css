@@ -3372,6 +3372,15 @@ form#userChangeAddressCard {
     }
 
     /* PRODUCTS PROFILE VIEW */
+    .container--product-view .cast-crew-info--product-view {
+        width: 100%;
+    }
+
+    .container--product-view .cast-crew-container {
+        grid-template-areas:
+            "director-list writer-list actor-list"
+            "producer-list dp-list studio-list";
+    }
 
     /* ARTIST PROFILE VIEW */
     .container--artist-view .artist-name--artist-view {
