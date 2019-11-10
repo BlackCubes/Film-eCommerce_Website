@@ -3367,6 +3367,9 @@ form#userChangeAddressCard {
     }
 
     /* STUDIOS */
+    .container-studio .studio-image img {
+        max-width: 100%;
+    }
 
     /* PRODUCTS PROFILE VIEW */
 
