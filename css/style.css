@@ -3531,6 +3531,28 @@ form#userChangeAddressCard {
     }
 
     /* USER WISHLIST VIEW */
+    .container--wishlist-view .main-info--wishlist-view {
+        width: 95%;
+    }
+
+    .container--wishlist-view .wish-list--wishlist-view {
+        width: 100%;
+    }
+
+    .container--wishlist-view .product-info--wishlist-view {
+        width: 300px;
+    }
+
+    .container--wishlist-view .wishlist-title--wishlist-view h2,
+    .container--wishlist-view .empty-title--wishlist-view h2 {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+    .container--wishlist-view .product-name--wishlist-view p,
+    .container--wishlist-view .product-price--wishlist-view p {
+        font-size: 15.5px;
+    }
 
     /* SIGN IN */
 
