@@ -4816,7 +4816,7 @@ form#userChangeAddressCard {
 
     /* CHANGE PASSWORD */
     form#userChangePassCard {
-        width: 90%;
+        width: 75%;
     }
     
     #userChangePassCard .change-pass-card {
