@@ -3422,6 +3422,46 @@ form#userChangeAddressCard {
     }
 
     /* SIDEBAR OPTIONS PAGE */
+    .container--option-view .main-info--option-view {
+        display: block;
+        width: 100%;
+    }
+
+    .container--option-view .option-title-letters--option-view {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--option-view .option-header-center--option-view {
+        width: 100%;
+    }
+
+    .container--option-view .option-lists--option-view {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container--option-view .option-lists--option-view ul:nth-child(1) {
+        padding: 0;
+    }
+
+    .container--option-view .option-lists--option-view ul:nth-child(2) {
+        padding: 0;
+    }
+    
+    .container--option-view .option-lists--option-view ul:nth-child(3) {
+        padding: 0;
+    }
+
+    .container--option-view .option-lists--option-view ul li {
+        margin-top: 10px;
+    }
+
+    .container--option-view .option-lists--option-view ul li a {
+        font-size: 12px;
+    }
 
     /* USER PROFILE PAGE */
 
