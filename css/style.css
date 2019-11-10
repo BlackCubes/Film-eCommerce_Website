@@ -3449,8 +3449,21 @@ form#userChangeAddressCard {
         letter-spacing: 3px;
     }
 
+    .main-description-inner .description-title h4 {
+        letter-spacing: 5px;
+    }
+
     .product-info-option .product-edition--info-option h3 {
         font-size: 15px;
+    }
+
+    .container--product-view .cast-crew-title--product-view h2,
+    .container--product-view .extra-desc-title--product-view h2,
+    .container--product-view .product-details-title--product-view h2,
+    .container--product-view .product-specs-title--product-view h2 {
+        font-size: 17px;
+        color: #767676;
+        letter-spacing: 5px;
     }
 
     .product-info-option .cast-crew-format--info-option {
