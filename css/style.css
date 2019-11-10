@@ -3513,6 +3513,23 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
+    .container--cart-view .cart-title--cart-view h2,
+    .container--cart-view .later-title--later-view h2 {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+    .container--cart-view .product-name--cart-view a,
+    .container--cart-view .product-name--later-view a {
+        font-size: 15.5px;
+    }
+
+    .container--cart-view .product-price--cart-view p,
+    .container--cart-view span.subtotal-display--cart-view,
+    .container--cart-view .product-price--later-view p {
+        font-size: 16px;
+    }
+
     /* USER WISHLIST VIEW */
 
     /* SIGN IN */
