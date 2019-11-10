@@ -4585,12 +4585,14 @@ form#userChangeAddressCard {
     #cartCard .wishlist-add-button {
         float: left;
         width: 50%;
+        height: 30px;
         margin: 0;
     }
 
     #cartCard .cart-add-button .product-cart-button,
     #cartCard .wishlist-add-button .product-wishlist-button {
         width: 100%;
+        height: 30px;
     }
 
     .container--product-view .cast-crew-info--product-view {
