@@ -3466,6 +3466,15 @@ form#userChangeAddressCard {
         letter-spacing: 5px;
     }
 
+    .container--product-view .director-title--product-view h4,
+    .container--product-view .writer-title--product-view h4,
+    .container--product-view .actor-title--product-view h4,
+    .container--product-view .producer-title--product-view h4,
+    .container--product-view .cinematographer-title--product-view h4,
+    .container--product-view .studio-title--product-view h4 {
+        font-size: 14px;
+    }
+
     .product-info-option .cast-crew-format--info-option {
         font-size: 12px;
     }
