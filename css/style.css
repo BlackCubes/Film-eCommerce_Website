@@ -3372,6 +3372,44 @@ form#userChangeAddressCard {
     }
 
     /* PRODUCTS PROFILE VIEW */
+    .container--product-view .main-info--product-view {
+        width: 100%;
+    }
+
+    .main-info--product-view .image--product-view {
+        width: 220px;
+    }
+    
+    .main-info--product-view .image--product-view img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .main-info--product-view .product-info-option,
+    .product-info-option .additional-table-container--info-option table {
+        width: 383px;
+    }
+
+    .additional-options-title td.additional-disc-title,
+    .additional-options-description td.additional-disc-value {
+        text-align: left;
+        width: 40px;
+    }
+
+    .main-info--product-view .cart-wishlist-container {
+        width: 225px;
+    }
+
+    .cart-wishlist-container #cartCard {
+        width: 200px;
+        margin: auto;
+    }
+
+    #cartCard .cart-add-button .product-cart-button,
+    #cartCard .wishlist-add-button .product-wishlist-button {
+        width: 100%;
+    }
+
     .container--product-view .cast-crew-info--product-view {
         width: 100%;
     }
@@ -3396,6 +3434,38 @@ form#userChangeAddressCard {
 
     .container--product-view .product-specs-info--product-view {
         display: none;
+    }
+
+    .product-info-option .product-title--info-option h1 {
+        font-size: 17px;
+    }
+
+    .product-info-option .product-edition--info-option h3 {
+        font-size: 15px;
+    }
+
+    .product-info-option .cast-crew-format--info-option {
+        font-size: 12px;
+    }
+
+    .main-description-inner .description-value p {
+        font-size: 13px;
+    }
+
+    #cartCard .cart-product-price span.cart-price-title {
+        font-size: 12px;
+    }
+
+    #cartCard .cart-product-price span.cart-price-value {
+        font-size: 15px;
+    }
+
+    #cartCard .cart-quantity label {
+        font-size: 12px;
+    }
+
+    #cartCard .cart-stock span.stock-success {
+        font-size: 15px;
     }
 
     /* ARTIST PROFILE VIEW */
