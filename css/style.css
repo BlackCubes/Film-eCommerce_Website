@@ -3366,6 +3366,15 @@ form#userChangeAddressCard {
     }
 
     /* PAGINATION */
+    .pagination {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagination a {
+        display: inline-block;
+    }
 
     /* HOMEPAGE */
 
