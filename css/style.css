@@ -3356,6 +3356,12 @@ form#userChangeAddressCard {
     }
 
     /* ARTISTS */
+    .page-title h1 {
+        font-size: 17px;
+        margin: 10px 0 10px 0;
+        letter-spacing: 20px;
+    }
+
     .container-artist .artist-image img {
         max-width: 100%;
     }
