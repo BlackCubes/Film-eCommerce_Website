@@ -3420,6 +3420,14 @@ form#userChangeAddressCard {
             "producer-list dp-list studio-list";
     }
 
+    .container--product-view .director-list-container--product-view,
+    .container--product-view .writer-list-container--product-view,
+    .container--product-view .actor-list-container--product-view,
+    .container--product-view .producer-list-container--product-view,
+    .container--product-view .cinematographer-list-container--product-view {
+        border-right: none;
+    }
+
     .container--product-view .extra-desc-product-info--product-view {
         width: 100%;
     }
