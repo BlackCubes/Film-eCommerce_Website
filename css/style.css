@@ -3374,6 +3374,7 @@ form#userChangeAddressCard {
     /* PRODUCTS PROFILE VIEW */
     .container--product-view .main-info--product-view {
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .main-info--product-view .image--product-view {
