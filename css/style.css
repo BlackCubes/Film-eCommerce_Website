@@ -3374,6 +3374,11 @@ form#userChangeAddressCard {
     /* PRODUCTS PROFILE VIEW */
 
     /* ARTIST PROFILE VIEW */
+    .container--artist-view .product-artist-list--artist-view {
+        width: 100%;
+        grid-template-areas:
+            "product-artist product-artist product-artist";
+    }
 
     /* STUDIO PROFILE VIEW */
 
