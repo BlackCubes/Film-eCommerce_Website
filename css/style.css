@@ -3394,6 +3394,10 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
+    .container--product-view .product-specs-info--product-view {
+        display: none;
+    }
+
     /* ARTIST PROFILE VIEW */
     .container--artist-view .artist-name--artist-view {
         width: 100%;
