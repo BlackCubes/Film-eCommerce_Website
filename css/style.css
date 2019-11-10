@@ -3394,6 +3394,24 @@ form#userChangeAddressCard {
     }
 
     /* STUDIO PROFILE VIEW */
+    .container--studio-view .studio-name--studio-view {
+        width: 100%;
+    }
+
+    .container--studio-view .product-studio-title--studio-view {
+        width: 100%;
+    }
+
+    .container--studio-view .product-studio-list--studio-view {
+        width: 100%;
+        grid-template-areas:
+            "product-studio product-studio product-studio";
+    }
+
+    .container--studio-view .studio-name--studio-view h2,
+    .container--studio-view .product-studio-title--studio-view h2 {
+        letter-spacing: 5px;
+    }
 
     /* SIDEBAR OPTIONS PAGE */
 
