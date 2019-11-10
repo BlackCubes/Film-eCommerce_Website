@@ -3388,6 +3388,10 @@ form#userChangeAddressCard {
             "product-artist product-artist product-artist";
     }
 
+    .container--artist-view .container-product-artist--artist-view {
+        width: 100%;
+    }
+
     .container--artist-view .artist-name--artist-view h2,
     .container--artist-view .product-artist-title--artist-view h2 {
         letter-spacing: 5px;
