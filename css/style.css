@@ -3494,6 +3494,24 @@ form#userChangeAddressCard {
     }
 
     /* USER CART VIEW */
+    .container--cart-view .main-info--cart-view,
+    .container--cart-view .cart-later-info--later-view {
+        width: 90%;
+    }
+
+    .container--cart-view .cart-list--cart-view,
+    .container--cart-view .cart-later-list--later-view {
+        width: 100%;
+    }
+
+    .container--cart-view .product-info--cart-view ,
+    .container--cart-view .product-info--later-view{
+        width: 400px;
+    }
+
+    .container--cart-view .subtotal-cart--cart-view {
+        width: 100%;
+    }
 
     /* USER WISHLIST VIEW */
 
