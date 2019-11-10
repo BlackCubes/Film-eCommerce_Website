@@ -3374,10 +3374,23 @@ form#userChangeAddressCard {
     /* PRODUCTS PROFILE VIEW */
 
     /* ARTIST PROFILE VIEW */
+    .container--artist-view .artist-name--artist-view {
+        width: 100%;
+    }
+
+    .container--artist-view .product-artist-title--artist-view {
+        width: 100%;
+    }
+
     .container--artist-view .product-artist-list--artist-view {
         width: 100%;
         grid-template-areas:
             "product-artist product-artist product-artist";
+    }
+
+    .container--artist-view .artist-name--artist-view h2,
+    .container--artist-view .product-artist-title--artist-view h2 {
+        letter-spacing: 5px;
     }
 
     /* STUDIO PROFILE VIEW */
