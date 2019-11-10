@@ -3382,6 +3382,18 @@ form#userChangeAddressCard {
             "producer-list dp-list studio-list";
     }
 
+    .container--product-view .extra-desc-product-info--product-view {
+        width: 100%;
+    }
+
+    .container--product-view .product-details-info--product-view {
+        width: 100%;
+    }
+
+    .container--product-view .product-details-list--product-view tbody {
+        width: 100%;
+    }
+
     /* ARTIST PROFILE VIEW */
     .container--artist-view .artist-name--artist-view {
         width: 100%;
