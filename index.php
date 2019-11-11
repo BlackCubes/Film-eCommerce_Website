@@ -25,7 +25,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                         <a href="/FilmIndustry/eCommerce/index.php#filmsTelevision">Explore Products</a>
                     </div>
                     <div class="page-links">
+                        <?php if (isset($_SESSION['id'])) { echo  ?>
+                        <a href="/FilmIndustry/eCommerce/account/profile.php">You're signed in, <?php echo $_SESSION['first_name'] ?>. View profile</a>
+                        <?php } else { echo ?>
                         <a href="/FilmIndustry/eCommerce/register_page1.php">Create Account or Login</a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
