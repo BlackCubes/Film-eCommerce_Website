@@ -674,7 +674,8 @@ section.homepage-section > .website-intro-card img:nth-child(2) {
     filter: brightness(0.8);
 }
 
-section.homepage-section > .website-intro-card .unit-image-wrapper .fa-sign-in-alt {
+section.homepage-section > .website-intro-card .unit-image-wrapper .fa-sign-in-alt,
+section.homepage-section > .website-intro-card .unit-image-wrapper .fa-check {
     font-size: 5em;
     color: mediumpurple;
     margin-top: 20px;
