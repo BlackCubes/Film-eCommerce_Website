@@ -3829,9 +3829,19 @@ form#userChangeAddressCard {
     }
 
     .container--product-view .cast-crew-container {
+        display: grid;
         grid-template-areas:
             "director-list writer-list actor-list"
             "producer-list dp-list studio-list";
+    }
+
+    .container--product-view .director-list-container--product-view,
+    .container--product-view .writer-list-container--product-view,
+    .container--product-view .actor-list-container--product-view,
+    .container--product-view .producer-list-container--product-view,
+    .container--product-view .cinematographer-list-container--product-view,
+    .container--product-view .studio-list-container--product-view {
+        width: 100%;
     }
 
     .container--product-view .director-list-container--product-view,
