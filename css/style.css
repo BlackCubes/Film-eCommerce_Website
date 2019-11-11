@@ -1984,13 +1984,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 }
 
 .container--option-view .main-info--option-view {
-    width: 1450px;
+    width: 100%;
     margin: 10px auto 10px auto;
 }
 
 .container--option-view .option-title-letters--option-view {
     height: 36px;
-    width: 1450px;
+    width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgb(250, 246, 255);
