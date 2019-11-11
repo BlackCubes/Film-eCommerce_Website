@@ -489,6 +489,59 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
     justify-content: center;
 }
 
+/* ACCOUNT FOOTER */
+footer.footer--acount {
+    background-color: white;
+}
+
+footer.footer--account div {
+    font-family: 'Muli', sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+footer.footer--account,
+footer.footer--account .created-footer {
+    width: 100%;
+}
+
+.created--footer .center-items {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+.created--footer ul.created-list {
+    padding: 0;
+    margin: 0;
+}
+
+.created--footer .created-list > li {
+    display: inline-block;
+}
+
+.created--footer .created-list > li::before {
+    content: "|";
+    margin: 0 0.5em;
+}
+
+.created--footer .center-items .created-title {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.created--footer .created-title .uppercase-title {
+    text-transform: uppercase;
+}
+
+footer.footer--account a {
+    text-decoration: none;
+}
+
+footer.footer--account li {
+    font-size: 12px;
+}
+
 /* BREADCRUMB */
 .breadcrumb,
 .account-breadcrumb {
