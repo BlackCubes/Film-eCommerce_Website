@@ -1378,7 +1378,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
 .additional-options-title td.additional-format-title,
 .additional-options-description td.additional-format-date-value {
-    width: 360px;
+    /*width: 360px;*/
+    width: 300px;
 }
 
 .additional-options-title td.additional-edition-title,
@@ -1388,7 +1389,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
 .additional-options-title td.additional-disc-title,
 .additional-options-description td.additional-disc-value {
-    text-align: right;
+    /*text-align: right;*/
+    text-align: left;
     width: 60px;
 }
 
@@ -1405,7 +1407,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 .additional-options-title td.additional-format-title,
 .additional-options-title td.secondary-color,
 .additional-options-description > tbody > tr > td {
-    padding: 3px 5px 3px 0;
+    /*padding: 3px 5px 3px 0;*/
+    padding: 0;
 }
 
 .additional-table-container--info-option .table-body-container,
