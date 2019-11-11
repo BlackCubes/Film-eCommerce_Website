@@ -367,6 +367,7 @@ footer.footer .follow-footer {
 }
 
 .follow-footer .center-items {
+    padding: 10px;
     text-align: center;
     list-style: none;
 }
