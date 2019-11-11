@@ -520,7 +520,7 @@ footer.footer--account .created-footer {
     display: inline-block;
 }
 
-.created-footer .created-list > li::before {
+.created-footer .created-list > li:nth-child(2)::before {
     content: "|";
     margin: 0 0.5em;
 }
