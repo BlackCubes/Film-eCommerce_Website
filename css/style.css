@@ -362,6 +362,10 @@ footer.footer div {
     color: white;
 }
 
+footer.footer .follow-footer {
+    background-color: #49454c;
+}
+
 footer.footer span.site-footer__list-title {
     font-size: 12px;
     padding: 3px 10px 3px 0;
