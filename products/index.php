@@ -207,7 +207,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $director_id_encrypt = urlencode(my_encrypt($director['director_id'], KEY));
 
-            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=director&artist=' . $director_id_encrypt. '"><img alt="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" title="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $director['director_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=director&artist=' . $director_id_encrypt. '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></td></tr>';
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=director&artist=' . $director_id_encrypt. '"><img alt="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" title="' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $director['director_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=director&artist=' . $director_id_encrypt. '">' . $director['director_fn'] . ' ' . $director['director_mn'] . ' ' . $director['director_ln'] . '</a></td></tr>';
 
         }
 
@@ -217,7 +217,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $writer_id_encrypt = urlencode(my_encrypt($writer['writer_id'], KEY));
 
-            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=writer&artist=' . $writer_id_encrypt . '"><img alt="' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '" title="' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $writer['writer_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=writer&artist=' . $writer_id_encrypt . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></td></tr>';
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=writer&artist=' . $writer_id_encrypt . '"><img alt="' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '" title="' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $writer['writer_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=writer&artist=' . $writer_id_encrypt . '">' . $writer['writer_fn'] . ' ' . $writer['writer_mn'] . ' ' . $writer['writer_ln'] . '</a></td></tr>';
 
         }
 
@@ -229,7 +229,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $actor_id_encrypt = urlencode(my_encrypt($actor['actor_id'], KEY));
 
-            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=actor&artist=' . $actor_id_encrypt . '"><img alt="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" title="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $actor['actor_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=actor&artist=' . $actor_id_encrypt . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></td></tr>';
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=actor&artist=' . $actor_id_encrypt . '"><img alt="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" title="' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $actor['actor_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=actor&artist=' . $actor_id_encrypt . '">' . $actor['actor_fn'] . ' ' . $actor['actor_mn'] . ' ' . $actor['actor_ln'] . '</a></td></tr>';
         }
 
         echo '</tbody></table></div><div class="producer-list-container--product-view"><div class="producer-title--product-view"><h4>Producers</h4></div><table class="producer-list--product-view"><thead><tr><th colspan="2" class="space--product-view"></th></tr></thead><tbody>';
@@ -238,7 +238,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $producer_id_encrypt = urlencode(my_encrypt($producer['producer_id'], KEY));
 
-            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=producer&artist=' . $producer_id_encrypt . '"><img alt="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $director['producer_ln'] . '" title="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $producer['producer_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=producer&artist=' . $producer_id_encrypt . '">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></td></tr>';
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=producer&artist=' . $producer_id_encrypt . '"><img alt="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $director['producer_ln'] . '" title="' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $producer['producer_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=producer&artist=' . $producer_id_encrypt . '">' . $producer['producer_fn'] . ' ' . $producer['producer_mn'] . ' ' . $producer['producer_ln'] . '</a></td></tr>';
 
         }
 
@@ -248,7 +248,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $dp_id_encrypt = urlencode(my_encrypt($dp['dp_id'], KEY));
 
-            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=dp&artist=' . $dp_id_encrypt . '"><img alt="' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '" title="' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $dp['dp_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=dp&artist=' . $dp_id_encrypt . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></td></tr>';
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=dp&artist=' . $dp_id_encrypt . '"><img alt="' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '" title="' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '" src="/FilmIndustry/eCommerce/img/' . $dp['dp_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="/FilmIndustry/eCommerce/artists/profile/index.php?role=dp&artist=' . $dp_id_encrypt . '">' . $dp['dp_fn'] . ' ' . $dp['dp_mn'] . ' ' . $dp['dp_ln'] . '</a></td></tr>';
 
         }
 
@@ -258,7 +258,7 @@ if (isset($_GET['isd']) /*&& validate_url('http://localhost/FilmIndustry/eCommer
 
             $studio_id_encrypt = urlencode(my_encrypt($studio['studio_id'], KEY));
 
-            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/studios/profile/index.php?role=studio&company=' . $studio_id_encrypt . '"><img alt="' . $studio['studio_name'] . '" title="' . $studio['studio_name'] . '" src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></a></td><td class="cast-crew-name--product-view"><span class="cast-crew-dot-dots"> . . . . </span><a href="/FilmIndustry/eCommerce/studios/profile/index.php?role=studio&company=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></td></tr>';
+            echo '<tr><td class="cast-crew-image--product-view"><a href="/FilmIndustry/eCommerce/studios/profile/index.php?role=studio&company=' . $studio_id_encrypt . '"><img alt="' . $studio['studio_name'] . '" title="' . $studio['studio_name'] . '" src="/FilmIndustry/eCommerce/img/' . $studio['studio_img'] . '"></a></td><td class="cast-crew-name--product-view"><a href="/FilmIndustry/eCommerce/studios/profile/index.php?role=studio&company=' . $studio_id_encrypt . '">' . $studio['studio_name'] . '</a></td></tr>';
 
         }
 
