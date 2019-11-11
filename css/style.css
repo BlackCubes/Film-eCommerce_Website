@@ -1285,31 +1285,43 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 }
 
 .container--product-view .main-info--product-view {
-    display: grid;
+    /*display: grid;*/
+    display: inline-flex;
     grid-area: m-i;
-    width: 1519px;
+    /*width: 1519px;*/
+    width: 100%;
     margin: 30px auto 50px auto;
-    grid-template-columns: auto;
+    /*grid-template-columns: auto;
     grid-template-areas:
-    "image-left-side info-middle-contain cart-right-side";
+    "image-left-side info-middle-contain cart-right-side";*/
 }
 
 .main-info--product-view .image--product-view {
     display: flex;
     margin-bottom: 22px;
-    width: 411px;
+    /*width: 411px;*/
+    width: 25%;
     justify-content: center;
 }
 
 .main-info--product-view .image--product-view img {
-    max-width: 359px;
-    max-height: 359px;
+    /*max-width: 359px;
+    max-height: 359px;*/
+    max-width: 100%;
+    max-height: 100%;
     text-align: center;
 }
 
-.main-info--product-view .product-info-option,
+/*.main-info--product-view .product-info-option,
 .product-info-option .additional-table-container--info-option  table {
     width: 783px;
+}*/
+.main-info--product-view .product-info-option {
+    width: 50%;
+}
+
+.product-info-option .additional-table-container--info-option table {
+    width: 90%;
 }
 
 .product-info-option .product-title--info-option h1 {
@@ -1455,11 +1467,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 }
 
 .main-info--product-view .cart-wishlist-container {
-    width: 325px;
+    /*width: 325px;*/
+    width: 270px;
 }
 
 .cart-wishlist-container #cartCard {
-    width: 270px;
+    /*width: 270px;*/
+    width: 220px;
     display: block;
     margin: 23px;
     border-radius: 4px;
@@ -1539,7 +1553,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
 #cartCard .cart-add-button .product-cart-button,
 #cartCard .wishlist-add-button .product-wishlist-button {
-    width: 230px;
+    /*width: 230px;*/
+    width: 100%;
     height: 45px;
 }
 
@@ -1586,11 +1601,13 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 }
 
 .container--product-view .cast-crew-container {
-    display: grid;
+    /*display: grid;*/
+    display: inline-flex;
+    width: 100%;
     margin-bottom: 50px;
-    grid-template-columns: auto;
+    /*grid-template-columns: auto;
     grid-template-areas:
-    "director-list writer-list actor-list producer-list dp-list studio-list";
+    "director-list writer-list actor-list producer-list dp-list studio-list";*/
 }
 
 .container--product-view .cast-crew-title--product-view,
@@ -1675,7 +1692,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 .container--product-view .producer-list--product-view,
 .container--product-view .cinematographer-list--product-view,
 .container--product-view .studio-list--product-view {
-    width: 240px;
+    /*width: 240px;*/
+    width: 100%;
 }
 
 .container--product-view .extra-desc-info--product-view {
@@ -1700,7 +1718,8 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 
 .container--product-view table.product-specs-list--product-view {
     display: table;
-    width: 1515px;
+    /*width: 1515px;*/
+    width: 100%;
     margin: 30px auto 40px auto;
 }
 
@@ -1720,30 +1739,42 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
   }
 
 .container--product-view .director-list-container--product-view {
+    width: 16.5%;
     grid-area: director-list;
 }
 
 .container--product-view .writer-list-container--product-view {
+    width: 16.5%;
     grid-area: writer-list;
 }
 
 .container--product-view .actor-list-container--product-view {
+    width: 16.5%;
     grid-area: actor-list;
 }
 
 .container--product-view .producer-list-container--product-view {
+    width: 16.5%;
     grid-area: producer-list;
 }
 
-.container--product-view .dp-list-container--product-view {
+/*.container--product-view .dp-list-container--product-view {
+    width: 16.5%;
+    grid-area: dp-list;
+}*/
+
+.container--product-view .cinematographer-list-container--product-view {
+    width: 16.5%;
     grid-area: dp-list;
 }
 
 .container--product-view .studio-list-container--product-view {
+    width: 16.5%;
     grid-area: studio-list;
 }
 
 .container--product-view .cast-crew-info--product-view {
+    width: 100%;
     grid-area: c-c-i;
 }
 
@@ -1756,6 +1787,7 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
 }
 
 .container--product-view .product-specs-info--product-view {
+    width: 100%;
     grid-area: p-s-i;
 }
 
