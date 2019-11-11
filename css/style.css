@@ -978,6 +978,11 @@ section.homepage-section > .producer-studio-card .unit-image-wrapper {
     height: 395px;
 }
 
+section.homepage-section > .actor-director-card .unit-image-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 section.homepage-section > .actor-director-card img:nth-child(1) {
     width: 359px;
     height: 281px;
