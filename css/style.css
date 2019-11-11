@@ -368,6 +368,11 @@ footer.footer .follow-footer {
 
 .follow-footer .center-items {
     text-align: center;
+    list-style: none;
+}
+
+.follow-footer .follow-list > li {
+    display: inline-block;
 }
 
 .follow-footer ul.follow-list {
