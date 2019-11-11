@@ -675,8 +675,9 @@ section.homepage-section > .website-intro-card img:nth-child(2) {
 }
 
 section.homepage-section > .website-intro-card .unit-image-wrapper .fa-sign-in-alt {
-    width: 188.54px;
-    height: 188.54px;
+    font-size: 5em;
+    color: mediumpurple;
+    margin-top: 20px;
 }
 
 section.homepage-section > .films-television-card .unit-image-wrapper {
