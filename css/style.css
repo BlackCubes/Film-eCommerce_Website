@@ -979,18 +979,20 @@ section.homepage-section > .producer-studio-card .unit-image-wrapper {
 }
 
 section.homepage-section > .actor-director-card img:nth-child(1) {
-    width: 389px;
-    height: 311px;
-    position: relative;
-    top: 84px;
+    width: 359px;
+    height: 281px;
+    /*position: relative;
+    top: 84px;*/
+    padding-top: 113px;
 }
 
 section.homepage-section > .actor-director-card img:nth-child(2) {
-    width: 284px;
-    height: 385px;
-    position: absolute;
+    width: 264px;
+    height: 365px;
+    /*position: absolute;
     left: 300px;
-    top: 1642px;
+    top: 1642px;*/
+    padding-top: 30px;
 }
 
 section.homepage-section > .writer-cinematographer-card img {
