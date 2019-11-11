@@ -4082,8 +4082,8 @@ form#userChangeAddressCard {
 
 }
 
-/* HOW 768PX FEELS LIKE */
-@media only screen and (max-width: 768px) {
+/* HOW 800PX FEELS LIKE */
+@media only screen and (max-width: 800px) {
 
     /* MAIN NAVBAR */
     .header {
