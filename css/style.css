@@ -387,10 +387,22 @@ footer.footer .follow-footer {
     padding-bottom: 10px;
 }
 
+.follow-footer .follow-list-link a {
+    display: block;
+    color: snow;
+    background: blueviolet;
+    margin: 0 5px;
+    padding: 6px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
 .follow-footer .follow-list-link .fa-github,
 .follow-footer .follow-list-link .fa-linkedin {
     font-size: 2em;
-    color: mediumpurple;
+    color: snow;
+    width: 31px;
+    height: 31px;
 }
 
 footer.footer span.site-footer__list-title {
