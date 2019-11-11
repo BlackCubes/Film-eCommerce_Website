@@ -3793,14 +3793,14 @@ form#userChangeAddressCard {
         margin-bottom: 30px;
     }
 
-    .main-info--product-view .image--product-view {
+    /*.main-info--product-view .image--product-view {
         width: 280px;
-    }
+    }*/
 
-    .main-info--product-view .product-info-option,
+    /*.main-info--product-view .product-info-option,
     .product-info-option .additional-table-container--info-option table {
         width: 383px;
-    }
+    }*/
 
     .additional-options-title td.additional-disc-title,
     .additional-options-description td.additional-disc-value {
@@ -3808,19 +3808,19 @@ form#userChangeAddressCard {
         width: 40px;
     }
 
-    .main-info--product-view .cart-wishlist-container {
+    /*.main-info--product-view .cart-wishlist-container {
         width: 225px;
-    }
+    }*/
 
     .cart-wishlist-container #cartCard {
-        width: 200px;
+        /*width: 200px;*/
         margin: auto;
     }
 
-    #cartCard .cart-add-button .product-cart-button,
+    /*#cartCard .cart-add-button .product-cart-button,
     #cartCard .wishlist-add-button .product-wishlist-button {
         width: 100%;
-    }
+    }*/
 
     .container--product-view .cast-crew-info--product-view {
         width: 95%;
