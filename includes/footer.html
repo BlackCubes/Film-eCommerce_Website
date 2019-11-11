@@ -35,7 +35,7 @@
             <div class="grid__item">
                 <span class="site-footer__list-title">About The Shop</span>
                 <ul class="site-footer__link-list">
-                    <li class="site-footer__link-list-item"><a href="#">My Account</a></li>
+                    <li class="site-footer__link-list-item"><a href="<?php if (isset($_SESSION['id'])) { echo '/FilmIndustry/eCommerce/account/profile.php'; } else { echo '/FilmIndustry/eCommerce/login.php'; } ?>">My Account</a></li>
                     <li class="site-footer__link-list-item"><a href="#">Track Order</a></li>
                 </ul>
             </div>
