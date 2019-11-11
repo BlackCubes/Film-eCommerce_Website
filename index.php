@@ -32,7 +32,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
             <div class="unit-image-wrapper">
                 <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/d-b-weiss_Cover.png">
                 <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/breaking-bad-split.png">
-                <img class="unit-image" src="/FilmIndustry/eCommerce/img/homepage/log-in.svg">
+                <i class="unit-image fas fa-sign-in-alt"></i>
             </div>
         </div>
     </div>
