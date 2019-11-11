@@ -490,7 +490,7 @@ footer.footer .site-footer__copyright .site-footer__copyright-content {
 }
 
 /* ACCOUNT FOOTER */
-footer.footer--acount {
+footer.footer--account {
     background-color: white;
 }
 
@@ -506,7 +506,7 @@ footer.footer--account .created-footer {
 }
 
 .created-footer .center-items {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     list-style: none;
 }
@@ -535,6 +535,7 @@ footer.footer--account .created-footer {
 }
 
 footer.footer--account a {
+    color: lightslategrey;
     text-decoration: none;
 }
 
