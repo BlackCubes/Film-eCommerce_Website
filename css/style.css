@@ -674,7 +674,7 @@ section.homepage-section > .website-intro-card img:nth-child(2) {
     filter: brightness(0.8);
 }
 
-section.homepage-section > .website-intro-card .unit-image-wrapper i.unit-image {
+section.homepage-section > .website-intro-card .unit-image-wrapper .fa-sign-in-alt {
     width: 188.54px;
     height: 188.54px;
 }
