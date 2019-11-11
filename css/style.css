@@ -370,6 +370,11 @@ footer.footer .follow-footer {
     text-align: center;
 }
 
+.follow-footer ul.follow-list {
+    padding: 0;
+    margin: 0;
+}
+
 footer.footer span.site-footer__list-title {
     font-size: 12px;
     padding: 3px 10px 3px 0;
