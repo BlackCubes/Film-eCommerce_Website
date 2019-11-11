@@ -503,6 +503,7 @@ footer.footer--account div {
 footer.footer--account,
 footer.footer--account .created-footer {
     width: 100%;
+    height: 100px;
 }
 
 .created-footer .center-items {
@@ -521,22 +522,29 @@ footer.footer--account .created-footer {
 }
 
 .created-footer .created-list > li:nth-child(2)::before {
-    content: "|";
+    content: " | ";
     margin: 0 0.5em;
 }
 
 .created-footer .center-items .created-title {
-    font-size: 15px;
+    font-size: 14px;
+    color: darkslategrey;
     padding-bottom: 10px;
 }
 
 .created-footer .created-title .uppercase-title {
+    font-size: 15px;
+    color: black;
     text-transform: uppercase;
 }
 
 footer.footer--account a {
     color: lightslategrey;
     text-decoration: none;
+}
+
+footer.footer--account a:hover {
+    color: rgb(82, 94, 105);
 }
 
 footer.footer--account li {
