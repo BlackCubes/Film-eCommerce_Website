@@ -6261,7 +6261,9 @@ form#userChangeAddressCard {
         display: none;
     }
 
-    /*section.homepage-section > .actor-director-card img:nth-child(2)*/
+    section.homepage-section > .actor-director-card img:nth-child(2) {
+        padding-top: 84px;
+    }
 
     section.homepage-section > .writer-cinematographer-card .unit-image-wrapper {
         width: 319.49px;
