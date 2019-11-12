@@ -3798,6 +3798,11 @@ form#userChangeAddressCard {
     }
 
     /* HOMEPAGE */
+    section.homepage-section > .films-television-card .unit-image-wrapper {
+        grid-template-columns: 229.30px 168.56px 166.84px 235.29px;
+        grid-template-rows: 132.62px 82.99px 34.22px 94.97px 72.73px;
+    }
+
     section.homepage-section:nth-child(2) {
         height: 1040px;
     }
@@ -3836,6 +3841,42 @@ form#userChangeAddressCard {
 
     section.homepage-section:nth-child(2) .homepage-links {
         font-size: 14px;
+    }
+
+    section.homepage-section > .films-television-card img:nth-child(1) {
+        width: 397.86px;
+        height: 215.61px;
+    }
+    
+    section.homepage-section > .films-television-card img:nth-child(2),
+    section.homepage-section > .films-television-card img:nth-child(3) {
+        width: 229.30px;
+        height: 129.19px;
+    }
+    
+    section.homepage-section > .films-television-card img:nth-child(4) {
+        width: 168.56px;
+        height: 252.67px;
+    }
+    
+    section.homepage-section > .films-television-card img:nth-child(5) {
+        width: 166.84px;
+        height: 249.83px;
+    }
+    
+    section.homepage-section > .films-television-card img:nth-child(6) {
+        width: 235.29px;
+        height: 132.62px;
+    }
+    
+    section.homepage-section > .films-television-card img:nth-child(7) {
+        width: 235.29px;
+        height: 117.21px;
+    }
+    
+    section.homepage-section > .films-television-card img:nth-child(8) {
+        width: 402.13px;
+        height: 215.83px;
     }
 
     section.homepage-section > .actor-director-card img:nth-child(1) {
