@@ -150,7 +150,7 @@ $sidebarMobile = new sidebarMobile();
     <div class="main-product">
         <?php
 
-        $display = 21;
+        $display = 18;
 
         if (isset($_GET['p']) && is_numeric($_GET['p'])) {
             $pages = $_GET['p'];
