@@ -1014,6 +1014,11 @@ section.homepage-section > .producer-studio-card img:nth-child(1) {
     display: none;
 }
 
+section.homepage-section > .producer-studio-card .unit-image-wrapper {
+    background-image: url("../img/homepage/stan-lee_Cover.jpg");
+    background-size: 100%;
+}
+
 section.homepage-section > .producer-studio-card img:nth-child(2) {
     width: 309px;
     height: 69px;
