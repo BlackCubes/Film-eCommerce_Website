@@ -1015,24 +1015,28 @@ section.homepage-section > .producer-studio-card img:nth-child(1) {
 }
 
 section.homepage-section > .producer-studio-card .unit-image-wrapper {
+    display: grid;
     background-image: url("../img/homepage/stan-lee_Cover.jpg");
     background-size: 100%;
+    margin-top: 10px;
+    grid-template-rows: 1fr 1fr;
 }
 
 section.homepage-section > .producer-studio-card img:nth-child(2) {
     width: 309px;
     height: 69px;
-    position: absolute;
+    /*position: absolute;
     left: 30px;
-    top: 2305px;
+    top: 2305px;*/
+    padding-top: 20px;
 }
 
 section.homepage-section > .producer-studio-card img:nth-child(3) {
     width: 249px;
     height: 311px;
-    position: absolute;
+    /*position: absolute;
     left: 9px;
-    top: 2336px;
+    top: 2336px;*/
 }
 
 /* MAIN CONTAINER */
