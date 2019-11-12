@@ -3798,6 +3798,55 @@ form#userChangeAddressCard {
     }
 
     /* HOMEPAGE */
+    section.homepage-section:nth-child(2) {
+        height: 1040px;
+    }
+
+    section.homepage-section > .actor-director-card,
+    section.homepage-section > .writer-cinematographer-card,
+    section.homepage-section > .producer-studio-card,
+    section.homepage-section > .login-info-card {
+        height: calc(490px + 12px);
+    }
+
+    section.homepage-section > .actor-director-card .unit-image-wrapper,
+    section.homepage-section > .writer-cinematographer-card .unit-image-wrapper,
+    section.homepage-section > .producer-studio-card .unit-image-wrapper {
+        height: 317px;
+    }
+
+    section.homepage-section > .writer-cinematographer-card .unit-image-wrapper {
+        width: 400px;
+        background-size: 400px 250px;
+        background-position: 80% 91%;
+    }
+
+    section.homepage-section > .producer-studio-card .unit-image-wrapper {
+        width: 497px;
+        background-size: 497px 357px;
+    }
+
+    section.homepage-section > .actor-director-card img:nth-child(1) {
+        width: calc(887px / 4);
+        height: calc(710px / 4);
+        padding-top: 120px;
+    }
+    
+    section.homepage-section > .actor-director-card img:nth-child(2) {
+        width: calc(500px / 3);
+        height: calc(670px / 3);
+        padding-top: 70px;
+    }
+
+    section.homepage-section > .producer-studio-card img:nth-child(2) {
+        width: calc(1920px / 9);
+        height: calc(429px / 9);
+    }
+    
+    section.homepage-section > .producer-studio-card img:nth-child(3) {
+        width: calc(1600px / 9);
+        height: calc(2000px / 9);
+    }
 
     /* SIDEBAR */
     .sidebar-mobile {
