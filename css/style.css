@@ -6171,6 +6171,10 @@ form#userChangeAddressCard {
     }
 
     /* HOMEPAGE */
+    section.homepage-section:nth-child(1) {
+        height: 1200px;
+    }
+
     section.homepage-section > .website-intro-card,
     section.homepage-section > .films-television-card,
     section.homepage-section > .actor-director-card,
@@ -6194,7 +6198,6 @@ form#userChangeAddressCard {
         height: 100%;
     }
 
-    section.homepage-section > .actor-director-card img:nth-child(2),
     section.homepage-section > .producer-studio-card img:nth-child(1),
     section.homepage-section > .producer-studio-card img:nth-child(3),
     section.homepage-section > .website-intro-card img:nth-child(1),
@@ -6257,6 +6260,17 @@ form#userChangeAddressCard {
         padding-top: 100px;
     }
 
+    /*section.homepage-section > .actor-director-card img:nth-child(2)*/
+
+    section.homepage-section > .writer-cinematographer-card .unit-image-wrapper {
+        width: 319.49px;
+        background-position: 50% 87%;
+    }
+
+    section.homepage-section > .producer-studio-card .unit-image-wrapper {
+        width: 318.99px;
+    }
+
     section.homepage-section > .writer-cinematographer-card img {
         width: 90%;
         height: 56.25%;
@@ -6264,11 +6278,13 @@ form#userChangeAddressCard {
     }
 
     section.homepage-section > .producer-studio-card img:nth-child(2) {
-        width: 80%;
+        /*width: 80%;
         height: 17.875%;
         position: relative;
         left: 0;
-        top: 0;
+        top: 0;*/
+        width: calc(1920px / 14);
+        height: calc(429px / 14);
         padding-top: 100px;
     }
 
