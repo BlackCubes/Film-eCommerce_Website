@@ -6258,12 +6258,14 @@ form#userChangeAddressCard {
         height: 64.036%;
         top: 0;
         padding-top: 100px;
+        display: none;
     }
 
     /*section.homepage-section > .actor-director-card img:nth-child(2)*/
 
     section.homepage-section > .writer-cinematographer-card .unit-image-wrapper {
         width: 319.49px;
+        background-size: 400px 250px;
         background-position: 50% 87%;
     }
 
@@ -6285,7 +6287,6 @@ form#userChangeAddressCard {
         top: 0;*/
         width: calc(1920px / 14);
         height: calc(429px / 14);
-        padding-top: 100px;
     }
 
     /* SIDEBAR */
