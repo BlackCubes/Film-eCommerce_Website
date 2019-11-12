@@ -1037,9 +1037,9 @@ section.homepage-section > .producer-studio-card img:nth-child(1) {
 
 section.homepage-section > .producer-studio-card .unit-image-wrapper {
     display: grid;
-    width: 869px;
+    width: 695px;
     background-image: url("../img/homepage/stan-lee_Cover.jpg");
-    background-size: 869px 624px;
+    background-size: 695px 499px;
     background-repeat: no-repeat;
     background-position: 80% 0%;
     margin-top: 10px;
