@@ -3818,7 +3818,7 @@ form#userChangeAddressCard {
     section.homepage-section > .writer-cinematographer-card .unit-image-wrapper {
         width: 400px;
         background-size: 400px 250px;
-        background-position: 80% 91%;
+        background-position: 80% 98%;
     }
 
     section.homepage-section > .producer-studio-card .unit-image-wrapper {
@@ -3826,16 +3826,28 @@ form#userChangeAddressCard {
         background-size: 497px 357px;
     }
 
+    section.homepage-section:nth-child(2) .headline {
+        font-size: 25px;
+    }
+
+    section.homepage-section:nth-child(2) .subhead {
+        font-size: 16px;
+    }
+
+    section.homepage-section:nth-child(2) .homepage-links {
+        font-size: 14px;
+    }
+
     section.homepage-section > .actor-director-card img:nth-child(1) {
         width: calc(887px / 4);
         height: calc(710px / 4);
-        padding-top: 120px;
+        padding-top: 137px;
     }
     
     section.homepage-section > .actor-director-card img:nth-child(2) {
         width: calc(500px / 3);
         height: calc(670px / 3);
-        padding-top: 70px;
+        padding-top: 93px;
     }
 
     section.homepage-section > .producer-studio-card img:nth-child(2) {
