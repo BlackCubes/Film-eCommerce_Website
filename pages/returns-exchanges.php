@@ -14,7 +14,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
             <h1>Returns & Exchanges</h1>
         </div>
         <div class="section-body">
-            <p>Although you cannot actually buy anything at the website, at (Website), our goal is your complete satisfaction. You may return any new item for any reason within 30 days for a refund. The item must be in the original, unopened package, to be accepted back for a refund.</p>
+            <p>Although you cannot actually buy anything at the website, at filmecommerce.com, our goal is your complete satisfaction. You may return any new item for any reason within 30 days for a refund. The item must be in the original, unopened package, to be accepted back for a refund.</p>
             <h4 style="font-weight: bold;">How to Return an Item</h4>
             <p>
                 If an item is damaged, defective, or incorrect, contact us and we will issue a Return Authorization. If the item is not damaged, defective, or incorrect, please include a copy of the packing slip and write the reason for the return, and if you would like a refund or an exchange.
@@ -23,7 +23,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
                 You will be responsible for the cost of shipping an item back to us. We recommend using carrier that provides you with a tracking number, such as UPS, FedEx, or USPS Priority Mail.
                 <br>
                 <br>
-                <strong>PLEASE NOTE: YOU CANNOT ACTUALLY BUY ANY PRODUCTS ON THIS WEBSITE! IT IS A PROJECT INTENDED TO DISPLAY SKILLSETS! BUT, FOR FUTURE REFERENCES AND POSSIBILITIES, ONLY MERCHANDISE PURCHASED DIRECTLY FROM (WEBSITE) CAN BE RETURNED TO THE FOLLOWING ADDRESS BELOW. WE CANNOT ACCEPT ANY ITEMS PURCHASED AT ANY OTHER RETAILERS.</strong>
+                <strong>PLEASE NOTE: YOU CANNOT ACTUALLY BUY ANY PRODUCTS ON THIS WEBSITE! IT IS A PROJECT INTENDED TO DISPLAY SKILLSETS! BUT, FOR FUTURE REFERENCES AND POSSIBILITIES, ONLY MERCHANDISE PURCHASED DIRECTLY FROM FILMECOMMERCE.COM CAN BE RETURNED TO THE FOLLOWING ADDRESS BELOW. WE CANNOT ACCEPT ANY ITEMS PURCHASED AT ANY OTHER RETAILERS.</strong>
             </p>
             <p>
                 Please return Consumer Products to:
