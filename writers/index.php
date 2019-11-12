@@ -27,7 +27,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/breadcrumb.p
 
 require(MYSQL);
 
-$display = 21;
+$display = 18;
 
 $sort = (isset($_GET['sort'])) ? $_GET['sort'] : 'all';
 
