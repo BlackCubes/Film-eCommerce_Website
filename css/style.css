@@ -3831,6 +3831,18 @@ form#userChangeAddressCard {
         background-size: 497px 357px;
     }
 
+    section.homepage-section:nth-child(1) .headline {
+        font-size: 40px;
+    }
+
+    section.homepage-section:nth-child(1) .subhead {
+        font-size: 22px;
+    }
+
+    section.homepage-section:nth-child(1) .homepage-links {
+        font-size: 18px;
+    }
+
     section.homepage-section:nth-child(2) .headline {
         font-size: 25px;
     }
