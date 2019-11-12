@@ -139,11 +139,17 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/header.html'
     <div class="login-info-card">
         <div class="unit-wrapper">
             <div class="unit-headline-wrapper">
-                <h4 class="headline">Join</h4>
+                <h4 class="headline"><?php if (isset($_SESSION['id'])) { echo 'Explore'; } else { echo 'Join'; } ?></h4>
                 <h5 class="subhead">Enjoy your favorite products, exclusives, and rarities.</h5>
-                <h5 class="subhead">Own your experience.</h5>
+                <div class="homepage-links">
+                    <div class="page-links">
+                        <a href="<?php if (isset($_SESSION['id'])) { echo '/FilmIndustry/eCommerce/cart/cart.php'; } else { echo '/FilmIndustry/eCommerce/register_page1.php'; } ?>">Own your experience</a>
+                    </div>
+                </div>
             </div>
-            <div class="unit-image-wrapper"></div>
+            <div class="unit-image-wrapper">
+                <?php if (isset($_SESSION['id'])) { echo '<i class="fas fa-shopping-cart"></i>'; } else { echo '<i class="fas fa-file-signature"></i>'; } ?>
+            </div>
         </div>
     </div>
 </section>
