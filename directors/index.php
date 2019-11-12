@@ -48,7 +48,7 @@ if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $pages = $_GET['p'];
 } else {
     $q = "SELECT COUNT(DISTINCT pd.director_id) FROM products_directors AS pd JOIN directors AS d ON pd.director_id=d.id $where";
-    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " , mysqli_error($dbc));
+    $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error " . mysqli_error($dbc));
     $row = mysqli_fetch_array($r, MYSQLI_NUM);
     $records = $row[0];
     if ($records > $display) {
