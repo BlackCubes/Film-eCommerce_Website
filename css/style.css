@@ -4549,13 +4549,17 @@ form#userChangeAddressCard {
         margin-right: 0;
     }
 
+    section.homepage-section > .website-intro-card .unit-image-wrapper {
+        display: grid;
+        grid-template-columns: none;
+        margin-top: 56px;
+    }
+
     section.homepage-section:nth-child(2) {
         display: block;
         height: 100%;
     }
 
-    section.homepage-section > .actor-director-card img:nth-child(2),
-    section.homepage-section > .producer-studio-card img:nth-child(3),
     section.homepage-section > .website-intro-card img:nth-child(1),
     section.homepage-section > .website-intro-card img:nth-child(2),
     section.homepage-section > .website-intro-card img:nth-child(3),
@@ -4566,6 +4570,11 @@ form#userChangeAddressCard {
     section.homepage-section > .films-television-card img:nth-child(6),
     section.homepage-section > .films-television-card img:nth-child(7) {
         display: none;
+    }
+
+    section.homepage-section > .website-intro-card .unit-image-wrapper .fa-sign-in-alt,
+    section.homepage-section > .website-intro-card .unit-image-wrapper .fa-check {
+        font-size: 7em;
     }
 
     section.homepage-section:nth-child(1) .headline,
@@ -4590,7 +4599,8 @@ form#userChangeAddressCard {
     }
 
     section.homepage-section > .actor-director-card .unit-image-wrapper {
-        display: block;
+        /*display: block;*/
+        display: grid;
         text-align: center;
     }
 
@@ -4610,7 +4620,29 @@ form#userChangeAddressCard {
     }
 
     section.homepage-section > .actor-director-card img:nth-child(1) {
-        top: 74px;
+        /*top: 74px;*/
+        width: calc(887px / 4);
+        height: calc(710px / 4);
+        margin-right: 0;
+        padding-top: 132px;
+    }
+
+    section.homepage-section > .actor-director-card img:nth-child(2) {
+        width: calc(500px / 3);
+        height: calc(670px / 3);
+        margin-left: 0;
+        padding-top: 85px;
+    }
+
+    section.homepage-section > .writer-cinematographer-card .unit-image-wrapper {
+        width: 400px;
+        background-size: 400px 250px;
+        background-position: 80% 75%%;
+    }
+
+    section.homepage-section > .producer-studio-card .unit-image-wrapper {
+        width: 497px;
+        background-size: 497px 357px;
     }
 
     section.homepage-section > .writer-cinematographer-card img {
@@ -4622,13 +4654,15 @@ form#userChangeAddressCard {
         width: 90%;
     }
     
-    section.homepage-section > .producer-studio-card img:nth-child(2) {
+    /*section.homepage-section > .producer-studio-card img:nth-child(2) {
         width: 309px;
         height: 69px;
         position: absolute;
         left: 60px;
         top: 2850px;
-    }
+        width: calc(1920px / 9);
+        height: calc(429px / 9);
+    }*/
 
     /* SIDEBAR */
     :root {
