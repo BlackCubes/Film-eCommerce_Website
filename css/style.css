@@ -3855,6 +3855,21 @@ form#userChangeAddressCard {
         font-size: 14px;
     }
 
+    section.homepage-section > .website-intro-card img:nth-child(1) {
+        width: calc(1093px / 5);
+        height: calc(873px / 5);
+    }
+    
+    section.homepage-section > .website-intro-card img:nth-child(2) {
+        width: calc(600px / 4);
+        height: calc(927px / 4);
+    }
+    
+    section.homepage-section > .website-intro-card .unit-image-wrapper .fa-sign-in-alt,
+    section.homepage-section > .website-intro-card .unit-image-wrapper .fa-check {
+        font-size: 4em;
+    }
+
     section.homepage-section > .films-television-card img:nth-child(1) {
         width: 397.86px;
         height: 215.61px;
