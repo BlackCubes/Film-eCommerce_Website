@@ -6112,6 +6112,7 @@ form#userChangeAddressCard {
 
     #menuToggle {
         display: flex;
+        width: 40%;
         flex-direction: column;
         position: relative;
         top: 25px;
@@ -6172,7 +6173,7 @@ form#userChangeAddressCard {
 
     .header .topnav {
         position: absolute;
-        width: 60%;
+        width: 117%;
         max-height: 110vh;
         box-shadow: 0 0 10px #85888C;
         margin: -30px 0 0 0;
@@ -6197,13 +6198,15 @@ form#userChangeAddressCard {
     .header .topnav-logo {
         float: none;
         position: absolute;
-        top: 4.5%;
+        top: 6.5%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 0;
     }
 
     .header .cart-wish-icons {
         float: right;
+        z-index: 0;
     }
 
     .header .cart-wish-icons .cart-icon,
