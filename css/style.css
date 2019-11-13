@@ -3767,6 +3767,76 @@ form#userChangeAddressCard {
     margin: 0px 15px;
 }
 
+/* SHIPPING AND DELIVERY PAGE */
+.pages-container {
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 55px;
+}
+
+.pages-container .grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    left: 0px;
+}
+
+.pages-container .section-header {
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.pages-container .section-header h1 {
+    color: #404040;
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 17.5px;
+}
+
+.section-body {
+    color: #3d4246;
+}
+
+.pages-container .shipping-deliver-table table {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-color: grey;
+    width: 100%;
+    margin-bottom: 27.5px;
+}
+
+.pages-container .shipping-deliver-table td {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 10px 14px;
+}
+
+.pages-container .section-body p {
+    color: #404040;
+    margin: 0 0 19.4px;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.pages-container .section-body h4 {
+    font-size: 1.21429em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 55px;
+    margin-bottom: 27.5px;
+}
+
+.pages-container .section-body p strong {
+    font-weight: 700;
+}
+
 /* MEDIA QUERY */
 
 /* HOW 1024PX FEELS LIKE */
@@ -7572,74 +7642,4 @@ form#userChangeAddressCard {
         margin-left: auto;
         margin-right: auto;
     }
-}
-
-/* SHIPPING AND DELIVERY PAGE */
-.pages-container {
-    font-family: 'Muli', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 55px;
-}
-
-.pages-container .grid {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    left: 0px;
-}
-
-.pages-container .section-header {
-    margin-bottom: 55px;
-    text-align: center;
-}
-
-.pages-container .section-header h1 {
-    color: #404040;
-    font-size: 2.5em;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0 0 17.5px;
-}
-
-.section-body {
-    color: #3d4246;
-}
-
-.pages-container .shipping-deliver-table table {
-    display: table;
-    table-layout: fixed;
-    border-spacing: 0;
-    border-collapse: collapse;
-    border-color: grey;
-    width: 100%;
-    margin-bottom: 27.5px;
-}
-
-.pages-container .shipping-deliver-table td {
-    text-align: left;
-    border: 1px solid #ddd;
-    padding: 10px 14px;
-}
-
-.pages-container .section-body p {
-    color: #404040;
-    margin: 0 0 19.4px;
-    letter-spacing: 0.2px;
-    line-height: 1.5;
-    font-weight: 600;
-}
-
-.pages-container .section-body h4 {
-    font-size: 1.21429em;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-top: 55px;
-    margin-bottom: 27.5px;
-}
-
-.pages-container .section-body p strong {
-    font-weight: 700;
 }
