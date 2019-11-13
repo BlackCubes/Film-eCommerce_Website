@@ -978,7 +978,8 @@ section.homepage-section:nth-child(2) .homepage-links {
 
 section.homepage-section > .actor-director-card .unit-image-wrapper,
 section.homepage-section > .writer-cinematographer-card .unit-image-wrapper,
-section.homepage-section > .producer-studio-card .unit-image-wrapper {
+section.homepage-section > .producer-studio-card .unit-image-wrapper,
+section.homepage-section > .login-info-card .unit-image-wrapper {
     width: 100%;
     height: 395px;
 }
@@ -1063,6 +1064,18 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     /*position: absolute;
     left: 9px;
     top: 2336px;*/
+}
+
+section.homepage-section > .login-info-card .page-links,
+section.homepage-section > .login-info-card .unit-image-wrapper {
+    text-align: center;
+}
+
+section.homepage-section > .login-info-card .fa-shopping-cart,
+section.homepage-section > .login-info-card .fa-file-signature {
+    font-size: 5em;
+    color: mediumpurple;
+    margin-top: 20px;
 }
 
 /* MAIN CONTAINER */
