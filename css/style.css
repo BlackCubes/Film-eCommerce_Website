@@ -252,6 +252,11 @@ body.body--account {
     width: 147px;
 }
 
+.header .topnav-logo img {
+    width: calc(387px / 10);
+    height: calc(297px / 10);
+}
+
 /*header {
     display: flex;
     justify-content: space-between;
