@@ -4399,6 +4399,15 @@ form#userChangeAddressCard {
 
     /* CHANGE ADDRESS PAGE */
 
+    /* SHIPPING AND DELIVERY PAGE */
+    .pages-container {
+        max-width: 850px;
+    }
+
+    .pages-container .grid {
+        max-width: 850px;
+    }
+
 }
 
 /* HOW 800PX FEELS LIKE */
