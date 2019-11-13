@@ -4516,7 +4516,7 @@ form#userChangeAddressCard {
     .header .topnav {
         position: absolute;
         width: 35%;
-        max-height: 110vh;
+        max-height: 180vh;
         box-shadow: 0 0 10px #85888C;
         margin: -30px 0 0 0;
         padding: 20px;
