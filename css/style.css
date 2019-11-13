@@ -6080,6 +6080,15 @@ form#userChangeAddressCard {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* SHIPPING AND DELIVERY PAGE */
+    .pages-container {
+        max-width: 500px;
+    }
+
+    .pages-container .grid {
+        max-width: 500px;
+    }
     
 }
 
