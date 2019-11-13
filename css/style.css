@@ -745,12 +745,14 @@ section.homepage-section .homepage-links a {
 }
 
 section.homepage-section > .films-television-card a,
-section.homepage-section > .actor-director-card a {
+section.homepage-section > .actor-director-card a,
+section.homepage-section > .login-info-card a {
     color: #8A2BE2
 }
 
 section.homepage-section > .films-television-card a:hover,
-section.homepage-section > .actor-director-card a:hover {
+section.homepage-section > .actor-director-card a:hover,
+section.homepage-section > .login-info-card a:hover {
     text-decoration: underline #8A2BE2;
 }
 
@@ -1066,6 +1068,10 @@ section.homepage-section > .producer-studio-card img:nth-child(3) {
     top: 2336px;*/
 }
 
+section.homepage-section > .login-info-card .homepage-links {
+    display: block;
+}
+
 section.homepage-section > .login-info-card .page-links,
 section.homepage-section > .login-info-card .unit-image-wrapper {
     text-align: center;
@@ -1075,7 +1081,7 @@ section.homepage-section > .login-info-card .fa-shopping-cart,
 section.homepage-section > .login-info-card .fa-file-signature {
     font-size: 5em;
     color: mediumpurple;
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
 /* MAIN CONTAINER */
