@@ -7660,4 +7660,28 @@ form#userChangeAddressCard {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* SHIPPING AND DELIVERY PAGE */
+    .pages-container {
+        font-size: 11px;
+        line-height: 1.8;
+        max-width: 300px;
+    }
+
+    .pages-container .grid {
+        max-width: 300px;
+    }
+
+    .pages-container .section-header h1 {
+        font-size: 1.4em;
+    }
+
+    .pages-container .shipping-deliver-table td {
+        text-align: center;
+        padding: 0;
+    }
+
+    .pages-container .section-body h4 {
+        margin-top: 30px;
+    }
 }
