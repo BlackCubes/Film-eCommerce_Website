@@ -4547,9 +4547,9 @@ form#userChangeAddressCard {
     }
 
     .header .cart-wish-icons {
-        /*float: right;*/
-        position: absolute;
-        left: 87.2%;
+        float: right;
+        position: relative;
+        left: 0;
         z-index: 2;
     }
 
