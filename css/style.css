@@ -4545,7 +4545,7 @@ form#userChangeAddressCard {
     .header .topnav-logo {
         float: none;
         position: absolute;
-        top: 4.5%;
+        top: 33px;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
