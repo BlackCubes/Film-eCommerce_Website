@@ -1894,7 +1894,7 @@ section.homepage-section > .login-info-card .fa-file-signature {
 
 .container--artist-view .container-product-artist--artist-view {
     /*width: 350px;*/
-    width: 300px;
+    width: 100%;
 }
 
 .container--artist-view .artist-name--artist-view,
@@ -1962,7 +1962,7 @@ section.homepage-section > .login-info-card .fa-file-signature {
 
 .container--studio-view .container-product-studio--studio-view {
     /*width: 350px;*/
-    width: 300px;
+    width: 100%;
 }
 
 .container--studio-view .studio-name--studio-view,
