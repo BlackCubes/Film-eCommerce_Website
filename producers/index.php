@@ -1,7 +1,6 @@
 <?php
 
 # index.php (Producers page).
-# Created February 15, 2019.
 # PHP with SQL created June 2, 2019.
 # Created by Elias Gutierrez.
 
