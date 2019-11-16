@@ -7,8 +7,6 @@
     Welcome to an eCommerce Website that targets on products in the Entertainment Industry whether they are new and old, or TV Shows and Films. Since films have undeniably been an influential part of our cultures, societies, and politics from around the world whether they have been banned or not from different government institutions, I wanted to not only show the availability of products but also from the people that worked so hard on making it happen from the page to the magical giant screen. These include Screenwriters, Film Directors, Director of Photographers, Producers, Actresses/Actors, and amongst other positions that are important. Included also are the Film Studios that also made an important contribution on developing, filming, and marketing and distributing their films on wide domestic releases to internationally excited audiences. These studios include the very big to the smaller ones.
 */
 
-# This site was first started on February 2019 and created by Elias Gutierrez.
-
 # The file config.inc.php was created on April 4, 2019 by Elias Gutierrez.
 
 # Its purpose is to define constants and settings, dictates how errors are handled, and defines useful function.
