@@ -1,7 +1,6 @@
 <?php
 
 # index.php (Writers page).
-# Created February 17, 2019.
 # PHP with SQL created June 3, 2019.
 # Created by Elias Gutierrez.
 
