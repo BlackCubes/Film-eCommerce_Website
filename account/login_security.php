@@ -158,7 +158,6 @@ if (!empty($_SESSION['systemErr'])) {
                 </div>
             </div>
         </div>
-        <!--</div>-->
     </fieldset>
 </form>
 <?php
