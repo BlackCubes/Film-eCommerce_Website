@@ -165,8 +165,6 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
 
         $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
 
-        /*print_r($result_list);*/
-
         for ($i = 0; $i < $column_display; $i++) {
             echo '<ul>';
             for ($j = 0; $j < count($result_list[$i]); $j++) {
@@ -174,12 +172,6 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
             }
             echo '</ul>';
         }
-
-        /*echo '<ul>';
-        for ($i = 0; $i < $row_display; $i++) {
-            echo '<li><a href="#">' . $genre['genres'] . '</a></li>';
-        }
-        echo '</ul>';*/
 
         echo '</div><div class="option-title-letters--option-view">
         <div class="option-header-center--option-view"><span class="option-title--option-view">Viewing:</span><span class="option-name-type--option-view">';
@@ -230,8 +222,6 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         }
 
         $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
-
-        /*print_r($result_list);*/
 
         for ($i = 0; $i < $column_display; $i++) {
             echo '<ul>';
@@ -286,8 +276,6 @@ if (isset($_GET['department'], $_GET['format'], $_GET['type']) && preg_match('/(
         }
 
         $result_list = array(0 => $column_values_1, 1 => array_values($column_values_2), 2 => array_values($column_values_3));
-
-        /*print_r($result_list);*/
 
         for ($i = 0; $i < $column_display; $i++) {
             echo '<ul>';
