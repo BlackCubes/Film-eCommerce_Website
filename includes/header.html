@@ -4,12 +4,8 @@
 # PHP code created on April 30, 2019.
 # Created by Elias Gutierrez.
 
-// This is the HTML header for the website, and also initializes the session of the users if registered or not.
-
-// Starting the output buffering:
 ob_start();
 
-// Starting the session:
 if (!isset($_SESSION)) {
     session_start();
 }
