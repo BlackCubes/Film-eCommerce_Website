@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p>Forgot your <a href="/FilmIndustry/eCommerce/forgot_password.php">password</a>?</p>
             </div>
             <div class="seller-sign-in-option">
-                <p>Seller? Sign in <a href="/FilmIndustry/eCommerce/suppliers/login.php">here</a>.</p>
+                <p>Seller? Sign in <a>here</a>.</p>
             </div>
             <div class="registration-option">
                 <h2>New?</h2>
