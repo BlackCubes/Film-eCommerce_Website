@@ -58,7 +58,7 @@ if (mysqli_num_rows($r) == 1){
             <h2>Your Wishlists</h2>
         </div>
         <div class="results--wishlist-view">
-            <?php while ($wishlist = $wishlist_items) { ?>
+            <?php foreach ($wishlist_items as $wishlist) { ?>
             <div class="wish-list--wishlist-view">
                 <div class="product-image--wishlist-view">
                     <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $wishlist['product_isd']; ?>"><img alt="<?php echo $wishlist['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $wishlist['product_image']; ?>"></a>
