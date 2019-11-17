@@ -2792,6 +2792,8 @@ form#userChangePassCard {
 
 .change-pass-success {
     text-align: center;
+    margin-top: 41vh;
+    margin-bottom: 41vh;
 }
 
 .change-pass-success h3 {
