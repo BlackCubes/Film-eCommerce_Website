@@ -3858,6 +3858,19 @@ form#userChangeAddressCard {
     font-weight: 700;
 }
 
+/* ACCOUNT SUCCESS/ERROR CARD */
+.account-container .system-success--account-option {
+    width: 95%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    height: 100px;
+    padding-top: 20px;
+    color: green;
+    border: 1px solid mediumslateblue;
+}
+
 /* MEDIA QUERY */
 
 /* HOW 1024PX FEELS LIKE */
