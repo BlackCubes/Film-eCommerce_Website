@@ -7739,4 +7739,10 @@ form#userChangeAddressCard {
     .pages-container .section-body h4 {
         margin-top: 30px;
     }
+
+    /* ACCOUNT SUCCESS/ERROR CARD */
+    .account-container .system-success--account-option,
+    .account-container .system-error--account-option {
+        width: 90%;
+    }
 }
