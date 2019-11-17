@@ -77,7 +77,7 @@ if (!isset($_SESSION)) {
                 <p>Already have an account? <a href="/FilmIndustry/eCommerce/login.php">Sign in</a></p>
             </div>
             <div class="register-seller-option">
-                <p>Want to sell your films? Register <a href="/FilmIndustry/eCommerce/suppliers/register.php">here</a></p>
+                <p>Want to sell your films? Register <a>here</a></p>
             </div>
         </fieldset>
     </form>
