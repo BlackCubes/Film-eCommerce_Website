@@ -43,9 +43,13 @@ $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . my
 
 if (mysqli_num_rows($r) == 1){
 
-    $q = "SELECT DISTINCT COUNT(wl.id), p.isd AS product_isd, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln, wl.product_department AS product_department, wl.product_format AS product_format, wl.quantity AS product_quantity, DATE_FORMAT(wl.date_created, '%M %d, %Y') AS wishlist_date_created FROM wishlists AS wl JOIN products AS p ON wl.product_id=p.id JOIN products_directors AS pdir ON p.id=pdir.product_id JOIN directors AS dir ON pdir.director_id=dir.id WHERE wl.user_id={$_SESSION['id']} ORDER BY wishlist_date_created DESC";
+    $q = "SELECT DISTINCT p.isd AS product_isd, p.name AS product_name, p.unit_price AS product_price, p.stock AS product_stock, p.image_1 AS product_image, dir.first_name AS director_fn, dir.middle_name AS director_mn, dir.last_name AS director_ln, wl.product_department AS product_department, wl.product_format AS product_format, wl.quantity AS product_quantity, DATE_FORMAT(wl.date_created, '%M %d, %Y') AS wishlist_date_created FROM wishlists AS wl JOIN products AS p ON wl.product_id=p.id JOIN products_directors AS pdir ON p.id=pdir.product_id JOIN directors AS dir ON pdir.director_id=dir.id WHERE wl.user_id={$_SESSION['id']} ORDER BY wishlist_date_created DESC";
 
     $r = mysqli_query($dbc, $q) or trigger_error("Query: $q\n<br>MySQL Error: " . mysqli_error($dbc));
+
+    $static_wishlist = mysqli_fetch_array($r, MYSQLI_ASSOC);
+
+    $wishlist_items = array("product_isd" => $static_wishlist['product_isd'], "product_name" => $static_wishlist['product_name'], "product_price" => $static_wishlist['product_price'], "product_stock" => $static_wishlist['product_stock'], "product_image" => $static_wishlist['product_image'], "director_fn" => $static_wishlist['director_fn'], "director_mn" => $static_wishlist['director_mn'], "director_ln" => $static_wishlist['director_ln'], "product_department" => $static_wishlist['product_department'], "product_format" => $static_wishlist['product_format'], "product_quantity" => $static_wishlist['product_quantity'], "wishlist_date_created" => $static_wishlist['wishlist_date_created']);
 
 ?>
 <div class="container--wishlist-view">
@@ -54,7 +58,7 @@ if (mysqli_num_rows($r) == 1){
             <h2>Your Wishlists</h2>
         </div>
         <div class="results--wishlist-view">
-            <?php while ($wishlist = mysqli_fetch_array($r, MYSQLI_ASSOC)) { ?>
+            <?php while ($wishlist = $wishlist_items) { ?>
             <div class="wish-list--wishlist-view">
                 <div class="product-image--wishlist-view">
                     <a href="/FilmIndustry/eCommerce/products/index.php?isd=<?php echo $wishlist['product_isd']; ?>"><img alt="<?php echo $wishlist['product_name']; ?>" src="/FilmIndustry/uploads/products/<?php echo $wishlist['product_image']; ?>"></a>
