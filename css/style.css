@@ -6136,7 +6136,12 @@ form#userChangeAddressCard {
     .pages-container .grid {
         max-width: 500px;
     }
-    
+
+    /* ACCOUNT SUCCESS/ERROR CARD */
+    .account-container .system-success--account-option,
+    .account-container .system-error--account-option {
+        width: 65%;
+    }
 }
 
 /* HOW 480PX FEELS LIKE */
