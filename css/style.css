@@ -7491,6 +7491,61 @@ form#userChangeAddressCard {
     }
 
     /* REGISTRATION PAGE */
+    form#registerUserCard1,
+    form#registerUserCard2,
+    .registerUserSuccessCard,
+    .registerUserErrorCard {
+        width: 100%;
+    }
+
+    #registerUserCard1 .register-card,
+    #registerUserCard2 .register-card--shipping,
+    .registerUserSuccessCard .register-success-card--user,
+    .registerUserErrorCard .register-error-card--user {
+        width: 90%;
+    }
+
+    #registerUserCard1 .register-name,
+    #registerUserCard1 .register-email,
+    #registerUserCard1 .register-new-password,
+    #registerUserCard1 .register-confirm-password,
+    #registerUserCard2 .shipping-address-1,
+    #registerUserCard2 .shipping-address-2,
+    #registerUserCard2 .shipping-city,
+    #registerUserCard2 .shipping-state-zip,
+    #registerUserCard2 .shipping-phone {
+        width: 95%;
+        height: 65px;
+        margin: 10px auto;
+    }
+
+    .register-name .first-name--register,
+    .register-name .last-name--register,
+    .shipping-state-zip .shipping-state,
+    .shipping-state-zip .shipping-zip-code {
+        width: 40%;
+    }
+
+    .first-name--register .user-first-name--new,
+    .last-name--register .user-last-name--new,
+    .shipping-state .user-state--register,
+    .shipping-zip-code .user-zip--register {
+        width: 100%;
+    }
+
+    #registerUserCard1 .user-email--register,
+    #registerUserCard1 .user-new-pass--register,
+    #registerUserCard1 .user-confirm-pass--register,
+    #registerUserCard2 .user-address-1--register,
+    #registerUserCard2 .user-address-2--register,
+    #registerUserCard2 .user-city--register,
+    #registerUserCard2 .user-phone--register {
+        width: 95%;
+    }
+
+    .register-continue, .register-submit {
+        width: 95%;
+    }
 
     /* CHANGE NAME PAGE */
     form#userChangeNameCard {
