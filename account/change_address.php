@@ -31,13 +31,6 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-if (isset($_SESSION['supplier_id'])) {
-    $url = BASE_URL . 'index.php';
-    ob_end_clean();
-    header("Location: $url");
-    exit();
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     require(MYSQL);
