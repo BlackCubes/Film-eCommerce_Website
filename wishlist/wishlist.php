@@ -29,13 +29,6 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-if (isset($_SESSION['supplier_id'])) {
-    $url = BASE_URL . 'index.php';
-    ob_end_clean();
-    header("Location: $url");
-    exit();
-}
-
 require(MYSQL);
 
 $q = "SELECT product_department FROM wishlists WHERE user_id={$_SESSION['id']} LIMIT 1";

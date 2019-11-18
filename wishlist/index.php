@@ -29,13 +29,6 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-if (isset($_SESSION['supplier_id'])) {
-    $url = BASE_URL . 'index.php';
-    ob_end_clean();
-    header("Location: $url");
-    exit();
-}
-
 if (preg_match('/((\badd\b)|(\bmove\b)|(\bdelete\b)|(\bcart\b))(?!;)?/', $_GET['action'])) {
 
     require(MYSQL);
