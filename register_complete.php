@@ -20,7 +20,7 @@ $page_title = 'Registration';
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();
-    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
+    header("Location: http://localhost:8080/FilmIndustry/eCommerce/index.php");
     exit();
 }
 
@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } else {
         $_SESSION['systemErr2'] = 'Please try again';
-        header("Location: http://localhost/FilmIndustry/eCommerce/register_page2.php");
+        header("Location: http://localhost:8080/FilmIndustry/eCommerce/register_page2.php");
         exit();
     }
 
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     ob_end_clean();
 
-    header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+    header("Location: http://localhost:8080/FilmIndustry/eCommerce/register_page1.php");
     exit();
 
 }
