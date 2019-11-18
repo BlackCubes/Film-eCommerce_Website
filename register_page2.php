@@ -22,7 +22,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_head
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();
-    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
+    header("Location: http://localhost:8080/FilmIndustry/eCommerce/index.php");
     exit();
 }
 
@@ -93,14 +93,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $_SESSION['systemErr1'] = 'That email address has already been registered. If you have forgotten your password, please change it by clicking on "Change Password" on the top navbar when signing in';
             $_SESSION['systemErr2'] = '';
-            header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+            header("Location: http://localhost:8080/FilmIndustry/eCommerce/register_page1.php");
             exit();
             
         }
 
     } else {
         $_SESSION['systemErr1'] = 'Please try again';
-        header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+        header("Location: http://localhost:8080/FilmIndustry/eCommerce/register_page1.php");
         exit();
     }
 } else {
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     ob_end_clean();
 
-    header("Location: http://localhost/FilmIndustry/eCommerce/register_page1.php");
+    header("Location: http://localhost:8080/FilmIndustry/eCommerce/register_page1.php");
     exit();
 
 } ?>
