@@ -5900,6 +5900,20 @@ form#userChangeAddressCard {
         width: 100%;
     }
 
+    .registerUserSuccessCard,
+    .registerUserErrorCard {
+        min-height: 75vh;
+    }
+
+    .register-success-card--user .user-success--register,
+    .register-error-card--user .user-error--register {
+        width: 100%;
+        position: inherit;
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+
     /* CHANGE NAME PAGE */
     form#userChangeNameCard {
         width: 80%;
