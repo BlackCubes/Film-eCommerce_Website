@@ -28,13 +28,6 @@ if (!isset($_SESSION['id'])) {
     header("Location: $url");
     exit();
 }
-
-if (isset($_SESSION['supplier_id'])) {
-    $url = BASE_URL . 'index.php';
-    ob_end_clean();
-    header("Location: $url");
-    exit();
-}
 ?>
 <div class="container--cart-view">
     <div class="main-info--cart-view">

@@ -27,13 +27,6 @@ if (!isset($_SESSION['id'])) {
     header("Location: http://localhost/FilmIndustry/eCommerce/login.php");
     exit();
 }
-
-if (isset($_SESSION['supplier_id'])) {
-    ob_end_clean();
-    header("Location: http://localhost/FilmIndustry/eCommerce/suppliers/index.php");
-    exit();
-}
-
     
 if (preg_match('/((\badd\b)|(\bdelete\b)|(\blater\b)|(\bomit\b)|(\bmove\b))(?!;)?/', $_GET['action'])) {
 
