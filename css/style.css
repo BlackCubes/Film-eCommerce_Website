@@ -4454,6 +4454,12 @@ form#userChangeAddressCard {
 
     /* CHANGE PASSWORD */
 
+    /* REGISTRATION PAGE */
+    form#registerUserCard1,
+    form#registerUserCard2 {
+        min-height: 1100px;
+    }
+
     /* CHANGE NAME PAGE */
 
     /* CHANGE EMAIL PAGE */
@@ -5831,6 +5837,8 @@ form#userChangeAddressCard {
     .system-error--change-pass {
         width: 95%;
     }
+
+    /* REGISTRATION PAGE */
 
     /* CHANGE NAME PAGE */
     form#userChangeNameCard {
@@ -7421,6 +7429,8 @@ form#userChangeAddressCard {
     .system-error--change-pass {
         width: 95%;
     }
+
+    /* REGISTRATION PAGE */
 
     /* CHANGE NAME PAGE */
     form#userChangeNameCard {
