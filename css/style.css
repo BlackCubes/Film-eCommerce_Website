@@ -2812,8 +2812,17 @@ form#registerUserCard2,
 .registerUserSuccessCard,
 .registerUserErrorCard {
     width: 540px;
-    height: 860px;
     margin: 50px auto 50px auto;
+}
+
+form#registerUserCard1,
+form#registerUserCard2 {
+    height: 860px;
+}
+
+.registerUserSuccessCard,
+.registerUserErrorCard {
+    height: 70vh;
 }
 
 #registerUserCard1 .register-card,
@@ -2821,11 +2830,20 @@ form#registerUserCard2,
 .registerUserSuccessCard .register-success-card--user,
 .registerUserErrorCard .register-error-card--user {
     width: 500px;
-    height: 850px;
     background-color: white;
     border: none;
     margin-left: auto;
     margin-right: auto;
+}
+
+#registerUserCard1 .register-card,
+#registerUserCard2 .register-card--shipping {
+    height: 850px;
+}
+
+.registerUserSuccessCard .register-success-card--user,
+.registerUserErrorCard .register-error-card--user {
+    height: 100%;
 }
 
 .register-card div,
