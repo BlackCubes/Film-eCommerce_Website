@@ -12,7 +12,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/FilmIndustry/eCommerce/includes/account_head
 
 if (isset($_SESSION['id'])) {
     ob_end_clean();
-    header("Location: http://localhost/FilmIndustry/eCommerce/index.php");
+    header("Location: http://localhost:8080/FilmIndustry/eCommerce/index.php");
     exit();
 }
 
