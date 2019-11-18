@@ -2822,7 +2822,7 @@ form#registerUserCard2 {
 
 .registerUserSuccessCard,
 .registerUserErrorCard {
-    height: 70vh;
+    height: 75vh;
 }
 
 #registerUserCard1 .register-card,
